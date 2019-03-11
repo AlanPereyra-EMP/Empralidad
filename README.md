@@ -21,7 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 ## Frequently Asked Questions
 
-For support for Informatica Pereyra Theme please contact us at https://informatica.pereyra.online
+For support for Informatica Pereyra Theme please contact us at https://informatica.pereyra.online/contacto
 
 
 ## Limitations
