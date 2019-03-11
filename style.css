@@ -1,0 +1,581 @@
+/*
+Theme Name: Informatica Pereyra - Theme
+Author: Alan Pereyra
+Author URI: https://informatica.pereyra.online/contacto
+Description: Inforatica Pereyra es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
+Version: 1.1.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: informatica_pereyra
+Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, theme-options
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*
+1) Navbar
+2) Img
+3) No-padding and no-margin
+4) wp-caption
+5) Style all font awesome icons
+6) Fixs
+7) Bootstrap
+8) Widgets
+9) Blockquote
+10) Tables
+11) Comments
+12) Effects
+13) Countdown
+14) mobile first
+*/
+
+/*1) Navbar*/
+	.navbar-img {
+		height: 50px!important;
+		margin-left: 40px!important;
+		max-width: 192px!important;
+	}
+	.navbar-altura {
+		height: 4.2em;
+	}
+	.header-text {
+	    bottom: 30%!important;
+	    color: #fff;
+	    left: 1.8%!important;
+	    position: absolute;
+	    right: auto!important;
+	    top: 20%!important;
+	    text-align: center;
+	    width: 96.66666666666666%!important;
+	}
+	/*Backgrown header*/
+	.bg-transparent-personalized {
+		/*background: rgba(0, 0, 0, 0.5);*/
+		-webkit-transition: background .5s;
+		-moz-transition: background .5s;
+		-o-transition: background .5s;
+		transition: background .5s;
+	}
+	@media(min-width: 992px){
+		nav.navbar.navbar-scroll {
+			background: rgba(0, 0, 0, 0.7)!important;
+		}
+		.menu-item a {
+			color: #fff !important;
+		}
+		nav a h4 {
+			color: #fff!important;
+		}
+	}
+	@media(max-width: 991px){
+		nav:hover, nav:focus {
+			background: rgba(255, 255, 255, 0.9);
+		}
+		nav.navbar {
+			background: rgba(255, 255, 255, 0.9);
+		}
+	}
+	/*a nav-bar*/
+	.menu-item a {
+		color: #262626;
+		display: block;
+		padding: 0.5em 1em;
+		font-weight: bold;
+		margin-right: 0.5rem !important;
+	    margin-left: 0.5rem !important;
+	    text-decoration: none;
+	    border: 1px rgba(255,255,255,0) solid;
+	}
+	.menu-item a:focus, .menu-item a:hover {
+	    filter: brightness(0.8);
+	    border: 1px #fff solid;
+	    border-radius: 5px;
+	}
+	/*ul sub-menu*/
+	ul .dropdown-menu.depth_0 {
+		display: none;
+		height: 0;
+	    overflow: hidden;
+	}
+	ul .dropdown-menu.depth_0.show {
+		display: block;
+		height: auto;
+	    font-weight: bold;
+	    margin-right: 0.5rem !important;
+	    margin-left: 0.5rem !important;
+	    color: #888;
+	    text-decoration: none;
+	    
+	}
+	ul .dropdown-menu.depth_0.show li a {
+		font-weight: bold;
+		color: #888!important;
+	    text-decoration: none;
+	    border: none;
+	    
+	}
+	ul .dropdown-menu.depth_0.show li:focus, ul .dropdown-menu.depth_0.show li:hover {
+        filter: brightness(0.8);
+        border: 1px #fff solid;
+	}
+	ul .dropdown-menu.depth_0.show li {
+		    border: 1px #fff solid;
+	}
+	li .dropdown-submenu a .dropdown-toggle {
+		color: #dd0d0d!important;	
+	}
+	ul .dropdown-menu li a::after {
+		display: none;
+	}
+	/*navbar admin*/
+	@media (min-width: 600px){
+		.admin-fixed-top{
+			top: 40px!important;
+		}
+	}
+	@media (min-width: 783px) {
+	  .admin-fixed-top{
+			top: 30px!important;
+		}
+	}
+/*end navbar*/
+/*2) Img*/
+	img.alignright { 
+		float: right; margin: 0 0 1em 1em; 
+	}
+	img.alignleft { 
+		float: left; margin: 0 1em 1em 0; 
+	}
+	img.aligncenter { 
+		display: block; margin-left: auto; margin-right: auto; 
+	}
+	img, .wp-caption {
+		max-width: 100%!important;
+		height: auto;
+	}
+	.img-text-br {
+		filter: brightness(0.4);
+	}
+	.img-fixed {
+		bottom: 10px;
+		position: fixed;
+		right: 2px;
+		z-index: 10000;
+	}
+	.img-btn-fixed, .img-btn-fixed-wsp {
+		height: 50px;
+		width: 50px;
+	}
+	.img-btn-fixed {
+		visibility: hidden;
+		opacity: 0;
+	    transition: visibility 0s, opacity 0.5s linear;
+	}
+	.img-btn-fixed-show{
+		visibility: visible;
+	    opacity: 1;
+	}
+	div.textwidget p img:focus, div.textwidget p img:hover{
+		filter: brightness(0.8);
+	}
+	.text-img-home{
+		position: absolute;
+		top: 20%!important;
+		bottom: 30%!important;
+		left: 1.8%!important;
+		right: auto!important;
+		width: 96.66666666666666%!important;
+		color: #fff;
+		text-align: center;
+	}
+/*end img*/
+/*3) Alings*/
+	.alignright { 
+		float: right; 
+	}
+	.alignleft { 
+		float: left; 
+	}
+	.aligncenter { 
+		display: block;
+		margin-left: auto;
+		margin-right: auto; 
+	}
+/*end alings*/
+/*4) No-padding and no-margin*/
+	.marg-r [class*="col-"] {
+	    padding-right:  0;
+	}
+	.nopadding [class*="col-"] {
+	    padding: 0;
+	}
+	.nopadding{
+		padding: 0;
+	}
+	.nopadding-r [class*="col-"] {
+	    padding-right:  0;
+	}
+/*end no padding no margin*/
+/* 5) Style all font awesome icons */
+	a.fa {
+		color: white;
+	    font-size: 30px;
+	    padding: 20px;
+	    text-align: center;
+	    text-decoration: none;
+	    width: 50px;
+	}
+	.fa-dark{
+		color: #262626!important;
+	}
+	.fa:hover {
+	    opacity: 0.7;
+	}
+	.fa-text{
+		display: block;
+		font-size: 18px;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	}
+	a.fa-home span.fa-text{
+		margin-left: -6px;
+	}
+	a.fa-user span.fa-text{
+		margin-left: -19px;
+	}
+	a.fa-comment span.fa-text{
+		margin-left: -19px;
+	}
+	a.fa-search span.fa-text{
+		margin-left: -9px;
+	}
+/*end awesome icons*/
+/*6) Fixs */
+	/*Youtube iframe*/
+	iframe {
+		width: 100%!important;
+		height: auto;
+	}
+	.landing-content p iframe {
+			height: 150px!important;
+		}
+	@media (min-width: 400px){
+		.landing-content p iframe {
+			height: 200px!important;
+		}
+	}
+	@media (min-width: 535px){
+		.landing-content p iframe {
+			height: 250px!important;
+		}
+	}
+	@media (min-width: 768px) {
+	  .landing-content p iframe {
+			height: 250px!important;
+		}
+	}
+	/*Search form fix*/
+	label.screen-reader-text{
+		display: none;
+	}
+	/* hashtags fix */
+	._58cm, ._58cl{
+		display: inline-block;
+	}
+	.gallery-caption, .bypostauthor {
+		max-width: 100%
+	}
+	.wp-caption p.wp-caption-text {
+	    font-size: 11px;
+	    line-height: 17px;
+	    margin: 0;
+	    padding: 0 4px 5px;
+	}
+	div.ol-marker img{
+		min-width: 30px;
+	}
+	/*message*/
+	#message{
+		display: none;
+	}
+/*end fixs*/
+/*7) Bootstrap personalized*/
+	.btn {
+		filter: brightness(1.3);
+	}
+	@media (min-width: 992px) {
+	  .card-columns-2 {
+	    -webkit-column-count: 2;
+	       -moz-column-count: 2;
+	            column-count: 2;
+	    -webkit-column-gap: 1.25rem;
+	       -moz-column-gap: 1.25rem;
+	            column-gap: 1.25rem;
+	  }
+	  .card-columns-2 .card {
+	    display: inline-block;
+	    width: 100%;
+	    margin-bottom: 0.75rem;
+	  }
+	  .show-desktop {
+	  	display: block!important;
+	  }
+	  .show-mobile{
+		display: none!important;
+	  }
+	  .pt-lg-90{
+	  	padding-top: 90px!important;
+	  }
+	  .px-25-desktop{
+	  	padding-right: 25%;
+	  	padding-left: 25%;
+	  }
+	}
+	@media (max-width: 991px) {
+	  .show-mobile {
+	    display: block!important;
+	  }
+	  .show-desktop{
+		display: none!important;
+	  }
+	}
+
+	.w-100-px{
+		width: 100px!important;
+	}
+	@media (max-width: 575px){
+		.show-sm{
+			display: block;
+		}
+		.show-md{
+			display: none;
+		}
+	}
+	@media (min-width: 576px){
+		.show-sm{
+			display: none!important;
+		}
+		.show-md{
+			display: block!important;
+		}
+	}
+	/*searchform*/
+		span #s{
+			display: inline !important;
+			width:100px;
+		}
+		#s {
+		  max-width: 50%;
+		  width: auto;
+		  padding: 0.5rem 0.75rem;
+		  font-size: 1rem;
+		  line-height: 1.25;
+		  color: #464a4c;
+		  background-color: #fff;
+		  background-image: none;
+		  -webkit-background-clip: padding-box;
+				  background-clip: padding-box;
+		  border: 1px solid rgba(0, 0, 0, 0.15);
+		  border-radius: 0.25rem;
+		  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+		  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+		  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+		  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+		  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+		}
+		#s::-ms-expand {
+		  background-color: transparent;
+		  border: 0;
+		}
+
+		#s:focus {
+		  color: #464a4c;
+		  background-color: #fff;
+		  border-color: #5cb3fd;
+		  outline: none;
+		}
+
+		#s::-webkit-input-placeholder {
+		  color: #636c72;
+		  opacity: 1;
+		}
+
+		#s::-moz-placeholder {
+		  color: #636c72;
+		  opacity: 1;
+		}
+
+		#s:-ms-input-placeholder {
+		  color: #636c72;
+		  opacity: 1;
+		}
+
+		#s::placeholder {
+		  color: #636c72;
+		  opacity: 1;
+		}
+
+		#s:disabled, .form-control[readonly] {
+		  background-color: #eceeef;
+		  opacity: 1;
+		}
+
+		#s:disabled {
+		  cursor: not-allowed;
+		}
+
+		select #s:not([size]):not([multiple]) {
+		  height: calc(2.25rem + 2px);
+		}
+
+		select #s:focus::-ms-value {
+		  color: #464a4c;
+		  background-color: #fff;
+		}
+
+		#searchsubmit {
+		  display: inline-block;
+		  font-weight: normal;
+		  line-height: 1.25;
+		  text-align: center;
+		  white-space: nowrap;
+		  vertical-align: middle;
+		  -webkit-user-select: none;
+			 -moz-user-select: none;
+			  -ms-user-select: none;
+				  user-select: none;
+		  border: 1px solid transparent;
+		  padding: 0.5rem 1rem;
+		  font-size: 1rem;
+		  border-radius: 0.25rem;
+		  -webkit-transition: all 0.2s ease-in-out;
+		  -o-transition: all 0.2s ease-in-out;
+		  transition: all 0.2s ease-in-out;
+		}
+
+		#searchsubmit:focus, .btn:hover {
+		  text-decoration: none;
+		}
+
+		#searchsubmit:focus, .btn.focus {
+		  outline: 0;
+		  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+				  box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+		}
+
+		#searchsubmit.disabled, .btn:disabled {
+		  cursor: not-allowed;
+		  opacity: .65;
+		}
+
+		#searchsubmit:active, .btn.active {
+		  background-image: none;
+		}
+
+		a#searchsubmit.disabled,
+		fieldset[disabled] a.btn {
+		  pointer-events: none;
+		}
+		#searchform div {
+			display: inline-flex;
+		}
+	/*end search form*/
+	/*text movile*/
+		@media (min-width: 992px) {
+		  .text-mobile {
+		    font-size: 35px !important;
+		  }
+		} 
+		.text-mobile {
+		    font-size: 25px;
+		} 
+	/*post-category*/
+	.post-categories {
+		list-style: none;
+		padding-left: 0;
+	}
+	/*Cards*/
+	.header-text1{
+	    left: 1.8%!important;
+	    position: absolute;
+	    right: auto!important;
+	    top: 20%!important;
+	    text-align: center;
+	    width: 96.66666666666666%!important;
+	}
+/* end bootstrap personalized*/
+/*8) Widgets*/
+	.widget-title{
+		color: #fff!important;
+	}
+	.widget-title-dark{
+		padding-bottom: 40px;
+	}
+	div .widget ul {
+		display: contents;
+	}
+	div .widget ul li{
+		display: block;
+	}
+	.textwidget div.wp-caption{
+	    display: inline-block;
+	    margin-bottom: 20px;
+	    background: #262626;
+	    color: #fff;
+	    padding: 10px;
+	}
+	div.textwidget div a img:hover, div.textwidget div a img:focus{
+		filter: brightness(0.4);
+	}
+/*end widgets */
+/*9) Blockquote*/
+	blockquote {
+		background: #eee;
+	    padding: 15px;
+	}
+	blockquote cite {
+		font-size: 13px;
+	    color: #aaa;
+	}
+/*end blockquote*/
+/*10) Tables*/
+	table, td {
+	    border: 1px #aaa solid
+	}
+	th, th a {
+		filter: brightness(1.5);
+		color: #fff;
+	}
+/*end tables*/
+/*11) Comments*/
+	#comment {
+		width: 100%!important;
+	}
+	.comment {
+		display: block;
+	}
+	.comment-body{
+		margin-top: 20px;
+	    margin-bottom: 20px;
+	    background: #fafafa;
+	}
+/*end comments*/
+/*12) Effects*/
+	.brightness-04{
+		filter: brightness(0.4);
+	}
+	.brightness-13{
+		filter: brightness(1.3);
+	}
+/*end effects*/
+/*13) Countdown*/
+	#clock{
+		display: none;
+	}
+/*end countdown*/
+/*14) Mobile first*/
+	.buttons-mobile{
+		background: rgba(250, 250, 250, 0.9);
+		height: 55px!important;
+		margin-left: -28px!important;
+	}
+/*end mobile first*/
