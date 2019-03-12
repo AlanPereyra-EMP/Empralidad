@@ -1,10 +1,16 @@
 # Informatica Pereyra
 Contributors: Alan Pereyra
+
 Requires at least: 4.8
+
 Tested up to: 5.0.3
+
 Version: 1.1.6
-License: GPLv2 or later
+
+License: GPLv3 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, theme-options, footer-widgets, blog, e-commerce
 
 
