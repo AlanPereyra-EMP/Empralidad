@@ -5,7 +5,7 @@ Requires at least: 4.8
 
 Tested up to: 5.0.3
 
-Version: 1.1.6
+Version: 1.1.7
 
 License: GPLv3 or later
 
@@ -36,6 +36,12 @@ Limitations will be added when raised.
 
 
 ## Changelog
+
+#### 1.1.7
+##### Changes
+* fix open graph.
+###### Archives modified
+* header.php
 
 
 ### GitHub repository start
