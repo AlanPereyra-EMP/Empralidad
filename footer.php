@@ -44,7 +44,7 @@
         </div>
     <!-- end footer -->
     <!-- Button permanent desktop -->
-        <div class="show-md">
+        <div class="show-lg">
             <?php  $perma_button = get_theme_mod('ip_what_text'); ?> 
             <?php if ($perma_button) { ?>
             	<div class="img-fixed"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('ip_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20desde%20<?php wp_title();?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png"></a></div>

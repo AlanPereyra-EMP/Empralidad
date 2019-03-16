@@ -329,6 +329,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  	padding-right: 25%;
 	  	padding-left: 25%;
 	  }
+	  .show-lg{
+	  	display: block!important;
+	  }
 	}
 	@media (max-width: 991px) {
 	  .show-mobile {
@@ -336,6 +339,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  }
 	  .show-desktop{
 		display: none!important;
+	  }
+	  .show-lg{
+	  	display: none!important;
 	  }
 	}
 
