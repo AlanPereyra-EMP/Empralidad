@@ -1,5 +1,6 @@
 <!doctype html>
-<html <?php language_attributes(); ?> prefix="og: http://ogp.me/ns#">
+<html <?php language_attributes(); ?>>
+<html prefix="og: http://ogp.me/ns#">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
