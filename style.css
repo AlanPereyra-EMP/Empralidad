@@ -242,6 +242,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	a.fa-user span.fa-text{
 		margin-left: -19px;
 	}
+	a.fa-shopping-cart span.fa-text{
+		margin-left: -10px;
+	}
 	a.fa-comment span.fa-text{
 		margin-left: -19px;
 	}

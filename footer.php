@@ -66,6 +66,14 @@
                             </a> 
                         <?php }
                     ?>
+                <!-- Cart -->
+                    <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
+                        if ($cart_link){ ?>
+                            <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto">
+                                <span class="fa-text">Carrito</span>
+                            </a> 
+                        <?php }
+                    ?> 
                 <!-- Comment -->
                     <?php $comment_link = get_theme_mod('ip_mobile_comment_text');
                         if ($comment_link){ ?>
