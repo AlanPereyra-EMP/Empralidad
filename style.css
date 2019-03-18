@@ -93,13 +93,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	/*ul sub-menu*/
 	ul .dropdown-menu.depth_0 {
-		display: none;
 		height: 0;
 	    overflow: hidden;
+	    transition: all 1s;
+	    display: block;
+	    visibility: hidden;
 	}
 	ul .dropdown-menu.depth_0.show {
-		display: block;
-		height: auto;
+	    height: 72vh;
 	    font-weight: bold;
 	    margin-right: 0.5rem !important;
 	    margin-left: 0.5rem !important;
