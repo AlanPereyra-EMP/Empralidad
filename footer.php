@@ -54,8 +54,8 @@
         </div>
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
-        <div class="show-sm mx-auto container-fluid fixed-bottom">
-            <div class="buttons-mobile text-center d-flex justify-content-between align-items-center fixed-bottom">
+        <div class="show-sm mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile">
+            <div class="buttons-mobile text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
                 <!-- Home-->
                     <a href="<?php echo home_url(); ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
                 <!-- User -->
@@ -82,16 +82,19 @@
                             </a> 
                         <?php }
                     ?>  
-                <!-- Instagram -->
+                <!-- Search Form -->
                     <?php $search_link = get_theme_mod('ip_mobile_search_text');
-                        if ($search_link){ ?>
-                            <a href="<?php echo get_theme_mod('ip_mobile_search_text'); ?>" class="fa-dark fa fa-search mx-auto">
+                        if ($search_link == 'true'){ ?>
+                            <a class="fa-dark fa fa-search mx-auto" onclick="showBackground()">
                                 <span class="fa-text">Buscar</span>
                             </a> 
                         <?php }
-                    ?>     
+                    ?>    
             </div>
         </div>
+        <!-- Close searchform -->
+        <div id="searchform-mobile"><?php get_search_form(); ?></div>
+        <i class="fa fa-3x fa-times" id="searchform-close" onclick="closeSearchform()"></i> 
     <!-- end buttons mobile -->
     <!-- end all content -->
     </div>

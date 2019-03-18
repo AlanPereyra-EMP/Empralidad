@@ -12,6 +12,27 @@ $(window).on('scroll', function(){
   }
 })
 
+// Searchform mobile
+
+var background = document.getElementById('bg-searchform-mobile');
+var close = document.getElementById('searchform-close');
+var searchform = document.getElementById('searchform-mobile');
+
+function showBackground() {
+  background.style.padding = '100vh 0 0 0';
+  setTimeout(()=>{
+    close.classList.add('searchform-close');
+    searchform.classList.add('d-block');
+  }, 1000)
+}
+
+function closeSearchform() {
+  background.style.padding = '0vh 0 0 0';
+  close.classList.remove('d-block');
+  searchform.classList.remove('d-block');
+}
+
+
 // Countdown.js
 if (document.getElementById('clock') && document.getElementById('message')){
 

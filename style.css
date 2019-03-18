@@ -95,17 +95,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	ul .dropdown-menu.depth_0 {
 		height: 0;
 	    overflow: hidden;
-	    transition: all 1s;
 	    display: block;
 	    visibility: hidden;
+	    position: absolute;
 	}
 	ul .dropdown-menu.depth_0.show {
-	    height: 72vh;
+	    height: auto;
 	    font-weight: bold;
 	    margin-right: 0.5rem !important;
 	    margin-left: 0.5rem !important;
 	    color: #888;
 	    text-decoration: none;
+	    position: absolute;
+	    visibility: visible;
+	    width: 95%;
 	    
 	}
 	ul .dropdown-menu.depth_0.show li a {
@@ -364,9 +367,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		.show-sm{
 			display: none!important;
 		}
-		.show-md{
-			display: block!important;
-		}
 	}
 	/*searchform*/
 		span #s{
@@ -488,6 +488,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		#searchform div {
 			display: inline-flex;
 		}
+		form.searchform div{
+			max-width: 100%!important;
+		}
 	/*end search form*/
 	/*text movile*/
 		@media (min-width: 992px) {
@@ -587,5 +590,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		background: rgba(250, 250, 250, 0.9);
 		height: 55px!important;
 		margin-left: -28px!important;
+	}
+	#bg-searchform-mobile{
+		transition: all 1s;
+	}
+	#searchform-mobile{
+		display: none;
+		position: fixed;
+		top: 46%;
+		left: 50%;
+		transform: translate(-39%, -50%);
+		z-index: 10000;
+	}
+	.searchform-close{
+		display: block!important;
+		position: fixed;
+		top: 1%;
+		left: 2%;
+		z-index: 10000;
+		color: #ffffff!important;
+	}
+	#seachform-close{
+		color: #ffffff;
+		display: none!important;
 	}
 /*end mobile first*/

@@ -5,12 +5,6 @@
     </div>
 <!-- end title -->
 <!-- Content -->
-    <div class="container-fluid mx-auto">
-        <div  class="text-center mx-auto">
-            <h6>Escribí lo que estas bucando</h6>
-            <?php get_search_form(); ?>
-        </div>
-    </div>
     <div class="py-5">
         <?php if ( ! have_posts() ) {?>
             <div class="p-5 col-11 col-md-8 mx-auto">
