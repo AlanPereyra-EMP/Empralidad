@@ -21,7 +21,6 @@
     <!-- Preload -->
         <div id="charge">
             <div id="spinner-div">
-                <img id="spinner-img"src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>">
                 <div id="spinner" class="color-personalized"></div>
             </div>
         </div>
