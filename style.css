@@ -3,9 +3,9 @@ Theme Name: Informatica Pereyra - Theme
 Author: Alan Pereyra
 Author URI: https://informatica.pereyra.online/contacto
 Description: Inforatica Pereyra es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
-Version: 1.1.10
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.2.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: informatica_pereyra
 Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, theme-options
 This theme, like WordPress, is licensed under the GPL.
@@ -93,18 +93,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	/*ul sub-menu*/
 	ul .dropdown-menu.depth_0 {
-		display: none;
 		height: 0;
 	    overflow: hidden;
+	    display: block;
+	    visibility: hidden;
+	    position: absolute;
 	}
 	ul .dropdown-menu.depth_0.show {
-		display: block;
-		height: auto;
+	    height: auto;
 	    font-weight: bold;
 	    margin-right: 0.5rem !important;
 	    margin-left: 0.5rem !important;
 	    color: #888;
 	    text-decoration: none;
+	    position: absolute;
+	    visibility: visible;
+	    width: 95%;
 	    
 	}
 	ul .dropdown-menu.depth_0.show li a {
@@ -363,9 +367,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		.show-sm{
 			display: none!important;
 		}
-		.show-md{
-			display: block!important;
-		}
 	}
 	/*searchform*/
 		span #s{
@@ -487,6 +488,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		#searchform div {
 			display: inline-flex;
 		}
+		form.searchform div{
+			max-width: 100%!important;
+		}
 	/*end search form*/
 	/*text movile*/
 		@media (min-width: 992px) {
@@ -586,5 +590,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		background: rgba(250, 250, 250, 0.9);
 		height: 55px!important;
 		margin-left: -28px!important;
+	}
+	#bg-searchform-mobile{
+		transition: all 1s;
+	}
+	#searchform-mobile{
+		display: none;
+		position: fixed;
+		top: 46%;
+		left: 50%;
+		transform: translate(-39%, -50%);
+		z-index: 10000;
+	}
+	.searchform-close{
+		display: block!important;
+		position: fixed;
+		top: 1%;
+		left: 2%;
+		z-index: 10000;
+		color: #ffffff!important;
+	}
+	#searchform-close{
+		color: #ffffff;
+		display: none;
 	}
 /*end mobile first*/

@@ -923,19 +923,21 @@
 			// end comment button
 			// Ssearch button
 				$wp_customize->add_setting('ip_mobile_search_text', array(
-					'default' => '',
+					'default' => 'false',
 					'trasnport' => 'refresh',
 					'sanitize_callback' => 'sanitize_encoded'
 				));
-
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_mobile_search_text_control', array(
-					'label'=> __('Buscar', 'informatica_pereyra'),
-					'section'=> 'ip_section_mobile',
-					'settings'=> 'ip_mobile_search_text',
-					'description'	  => __( 'Pega el link de la pagina de busqueda', 'informatica_pereyra' ),
-
+				            'label'          => __( 'Buscar', 'informatica_pereyra' ),
+				            'section'        => 'ip_section_mobile',
+				            'settings'       => 'ip_mobile_search_text',
+				            'type'           => 'radio',
+				            'choices'        => array(
+				            	'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+				                'false' => __( 'Ocultar', 'informatica_pereyra' )
+				            )
 				)));
-			// end search button
+			// end search form
 		// end social buttons
 		// 7) Colors
 			$wp_customize->add_section('ip_section_colors', array(

@@ -27,8 +27,8 @@
         <!-- Preoload css -->
         <style type="text/css">
             #spinner-div{height:100vh!important;z-index:1}
-            #spinner{margin-top:-50px;margin-left:-51px;width:6.5rem;height:6.5rem;vertical-align:text-bottom;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
-            #spinner,#spinner-img{-ms-flex-pack: center !important;justify-content: center !important;display: flex !important;position:fixed;top:50%;left:50%}
+            #spinner{margin-top:-50px;margin-left:-51px;width:6.5em;height:6.5em;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
+            #spinner,#spinner-img{position:fixed;top:50%;left:50%}
             @-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             @keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             #spinner-img{height:60px;margin-top:-30px;margin-left:-30px}
@@ -63,7 +63,7 @@
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
-            <div class="m-auto collapse py-2" id="navbarSupportedContent">
+            <div class="m-auto collapse py-2 show-md" id="navbarSupportedContent">
                 <span><?php get_search_form(); ?></span>
             </div>
         </nav>
