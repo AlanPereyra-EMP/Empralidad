@@ -170,6 +170,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		height: 50px;
 		width: 50px;
 	}
+	.img-btn-fixed-i{
+		cursor: pointer;
+	}
 	.img-btn-fixed {
 		visibility: hidden;
 		opacity: 0;
@@ -444,6 +447,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 		#searchsubmit {
 		  display: inline-block;
+		  cursor: pointer;
 		  font-weight: normal;
 		  line-height: 1.25;
 		  text-align: center;
@@ -591,6 +595,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		height: 55px!important;
 		margin-left: -28px!important;
 	}
+	/*searchform*/
+	.fa-search{
+		cursor: pointer;
+	}
 	#bg-searchform-mobile{
 		transition: all 1s;
 	}
@@ -613,5 +621,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	#searchform-close{
 		color: #ffffff;
 		display: none;
+		cursor: pointer;
 	}
 /*end mobile first*/
