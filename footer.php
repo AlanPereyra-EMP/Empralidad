@@ -94,7 +94,7 @@
         </div>
         <!-- Close searchform -->
         <div id="searchform-mobile"><?php get_search_form(); ?></div>
-        <i class="fa fa-3x fa-times" id="searchform-close" onclick="closeSearchform()"></i> 
+        <i class="fa fa-4x fa-times" id="searchform-close" onclick="closeSearchform()"></i> 
     <!-- end buttons mobile -->
     <!-- end all content -->
     </div>

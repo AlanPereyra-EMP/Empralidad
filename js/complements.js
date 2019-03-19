@@ -28,7 +28,7 @@ function showBackground() {
 
 function closeSearchform() {
   background.style.padding = '0vh 0 0 0';
-  close.classList.remove('d-block');
+  close.classList.remove('searchform-close');
   searchform.classList.remove('d-block');
 }
 
