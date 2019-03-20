@@ -32,7 +32,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*1) Navbar*/
 	.navbar-img {
 		height: 50px!important;
-		margin-left: 40px!important;
 		max-width: 192px!important;
 	}
 	.navbar-altura {
@@ -51,7 +50,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	button.navbar-toggler{
 		position: fixed;
 	    right: 2%;
-	    top: 2%;
+	    top: 1%;
 	}
 	/*Backgrown header*/
 	.bg-transparent-personalized {
