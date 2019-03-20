@@ -603,6 +603,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		transition: all 1s;
 	}
 	#searchform-mobile{
+		transition: all 1s;
+		transform: scale(0);
 		display: none;
 		position: fixed;
 		top: 46%;
@@ -611,16 +613,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		z-index: 10000;
 	}
 	.searchform-close{
-		display: block!important;
 		position: fixed;
 		top: 1%;
 		left: 2%;
 		z-index: 10000;
 		color: #ffffff!important;
+	    transition: all 0.3s;
 	}
 	#searchform-close{
-		color: #ffffff;
-		display: none;
+		color: transparent;
 		cursor: pointer;
+		position: fixed;
 	}
 /*end mobile first*/
