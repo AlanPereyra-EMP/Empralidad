@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce.css" media="none" onload="if(media!='all')media='all'">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
-    <!-- favicon -->
-    <link rel="icon" href="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" type="image/png">
 
+    <?php wp_head(); ?>
     <?php echo get_theme_mod('ip_face_text'); ?>
   </head>
   <body <?php body_class() ?>>
