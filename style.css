@@ -48,6 +48,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    text-align: center;
 	    width: 96.66666666666666%!important;
 	}
+	button.navbar-toggler{
+		position: fixed;
+	    right: 2%;
+	    top: 2%;
+	}
 	/*Backgrown header*/
 	.bg-transparent-personalized {
 		/*background: rgba(0, 0, 0, 0.5);*/
