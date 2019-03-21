@@ -521,9 +521,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    color: #fff;
 	    padding: 10px;
 	}
-	div.textwidget div a img:hover, div.textwidget div a img:focus{
-		filter: brightness(0.4);
-	}
 /*end widgets */
 /*9) Blockquote*/
 	blockquote {
