@@ -15,6 +15,7 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
 
+    <?php wp_head(); ?>
     <?php echo get_theme_mod('ip_face_text'); ?>
   </head>
   <body <?php body_class() ?>>
