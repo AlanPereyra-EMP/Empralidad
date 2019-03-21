@@ -186,9 +186,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		visibility: visible;
 	    opacity: 1;
 	}
-	div.textwidget p img:focus, div.textwidget p img:hover{
-		filter: brightness(0.8);
-	}
 	.text-img-home{
 		position: absolute;
 		top: 20%!important;
