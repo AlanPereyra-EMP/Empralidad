@@ -68,7 +68,7 @@
                                 ?>
                                 <p class="text-center">
                                     <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
-                                        <button class="container-fluid btn">
+                                        <button class="container-fluid btn bg-light">
                                             <?php echo get_theme_mod('ip_homepage_btn1') ?>
                                         </button>
                                     </a>
@@ -96,7 +96,7 @@
                                 ?>
                                 <p class="text-center">
                                     <a href="<?php echo get_theme_mod('ip_homepage_link_btn2') ?>">
-                                        <button class="container-fluid btn">
+                                        <button class="container-fluid btn bg-light">
                                             <?php echo get_theme_mod('ip_homepage_btn2') ?>
                                         </button>
                                     </a>
@@ -125,7 +125,7 @@
                                 ?>
                                 <p class="text-center">
                                     <a href="<?php echo get_theme_mod('ip_homepage_link_btn3') ?>">
-                                        <button class="container-fluid btn">
+                                        <button class="container-fluid btn bg-light">
                                             <?php echo get_theme_mod('ip_homepage_btn3') ?>
                                         </button>
                                     </a>
@@ -179,7 +179,7 @@
                         ?>
                         <p class="text-center">
                             <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
-                                <button class="container-fluid btn bg-personalized text-white">
+                                <button class="container-fluid btn bg-light">
                                     <?php echo get_theme_mod('ip_homepage_btn1') ?>
                                 </button>
                             </a>
