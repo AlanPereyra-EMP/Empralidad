@@ -101,7 +101,7 @@
     <!-- WP JavaScript -->
     <?php wp_footer(); ?>
     <!-- jQuery first, then Bootstrap Bundle JS, then Complements -->
-    <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.slim.min.js"></script>
+    <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
     <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js"></script>
     <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js"></script>
     <!-- end js -->

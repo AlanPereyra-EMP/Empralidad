@@ -633,3 +633,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		position: fixed;
 	}
 /*end mobile first*/
+/*carousel*/
+ .FullScreenLanding{
+ 	height: 100vh;
+ 	width: 100%;
+ 	margin: auto;
+ 	top: 0;
+ 	display: table;
+ 	background-size: cover;
+ }
+ .button-down-home{
+ 	bottom: -135px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -16px;
+    font-size: 50px!important;
+    cursor: pointer;
+ }
+ #first-content-home{
+    height: 60px;
+    background: #005777;
+    margin-bottom: -1px;
+    margin-top: -1px;
+ }

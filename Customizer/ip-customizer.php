@@ -56,9 +56,9 @@
 						'label'=> __('Imagen destacada', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
 						'settings'=> 'ip_img_slide1',
-						'width' => 1000,
-						'height' => 600,
-						'description'=> __( '1000x600 px', 'informatica_pereyra' )
+						'width' => 1400,
+						'height' => 1000,
+						'description'=> __( '1400x1000 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
 				// Text 1
@@ -124,9 +124,9 @@
 						'label'=> __('Imagen destacada', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide2',
 						'settings'=> 'ip_img_slide2',
-						'width' => 1000,
-						'height' => 600,
-						'description'=> __( '1000x600 px', 'informatica_pereyra' )
+						'width' => 1400,
+						'height' => 1000,
+						'description'=> __( '1400x1000 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img2
 				// Text 2
