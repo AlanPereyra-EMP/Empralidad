@@ -68,5 +68,4 @@
                 <span><?php get_search_form(); ?></span>
             </div>
         </nav>
-	    <div class="navbar-altura show-mobile"></div>
     <!-- end navbar -->

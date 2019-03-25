@@ -99,6 +99,12 @@
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized{
 	        	color: <?php echo get_theme_mod('ip_title_color'); ?> !important;
 	        }
+	        .ip_img_slide1{
+	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>) no-repeat 50% 50%;
+	        }
+	        .ip_img_slide2{
+	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide2')); ?>) no-repeat 50% 50%;
+	        }
 	    </style>
 	<?php
 	}
