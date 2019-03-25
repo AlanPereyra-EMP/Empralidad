@@ -573,25 +573,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		font-size: 15px;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	}
-	a.fa-home span.fa-text{
-		margin-left: -6px;
+	a.fa-home{
+		padding: 0;
 	}
-	a.fa-user span.fa-text{
-		margin-left: -19px;
+	a.fa-user{
+		padding: 0;
 	}
-	a.fa-shopping-cart span.fa-text{
-		margin-left: -10px;
+	a.fa-shopping-cart{
+		padding: 0;
 	}
-	a.fa-comment span.fa-text{
-		margin-left: -19px;
+	a.fa-comment {
+		padding: 0;
 	}
-	a.fa-search span.fa-text{
-		margin-left: -9px;
+	a.fa-search{
+		padding: 0;
 	}
 	.buttons-mobile{
 		background: rgba(250, 250, 250, 0.9);
 		height: 38px!important;
 		margin-left: -18px!important;
+		margin-right: -18px!important;
 	}
 	div.buttons-mobile a.fa{
 		font-size: 20px!important;
@@ -647,7 +648,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
  }
  #first-content-home{
     height: 60px;
-    background: #005777;
     margin-bottom: -1px;
     margin-top: -1px;
  }
