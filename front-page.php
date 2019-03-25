@@ -12,19 +12,26 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item nopadding active">
-                        <img class="col-12 carousel-altura mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>" alt="First slide">
+                        <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
                         <div class="carousel-caption d-flex text-img-home">
                             <h2 class="container-fluid my-auto text-white text-mobile"><?php echo get_theme_mod('ip_slide1_text'); ?><br> <?php if($button_slide1){ ?>
                                 <a href="<?php echo get_theme_mod('ip_img_link_btn1') ?>"><button class="btn bg-personalized text-white py-0"><?php echo get_theme_mod('ip_img_btn1'); ?></button></h2></a>
                             <?php } ?>
                         </div>
+                        <div class="d-flex text-img-home">
+                            <i class="fa fa-angle-double-down button-down-home"></i>
+                        </div>
                     </div>
                     <div class="carousel-item nopadding">
-                        <img class="col-12 carousel-altura mx-auto <?php if ($text_slide2) { ?> brightness-04 <?php }  ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide2')); ?>" alt="First slide" >
+                        <div class="FullScreenLanding ip_img_slide2 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
                         <div class="carousel-caption d-flex text-img-home">
                             <h2 class="container-fluid my-auto text-white text-mobile"><?php echo get_theme_mod('ip_slide2_text'); ?><br> <?php if($button_slide2){ ?>
                                 <a href="<?php echo get_theme_mod('ip_img_link_btn2') ?>"><button class="btn bg-personalized text-white py-0"><?php echo get_theme_mod('ip_img_btn2'); ?></button></h2></a>
                             <?php } ?>
+                        </div>
+                        <div class="d-flex text-img-home">
+                            <i class="fa fa-angle-double-down button-down-home"></i>
+
                         </div>
                     </div>
                 </div>
@@ -46,7 +53,8 @@
         <?php } ?>
     <!-- end homepage img -->
     <!-- Content -->
-    	<!-- If texts exists -->   
+    <div id="first-content-home"></div>
+    	<!-- If texts exists -->  
             <div class="row mx-auto bg-personalized">            
                 <!-- Text 1 (desktop) -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');

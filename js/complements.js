@@ -12,6 +12,15 @@ $(window).on('scroll', function(){
   }
 })
 
+// Scroll down animation
+ $(function() {
+  // console.log('OK');
+    $('.button-down-home').click (function() {
+      $('html, body').animate({scrollTop: $('#first-content-home').offset().top }, 1000);
+      return false;
+    });
+  });
+
 // Scroll up animation
 var html, body, scrollToTopButton;
 window.onload = function() {
@@ -21,7 +30,7 @@ window.onload = function() {
 };
 
 function scrollToTop(totalTime, easingPower) {
-  //console.log("here");
+  //console.log("OK");
   var timeInterval = 1; //in ms
   var scrollTop = Math.round(body.scrollTop || html.scrollTop);
   //var by=- scrollTop;
