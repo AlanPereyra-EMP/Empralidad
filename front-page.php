@@ -53,7 +53,7 @@
         <?php } ?>
     <!-- end homepage img -->
     <!-- Content -->
-    <div id="first-content-home"></div>
+    <div id="first-content-home" class="bg-personalized"></div>
     	<!-- If texts exists -->  
             <div class="row mx-auto bg-personalized">            
                 <!-- Text 1 (desktop) -->
