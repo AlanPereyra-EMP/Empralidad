@@ -52,20 +52,22 @@
                     </a>                
 	            <?php } ?>
 	        <!-- end if logo -->
-            <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
+                <i id="btn-menu-nav" class="fa fa-bars <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
+            </div>
             <?php wp_nav_menu(array(
                 'theme_location' => 'superior',
                 'container' => 'div',
-                'container_class' => 'collapse navbar-collapse',
+                'container_class' => 'navbar-collapse',
                 'container_id' => 'navbarSupportedContent',
-                'items_wrap' => '<ul class="navbar-nav nav ml-auto text-center">%3$s</ul>',
+                'items_wrap' => '<ul class="navbar-nav nav ml-auto text-center mobile-menu-items">%3$s</ul>',
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
-            <div class="m-auto collapse py-2 show-md" id="navbarSupportedContent">
+            <div class="m-auto collapse py-2 show-md">
                 <span><?php get_search_form(); ?></span>
             </div>
         </nav>
+        <i id="bg-menu-mobile"></i>
     <!-- end navbar -->

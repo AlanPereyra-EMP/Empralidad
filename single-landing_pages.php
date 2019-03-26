@@ -22,7 +22,7 @@
   <body <?php body_class() ?>>
     <div id="charge">
         <div id="spinner" class="d-flex justify-content-center align-items-center">
-            <img id="spinner-img" class="d-flex justify-content-center align-items-center" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>"><div class="spinner-border color-personalized p-5"></div>
+            <div class="spinner-border color-personalized p-5"></div>
         </div>
     </div>
     <!-- All content -->
@@ -63,7 +63,7 @@
     </div>
     <!-- WP JavaScript -->
     <!-- jQuery first, then Bootstrap Bundle JS, then Complements -->
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
     <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js"></script>
     <!-- end js -->
   </body>

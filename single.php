@@ -9,7 +9,7 @@
                 </div>
             </div>
         <?php } else { ?>
-        	<div class=" py-5 pt-lg-90 text-center text-justify text-white bg-personalized">
+        	<div class=" py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
 	            <h1 class="text-mobile"><?php the_title(); ?></h1>
 	        </div>
         <?php } ?>

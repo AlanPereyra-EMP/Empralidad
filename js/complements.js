@@ -59,6 +59,23 @@ function easeInOut(t, power) {
   }
 }
 
+// Menu dropdown
+function openMobileMenu() {
+  var bg = document.getElementById('bg-menu-mobile');
+  var menu = document.getElementById('navbarSupportedContent');
+  if (bg.style.height === '100vh') {
+    setTimeout(()=>{
+      bg.style.height = '0px';
+    }, 250)
+    menu.style.visibility = 'hidden';
+  } else {
+    bg.style.height = '100vh';
+    setTimeout(()=>{
+      menu.style.visibility = 'visible';
+    }, 250)
+  }
+}
+
 // Searchform mobile
 
 var background = document.getElementById('bg-searchform-mobile');
@@ -70,7 +87,7 @@ function showBackground() {
   setTimeout(()=>{
     close.classList.add('searchform-close');
     searchform.classList.add('d-block');
-  }, 1000)
+  }, 500)
 }
 
 function closeSearchform() {

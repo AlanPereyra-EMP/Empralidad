@@ -1,6 +1,6 @@
     <?php get_header(); ?>
     <!-- Title -->
-        <div class="container-fluid py-5 text-center pt-lg-90 text-justify text-white bg-personalized">
+        <div class="container-fluid py-5 text-center pt-105 pt-lg-90 text-justify text-white bg-personalized">
             <h1 class="text-white"><?php wp_title(); ?></h1>
         </div>
     <!-- end title -->

@@ -46,14 +46,14 @@
             </div>
         <?php } else {?>
             <!-- Title no img -->
-                <div class="container-fluid py-5 pt-lg-90 text-center text-justify text-white bg-personalized">
+                <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
                     <h1 class="text-white text-mobile"><?php wp_title();?></h1>
                 </div> 
             <!-- end title no img -->
         <?php } ?>
     <!-- end homepage img -->
     <!-- Content -->
-    <div id="first-content-home" class="bg-personalized"></div>
+    <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" class="bg-personalized"></div>
     	<!-- If texts exists -->  
             <div class="row mx-auto bg-personalized">            
                 <!-- Text 1 (desktop) -->
@@ -187,7 +187,7 @@
                         ?>
                         <p class="text-center">
                             <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
-                                <button class="container-fluid btn bg-light">
+                                <button class="container-fluid col-10 btn bg-light">
                                     <?php echo get_theme_mod('ip_homepage_btn1') ?>
                                 </button>
                             </a>
