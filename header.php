@@ -65,7 +65,7 @@
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
-            <div class="m-auto collapse py-2 show-md">
+            <div class="m-auto collapse py-2 show-lg">
                 <span><?php get_search_form(); ?></span>
             </div>
         </nav>

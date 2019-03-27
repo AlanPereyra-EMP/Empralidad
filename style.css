@@ -73,6 +73,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		    transform: translate(-50%, -50%);
 		    top: 50%;
 		    left: 50%;
+		    width: 100%;
 		}
 	}
 	/*Backgrown header*/
@@ -109,6 +110,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			height: 60px;
 			z-index: -1;
 			background: rgba(255, 255, 255, 0.9);
+		}
+		.menu-item a{
+			font-size: 24px;
 		}
 	}
 	/*a nav-bar*/
@@ -149,6 +153,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	ul .dropdown-menu.depth_0.show li a {
 		font-weight: bold;
+		font-size: 16px;
 		color: #888!important;
 	    text-decoration: none;
 	    border: none;
@@ -167,6 +172,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	ul .dropdown-menu li a::after {
 		display: none;
+	}
+	.dropdown-toggle::after{
+		display: block;
+	    margin-left: 50%;
+	    transform: translate(-50%, 50%);
+	    width: 10px;
 	}
 	/*navbar admin*/
 	@media (min-width: 601px){
