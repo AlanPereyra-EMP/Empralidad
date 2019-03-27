@@ -60,7 +60,7 @@
                 'theme_location' => 'superior',
                 'container' => 'div',
                 'container_class' => 'navbar-collapse',
-                'container_id' => 'navbarSupportedContent',
+                'container_id' => 'navbarContentMenu',
                 'items_wrap' => '<ul class="navbar-nav nav ml-auto text-center mobile-menu-items">%3$s</ul>',
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()

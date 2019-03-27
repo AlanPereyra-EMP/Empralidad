@@ -62,12 +62,10 @@ function easeInOut(t, power) {
 // Menu dropdown
 function openMobileMenu() {
   var bg = document.getElementById('bg-menu-mobile');
-  var menu = document.getElementById('navbarSupportedContent');
-  if (bg.style.height === '100vh') {
-    setTimeout(()=>{
-      bg.style.height = '0px';
-    }, 250)
+  var menu = document.getElementById('navbarContentMenu');
+  if (menu.style.visibility === 'visible') {
     menu.style.visibility = 'hidden';
+    bg.style.height = '0px';
   } else {
     bg.style.height = '100vh';
     setTimeout(()=>{
