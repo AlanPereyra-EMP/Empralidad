@@ -210,14 +210,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		filter: brightness(0.4);
 	}
 	.img-fixed {
-		bottom: 10px;
+		bottom: 42px;
 		position: fixed;
-		right: 2px;
+		right: 5px;
 		z-index: 10000;
 	}
 	.img-btn-fixed, .img-btn-fixed-wsp {
-		height: 50px;
-		width: 50px;
+		height: 40px;
+		width: 40px;
+	}
+	@media(min-width: 576px){
+		.img-fixed {
+			bottom: 10px!important;
+		}
+		.img-btn-fixed, .img-btn-fixed-wsp {
+			height: 50px;
+			width: 50px;
+		}
 	}
 	.img-btn-fixed-i{
 		cursor: pointer;
@@ -398,6 +407,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	@media (min-width: 576px){
 		.show-sm{
 			display: none!important;
+		}
+		.show-btn-fixed{
 		}
 	}
 	/*searchform*/
