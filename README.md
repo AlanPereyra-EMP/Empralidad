@@ -1,4 +1,4 @@
-# Informatica Pereyra (Okcomputer version)
+# Informatica Pereyra
 Contributors: Alan Pereyra
 
 Requires at least: 4.8
