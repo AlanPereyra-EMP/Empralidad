@@ -142,13 +142,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	ul .dropdown-menu.depth_0.show {
 	    height: auto;
 	    font-weight: bold;
-	    margin-right: 0.5rem !important;
-	    margin-left: 0.5rem !important;
 	    color: #888;
 	    text-decoration: none;
 	    position: absolute;
 	    visibility: visible;
-	    width: 95%;
+	    width: 100%;
 	    
 	}
 	ul .dropdown-menu.depth_0.show li a {
