@@ -50,7 +50,11 @@
         <div class="container-fluid text-white py-1 " style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
             <div class="text-center mt-5">
                 <!-- Owner -->
+<<<<<<< HEAD
                     <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por <a href="https://okcomputer.online">Ok Computer</a></small></p>
+=======
+                    <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por <a href="https://infomatica.pereyra.online">Informatica Pereyra</a></small></p>
+>>>>>>> master
                 <!-- end owner -->
                 <small><p><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-secondary">Terminos y Condiciones</a> -  
                 <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="text-secondary">Politicas de Privacidad</a></p></small>

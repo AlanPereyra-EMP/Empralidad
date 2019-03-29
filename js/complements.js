@@ -14,50 +14,33 @@ $(window).on('scroll', function(){
 
 // Scroll down animation
  $(function() {
-  // console.log('OK');
+  var already_clicked = 0;
     $('.button-down-home').click (function() {
-      $('html, body').animate({scrollTop: $('#first-content-home').offset().top }, 1000);
+      if (already_clicked === 0){
+        already_clicked += 1;
+        $('html, body').animate({scrollTop: $('#first-content-home').offset().top }, 1000);
+        setTimeout(()=>{
+          already_clicked = 0;
+        }, 1000);
+      }
       return false;
     });
   });
 
 // Scroll up animation
-var html, body, scrollToTopButton;
-window.onload = function() {
-  html = document.documentElement;
-  body = document.body;
-  scrollToTopButton = document.getElementById("scrollToTopButton");
-};
-
-function scrollToTop(totalTime, easingPower) {
-  //console.log("OK");
-  var timeInterval = 1; //in ms
-  var scrollTop = Math.round(body.scrollTop || html.scrollTop);
-  //var by=- scrollTop;
-  var timeLeft = totalTime;
-  var scrollByPixel = setInterval(function() {
-    var percentSpent = (totalTime - timeLeft) / totalTime;
-    if (timeLeft >= 0) {
-      var newScrollTop = scrollTop * (1 - easeInOut(percentSpent, easingPower));
-      body.scrollTop = newScrollTop;
-      html.scrollTop = newScrollTop;
-      //console.log(easeInOut(percentSpent,easingPower));
-      timeLeft--;
-    } else {
-      clearInterval(scrollByPixel);
-      //Add hash to the url after scrolling
-      //window.location.hash = hash;
-    }
-  }, timeInterval);
-}
-
-function easeInOut(t, power) {
-  if (t < 0.5) {
-    return 0.5 * Math.pow(2 * t, power);
-  } else {
-    return 0.5 * (2 - Math.pow(2 * (1 - t), power));
-  }
-}
+ $(function() {
+  var already_clicked = 0;
+    $('.img-btn-fixed').click (function() {
+      if (already_clicked === 0){
+        already_clicked += 1;
+        $('html, body').animate({scrollTop: $('#all_content').offset().top }, 1000);
+        setTimeout(()=>{
+          already_clicked = 0;
+        }, 1000);
+      }
+      return false;
+    });
+  });
 
 // Menu dropdown
 function openMobileMenu() {
@@ -151,4 +134,4 @@ setTimeout(()=>{
   console.log('Preload finish');
   charge.className = ' d-block';
   spinner.className = 'd-none'
-}, 1000)
+}, 1000);
