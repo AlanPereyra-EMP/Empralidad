@@ -77,35 +77,80 @@
 				)));
 				// end text 1
 				// Button 1
-						$wp_customize->add_setting('ip_img_btn1', array(
-								'default' => '',
-								'trasnport' => 'refresh',
-								'sanitize_callback' => 'sanitize_string'
-							));
+					$wp_customize->add_setting('ip_img_btn1', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
 
-						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_btn_control1', array(
-							'label'=> __('Texto de boton', 'informatica_pereyra'),
-							'section'=> 'ip_section_slide1',
-							'settings'=> 'ip_img_btn1',
-							'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_btn_control1', array(
+						'label'=> __('Texto de boton', 'informatica_pereyra'),
+						'section'=> 'ip_section_slide1',
+						'settings'=> 'ip_img_btn1',
+						'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
 
-						)));
-					// end button 1
-					// Link button 1
-						$wp_customize->add_setting('ip_img_link_btn1', array(
-								'default' => '',
-								'trasnport' => 'refresh',
-								'sanitize_callback' => 'sanitize_string'
-							));
+					)));
+				// end button 1
+				// Link button 1
+					$wp_customize->add_setting('ip_img_link_btn1', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
 
-						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_link_btn_control1', array(
-							'label'=> __('Link del boton', 'informatica_pereyra'),
-							'section'=> 'ip_section_slide1',
-							'settings'=> 'ip_img_link_btn1',
-							'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_link_btn_control1', array(
+						'label'=> __('Link del boton', 'informatica_pereyra'),
+						'section'=> 'ip_section_slide1',
+						'settings'=> 'ip_img_link_btn1',
+						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
 
-						)));
-					// end link button 1
+					)));
+				// end link button 1
+				// Text 2
+				$wp_customize->add_setting('ip_slide2_text', array(
+					'default' => '',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_slide2_text_control', array(
+					'label'=> __('Texto', 'informatica_pereyra'),
+					'section'=> 'ip_section_slide1',
+					'settings'=> 'ip_slide2_text',
+					'description'=> __( 'Escribe algo sobre tu imagen principal', 'informatica_pereyra' )
+
+				)));
+				// end text 2
+				// Button 2
+					$wp_customize->add_setting('ip_img_btn2', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_btn_control2', array(
+						'label'=> __('Texto de boton', 'informatica_pereyra'),
+						'section'=> 'ip_section_slide1',
+						'settings'=> 'ip_img_btn2',
+						'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
+
+					)));
+				// end button 2
+				// Link button 2
+					$wp_customize->add_setting('ip_img_link_btn2', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_link_btn_control2', array(
+						'label'=> __('Link del boton', 'informatica_pereyra'),
+						'section'=> 'ip_section_slide1',
+						'settings'=> 'ip_img_link_btn2',
+						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
+
+					)));
+				// end link button 2
 			// end slide1
 		// end img
 		// 2) Ads 
