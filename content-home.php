@@ -5,5 +5,4 @@
 		    the_content();
 		endwhile; endif; ?>
 	</div>
-	<p><hr></p>
 </div>

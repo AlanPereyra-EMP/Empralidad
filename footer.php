@@ -1,6 +1,6 @@
     <!-- Footer -->
 
-        <div class="container-fluid text-white py-3 pb-5" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
+        <footer class="container-fluid text-white py-3 pb-5" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
             <div class="text-center">
                 <!-- Sidebar -->
                     <?php get_sidebar( 'footer' ); ?>
@@ -41,7 +41,7 @@
                 <?php echo get_theme_mod('ip_qr_text') ?>
                 <br>
             </div>
-        </div>
+        </footer>
     <!-- end footer -->
     <!-- Button permanent desktop -->
         <div class="show-btn-fixed">

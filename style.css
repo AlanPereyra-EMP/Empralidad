@@ -139,9 +139,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    visibility: hidden;
 	    position: absolute;
 	}
+	@media(max-width: 991px){
+		ul .dropdown-menu.depth_0.show{
+			overflow-y: scroll;
+		    height: 135px!important;
+		}
+	}
 	ul .dropdown-menu.depth_0.show {
-	    overflow-y: scroll;
-	    height: 135px;
+	    height: auto;
 	    font-weight: bold;
 	    color: #888;
 	    text-decoration: none;
@@ -401,8 +406,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  .show-lg{
 	  	display: none!important;
 	  }
+	  .mt-60-mobile{
+	  	margin-top: 60px; 
+	  }
 	}
-
+	.h-100-vh{
+		height: 100vh!important;
+	}
 	.w-100-px{
 		width: 100px!important;
 	}
@@ -709,6 +719,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*carousel*/
 	#carouselExampleFade{
 		background-color: #262626
+	}
+	.carousel-item{
+		float: none!important;
 	}
 	.FullScreenLanding{
 		height: 100vh;
