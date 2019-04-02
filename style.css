@@ -734,6 +734,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		top: 0;
 		display: table;
 		background-size: cover;
+		z-index: 1
 	}
 	.button-down-home{
 		bottom: -90px;
