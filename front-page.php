@@ -9,31 +9,15 @@
         $button_slide2 = get_theme_mod('ip_img_btn2');        
         if ($carousel_slide1 && $carousel_slide2) { 
         ?>
-            <header id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item nopadding active">
-                        <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
-                        <div class="carousel-caption d-flex text-img-home">
-                            <h2 class="container-fluid my-auto text-white text-mobile"><?php echo get_theme_mod('ip_slide1_text'); ?><br> <?php if($button_slide1){ ?>
-                                <a href="<?php echo get_theme_mod('ip_img_link_btn1') ?>"><button class="btn bg-personalized text-white py-0"><?php echo get_theme_mod('ip_img_btn1'); ?></button></h2></a>
-                            <?php } ?>
-                        </div>
-                        <div class="d-flex text-img-home">
-                            <i class="fa fa-angle-double-down button-down-home"></i>
-                        </div>
-                    </div>
-                    <div class="carousel-item nopadding">
-                        <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
-                        <div class="carousel-caption d-flex text-img-home">
-                            <h2 class="container-fluid my-auto text-white text-mobile"><?php echo get_theme_mod('ip_slide2_text'); ?><br> <?php if($button_slide2){ ?>
-                                <a href="<?php echo get_theme_mod('ip_img_link_btn2') ?>"><button class="btn bg-personalized text-white py-0"><?php echo get_theme_mod('ip_img_btn2'); ?></button></h2></a>
-                            <?php } ?>
-                        </div>
-                        <div class="d-flex text-img-home">
-                            <i class="fa fa-angle-double-down button-down-home"></i>
-
-                        </div>
-                    </div>
+            <header id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
+                <div class="carousel-caption d-flex text-img-home">
+                    <h2 class="container-fluid my-auto text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?><br> <?php if($button_slide1){ ?>
+                        <a href="<?php echo get_theme_mod('ip_img_link_btn1') ?>"><button class="btn bg-personalized text-white py-0"><?php echo get_theme_mod('ip_img_btn1'); ?></button></h2></a>
+                    <?php } ?>
+                </div>
+                <div class="d-flex text-img-home">
+                    <i class="fa fa-angle-double-down button-down-home"></i>
                 </div>
             </header>
         <?php } else {?>
@@ -47,7 +31,7 @@
     <!-- Content -->
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" class="bg-personalized"></div>
     	<!-- If texts exists -->  
-            <div class="row mx-auto bg-personalized ">            
+            <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6">            
                 <!-- Text 1 (desktop) -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
 
@@ -81,7 +65,7 @@
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show2');
 
                     if ($ip_homepage_show == 'true'){ ?>
-                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized">
+                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized text-shadow-6">
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                             </h2>
@@ -109,7 +93,7 @@
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show3');
 
                     if ($ip_homepage_show == 'true'){ ?>
-                        <div class="py-3 bg-personalized text-white col-12 col-md-6 col-lg-4 mx-auto" >
+                        <div class="py-3 bg-personalized text-white col-12 col-md-6 col-lg-4 mx-auto text-shadow-6" >
                             <h2 class="text-center" >
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                             </h2>
@@ -162,7 +146,7 @@
             <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
 
             if ($ip_homepage_show == 'true'){ ?>
-                <div class="py-3 mx-auto bg-personalized show-mobile" >
+                <div class="py-3 mx-auto bg-personalized show-mobile shadow-grey-up text-shadow-6" >
                     <h2 class="text-center">
                         <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                     </h2>

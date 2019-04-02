@@ -376,6 +376,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    width: 100%;
 	    margin-bottom: 0.75rem;
 	  }
+	  .card{
+	  	margin-bottom: 25px!important;
+	  	margin-top: 25px;
+	  }
 	  .show-desktop {
 	  	display: block!important;
 	  }
@@ -756,11 +760,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 	}
 /*Shadows*/
-.shadow-on img, iframe{
+.shadow-on img, iframe {
 	box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
     transition: all .5s;
 }
-.FullScreenLanding, ul .dropdown-menu.depth_0.show, .shadow-grey, .shadow-on .button {
+.FullScreenLanding, .shadow-grey-down, .shadow-on .button, img{
     box-shadow: 0px 13px 13px rgba(0, 0, 0, .2);
     transition: all .5s;
 }
@@ -768,11 +772,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
     border-radius: 26px;
 }
-.bg-navbar-top, nav.navbar.navbar-scroll {
+.bg-navbar-top, nav.navbar.navbar-scroll, blockquote, table, div .pt-lg-90 {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
 }
-.buttons-mobile, .shadow-grey-inverted{
+.buttons-mobile, .shadow-grey-up, footer{
 	box-shadow: 0px -5px 13px rgba(0, 0, 0, .2);
+}
+.shadow-grey-up-down, .btn, .card{
+	box-shadow: 0px -5px 13px rgba(0, 0, 0, .2), 0px 13px 13px rgba(0, 0, 0, .2);
 }
 @media(max-width: 991px){
 	#s, #searchsubmit{
@@ -782,8 +789,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
 	}
 }
-.shadow-on img:hover, .shadow-on img:focus, 
-.shadow-on .button:hover, .shadow-on .button:focus, 
-iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
-	box-shadow: !important;
+.text-shadow-6{
+	text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
+}
+.text-shadow-2, body{
+	text-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
+}
+ul .dropdown-menu.depth_0.show li a{
+	text-shadow: none!important;
+}
+a img:hover, a img:focus, .navbar-img, .card button, 
+.button:hover, .button:focus, .btn:hover, .btn:focus,
+ iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
+	box-shadow: none!important;
 }
