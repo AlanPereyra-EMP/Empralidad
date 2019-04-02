@@ -560,6 +560,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			max-width: 100%!important;
 		}
 	/*end search form*/
+	#wpadminbar{
+		background: rgba(0, 0, 0, 0.7)!important;
+	}
 	/*text movile*/
 		@media (min-width: 992px) {
 		  .text-mobile {
