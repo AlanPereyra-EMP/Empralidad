@@ -47,7 +47,7 @@
     <!-- Content -->
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" class="bg-personalized"></div>
     	<!-- If texts exists -->  
-            <div class="row mx-auto bg-personalized h-100-vh">            
+            <div class="row mx-auto bg-personalized ">            
                 <!-- Text 1 (desktop) -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
 
