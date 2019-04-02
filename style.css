@@ -779,7 +779,7 @@ img, iframe {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
     border-radius: 26px;
 }
-@media(max-width: 991px){
+@media(min-width: 991px){
 	nav.navbar.navbar-scroll{
 		box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
 	}
@@ -810,7 +810,7 @@ body{
 ul .dropdown-menu.depth_0.show li a{
 	text-shadow: none!important;
 }
-a img:hover, a img:focus, .navbar-img, .card button, 
+a img:hover, a img:focus, .navbar-img, .card button, .img-btn-fixed:hover, .img-btn-fixed:focus, 
 .button:hover, .button:focus, .btn:hover, .btn:focus,
  iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 	box-shadow: none!important;
