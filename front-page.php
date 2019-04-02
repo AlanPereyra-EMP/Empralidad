@@ -2,12 +2,9 @@
     <!-- Homepage img -->
         <?php 
         $carousel_slide1 = get_theme_mod('ip_img_slide1');
-        $carousel_slide2 = get_theme_mod('ip_img_slide2');
         $text_slide1 = get_theme_mod('ip_slide1_text');
-        $text_slide2 = get_theme_mod('ip_slide2_text');
-        $button_slide1 = get_theme_mod('ip_img_btn1');
-        $button_slide2 = get_theme_mod('ip_img_btn2');        
-        if ($carousel_slide1 && $carousel_slide2) { 
+        $button_slide1 = get_theme_mod('ip_img_btn1');       
+        if ($carousel_slide1) { 
         ?>
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
