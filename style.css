@@ -772,7 +772,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     transition: all .5s;
 }
 .shadow-grey-down-1{
-	box-shadow: 0px 13px 38px rgba(0, 0, 0, .6);
+	box-shadow: 0px 13px 38px rgba(0, 0, 0, .6)!important;
 }
 .img-btn-fixed, .dropdown-toggle::after {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
@@ -780,21 +780,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 @media(max-width: 991px){
 	nav.navbar.navbar-scroll{
-		box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
 	}
 }
 .bg-navbar-top, blockquote, table, div .pt-lg-90 {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
 }
 .buttons-mobile, .shadow-grey-up, footer{
-	box-shadow: 0px -5px 13px rgba(0, 0, 0, .2);
+	box-shadow: 0px -5px 13px rgba(0, 0, 0, .2)!important;
 }
 .shadow-grey-up-down, .btn, .card{
 	box-shadow: 0px -5px 13px rgba(0, 0, 0, .2), 0px 13px 13px rgba(0, 0, 0, .2);
 }
 @media(max-width: 991px){
 	#s, #searchsubmit{
-		box-shadow: 0px 13px 13px rgba(0, 0, 0, .2);
+		box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
 	}
 	.menu-item a{
 		text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
@@ -803,7 +803,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .text-shadow-6{
 	text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
 }
-.text-shadow-2, body{
+body{
 	text-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
 }
 ul .dropdown-menu.depth_0.show li a{

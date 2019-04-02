@@ -67,3 +67,9 @@
 		  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
 		          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
 	}
+	table.variations{
+		box-shadow: none;
+	}
+	.woocommerce-product-gallery__image{
+		box-shadow: 0 5px 13px rgba(0,0,0,0.2)!important;
+	}
