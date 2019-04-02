@@ -757,7 +757,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 /*Shadows*/
 .shadow-on img, iframe{
-	box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
     transition: all .5s;
 }
 .FullScreenLanding, ul .dropdown-menu.depth_0.show, .shadow-grey, .shadow-on .button {
@@ -785,5 +785,5 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .shadow-on img:hover, .shadow-on img:focus, 
 .shadow-on .button:hover, .shadow-on .button:focus, 
 iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
-	box-shadow: none;
+	box-shadow: !important;
 }
