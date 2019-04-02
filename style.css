@@ -782,6 +782,7 @@ img, iframe {
 .img-btn-fixed, .dropdown-toggle::after {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
     border-radius: 26px;
+    transition: all .5s;
 }
 @media(min-width: 991px){
 	nav.navbar.navbar-scroll{
@@ -815,7 +816,7 @@ ul .dropdown-menu.depth_0.show li a{
 	text-shadow: none!important;
 }
 a img:hover, a img:focus, .navbar-img, .card button, .img-btn-fixed:hover, .img-btn-fixed:focus, 
-.button:hover, .button:focus, .btn:hover, .btn:focus,
+.button:hover, .button:focus, .btn:hover, .btn:focus, .no-shadow, 
  iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 	box-shadow: none!important;
 }
