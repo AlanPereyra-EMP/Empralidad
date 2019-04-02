@@ -752,11 +752,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	@media(min-width: 601px){
 		#first-content-home.admin-bar-show{
 			height: 92px!important;
+			margin-top: -92px;
 		}
 	}
 	@media(min-width: 783px){
 		#first-content-home.admin-bar-show{
 			height: 106px!important;
+			margin-top: -106px;
 		}
 	}
 /*Shadows*/
