@@ -775,7 +775,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
     border-radius: 26px;
 }
-.bg-navbar-top, nav.navbar.navbar-scroll, blockquote, table, div .pt-lg-90 {
+@media(max-width: 991px){
+	nav.navbar.navbar-scroll{
+		box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
+	}
+}
+.bg-navbar-top, blockquote, table, div .pt-lg-90 {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
 }
 .buttons-mobile, .shadow-grey-up, footer{
