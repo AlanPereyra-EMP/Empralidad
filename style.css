@@ -772,8 +772,8 @@ img, iframe {
 	box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
     transition: all .5s;
 }
-.FullScreenLanding, .shadow-grey-down, .button, img{
-    box-shadow: 0px 13px 13px rgba(0, 0, 0, .2);
+.FullScreenLanding, .shadow-grey-down, a.button, img{
+    box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
     transition: all .5s;
 }
 .shadow-grey-down-1{
@@ -816,7 +816,7 @@ ul .dropdown-menu.depth_0.show li a{
 	text-shadow: none!important;
 }
 a img:hover, a img:focus, .navbar-img, .card button, .img-btn-fixed:hover, .img-btn-fixed:focus, 
-.button:hover, .button:focus, .btn:hover, .btn:focus, .no-shadow, .woocommerce ul.products li.product .button:hover, 
+a.button:hover, a.button:focus, .btn:hover, .btn:focus, .no-shadow, 
  iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 	box-shadow: none!important;
 }
