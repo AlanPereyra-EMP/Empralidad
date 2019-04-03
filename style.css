@@ -588,10 +588,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	/*Cards*/
 	.header-text1{
+	    bottom: 0%!important;
+	    color: #fff;
 	    left: 1.8%!important;
 	    position: absolute;
 	    right: auto!important;
-	    top: 45%!important;
+	    top: 0%!important;
 	    text-align: center;
 	    width: 96.66666666666666%!important;
 	}

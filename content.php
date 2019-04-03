@@ -4,9 +4,9 @@
         <div class="card-block">
     <!-- Img -->
         <?php if ( has_post_thumbnail() ) { ?>
-                <div class=" nopadding">
+                <div class="position-relative nopadding">
                     <?php the_post_thumbnail( 'full', array( 'class' => 'col-12 mx-auto h-auto brightness-04') );?>
-                    <div class="d-flex header-text1">
+                    <div class="carousel-caption d-flex header-text1">
                         <h2 class="container-fluid my-auto d-block text-white text-mobile">
                             <?php the_title(); ?>  
                         </h2>
