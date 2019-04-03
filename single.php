@@ -2,7 +2,7 @@
 <?php get_header(); ?>
     <!-- Title -->
         <?php if ( has_post_thumbnail() ) { ?>
-            <div class="carousel-item nopadding active">
+            <div class="carousel-item nopadding active mt-60-mobile">
                 <?php the_post_thumbnail( 'full', array( 'class' => 'col-12 mx-auto h-auto ', 'style' => 'filter: brightness(0.3);') );?>
                 <div class="carousel-caption d-flex header-text">
                     <h1 class="container-fluid my-auto text-white text-mobile"><?php the_title(); ?></h1>

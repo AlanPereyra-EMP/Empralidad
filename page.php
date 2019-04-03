@@ -14,7 +14,7 @@
                 <?php
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
                     the_content();?><br>
-                    <a href="#"><button class="btn container-fluid"></button></a>
+                    <a href="#"><button class="btn container-fluid invisible"></button></a>
                 <?php endwhile; endif; ?>
                 <!-- Comments -->
                     <?php if ( comments_open() || get_comments_number() ) :
