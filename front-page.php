@@ -27,7 +27,7 @@
     <!-- end homepage img -->
     <!-- Content -->
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" class="bg-personalized"></div>
-    	<!-- If texts exists -->  
+        <!-- If texts exists -->  
             <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6">            
                 <!-- Text 1 (desktop) -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
@@ -64,7 +64,7 @@
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show2');
 
                     if ($ip_homepage_show == 'true'){ 
-                        $img = get_theme_mod('ip_homepage_img1'); ?>
+                        $img = get_theme_mod('ip_homepage_img2'); ?>
                         <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized text-shadow-6">
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
@@ -93,7 +93,7 @@
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show3');
 
                     if ($ip_homepage_show == 'true'){ 
-                        $img = get_theme_mod('ip_homepage_img1'); ?>
+                        $img = get_theme_mod('ip_homepage_img3'); ?>
                         <div class="py-3 bg-personalized text-white col-12 col-md-6 col-lg-4 mx-auto text-shadow-6" >
                             <h2 class="text-center" >
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
