@@ -278,6 +278,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		margin-left: auto;
 		margin-right: auto; 
 	}
+	.wp-block-gallery{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 /*end alings*/
 /*4) No-padding and no-margin*/
 	.marg-r [class*="col-"] {
@@ -314,6 +318,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	iframe {
 		width: 100%!important;
 		height: auto;
+		min-width: unset!important;
 	}
 	.landing-content p iframe {
 			height: 150px!important;
@@ -332,6 +337,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  .landing-content p iframe {
 			height: 250px!important;
 		}
+	}
+	/*facebook iframe*/
+	.fb_iframe_widget_fluid span {
+	    max-width: 100%;
 	}
 	/*Search form fix*/
 	label.screen-reader-text{
@@ -582,7 +591,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    left: 1.8%!important;
 	    position: absolute;
 	    right: auto!important;
-	    top: 20%!important;
+	    top: 45%!important;
 	    text-align: center;
 	    width: 96.66666666666666%!important;
 	}
@@ -606,6 +615,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    background: #262626;
 	    color: #fff;
 	    padding: 10px;
+	}
+	.wp-block-archives-list, .wp-block-categories-list, .wp-block-latest-posts{
+		list-style: none;
 	}
 /*end widgets */
 /*9) Blockquote*/
@@ -792,7 +804,7 @@ img, iframe {
 .bg-navbar-top, blockquote, table, div .pt-lg-90 {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2);
 }
-.buttons-mobile, .shadow-grey-up, footer{
+.buttons-mobile, .shadow-grey-up, .footer{
 	box-shadow: 0px -5px 13px rgba(0, 0, 0, .2)!important;
 }
 .shadow-grey-up-down, .btn, .card{
