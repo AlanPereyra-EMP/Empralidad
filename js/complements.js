@@ -130,8 +130,6 @@ const charge = document.getElementById('all_content');
 
 const spinner = document.getElementById('charge');
 
-setTimeout(()=>{
-  console.log('Preload finish');
-  charge.className = ' d-block';
-  spinner.className = 'd-none'
-}, 1000);
+console.log('Preload finish');
+charge.className = ' visible';
+spinner.className = 'd-none'

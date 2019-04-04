@@ -33,18 +33,18 @@
             @-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             @keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             #spinner-img{height:60px;margin-top:-30px;margin-left:-30px}
-            .d-none{display: none !important;}
+            .invisible {visibility: hidden !important;}
         </style>
     <!-- end preload -->
     <!-- All content -->
-    <div id="all_content" class="d-none">
+    <div id="all_content" class="invisible">
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent-personalized fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
             <!-- if logo -->
 	            <?php $img_navbar = get_theme_mod('ip_img_logo');
 	            if ($img_navbar) { ?>
 		            <a class="navbar-brand mx-auto" href="<?php echo home_url(); ?>">
-		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" class="navbar-img navbar-img-hover">
+		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" class="navbar-img">
 		            </a>
 	            <?php } else { ?>
                     <a class=" mx-auto" href="<?php echo home_url(); ?>">
