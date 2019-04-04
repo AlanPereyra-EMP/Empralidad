@@ -45,14 +45,13 @@
 		register_nav_menus (array('superior' => 'Menu Principal'));
 	}
 
-		// Class <a> main menu
-			add_filter('nav_menu_link_attributes','clase_menu', 10,3);
-			function clase_menu ($atts, $item, $args){
-				$class = 'nav-link font-weight-bold mx-2';
-				$atts ['class'] = $class;
-				return $atts;
-			}
-		// end class <a>
+	// Class <a> main menu
+		add_filter('nav_menu_link_attributes','clase_menu', 10,3);
+		function clase_menu ($atts, $item, $args){
+			$class = 'nav-link font-weight-bold mx-2';
+			$atts ['class'] = $class;
+			return $atts;
+		}
 // end main menu
 // 2) Widgets
 	add_action( 'widgets_init', 'ip_sidebar' );
@@ -80,7 +79,7 @@
 	        )
 	    );
 	}
-// fin widgets
+// end widgets
 // 3) Includes
 	get_template_part( 'Customizer/ip-customizer' );
 // end includes
@@ -114,7 +113,7 @@
 	if ( ! isset( $content_width ) ) {
 		$content_width = 660;
 	}
-// fin content width
+// end content width
 // 6) add theme support
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' ); 
@@ -126,7 +125,6 @@
 	add_action( 'after_setup_theme', 'informatica_pereyra_theme_suport' );
 // end add thheme support
 // 7) comment reply
-
 	function wpse218049_enqueue_comments_reply() {
 
 	    if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1) ) {

@@ -9,25 +9,25 @@
 		            	<!-- Facebook -->
 			            	<?php $facebook_link = get_theme_mod('ip_social_face_text');
 			                    if ($facebook_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_face_text'); ?>" class="fa fa-facebook"></a><?php 
+			                    	?><a href="<?php echo get_theme_mod('ip_social_face_text'); ?>" class="fab fa-facebook-f"></a><?php 
 			                    }
 			                ?>
 			            <!-- Instagram -->
 			            	<?php $instagram_link = get_theme_mod('ip_social_insta_text');
 			                    if ($instagram_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_insta_text'); ?>" class="fa fa-instagram"></a><?php 
+			                    	?><a href="<?php echo get_theme_mod('ip_social_insta_text'); ?>" class="fab fa-instagram"></a><?php 
 			                    }
 			                ?>
 			            <!-- Twiter -->
 			            	<?php $twitter_link = get_theme_mod('ip_social_tw_text');
 			                    if ($twitter_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_tw_text'); ?>" class="fa fa-twitter"></a><?php 
+			                    	?><a href="<?php echo get_theme_mod('ip_social_tw_text'); ?>" class="fab fa-twitter"></a><?php 
 			                    }
 			                ?>
 			            <!-- Youtube -->
 			            	<?php $youtube_link = get_theme_mod('ip_social_yt_text');
 			                    if ($youtube_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_yt_text'); ?>" class="fa fa-youtube"></a><?php 
+			                    	?><a href="<?php echo get_theme_mod('ip_social_yt_text'); ?>" class="fab fa-youtube"></a><?php 
 			                    }
 			                ?>           
 		            </div>
@@ -100,10 +100,8 @@
     </div>
     <!-- WP JavaScript -->
     <?php wp_footer(); ?>
-    <!-- jQuery first, then Bootstrap Bundle JS, then Complements -->
+    <!-- jQuery -->
     <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
-    <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js"></script>
-    <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js"></script>
     <!-- end js -->
   </body>
 </html>

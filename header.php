@@ -13,7 +13,31 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/contact-form-7.css" media="none" onload="if(media!='all')media='all'">
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce.css" media="none" onload="if(media!='all')media='all'">
     <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" media="none" onload="if(media!='all')media='all'">
+    <script type="text/javascript">
+    function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";
+    document.body.appendChild(element);
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload);
+    }else { window.onload = downloadJSAtOnload;}
+
+    function downloadJSAtOnload1() {
+    var element1 = document.createElement("script");
+    element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
+    document.body.appendChild(element1);
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload1, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload1);
+    }else{ window.onload = downloadJSAtOnload1;}
+    </script>
 
     <?php wp_head(); ?>
     <?php echo get_theme_mod('ip_face_text'); ?>
