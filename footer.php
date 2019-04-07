@@ -97,7 +97,9 @@
         <i class="fa fa-4x fa-times" id="searchform-close" onclick="closeSearchform()"></i> 
     <!-- end buttons mobile -->
     <!-- end all content -->
-    </div>   
+    </div>
+    <!-- WP JavaScript -->
+    <?php wp_head(); wp_footer(); ?>
     <!-- jQuery -->
     <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
     <!-- end js -->
