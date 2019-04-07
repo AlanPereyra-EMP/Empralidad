@@ -57,11 +57,6 @@
   </head>
   <body <?php body_class() ?>>
     <!-- Preload -->
-        <div id="charge">
-            <div id="spinner-div">
-                <div id="spinner" class="color-personalized"></div>
-            </div>
-        </div>
         <!-- Preoload css -->
         <style type="text/css">
             #spinner-div{height:100vh!important;z-index:1}
@@ -72,6 +67,11 @@
             #spinner-img{height:60px;margin-top:-30px;margin-left:-30px}
             .invisible {visibility: hidden !important;}
         </style>
+        <div id="charge">
+            <div id="spinner-div">
+                <div id="spinner" class="color-personalized"></div>
+            </div>
+        </div>
     <!-- end preload -->
     <!-- All content -->
     <div id="all_content" class="invisible">
