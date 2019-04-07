@@ -48,12 +48,21 @@
     }else if (window.attachEvent){
     window.attachEvent("onload", downloadJSAtOnload2);
     }else{ window.onload = downloadJSAtOnload2;}
+
+    function downloadJSAtOnload3() {
+        <?php wp_head(); ?>
+        <?php wp_footer(); ?>
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload3, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload3);
+    }else{ window.onload = downloadJSAtOnload3;}
     </script>
     <noscript>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     </noscript>
 
-    <?php wp_head(); ?>
     <?php echo get_theme_mod('ip_face_text'); ?>
   </head>
   <body <?php body_class() ?>>
