@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/contact-form-7.css" media="none" onload="if(media!='all')media='all'">
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce.css" media="none" onload="if(media!='all')media='all'">
     <!-- Add icon library -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" media="none" onload="if(media!='all')media='all'">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" media="none" onload="if(media!='all')media='all'"> -->
     <script type="text/javascript">
     function downloadJSAtOnload() {
     var element = document.createElement("script");
@@ -37,7 +36,22 @@
     }else if (window.attachEvent){
     window.attachEvent("onload", downloadJSAtOnload1);
     }else{ window.onload = downloadJSAtOnload1;}
+
+    function downloadJSAtOnload2() {
+    var element2 = document.createElement("link");
+    element2.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+    element2.rel = 'stylesheet';
+    document.body.appendChild(element2);
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload2, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload2);
+    }else{ window.onload = downloadJSAtOnload2;}
     </script>
+    <noscript>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    </noscript>
 
     <?php wp_head(); ?>
     <?php echo get_theme_mod('ip_face_text'); ?>
