@@ -50,8 +50,8 @@
     }else{ window.onload = downloadJSAtOnload2;}
 
     function downloadJSAtOnload3() {
-        <?php wp_head(); ?>
-        <?php wp_footer(); ?>
+        wp_head();
+        wp_footer();
     }
     if (window.addEventListener){
     window.addEventListener("load", downloadJSAtOnload3, false);
