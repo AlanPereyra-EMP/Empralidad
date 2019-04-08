@@ -59,22 +59,18 @@
     <!-- Preload -->
         <!-- Preoload css -->
         <style type="text/css">
-            #spinner-div{height:100vh!important;z-index:1}
-            #spinner{margin-top:-50px;margin-left:-51px;width:6.5em;height:6.5em;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
-            #spinner,#spinner-img{position:fixed;top:50%;left:50%}
             @-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             @keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
-            #spinner-img{height:60px;margin-top:-30px;margin-left:-30px}
             .invisible {visibility: hidden !important;}
         </style>
         <div id="charge">
-            <div id="spinner-div">
-                <div id="spinner" class="color-personalized"></div>
+            <div id="spinner-div" style="height:100vh!important;z-index:1; background: rgba(250, 250, 250, 0.9); z-index: 10000000;">
+                <div id="spinner" style="margin-top:-50px;margin-left:-51px;width:6.5em;height:6.5em;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite; position:fixed;top:50%;left:50%" class="color-personalized"></div>
             </div>
         </div>
     <!-- end preload -->
     <!-- All content -->
-    <div id="all_content" class="invisible">
+    <div id="all_content" class="isible">
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent-personalized fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
             <!-- if logo -->

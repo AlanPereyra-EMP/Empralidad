@@ -123,8 +123,8 @@ if (document.getElementById('clock') && document.getElementById('message')){
 }
 
 // Preload js
-const charge = document.getElementById('all_content');
+// const charge = document.getElementById('all_content');
 const spinner = document.getElementById('charge');
 console.log('Preload finish');
-charge.className = ' visible';
+// charge.className = ' visible';
 spinner.className = 'd-none';
