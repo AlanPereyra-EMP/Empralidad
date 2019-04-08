@@ -13,38 +13,71 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/contact-form-7.css" media="none" onload="if(media!='all')media='all'">
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce.css" media="none" onload="if(media!='all')media='all'">
     <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" media="none" onload="if(media!='all')media='all'"> -->
+    <script type="text/javascript">
+    function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";
+    document.body.appendChild(element);
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload);
+    }else { window.onload = downloadJSAtOnload;}
 
-    <?php wp_head(); ?>
+    function downloadJSAtOnload1() {
+    var element1 = document.createElement("script");
+    element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
+    document.body.appendChild(element1);
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload1, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload1);
+    }else{ window.onload = downloadJSAtOnload1;}
+
+    function downloadJSAtOnload2() {
+    var element2 = document.createElement("link");
+    element2.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+    element2.rel = 'stylesheet';
+    document.body.appendChild(element2);
+    }
+    if (window.addEventListener){
+    window.addEventListener("load", downloadJSAtOnload2, false);
+    }else if (window.attachEvent){
+    window.attachEvent("onload", downloadJSAtOnload2);
+    }else{ window.onload = downloadJSAtOnload2;}
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    </noscript>
+
     <?php echo get_theme_mod('ip_face_text'); ?>
   </head>
   <body <?php body_class() ?>>
     <!-- Preload -->
-        <div id="charge">
-            <div id="spinner-div">
-                <div id="spinner" class="color-personalized"></div>
-            </div>
-        </div>
         <!-- Preoload css -->
         <style type="text/css">
-            #spinner-div{height:100vh!important;z-index:1}
-            #spinner{margin-top:-50px;margin-left:-51px;width:6.5em;height:6.5em;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
-            #spinner,#spinner-img{position:fixed;top:50%;left:50%}
             @-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             @keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
-            #spinner-img{height:60px;margin-top:-30px;margin-left:-30px}
-            .d-none{display: none !important;}
+            .invisible {visibility: hidden !important;}
         </style>
+        <div id="charge">
+            <div id="spinner-div" style="height:100vh!important;z-index:1; background: rgba(250, 250, 250, 0.9); z-index: 10000000;">
+                <div id="spinner" style="margin-top:-50px;margin-left:-51px;width:6.5em;height:6.5em;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite; position:fixed;top:50%;left:50%" class="color-personalized"></div>
+            </div>
+        </div>
     <!-- end preload -->
     <!-- All content -->
-    <div id="all_content" class="d-none">
+    <div id="all_content" class="isible">
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent-personalized fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
             <!-- if logo -->
 	            <?php $img_navbar = get_theme_mod('ip_img_logo');
 	            if ($img_navbar) { ?>
 		            <a class="navbar-brand mx-auto" href="<?php echo home_url(); ?>">
-		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" class="navbar-img navbar-img-hover">
+		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" class="navbar-img">
 		            </a>
 	            <?php } else { ?>
                     <a class=" mx-auto" href="<?php echo home_url(); ?>">

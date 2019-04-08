@@ -58,7 +58,6 @@ function openMobileMenu() {
 }
 
 // Searchform mobile
-
 var background = document.getElementById('bg-searchform-mobile');
 var close = document.getElementById('searchform-close');
 var searchform = document.getElementById('searchform-mobile');
@@ -76,7 +75,6 @@ function closeSearchform() {
   close.classList.remove('searchform-close');
   searchform.classList.remove('d-block');
 }
-
 
 // Countdown.js
 if (document.getElementById('clock') && document.getElementById('message')){
@@ -125,13 +123,8 @@ if (document.getElementById('clock') && document.getElementById('message')){
 }
 
 // Preload js
-
-const charge = document.getElementById('all_content');
-
+// const charge = document.getElementById('all_content');
 const spinner = document.getElementById('charge');
-
-setTimeout(()=>{
-  console.log('Preload finish');
-  charge.className = ' d-block';
-  spinner.className = 'd-none'
-}, 1000);
+console.log('Preload finish');
+// charge.className = ' visible';
+spinner.className = 'd-none';

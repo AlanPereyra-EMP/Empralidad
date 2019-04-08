@@ -1,5 +1,5 @@
 <div class="card p-0">
-	<div class="card-header"> <?php the_category(', '); ?> </div>
+    <div class="card-header"> <?php the_category(', '); ?> </div>
     <!-- body -->
         <div class="card-block">
     <!-- Img -->
@@ -18,9 +18,9 @@
                 </div>
         <?php } ?>
     <!-- end img -->
-        	<br>
+            <br>
             <div class="card-text p-3">
-            	<?php the_excerpt(); ?>
+                <?php the_excerpt(); ?>
             </div>
             <a href="<?php the_permalink(); ?>">
                 <button class="btn bg-personalized text-white container-fluid alingcenter mt-auto">

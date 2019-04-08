@@ -9,20 +9,25 @@
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($text_slide1) { ?> brightness-04 <?php } ?>"></div>
                 <div class="carousel-caption d-flex text-img-home">
-                    <h2 class="container-fluid my-auto text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?><br> <?php if($button_slide1){ ?>
-                        <a href="<?php echo get_theme_mod('ip_img_link_btn1') ?>"><button class="btn bg-personalized text-white py-0"><?php echo get_theme_mod('ip_img_btn1'); ?></button></h2></a>
-                    <?php } ?>
+                    <h2 class="container-fluid my-auto text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?><br> 
+                        <?php if($button_slide1){ ?>
+                            <a href="<?php echo get_theme_mod('ip_img_link_btn1') ?>">
+                                <button class="btn bg-personalized text-white py-0">
+                                    <?php echo get_theme_mod('ip_img_btn1'); ?>
+                                </button>
+                            </a>
+                        <?php } ?>
+                    </h2>
                 </div>
                 <div class="d-flex text-img-home">
-                    <i class="fa fa-angle-double-down button-down-home"></i>
+                    <i class="fas fa-caret-down button-down-home"></i>
                 </div>
             </header>
         <?php } else {?>
             <!-- Title no img -->
-                <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
-                    <h1 class="text-white text-mobile"><?php wp_title();?></h1>
-                </div> 
-            <!-- end title no img -->
+            <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
+                <h1 class="text-white text-mobile"><?php wp_title();?></h1>
+            </div> 
         <?php } ?>
     <!-- end homepage img -->
     <!-- Content -->
@@ -47,8 +52,7 @@
                             
                             <?php $header_btn = get_theme_mod('ip_homepage_btn1');
 
-                            if ($header_btn){
-                                ?>
+                            if ($header_btn){ ?>
                                 <p class="text-center">
                                     <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
                                         <button class="container-fluid btn bg-light">
@@ -106,8 +110,7 @@
                             <?php 
                             $header_btn = get_theme_mod('ip_homepage_btn3');
 
-                            if ($header_btn){
-                                ?>
+                            if ($header_btn){ ?>
                                 <p class="text-center">
                                     <a href="<?php echo get_theme_mod('ip_homepage_link_btn3') ?>">
                                         <button class="container-fluid btn bg-light">
@@ -160,8 +163,7 @@
                     
                     <?php $header_btn = get_theme_mod('ip_homepage_btn1');
 
-                    if ($header_btn){
-                        ?>
+                    if ($header_btn){ ?>
                         <p class="text-center">
                             <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
                                 <button class="container-fluid col-10 btn bg-light">
