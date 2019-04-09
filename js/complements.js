@@ -6,9 +6,9 @@ $(window).on('scroll', function(){
     $('nav').removeClass('navbar-scroll');
   }
   if($(window).scrollTop()){
-    $('img.img-btn-fixed').addClass('img-btn-fixed-show');
+    $('i.img-btn-fixed').addClass('img-btn-fixed-show');
   } else {
-    $('img.img-btn-fixed').removeClass('img-btn-fixed-show');
+    $('i.img-btn-fixed').removeClass('img-btn-fixed-show');
   }
 })
 
@@ -33,7 +33,7 @@ $(window).on('scroll', function(){
     $('.img-btn-fixed').click (function() {
       if (already_clicked === 0){
         already_clicked += 1;
-        $('html, body').animate({scrollTop: $('#all_content').offset().top }, 1000);
+        $('html, body').animate({scrollTop: $('#top_content').offset().top }, 1000);
         setTimeout(()=>{
           already_clicked = 0;
         }, 1000);
@@ -123,8 +123,8 @@ if (document.getElementById('clock') && document.getElementById('message')){
 }
 
 // Preload js
-// const charge = document.getElementById('all_content');
+const content = document.getElementById('ip_content');
 const spinner = document.getElementById('charge');
 console.log('Preload finish');
-// charge.className = ' visible';
+content.className = ' visible';
 spinner.className = 'd-none';

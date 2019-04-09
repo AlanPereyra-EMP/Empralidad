@@ -226,13 +226,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			width: 50px;
 		}
 	}
-	.img-btn-fixed-i{
-		cursor: pointer;
-	}
 	.img-btn-fixed {
+		background: #fff;
+		cursor: pointer;
 		visibility: hidden;
 		opacity: 0;
 	    transition: visibility 0s, opacity 0.5s linear;
+	    font-size: 41px;
 	}
 	.img-btn-fixed-show{
 		visibility: visible;
@@ -432,7 +432,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 	}
 	/*searchform*/
-		span #s{
+		div #s{
 			display: inline !important;
 			width:100px;
 		}

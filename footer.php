@@ -35,21 +35,23 @@
                 <!-- Owner -->
                     <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por <a href="https://okcomputer.online">Ok Computer</a></small></p>
                 <!-- end owner -->
-                <small><p><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-secondary">Terminos y Condiciones</a> -  
-                <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="text-secondary">Politicas de Privacidad</a></p></small>
+                <p><small><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-secondary">Terminos y Condiciones</a> -  
+                <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="text-secondary">Politicas de Privacidad</a></small></p>
                 <br>
                 <?php echo get_theme_mod('ip_qr_text') ?>
                 <br>
             </div>
         </footer>
     <!-- end footer -->
+    <!-- end ip_content -->
+    </div>
     <!-- Button permanent desktop -->
         <div class="show-btn-fixed">
             <?php  $perma_button = get_theme_mod('ip_what_text'); ?> 
             <?php if ($perma_button) { ?>
             	<div class="img-fixed"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('ip_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20desde%20<?php wp_title();?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png"></a></div>
             <?php } else { ?>
-            	<div class="img-fixed" id="scrollToTopButton"><i class="img-btn-fixed-i"><img class="img-btn-fixed" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/up-button.png"></i></div>
+            	<div class="img-fixed" id="scrollToTopButton"><i class="fas fa-arrow-circle-up img-btn-fixed" ></i></div>
             <?php } ?>
         </div>
     <!-- end button permanent desktop -->
@@ -96,10 +98,31 @@
         <div id="searchform-mobile"><?php get_search_form(); ?></div>
         <i class="fa fa-4x fa-times" id="searchform-close" onclick="closeSearchform()"></i> 
     <!-- end buttons mobile -->
-    <!-- end all content -->
-    </div>
     <!-- WP JavaScript -->
-    <?php wp_head(); wp_footer(); ?>
+    <?php wp_footer(); ?>
+    <script>
+        function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";
+        document.body.appendChild(element);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadJSAtOnload, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadJSAtOnload);
+        }else { window.onload = downloadJSAtOnload;}
+
+        function downloadJSAtOnload1() {
+        var element1 = document.createElement("script");
+        element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
+        document.body.appendChild(element1);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadJSAtOnload1, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadJSAtOnload1);
+        }else{ window.onload = downloadJSAtOnload1;}
+    </script>
     <!-- jQuery -->
     <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
     <!-- end js -->
