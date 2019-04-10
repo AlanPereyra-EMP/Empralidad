@@ -45,7 +45,7 @@
 		wp_enqueue_style( 'woocommerce-smallscreen', get_template_directory_uri() . '/css/style.css' );
 		wp_enqueue_style( 'woocommerce-general', get_template_directory_uri() . '/css/style.css' );
 	};
-	add_action( 'get_footer', 'cargar_footer_styles' );
+	add_action( 'get_footer', 'charge_footer_styles' );
 // 1) Main menu
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus (array('superior' => 'Menu Principal'));
