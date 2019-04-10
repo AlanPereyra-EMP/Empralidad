@@ -32,6 +32,8 @@
 		wp_deregister_style('woocommerce-layout');
 		wp_dequeue_style('woocommerce-smallscreen');
 		wp_deregister_style('woocommerce-smallscreen');
+		wp_dequeue_style('woocommerce-general');
+		wp_deregister_style('woocommerce-general');
 	}
 	add_action( 'wp_enqueue_scripts', 'remove_css', 9999 );
 	add_action( 'wp_head', 'remove_css', 9999 );
@@ -41,8 +43,9 @@
 		wp_enqueue_style( 'contact-form-7', get_template_directory_uri() . '/css/style.css' );
 		wp_enqueue_style( 'woocommerce-layout', get_template_directory_uri() . '/css/style.css' );
 		wp_enqueue_style( 'woocommerce-smallscreen', get_template_directory_uri() . '/css/style.css' );
+		wp_enqueue_style( 'woocommerce-general', get_template_directory_uri() . '/css/style.css' );
 	};
-	add_action( 'get_footer', 'cargar_footer_styles' );
+	add_action( 'get_footer', 'charge_footer_styles' );
 // 1) Main menu
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus (array('superior' => 'Menu Principal'));
