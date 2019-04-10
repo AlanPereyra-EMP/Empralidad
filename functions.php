@@ -1,5 +1,5 @@
 <?php 
-// 0) Updates
+// 0) Scripts on footer
 // 1) Main menu
 // 2) Widgets
 // 3) Includes
@@ -11,35 +11,18 @@
 // 9) Wp link pages
 // 10) Custom post type
 
-// //  0) Updates
-//     // set_site_transient('update_themes', null);
-// 	function geko_check_update( $transient ) {
-// 	    if ( empty( $transient->checked ) ) {
-// 	        return $transient;
-// 	    }
-// 	    $theme_data = wp_get_theme(wp_get_theme()->template);
-// 	    $theme_slug = $theme_data->get_template();
-// 	    //Delete '-master' from the end of slug
-// 	    $theme_uri_slug = preg_replace('/-master$/', '', $theme_slug);
-	    
-// 	    $remote_version = '0.0.0';
-// 	    $style_css = wp_remote_get("https://raw.githubusercontent.com/alanpereyra57/".$theme_uri_slug."/master/style.css")['body'];
-// 	    if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
-// 	        $remote_version = _cleanup_header_comment( $match[1] );
-	   
-// 	    if (version_compare($theme_data->version, $remote_version, '<')) {
-// 	        $transient->response[$theme_slug] = array(
-// 	            'theme'       => $theme_slug,
-// 	            'new_version' => $remote_version,
-// 	            'url'         => 'https://github.com/alanpereyra57/'.$theme_uri_slug,
-// 	            'package'     => 'https://github.com/alanpereyra57/'.$theme_uri_slug.'/archive/master.zip',
-// 	        );
-// 	    }
-	       
-// 	    return $transient;
-// 	}
-// 	add_filter( 'pre_set_site_transient_update_themes', 'geko_check_update' );
-// // 	end updates
+// 0) Script on footer
+	function scripts_footer() {
+	    remove_action('wp_head', 'wp_print_scripts');
+	    remove_action('wp_head', 'wp_print_head_scripts', 9);
+	    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+	 
+	    add_action('wp_footer', 'wp_print_scripts', 5);
+	    add_action('wp_footer', 'wp_enqueue_scripts', 5);
+	    add_action('wp_footer', 'wp_print_head_scripts', 5);
+	}
+	add_action( 'wp_enqueue_scripts', 'scripts_footer' );
+
 // 1) Main menu
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus (array('superior' => 'Menu Principal'));
@@ -52,7 +35,7 @@
 			$atts ['class'] = $class;
 			return $atts;
 		}
-// end main menu
+
 // 2) Widgets
 	add_action( 'widgets_init', 'ip_sidebar' );
 	function ip_sidebar() {
@@ -79,10 +62,10 @@
 	        )
 	    );
 	}
-// end widgets
+
 // 3) Includes
 	get_template_part( 'Customizer/ip-customizer' );
-// end includes
+
 // 4) Dinamics Css
 	function ip_theme_customize_css()
 	{
@@ -108,12 +91,12 @@
 	<?php
 	}
 	add_action( 'wp_head', 'ip_theme_customize_css');
-// end dinamic css
+
 // 5) content width
 	if ( ! isset( $content_width ) ) {
 		$content_width = 660;
 	}
-// end content width
+
 // 6) add theme support
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' ); 
@@ -123,7 +106,7 @@
 	    add_theme_support( 'woocommerce' );
 	}
 	add_action( 'after_setup_theme', 'informatica_pereyra_theme_suport' );
-// end add thheme support
+
 // 7) comment reply
 	function wpse218049_enqueue_comments_reply() {
 
@@ -133,7 +116,7 @@
 	    }
 	}
 	add_action(  'wp_enqueue_scripts', 'wpse218049_enqueue_comments_reply' );
-// end comment reply
+
 // 8) Walker class 
 	class Walker_Nav_Primary extends Walker_Nav_menu {
 	
@@ -184,7 +167,7 @@
 			
 		}	
 	}
-// end walker class
+
 // 9) Wp link pages
  	$defaults = array(
 		'before'           => '<p>' . __( 'Páginas:', 'informatica_pereyra' ),
@@ -198,7 +181,7 @@
 		'pagelink'         => '%',
 		'echo'             => 1
 	);
-// end link pages
+
 // 10) Cutom post type
  	add_action( 'init', 'codex_landing_pages_init' );
 	function codex_landing_pages_init() {
@@ -237,6 +220,6 @@
 
 		register_post_type( 'landing_pages', $args );
 	}
-// end custom post type
+
 
 ?>
