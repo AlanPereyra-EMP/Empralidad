@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce.css">
     <!-- Defer css -->
     <script async>
     function downloadJSAtOnload() {
