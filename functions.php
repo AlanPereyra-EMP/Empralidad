@@ -1,5 +1,5 @@
 <?php 
-// 0) JS and CSS on footer
+// 0) JS on footer
 // 1) Main menu
 // 2) Widgets
 // 3) Includes
@@ -11,7 +11,7 @@
 // 9) Wp link pages
 // 10) Custom post type
 
-// 0) JS and CSS on footer
+// 0) JS on footer
 	function scripts_footer() {
 	    remove_action('wp_head', 'wp_print_scripts');
 	    remove_action('wp_head', 'wp_print_head_scripts', 9);
@@ -22,30 +22,6 @@
 	    add_action('wp_footer', 'wp_print_head_scripts', 5);
 	}
 	add_action( 'wp_enqueue_scripts', 'scripts_footer' );
-
-	function remove_css() {
-		wp_dequeue_style('wp-block-library');
-		wp_deregister_style('wp-block-library');
-		wp_dequeue_style('contact-form-7');
-		wp_deregister_style('contact-form-7');
-		wp_dequeue_style('woocommerce-layout');
-		wp_deregister_style('woocommerce-layout');
-		wp_dequeue_style('woocommerce-smallscreen');
-		wp_deregister_style('woocommerce-smallscreen');
-		wp_dequeue_style('woocommerce-general');
-		wp_deregister_style('woocommerce-general');
-	}
-	add_action( 'wp_enqueue_scripts', 'remove_css', 9999 );
-	add_action( 'wp_head', 'remove_css', 9999 );
-
-	function charge_footer_styles() {
-		wp_enqueue_style( 'wp-block-library', get_template_directory_uri() . '/css/style.css' );
-		wp_enqueue_style( 'contact-form-7', get_template_directory_uri() . '/css/style.css' );
-		wp_enqueue_style( 'woocommerce-layout', get_template_directory_uri() . '/css/style.css' );
-		wp_enqueue_style( 'woocommerce-smallscreen', get_template_directory_uri() . '/css/style.css' );
-		wp_enqueue_style( 'woocommerce-general', get_template_directory_uri() . '/css/style.css' );
-	};
-	add_action( 'get_footer', 'charge_footer_styles' );
 // 1) Main menu
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus (array('superior' => 'Menu Principal'));

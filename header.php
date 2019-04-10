@@ -62,7 +62,7 @@
             @keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
             .invisible {visibility: hidden !important;}
         </style>
-        <div id="charge" style="height:100vh!important;z-index:1; background: rgba(250, 250, 250, 1); z-index: 1000;">
+        <div id="charge" style="height:100vh!important;z-index:1; background: rgba(250, 250, 250, 1); z-index: 1000;position: fixed;top: 0; left: 0;">
             <div id="spinner" style="margin-top:-50px;margin-left:-51px;width:6.5em;height:6.5em;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite; position:fixed;top:50%;left:50%" class="color-personalized"></div>
         </div>
     <!-- end preload -->
