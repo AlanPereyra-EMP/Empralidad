@@ -1,6 +1,5 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<html prefix="og: http://ogp.me/ns#">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- Defer css -->
-    <script async>
+    <script>
     function downloadJSAtOnload() {
     var element = document.createElement("link");
     element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/contact-form-7.css";
