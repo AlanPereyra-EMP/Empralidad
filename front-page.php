@@ -31,7 +31,7 @@
         <?php } ?>
     <!-- end homepage img -->
     <!-- Content -->
-    <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" class="bg-personalized"></div>
+    <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <!-- If texts exists -->  
             <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6">            
                 <!-- Text 1 (desktop) -->

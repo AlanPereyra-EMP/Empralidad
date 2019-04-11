@@ -121,10 +121,3 @@ if (document.getElementById('clock') && document.getElementById('message')){
   countdown( time_left, 'clock', final_message);
 
 }
-
-// Preload js
-const content = document.getElementById('ip_content');
-const spinner = document.getElementById('charge');
-console.log('Preload finish');
-content.className = ' visible';
-spinner.className = 'd-none';
