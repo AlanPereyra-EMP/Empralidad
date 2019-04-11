@@ -43,8 +43,6 @@
             </div>
         </footer>
     <!-- end footer -->
-    <!-- end ip_content -->
-    </div>
     <!-- Button permanent desktop -->
         <div class="show-btn-fixed">
             <?php  $perma_button = get_theme_mod('ip_what_text'); ?> 
