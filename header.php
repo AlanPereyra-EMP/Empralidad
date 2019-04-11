@@ -82,7 +82,7 @@
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
-            <div class="m-auto collapse py-2 show-lg">
+            <div class="collapse show-lg" id="btn-search-desktop">
                 <div class="text-white mr-3">
                     <?php $search_link = get_theme_mod('ip_mobile_search_text');
                     if ($search_link == 'true'){ ?>
