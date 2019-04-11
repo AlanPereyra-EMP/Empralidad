@@ -11,11 +11,9 @@
                 <div class="carousel-caption d-flex text-img-home">
                     <h2 class="container-fluid my-auto text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?><br> 
                         <?php if($button_slide1){ ?>
-                            <a href="<?php echo get_theme_mod('ip_img_link_btn1') ?>">
-                                <button class="btn bg-personalized text-white py-0">
-                                    <?php echo get_theme_mod('ip_img_btn1'); ?>
-                                </button>
-                            </a>
+                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn bg-personalized text-white py-0">
+                                <?php echo get_theme_mod('ip_img_btn1'); ?>
+                            </button>
                         <?php } ?>
                     </h2>
                 </div>
@@ -54,11 +52,9 @@
 
                             if ($header_btn){ ?>
                                 <p class="text-center">
-                                    <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
-                                        <button class="container-fluid btn bg-light">
-                                            <?php echo get_theme_mod('ip_homepage_btn1') ?>
-                                        </button>
-                                    </a>
+                                    <button onclick="window.location.href = '<?php echo get_theme_mod('ip_homepage_link_btn1') ?>';" class="container-fluid btn bg-light">
+                                        <?php echo get_theme_mod('ip_homepage_btn1') ?>
+                                    </button>
                                 </p>
                             <?php } ?>
                         </div>
@@ -83,11 +79,9 @@
                             if ($header_btn){
                                 ?>
                                 <p class="text-center">
-                                    <a href="<?php echo get_theme_mod('ip_homepage_link_btn2') ?>">
-                                        <button class="container-fluid btn bg-light">
-                                            <?php echo get_theme_mod('ip_homepage_btn2') ?>
-                                        </button>
-                                    </a>
+                                    <button onclick="window.location.href = '<?php echo get_theme_mod('ip_homepage_link_btn2') ?>';" class="container-fluid btn bg-light">
+                                        <?php echo get_theme_mod('ip_homepage_btn2') ?>
+                                    </button>
                                 </p>
                             <?php } ?>
                         </div>
@@ -112,11 +106,9 @@
 
                             if ($header_btn){ ?>
                                 <p class="text-center">
-                                    <a href="<?php echo get_theme_mod('ip_homepage_link_btn3') ?>">
-                                        <button class="container-fluid btn bg-light">
-                                            <?php echo get_theme_mod('ip_homepage_btn3') ?>
-                                        </button>
-                                    </a>
+                                    <button onclick="window.location.href = '<?php echo get_theme_mod('ip_homepage_link_btn3') ?>';" class="container-fluid btn bg-light">
+                                        <?php echo get_theme_mod('ip_homepage_btn3') ?>
+                                    </button>
                                 </p>
                             <?php } ?>
                         </div>
@@ -165,11 +157,9 @@
 
                     if ($header_btn){ ?>
                         <p class="text-center">
-                            <a href="<?php echo get_theme_mod('ip_homepage_link_btn1') ?>">
-                                <button class="container-fluid col-10 btn bg-light">
-                                    <?php echo get_theme_mod('ip_homepage_btn1') ?>
-                                </button>
-                            </a>
+                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_homepage_link_btn1') ?>';" class="container-fluid col-10 btn bg-light">
+                                <?php echo get_theme_mod('ip_homepage_btn1') ?>
+                            </button>
                         </p>
                     <?php } ?>
                 </div>

@@ -54,8 +54,8 @@
         </div>
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
-        <div class="show-sm mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile">
-            <div class="buttons-mobile text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
+        <div class="mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile">
+            <div class="buttons-mobile show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
                 <!-- Home-->
                     <a href="<?php echo home_url(); ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
                 <!-- User -->
@@ -122,7 +122,7 @@
         }else{ window.onload = downloadJSAtOnload1;}
     </script>
     <!-- jQuery -->
-    <script defer="true" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
+    <script defer  src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
     <!-- end js -->
   </body>
 </html>

@@ -436,11 +436,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 	}
 	/*searchform*/
-		div #s{
-			display: inline !important;
-			width:100px;
-		}
-		#s {
+		#s{
+		  display: inline !important;
 		  max-width: 50%;
 		  width: auto;
 		  padding: 0.5rem 0.75rem;

@@ -83,7 +83,13 @@
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
             <div class="m-auto collapse py-2 show-lg">
-                <div><?php get_search_form(); ?></div>
+                <div class="text-white mr-3">
+                    <?php $search_link = get_theme_mod('ip_mobile_search_text');
+                    if ($search_link == 'true'){ ?>
+                        <a class="fa fa-search mx-auto" onclick="showBackground()">
+                        </a> 
+                    <?php }?>
+                </div>
             </div>
         </nav>
         <i id="bg-menu-mobile"></i>
