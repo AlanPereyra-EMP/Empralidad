@@ -305,6 +305,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		padding: 0;
 		font-size: 19px!important;
 	}
+	#btn-search-desktop div{
+		height: 59px;
+	}
+	#btn-search-desktop div a{
+		padding: 15px;
+	}
 /*6) Fixs */
 	/*Youtube iframe*/
 	iframe {
