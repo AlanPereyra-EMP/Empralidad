@@ -444,8 +444,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	/*searchform*/
 		#s{
 		  display: inline !important;
-		  max-width: 50%;
-		  width: auto;
+		  width: 75%;
 		  padding: 0.5rem 0.75rem;
 		  font-size: 1rem;
 		  line-height: 1.25;
@@ -519,6 +518,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		  line-height: 1.25;
 		  text-align: center;
 		  white-space: nowrap;
+		  width: 25%;
+	      padding: 0;
 		  vertical-align: middle;
 		  -webkit-user-select: none;
 			 -moz-user-select: none;
@@ -556,8 +557,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		fieldset[disabled] a.btn {
 		  pointer-events: none;
 		}
+		#searchform {
+			display: block;
+		    width: 70%;
+		    margin-left: auto!important;
+			margin-right: auto!important;
+		}
 		#searchform div {
 			display: inline-flex;
+			width: 100%;
 		}
 		form.searchform div{
 			max-width: 100%!important;
@@ -677,13 +685,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	#searchform-mobile{
 		transition: all 1s;
-		transform: scale(0);
-		display: none;
-		position: fixed;
-		top: 46%;
-		left: 50%;
-		transform: translate(-39%, -50%);
-		z-index: 10000;
+	    display: none;
+	    position: fixed;
+	    top: 46%;
+	    transform: translate(0%, -50%);
+	    z-index: 10000;
+	    width: 100%;
 	}
 	.searchform-close{
 		position: fixed;
