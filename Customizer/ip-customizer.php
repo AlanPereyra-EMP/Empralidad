@@ -2,13 +2,14 @@
 // 1) Img
 // 2) Ads
 // 3) Homepage texts
-// 4) Corp texts
+// 4) Searchform sections
 // 5) Social buttons
 // 6) Molile buttons
 // 7) Colors
 // 8) Whatsapp
 // 9) QR code (argentina)
 // 10) Pixel facebook
+// 11) Corp texts
 
 	function informatica_pereyra_customize_register($wp_customize){
 	
@@ -660,85 +661,126 @@
 				// end link button 3
 			// end home text 3
 		// end homepage text
-		// 4) Corp texts
-
-			$wp_customize->add_section('ip_section_text', array(
-				'title'=> __('Textos corporativos', 'informatica_pereyra'),
-				'priority' => 4
-			));
-
-			// Terms and conditions
-
-				$wp_customize->add_setting('ip_headline_term', array(
-				'default' => 'Example headline text',
-				'sanitize_callback' => 'sanitize_string'
-
+		// 4) Searchform section
+			// Add panel
+				$wp_customize->add_panel( 'ip_panel_searchform_section', array(
+					'priority' => 3,
+					'title' => __( 'Secciones destacadas searchform', 'informatica_pereyra' )
 				));
-
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_headline_term', array(
-					'label'=> 'headline',
-					'section'=> 'ip_section_text_headline',
-					'settings'=> 'ip_headline_term'
-				)));
-
-
-				$wp_customize->add_setting('ip_headline_link_term', array(
-				'default' => '#',
-				'sanitize_callback' => 'sanitize_url_'
-
+			// end add panel
+			// Home text 1
+				$wp_customize->add_section('ip_section_searchform1', array(
+					'title'=> __('Seccion destacada searchform', 'informatica_pereyra'),
+					'priority' => 1,
+					'panel' => 'ip_panel_search_text',
+					'description' => __('Esta sección se ve en la parte superior solo en dispositivos grandes, en dispositivos pequeños se ve en la parte inferior', 'informatica_pereyra')
 				));
+				// Show 1
+					$wp_customize->add_setting('ip_searchform_show1', array(
+						'default' => 'false',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_encoded'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_searchform_show_control1', array(
+					            'label'          => __( 'Mostrar u Ocultar', 'informatica_pereyra' ),
+					            'section'        => 'ip_section_searchform1',
+					            'settings'       => 'ip_searchform_show1',
+					            'type'           => 'radio',
+					            'choices'        => array(
+					            	'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+					                'false' => __( 'Ocultar', 'informatica_pereyra' )
+					            )
+					)));
+				// end show 1
+				// Img 1
+					$wp_customize->add_setting('ip_searchform_img1', array(
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
 
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_link_term', array(
-					'label'=> 'Pagina de Terminos y Condiciones',
-					'section'=> 'ip_section_text',
-					'settings'=> 'ip_headline_link_term',
-					'type' => 'dropdown-pages',
+					$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_searchform_img_control1', array(
+						'label'=> __('Imagen', 'informatica_pereyra'),
+						'section'=> 'ip_section_searchform1',
+						'settings'=> 'ip_searchform_img1',
+						'width' => 500,
+						'height' => 250
+					)));
+				// end img 1
+				// Title 1
+					$wp_customize->add_setting('ip_searchform_title1', array(
+							'default' => 'Seaccion destacada personalizable',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
 
-				)));
-			// end terms and conditions
-			// Privacy policies
-				$wp_customize->add_setting('ip_headline_poli', array(
-				'default' => 'Example headline text',
-				'sanitize_callback' => 'sanitize_string'
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_searchform_title_control1', array(
+						'label'=> __('Titulo', 'informatica_pereyra'),
+						'section'=> 'ip_section_searchform1',
+						'settings'=> 'ip_searchform_title1'
+					)));
+				// end title 1
+				// Text 1
+					$wp_customize->add_setting('ip_searchform_text1', array(
+							'default' => 'Podes escribir acá avisos o pegar scripts de anuncios (adsense)',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_encoded'
+						));
 
-				));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_searchform_text_control1', array(
+						'label'=> __('Script o Texto descriptivo', 'informatica_pereyra'),
+						'section'=> 'ip_section_searchform1',
+						'type' => 'textarea',
+						'settings'=> 'ip_searchform_text1'
+					)));
+					// alings 1
+						$wp_customize->add_setting('ip_searchform_text_aling1', array(
+							'default' => 'center',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_encoded'
+						));
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_searchform_title_aling_control1', array(
+						            'label'          => __( 'Alineación', 'informatica_pereyra' ),
+						            'section'        => 'ip_section_searchform1',
+						            'settings'       => 'ip_searchform_text_aling1',
+						            'type'           => 'radio',
+						            'choices'        => array(
+						            	'left'   => __( 'Izquierda', 'informatica_pereyra' ),
+						                'center' => __( 'Centrado', 'informatica_pereyra' ),
+						                'right'  => __( 'Derecha', 'informatica_pereyra' ),
+						                'justify'=> __( 'Justificado', 'informatica_pereyra' )
+						            )
+						)));
+					// end alings 1
+				// end text 1
+				// Button 1
+					$wp_customize->add_setting('ip_searchform_btn1', array(
+							'default' => 'Boton a otra pagina o a un articulo',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
 
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_headline_poli', array(
-					'label'=> 'headline',
-					'section'=> 'ip_section_text_headline',
-					'settings'=> 'ip_headline_poli'
-				)));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_searchform_btn_control1', array(
+						'label'=> __('Texto de boton', 'informatica_pereyra'),
+						'section'=> 'ip_section_searchform1',
+						'settings'=> 'ip_searchform_btn1'
 
+					)));
+				// end button 1
+				// Link button 1
+					$wp_customize->add_setting('ip_searchform_link_btn1', array(
+							'default' => '#',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
 
-				$wp_customize->add_setting('ip_headline_link_poli', array(
-				'default' => '#',
-				'sanitize_callback' => 'sanitize_url_'
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_searchform_link_btn_control1', array(
+						'label'=> __('Link del boton', 'informatica_pereyra'),
+						'section'=> 'ip_section_searchform1',
+						'settings'=> 'ip_searchform_link_btn1'
 
-				));
-
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_link_poli', array(
-					'label'=> 'Pagina de Politicas de Privacidad',
-					'section'=> 'ip_section_text',
-					'settings'=> 'ip_headline_link_poli',
-					'type' => 'dropdown-pages',
-
-				)));
-			// end privacy policies
-			// Copyright
-				$wp_customize->add_setting('ip_footer_text', array(
-					'default' => 'Copyright © 2018',
-					'trasnport' => 'refresh',
-					'sanitize_callback' => 'sanitize_string'
-				));
-
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_text_control', array(
-					'label'=> __('Copyright de esta web ', 'informatica_pereyra'),
-					'section'=> 'ip_section_text',
-					'settings'=> 'ip_footer_text',
-
-				)));
-			// end copyright
-		// end corp texts
+					)));
+				// end link button 1
+			// end home text 1
 		// 5) Social buttons
 			$wp_customize->add_section('ip_section_social', array(
 				'title'=> __('Social', 'informatica_pereyra'),
@@ -971,6 +1013,85 @@
 				)));
 			// end pixel
 		// end facebook
+		// 11) Corp texts
+
+			$wp_customize->add_section('ip_section_text', array(
+				'title'=> __('Textos corporativos', 'informatica_pereyra'),
+				'priority' => 4
+			));
+
+			// Terms and conditions
+
+				$wp_customize->add_setting('ip_headline_term', array(
+				'default' => 'Example headline text',
+				'sanitize_callback' => 'sanitize_string'
+
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_headline_term', array(
+					'label'=> 'headline',
+					'section'=> 'ip_section_text_headline',
+					'settings'=> 'ip_headline_term'
+				)));
+
+
+				$wp_customize->add_setting('ip_headline_link_term', array(
+				'default' => '#',
+				'sanitize_callback' => 'sanitize_url_'
+
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_link_term', array(
+					'label'=> 'Pagina de Terminos y Condiciones',
+					'section'=> 'ip_section_text',
+					'settings'=> 'ip_headline_link_term',
+					'type' => 'dropdown-pages',
+
+				)));
+			// end terms and conditions
+			// Privacy policies
+				$wp_customize->add_setting('ip_headline_poli', array(
+				'default' => 'Example headline text',
+				'sanitize_callback' => 'sanitize_string'
+
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_headline_poli', array(
+					'label'=> 'headline',
+					'section'=> 'ip_section_text_headline',
+					'settings'=> 'ip_headline_poli'
+				)));
+
+
+				$wp_customize->add_setting('ip_headline_link_poli', array(
+				'default' => '#',
+				'sanitize_callback' => 'sanitize_url_'
+
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_link_poli', array(
+					'label'=> 'Pagina de Politicas de Privacidad',
+					'section'=> 'ip_section_text',
+					'settings'=> 'ip_headline_link_poli',
+					'type' => 'dropdown-pages',
+
+				)));
+			// end privacy policies
+			// Copyright
+				$wp_customize->add_setting('ip_footer_text', array(
+					'default' => 'Copyright © 2018',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_footer_text_control', array(
+					'label'=> __('Copyright de esta web ', 'informatica_pereyra'),
+					'section'=> 'ip_section_text',
+					'settings'=> 'ip_footer_text',
+
+				)));
+			// end copyright
+		// end corp texts
 
 
 	}

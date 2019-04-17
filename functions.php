@@ -74,7 +74,7 @@
 	            background-color: <?php echo get_theme_mod('ip_title_color'); ?>;
 	            color: white;
 	        }
-	        .bg-personalized, thead, th,span.onsale, button.single_add_to_cart_button.button.alt, .reset_variations, #bg-menu-mobile, #first-content-home{
+	        .bg-personalized, th,span.onsale, button.single_add_to_cart_button.button.alt, .reset_variations, #bg-menu-mobile, #first-content-home{
 	        	background-color: <?php echo get_theme_mod('ip_title_color'); ?> !important;
 	        }
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized{

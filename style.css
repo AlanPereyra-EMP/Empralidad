@@ -1,7 +1,7 @@
 /*
 Theme Name: Informatica Pereyra - Theme
 Author: Alan Pereyra
-Author URI: https://informatica.pereyra.online/contacto
+Author URI: https://informatica.pereyra.online/alanpereyra57
 Description: Inforatica Pereyra es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
 Version: 1.4.4
 License: GNU General Public License v3 or later
@@ -526,7 +526,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			  -ms-user-select: none;
 				  user-select: none;
 		  border: 1px solid transparent;
-		  padding: 0.5rem 1rem;
 		  font-size: 1rem;
 		  border-radius: 0.25rem;
 		  -webkit-transition: all 0.2s ease-in-out;
@@ -684,13 +683,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		transition: ease .5s;
 	}
 	#searchform-mobile{
+		width: 100%;
 		transition: all 1s;
 		transform: scale(0);
 		display: none;
 		position: fixed;
 		top: 46%;
-		left: 50%;
-		transform: translate(-39%, -50%);
+		left: 0;
+		transform: translate(0%, -50%);
 		z-index: 10000;
 	}
 	.searchform-close{
