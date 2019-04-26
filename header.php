@@ -13,7 +13,7 @@
     <script>
     function downloadJSAtOnload() {
     var element = document.createElement("link");
-    element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/contact-form-7.css";
+    element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
     element.rel = 'stylesheet';
     document.body.appendChild(element);
     }
@@ -23,9 +23,10 @@
     window.attachEvent("onload", downloadJSAtOnload);
     }else{ window.onload = downloadJSAtOnload;}
 
+
     function downloadJSAtOnload1() {
     var element1 = document.createElement("link");
-    element1.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce.css";
+    element1.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
     element1.rel = 'stylesheet';
     document.body.appendChild(element1);
     }
@@ -34,18 +35,6 @@
     }else if (window.attachEvent){
     window.attachEvent("onload", downloadJSAtOnload1);
     }else{ window.onload = downloadJSAtOnload1;}
-
-    function downloadJSAtOnload2() {
-    var element2 = document.createElement("link");
-    element2.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
-    element2.rel = 'stylesheet';
-    document.body.appendChild(element2);
-    }
-    if (window.addEventListener){
-    window.addEventListener("load", downloadJSAtOnload2, false);
-    }else if (window.attachEvent){
-    window.attachEvent("onload", downloadJSAtOnload2);
-    }else{ window.onload = downloadJSAtOnload2;}
     </script>
     <noscript>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
