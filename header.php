@@ -23,7 +23,6 @@
     window.attachEvent("onload", downloadJSAtOnload);
     }else{ window.onload = downloadJSAtOnload;}
 
-
     function downloadJSAtOnload1() {
     var element1 = document.createElement("link");
     element1.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
