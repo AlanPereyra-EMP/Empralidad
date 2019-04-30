@@ -72,7 +72,7 @@
 	    <style type="text/css">
 	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, .dashboard-section-overview .copy-to-clipboard-trigger {
 	            background-color: <?php echo get_theme_mod('ip_title_color'); ?>!important;
-	            color: white;
+	            color: white!important;
 	        }
 	        .bg-personalized, th,span.onsale, button.single_add_to_cart_button.button.alt, .reset_variations, #bg-menu-mobile, #first-content-home{
 	        	background-color: <?php echo get_theme_mod('ip_title_color'); ?> !important;
