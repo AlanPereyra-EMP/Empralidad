@@ -181,7 +181,7 @@
 		'echo'             => 1
 	);
 
-// 10) Cutom post type
+// 10) Custom post type
  	add_action( 'init', 'codex_landing_pages_init' );
 	function codex_landing_pages_init() {
 		$labels = array(
