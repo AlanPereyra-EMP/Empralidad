@@ -1,4 +1,4 @@
-<div class="card p-0">
+<article class="card p-0">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <!-- body -->
         <div class="card-block">
@@ -32,4 +32,4 @@
             <small><?php the_date(); ?> / Autor: <?php the_author(); ?> / <?php the_tags(); ?> </small> 
         </div>
     <!-- end body -->
-</div>
+</article>

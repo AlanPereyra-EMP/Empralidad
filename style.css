@@ -219,6 +219,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		height: 40px;
 		width: 40px;
 	}
+	.img-btn-fixed-wsp{
+	    box-shadow: none!important;		
+	}
 	@media(min-width: 576px){
 		.img-fixed {
 			bottom: 10px!important;
