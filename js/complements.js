@@ -46,10 +46,15 @@ $(window).on('scroll', function(){
 function openMobileMenu() {
   var bg = document.getElementById('bg-menu-mobile');
   var menu = document.getElementById('navbarContentMenu');
+  var icon = document.getElementById('btn-menu-nav');
   if (menu.style.visibility === 'visible') {
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-times');
     menu.style.visibility = 'hidden';
     bg.style.height = '0px';
   } else {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
     bg.style.height = '100vh';
     setTimeout(()=>{
       menu.style.visibility = 'visible';
