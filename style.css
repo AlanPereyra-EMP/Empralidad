@@ -369,6 +369,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		display: none;
 	}
 /*7) Bootstrap personalized*/
+	#btn-menu-nav.fa-times{
+		font-size: 35px;
+	}
 	.btn {
 		filter: brightness(1.3);
 	}
@@ -774,7 +777,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.img-btn-fixed, .dropdown-toggle::after {
 	    box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
 	    border-radius: 26px;
-	    transition: all .5s;
+	}
+	.img-btn-fixed{
+		transition: all .5s;
 	}
 	@media(min-width: 991px){
 		nav.navbar.navbar-scroll{

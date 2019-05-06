@@ -46,6 +46,7 @@ $(window).on('scroll', function(){
 function openMobileMenu() {
   var bg = document.getElementById('bg-menu-mobile');
   var menu = document.getElementById('navbarContentMenu');
+  var after = document.querySelector("a.dropdown-toggle::after");
   var icon = document.getElementById('btn-menu-nav');
   if (menu.style.visibility === 'visible') {
     icon.classList.add('fa-bars');
