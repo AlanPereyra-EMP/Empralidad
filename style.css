@@ -570,9 +570,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			display: inline-flex;
 			width: 100%;
 		}
-		form.searchform div{
-			max-width: 100%!important;
-		}
 	/*end search form*/
 	#wpadminbar{
 		background: rgba(0, 0, 0, 0.7)!important;
