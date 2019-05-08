@@ -62,6 +62,23 @@
 						'description'=> __( '1400x1000 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
+					// filter-brightness 1
+					$wp_customize->add_setting('ip_img_filter1', array(
+						'default' => 'false',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_filter_control1', array(
+					            'label'          => __( 'Oscurecer', 'informatica_pereyra' ),
+					            'section'        => 'ip_section_slide1',
+					            'settings'       => 'ip_img_filter1',
+					            'type'           => 'radio',
+					            'choices'        => array(
+					            	'true'   => __( 'Oscurecer imagen', 'informatica_pereyra' ),
+					                'false' => __( 'Por defecto', 'informatica_pereyra' )
+					            )
+					)));
+				// end filter-brightness 1
 				// Text 1
 					$wp_customize->add_setting('ip_slide1_text', array(
 					'default' => '',
@@ -914,27 +931,77 @@
 			// end search form
 		// end social buttons
 		// 7) Colors
-			$wp_customize->add_section('ip_section_colors', array(
-				'title'=> __('Colores', 'informatica_pereyra'),
-				'priority' => 7
+			// Add panel
+			$wp_customize->add_panel( 'ip_panel_color', array(
+				'priority' => 7,
+				'title' => __( 'Colores', 'informatica_pereyra' )
 			));
 
 			// Main color
-				$wp_customize->add_setting('ip_title_color', array(
+				$wp_customize->add_section('ip_section_primary', array(
+					'title'=> __('Color principal', 'informatica_pereyra'),
+					'priority' => 1,
+					'panel' => 'ip_panel_color'
+				));
+				$wp_customize->add_setting('ip_primary_color', array(
 					'default' => '#005777',
 					'trasnport' => 'refresh',
 					'sanitize_callback' => 'sanitize_string'
 				));
 
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_title_color_control', array(
-					'label'=> __('Color de enfasis', 'informatica_pereyra'),
-					'section'=> 'ip_section_colors',
-					'settings'=> 'ip_title_color',
-					'description'=> __( 'Titulos, botones, secciones y textos destacados', 'informatica_pereyra' )
+				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_primary_color_control', array(
+					'label'=> __('Color principal', 'informatica_pereyra'),
+					'section'=> 'ip_section_primary',
+					'settings'=> 'ip_primary_color',
+					'description'=> __( 'Títulos, secciones destacadas y textos destacados', 'informatica_pereyra' )
 
 				)));
 			// end main color
+			// btn
+				// btn bg
+					$wp_customize->add_section('ip_section_btn', array(
+						'title'=> __('Botón', 'informatica_pereyra'),
+						'priority' => 1,
+						'panel' => 'ip_panel_color'
+					));
+					$wp_customize->add_setting('ip_btn_bg', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_btn_bg_control', array(
+						'label'=> __('Color de fondo', 'informatica_pereyra'),
+						'section'=> 'ip_section_btn',
+						'settings'=> 'ip_btn_bg'
+
+					)));
+				// end btn bg
+				// btn text color
+				$wp_customize->add_section('ip_section_btn', array(
+					'title'=> __('Color de botones', 'informatica_pereyra'),
+					'priority' => 2,
+					'panel' => 'ip_panel_color'
+				));
+				$wp_customize->add_setting('ip_btn_color', array(
+					'default' => '#ffffff',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_btn_color_control', array(
+					'label'=> __('Color de texto', 'informatica_pereyra'),
+					'section'=> 'ip_section_btn',
+					'settings'=> 'ip_btn_color'
+
+				)));
+			// end btn text color
 			// footer color
+				$wp_customize->add_section('ip_section_footer', array(
+					'title'=> __('Color de footer', 'informatica_pereyra'),
+					'priority' => 3,
+					'panel' => 'ip_panel_color'
+				));
 				$wp_customize->add_setting('ip_footer_color', array(
 					'default' => '#262626',
 					'trasnport' => 'refresh',
@@ -943,7 +1010,7 @@
 
 				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_footer_color_control', array(
 					'label'=> __('Color de Footer', 'informatica_pereyra'),
-					'section'=> 'ip_section_colors',
+					'section'=> 'ip_section_footer',
 					'settings'=> 'ip_footer_color',
 					'description'=> __( 'Sección inferior', 'informatica_pereyra' )
 
