@@ -9,13 +9,14 @@
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($filter_slide1 === 'true') { ?> brightness-04 <?php } ?>"></div>
                 <div class="carousel-caption d-flex text-img-home">
-                    <h2 class="container-fluid my-auto text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?><br> 
+                    <div class="container-fluid my-auto "><h2 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h2><br> 
+                        <p></p>
                         <?php if($button_slide1){ ?>
                             <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn py-0">
                                 <?php echo get_theme_mod('ip_img_btn1'); ?>
                             </button>
                         <?php } ?>
-                    </h2>
+                    </div>
                 </div>
                 <div class="d-flex text-img-home">
                     <i class="fas fa-caret-down button-down-home"></i>
