@@ -433,6 +433,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.w-100-px{
 		width: 100px!important;
 	}
+	.mw-600-px{
+		max-width: 600px;
+	}
 	@media (max-width: 575px){
 		.show-sm{
 			display: block;
@@ -669,11 +672,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*14) Mobile first*/
 	@media (min-width: 992px) {
 	  .text-mobile {
-	    font-size: 35px !important;
+	    font-size: 70px !important;
 	  }
 	} 
 	.text-mobile {
-	    font-size: 25px;
+	    font-size: 46px;
 	} 
 	.buttons-mobile{
 		background: rgba(250, 250, 250, 0.9);

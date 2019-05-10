@@ -10,7 +10,7 @@
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($filter_slide1 === 'true') { ?> brightness-04 <?php } ?>"></div>
                 <div class="carousel-caption d-flex text-img-home">
                     <div class="container-fluid my-auto "><h2 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h2><br> 
-                        <p></p>
+                        <p class="mw-600-px mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
                             <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn py-0">
                                 <?php echo get_theme_mod('ip_img_btn1'); ?>

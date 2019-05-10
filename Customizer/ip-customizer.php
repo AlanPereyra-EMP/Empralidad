@@ -1,15 +1,14 @@
 <?php 
 // 1) Img
-// 2) Ads
-// 3) Homepage texts
-// 4) Searchform sections
-// 5) Social buttons
+// 2) Colors
+// 3) Whatsapp
+// 4) Ads
+// 5) Homepage texts
 // 6) Molile buttons
-// 7) Colors
-// 8) Whatsapp
-// 9) QR code (argentina)
-// 10) Pixel facebook
-// 11) Corp texts
+// 7) Facebook
+// 8) Social buttons
+// 9) Corp text
+// 10) QR code (argentina)
 
 	function informatica_pereyra_customize_register($wp_customize){
 	
@@ -42,7 +41,7 @@
 			// end logo
 			// Slide1
 				$wp_customize->add_section('ip_section_slide1', array(
-					'title'=> __('Imagen principal 1', 'informatica_pereyra'),
+					'title'=> __('Imagen principal', 'informatica_pereyra'),
 					'priority' => 2,
 					'panel' => 'ip_panel_img'
 				));
@@ -62,7 +61,7 @@
 						'description'=> __( '1400x1000 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
-					// filter-brightness 1
+				// filter-brightness 1
 					$wp_customize->add_setting('ip_img_filter1', array(
 						'default' => 'false',
 						'trasnport' => 'refresh',
@@ -90,10 +89,26 @@
 					'label'=> __('Texto', 'informatica_pereyra'),
 					'section'=> 'ip_section_slide1',
 					'settings'=> 'ip_slide1_text',
-					'description'=> __( 'Escribe algo sobre tu imagen principal', 'informatica_pereyra' )
+					'description'=> __( 'Titulo principal', 'informatica_pereyra' )
 
 				)));
 				// end text 1
+				// Textarea 1
+					$wp_customize->add_setting('ip_slide1_textarea', array(
+					'default' => '',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_slide1_textarea_control', array(
+					'label'=> __('Texto', 'informatica_pereyra'),
+					'section'=> 'ip_section_slide1',
+					'settings'=> 'ip_slide1_textarea',
+					'type' => 'textarea',
+					'description'=> __( 'Texto destacado principal', 'informatica_pereyra' )
+
+				)));
+				// end textarea 1
 				// Button 1
 					$wp_customize->add_setting('ip_img_btn1', array(
 							'default' => '',
@@ -126,7 +141,7 @@
 				// end link button 1
 			// end slide1
 		// end img
-		// 7) Colors
+		// 2) Colors
 			// Add panel
 			$wp_customize->add_panel( 'ip_panel_color', array(
 				'priority' => 2,
@@ -155,7 +170,7 @@
 			// end main color
 			// btn
 				$wp_customize->add_section('ip_section_btn', array(
-						'title'=> __('color de boton', 'informatica_pereyra'),
+						'title'=> __('Color de boton', 'informatica_pereyra'),
 						'priority' => 1,
 						'panel' => 'ip_panel_color'
 					));
@@ -208,10 +223,31 @@
 				)));
 			// end footer color
 		// end colors
-		// 2) Ads 
+		// 3) Whatsapp
+			$wp_customize->add_section('ip_section_what', array(
+				'title'=> __('Whatsapp', 'informatica_pereyra'),
+				'priority' => 3
+			));
+			// Number
+				$wp_customize->add_setting('ip_what_text', array(
+					'default' => '',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_number'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_what_text_control', array(
+					'label'=> __('Numero de contacto ', 'informatica_pereyra'),
+					'section'=> 'ip_section_what',
+					'description'	  => __( 'Tu numero sin espacios ni simbolos', 'informatica_pereyra' ),
+					'settings'=> 'ip_what_text',
+
+				)));
+			// end number
+		// end whatsapp
+		// 4) Ads 
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_ads', array(
-					'priority' => 2,
+					'priority' => 4,
 					'title' => __( 'Publicidad', 'informatica_pereyra' )
 				));
 			// end add panel
@@ -414,12 +450,12 @@
 					)));
 				// end link button 2
 			// end ad 2
-		//end ads
-		// 3) Homepage texts
+		// end ads
+		// 5) Homepage texts
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_home_text', array(
-					'priority' => 3,
-					'title' => __( 'Textos  homepage', 'informatica_pereyra' )
+					'priority' => 5,
+					'title' => __( 'Textos homepage', 'informatica_pereyra' )
 				));
 			// end add panel
 			// Home text 1
@@ -760,7 +796,6 @@
 				// end link button 3
 			// end home text 3
 		// end homepage text
-
 		// 6) Mobile buttons
 			$wp_customize->add_section('ip_section_mobile', array(
 				'title'=> __('Mobile', 'informatica_pereyra'),
@@ -827,53 +862,10 @@
 				)));
 			// end search form
 		// end social buttons
-
-		// 8) Whatsapp
-			$wp_customize->add_section('ip_section_what', array(
-				'title'=> __('Whatsapp', 'informatica_pereyra'),
-				'priority' => 8
-			));
-			// Number
-				$wp_customize->add_setting('ip_what_text', array(
-					'default' => '',
-					'trasnport' => 'refresh',
-					'sanitize_callback' => 'sanitize_number'
-				));
-
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_what_text_control', array(
-					'label'=> __('Numero de contacto ', 'informatica_pereyra'),
-					'section'=> 'ip_section_what',
-					'description'	  => __( 'Tu numero sin espacios ni simbolos', 'informatica_pereyra' ),
-					'settings'=> 'ip_what_text',
-
-				)));
-			// end number
-		// end whatsapp
-		// 9) QR code (argentina)
-			$wp_customize->add_section('ip_section_qr', array(
-				'title'=> __('Codigo QR Afip', 'informatica_pereyra'),
-				'priority' => 9
-			));
-			// Code
-				$wp_customize->add_setting('ip_qr_text', array(
-					'default' => '',
-					'trasnport' => 'refresh',
-					'sanitize_callback' => 'sanitize_encoded'
-				));
-
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_qr_text_control', array(
-					'label'=> __('Codigo QR', 'informatica_pereyra'),
-					'section'=> 'ip_section_qr',
-					'settings'=> 'ip_qr_text',
-					'description'	  => __( 'Pega tu Codigo QR de la afip (Argentina)', 'informatica_pereyra' ),
-
-				)));
-			// end code
-		// end qr code
-		// 10) Pixel facebook
+		// 7) Pixel facebook
 			$wp_customize->add_section('ip_section_face', array(
 				'title'=> __('Facebook', 'informatica_pereyra'),
-				'priority' => 10
+				'priority' => 7
 			));
 			// pixel
 				$wp_customize->add_setting('ip_face_text', array(
@@ -891,10 +883,10 @@
 				)));
 			// end pixel
 		// end facebook
-				// 5) Social buttons
+		// 8) Social buttons
 			$wp_customize->add_section('ip_section_social', array(
 				'title'=> __('Social', 'informatica_pereyra'),
-				'priority' => 10
+				'priority' => 8
 			));
 			// Facebook button
 				$wp_customize->add_setting('ip_social_face_text', array(
@@ -957,11 +949,11 @@
 				)));
 			// end twitter button
 		// end social buttons
-		// 11) Corp texts
+		// 9) Corp texts
 
 			$wp_customize->add_section('ip_section_text', array(
 				'title'=> __('Textos corporativos', 'informatica_pereyra'),
-				'priority' => 11
+				'priority' => 9
 			));
 
 			// Terms and conditions
@@ -1036,6 +1028,27 @@
 				)));
 			// end copyright
 		// end corp texts
+		// 10) QR code (argentina)
+			$wp_customize->add_section('ip_section_qr', array(
+				'title'=> __('Codigo QR Afip', 'informatica_pereyra'),
+				'priority' => 10
+			));
+			// Code
+				$wp_customize->add_setting('ip_qr_text', array(
+					'default' => '',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_encoded'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_qr_text_control', array(
+					'label'=> __('Codigo QR', 'informatica_pereyra'),
+					'section'=> 'ip_section_qr',
+					'settings'=> 'ip_qr_text',
+					'description'	  => __( 'Pega tu Codigo QR de la afip (Argentina)', 'informatica_pereyra' ),
+
+				)));
+			// end code
+		// end qr code
 
 
 	}

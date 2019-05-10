@@ -71,8 +71,8 @@
 	?>
 	    <style type="text/css">
 	        .dashboard-section-overview .copy-to-clipboard-trigger {
-	            background-color: <?php echo get_theme_mod('ip_title_color'); ?>!important;
-	            color: white!important;
+	            background-color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
+	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
 	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home{
 	        	background-color: <?php echo get_theme_mod('ip_title_color'); ?> !important;
@@ -83,11 +83,13 @@
 	        .ip_img_slide1{
 	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>) no-repeat 50% 50%;
 	        }
-	        .btn, a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt{
+	        .btn{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
-	        }
-	        .btn, a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt{
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>;
+	        }
+	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt{
+	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
+	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
 	        }
 	    </style>
 	<?php
