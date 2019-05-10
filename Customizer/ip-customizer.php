@@ -171,7 +171,7 @@
 			// btn
 				$wp_customize->add_section('ip_section_btn', array(
 						'title'=> __('Color de boton', 'informatica_pereyra'),
-						'priority' => 1,
+						'priority' => 2,
 						'panel' => 'ip_panel_color'
 					));
 				// btn bg

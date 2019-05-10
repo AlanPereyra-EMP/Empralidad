@@ -75,10 +75,10 @@
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
 	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home{
-	        	background-color: <?php echo get_theme_mod('ip_title_color'); ?> !important;
+	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized{
-	        	color: <?php echo get_theme_mod('ip_title_color'); ?> !important;
+	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 	        .ip_img_slide1{
 	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>) no-repeat 50% 50%;
