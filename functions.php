@@ -71,7 +71,7 @@
 	?>
 	    <style type="text/css">
 	        .dashboard-section-overview .copy-to-clipboard-trigger {
-	            background-color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
+	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
 	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home, .bg-title-color{
