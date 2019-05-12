@@ -73,7 +73,8 @@
 					            'settings'       => 'ip_img_filter1',
 					            'type'           => 'radio',
 					            'choices'        => array(
-					            	'true'   => __( 'Oscurecer imagen', 'informatica_pereyra' ),
+					            	'dark'   => __( 'Oscurecer imagen', 'informatica_pereyra' ),
+					            	'color'   => __( 'Color principal', 'informatica_pereyra' ),
 					                'false' => __( 'Por defecto', 'informatica_pereyra' )
 					            )
 					)));

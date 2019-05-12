@@ -74,7 +74,7 @@
 	            background-color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
-	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home{
+	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home, .bg-title-color{
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized{
@@ -87,9 +87,15 @@
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>;
 	        }
+	        .btn:hover, .btn:focus{
+	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
+	        }
 	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
+	        }
+	        .the_post_thumbnail{
+	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) no-repeat 50% 50%; 
 	        }
 	    </style>
 	<?php

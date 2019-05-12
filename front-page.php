@@ -7,7 +7,9 @@
         if ($carousel_slide1) { 
         ?>
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto <?php if ($filter_slide1 === 'true') { ?> brightness-04 <?php } ?>"></div>
+                <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
+                    <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
+                </div>
                 <div class="carousel-caption d-flex text-img-home">
                     <div class="container-fluid my-auto "><h2 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h2><br> 
                         <p class="mw-600-px mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
