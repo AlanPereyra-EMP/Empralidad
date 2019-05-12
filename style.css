@@ -30,7 +30,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 14) Mobile first
 15) Carouse
 16) Shadows
-17) Scroll bar
+17) Scroll 
+18) Titles
 */
 
 /*1) Navbar*/
@@ -437,8 +438,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.w-100-px{
 		width: 100px!important;
 	}
-	.mw-600-px{
+	.home-p{
 		max-width: 600px;
+		max-height: 170px;
+	    overflow-y: auto;
 	}
 	@media (max-width: 575px){
 		.show-sm{
@@ -637,12 +640,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	blockquote {
 		background: #eee;
 	    padding: 15px;
+	    margin: 50px 0 50px 0;
 	}
 	blockquote cite {
 		font-size: 13px;
 	    color: #aaa;
 	}
 /*10) Tables*/
+	table{
+		margin: 50px 0 50px 0;
+	}
 	table, td {
 	    border: 1px #aaa solid
 	}
@@ -663,6 +670,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    background: #fafafa;
 	}
 /*12) Effects*/
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	    margin-top: -100px;
+	  } 
+
+	  20% {
+	    opacity: 0;
+	  }  
+
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	.to-fade{
+		opacity: 0;
+	}
+	.fadein{
+		animation-name: fadeIn;
+		animation-duration: 2s;
+	}
 	.brightness-02{
 		filter: brightness(0.2);
 	}
@@ -753,7 +781,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.bg-title-dark{
 		background: #000;
 	}
-	.button-down-home{
+	.button-down-home, .button-down-single{
 		bottom: -90px;
 		position: absolute;
 		left: 50%;
@@ -844,6 +872,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 ::-webkit-scrollbar-thumb {
   background: #ccc; 
 }
+/*18) Titles*/
+
 /*temp*/
 .wp-block-column {
     margin-right: auto!important;

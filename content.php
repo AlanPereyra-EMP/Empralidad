@@ -1,4 +1,4 @@
-<article class="card p-0">
+<article class="card p-0 fadein">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <!-- body -->
         <div class="card-block">

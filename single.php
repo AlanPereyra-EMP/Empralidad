@@ -1,12 +1,17 @@
 
 <?php get_header(); ?>
     <!-- Title -->
-        <?php if ( has_post_thumbnail() ) { ?>
+        <?php 
+        $filter_slide1 = get_theme_mod('ip_img_filter1');
+        if ( has_post_thumbnail() ) { ?>
             <div class="carousel-item nopadding active">
-                <div class="the_post_thumbnail brightness-02 FullScreenLanding"></div>
+                <div class="the_post_thumbnail FullScreenLanding"><div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else{ ?> bg-title-dark <?php } ?>"></div></div>
                 
                 <div class="carousel-caption d-flex header-text">
                     <h1 class="container-fluid my-auto text-white text-mobile"><?php the_title(); ?></h1>
+                </div>
+                <div class="d-flex text-img-home">
+                    <i class="fas fa-caret-down button-down-single"></i>
                 </div>
             </div>
         <?php } else { ?>
@@ -16,6 +21,7 @@
         <?php } ?>
     <!-- end title -->
     <!-- Page content  -->
+    <div id="first-content-single" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="col-md-10 col-lg-8 mx-md-auto">
                 <div class="container-fluid p-3 p-md-5">

@@ -27,6 +27,21 @@ $(window).on('scroll', function(){
     });
   });
 
+ // Scroll down single animation
+ $(function() {
+  var already_clicked = 0;
+    $('.button-down-single').click (function() {
+      if (already_clicked === 0){
+        already_clicked += 1;
+        $('html, body').animate({scrollTop: $('#first-content-single').offset().top }, 1000);
+        setTimeout(()=>{
+          already_clicked = 0;
+        }, 1000);
+      }
+      return false;
+    });
+  });
+
 // Scroll up animation
  $(function() {
   var already_clicked = 0;
@@ -127,3 +142,20 @@ if (document.getElementById('clock') && document.getElementById('message')){
   countdown( time_left, 'clock', final_message);
 
 }
+
+// Add fade in effect
+
+$(window).on('scroll', function(){
+ if ($(".to-fade").is(':visible')){
+       $(".to-fade").addClass("fadein");
+       $(".to-fade").removeClass("to-fade");
+  }
+  if ($(".to-fade-content").is(':visible')){
+       $(".to-fade-content").addClass("fadein");
+       $(".to-fade-content").removeClass("to-fade");
+  }
+  if ($(".to-fade-footer").is(':visible')){
+       $(".to-fade-footer").addClass("fadein");
+       $(".to-fade-footer").removeClass("to-fade");
+  }
+});
