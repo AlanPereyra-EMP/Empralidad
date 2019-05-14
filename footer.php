@@ -1,6 +1,6 @@
     <!-- Footer -->
 
-        <footer class="container-fluid text-white py-3 pb-5 foote to-fade-footer" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
+        <footer class="container-fluid text-white py-3 pb-5 foote " style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
             <div class="text-center">
                 <!-- Sidebar -->
                     <?php get_sidebar( 'footer' ); ?>
@@ -85,47 +85,16 @@
                 <!-- Search Form -->
                     <?php $search_link = get_theme_mod('ip_mobile_search_text');
                         if ($search_link == 'true'){ ?>
-                            <a class="fa-dark fa fa-search mx-auto" onclick="showBackground()">
-                                <span class="fa-text">Buscar</span>
+                            <a id="btn-searchform" class="fa-dark fa fa-search mx-auto" onclick="showSearchBackground();">
+                                <span id="span-searchform" class="fa-text">Buscar</span>
                             </a> 
                         <?php }
                     ?>    
             </div>
         </div>
-        <!-- Close searchform -->
-        <div id="searchform-mobile">
+        <div id="searchform-mobile" style="display: none;">
             <?php get_search_form(); ?>
-            <div class="row mx-auto bg-personalized text-shadow-6">            
-                <!-- Text 1 -->
-                    <?php $ip_searchform_show = get_theme_mod('ip_searchform_show1');
-
-                    if ($ip_searchform_show == 'true'){ 
-                        $img = get_theme_mod('ip_searchform_img1'); ?>
-                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized text-shadow-6">
-                            <h2 class="text-center">
-                                <span class="text-white"><?php echo get_theme_mod('ip_searchform_title1') ?></span>
-                            </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" />
-                            <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_searchform_text_aling1'); ?> " >
-                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_searchform_img1')); ?>" class="img-fluid"> <?php } ?> <br>
-                                <?php echo get_theme_mod('ip_searchform_text1') ?>
-                            </p>
-                            <?php $header_btn = get_theme_mod('ip_searchform_btn1');
-
-                            if ($header_btn){
-                                ?>
-                                <p class="text-center">
-                                    <button onclick="window.location.href = '<?php echo get_theme_mod('ip_searchform_link_btn1') ?>';" class="container-fluid btn bg-light">
-                                        <?php echo get_theme_mod('ip_searchform_btn1') ?>
-                                    </button>
-                                </p>
-                            <?php } ?>
-                        </div>
-                    <?php } ?>
-                <!-- end text 1 -->
-            </div>
         </div>
-        <i class="fa fa-4x fa-times" id="searchform-close" onclick="closeSearchform()"></i> 
     <!-- end buttons mobile -->
     <!-- WP JavaScript -->
     <?php wp_footer(); ?>

@@ -1,4 +1,4 @@
-<article class="card p-0 fadein">
+<article class="card p-0 to-fade to-fadein-animation">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <a href="<?php the_permalink(); ?>"><?php
         the_post_thumbnail( 'full', array( 'class' => 'aligncenter mt-0 d-block noppading img-fluid' ) );?>

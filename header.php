@@ -74,7 +74,7 @@
                 <div class="text-white mr-3">
                     <?php $search_link = get_theme_mod('ip_mobile_search_text');
                     if ($search_link == 'true'){ ?>
-                        <a class="fa fa-search mx-auto" onclick="showBackground()">
+                        <a id="searchform-close" class="fa fa-search mx-auto" onclick="showSearchBackground();">
                         </a> 
                     <?php }?>
                 </div>

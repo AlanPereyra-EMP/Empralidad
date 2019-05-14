@@ -74,7 +74,7 @@
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
-	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home, .bg-title-color{
+	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home, .bg-title-color, .bg-title-content-color{
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized{

@@ -79,22 +79,35 @@ function openMobileMenu() {
 }
 
 // Searchform mobile
-var background = document.getElementById('bg-searchform-mobile');
-var close = document.getElementById('searchform-close');
-var searchform = document.getElementById('searchform-mobile');
+function showSearchBackground() {
+  var background = document.getElementById('bg-searchform-mobile');
+  var searchform = document.getElementById('searchform-mobile');
+  var close = document.getElementById('searchform-close');
+  var  icon = document.getElementById('btn-searchform');
+  var  text = document.getElementById('span-searchform');
 
-function showBackground() {
-  background.style.padding = '100vh 0 0 0';
-  setTimeout(()=>{
-    close.classList.add('searchform-close');
-    searchform.classList.add('d-block');
-  }, 500)
-}
 
-function closeSearchform() {
-  background.style.padding = '0vh 0 0 0';
-  close.classList.remove('searchform-close');
-  searchform.classList.remove('d-block');
+  if(searchform.style.display != 'none'){
+    icon.classList.add('fa-search');
+    icon.classList.remove('fa-times');
+    close.classList.add('fa-search');
+    close.classList.remove('fa-times');
+    text.classList.add('d-block');
+    text.classList.remove('d-none');
+    background.style.padding = '0vh 0 0 0';
+    searchform.style.display = 'none';
+  }else{
+    icon.classList.remove('fa-search');
+    icon.classList.add('fa-times');
+    close.classList.add('fa-search');
+    close.classList.remove('fa-times');
+    text.classList.remove('d-block');
+    text.classList.add('d-none');
+    background.style.padding = '100vh 0 0 0';
+    setTimeout(()=>{
+      searchform.style.display = 'block';
+    }, 250)
+  }
 }
 
 // Countdown.js
@@ -143,19 +156,61 @@ if (document.getElementById('clock') && document.getElementById('message')){
 
 }
 
-// Add fade in effect
+// Add fade in animation onload
 
-$(window).on('scroll', function(){
- if ($(".to-fade").is(':visible')){
-       $(".to-fade").addClass("fadein");
-       $(".to-fade").removeClass("to-fade");
-  }
-  if ($(".to-fade-content").is(':visible')){
-       $(".to-fade-content").addClass("fadein");
-       $(".to-fade-content").removeClass("to-fade");
-  }
-  if ($(".to-fade-footer").is(':visible')){
-       $(".to-fade-footer").addClass("fadein");
-       $(".to-fade-footer").removeClass("to-fade");
-  }
+var win = $(window);
+var winH = win.height();
+
+
+$(window).ready(function() {
+  $('.to-fadein-animation').each(function(){
+  var imagePos = $(this).offset().top;
+
+  var topOfWindow = $(window).scrollTop();
+    if (imagePos < topOfWindow+winH) {
+      $(this).removeClass("to-fade");
+      $(this).addClass("faded");
+    }else{
+      $(this).addClass("to-fade");
+      $(this).removeClass("faded");
+    }
+  });
+  // article
+  $('article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table , article pre, article address').each(function(){
+  var imagePos = $(this).offset().top;
+
+  var topOfWindow = $(window).scrollTop();
+    if (imagePos < topOfWindow+winH) {
+      $(this).addClass("faded");
+    }
+  });
 });
+
+//  add scroll fade in animation
+
+$(window).scroll(function() {
+  $('.to-fadein-animation').each(function(){
+  var imagePos = $(this).offset().top;
+
+  var topOfWindow = $(window).scrollTop();
+    if (imagePos < topOfWindow+winH) {
+      $(this).removeClass("to-fade");
+      $(this).addClass("faded");
+    }else{
+      $(this).addClass("to-fade");
+      $(this).removeClass("faded");
+    }
+  });
+  // article
+  $('article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address').each(function(){
+  var imagePos = $(this).offset().top;
+
+  var topOfWindow = $(window).scrollTop();
+    if (imagePos < topOfWindow+winH) {
+      $(this).addClass("faded");
+    }else if(!imagePos < topOfWindow+winH){
+      $(this).removeClass("faded");
+    }
+  });
+});
+

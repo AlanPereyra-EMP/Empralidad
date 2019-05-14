@@ -1,13 +1,16 @@
-<article class="card p-0 fadein">
+<article class="card p-0 to-fade to-fadein-animation">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <!-- body -->
         <div class="card-block">
     <!-- Img -->
-        <?php if ( has_post_thumbnail() ) { ?>
+        <?php 
+        $filter_slide1 = get_theme_mod('ip_img_filter1');
+        if ( has_post_thumbnail() ) { ?>
                 <div class="position-relative nopadding">
-                    <?php the_post_thumbnail( 'full', array( 'class' => 'col-12 mx-auto h-auto brightness-04') );?>
+                    <?php the_post_thumbnail( 'full', array( 'class' => 'col-12 mx-auto h-auto') );?>
+                    <div class="carousel-caption d-flex header-text1 h-100 <?php if ($filter_slide1 === 'color') { ?> bg-title-content-color <?php }else{ ?> bg-title-content-dark <?php } ?>"></div>
                     <div class="carousel-caption d-flex header-text1">
-                        <h2 class="container-fluid my-auto d-block text-white text-mobile">
+                        <h2 class="container-fluid my-auto d-block text-white mh-100-auto">
                             <?php the_title(); ?>  
                         </h2>
                     </div>

@@ -35,6 +35,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 /*1) Navbar*/
+	nav.navbar{
+		z-index: 1031;
+	}
 	.navbar-img {
 		height: 50px!important;
 		max-width: 192px!important;
@@ -435,6 +438,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.h-100-vh{
 		height: 100vh!important;
 	}
+	.mh-100-auto{
+		max-height: 100%;
+		overflow-y: auto;
+	}
 	.w-100-px{
 		width: 100px!important;
 	}
@@ -673,7 +680,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	@keyframes fadeIn {
 	  0% {
 	    opacity: 0;
-	    margin-top: -100px;
+	    transform: translate(0%, -50%);
 	  } 
 
 	  20% {
@@ -686,10 +693,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	.to-fade{
 		opacity: 0;
+		transition: all .5s;
 	}
 	.fadein{
 		animation-name: fadeIn;
-		animation-duration: 2s;
+		animation-duration: 1s;
+	}
+	article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address{
+		opacity: 0;
+		transition: all .5s;
+	}
+	.faded{
+		opacity: 1!important;
+		animation-name: fadeIn;
+		animation-duration: .5s;
 	}
 	.brightness-02{
 		filter: brightness(0.2);
@@ -735,19 +752,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		transform: translate(0%, -50%);
 		z-index: 10000;
 	}
-	.searchform-close{
-		position: fixed;
-		top: 1%;
-		left: 2%;
-		z-index: 10000;
-		color: #ffffff!important;
-	    transition: all 0.3s;
-	}
-	#searchform-close{
-		color: transparent;
-		cursor: pointer;
-		position: fixed;
-	}
 	#bg-menu-mobile{
 		position: fixed;
 		top: 0;
@@ -774,11 +778,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		background-size: cover;
 		z-index: 1
 	}
-	.bg-title-color, .bg-title-dark{
-	    height: 100vh;
+	.bg-title-color, .bg-title-dark, .bg-title-content-color, .bg-title-content-dark{
 	    opacity: .6;
 	}
-	.bg-title-dark{
+	.bg-title-color, .bg-title-dark{
+	    height: 100vh;
+	}
+	.bg-title-dark, .bg-title-content-dark{
 		background: #000;
 	}
 	.button-down-home, .button-down-single{

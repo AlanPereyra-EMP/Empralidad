@@ -10,7 +10,7 @@
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
                     <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
                 </div>
-                <div class="carousel-caption d-flex text-img-home fadein">
+                <div class="carousel-caption d-flex text-img-home to-fade to-fadein-animation">
                     <div class="container-fluid my-auto "><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h1><br> 
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
@@ -34,14 +34,14 @@
     <!-- Content -->
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <!-- If texts exists -->  
-            <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6">            
+            <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation">            
                 <!-- Text 1 (desktop) -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
                     $logo = get_theme_mod('ip_img_logo');
 
                     if ($ip_homepage_show == 'true'){ 
                         $img = get_theme_mod('ip_homepage_img1'); ?>
-                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized show-desktop to-fade" >
+                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized show-desktop" >
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                             </h2>
@@ -68,7 +68,7 @@
 
                     if ($ip_homepage_show == 'true'){ 
                         $img = get_theme_mod('ip_homepage_img2'); ?>
-                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized text-shadow-6 to-fade">
+                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized text-shadow-6">
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                             </h2>
@@ -95,7 +95,7 @@
 
                     if ($ip_homepage_show == 'true'){ 
                         $img = get_theme_mod('ip_homepage_img3'); ?>
-                        <div class="py-3 bg-personalized text-white col-12 col-md-6 col-lg-4 mx-auto text-shadow-6 to-fade" >
+                        <div class="py-3 bg-personalized text-white col-12 col-md-6 col-lg-4 mx-auto text-shadow-6" >
                             <h2 class="text-center" >
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                             </h2>
@@ -146,7 +146,7 @@
 
             if ($ip_homepage_show == 'true'){ 
                 $img = get_theme_mod('ip_homepage_img1'); ?>
-                <div class="py-3 mx-auto bg-personalized show-mobile shadow-grey-up text-shadow-6 to-fade" >
+                <div class="py-3 mx-auto bg-personalized show-mobile shadow-grey-up text-shadow-6" >
                     <h2 class="text-center">
                         <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                     </h2>

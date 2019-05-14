@@ -23,7 +23,7 @@
     <!-- Page content  -->
     <div id="first-content-single" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="col-md-10 col-lg-8 mx-md-auto">
+            <div class="col-md-10 col-lg-8 mx-md-auto to-fade to-fadein-animation">
                 <div class="container-fluid p-3 p-md-5">
                     <!-- Ad 1 -->
                         <?php 
