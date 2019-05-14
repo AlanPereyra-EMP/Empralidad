@@ -5,7 +5,7 @@
         </div>
     <!-- end title -->
     <!-- Page content  -->
-        <div class="col-md-10 col-lg-8 mx-md-auto">
+        <article class="col-md-10 col-lg-8 mx-md-auto">
             <div class="container-fluid px-0 py-3 p-md-5">
                 <?php if ( has_post_thumbnail() ) {
                     the_post_thumbnail( 'full', array( 'class' => 'aligncenter d-block img-fluid' ) );;
@@ -22,6 +22,6 @@
                     endif; ?>
                 <!-- end comments -->
             </div>
-        </div>
+        </article>
     <!-- end page content -->
 <?php get_footer(); ?>
