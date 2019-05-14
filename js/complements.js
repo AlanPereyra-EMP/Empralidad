@@ -169,10 +169,7 @@ $(window).ready(function() {
   var topOfWindow = $(window).scrollTop();
     if (imagePos < topOfWindow+winH) {
       $(this).removeClass("to-fade");
-      $(this).addClass("faded");
-    }else{
-      $(this).addClass("to-fade");
-      $(this).removeClass("faded");
+      $(this).addClass("fadein");
     }
   });
   // article
@@ -195,7 +192,7 @@ $(window).scroll(function() {
   var topOfWindow = $(window).scrollTop();
     if (imagePos < topOfWindow+winH) {
       $(this).removeClass("to-fade");
-      $(this).addClass("faded");
+      $(this).addClass("fadein");
     }
   });
   // article
