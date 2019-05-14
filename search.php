@@ -5,7 +5,7 @@
     </div>
 <!-- end title -->
 <!-- Content -->
-    <div class="py-5">
+    <article class="py-5">
         <?php if ( ! have_posts() ) {?>
             <div class="p-5 col-11 col-md-8 mx-auto">
             <h6>No se encontro lo que buscás</h6>
@@ -19,6 +19,6 @@
                 <?php endwhile; endif; ?>  
             </div> 
         <?php }?> 
-    </div>
+    </aticle>
 <!-- end content -->
 <?php get_footer(); ?>

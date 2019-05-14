@@ -5,7 +5,7 @@
         </div>
     <!-- end title -->
     <!-- Content -->
-        <div class="col-md-10 col-lg-12 p-0 mx-auto">
+        <article class="col-md-10 col-lg-12 p-0 mx-auto">
             <div class="container-fluid p-md-5">
                 <?php if ( have_posts() ) { ?>
                     <div class="card-columns-2 p-2">
@@ -21,6 +21,6 @@
                     </div>
                 <?php } ?>
             </div>
-        </div>          
+        </article>          
     <!-- end content -->
 <?php get_footer(); ?>

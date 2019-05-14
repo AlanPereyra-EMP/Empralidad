@@ -5,8 +5,8 @@
         </div>
     <!-- end title -->
     <!-- Page content -->
-        <div class="container my-5">
+        <article class="container my-5">
                 <?php woocommerce_content();?>
-        </div>
+        </article>
     <!-- end page content -->
 <?php get_footer(); ?>
