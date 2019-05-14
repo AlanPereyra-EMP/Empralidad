@@ -677,28 +677,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    background: #fafafa;
 	}
 /*12) Effects*/
-	@keyframes fadeIn {
-	  0% {
-	    opacity: 0;
-	    transform: translate(0%, -50%);
-	  } 
-
-	  20% {
-	    opacity: 0;
-	  }  
-
-	  100% {
-	    opacity: 1;
-	  }
-	}
-	.to-fade{
-		opacity: 0;
-		transition: all .5s;
-	}
-	.fadein{
-		animation-name: fadeIn;
-		animation-duration: 1s;
-	}
 	article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address{
 		opacity: 0;
 		transition: all .5s;

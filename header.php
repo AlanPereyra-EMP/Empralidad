@@ -38,6 +38,30 @@
     <noscript>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     </noscript>
+    <style type="text/css">
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translate(0%, -50%);
+          } 
+
+          20% {
+            opacity: 0;
+          }  
+
+          100% {
+            opacity: 1;
+          }
+        }
+        .to-fade{
+            opacity: 0;
+            transition: all .5s;
+        }
+        .fadein{
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+    </style>
 
     <?php echo get_theme_mod('ip_face_text'); ?>
     <?php wp_head(); ?> 
