@@ -47,6 +47,8 @@
                     <?php the_content();?>
                 <?php endwhile; endif; ?>
             </div>
+            <br><br><br><br><br><br>
+            <button class="btn container-fluid p-1 text-center bg-light text-muted no-shadow" onclick="window.history.back()">Volver atrás</button>
         </div>
     <!-- end page content -->
     <div class="container-fluid text-white py-1 " style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
