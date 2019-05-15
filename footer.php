@@ -71,6 +71,7 @@
                         if ($cart_link){ ?>
                             <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto">
                                 <span class="fa-text">Carrito</span>
+                                <span>1</span>
                             </a> 
                         <?php }
                     ?> 
