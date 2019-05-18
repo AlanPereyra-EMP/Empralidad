@@ -231,5 +231,4 @@
 		register_post_type( 'landing_pages', $args );
 	}
 
-
 ?>
