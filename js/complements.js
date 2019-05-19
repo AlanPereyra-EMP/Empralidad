@@ -11,6 +11,18 @@ $(window).on('scroll', function(){
     $('i.img-btn-fixed').removeClass('img-btn-fixed-show');
   }
 })
+$(window).ready(function() {
+  if($(window).scrollTop()){
+    $('nav').addClass('navbar-scroll');
+  } else {
+    $('nav').removeClass('navbar-scroll');
+  }
+  if($(window).scrollTop()){
+    $('i.img-btn-fixed').addClass('img-btn-fixed-show');
+  } else {
+    $('i.img-btn-fixed').removeClass('img-btn-fixed-show');
+  }
+});
 
 // Scroll down animation
  $(function() {
