@@ -874,6 +874,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	nav.navbar {
 		background: rgba(0, 0, 0, 0.7)!important;
 	}
+	#searchform{
+		width: 60%!important;
+	}
 	
 }
 @media(min-width: 1500px){
@@ -885,6 +888,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	body{
 		max-width: 70%!important;
 	}
+	#searchform{
+		width: 50%!important;
+	}
 }
 @media(min-width: 2300px){
 	body{
@@ -894,6 +900,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @media(min-width: 2500px){
 	body{
 		max-width: 55%!important;
+	}
+	#searchform{
+		width: 40%!important;
 	}
 }
 
