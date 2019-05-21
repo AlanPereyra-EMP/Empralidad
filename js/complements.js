@@ -111,8 +111,8 @@ function showSearchBackground() {
   }else{
     icon.classList.remove('fa-search');
     icon.classList.add('fa-times');
-    close.classList.add('fa-search');
-    close.classList.remove('fa-times');
+    close.classList.remove('fa-search');
+    close.classList.add('fa-times');
     text.classList.remove('d-block');
     text.classList.add('d-none');
     background.style.padding = '100vh 0 0 0';
