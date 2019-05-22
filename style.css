@@ -681,6 +681,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		opacity: 0;
 		transition: all .5s;
 	}
+	@keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translate(0%, -50%);
+      } 
+
+      20% {
+        opacity: 0;
+      }  
+
+      100% {
+        opacity: 1;
+      }
+    }
+    .fadein{
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }   
 	.faded{
 		opacity: 1!important;
 		animation-name: fadeIn;
