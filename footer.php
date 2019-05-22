@@ -55,7 +55,7 @@
         <!-- if cart on -->
         <?php if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
             <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
-                <span class="fa-text">Carrito</span>
+                <span id="btn-cart-on" class="fa-text"><?php echo WC()->cart->get_cart_total(); ?></span>
                     <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
                         <?php 
                         if((WC()->cart->get_cart_contents_count() < 99)) {

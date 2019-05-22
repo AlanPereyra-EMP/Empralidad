@@ -31,7 +31,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 15) Carouse
 16) Shadows
 17) Scroll 
-18) too biggest displays
+18) Too biggest displays
+19) Ecommerce
 */
 
 /*1) Navbar*/
@@ -922,6 +923,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	#searchform{
 		width: 40%!important;
 	}
+}
+/*19) Ecommerce*/
+#btn-cart-on{
+	margin-left: -12px;
+	overflow: hidden;
+    width: 154%;
 }
 
 /*temp*/
