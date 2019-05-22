@@ -11,42 +11,44 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- Defer css -->
     <script>
-    function downloadJSAtOnload() {
-    var element = document.createElement("link");
-    element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
-    element.rel = 'stylesheet';
-    document.body.appendChild(element);
-    }
-    if (window.addEventListener){
-    window.addEventListener("load", downloadJSAtOnload, false);
-    }else if (window.attachEvent){
-    window.attachEvent("onload", downloadJSAtOnload);
-    }else{ window.onload = downloadJSAtOnload;}
+        function downloadJSAtOnload() {
+        var element = document.createElement("link");
+        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
+        element.rel = 'stylesheet';
+        document.body.appendChild(element);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadJSAtOnload, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadJSAtOnload);
+        }else{ window.onload = downloadJSAtOnload;}
 
-    function downloadJSAtOnload1() {
-    var element1 = document.createElement("link");
-    element1.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
-    element1.rel = 'stylesheet';
-    document.body.appendChild(element1);
-    }
-    if (window.addEventListener){
-    window.addEventListener("load", downloadJSAtOnload1, false);
-    }else if (window.attachEvent){
-    window.attachEvent("onload", downloadJSAtOnload1);
-    }else{ window.onload = downloadJSAtOnload1;}
+        function downloadJSAtOnload1() {
+        var element1 = document.createElement("link");
+        element1.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+        element1.rel = 'stylesheet';
+        document.body.appendChild(element1);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadJSAtOnload1, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadJSAtOnload1);
+        }else{ window.onload = downloadJSAtOnload1;}
     </script>
-
-    <?php echo get_theme_mod('ip_face_text'); ?>
-
-    <?php wp_head(); ?> 
-  </head>
-  <body <?php body_class() ?>>
-    <style type="text/css">
+    <style>
         .to-fade{
             opacity: 0;
             transition: all .5s;
         }
     </style>
+
+    <?php wp_head(); ?> 
+
+    <?php echo get_theme_mod('ip_face_text'); ?>
+
+  </head>
+  <body <?php body_class() ?>>
+
     <div id="top_content"></div>
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
