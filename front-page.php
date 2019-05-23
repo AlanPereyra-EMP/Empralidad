@@ -120,6 +120,18 @@
             </div>
             <br>
         <!-- end if texts exists --> 
+        <!-- Featured products woocomerce -->
+            <?php 
+            $featured_products = get_theme_mod('ip_settings_woocommerce');
+            if($featured_products === 'true') { ?>
+                <h3 class="pt-5 pb-4 widget-title-dark text-center"><?php echo get_theme_mod('ip_woocommerce_featured_title'); ?></h3>
+                <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
+                <div class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center">
+                    <?php echo do_shortcode('[products]'); ?>
+                </div>
+                <br><br>
+            <?php } ?>
+        <!--  -->
         <!-- Sidebar front page -->
             <?php if(is_active_sidebar( 'homepage' )){
                 get_sidebar( 'homepage' ); ?>

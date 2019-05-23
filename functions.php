@@ -77,7 +77,7 @@
 	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home, .bg-title-color, .bg-title-content-color{
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
-	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized{
+	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 	        .ip_img_slide1{
@@ -112,10 +112,7 @@
 	add_theme_support( 'automatic-feed-links' ); 
     add_theme_support( 'post-thumbnails' );
     add_theme_support('post-formats', array('video', 'image', 'aside'));
-	function informatica_pereyra_theme_suport() {
-	    add_theme_support( 'woocommerce' );
-	}
-	add_action( 'after_setup_theme', 'informatica_pereyra_theme_suport' );
+
 
 // 7) comment reply
 	function wpse218049_enqueue_comments_reply() {
@@ -231,4 +228,24 @@
 		register_post_type( 'landing_pages', $args );
 	}
 
+// 11) Woocomerce Custom 
+	function mytheme_add_woocommerce_support() {
+	    add_theme_support( 'woocommerce', array(
+	        'thumbnail_image_width' => 600,
+	        'single_image_width'    => 600,
+
+	        'product_grid'          => array(
+	            'default_rows'    => 3,
+	            'min_rows'        => 1,
+	            'max_rows'        => 3,
+	            'default_columns' => 3,
+	            'min_columns'     => 3,
+	            'max_columns'     => 5,
+	        ),
+	    ) );
+	    add_theme_support( 'wc-product-gallery-slider' );
+	}
+
+	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+	
 ?>

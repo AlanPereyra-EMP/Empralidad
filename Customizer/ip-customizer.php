@@ -5,6 +5,7 @@
 // 4) Ads
 // 5) Homepage texts
 // 6) Molile buttons
+// 7) Woocomerce
 // 7) Facebook
 // 8) Social buttons
 // 9) Corp text
@@ -32,7 +33,7 @@
 
 				$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_img_logo_control', array(
 					'label'=> __('Logo', 'informatica_pereyra'),
-					'description'=> __( 'Ancho máximo 192px', 'informatica_pereyra' ),
+					'description'=> __( 'Ideal 1:1, máxima 21:9 (horizontal)', 'informatica_pereyra' ),
 					'section'=> 'ip_section_logo',
 					'settings'=> 'ip_img_logo',
 					'flex_width' => true,
@@ -863,6 +864,63 @@
 				)));
 			// end search form
 		// end social buttons
+		// 7) Woocomerce
+			if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+
+				$wp_customize->add_section('ip_section_woocommerce_featured', array(
+		            'title' => __('Productos destacados', 'informatica_pereyra'),
+		            'description' => __('Los productos destacados se verán en la homepage'),
+		            'theme_supports' => array('woocommerce'),
+		            'priority' => 7,
+		            'panel' => 'woocommerce'
+			    ));
+			    // Title 1
+						$wp_customize->add_setting('ip_woocommerce_featured_title', array(
+						'default' => '',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_woocommerce_featured_title_control', array(
+						'label'=> __('Título', 'informatica_pereyra'),
+						'section'=> 'ip_section_woocommerce_featured',
+						'settings'=> 'ip_woocommerce_featured_title'
+
+					)));
+				// end title 1
+				// Text 1
+						$wp_customize->add_setting('ip_woocommerce_featured_text', array(
+						'default' => '',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_woocommerce_featured_text_control', array(
+						'label'=> __('Texto (opcional)', 'informatica_pereyra'),
+						'section'=> 'ip_section_woocommerce_featured',
+						'settings'=> 'ip_woocommerce_featured_text'
+
+					)));
+				// end text 1
+			    // Show 1
+					$wp_customize->add_setting('ip_woocommerce_featured_show', array(
+						'default' => 'false',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_encoded'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_woocommerce_featured_show_control', array(
+					            'label'          => __( 'Mostrar u Ocultar', 'informatica_pereyra' ),
+					            'section'        => 'ip_section_woocommerce_featured',
+					            'settings'       => 'ip_woocommerce_featured_show',
+					            'type'           => 'radio',
+					            'choices'        => array(
+					            	'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+					                'false' => __( 'Ocultar', 'informatica_pereyra' )
+					            )
+					)));
+				// end show 1
+			}
+		// end woocomerce
 		// 7) Pixel facebook
 			$wp_customize->add_section('ip_section_face', array(
 				'title'=> __('Facebook', 'informatica_pereyra'),
