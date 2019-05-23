@@ -916,7 +916,10 @@
 					            'choices'        => array(
 					            	'true'   => __( 'Mostrar', 'informatica_pereyra' ),
 					                'false' => __( 'Ocultar', 'informatica_pereyra' )
-					            )
+					            ),
+					            'input_attrs' => array(
+								    'class' => 'd-inline-block'
+								  )
 					)));
 				// end show 1
 			}
