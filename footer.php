@@ -86,7 +86,7 @@
                 <!-- Cart -->
                     <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
                         if ($cart_link){ ?>
-                            <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" style="">
+                            <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" >
                                 <span class="fa-text">Carrito</span>
                                 <?php if(class_exists('WooCommerce')){
                                     if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
