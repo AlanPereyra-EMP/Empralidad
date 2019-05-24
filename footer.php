@@ -53,19 +53,21 @@
             <?php } ?>
         </div>
         <!-- if cart on -->
-        <?php if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
-            <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
-                <span id="btn-cart-on" class="fa-text"><?php echo WC()->cart->get_cart_total(); ?></span>
-                    <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
-                        <?php 
-                        if((WC()->cart->get_cart_contents_count() < 99)) {
-                            echo WC()->cart->get_cart_contents_count();
-                        }else{
-                            echo '+99';
-                        } ?>
-                    </small>
-            </a>
-        <?php } ?>
+        <?php if (class_exists('WooCommerce')) { 
+            if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
+                <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
+                    <span id="btn-cart-on" class="fa-text"><?php echo WC()->cart->get_cart_total(); ?></span>
+                        <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
+                            <?php 
+                            if((WC()->cart->get_cart_contents_count() < 99)) {
+                                echo WC()->cart->get_cart_contents_count();
+                            }else{
+                                echo '+99';
+                            } ?>
+                        </small>
+                </a> <?php
+             } 
+        } ?>
         
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
@@ -84,16 +86,17 @@
                 <!-- Cart -->
                     <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
                         if ($cart_link){ ?>
-                            <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto <?php if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } ?>" style="">
+                            <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" style="">
                                 <span class="fa-text">Carrito</span>
-                                <?php if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
-                                    <small class="woo-counter-cart-number added_to_cart wc-forward">
-                                        <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                    </small>
-                                <?php } ?>
+                                <?php if(class_exists('WooCommerce')){
+                                    if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
+                                        <small class="woo-counter-cart-number added_to_cart wc-forward">
+                                            <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                        </small>
+                                    <?php } 
+                                } ?>
                             </a>
-                        <?php }
-                    ?> 
+                        <?php } ?> 
                 <!-- Comment -->
                     <?php $comment_link = get_theme_mod('ip_mobile_comment_text');
                         if ($comment_link){ ?>
