@@ -11,29 +11,29 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- Defer css -->
     <script>
-        function downloadJSAtOnload() {
+        function downloadCSSAtOnload() {
         var element = document.createElement("link");
         element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
         element.rel = 'stylesheet';
         document.body.appendChild(element);
         }
         if (window.addEventListener){
-        window.addEventListener("load", downloadJSAtOnload, false);
+        window.addEventListener("load", downloadCSSAtOnload, false);
         }else if (window.attachEvent){
-        window.attachEvent("onload", downloadJSAtOnload);
-        }else{ window.onload = downloadJSAtOnload;}
+        window.attachEvent("onload", downloadCSSAtOnload);
+        }else{ window.onload = downloadCSSAtOnload;}
 
-        function downloadJSAtOnload1() {
+        function downloadCSSAtOnload1() {
         var element1 = document.createElement("link");
         element1.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/fa/css/all.min.css";
         element1.rel = 'stylesheet';
         document.body.appendChild(element1);
         }
         if (window.addEventListener){
-        window.addEventListener("load", downloadJSAtOnload1, false);
+        window.addEventListener("load", downloadCSSAtOnload1, false);
         }else if (window.attachEvent){
-        window.attachEvent("onload", downloadJSAtOnload1);
-        }else{ window.onload = downloadJSAtOnload1;}
+        window.attachEvent("onload", downloadCSSAtOnload1);
+        }else{ window.onload = downloadCSSAtOnload1;}
     </script>
     <style>
         .to-fade{
