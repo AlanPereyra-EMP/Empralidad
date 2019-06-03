@@ -23,6 +23,7 @@
         window.attachEvent("onload", downloadJSAtOnload);
         }else{ window.onload = downloadJSAtOnload;}
 
+        // DO include font on theme
         function downloadJSAtOnload1() {
         var element1 = document.createElement("link");
         element1.href = "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
