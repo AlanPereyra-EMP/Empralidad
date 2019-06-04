@@ -7,7 +7,7 @@
         if ($carousel_slide1) { 
         ?>
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div id="img-bg-home" class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
+                <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
                     <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
                 </div>
                 <div class="carousel-caption d-flex text-img-home fadein">
