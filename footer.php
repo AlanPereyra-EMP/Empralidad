@@ -119,8 +119,7 @@
             <?php get_search_form(); ?>
         </div>
     <!-- end buttons mobile -->
-    <!-- WP JavaScript -->
-    <?php wp_footer(); ?>
+    <!-- Js -->
     <script>
         function downloadJSAtOnload() {
         var element = document.createElement("script");
@@ -145,7 +144,8 @@
         }else{ window.onload = downloadJSAtOnload1;}
     </script>
     <!-- jQuery -->
-    <script defer  src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
-    <!-- end js -->
+    <script defer src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
+    <!-- WP js -->
+    <?php wp_footer(); ?>
   </body>
 </html>
