@@ -678,7 +678,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    background: #fafafa;
 	}
 /*12) Effects*/
-	article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address{
+	article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address, img{
 		opacity: 0;
 		transition: all .5s;
 	}
