@@ -185,7 +185,7 @@ $(window).ready(function() {
     }
   });
   // article
-  $('article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address, img').each(function(){
+  $('article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address, img, a, i').each(function(){
   var imagePos = $(this).offset().top;
 
   var topOfWindow = $(window).scrollTop();
@@ -208,7 +208,7 @@ $(window).scroll(function() {
     }
   });
   // article
-  $('article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address').each(function(){
+  $('article h1, article h2, article h3, article h4, article h5, article h6, article dl, article p, article ul, article li, article table, article pre, article address, img, a, i').each(function(){
   var imagePos = $(this).offset().top;
 
   var topOfWindow = $(window).scrollTop();
@@ -217,11 +217,3 @@ $(window).scroll(function() {
     }
   });
 });
-
-
-
-function deferHomeImg() {
-var imgDefer = document.getElementById('img-bg-home');
-  imgDefer.classList.add('ip_img_slide1');
-}
-window.onload = deferHomeImg();
