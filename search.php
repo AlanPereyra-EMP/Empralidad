@@ -5,7 +5,7 @@
     </div>
 <!-- end title -->
 <!-- Content -->
-    <article class="py-5">
+    <article>
         <?php if ( ! have_posts() ) {?>
             <div class="p-5 col-11 col-md-8 mx-auto">
             <h6>No se encontro lo que buscás</h6>

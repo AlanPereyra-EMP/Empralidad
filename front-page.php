@@ -14,7 +14,7 @@
                     <div class="container-fluid my-auto "><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h1><br> 
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
-                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn py-0">
+                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
                                 <?php echo get_theme_mod('ip_img_btn1'); ?>
                             </button>
                         <?php } ?>
@@ -35,13 +35,13 @@
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <!-- If texts exists -->  
             <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation">            
-                <!-- Text 1 (desktop) -->
+                <!-- Text 1 -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
                     $logo = get_theme_mod('ip_img_logo');
 
                     if ($ip_homepage_show == 'true'){ 
                         $img = get_theme_mod('ip_homepage_img1'); ?>
-                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized show-desktop" >
+                        <div class="py-3 col-12 col-md-4 mx-auto my-auto bg-personalized" >
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                             </h2>
@@ -68,7 +68,7 @@
 
                     if ($ip_homepage_show == 'true'){ 
                         $img = get_theme_mod('ip_homepage_img2'); ?>
-                        <div class="py-3 col-12 col-md-6 col-lg-4 mx-auto bg-personalized text-shadow-6">
+                        <div class="py-3 col-12 col-md-4 mx-auto my-auto bg-personalized text-shadow-6">
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                             </h2>
@@ -95,7 +95,7 @@
 
                     if ($ip_homepage_show == 'true'){ 
                         $img = get_theme_mod('ip_homepage_img3'); ?>
-                        <div class="py-3 bg-personalized text-white col-12 col-md-6 col-lg-4 mx-auto text-shadow-6" >
+                        <div class="py-3 bg-personalized text-white col-12 col-md-4 mx-auto my-auto text-shadow-6" >
                             <h2 class="text-center" >
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                             </h2>
@@ -154,32 +154,5 @@
                 </div>
             <?php }?>
         <!-- end the content -->
-        <!-- Text 1 (mobile) -->
-            <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
-
-            if ($ip_homepage_show == 'true'){ 
-                $img = get_theme_mod('ip_homepage_img1'); ?>
-                <div class="py-3 mx-auto bg-personalized show-mobile shadow-grey-up text-shadow-6" >
-                    <h2 class="text-center">
-                        <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
-                    </h2>
-                    <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" />
-                    <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
-                        <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid"> <?php } ?> <br>
-                        <?php echo get_theme_mod('ip_homepage_text1') ?>
-                    </p>
-                    
-                    <?php $header_btn = get_theme_mod('ip_homepage_btn1');
-
-                    if ($header_btn){ ?>
-                        <p class="text-center">
-                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_homepage_link_btn1') ?>';" class="container-fluid col-10 btn bg-light text-dark">
-                                <?php echo get_theme_mod('ip_homepage_btn1') ?>
-                            </button>
-                        </p>
-                    <?php } ?>
-                </div>
-            <?php } ?>
-        <!-- end text 1 (mobile) -->
     <!-- end content -->
 <?php get_footer(); ?>

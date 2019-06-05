@@ -83,7 +83,7 @@
 	        .ip_img_slide1{
 	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>) no-repeat 50% 50%;
 	        }
-	        .btn{
+	        .btn, .wpcf7-submit{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>;
 	        }

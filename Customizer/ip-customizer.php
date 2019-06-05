@@ -462,7 +462,7 @@
 			// end add panel
 			// Home text 1
 				$wp_customize->add_section('ip_section_homepage1', array(
-					'title'=> __('Seccion 1 (adaptable)', 'informatica_pereyra'),
+					'title'=> __('Seccion 1', 'informatica_pereyra'),
 					'priority' => 1,
 					'panel' => 'ip_panel_home_text',
 					'description' => __('Esta sección se ve en la parte superior solo en dispositivos grandes, en dispositivos pequeños se ve en la parte inferior', 'informatica_pereyra')
