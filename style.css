@@ -3,7 +3,7 @@ Theme Name: Informatica Pereyra - Theme
 Author: Alan Pereyra
 Author URI: https://informatica.pereyra.online/alanpereyra57
 Description: Inforatica Pereyra es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
-Version: 1.5.7
+Version: 1.6.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: informatica_pereyra
@@ -443,6 +443,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		max-height: 100%;
 		overflow-y: auto;
 	}
+	.mw-100{
+		max-width: 100%;
+	}
 	.mw-600-px{
 		max-width: 600px;
 	}
@@ -462,11 +465,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			display: none;
 		}
 	}
-	@media (min-width: 576px){
+	@media (min-width: 566px){
 		.show-sm{
 			display: none!important;
 		}
 		.show-btn-fixed{
+		}
+	}
+	@media (max-width: 768px){
+		.show-until-md{
+			display: block;
+		}
+		.show-from-md{
+			display: none;
+		}
+	}
+	@media (min-width: 768px){
+		.show-until-md{
+			display: none;
+		}
+		.show-from-md{
+			display: block;
 		}
 	}
 	/*searchform*/
@@ -944,4 +963,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-left: auto!important;
     padding-right: 5px;
     padding-left: 5px;
+}
+.left-featured-text{
+	position: sticky;
+	top: 0;
+	height:100%;
+	overflow-y: auto;
+	padding-top: 43px;
+}
+.left-featured-text-admin{
+	padding-top: 80px;
 }
