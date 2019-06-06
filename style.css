@@ -443,6 +443,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		max-height: 100%;
 		overflow-y: auto;
 	}
+	.min-h-100{
+		min-height: 100vh;
+	}
 	.mw-100{
 		max-width: 100%;
 	}
