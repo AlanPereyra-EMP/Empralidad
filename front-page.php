@@ -11,18 +11,20 @@
                     <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
                 </div>
                 <div class="carousel-caption d-flex text-img-home fadein">
-                    <div class="container-fluid my-auto "><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h1><br> 
+                    <div class="container-fluid my-auto text-homepage-container"><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_slide1_text'); ?></h1><br> 
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
-                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                            <br>
+                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px btn-outline-light">
                                 <?php echo get_theme_mod('ip_img_btn1'); ?>
                             </button>
                         <?php } ?>
                     </div>
                 </div>
                 <div class="d-flex text-img-home">
-                    <i class="fas fa-caret-down button-down-home"></i>
+                    
                 </div>
+                <i class="fas fa-caret-down button-down-home"></i>
             </header>
         <?php } else {?>
             <!-- Title no img -->
@@ -150,7 +152,7 @@
 
                             if ($ip_homepage_show == 'true'){ 
                                 $img = get_theme_mod('ip_homepage_img1'); ?>
-                                <div class="py-3 text-white col-12 mx-auto my-auto text-shadow-6" >
+                                <div class="py-3 text-white mx-auto my-auto text-shadow-6" >
                                     <h2 class="text-center">
                                         <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                                     </h2>
@@ -176,7 +178,7 @@
 
                         if ($ip_homepage_show == 'true'){ 
                             $img = get_theme_mod('ip_homepage_img2'); ?>
-                            <div class="py-3 text-white col-12 mx-auto my-auto text-shadow-6">
+                            <div class="py-3 text-white mx-auto my-auto text-shadow-6">
                                 <h2 class="text-center">
                                     <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                                 </h2>
@@ -202,7 +204,7 @@
 
                             if ($ip_homepage_show == 'true'){ 
                                 $img = get_theme_mod('ip_homepage_img3'); ?>
-                                <div class="py-3 text-white col-12 mx-auto my-auto text-shadow-6" >
+                                <div class="py-3 text-white mx-auto my-auto text-shadow-6" >
                                     <h2 class="text-center" >
                                         <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                                     </h2>

@@ -381,6 +381,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		display: none;
 	}
 /*7) Bootstrap personalized*/
+	.btn-outline-light{
+		background: transparent!important;
+		color: #fff!important;
+		border: 1px #fff solid;
+	}
 	#btn-menu-nav.fa-times{
 		font-size: 35px;
 	}
@@ -485,7 +490,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	@media (min-width: 768px){
 		.show-until-md{
-			display: none;
+			display: none!important;
 		}
 		.show-from-md{
 			display: block;
@@ -818,7 +823,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		background: #000;
 	}
 	.button-down-home, .button-down-single{
-		bottom: -90px;
+		bottom: 8vh;
 		position: absolute;
 		left: 50%;
 		right: 50%;
@@ -826,6 +831,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		font-size: 50px!important;
 		cursor: pointer;
 		z-index: 10;
+		color: #fff;
 	}
 	#first-content-home{
 		height: 60px;
@@ -843,6 +849,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			height: 106px!important;
 			margin-top: -106px;
 		}
+	}
+	.text-homepage-container{
+	    max-height: 142%;
+	    overflow-y: auto;
 	}
 /*16) Shadows*/
 	img, iframe {
