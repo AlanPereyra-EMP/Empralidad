@@ -25,56 +25,58 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="row mw-100 p-3 p-md-0 mx-auto">
                 <div class="col-md-3 min-h-100 text-white show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
-                    <!-- Ad 1 -->
-                        <?php 
-                        $ip_homepage_show = get_theme_mod('ip_ads_show1');
-                        if ($ip_homepage_show == 'true'){
-                            ?>
-                            <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-0">
-                            <h2 class="text-center">
-                                <strong><?php echo get_theme_mod('ip_ads_title1') ?></strong>
-                            </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" /><br>
-                            <div class="mw-100"><p class="text-center"><img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img1')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text1') ?></p></div>
+                    <div style="margin-top: 50vh;transform: translate(0,-50vh);max-height: 95vh;">
+                        <!-- Ad 1 -->
                             <?php 
-                            $header_btn = get_theme_mod('ip_ads_btn1');
-                            if ($header_btn){
+                            $ip_homepage_show = get_theme_mod('ip_ads_show1');
+                            if ($ip_homepage_show == 'true'){
                                 ?>
-                                <p class="text-center"><a href="<?php echo get_theme_mod('ip_ads_link_btn1') ?>"><button class="container-fluid btn bg-personalized text-white"><?php echo get_theme_mod('ip_ads_btn1') ?></button></a></p>
+                                <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-0">
+                                <h2 class="text-center">
+                                    <strong><?php echo get_theme_mod('ip_ads_title1') ?></strong>
+                                </h2>
+                                <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" /><br>
+                                <div class="mw-100"><p class="text-center"><img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img1')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text1') ?></p></div>
+                                <?php 
+                                $header_btn = get_theme_mod('ip_ads_btn1');
+                                if ($header_btn){
+                                    ?>
+                                    <p class="text-center"><a href="<?php echo get_theme_mod('ip_ads_link_btn1') ?>"><button class="container-fluid btn bg-personalized text-white"><?php echo get_theme_mod('ip_ads_btn1') ?></button></a></p>
+                                <?php } ?>
+                                </div>
                             <?php } ?>
-                            </div>
-                        <?php } ?>
-                    <!-- end ad 1 -->
-                    <!-- Ad 2 -->
-                        <?php 
-                        $ip_homepage_show = get_theme_mod('ip_ads_show2');
-
-                        if ($ip_homepage_show == 'true'){
-                            ?>
-                            <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-0">
-                            <h2 style="text-align: center;">
-                                <strong><?php echo get_theme_mod('ip_ads_title2') ?></strong>
-                            </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" /><br>
-                            <div style="max-width: 100%;">
-                                <p style="text-align: center;">
-                                    <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img2')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text2') ?>
-                                </p>
-                            </div>
+                        <!-- end ad 1 -->
+                        <!-- Ad 2 -->
                             <?php 
-                            $footer_btn = get_theme_mod('ip_ads_btn2');
+                            $ip_homepage_show = get_theme_mod('ip_ads_show2');
 
-                            if ($footer_btn){
+                            if ($ip_homepage_show == 'true'){
                                 ?>
-                                <p style="text-align: center;">
-                                    <a href="<?php echo get_theme_mod('ip_ads_link_btn2') ?>">
-                                        <button class="container-fluid btn bg-personalized text-white"><?php echo get_theme_mod('ip_ads_btn2') ?></button>
-                                    </a>
-                                </p>
+                                <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-0">
+                                <h2 style="text-align: center;">
+                                    <strong><?php echo get_theme_mod('ip_ads_title2') ?></strong>
+                                </h2>
+                                <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" /><br>
+                                <div style="max-width: 100%;">
+                                    <p style="text-align: center;">
+                                        <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img2')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text2') ?>
+                                    </p>
+                                </div>
+                                <?php 
+                                $footer_btn = get_theme_mod('ip_ads_btn2');
+
+                                if ($footer_btn){
+                                    ?>
+                                    <p style="text-align: center;">
+                                        <a href="<?php echo get_theme_mod('ip_ads_link_btn2') ?>">
+                                            <button class="container-fluid btn bg-personalized text-white"><?php echo get_theme_mod('ip_ads_btn2') ?></button>
+                                        </a>
+                                    </p>
+                                <?php } ?>
+                                </div>
                             <?php } ?>
-                            </div>
-                        <?php } ?>
-                    <!-- end ad 2 -->
+                        <!-- end ad 2 -->
+                    </div>
                 </div>
                 <div class="col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-3 p-md-5">
                         <!-- Ad 1 -->
