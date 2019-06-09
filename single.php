@@ -10,9 +10,8 @@
                 <div class="carousel-caption d-flex header-text">
                     <h1 class="container-fluid my-auto text-white text-mobile"><?php the_title(); ?></h1>
                 </div>
-                <div class="d-flex text-img-home">
-                    <i class="fas fa-caret-down button-down-single"></i>
-                </div>
+                <div class="d-flex text-img-home"></div>
+                <i class="fas fa-caret-down button-down-single"></i>
             </div>
         <?php } else { ?>
         	<div class=" py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
