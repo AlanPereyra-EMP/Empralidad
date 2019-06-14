@@ -83,12 +83,13 @@
 	        .ip_img_slide1{
 	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>) no-repeat 50% 50%;
 	        }
-	        .btn, .wpcf7-submit, #submit.submit{
+	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>;
 	        }
-	        .btn:hover, .btn:focus{
+	        .btn:hover, .btn:focus, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:focus{
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
+	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
 	        }
 	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
