@@ -131,7 +131,7 @@
                     <br><br>
                 <?php } 
             } ?>
-        <!--  -->
+        <!-- end woocommerce featured products -->
         <!-- Sidebar front page -->
             <?php if(is_active_sidebar( 'homepage' )){
                 get_sidebar( 'homepage' ); ?>
