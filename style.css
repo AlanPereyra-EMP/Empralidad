@@ -770,7 +770,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	/*searchform*/
 	a.fa.fa-times{
-		padding-left: 20px!important;
 		cursor: pointer;
 	}
 	#bg-searchform-mobile{
