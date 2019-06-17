@@ -122,7 +122,7 @@
         <!-- Featured products woocomerce -->
             <div class="p-2">
                 <?php if (class_exists('WooCommerce')){
-                    $featured_products = get_theme_mod('ip_settings_woocommerce');
+                    $featured_products = get_theme_mod('ip_woocommerce_featured_show');
                     if($featured_products === 'true') { ?>
                         <h3 class="pt-5 pb-4 widget-title-dark text-center"><?php echo get_theme_mod('ip_woocommerce_featured_title'); ?></h3>
                         <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
