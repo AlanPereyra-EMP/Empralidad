@@ -217,3 +217,9 @@ $(window).scroll(function() {
     }
   });
 });
+
+// woocomerce remove columns on front page
+$(window).ready(function() {
+  var exist = $('#woo_featured_products ul');
+    exist.removeClass("columns-3");
+});
