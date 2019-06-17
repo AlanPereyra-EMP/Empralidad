@@ -874,6 +874,26 @@
 		            'priority' => 7,
 		            'panel' => 'woocommerce'
 			    ));
+			    // Show 1
+					$wp_customize->add_setting('ip_woocommerce_featured_show', array(
+						'default' => 'false',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_encoded'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_woocommerce_featured_show_control', array(
+					            'label'          => __( 'Mostrar u Ocultar', 'informatica_pereyra' ),
+					            'section'        => 'ip_section_woocommerce_featured',
+					            'settings'       => 'ip_woocommerce_featured_show',
+					            'type'           => 'radio',
+					            'choices'        => array(
+					            	'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+					                'false' => __( 'Ocultar', 'informatica_pereyra' )
+					            ),
+					            'input_attrs' => array(
+								    'class' => 'd-inline-block'
+								  )
+					)));
+				// end show 1
 			    // Title 1
 						$wp_customize->add_setting('ip_woocommerce_featured_title', array(
 						'default' => '',
@@ -902,26 +922,6 @@
 
 					)));
 				// end text 1
-			    // Show 1
-					$wp_customize->add_setting('ip_woocommerce_featured_show', array(
-						'default' => 'false',
-						'trasnport' => 'refresh',
-						'sanitize_callback' => 'sanitize_encoded'
-					));
-					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_woocommerce_featured_show_control', array(
-					            'label'          => __( 'Mostrar u Ocultar', 'informatica_pereyra' ),
-					            'section'        => 'ip_section_woocommerce_featured',
-					            'settings'       => 'ip_woocommerce_featured_show',
-					            'type'           => 'radio',
-					            'choices'        => array(
-					            	'true'   => __( 'Mostrar', 'informatica_pereyra' ),
-					                'false' => __( 'Ocultar', 'informatica_pereyra' )
-					            ),
-					            'input_attrs' => array(
-								    'class' => 'd-inline-block'
-								  )
-					)));
-				// end show 1
 			}
 		// end woocomerce
 		// 7) Pixel facebook
