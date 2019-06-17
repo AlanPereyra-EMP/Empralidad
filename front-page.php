@@ -120,17 +120,19 @@
             </div>
         <!-- end if texts exists --> 
         <!-- Featured products woocomerce -->
-            <?php if (class_exists('WooCommerce')){
-                $featured_products = get_theme_mod('ip_settings_woocommerce');
-                if($featured_products === 'true') { ?>
-                    <h3 class="pt-5 pb-4 widget-title-dark text-center"><?php echo get_theme_mod('ip_woocommerce_featured_title'); ?></h3>
-                    <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
-                    <div id="woo_featured_products" class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
-                        <?php echo do_shortcode('[products]'); ?>
-                    </div>
-                    <br><br>
-                <?php } 
-            } ?>
+            <div class="p-2">
+                <?php if (class_exists('WooCommerce')){
+                    $featured_products = get_theme_mod('ip_settings_woocommerce');
+                    if($featured_products === 'true') { ?>
+                        <h3 class="pt-5 pb-4 widget-title-dark text-center"><?php echo get_theme_mod('ip_woocommerce_featured_title'); ?></h3>
+                        <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
+                        <div id="woo_featured_products" class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
+                            <?php echo do_shortcode('[products]'); ?>
+                        </div>
+                        <br><br>
+                    <?php } 
+                } ?>
+            </div>
         <!-- end woocommerce featured products -->
         <!-- Sidebar front page -->
             <?php if(is_active_sidebar( 'homepage' )){
