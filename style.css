@@ -133,7 +133,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	@media(max-width: 991px){
 		ul .dropdown-menu.depth_0.show{
 			overflow-y: scroll;
-		    height: 135px!important;
+		    height: 105px!important;
 		}
 	}
 	ul .dropdown-menu.depth_0.show {
@@ -446,7 +446,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	.mh-100-auto{
 		max-height: 100%;
-		overflow-y: auto;
+		overflow: auto;
 	}
 	.min-h-100{
 		min-height: 100vh;
@@ -463,7 +463,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.home-p{
 		max-width: 600px;
 		max-height: 170px;
-	    overflow-y: auto;
+	    overflow: auto;
 	}
 	@media (max-width: 575px){
 		.show-sm{
@@ -851,7 +851,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	.text-homepage-container{
 	    max-height: 142%;
-	    overflow-y: auto;
+	    overflow: auto;
 	}
 /*16) Shadows*/
 	img, iframe {
@@ -980,7 +980,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	position: sticky;
 	top: 0;
 	height:100%;
-	overflow-y: auto;
+	overflow: auto;
 	padding-top: 43px;
 }
 .left-featured-text-admin{
