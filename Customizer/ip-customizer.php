@@ -80,7 +80,7 @@
 					            )
 					)));
 				// end filter-brightness 1
-				// Text 1
+				// Title 1
 					$wp_customize->add_setting('ip_slide1_text', array(
 					'default' => '',
 					'trasnport' => 'refresh',
@@ -88,13 +88,12 @@
 				));
 
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_slide1_text_control', array(
-					'label'=> __('Texto', 'informatica_pereyra'),
+					'label'=> __('Titulo principal', 'informatica_pereyra'),
 					'section'=> 'ip_section_slide1',
-					'settings'=> 'ip_slide1_text',
-					'description'=> __( 'Titulo principal', 'informatica_pereyra' )
+					'settings'=> 'ip_slide1_text'
 
 				)));
-				// end text 1
+				// end title 1
 				// Textarea 1
 					$wp_customize->add_setting('ip_slide1_textarea', array(
 					'default' => '',
