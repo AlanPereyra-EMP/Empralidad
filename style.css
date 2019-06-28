@@ -917,51 +917,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 ::-webkit-scrollbar-thumb {
   background: #ccc; 
 }
-/*18) too biggest displays*/
-@media(min-width: 1400px){
-	html {
-		background: #ddd;
-	}
-	body {
-	    max-width: 90%;
-	    margin-left: auto;
-	    margin-right: auto;
-	    box-shadow: 0 13px 50px rgba(0, 0, 0, 0.6)!important;
-	}
-	nav.navbar {
-		background: rgba(0, 0, 0, 0.7)!important;
-	}
-	#searchform{
-		width: 60%!important;
-	}
-	
-}
-@media(min-width: 1500px){
-	body{
-		max-width: 80%!important;
-	}
-}
-@media(min-width: 2000px){
-	body{
-		max-width: 70%!important;
-	}
-	#searchform{
-		width: 50%!important;
-	}
-}
-@media(min-width: 2300px){
-	body{
-		max-width: 60%!important;
-	}
-}
-@media(min-width: 2500px){
-	body{
-		max-width: 55%!important;
-	}
-	#searchform{
-		width: 40%!important;
-	}
-}
 /*19) Ecommerce*/
 #btn-cart-on{
 	margin-left: -12px;
