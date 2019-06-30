@@ -57,8 +57,8 @@
 						'label'=> __('Imagen destacada', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
 						'settings'=> 'ip_img_slide1',
-						'width' => 1400,
-						'height' => 1000,
+						'width' => 1900,
+						'height' => 1080,
 						'description'=> __( '1400x1000 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
