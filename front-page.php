@@ -15,7 +15,7 @@
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
                             <br>
-                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px btn-outline-light">
+                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
                                 <?php echo get_theme_mod('ip_img_btn1'); ?>
                             </button>
                         <?php } ?>
