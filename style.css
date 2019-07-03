@@ -3,7 +3,7 @@ Theme Name: Informatica Pereyra - Theme
 Author: Alan Pereyra
 Author URI: https://informatica.pereyra.online/alanpereyra57
 Description: Inforatica Pereyra es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
-Version: 1.6.3
+Version: 1.6.4
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: informatica_pereyra
@@ -30,7 +30,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 14) Mobile first
 15) Carouse
 16) Shadows
-17) Scroll 
+17) Scroll
 18) Too biggest displays
 19) Ecommerce
 */
@@ -144,7 +144,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    position: absolute;
 	    visibility: visible;
 	    width: 100%;
-	    
+
 	}
 	ul .dropdown-menu.depth_0.show li a {
 		font-weight: bold;
@@ -153,7 +153,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    text-decoration: none;
 	    border: none;
 	    text-align: center;
-	    
+
 	}
 	ul .dropdown-menu.depth_0.show li:focus, ul .dropdown-menu.depth_0.show li:hover {
         filter: brightness(0.8);
@@ -163,7 +163,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		    border: 1px #fff solid;
 	}
 	li .dropdown-submenu a .dropdown-toggle {
-		color: #dd0d0d!important;	
+		color: #dd0d0d!important;
 	}
 	ul .dropdown-menu li a::after {
 		display: none;
@@ -198,14 +198,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 	}
 /*2) Img*/
-	img.alignright { 
-		float: right; margin: 0 0 1em 1em; 
+	img.alignright {
+		float: right; margin: 0 0 1em 1em;
 	}
-	img.alignleft { 
-		float: left; margin: 0 1em 1em 0; 
+	img.alignleft {
+		float: left; margin: 0 1em 1em 0;
 	}
-	img.aligncenter { 
-		display: block; margin-left: auto; margin-right: auto; 
+	img.aligncenter {
+		display: block; margin-left: auto; margin-right: auto;
 	}
 	img, .wp-caption {
 		max-width: 100%!important;
@@ -225,7 +225,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		width: 40px;
 	}
 	.img-btn-fixed-wsp{
-	    box-shadow: none!important;		
+	    box-shadow: none!important;
 	}
 	@media(min-width: 576px){
 		.img-fixed {
@@ -269,16 +269,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    filter: brightness(.8);
 	}
 /*3) Alings*/
-	.alignright { 
-		float: right; 
+	.alignright {
+		float: right;
 	}
-	.alignleft { 
-		float: left; 
+	.alignleft {
+		float: left;
 	}
-	.aligncenter { 
+	.aligncenter {
 		display: block;
 		margin-left: auto;
-		margin-right: auto; 
+		margin-right: auto;
 	}
 	.wp-block-gallery{
 		margin-left: 10px;
@@ -438,7 +438,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  	display: none!important;
 	  }
 	  .mt-60-mobile{
-	  	margin-top: 60px; 
+	  	margin-top: 60px;
 	  }
 	}
 	.h-100-vh{
@@ -720,11 +720,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
       0% {
         opacity: 0;
         transform: translate(0%, -50%);
-      } 
+      }
 
       20% {
         opacity: 0;
-      }  
+      }
 
       100% {
         opacity: 1;
@@ -733,7 +733,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     .fadein{
         animation-name: fadeIn;
         animation-duration: 1s;
-    }   
+    }
 	.faded{
 		opacity: 1!important;
 		animation-name: fadeIn;
@@ -757,10 +757,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  .text-mobile {
 	    font-size: 70px !important;
 	  }
-	} 
+	}
 	.text-mobile {
 	    font-size: 46px;
-	} 
+	}
 	.buttons-mobile{
 		background: rgba(250, 250, 250, 0.9);
 		height: 38px!important;
@@ -900,8 +900,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	ul .dropdown-menu.depth_0.show li a{
 		text-shadow: none!important;
 	}
-	a img:hover, a img:focus, .navbar-img, .card button, .img-btn-fixed:hover, .img-btn-fixed:focus, 
-	a.button:hover, a.button:focus, .btn:hover, .btn:focus, .no-shadow, 
+	a img:hover, a img:focus, .navbar-img, .card button, .img-btn-fixed:hover, .img-btn-fixed:focus,
+	a.button:hover, a.button:focus, .btn:hover, .btn:focus, .no-shadow,
 	 iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 		box-shadow: none!important;
 	}
@@ -911,11 +911,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   opacity: 0.2;
 }
 ::-webkit-scrollbar-track {
-  background: #eee; 
+  background: #eee;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ccc; 
+  background: #ccc;
 }
 /*19) Ecommerce*/
 #btn-cart-on{
