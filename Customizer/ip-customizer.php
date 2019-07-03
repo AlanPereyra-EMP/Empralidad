@@ -59,7 +59,7 @@
 						'settings'=> 'ip_head_slide1',
 						'width' => 1900,
 						'height' => 1080,
-						'description'=> __( '1900x1000 px (adaptativo)', 'informatica_pereyra' )
+						'description'=> __( '1900x1080 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
 				// filter-brightness 1
