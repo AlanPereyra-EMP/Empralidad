@@ -42,7 +42,7 @@
 			// end logo
 			// Slide1
 				$wp_customize->add_section('ip_section_slide1', array(
-					'title'=> __('Imagen principal', 'informatica_pereyra'),
+					'title'=> __('Imagen principal de fondo', 'informatica_pereyra'),
 					'priority' => 2,
 					'panel' => 'ip_panel_head'
 				));
