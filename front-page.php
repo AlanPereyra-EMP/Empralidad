@@ -1,9 +1,9 @@
 <?php get_header(); ?>
     <!-- header-->
         <?php
-        $carousel_slide1 = get_theme_mod('ip_img_slide1');
-        $filter_slide1 = get_theme_mod('ip_img_filter1');
-        $button_slide1 = get_theme_mod('ip_img_btn1');
+        $carousel_slide1 = get_theme_mod('ip_head_slide1');
+        $filter_slide1 = get_theme_mod('ip_head_filter1');
+        $button_slide1 = get_theme_mod('ip_head_btn1');
         if ($carousel_slide1) {
         ?>
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -15,8 +15,8 @@
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_slide1_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
                             <br>
-                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_img_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
-                                <?php echo get_theme_mod('ip_img_btn1'); ?>
+                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                <?php echo get_theme_mod('ip_head_btn1'); ?>
                             </button>
                         <?php } ?>
                     </div>
@@ -128,6 +128,17 @@
                         <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
                         <div id="woo_featured_products" class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
                             <?php echo do_shortcode('[featured_products columns="3" orderby="price" order="ASC"]'); ?>
+                            <ul style="display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;">
+                                <li class="product type-product post-79 status-publish first instock product_cat-diseno-web has-post-thumbnail featured virtual sold-individually purchasable product-type-simple">
+                                    asd asdasdas asd asd asd asd  asd asd  asd  asd  asd asd  asd asd a
+                                </li>
+                                <li class="product type-product post-79 status-publish first instock product_cat-diseno-web has-post-thumbnail featured virtual sold-individually purchasable product-type-simple">
+                                    asd asd asdasd asd asd asd asd asd asd asd asd asd asd asd asd
+                                </li>
+                                <li class="product type-product post-79 status-publish first instock product_cat-diseno-web has-post-thumbnail featured virtual sold-individually purchasable product-type-simple">
+                                    asd as dsad asd asd asd asd asd asd asd asd asd asdd asd asd asd 
+                                </li>
+                            </ul>
                         </div>
                     <?php }
                 } ?>

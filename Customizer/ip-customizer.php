@@ -1,5 +1,5 @@
 <?php 
-// 1) Img
+// 1) Header
 // 2) Colors
 // 3) Whatsapp
 // 4) Ads
@@ -13,29 +13,29 @@
 
 	function informatica_pereyra_customize_register($wp_customize){
 	
-		// 1) Img
+		// 1) Header
 			// Add panel
-				$wp_customize->add_panel( 'ip_panel_img', array(
+				$wp_customize->add_panel( 'ip_panel_head', array(
 					'priority' => 1,
-					'title' => __( 'Imagenes', 'informatica_pereyra' )
+					'title' => __( 'Cabecera', 'informatica_pereyra' )
 				));
 			// end add panel
 			// Logo
 				$wp_customize->add_section('ip_section_logo', array(
 					'title'=> __('Logo', 'informatica_pereyra'),
 					'priority' => 1,
-					'panel' => 'ip_panel_img'
+					'panel' => 'ip_panel_head'
 				));
-				$wp_customize->add_setting('ip_img_logo', array(
+				$wp_customize->add_setting('ip_head_logo', array(
 					'trasnport' => 'refresh',
 					'sanitize_callback' => 'sanitize_string'
 				));
 
-				$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_img_logo_control', array(
+				$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_head_logo_control', array(
 					'label'=> __('Logo', 'informatica_pereyra'),
 					'description'=> __( 'Ideal 1:1, máxima 21:9 (horizontal)', 'informatica_pereyra' ),
 					'section'=> 'ip_section_logo',
-					'settings'=> 'ip_img_logo',
+					'settings'=> 'ip__logo',
 					'flex_width' => true,
 					'flex_height' => true
 				)));
@@ -44,34 +44,34 @@
 				$wp_customize->add_section('ip_section_slide1', array(
 					'title'=> __('Imagen principal', 'informatica_pereyra'),
 					'priority' => 2,
-					'panel' => 'ip_panel_img'
+					'panel' => 'ip_panel_head'
 				));
 				// Img 1
-					$wp_customize->add_setting('ip_img_slide1', array(
+					$wp_customize->add_setting('ip_head_slide1', array(
 						'trasnport' => 'refresh',
 						'sanitize_callback' => 'sanitize_string',
 						
 					));
 
-					$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_img_slide1_control', array(
+					$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_head_slide1_control', array(
 						'label'=> __('Imagen destacada', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
-						'settings'=> 'ip_img_slide1',
+						'settings'=> 'ip_head_slide1',
 						'width' => 1900,
 						'height' => 1080,
 						'description'=> __( '1900x1000 px (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
 				// filter-brightness 1
-					$wp_customize->add_setting('ip_img_filter1', array(
+					$wp_customize->add_setting('ip_head_filter1', array(
 						'default' => 'false',
 						'trasnport' => 'refresh',
 						'sanitize_callback' => 'sanitize_string'
 					));
-					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_filter_control1', array(
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_filter_control1', array(
 					            'label'          => __( 'Oscurecer', 'informatica_pereyra' ),
 					            'section'        => 'ip_section_slide1',
-					            'settings'       => 'ip_img_filter1',
+					            'settings'       => 'ip_head_filter1',
 					            'type'           => 'radio',
 					            'choices'        => array(
 					            	'dark'   => __( 'Oscurecer imagen', 'informatica_pereyra' ),
@@ -111,37 +111,37 @@
 				)));
 				// end textarea 1
 				// Button 1
-					$wp_customize->add_setting('ip_img_btn1', array(
+					$wp_customize->add_setting('ip_head_btn1', array(
 							'default' => '',
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string'
 						));
 
-					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_btn_control1', array(
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_control1', array(
 						'label'=> __('Texto de boton', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
-						'settings'=> 'ip_img_btn1',
+						'settings'=> 'ip_head_btn1',
 						'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
 
 					)));
 				// end button 1
 				// Link button 1
-					$wp_customize->add_setting('ip_img_link_btn1', array(
+					$wp_customize->add_setting('ip_head_link_btn1', array(
 							'default' => '',
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string'
 						));
 
-					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_img_link_btn_control1', array(
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control1', array(
 						'label'=> __('Link del boton', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
-						'settings'=> 'ip_img_link_btn1',
+						'settings'=> 'ip_head_link_btn1',
 						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
 
 					)));
 				// end link button 1
 			// end slide1
-		// end img
+		// end header
 		// 2) Colors
 			// Add panel
 			$wp_customize->add_panel( 'ip_panel_color', array(
