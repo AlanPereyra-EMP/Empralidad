@@ -37,7 +37,7 @@
             <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation show-until-md">
                 <!-- Text 1 -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
-                    $logo = get_theme_mod('ip_img_logo');
+                    $logo = get_theme_mod('ip_head_logo');
 
                     if ($ip_homepage_show == 'true'){
                         $img = get_theme_mod('ip_homepage_img1'); ?>
@@ -45,7 +45,7 @@
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                             </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" />
+                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
                             <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
                                 <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text1') ?>
@@ -72,7 +72,7 @@
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                             </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" />
+                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
                             <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling2'); ?> " >
                                 <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text2') ?>
@@ -99,7 +99,7 @@
                             <h2 class="text-center" >
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                             </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" />
+                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
                             <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling3'); ?> " >
                                 <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text3') ?>
@@ -128,17 +128,6 @@
                         <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
                         <div id="woo_featured_products" class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
                             <?php echo do_shortcode('[featured_products columns="3" orderby="price" order="ASC"]'); ?>
-                            <ul style="display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;">
-                                <li class="product type-product post-79 status-publish first instock product_cat-diseno-web has-post-thumbnail featured virtual sold-individually purchasable product-type-simple">
-                                    asd asdasdas asd asd asd asd  asd asd  asd  asd  asd asd  asd asd a
-                                </li>
-                                <li class="product type-product post-79 status-publish first instock product_cat-diseno-web has-post-thumbnail featured virtual sold-individually purchasable product-type-simple">
-                                    asd asd asdasd asd asd asd asd asd asd asd asd asd asd asd asd
-                                </li>
-                                <li class="product type-product post-79 status-publish first instock product_cat-diseno-web has-post-thumbnail featured virtual sold-individually purchasable product-type-simple">
-                                    asd as dsad asd asd asd asd asd asd asd asd asd asdd asd asd asd 
-                                </li>
-                            </ul>
                         </div>
                     <?php }
                 } ?>
@@ -159,7 +148,7 @@
                         <div style="margin-top: 50vh;transform: translate(0,-50vh);max-height: 95vh;">
                             <!-- Text 1 -->
                                 <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
-                                $logo = get_theme_mod('ip_img_logo');
+                                $logo = get_theme_mod('ip_head_logo');
 
                                 if ($ip_homepage_show == 'true'){
                                     $img = get_theme_mod('ip_homepage_img1'); ?>

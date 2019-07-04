@@ -42,7 +42,7 @@
         }
     </style>
 
-    <?php wp_head(); ?> 
+    <?php wp_head(); ?>
 
     <?php echo get_theme_mod('ip_face_text'); ?>
 
@@ -53,17 +53,17 @@
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
             <!-- if logo -->
-	            <?php $img_navbar = get_theme_mod('ip_img_logo');
+	            <?php $img_navbar = get_theme_mod('ip_head_logo');
 	            if ($img_navbar) { ?>
 		            <a class="navbar-brand mx-auto" href="<?php echo home_url(); ?>">
-		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" class="navbar-img" alt="NavbarBrand">
+		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" class="navbar-img" alt="NavbarBrand">
 		            </a>
 	            <?php } else { ?>
                     <a class=" mx-auto" href="<?php echo home_url(); ?>">
     	                <h4 class="p-3"><?php bloginfo(); ?></h4>
-                    </a>                
+                    </a>
 	            <?php } ?>
-	        <!-- end if logo -->           
+	        <!-- end if logo -->
             <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
                 <i id="btn-menu-nav" class="fa fa-bars <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
             </div>
@@ -78,13 +78,13 @@
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
-            
+
             <div class="collapse show-lg" id="btn-search-desktop">
                 <div class="text-white mr-3">
                     <?php $search_link = get_theme_mod('ip_mobile_search_text');
                     if ($search_link == 'true'){ ?>
                         <a id="searchform-close" class="fa fa-search mx-auto" onclick="showSearchBackground();">
-                        </a> 
+                        </a>
                     <?php }?>
                 </div>
             </div>

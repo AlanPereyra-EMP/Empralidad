@@ -1,4 +1,4 @@
-<?php 
+<?php
 // 1) Header
 // 2) Colors
 // 3) Whatsapp
@@ -12,7 +12,7 @@
 // 10) QR code (argentina)
 
 	function informatica_pereyra_customize_register($wp_customize){
-	
+
 		// 1) Header
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_head', array(
@@ -35,7 +35,7 @@
 					'label'=> __('Logo', 'informatica_pereyra'),
 					'description'=> __( 'Ideal 1:1, máxima 21:9 (horizontal)', 'informatica_pereyra' ),
 					'section'=> 'ip_section_logo',
-					'settings'=> 'ip__logo',
+					'settings'=> 'ip_head_logo',
 					'flex_width' => true,
 					'flex_height' => true
 				)));
@@ -50,7 +50,7 @@
 					$wp_customize->add_setting('ip_head_slide1', array(
 						'trasnport' => 'refresh',
 						'sanitize_callback' => 'sanitize_string',
-						
+
 					));
 
 					$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_head_slide1_control', array(
@@ -245,7 +245,7 @@
 				)));
 			// end number
 		// end whatsapp
-		// 4) Ads 
+		// 4) Ads
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_ads', array(
 					'priority' => 4,
@@ -1113,7 +1113,7 @@
 
 
 	}
-	
+
 
 	add_action('customize_register', 'informatica_pereyra_customize_register');
 	function sanitize_number( $input ) {
