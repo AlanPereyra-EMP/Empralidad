@@ -2,8 +2,8 @@
 // 1) Header
 // 2) Colors
 // 3) Whatsapp
-// 4) Ads
-// 5) Homepage texts
+// 4) Single sections
+// 5) Homepage secitons
 // 6) Molile buttons
 // 7) Woocomerce
 // 7) Facebook
@@ -249,7 +249,7 @@
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_ads', array(
 					'priority' => 4,
-					'title' => __( 'Publicidad', 'informatica_pereyra' )
+					'title' => __( 'Secciones destacadas en articulos', 'informatica_pereyra' )
 				));
 			// end add panel
 			// Ad 1
@@ -452,14 +452,14 @@
 				// end link button 2
 			// end ad 2
 		// end ads
-		// 5) Homepage texts
+		// 5) Homepage section
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_home_text', array(
 					'priority' => 5,
-					'title' => __( 'Textos homepage', 'informatica_pereyra' )
+					'title' => __( 'Secciones homepage', 'informatica_pereyra' )
 				));
 			// end add panel
-			// Home text 1
+			// section 1
 				$wp_customize->add_section('ip_section_homepage1', array(
 					'title'=> __('Seccion 1', 'informatica_pereyra'),
 					'priority' => 1,
@@ -571,8 +571,8 @@
 
 					)));
 				// end link button 1
-			// end home text 1
-			// Home text 2
+			// end section 1
+			// Section 2
 				$wp_customize->add_section('ip_section_homepage2', array(
 					'title'=> __('Seccion 2', 'informatica_pereyra'),
 					'priority' => 2,
@@ -683,8 +683,8 @@
 
 					)));
 				// end link button 2
-			// end home text 2
-			// Home text 3
+			// end section 2
+			// Section 3
 				$wp_customize->add_section('ip_section_homepage3', array(
 					'title'=> __('Seccion 3', 'informatica_pereyra'),
 					'priority' => 3,
@@ -795,8 +795,8 @@
 
 					)));
 				// end link button 3
-			// end home text 3
-		// end homepage text
+			// end section 3
+		// end homepage sectons
 		// 6) Mobile buttons
 			$wp_customize->add_section('ip_section_mobile', array(
 				'title'=> __('Mobile', 'informatica_pereyra'),
