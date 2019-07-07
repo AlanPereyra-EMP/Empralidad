@@ -81,7 +81,7 @@
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 	        .ip_img_slide1{
-	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_img_slide1')); ?>) no-repeat 50% 50%;
+	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_head_slide1')); ?>) no-repeat 50% 50%;
 	        }
 	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
