@@ -1,7 +1,6 @@
 <?php get_header(); ?>
     <!-- Title -->
-        <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify bg-personalized">
-            <h2 class="text-mobile text-white"><?php bloginfo(); ?></h2>
+        <div class="container-fluid pt-5 pb-3 text-center text-justify bg-personalized">
         </div>
     <!-- end title -->
     <!-- Page content -->
