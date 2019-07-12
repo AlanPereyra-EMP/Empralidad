@@ -331,7 +331,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	/*Youtube iframe*/
 	iframe {
 		width: 100%!important;
-		height: auto;
 		min-width: unset!important;
 	}
 	.landing-content p iframe {
