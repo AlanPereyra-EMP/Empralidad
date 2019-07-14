@@ -1,5 +1,5 @@
 <?php 
-// 0) JS on footer
+// 0) CSS and JS on footer
 // 1) Main menu
 // 2) Widgets
 // 3) Includes
@@ -22,6 +22,18 @@
 	    add_action('wp_footer', 'wp_print_head_scripts', 5);
 	}
 	add_action( 'wp_enqueue_scripts', 'scripts_footer' );
+
+	function my_deregister_styles() {
+	  wp_deregister_style('sfpo-by-ip');
+	  wp_deregister_style('wp-block-library');
+	  wp_deregister_style('wc-block-style');
+	  wp_deregister_style('contact-form-7');
+	  wp_deregister_style('woocommerce');
+	  wp_deregister_style('woocommerce-general');
+	  wp_deregister_style('woocommerce-smallscreen');
+	  wp_deregister_style('woocommerce-layout');
+	}
+	add_action('wp_print_styles', 'my_deregister_styles', 100);
 // 1) Main menu
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus (array('superior' => 'Menu Principal'));
