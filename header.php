@@ -34,6 +34,30 @@
         }else if (window.attachEvent){
         window.attachEvent("onload", downloadCSSAtOnload1);
         }else{ window.onload = downloadCSSAtOnload1;}
+
+        function downloadCSSAtOnload2() {
+        var element2 = document.createElement("link");
+        element2.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
+        element2.rel = 'stylesheet';
+        document.body.appendChild(element2);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadCSSAtOnload2, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadCSSAtOnload2);
+        }else{ window.onload = downloadCSSAtOnload2;}
+
+        function downloadCSSAtOnload3() {
+        var element3 = document.createElement("link");
+        element3.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/blocks/style.css";
+        element3.rel = 'stylesheet';
+        document.body.appendChild(element3);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadCSSAtOnload3, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadCSSAtOnload3);
+        }else{ window.onload = downloadCSSAtOnload3;}
     </script>
     <style>
         .to-fade{
