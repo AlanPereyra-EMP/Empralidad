@@ -30,6 +30,7 @@
 	  wp_deregister_style('contact-form-7');
 	  wp_deregister_style('bootstrap-personalized');
 	}
+	
 	add_action('wp_print_styles', 'my_deregister_styles', 100);
 
 // 1) Main menu
