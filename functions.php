@@ -28,12 +28,9 @@
 	  wp_deregister_style('wp-block-library');
 	  wp_deregister_style('wc-block-style');
 	  wp_deregister_style('contact-form-7');
-	  wp_deregister_style('woocommerce');
-	  wp_deregister_style('woocommerce-general');
-	  wp_deregister_style('woocommerce-smallscreen');
-	  wp_deregister_style('woocommerce-layout');
 	}
 	add_action('wp_print_styles', 'my_deregister_styles', 100);
+
 // 1) Main menu
 	if (function_exists('register_nav_menus')) {
 		register_nav_menus (array('superior' => 'Menu Principal'));
