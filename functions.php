@@ -27,10 +27,13 @@
 	  wp_deregister_style('sfpo-by-ip');
 	  wp_deregister_style('wp-block-library');
 	  wp_deregister_style('wc-block-style');
+	  wp_deregister_style('woocommerce');
+	  wp_deregister_style('woocommerce-layout');
+	  wp_deregister_style('woocommerce-smallscreen');
 	  wp_deregister_style('contact-form-7');
 	  wp_deregister_style('bootstrap-personalized');
 	}
-	
+
 	add_action('wp_print_styles', 'my_deregister_styles', 100);
 
 // 1) Main menu

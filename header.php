@@ -58,6 +58,42 @@
         }else if (window.attachEvent){
         window.attachEvent("onload", downloadCSSAtOnload3);
         }else{ window.onload = downloadCSSAtOnload3;}
+
+        function downloadCSSAtOnload4() {
+        var element4 = document.createElement("link");
+        element4.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce.css";
+        element4.rel = 'stylesheet';
+        document.body.appendChild(element4);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadCSSAtOnload4, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadCSSAtOnload4);
+        }else{ window.onload = downloadCSSAtOnload4;}
+
+        function downloadCSSAtOnload5() {
+        var element5 = document.createElement("link");
+        element5.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-layout.css";
+        element5.rel = 'stylesheet';
+        document.body.appendChild(element5);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadCSSAtOnload5, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadCSSAtOnload5);
+        }else{ window.onload = downloadCSSAtOnload5;}
+
+        function downloadCSSAtOnload6() {
+        var element6 = document.createElement("link");
+        element6.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-smallscreen.css";
+        element6.rel = 'stylesheet';
+        document.body.appendChild(element6);
+        }
+        if (window.addEventListener){
+        window.addEventListener("load", downloadCSSAtOnload6, false);
+        }else if (window.attachEvent){
+        window.attachEvent("onload", downloadCSSAtOnload6);
+        }else{ window.onload = downloadCSSAtOnload6y;}
     </script>
     <style>
         .to-fade{
