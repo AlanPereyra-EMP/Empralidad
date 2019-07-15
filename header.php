@@ -16,84 +16,43 @@
         element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
         element.rel = 'stylesheet';
         document.body.appendChild(element);
+
+        var element1 = document.createElement("link");
+        element1.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/fa/css/all.min.css";
+        element1.rel = 'stylesheet';
+        document.body.appendChild(element1);
+
+        var element2 = document.createElement("link");
+        element2.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
+        element2.rel = 'stylesheet';
+        document.body.appendChild(element2);
+
+
+        var element3 = document.createElement("link");
+        element3.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/blocks/style.css";
+        element3.rel = 'stylesheet';
+        document.body.appendChild(element3);
+
+        var element4 = document.createElement("link");
+        element4.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce.css";
+        element4.rel = 'stylesheet';
+        document.body.appendChild(element4); 
+        
+        var element5 = document.createElement("link");
+        element5.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-layout.css";
+        element5.rel = 'stylesheet';
+        document.body.appendChild(element5);
+
+        var element6 = document.createElement("link");
+        element6.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-smallscreen.css";
+        element6.rel = 'stylesheet';
+        document.body.appendChild(element6);       
         }
         if (window.addEventListener){
         window.addEventListener("load", downloadCSSAtOnload, false);
         }else if (window.attachEvent){
         window.attachEvent("onload", downloadCSSAtOnload);
         }else{ window.onload = downloadCSSAtOnload;}
-
-        function downloadCSSAtOnload1() {
-        var element1 = document.createElement("link");
-        element1.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/fa/css/all.min.css";
-        element1.rel = 'stylesheet';
-        document.body.appendChild(element1);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload1, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload1);
-        }else{ window.onload = downloadCSSAtOnload1;}
-
-        function downloadCSSAtOnload2() {
-        var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
-        element2.rel = 'stylesheet';
-        document.body.appendChild(element2);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload2, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload2);
-        }else{ window.onload = downloadCSSAtOnload2;}
-
-        function downloadCSSAtOnload3() {
-        var element3 = document.createElement("link");
-        element3.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/blocks/style.css";
-        element3.rel = 'stylesheet';
-        document.body.appendChild(element3);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload3, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload3);
-        }else{ window.onload = downloadCSSAtOnload3;}
-
-        function downloadCSSAtOnload4() {
-        var element4 = document.createElement("link");
-        element4.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce.css";
-        element4.rel = 'stylesheet';
-        document.body.appendChild(element4);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload4, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload4);
-        }else{ window.onload = downloadCSSAtOnload4;}
-
-        function downloadCSSAtOnload5() {
-        var element5 = document.createElement("link");
-        element5.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-layout.css";
-        element5.rel = 'stylesheet';
-        document.body.appendChild(element5);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload5, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload5);
-        }else{ window.onload = downloadCSSAtOnload5;}
-
-        function downloadCSSAtOnload6() {
-        var element6 = document.createElement("link");
-        element6.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-smallscreen.css";
-        element6.rel = 'stylesheet';
-        document.body.appendChild(element6);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload6, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload6);
-        }else{ window.onload = downloadCSSAtOnload6y;}
     </script>
     <style>
         .to-fade{
@@ -139,14 +98,12 @@
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
 
-            <div class="collapse show-lg" id="btn-search-desktop">
-                <div class="text-white mr-3">
+            <div class="collapse show-lg text-white mr-3" id="btn-search-desktop">
                     <?php $search_link = get_theme_mod('ip_mobile_search_text');
                     if ($search_link == 'true'){ ?>
                         <a id="searchform-close" class="fa fa-search mx-auto" onclick="showSearchBackground();">
                         </a>
                     <?php }?>
-                </div>
             </div>
         </nav>
         <i id="bg-menu-mobile"></i>

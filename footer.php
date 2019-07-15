@@ -1,7 +1,6 @@
     <!-- Footer -->
 
-        <footer class="container-fluid text-white py-3 pb-5 foote " style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
-            <div class="text-center">
+        <footer class="container-fluid text-white py-3 pb-5 foote text-center" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
                 <!-- Sidebar -->
                     <?php get_sidebar( 'footer' ); ?>
             	<!-- Social buttons -->
@@ -40,7 +39,6 @@
                 <br>
                 <?php echo get_theme_mod('ip_qr_text') ?>
                 <br>
-            </div>
         </footer>
     <!-- end footer -->
     <!-- Button permanent desktop -->
@@ -124,23 +122,16 @@
         var element = document.createElement("script");
         element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";
         document.body.appendChild(element);
+
+        var element1 = document.createElement("script");
+        element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
+        document.body.appendChild(element1);
         }
         if (window.addEventListener){
         window.addEventListener("load", downloadJSAtOnload, false);
         }else if (window.attachEvent){
         window.attachEvent("onload", downloadJSAtOnload);
         }else { window.onload = downloadJSAtOnload;}
-
-        function downloadJSAtOnload1() {
-        var element1 = document.createElement("script");
-        element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
-        document.body.appendChild(element1);
-        }
-        if (window.addEventListener){
-        window.addEventListener("load", downloadJSAtOnload1, false);
-        }else if (window.attachEvent){
-        window.attachEvent("onload", downloadJSAtOnload1);
-        }else{ window.onload = downloadJSAtOnload1;}
     </script>
     <!-- jQuery -->
     <script defer src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
