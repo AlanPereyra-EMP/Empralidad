@@ -25,28 +25,7 @@
         var element2 = document.createElement("link");
         element2.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
         element2.rel = 'stylesheet';
-        document.body.appendChild(element2);
-
-
-        var element3 = document.createElement("link");
-        element3.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/blocks/style.css";
-        element3.rel = 'stylesheet';
-        document.body.appendChild(element3);
-
-        var element4 = document.createElement("link");
-        element4.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce.css";
-        element4.rel = 'stylesheet';
-        document.body.appendChild(element4); 
-        
-        var element5 = document.createElement("link");
-        element5.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-layout.css";
-        element5.rel = 'stylesheet';
-        document.body.appendChild(element5);
-
-        var element6 = document.createElement("link");
-        element6.href = "<?php echo esc_url( plugins_url() ); ?>/woocommerce/assets/css/woocommerce-smallscreen.css";
-        element6.rel = 'stylesheet';
-        document.body.appendChild(element6);       
+        document.body.appendChild(element2); 
         }
         if (window.addEventListener){
         window.addEventListener("load", downloadCSSAtOnload, false);
