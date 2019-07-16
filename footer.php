@@ -51,8 +51,7 @@
             <?php } ?>
         </div>
         <!-- if cart on -->
-        <?php if (class_exists('WooCommerce')) {
-            if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
+        <?php if (class_exists('WooCommerce') && (WC()->cart->get_cart_contents_count()) > 0) { ?>
                 <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
                     <span id="btn-cart-on" class="fa-text"><?php echo WC()->cart->get_cart_total(); ?></span>
                         <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
@@ -64,7 +63,6 @@
                             } ?>
                         </small>
                 </a> <?php
-             }
         } ?>
 
     <!-- end button permanent desktop -->
