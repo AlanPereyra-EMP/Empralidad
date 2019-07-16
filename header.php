@@ -25,7 +25,14 @@
         var element2 = document.createElement("link");
         element2.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
         element2.rel = 'stylesheet';
-        document.body.appendChild(element2); 
+        document.body.appendChild(element2);
+
+
+        var element3 = document.createElement("link");
+        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-defaults.css";
+        element3.rel = 'stylesheet';
+        document.body.appendChild(element3);
+
         }
         if (window.addEventListener){
         window.addEventListener("load", downloadCSSAtOnload, false);
