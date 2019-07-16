@@ -29,7 +29,7 @@
 
 
         var element3 = document.createElement("link");
-        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-defaults.css";
+        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-ip.css";
         element3.rel = 'stylesheet';
         document.body.appendChild(element3);
 
