@@ -32,11 +32,6 @@
         element3.rel = 'stylesheet';
         document.body.appendChild(element3);
 
-        var element4 = document.createElement("link");
-        element4.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/ip-plugins.css";
-        element4.rel = 'stylesheet';
-        document.body.appendChild(element4);
-
         }
         if (window.addEventListener){
         window.addEventListener("load", downloadCSSAtOnload, false);
