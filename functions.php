@@ -76,6 +76,7 @@
 
 // 3) Includes
 	get_template_part( 'Customizer/ip-customizer' );
+	get_template_part( 'plugins/ip-shortcodes' );
 
 // 4) Dinamics Css
 	function ip_theme_customize_css()
