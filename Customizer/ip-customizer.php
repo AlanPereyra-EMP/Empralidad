@@ -6,10 +6,10 @@
 // 5) Homepage secitons
 // 6) Molile buttons
 // 7) Woocomerce
-// 7) Facebook
-// 8) Social buttons
-// 9) Corp text
-// 10) QR code (argentina)
+// 8) Facebook
+// 9) Social buttons
+// 10) Corp text
+// 11) QR code (argentina)
 
 	function informatica_pereyra_customize_register($wp_customize){
 
@@ -923,12 +923,18 @@
 				// end text 1
 			}
 		// end woocomerce
-		// 7) Pixel facebook
-			$wp_customize->add_section('ip_section_face', array(
-				'title'=> __('Facebook', 'informatica_pereyra'),
-				'priority' => 7
-			));
+		// 8) Analytics
+			// Add panel
+				$wp_customize->add_panel( 'ip_panel_analytics', array(
+					'priority' => 7,
+					'title' => __( 'Analítica', 'informatica_pereyra' )
+				));
 			// pixel
+				$wp_customize->add_section('ip_section_face', array(
+					'title'=> __('Facebook', 'informatica_pereyra'),
+					'priority' => 1,
+					'panel' => 'ip_panel_analytics'
+				));
 				$wp_customize->add_setting('ip_face_text', array(
 					'default' => '',
 					'trasnport' => 'refresh',
@@ -936,15 +942,33 @@
 				));
 
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_face_text_control', array(
-					'label'=> __('Pixel ', 'informatica_pereyra'),
+					'label'=> __('Pixel de facebook', 'informatica_pereyra'),
 					'section'=> 'ip_section_face',
 					'settings'=> 'ip_face_text',
 					'description'	  => __( 'Pega tu pixel (codigo manual)', 'informatica_pereyra' ),
-
 				)));
 			// end pixel
-		// end facebook
-		// 8) Social buttons
+			// google
+				$wp_customize->add_section('ip_section_google', array(
+					'title'=> __('Google', 'informatica_pereyra'),
+					'priority' => 1,
+					'panel' => 'ip_panel_analytics'
+				));
+				$wp_customize->add_setting('ip_google_text', array(
+					'default' => '',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_encoded'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_google_text_control', array(
+					'label'=> __('Google analytics', 'informatica_pereyra'),
+					'section'=> 'ip_section_google',
+					'settings'=> 'ip_google_text',
+					'description'	  => __( 'Pega tu codigo de google analytics', 'informatica_pereyra' ),
+				)));
+			// end pixel
+		// end analytics
+		// 9) Social buttons
 			$wp_customize->add_section('ip_section_social', array(
 				'title'=> __('Social', 'informatica_pereyra'),
 				'priority' => 8
@@ -1010,7 +1034,7 @@
 				)));
 			// end twitter button
 		// end social buttons
-		// 9) Corp texts
+		// 10) Corp texts
 
 			$wp_customize->add_section('ip_section_text', array(
 				'title'=> __('Textos corporativos', 'informatica_pereyra'),
@@ -1089,7 +1113,7 @@
 				)));
 			// end copyright
 		// end corp texts
-		// 10) QR code (argentina)
+		// 11) QR code (argentina)
 			$wp_customize->add_section('ip_section_qr', array(
 				'title'=> __('Codigo QR Afip', 'informatica_pereyra'),
 				'priority' => 10

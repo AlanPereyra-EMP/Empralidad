@@ -48,7 +48,8 @@
 
     <?php wp_head(); ?>
 
-    <?php echo get_theme_mod('ip_face_text'); ?>
+    <?php echo get_theme_mod('ip_face_text');
+          echo get_theme_mod('ip_google_text'); ?>
 
   </head>
   <body <?php body_class() ?>>
