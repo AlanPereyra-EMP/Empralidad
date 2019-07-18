@@ -13,7 +13,7 @@
     <script>
         function downloadCSSAtOnload() {
         var element = document.createElement("link");
-        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/plugins-support.css";
+        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
         element.rel = 'stylesheet';
         document.body.appendChild(element);
 
@@ -27,9 +27,8 @@
         element2.rel = 'stylesheet';
         document.body.appendChild(element2);
 
-
         var element3 = document.createElement("link");
-        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/woocommerce-ip.css";
+        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-ip.css";
         element3.rel = 'stylesheet';
         document.body.appendChild(element3);
 
