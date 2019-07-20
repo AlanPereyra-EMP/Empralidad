@@ -27,7 +27,6 @@
 	  wp_deregister_style('wp-block-library');
 	  wp_deregister_style('wc-block-style');
 		wp_deregister_style('woocommerce');
-		wp_deregister_style('woocommerce-layout');
 		wp_deregister_style('woocommerce-smallcreen');
 	  wp_deregister_style('contact-form-7');
 		wp_deregister_style('bootstrap-personalized');
