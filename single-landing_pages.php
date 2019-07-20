@@ -25,7 +25,8 @@
     </script>
 
     <?php wp_head(); ?>
-    <?php echo get_theme_mod('ip_face_text'); ?>
+    <?php echo get_theme_mod('ip_face_text');
+          echo get_theme_mod('ip_google_text'); ?>
   </head>
   <body <?php body_class() ?>>
 
@@ -56,7 +57,7 @@
             <!-- Owner -->
                 <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por <a href="https://informatica.pereyra.online">Informatica Pereyra</a></small></p>
             <!-- end owner -->
-            <small><p><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-secondary">Terminos y Condiciones</a> -  
+            <small><p><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-secondary">Terminos y Condiciones</a> -
             <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="text-secondary">Politicas de Privacidad</a></p></small>
             <br>
             <?php echo get_theme_mod('ip_qr_text') ?>

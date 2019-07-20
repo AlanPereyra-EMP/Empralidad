@@ -80,31 +80,37 @@
 					            )
 					)));
 				// end filter-brightness 1
+			//Text header
+				$wp_customize->add_section('ip_section_head_text', array(
+					'title'=> __('Textos y links principales', 'informatica_pereyra'),
+					'priority' => 3,
+					'panel' => 'ip_panel_head'
+				));
 				// Title 1
-					$wp_customize->add_setting('ip_slide1_text', array(
+					$wp_customize->add_setting('ip_head_text', array(
 					'default' => '',
 					'trasnport' => 'refresh',
 					'sanitize_callback' => 'sanitize_string'
 				));
 
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_slide1_text_control', array(
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_text_control', array(
 					'label'=> __('Titulo principal', 'informatica_pereyra'),
-					'section'=> 'ip_section_slide1',
-					'settings'=> 'ip_slide1_text'
+					'section'=> 'ip_section_head_text',
+					'settings'=> 'ip_head_text'
 
 				)));
 				// end title 1
 				// Textarea 1
-					$wp_customize->add_setting('ip_slide1_textarea', array(
+					$wp_customize->add_setting('ip_head_textarea', array(
 					'default' => '',
 					'trasnport' => 'refresh',
 					'sanitize_callback' => 'sanitize_string'
 				));
 
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_slide1_textarea_control', array(
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_textarea_control', array(
 					'label'=> __('Texto', 'informatica_pereyra'),
-					'section'=> 'ip_section_slide1',
-					'settings'=> 'ip_slide1_textarea',
+					'section'=> 'ip_section_head_text',
+					'settings'=> 'ip_head_textarea',
 					'type' => 'textarea',
 					'description'=> __( 'Texto destacado principal', 'informatica_pereyra' )
 
@@ -119,7 +125,7 @@
 
 					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_control1', array(
 						'label'=> __('Texto de boton', 'informatica_pereyra'),
-						'section'=> 'ip_section_slide1',
+						'section'=> 'ip_section_head_text',
 						'settings'=> 'ip_head_btn1',
 						'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
 
@@ -134,7 +140,7 @@
 
 					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control1', array(
 						'label'=> __('Link del boton', 'informatica_pereyra'),
-						'section'=> 'ip_section_slide1',
+						'section'=> 'ip_section_head_text',
 						'settings'=> 'ip_head_link_btn1',
 						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
 

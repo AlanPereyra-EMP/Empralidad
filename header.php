@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap-personalized.css">
     <!-- CSS -->
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/fa/css/all.min.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- Defer css -->
     <script>
@@ -18,19 +17,14 @@
         document.body.appendChild(element);
 
         var element1 = document.createElement("link");
-        element1.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/fa/css/all.min.css";
+        element1.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
         element1.rel = 'stylesheet';
         document.body.appendChild(element1);
 
         var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
+        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-ip.css";
         element2.rel = 'stylesheet';
         document.body.appendChild(element2);
-
-        var element3 = document.createElement("link");
-        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-ip.css";
-        element3.rel = 'stylesheet';
-        document.body.appendChild(element3);
 
         }
         if (window.addEventListener){

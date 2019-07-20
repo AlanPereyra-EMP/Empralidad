@@ -24,12 +24,14 @@
 	add_action( 'wp_enqueue_scripts', 'scripts_footer' );
 
 	function my_deregister_styles() {
-	  wp_deregister_style('sfpo-by-ip');
 	  wp_deregister_style('wp-block-library');
 	  wp_deregister_style('wc-block-style');
 		wp_deregister_style('woocommerce');
+		wp_deregister_style('woocommerce-layout');
+		wp_deregister_style('woocommerce-smallcreen');
 	  wp_deregister_style('contact-form-7');
-	  wp_deregister_style('bootstrap-personalized');
+		wp_deregister_style('bootstrap-personalized');
+	  wp_deregister_style('dnd-upload-cf7');
 	}
 
 	add_action('wp_print_styles', 'my_deregister_styles', 100);
@@ -124,8 +126,8 @@
 // 6) add theme support
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support('post-formats', array('video', 'image', 'aside'));
+  add_theme_support( 'post-thumbnails' );
+  add_theme_support('post-formats', array('video', 'image', 'aside'));
 
 
 // 7) comment reply
