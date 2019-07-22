@@ -38,6 +38,10 @@
             opacity: 0;
             transition: all .5s;
         }
+        .disable-scroll{
+          height: 100%;
+          overflow: hidden;
+        }
     </style>
 
     <?php wp_head(); ?>
@@ -46,7 +50,7 @@
           echo get_theme_mod('ip_google_text'); ?>
 
   </head>
-  <body <?php body_class() ?>>
+  <body class="disable-scroll">
 
     <div id="top_content"></div>
     <!-- navbar -->

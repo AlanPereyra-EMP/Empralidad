@@ -24,6 +24,16 @@ $(window).ready(function() {
   }
 });
 
+//Disable on mobile scroll
+$('body').bind('touchmove', function(e){e.preventDefault()})
+
+//Enable scroll (the scroll is desable before that)
+function enableScroll() {
+  $('body').removeClass('disable-scroll')
+  $('body').unbind('touchmove')
+}
+
+
 // Scroll down animation
  $(function() {
   var already_clicked = 0;
@@ -195,16 +205,28 @@ $(window).ready(function() {
   });
 });
 
-$(window).ready(function() {
+// Sound to interactive elements
+var audio = new Audio('https://audio-previews.elements.envatousercontent.com/files/81335720/preview.mp3');
+function playPromise() {
+    audio.play();
+};
 
-    var sound_mp3 = "http://soundbible.com/mp3/A-Tone-His_Self-1266414414.mp3";
-    var sound_ogg = "http://vignette2.wikia.nocookie.net/monchbox/images/0/01/Beep-sound.ogg/revision/latest?cb=20110628200153";
+$("a, button, i").click(function() {
+    audio.volume = 0.05;
+    audio.play();
+    setTimeout(()=>{
+      audio.pause();
+      audio.currentTime = 0
+    }, 150)
+});
 
-    $('body').prepend('<audio><source src="' + sound_mp3 + '"></source><source src="' + sound_ogg + '"></source></audio>');
-    var audio = $("audio")[0];
-    $("a").mouseenter(function() {
-        audio.play();
-    });
+$("a, button, i").mouseenter(function() {
+    audio.volume = 0.05;
+    audio.play();
+    setTimeout(()=>{
+      audio.pause();
+      audio.currentTime = 0
+    }, 150)
 });
 
 //  add scroll fade in animation

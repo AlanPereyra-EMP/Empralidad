@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="d-flex text-img-home"></div>
-                <i class="fas fa-caret-down button-down-home"></i>
+                <i class="fas fa-caret-down button-down-home" onclick="enableScroll();"></i>
             </header>
         <?php } else {?>
             <!-- Title no img -->

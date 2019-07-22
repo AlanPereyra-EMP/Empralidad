@@ -84,7 +84,7 @@
 	{
 	?>
 	    <style type="text/css">
-	        .dashboard-section-overview .copy-to-clipboard-trigger {
+	        .dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button {
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
