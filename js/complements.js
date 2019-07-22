@@ -127,7 +127,7 @@ if (document.getElementById('clock') && document.getElementById('message')){
 
   var time_left = document.getElementById('clock').textContent;
 
-  var final_message = document.getElementById('message').textContent; 
+  var final_message = document.getElementById('message').textContent;
 
   const getRemainingTime = deadline => {
     let now = new Date(),
@@ -162,7 +162,7 @@ if (document.getElementById('clock') && document.getElementById('message')){
 
     }, 1000)
 
-  }; 
+  };
 
   countdown( time_left, 'clock', final_message);
 
@@ -193,6 +193,18 @@ $(window).ready(function() {
       $(this).addClass("faded");
     }
   });
+});
+
+$(window).ready(function() {
+
+    var sound_mp3 = "http://soundbible.com/mp3/A-Tone-His_Self-1266414414.mp3";
+    var sound_ogg = "http://vignette2.wikia.nocookie.net/monchbox/images/0/01/Beep-sound.ogg/revision/latest?cb=20110628200153";
+
+    $('body').prepend('<audio><source src="' + sound_mp3 + '"></source><source src="' + sound_ogg + '"></source></audio>');
+    var audio = $("audio")[0];
+    $("a").mouseenter(function() {
+        audio.play();
+    });
 });
 
 //  add scroll fade in animation
