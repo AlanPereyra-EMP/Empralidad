@@ -24,15 +24,6 @@ $(window).ready(function() {
   }
 });
 
-//Disable on mobile scroll
-$('body').bind('touchmove', function(e){e.preventDefault()})
-
-//Enable scroll (the scroll is desable before that)
-function enableScroll() {
-  $('body').removeClass('disable-scroll')
-  $('body').unbind('touchmove')
-}
-
 
 // Scroll down animation
  $(function() {
@@ -205,6 +196,9 @@ $(window).ready(function() {
   });
 });
 
+//Disable on mobile scroll
+$('body').bind('touchmove', function(e){e.preventDefault()})
+
 // Sound to interactive elements
 var audio = new Audio('https://audio-previews.elements.envatousercontent.com/files/81335720/preview.mp3');
 function playPromise() {
@@ -218,6 +212,8 @@ $("a, button, i").click(function() {
       audio.pause();
       audio.currentTime = 0
     }, 150)
+    $('body').removeClass('disable-scroll')
+    $('body').unbind('touchmove')
 });
 
 $("a, button, i").mouseenter(function() {
