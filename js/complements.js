@@ -206,7 +206,7 @@ function playPromise() {
 };
 
 $("a, button, i").click(function() {
-    audio.volume = 0.05;
+    audio.volume = 0.1;
     audio.play();
     setTimeout(()=>{
       audio.pause();
@@ -217,7 +217,7 @@ $("a, button, i").click(function() {
 });
 
 $("a, button, i").mouseenter(function() {
-    audio.volume = 0.05;
+    audio.volume = 0.1;
     audio.play();
     setTimeout(()=>{
       audio.pause();

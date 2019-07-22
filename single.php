@@ -1,12 +1,18 @@
 
 <?php get_header(); ?>
+    <style>
+      .disable-scroll{
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
     <!-- Title -->
-        <?php 
+        <?php
         $filter_slide1 = get_theme_mod('ip_img_filter1');
         if ( has_post_thumbnail() ) { ?>
             <div class="carousel-item nopadding active">
                 <div class="the_post_thumbnail FullScreenLanding"><div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else{ ?> bg-title-dark <?php } ?>"></div></div>
-                
+
                 <div class="carousel-caption d-flex header-text">
                     <h1 class="container-fluid my-auto text-white text-mobile"><?php the_title(); ?></h1>
                 </div>
@@ -29,7 +35,7 @@
                     <div class="col-md-3 min-h-100 text-white show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
                         <div style="margin-top: 60vh;transform: translate(0,-50vh);max-height: 95vh;">
                             <!-- Ad 1 -->
-                                <?php 
+                                <?php
                                 $ip_homepage_show = get_theme_mod('ip_ads_show1');
                                 if ($ip_homepage_show == 'true'){
                                     ?>
@@ -39,7 +45,7 @@
                                     </h2>
                                     <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_img_logo')); ?>" alt="" width="20" height="20" /><br>
                                     <div class="mw-100"><p class="text-center"><img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img1')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text1') ?></p></div>
-                                    <?php 
+                                    <?php
                                     $header_btn = get_theme_mod('ip_ads_btn1');
                                     if ($header_btn){
                                         ?>
@@ -49,7 +55,7 @@
                                 <?php } ?>
                             <!-- end ad 1 -->
                             <!-- Ad 2 -->
-                                <?php 
+                                <?php
                                 $ip_homepage_show = get_theme_mod('ip_ads_show2');
 
                                 if ($ip_homepage_show == 'true'){
@@ -64,7 +70,7 @@
                                             <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img2')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text2') ?>
                                         </p>
                                     </div>
-                                    <?php 
+                                    <?php
                                     $footer_btn = get_theme_mod('ip_ads_btn2');
 
                                     if ($footer_btn){
@@ -83,7 +89,7 @@
                 <?php } ?>
                 <div class="col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-3 p-md-5">
                         <!-- Ad 1 -->
-                            <?php 
+                            <?php
                             $ip_homepage_show = get_theme_mod('ip_ads_show1');
                             if ($ip_homepage_show == 'true'){
                                 ?>
@@ -93,7 +99,7 @@
                                 </h2>
                                 <img class="aligncenter wp-image-10" src="<?php echo get_site_icon_url() ?>" alt="" width="20" height="20" /> <br>
                                 <div class="mw-100"><p class="text-center"><img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img1')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text1') ?></p></div>
-                                <?php 
+                                <?php
                                 $header_btn = get_theme_mod('ip_ads_btn1');
                                 if ($header_btn){
                                     ?>
@@ -102,7 +108,7 @@
                                 </div>
                             <?php } ?>
                         <!-- end ad 1 -->
-                        
+
                         <?php
                         if ( have_posts() ) : while ( have_posts() ) : the_post();
                             ?>
@@ -121,7 +127,7 @@
                             </div>
                         <!-- end tags -->
                         <!-- Ad 2 -->
-                            <?php 
+                            <?php
                             $ip_homepage_show = get_theme_mod('ip_ads_show2');
 
                             if ($ip_homepage_show == 'true'){
@@ -136,7 +142,7 @@
                                         <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_ads_img2')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('ip_ads_text2') ?>
                                     </p>
                                 </div>
-                                <?php 
+                                <?php
                                 $footer_btn = get_theme_mod('ip_ads_btn2');
 
                                 if ($footer_btn){

@@ -38,10 +38,6 @@
             opacity: 0;
             transition: all .5s;
         }
-        .disable-scroll{
-          height: 100%;
-          overflow: hidden;
-        }
     </style>
 
     <?php wp_head(); ?>
