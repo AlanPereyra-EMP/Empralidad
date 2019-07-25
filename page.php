@@ -6,11 +6,7 @@
     <!-- end title -->
     <!-- Page content  -->
         <article class="col-md-10 col-lg-8 mx-md-auto">
-            <div class="container-fluid px-0 py-3 p-md-5">
-                <?php if ( has_post_thumbnail() ) {
-                    the_post_thumbnail( 'full', array( 'class' => 'aligncenter d-block img-fluid' ) );;
-                } ?>
-                
+            <div class="container-fluid px-0 py-3 p-md-5">                
                 <?php
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
                     the_content();?><br>

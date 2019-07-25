@@ -199,31 +199,12 @@ $(window).ready(function() {
 //Disable on mobile scroll
 $('body').bind('touchmove', function(e){e.preventDefault()})
 
-// Sound to interactive elements
-var audio = new Audio('https://audio-previews.elements.envatousercontent.com/files/81335720/preview.mp3');
-function playPromise() {
-    audio.play();
-};
+// enableScroll
 
-$("a, button, i").click(function() {
-    audio.volume = 0.5;
-    audio.play();
-    setTimeout(()=>{
-      audio.pause();
-      audio.currentTime = 0
-    }, 150)
+function enableScroll() {
     $('body').removeClass('disable-scroll')
     $('body').unbind('touchmove')
-});
-
-$("a, button, i").mouseenter(function() {
-    audio.volume = 0.5;
-    audio.play();
-    setTimeout(()=>{
-      audio.pause();
-      audio.currentTime = 0
-    }, 150)
-});
+}
 
 //  add scroll fade in animation
 

@@ -46,7 +46,7 @@
           echo get_theme_mod('ip_google_text'); ?>
 
   </head>
-  <body class="disable-scroll">
+  <body <?php body_class('disable-scroll'); ?> >
 
     <div id="top_content"></div>
     <!-- navbar -->
