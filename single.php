@@ -1,11 +1,5 @@
 
 <?php get_header(); ?>
-    <style>
-      .disable-scroll{
-        height: 100%;
-        overflow: hidden;
-      }
-    </style>
     <!-- Title -->
         <?php
         $filter_slide1 = get_theme_mod('ip_img_filter1');
