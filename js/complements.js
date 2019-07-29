@@ -196,14 +196,12 @@ $(window).ready(function() {
   });
 });
 
-//Disable on mobile scroll
-$('body').bind('touchmove', function(e){e.preventDefault()})
 
 // enableScroll
 
 function enableScroll() {
     $('body').removeClass('disable-scroll')
-    $('body').unbind('touchmove')
+
 }
 
 //  add scroll fade in animation
