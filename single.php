@@ -106,7 +106,7 @@
                         <?php
                         if ( have_posts() ) : while ( have_posts() ) : the_post();
                             ?>
-                            <div class="py-5 p-2 text-center container-fliud" style=" text-transform: uppercase; display: inline-flex;"><?php the_category(); ?> / <?php  the_date(); ?></div>
+                            <div class="py-5 p-2 container-fliud" style=" text-transform: uppercase;"><div style=" display: inline-flex;"><?php the_category(); ?> / <?php the_author(); ?> / <?php  the_date(); ?></div></div>
                             <span class="btn container-fluid invisible"></span>
                             <?php
                             the_content();?>
