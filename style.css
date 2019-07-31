@@ -34,6 +34,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 17) Scroll
 18) Too biggest displays
 19) Ecommerce
+20) titles
 */
 
 /*0) Bootstrap personalized min*/
@@ -946,4 +947,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .left-featured-text-admin{
 	padding-top: 80px;
+}
+/*Titles*/
+article h2{
+	margin-top: 70px;
+}
+article h3, article h4, article h5 {
+	margin-top: 55px;
 }
