@@ -106,7 +106,7 @@
                         <?php
                         if ( have_posts() ) : while ( have_posts() ) : the_post();
                             ?>
-                            <div class="p-2 container-fliud" style=" text-transform: uppercase;"><?php the_category(); ?> <?php the_author(); ?> / <?php  the_date(); ?></div>
+                            <div class="p-2 container-fliud" style=" text-transform: uppercase;"><?php the_author(); ?> / <?php  the_date(); ?></div>
                             <span class="btn container-fluid invisible"></span>
                             <?php
                             the_content();?>
@@ -117,7 +117,7 @@
                         <?php endwhile; endif; ?>
                         <!-- Tags -->
                             <div class="container-fluid text-center py-5">
-                                <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
+                                <?php the_category(); ?> <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
                             </div>
                         <!-- end tags -->
                         <!-- Ad 2 -->
