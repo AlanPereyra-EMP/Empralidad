@@ -5,7 +5,7 @@
     </div>
 <!-- end title -->
 <!-- Content -->
-    <article>
+    <section>
         <?php if ( ! have_posts() ) {?>
             <div class="p-5 col-11 col-md-8 mx-auto">
             <h6>No se encontro lo que buscás</h6>
@@ -15,10 +15,10 @@
         <?php } else { ?>
             <div class="card-columns-2 p-2">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part('content', get_post_format()) ?> 
-                <?php endwhile; endif; ?>  
-            </div> 
-        <?php }?> 
-    </aticle>
+                    <?php get_template_part('content', get_post_format()) ?>
+                <?php endwhile; endif; ?>
+            </div>
+        <?php }?>
+    </section>
 <!-- end content -->
 <?php get_footer(); ?>

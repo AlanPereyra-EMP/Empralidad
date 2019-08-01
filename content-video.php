@@ -1,4 +1,4 @@
-<article class="card p-0 to-fade to-fadein-animation">
+<section class="card p-0 to-fade to-fadein-animation">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <div class="card-block">
         <br>
@@ -11,4 +11,4 @@
     <div class="card-footer text-muted">
         <small><?php the_date(); ?> / Autor: <?php the_author(); ?> / <?php the_tags(); ?></small>
     </div>
-</article>
+</section>
