@@ -237,7 +237,7 @@
                 <?php if ( is_front_page() && !is_home() ) {?>
                     <?php get_template_part('content-home') ?>
                 <?php } else { ?>
-                    <article style="background: #f9f9f9" class="p-3 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <div style="background: #f9f9f9" class="p-3 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
                         <h2 class="text-center">Lo más reciente</h2>
                         <div class="card-columns-2 p-2">
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -248,7 +248,7 @@
                             <h5>Estás buscando un articulo más antiguo?</h5>
                             <?php get_search_form(); ?>
                         </div>
-                    </article>
+                    </div>
                 <?php }?>
 
             </div>
