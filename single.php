@@ -116,8 +116,9 @@
         	                <!-- end botton share -->
                         <?php endwhile; endif; ?>
                         <!-- Tags -->
+                            <p class="pt-5"><hr></p>
                             <div class="container-fluid text-center py-5">
-                                <?php the_category(); ?> <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
+                                <div class="d-inline-flex">Categoría: <?php the_category(); ?> </div> <br> <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
                             </div>
                         <!-- end tags -->
                         <!-- Ad 2 -->
