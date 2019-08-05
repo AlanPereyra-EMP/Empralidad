@@ -398,6 +398,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		margin-bottom: 25px!important;
 		margin-top: 25px;
 	}
+	.card-block img{
+		padding: 0;
+	}
 	@media (min-width: 992px) {
 	  .card-columns-2 {
 	    -webkit-column-count: 2;
@@ -412,6 +415,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    width: 100%;
 	    margin-bottom: 0.75rem;
 	  }
+		.card-block h2{
+			font-size: 3rem;
+		}
 	  .show-desktop {
 	  	display: block!important;
 	  }
@@ -649,12 +655,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.header-text1{
 	    bottom: 0%!important;
 	    color: #fff;
-	    left: 1.8%!important;
+	    left: 0%!important;
 	    position: absolute;
 	    right: auto!important;
 	    top: 0%!important;
 	    text-align: center;
-	    width: 96.66666666666666%!important;
+	    width: 100%!important;
 	}
 /*8) Widgets*/
 	.widget-title{
