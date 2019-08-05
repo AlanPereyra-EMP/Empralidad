@@ -838,19 +838,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		z-index: 10;
 		color: #fff;
 	}
-	#first-content-home{
+	#first-content-home, #first-content-single{
 		height: 60px;
 		background: transparent!important;
 	    margin-top: -60px;
 	}
 	@media(min-width: 601px){
-		#first-content-home.admin-bar-show{
+		#first-content-home.admin-bar-show, #first-content-single.admin-bar-show{
 			height: 92px!important;
 			margin-top: -92px;
 		}
 	}
 	@media(min-width: 783px){
-		#first-content-home.admin-bar-show{
+		#first-content-home.admin-bar-show, #first-content-single.admin-bar-show{
 			height: 106px!important;
 			margin-top: -106px;
 		}
