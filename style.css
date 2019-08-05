@@ -415,9 +415,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    width: 100%;
 	    margin-bottom: 0.75rem;
 	  }
-		.card-block h2{
-			font-size: 3rem;
-		}
 	  .show-desktop {
 	  	display: block!important;
 	  }
@@ -960,4 +957,14 @@ article h2{
 }
 article h3, article h4, article h5 {
 	margin-top: 30px;
+}
+@media (max-width: 575px){
+	.card-block h2{
+		font-size: 1.5rem;
+	}
+}
+@media (min-width: 992px){
+	.card-block h2{
+		font-size: 3rem;
+	}
 }
