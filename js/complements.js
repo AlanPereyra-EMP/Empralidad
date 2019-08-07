@@ -198,10 +198,16 @@ $(window).ready(function() {
 
 
 // enableScroll
+$(window).ready(function() {
+  if($(window).scrollTop()){
+    $('body').removeClass('disable-scroll');
+  } else {
+    //do nothing
+  }
+});
 
 function enableScroll() {
-    $('body').removeClass('disable-scroll')
-
+    $('body').removeClass('disable-scroll');
 }
 
 //  add scroll fade in animation
