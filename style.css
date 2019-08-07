@@ -763,7 +763,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*14) Mobile first*/
 	@media (min-width: 992px) {
 	  .text-mobile {
-	    font-size: 70px !important;
+	    font-size: 100px !important;
 	  }
 	}
 	.text-mobile {
