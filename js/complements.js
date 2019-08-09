@@ -123,6 +123,38 @@ function showSearchBackground() {
   }
 }
 
+// Searchform mobile
+function showWoocommerceCart() {
+  var background = document.getElementById('bg-woocommerce-mobile');
+  var searchform = document.getElementById('searchform-woocommerce');
+  var  icon = document.getElementById('btn-woocommerce-cart');
+  var  text = document.getElementById('span-woocommerce-cart');
+  var  counter = document.getElementById('span-woocommerce-counter');
+
+
+  if(searchform.style.display != 'none'){
+    icon.classList.add('fa-search');
+    icon.classList.remove('fa-times');
+    text.classList.add('d-block');
+    text.classList.remove('d-none');
+    counter.classList.add('visible');
+    counter.classList.remove('invisible');
+    background.style.padding = '0vh 0 0 0';
+    searchform.style.display = 'none';
+  }else{
+    icon.classList.remove('fa-search');
+    icon.classList.add('fa-times');
+    text.classList.remove('d-block');
+    text.classList.add('d-none');
+    counter.classList.remove('visible');
+    counter.classList.add('invisible');
+    background.style.padding = '100vh 0 0 0';
+    setTimeout(()=>{
+      searchform.style.display = 'block';
+    }, 250)
+  }
+}
+
 // Countdown.js
 if (document.getElementById('clock') && document.getElementById('message')){
 

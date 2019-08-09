@@ -68,6 +68,7 @@
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
         <div class="mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile"></div>
+        <div class="mx-auto container-fluid fixed-bottom bg-white" id="bg-woocommerce-mobile"></div>
         <div class="buttons-mobile show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
             <!-- Home-->
                 <a href="<?php echo home_url(); ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
@@ -79,20 +80,6 @@
                         </a>
                     <?php }
                 ?>
-            <!-- Cart -->
-                <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
-                    if ($cart_link){ ?>
-                        <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" >
-                            <span class="fa-text">Carrito</span>
-                            <?php if(class_exists('WooCommerce')){
-                                if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
-                                    <small class="woo-counter-cart-number added_to_cart wc-forward">
-                                        <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                    </small>
-                                <?php }
-                            } ?>
-                        </a>
-                    <?php } ?>
             <!-- Comment -->
                 <?php $comment_link = get_theme_mod('ip_mobile_comment_text');
                     if ($comment_link){ ?>
@@ -101,6 +88,20 @@
                         </a>
                     <?php }
                 ?>
+            <!-- Cart -->
+                <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
+                    if ($cart_link){ ?>
+                        <a id="btn-woocommerce-cart" href="#" onclick="showWoocommerceCart();" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" >
+                            <span id="span-woocommerce-cart" class="fa-text">Carrito</span>
+                            <?php if(class_exists('WooCommerce')){
+                                if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
+                                    <small id="span-woocommerce-counter" class="woo-counter-cart-number added_to_cart wc-forward">
+                                        <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                    </small>
+                                <?php }
+                            } ?>
+                        </a>
+                    <?php } ?>
             <!-- Search Form -->
                 <?php $search_link = get_theme_mod('ip_mobile_search_text');
                     if ($search_link == 'true'){ ?>
@@ -112,6 +113,9 @@
         </div>
         <div id="searchform-mobile" style="display: none;">
             <?php get_search_form(); ?>
+        </div>
+        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:80vh;margin-top:40px;text-align:center;">
+          <?php echo do_shortcode('[woocommerce_cart]'); ?>
         </div>
     <!-- end buttons mobile -->
     <!-- Js -->
