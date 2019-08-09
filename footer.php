@@ -51,19 +51,12 @@
             <?php } ?>
         </div>
         <!-- if cart on -->
-        <?php if (class_exists('WooCommerce') && (WC()->cart->get_cart_contents_count()) > 0) { ?>
-                <a href="<?php echo get_theme_mod('ip_mobile_cart_text'); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
-                    <span id="btn-cart-on" class="fa-text"><?php echo WC()->cart->get_cart_total(); ?></span>
-                        <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
-                            <?php
-                            if((WC()->cart->get_cart_contents_count() < 99)) {
-                                echo WC()->cart->get_cart_contents_count();
-                            }else{
-                                echo '+99';
-                            } ?>
-                        </small>
-                </a> <?php
-        } ?>
+          <a href="<?php echo(wc_get_cart_url()); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
+              <span id="btn-cart-on" class="fa-text">_</span>
+                  <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
+                      <div id="mini-cart-count"></div>
+                  </small>
+          </a>
 
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
