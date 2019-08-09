@@ -99,7 +99,7 @@
                                     </small>
                             <?php } ?>
                         </a>
-                        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;">
+                        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;z-index:1020;">
                           <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
                         </div>
                     <?php } ?>

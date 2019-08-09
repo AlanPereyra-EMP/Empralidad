@@ -701,7 +701,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
         padding: 4px;
 	}
 	th, th a {
-		filter: brightness(1.5);
 		color: #fff;
 	}
 /*11) Comments*/
@@ -780,9 +779,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	a.fa.fa-times{
 		cursor: pointer;
 	}
-	#bg-searchform-mobile, #bg-woocommerce-mobile{
+	#bg-searchform-mobile{
 		transition: ease .5s;
 		z-index: 1029;
+	}
+	#bg-woocommerce-mobile{
+		transition: ease .5s;
+		z-index: 1010;
 	}
 	#searchform-woocommerce h2{
 		text-align: center;
