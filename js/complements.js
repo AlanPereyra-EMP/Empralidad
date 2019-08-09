@@ -123,7 +123,7 @@ function showSearchBackground() {
   }
 }
 
-// Searchform mobile
+// Woocommerce cart mobile
 function showWoocommerceCart() {
   var background = document.getElementById('bg-woocommerce-mobile');
   var searchform = document.getElementById('searchform-woocommerce');
@@ -137,8 +137,10 @@ function showWoocommerceCart() {
     icon.classList.remove('fa-times');
     text.classList.add('d-block');
     text.classList.remove('d-none');
-    counter.classList.add('visible');
-    counter.classList.remove('invisible');
+    if(counter){
+      counter.classList.add('visible');
+      counter.classList.remove('invisible');
+    }
     background.style.padding = '0vh 0 0 0';
     searchform.style.display = 'none';
   }else{
@@ -146,8 +148,10 @@ function showWoocommerceCart() {
     icon.classList.add('fa-times');
     text.classList.remove('d-block');
     text.classList.add('d-none');
-    counter.classList.remove('visible');
-    counter.classList.add('invisible');
+    if(counter){
+      counter.classList.remove('visible');
+      counter.classList.add('invisible');
+    }
     background.style.padding = '100vh 0 0 0';
     setTimeout(()=>{
       searchform.style.display = 'block';

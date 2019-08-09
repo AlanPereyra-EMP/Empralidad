@@ -90,17 +90,18 @@
                 ?>
             <!-- Cart -->
                 <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
-                    if ($cart_link){ ?>
-                        <a id="btn-woocommerce-cart" href="#" onclick="showWoocommerceCart();" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" >
+                    if ($cart_link == 'true'){ ?>
+                        <a id="btn-woocommerce-cart" onclick="showWoocommerceCart();" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" >
                             <span id="span-woocommerce-cart" class="fa-text">Carrito</span>
-                            <?php if(class_exists('WooCommerce')){
-                                if ((WC()->cart->get_cart_contents_count()) > 0) { ?>
+                            <?php if(class_exists('WooCommerce')){ ?>
                                     <small id="span-woocommerce-counter" class="woo-counter-cart-number added_to_cart wc-forward">
-                                        <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                        <div id="mini-cart-count"></div>
                                     </small>
-                                <?php }
-                            } ?>
+                            <?php } ?>
                         </a>
+                        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;">
+                          <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
+                        </div>
                     <?php } ?>
             <!-- Search Form -->
                 <?php $search_link = get_theme_mod('ip_mobile_search_text');
@@ -108,15 +109,14 @@
                         <a id="btn-searchform" class="fa-dark fa fa-search mx-auto" onclick="showSearchBackground();">
                             <span id="span-searchform" class="fa-text">Buscar</span>
                         </a>
+                        <div id="searchform-mobile" style="display: none;">
+                            <?php get_search_form(); ?>
+                        </div>
                     <?php }
                 ?>
         </div>
-        <div id="searchform-mobile" style="display: none;">
-            <?php get_search_form(); ?>
-        </div>
-        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:80vh;margin-top:40px;text-align:center;">
-          <?php echo do_shortcode('[woocommerce_cart]'); ?>
-        </div>
+
+
     <!-- end buttons mobile -->
     <!-- Js -->
     <script>

@@ -10,6 +10,7 @@
 // 8) Walker class
 // 9) Wp link pages
 // 10) Custom post type
+// 11) WooCommerce cart counter
 
 // 0) JS on footer
 	function scripts_footer() {
@@ -264,5 +265,31 @@
 
 		add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 	}
+
+// 11) Woocomerce cart counter
+// mini woocommerce cart
+
+function custom_mini_cart() {
+    echo '<div class="widget woocommerce widget_shopping_cart my-3 asd"><ul class="">';
+        echo '<li> <div class="widget_shopping_cart_content fadeIn">';
+                  woocommerce_mini_cart();
+            echo '</div></li></ul></div>';
+
+      }
+add_shortcode( 'custom-techno-mini-cart', 'custom_mini_cart' );
+
+
+function wc_refresh_mini_cart_count($fragments){
+    ob_start();
+    ?>
+    <div id="mini-cart-count">
+        <?php echo WC()->cart->get_cart_contents_count(); ?>
+    </div>
+    <?php
+        $fragments['#mini-cart-count'] = ob_get_clean();
+    return $fragments;
+}
+add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
+
 
 ?>

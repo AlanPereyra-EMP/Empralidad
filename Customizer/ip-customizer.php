@@ -823,19 +823,6 @@
 
 				)));
 			// end user button
-			// Cart button
-				$wp_customize->add_setting('ip_mobile_cart_text', array(
-					'default' => '',
-					'trasnport' => 'refresh',
-					'sanitize_callback' => 'sanitize_encoded'
-				));
-
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_mobile_cart_text_control', array(
-					'label'=> __('Carrito', 'informatica_pereyra'),
-					'section'=> 'ip_section_mobile',
-					'settings'=> 'ip_mobile_cart_text',
-				)));
-			// end cart button
 			// Comment button
 				$wp_customize->add_setting('ip_mobile_comment_text', array(
 					'default' => '',
@@ -851,6 +838,24 @@
 
 				)));
 			// end comment button
+			// Cart button
+				$wp_customize->add_setting('ip_mobile_cart_text', array(
+					'default' => 'false',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_encoded'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_mobile_cart_text_control', array(
+					'label'=> __('Carrito', 'informatica_pereyra'),
+					'section'=> 'ip_section_mobile',
+					'settings'=> 'ip_mobile_cart_text',
+					'type'           => 'radio',
+					'choices'        => array(
+						'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+							'false' => __( 'Ocultar', 'informatica_pereyra' )
+					)
+				)));
+			// end cart button
 			// Ssearch button
 				$wp_customize->add_setting('ip_mobile_search_text', array(
 					'default' => 'false',
