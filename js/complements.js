@@ -71,20 +71,28 @@ $(window).ready(function() {
   });
 
 // Menu dropdown
+var menu = document.getElementById('navbarContentMenu');
 function openMobileMenu() {
-  var bg = document.getElementById('bg-menu-mobile');
-  var menu = document.getElementById('navbarContentMenu');
+  var bgMenu = document.getElementById('bg-menu-mobile');
   var after = document.querySelector("a.dropdown-toggle::after");
   var icon = document.getElementById('btn-menu-nav');
+
+  if(searchform.style.display != 'none'){
+    showSearchBackground();
+  }
+  if(cart.style.display != 'none'){
+    showWoocommerceCart();
+  }
+
   if (menu.style.visibility === 'visible') {
     icon.classList.add('fa-bars');
     icon.classList.remove('fa-times');
     menu.style.visibility = 'hidden';
-    bg.style.height = '0px';
+    bgMenu.style.height = '0px';
   } else {
     icon.classList.remove('fa-bars');
     icon.classList.add('fa-times');
-    bg.style.height = '100vh';
+    bgMenu.style.height = '100vh';
     setTimeout(()=>{
       menu.style.visibility = 'visible';
     }, 250)
@@ -92,13 +100,19 @@ function openMobileMenu() {
 }
 
 // Searchform mobile
+var searchform = document.getElementById('searchform-mobile');
 function showSearchBackground() {
-  var background = document.getElementById('bg-searchform-mobile');
-  var searchform = document.getElementById('searchform-mobile');
+  var backgroundSearchform = document.getElementById('bg-searchform-mobile');
   var close = document.getElementById('searchform-close');
   var  icon = document.getElementById('btn-searchform');
   var  text = document.getElementById('span-searchform');
 
+  if(menu.style.visibility === 'visible'){
+    openMobileMenu();
+  }
+  if(cart.style.display != 'none'){
+    showWoocommerceCart();
+  }
 
   if(searchform.style.display != 'none'){
     icon.classList.add('fa-search');
@@ -107,7 +121,7 @@ function showSearchBackground() {
     close.classList.remove('fa-times');
     text.classList.add('d-block');
     text.classList.remove('d-none');
-    background.style.padding = '0vh 0 0 0';
+    backgroundSearchform.style.padding = '0vh 0 0 0';
     searchform.style.display = 'none';
   }else{
     icon.classList.remove('fa-search');
@@ -116,7 +130,7 @@ function showSearchBackground() {
     close.classList.add('fa-times');
     text.classList.remove('d-block');
     text.classList.add('d-none');
-    background.style.padding = '100vh 0 0 0';
+    backgroundSearchform.style.padding = '100vh 0 0 0';
     setTimeout(()=>{
       searchform.style.display = 'block';
     }, 250)
@@ -124,15 +138,21 @@ function showSearchBackground() {
 }
 
 // Woocommerce cart mobile
+var cart = document.getElementById('searchform-woocommerce');
 function showWoocommerceCart() {
-  var background = document.getElementById('bg-woocommerce-mobile');
-  var searchform = document.getElementById('searchform-woocommerce');
+  var backgroundCart = document.getElementById('bg-woocommerce-mobile');
   var  icon = document.getElementById('btn-woocommerce-cart');
   var  text = document.getElementById('span-woocommerce-cart');
   var  counter = document.getElementById('span-woocommerce-counter');
 
-
   if(searchform.style.display != 'none'){
+    showSearchBackground();
+  }
+  if(menu.style.visibility === 'visible'){
+    openMobileMenu();
+  }
+
+  if(cart.style.display != 'none'){
     icon.classList.add('fa-search');
     icon.classList.remove('fa-times');
     text.classList.add('d-block');
@@ -141,8 +161,8 @@ function showWoocommerceCart() {
       counter.classList.add('visible');
       counter.classList.remove('invisible');
     }
-    background.style.padding = '0vh 0 0 0';
-    searchform.style.display = 'none';
+    backgroundCart.style.padding = '0vh 0 0 0';
+    cart.style.display = 'none';
   }else{
     icon.classList.remove('fa-search');
     icon.classList.add('fa-times');
@@ -152,9 +172,9 @@ function showWoocommerceCart() {
       counter.classList.remove('visible');
       counter.classList.add('invisible');
     }
-    background.style.padding = '100vh 0 0 0';
+    backgroundCart.style.padding = '100vh 0 0 0';
     setTimeout(()=>{
-      searchform.style.display = 'block';
+      cart.style.display = 'block';
     }, 250)
   }
 }
