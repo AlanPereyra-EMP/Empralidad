@@ -67,24 +67,25 @@
                 <i id="btn-menu-nav" class="fa fa-bars <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
             </div>
 
-
             <?php wp_nav_menu(array(
                 'theme_location' => 'superior',
                 'container' => 'div',
                 'container_class' => 'navbar-collapse',
                 'container_id' => 'navbarContentMenu',
-                'items_wrap' => '<ul class="navbar-nav nav ml-auto text-center mobile-menu-items">%3$s</ul>',
+                'items_wrap' => '<div class="collapse show-lg text-white mr-3 ml-auto" id="btn-search-desktop">
+                                    <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
+                                </div><ul class="navbar-nav nav text-center mobile-menu-items">%3$s</ul>',
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>
 
-            <div class="collapse show-lg text-white mr-3" id="btn-search-desktop">
-                    <?php $search_link = get_theme_mod('ip_mobile_search_text');
-                    if ($search_link == 'true'){ ?>
-                        <a id="searchform-close" class="fa fa-search mx-auto" onclick="showSearchBackground();">
-                        </a>
-                    <?php }?>
-            </div>
+            <!-- if cart on -->
+              <a href="<?php echo(wc_get_cart_url()); ?>" class="fa fa-shopping-cart mr-4 fadein show-desktop">
+                      <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
+                          <div id="mini-cart-count"></div>
+                      </small>
+              </a>
+
         </nav>
         <i id="bg-menu-mobile"></i>
     <!-- end navbar -->

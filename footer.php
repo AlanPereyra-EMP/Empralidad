@@ -50,13 +50,6 @@
             	<div class="img-fixed" id="scrollToTopButton"><i class="fas fa-arrow-up img-btn-fixed" ></i></div>
             <?php } ?>
         </div>
-        <!-- if cart on -->
-          <a href="<?php echo(wc_get_cart_url()); ?>" class="fa-dark fa fa-shopping-cart mr-auto fixed-bottom fadein">
-              <span id="btn-cart-on" class="fa-text">_</span>
-                  <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
-                      <div id="mini-cart-count"></div>
-                  </small>
-          </a>
 
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
@@ -102,11 +95,11 @@
                         <a id="btn-searchform" class="fa-dark fa fa-search mx-auto" onclick="showSearchBackground();">
                             <span id="span-searchform" class="fa-text">Buscar</span>
                         </a>
-                        <div id="searchform-mobile" style="display: none;">
-                            <?php get_search_form(); ?>
-                        </div>
-                    <?php }
-                ?>
+
+                    <?php } ?>
+        </div>
+        <div id="searchform-mobile" style="display: none;">
+            <?php get_search_form(); ?>
         </div>
 
 
