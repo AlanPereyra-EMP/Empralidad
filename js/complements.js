@@ -72,6 +72,8 @@ $(window).ready(function() {
 
 // Menu dropdown
 var menu = document.getElementById('navbarContentMenu');
+var cart = document.getElementById('searchform-woocommerce');
+var searchform = document.getElementById('searchform-mobile');
 function openMobileMenu() {
   var bgMenu = document.getElementById('bg-menu-mobile');
   var after = document.querySelector("a.dropdown-toggle::after");
@@ -80,8 +82,10 @@ function openMobileMenu() {
   if(searchform.style.display != 'none'){
     showSearchBackground();
   }
-  if(cart.style.display != 'none'){
-    showWoocommerceCart();
+  if(cart){
+    if(cart.style.display != 'none'){
+      showWoocommerceCart();
+    }
   }
 
   if (menu.style.visibility === 'visible') {
@@ -100,7 +104,6 @@ function openMobileMenu() {
 }
 
 // Searchform mobile
-var searchform = document.getElementById('searchform-mobile');
 function showSearchBackground() {
   var backgroundSearchform = document.getElementById('bg-searchform-mobile');
   var close = document.getElementById('searchform-close');
@@ -110,8 +113,10 @@ function showSearchBackground() {
   if(menu.style.visibility === 'visible'){
     openMobileMenu();
   }
-  if(cart.style.display != 'none'){
-    showWoocommerceCart();
+  if(cart){
+    if(cart.style.display != 'none'){
+      showWoocommerceCart();
+    }
   }
 
   if(searchform.style.display != 'none'){
@@ -138,7 +143,7 @@ function showSearchBackground() {
 }
 
 // Woocommerce cart mobile
-var cart = document.getElementById('searchform-woocommerce');
+
 function showWoocommerceCart() {
   var backgroundCart = document.getElementById('bg-woocommerce-mobile');
   var  icon = document.getElementById('btn-woocommerce-cart');
