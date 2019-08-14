@@ -75,10 +75,9 @@
                     <?php }
                 ?>
             <!-- Cart -->
-              <?php if(class_exists('WooCommerce')){ ?>
                 <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
-                    if ($cart_link == 'true'){ ?>
-                        <a id="btn-woocommerce-cart" onclick="showWoocommerceCart();" class="fa-dark fa fa-shopping-cart mx-auto <?php if(class_exists('WooCommerce')){ if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } } ?>" >
+                    if (class_exists('WooCommerce') && $cart_link == 'true'){ ?>
+                        <a id="btn-woocommerce-cart" onclick="showWoocommerceCart();" class="fa-dark fa fa-shopping-cart mx-auto <?php if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } ?>" >
                             <span id="span-woocommerce-cart" class="fa-text">Carrito</span>
 
                                     <small id="span-woocommerce-counter" class="woo-counter-cart-number added_to_cart wc-forward">
@@ -88,8 +87,7 @@
                         <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;z-index:1020;">
                           <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
                         </div>
-                    <?php }
-              } ?>
+                    <?php } ?>
             <!-- Search Form -->
                 <?php $search_link = get_theme_mod('ip_mobile_search_text');
                     if ($search_link == 'true'){ ?>
