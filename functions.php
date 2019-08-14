@@ -245,7 +245,7 @@
 	}
 
 // 11) Woocomerce Custom
-	if (class_exists('WooCommerce')){
+if (class_exists('WooCommerce')){
 		function mytheme_add_woocommerce_support() {
 		    add_theme_support( 'woocommerce', array(
 		        'thumbnail_image_width' => 600,
@@ -264,7 +264,6 @@
 		}
 
 		add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
-	}
 
 // 11) Woocomerce cart counter
 // mini woocommerce cart
@@ -291,5 +290,5 @@ function wc_refresh_mini_cart_count($fragments){
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 
-
+}
 ?>
