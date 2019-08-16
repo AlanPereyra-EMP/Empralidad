@@ -1,11 +1,5 @@
 <?php get_header(); ?>
     <!-- header-->
-    <style>
-      .disable-scroll{
-        height: 100%;
-        overflow: hidden;
-      }
-    </style>
         <?php
         $carousel_slide1 = get_theme_mod('ip_head_slide1');
         $filter_slide1 = get_theme_mod('ip_head_filter1');

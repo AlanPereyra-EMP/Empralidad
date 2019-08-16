@@ -10,7 +10,7 @@
 // 8) Walker class
 // 9) Wp link pages
 // 10) Custom post type
-// 11) WooCommerce cart counter
+// 11) WooCommerce custom
 
 // 0) JS on footer
 	function scripts_footer() {
@@ -246,26 +246,25 @@
 
 // 11) Woocomerce Custom
 if (class_exists('WooCommerce')){
-		function mytheme_add_woocommerce_support() {
-		    add_theme_support( 'woocommerce', array(
-		        'thumbnail_image_width' => 600,
-		        'single_image_width'    => 600,
+	function mytheme_add_woocommerce_support() {
+	    add_theme_support( 'woocommerce', array(
+	        'thumbnail_image_width' => 600,
+	        'single_image_width'    => 600,
 
-		        'product_grid'          => array(
-		            'default_rows'    => 3,
-		            'min_rows'        => 1,
-		            'max_rows'        => 3,
-		            'default_columns' => 3,
-		            'min_columns'     => 3,
-		            'max_columns'     => 5,
-		        ),
-		    ) );
-		    add_theme_support( 'wc-product-gallery-slider' );
-		}
+	        'product_grid'          => array(
+	            'default_rows'    => 3,
+	            'min_rows'        => 1,
+	            'max_rows'        => 3,
+	            'default_columns' => 3,
+	            'min_columns'     => 3,
+	            'max_columns'     => 5,
+	        ),
+	    ) );
+	    add_theme_support( 'wc-product-gallery-slider' );
+	}
 
-		add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-// 11) Woocomerce cart counter
 // mini woocommerce cart
 
 function custom_mini_cart() {
