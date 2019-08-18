@@ -746,7 +746,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
         animation-name: fadeIn;
         animation-duration: 1s;
     }
-	.faded{
+	.faded, .product h1, .product p, .product ul, .product li, .product img{
 		opacity: 1!important;
 		animation-name: fadeIn;
 		animation-duration: .5s;
