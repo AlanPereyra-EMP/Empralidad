@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/fa/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/fonts/fa/css/all.min.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
     <!-- Defer css -->
     <script>
         function downloadCSSAtOnload() {
