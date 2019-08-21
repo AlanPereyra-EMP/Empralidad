@@ -7,9 +7,9 @@
 <!-- Content -->
     <section>
         <?php if ( ! have_posts() ) {?>
-            <div class="p-5 col-11 col-md-8 mx-auto">
+            <div class="col-11 col-md-8 mx-auto py-10">
             <h6>No se encontro lo que buscás</h6>
-            <p>Escribilo de otra manera</p>
+            <p>Escribilo de otra manera</p><br>
             <?php get_search_form(); ?>
             </div>
         <?php } else { ?>
