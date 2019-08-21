@@ -11,7 +11,7 @@
                     <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
                 </div>
                 <div class="carousel-caption d-flex text-img-home fadein">
-                    <div class="container-fluid my-auto text-homepage-container"><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_head_text'); ?></h1><br>
+                    <div class="container-fluid my-auto text-homepage-container"><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_head_text'); ?></h1>
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                         <?php if($button_slide1){ ?>
                             <br>
