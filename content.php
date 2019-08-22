@@ -26,7 +26,7 @@
                 <?php the_excerpt(); ?>
             </div>
             <a href="<?php the_permalink(); ?>">
-                <button class="btn bg-personalized text-white container-fluid alingcenter mt-auto">
+                <button class="btn text-white container-fluid alingcenter mt-auto">
                     Leer más
                 </button>
             </a>

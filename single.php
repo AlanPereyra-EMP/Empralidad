@@ -144,7 +144,7 @@
                                     ?>
                                     <p style="text-align: center;">
                                         <a href="<?php echo get_theme_mod('ip_ads_link_btn2') ?>">
-                                            <button class="container-fluid btn bg-personalized text-white"><?php echo get_theme_mod('ip_ads_btn2') ?></button>
+                                            <button class="container-fluid btn text-white"><?php echo get_theme_mod('ip_ads_btn2') ?></button>
                                         </a>
                                     </p>
                                 <?php } ?>
