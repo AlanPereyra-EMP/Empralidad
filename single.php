@@ -112,7 +112,7 @@
                             the_content();?>
                             <br>
         	                <!-- Botton share -->
-        	                	<a href="http://facebook.com/sharer.php?u=<?php the_permalink() ?>"><button class="btn container-fluid p-3 text-center bg-personalized text-white">Compartir en Facebook</button></a>
+        	                	<a href="http://facebook.com/sharer.php?u=<?php the_permalink() ?>"><button class="btn container-fluid p-3 text-center text-white">Compartir en Facebook</button></a>
         	                <!-- end botton share -->
                         <?php endwhile; endif; ?>
                         <!-- Tags -->

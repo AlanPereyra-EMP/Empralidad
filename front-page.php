@@ -27,7 +27,7 @@
         <?php } else {?>
             <!-- Title no img -->
             <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
-                <h1 class="text-white text-mobile"><?php wp_title();?></h1>
+                <h1 class="text-white text-mobile"><?php blog_info();?></h1>
             </div>
         <?php } ?>
     <!-- end header-->
