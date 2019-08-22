@@ -72,8 +72,7 @@
                         <a href="<?php echo get_theme_mod('ip_mobile_comment_text'); ?>" class="fa-dark fa fa-comment mx-auto">
                             <span class="fa-text">Contacto</span>
                         </a>
-                    <?php }
-                ?>
+                    <?php } ?>
             <!-- Cart -->
                 <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
                     if (class_exists('WooCommerce') && $cart_link == 'true'){ ?>
