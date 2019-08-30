@@ -67,8 +67,8 @@
                     <?php }
                 ?>
             <!-- Comment -->
-                <?php $comment_link = get_theme_mod('ip_mobile_comment_text');
-                    if ($comment_link){ ?>
+                <?php $comment_link_ip = get_theme_mod('ip_mobile_comment_text');
+                    if ($comment_link_ip){ ?>
                         <a href="<?php echo get_theme_mod('ip_mobile_comment_text'); ?>" class="fa-dark fa fa-comment mx-auto">
                             <span class="fa-text">Contacto</span>
                         </a>
