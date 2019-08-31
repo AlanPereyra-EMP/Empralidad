@@ -6,9 +6,9 @@ $(window).on('scroll', function(){
     $('nav').removeClass('navbar-scroll');
   }
   if($(window).scrollTop()){
-    $('i.img-btn-fixed').addClass('img-btn-fixed-show');
+    $('#scrollToTopButton').addClass('img-btn-fixed-show');
   } else {
-    $('i.img-btn-fixed').removeClass('img-btn-fixed-show');
+    $('#scrollToTopButton').removeClass('img-btn-fixed-show');
   }
 })
 $(window).ready(function() {

@@ -823,19 +823,22 @@
 
 				)));
 			// end user button
-			// Comment button
-				$wp_customize->add_setting('ip_mobile_comment_text', array(
+			// Whatsapp button
+				$wp_customize->add_setting('ip_mobile_whatsapp_text', array(
 					'default' => '',
 					'trasnport' => 'refresh',
 					'sanitize_callback' => 'sanitize_encoded'
 				));
 
 				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_mobile_comment_text_control', array(
-					'label'=> __('Contacto', 'informatica_pereyra'),
+					'label'=> __('Whatsapp', 'informatica_pereyra'),
 					'section'=> 'ip_section_mobile',
-					'settings'=> 'ip_mobile_comment_text',
-					'description'	  => __( 'Pega el link de la pagina de contacto', 'informatica_pereyra' ),
-
+					'settings'=> 'ip_mobile_whatsapp_text',
+					'type'           => 'radio',
+					'choices'        => array(
+						'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+							'false' => __( 'Ocultar', 'informatica_pereyra' )
+					)
 				)));
 			// end comment button
 			// Cart button
