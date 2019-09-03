@@ -71,15 +71,21 @@
             <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
                 <i id="btn-menu-nav" class="fa fa-bars <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
             </div>
-
-            <?php wp_nav_menu(array(
+            <?php $search_link = get_theme_mod('ip_mobile_search_text');
+                if ($search_link == 'true'){
+                   $search_icon = '<div class="collapse show-lg text-white mr-3 ml-auto" id="btn-search-desktop">
+                                       <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
+                                   </div>';
+                   $ul_class = '';
+                } else {
+                  $ul_class = 'ml-auto';
+                }
+            wp_nav_menu(array(
                 'theme_location' => 'superior',
                 'container' => 'div',
                 'container_class' => 'navbar-collapse',
                 'container_id' => 'navbarContentMenu',
-                'items_wrap' => '<div class="collapse show-lg text-white mr-3 ml-auto" id="btn-search-desktop">
-                                    <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
-                                </div><ul class="navbar-nav nav text-center mobile-menu-items">%3$s</ul>',
+                'items_wrap' => $search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items '.$ul_class.'">%3$s</ul>',
                 'menu_class' => 'nav-item',
                 'walker' => new Walker_Nav_Primary()
             ) ); ?>

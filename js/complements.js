@@ -129,10 +129,8 @@ function showSearchBackground() {
     backgroundSearchform.style.padding = '0vh 0 0 0';
     searchform.style.display = 'none';
   }else{
-    if(icon){
-      icon.classList.remove('fa-search');
-      icon.classList.add('fa-times');
-    }
+    icon.classList.remove('fa-search');
+    icon.classList.add('fa-times');
     close.classList.remove('fa-search');
     close.classList.add('fa-times');
     text.classList.remove('d-block');
