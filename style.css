@@ -44,6 +44,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*1) Navbar*/
 	nav.navbar{
 		z-index: 1031;
+		transition: all .2s;
 	}
 	.navbar-img {
 		height: 50px!important;
@@ -121,12 +122,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		margin-right: 0.5rem !important;
 	    margin-left: 0.5rem !important;
 	    text-decoration: none;
-	    border: 1px rgba(255,255,255,0) solid;
+	    border-bottom: 1px rgba(255,255,255,0) solid;
 	}
 	.menu-item a:focus, .menu-item a:hover {
-	    filter: brightness(0.8);
-	    border: 1px #fff solid;
-	    border-radius: 5px;
+		filter: brightness(0.8);
+		border-bottom: 2px #fff solid;
 	}
 	/*ul sub-menu*/
 	ul .dropdown-menu.depth_0 {
@@ -325,6 +325,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	a.fa-whatsapp-size{
 		font-size: 23px!important;
+	}
+	.fa-shopping-cart{
+		cursor: pointer;
 	}
 	.buttons-mobile a.fa, .buttons-mobile a.fab{
 		padding: 0;
@@ -788,6 +791,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	.text-mobile {
 	    font-size: 46px;
+			word-wrap: break-word;
 	}
 	.buttons-mobile{
 		background: rgba(250, 250, 250, 0.9);
@@ -811,6 +815,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	#searchform-woocommerce h2{
 		text-align: center;
 	}
+	#searchform-woocommerce div{
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	#searchform-woocommerce li.product{
 		margin-left: 50%;
     transform: translate(-50%, 0px);
@@ -821,7 +830,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		text-align: center;
 	}
 	#searchform-woocommerce a, #searchform-woocommerce img, #searchform-woocommerce .button{
-		opacity: 1;
+		opacity: 1!important;
 	}
 	#searchform-mobile, #searchform-woocommerce{
 		width: 100%;
@@ -831,7 +840,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		position: fixed;
 		top: 46%;
 		left: 0;
-		transform: translate(0%, -50%);
+		transform: translate(0%, -43%);
 		z-index: 1029;
 	}
 	#bg-menu-mobile{
@@ -842,6 +851,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		height: 0px;
 		z-index: 1030;
 		transition: ease .5s;
+	}
+	@media (min-width: 992px){
+		#searchform-woocommerce{
+			font-size: 25px;
+		}
 	}
 /*15) Carousel*/
 	#carouselExampleFade{

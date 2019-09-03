@@ -86,7 +86,7 @@
 
             <!-- if cart on -->
             <?php if(class_exists('WooCommerce')){ ?>
-                <a href="<?php echo(wc_get_cart_url()); ?>" class="fa fa-shopping-cart mr-4 fadein show-desktop">
+                <a onclick="showWoocommerceCart();" class="fa fa-shopping-cart mr-4 fadein show-desktop text-white">
                         <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
                             <div id="mini-cart-count"></div>
                         </small>

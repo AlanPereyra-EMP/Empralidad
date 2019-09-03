@@ -75,9 +75,7 @@
                                         <div id="mini-cart-count"></div>
                                     </small>
                         </a>
-                        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;z-index:1020;">
-                          <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
-                        </div>
+
                     <?php } ?>
             <!-- Whatsapp -->
                 <?php $wp_link_ip = get_theme_mod('ip_mobile_whatsapp_text');
@@ -94,6 +92,9 @@
                         </a>
 
                     <?php } ?>
+        </div>
+        <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;z-index:1020;">
+          <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
         </div>
         <div id="searchform-mobile" style="display: none;">
             <?php get_search_form(); ?>
