@@ -91,7 +91,8 @@
             ) ); ?>
 
             <!-- if cart on -->
-            <?php if(class_exists('WooCommerce')){ ?>
+            <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
+            if(class_exists('WooCommerce') && $cart_link){ ?>
                 <a onclick="showWoocommerceCart();" class="fa fa-shopping-cart mr-4 fadein show-desktop text-white">
                         <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
                             <div id="mini-cart-count"></div>
