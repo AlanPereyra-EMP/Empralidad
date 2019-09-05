@@ -29,14 +29,13 @@
   </head>
   <body <?php body_class() ?>>
 
-    <!-- Title -->
-    	<div class=" py-5 px-2 text-center text-justify text-white bg-personalized">
-            <h1 class="text-mobile"><?php the_title(); ?></h1>
-        </div>
-    <!-- end title -->
     <!-- Page content  -->
-        <div class="mx-auto col-sm-9 col-md-7 col-lg-5 py-5">
-            <div class="mt-4 mx-auto">
+    <?php $filter_slide1 = get_theme_mod('ip_head_filter1'); ?>
+    <div class="ip_img_slide1" style="position: fixed;top: 0;right: 0;left: 0;">
+      <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
+    </div>
+        <div class="mx-auto col-sm-9 col-md-7 col-lg-5 py-md-5 px-0">
+            <div class="mx-auto">
                 <!-- img -->
                     <?php the_post_thumbnail( 'full', array( 'class' => 'col-9 nopadding h-auto') );?>
                     <br>
@@ -44,6 +43,7 @@
             </div>
             <div class="p-4 landing-content" style="background-color:#eee;">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+                    <h2 class="text-center"><?php the_title(); ?></h2>
                     <?php the_content();?>
                 <?php endwhile; endif; ?>
             </div>
@@ -51,18 +51,7 @@
             <button class="btn container-fluid p-1 text-center bg-light text-muted no-shadow" onclick="window.history.back()">Volver atrás</button>
         </div>
     <!-- end page content -->
-    <div class="container-fluid text-white py-1 " style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
-        <div class="text-center mt-5">
-            <!-- Owner -->
-                <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por <a href="https://informatica.pereyra.online">Informatica Pereyra</a></small></p>
-            <!-- end owner -->
-            <small><p><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-secondary">Terminos y Condiciones</a> -
-            <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="text-secondary">Politicas de Privacidad</a></p></small>
-            <br>
-            <?php echo get_theme_mod('ip_qr_text') ?>
-            <br>
-        </div>
-    </div>
+
     <!-- WP JavaScript -->
     <?php wp_footer(); ?>
     <!-- jQuery first, then Complements -->
