@@ -17,8 +17,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 0) Bootstrap personalized min
 1) Navbar
 2) Img
-3) No-padding and no-margin
-4) wp-caption
+
+4) wp styles
 5) Style all font awesome icons
 6) Fixs
 7) Bootstrap
@@ -275,7 +275,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    transform: scale(.95);
 	    filter: brightness(.8);
 	}
-/*3) Alings*/
+/*4) wp styles */
 	.alignright {
 		float: right;
 	}
@@ -291,7 +291,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		margin-left: 10px;
 		margin-right: 10px;
 	}
-/*4) No-padding and no-margin*/
+
+.wp-block-spacer{
+	display: inline-block;
+}
+
+.gallery-caption, .bypostauthor {
+	max-width: 100%
+}
+.wp-caption p.wp-caption-text {
+		font-size: 11px;
+		line-height: 17px;
+		margin: 0;
+		padding: 0 4px 5px;
+}
+.wp-block-column {
+    margin-right: auto!important;
+    margin-left: auto!important;
+    padding-right: 5px;
+    padding-left: 5px;
+}
 
 /*5) Style all font awesome icons */
 	a.fa, a.fab{
@@ -374,15 +393,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	/* hashtags fix */
 	._58cm, ._58cl{
 		display: inline-block;
-	}
-	.gallery-caption, .bypostauthor {
-		max-width: 100%
-	}
-	.wp-caption p.wp-caption-text {
-	    font-size: 11px;
-	    line-height: 17px;
-	    margin: 0;
-	    padding: 0 4px 5px;
 	}
 	div.ol-marker img{
 		min-width: 30px;
@@ -987,12 +997,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /*temp*/
-.wp-block-column {
-    margin-right: auto!important;
-    margin-left: auto!important;
-    padding-right: 5px;
-    padding-left: 5px;
-}
 .left-featured-text{
 	-webkit-position: sticky;
 	position: sticky;
