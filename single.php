@@ -7,7 +7,7 @@
             <div class="carousel-item nopadding active">
                 <div class="the_post_thumbnail FullScreenLanding"><div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else{ ?> bg-title-dark <?php } ?>"></div></div>
 
-                <div class="carousel-caption d-flex header-text">
+                <div class="carousel-caption d-flex header-text overflow-auto">
                     <h1 class="container-fluid my-auto text-white text-mobile"><?php the_title(); ?></h1>
                 </div>
                 <div class="d-flex text-img-home"></div>
