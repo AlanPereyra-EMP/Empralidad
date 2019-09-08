@@ -11,6 +11,7 @@
 // 9) Wp link pages
 // 10) Custom post type
 // 11) WooCommerce custom
+// 12) GitHub updates
 
 // 0) JS on footer
 	function scripts_footer() {
@@ -290,4 +291,37 @@ function wc_refresh_mini_cart_count($fragments){
 add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 
 }
+//  12) GitHub Updates
+    // set_site_transient('update_themes', null);
+	function ip_check_update( $transient ) {
+	    if ( empty( $transient->checked ) ) {
+	        return $transient;
+	    }
+	    $theme_data = wp_get_theme(wp_get_theme()->template);
+	    $theme_slug = $theme_data->get_template();
+	    //Delete '-master' from the end of slug
+	    $theme_uri_slug = preg_replace('/-master$/', '', $theme_slug);
+
+	    $remote_version = '0.0.0';
+	    $style_css = wp_remote_get("https://raw.githubusercontent.com/alanpereyra57/".$theme_uri_slug."/master/style.css")['body'];
+	    if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
+	        $remote_version = _cleanup_header_comment( $match[1] );
+
+	    if (version_compare($theme_data->version, $remote_version, '<')) {
+	        $transient->response[$theme_slug] = array(
+	            'theme'       => $theme_slug,
+	            'new_version' => $remote_version,
+	            'url'         => 'https://github.com/alanpereyra57/'.$theme_uri_slug,
+	            'package'     => 'https://github.com/alanpereyra57/'.$theme_uri_slug.'/archive/master.zip',
+	        );
+	    }
+
+	    return $transient;
+	}
+
+	$ip_password = get_theme_mod('$ip_password');
+
+	if($ip_password == 'iiKNN33797'){
+		add_filter( 'pre_set_site_transient_update_themes', 'ip_check_update' );
+	}
 ?>

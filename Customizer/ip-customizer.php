@@ -10,6 +10,7 @@
 // 9) Social buttons
 // 10) Corp text
 // 11) QR code (argentina)
+// 12) GitHub Password
 
 	function informatica_pereyra_customize_register($wp_customize){
 
@@ -1148,6 +1149,26 @@
 				)));
 			// end code
 		// end qr code
+		// GitHub Password
+		$wp_customize->add_section('ip_section_github_pass', array(
+			'title'=> __('Soporte Premium', 'informatica_pereyra'),
+			'priority' => 10
+		));
+		// Code
+			$wp_customize->add_setting('ip_github_pass', array(
+				'default' => '',
+				'trasnport' => 'refresh',
+				'sanitize_callback' => 'sanitize_encoded'
+			));
+
+			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_qr_text_control', array(
+				'label'=> __('Contraseña', 'informatica_pereyra'),
+				'section'=> 'ip_section_github_pass',
+				'settings'=> 'ip_github_pass',
+				'description'	  => __( 'Visita https://informatica.pereyra.online para contratar el soporte', 'informatica_pereyra' )
+
+			)));
+		// end code
 
 
 	}
