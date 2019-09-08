@@ -319,7 +319,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 	    return $transient;
 	}
 
-	$ip_password = get_theme_mod('$ip_password');
+	$ip_password = get_theme_mod('$ip_github_pass');
 
 	if($ip_password == 'iiKNN33797'){
 		add_filter( 'pre_set_site_transient_update_themes', 'ip_check_update' );
