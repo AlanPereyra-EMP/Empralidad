@@ -133,7 +133,7 @@
 					)));
 				// end button 1
 				// Link button 1
-					$wp_customize->add_setting('ip_head_link_btn1', array(
+					$wp_customize->add_setting('ip_head_link_audio', array(
 							'default' => '',
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string'
@@ -142,11 +142,44 @@
 					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control1', array(
 						'label'=> __('Link del boton', 'informatica_pereyra'),
 						'section'=> 'ip_section_head_text',
-						'settings'=> 'ip_head_link_btn1',
+						'settings'=> 'ip_head_link_audio',
 						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
 
 					)));
 				// end link button 1
+				// button or audio
+					$wp_customize->add_setting('ip_head_audio', array(
+						'default' => 'false',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_aud_control1', array(
+											'label'          => __( 'Mostrar botón o audio', 'informatica_pereyra' ),
+											'section'        => 'ip_section_head_text',
+											'settings'       => 'ip_head_audio',
+											'type'           => 'radio',
+											'choices'        => array(
+												'button'   => __( 'Botón', 'informatica_pereyra' ),
+												'audio'   => __( 'Audio', 'informatica_pereyra' ),
+													'false' => __( 'deshabilitar', 'informatica_pereyra' )
+											)
+					)));
+				// end button or audio
+				// Link audio
+					$wp_customize->add_setting('ip_head_link_audio', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_audio_control1', array(
+						'label'=> __('Link del audio', 'informatica_pereyra'),
+						'section'=> 'ip_section_head_text',
+						'settings'=> 'ip_head_link_audio',
+						'description'	  => __( 'Pega acá el link del audio o canción de bienvenida', 'informatica_pereyra' )
+
+					)));
+				// end link audio
 			// end slide1
 		// end header
 		// 2) Colors
@@ -1149,7 +1182,7 @@
 				)));
 			// end code
 		// end qr code
-		// GitHub Password
+		// 12) GitHub Password
 		$wp_customize->add_section('ip_section_github_pass', array(
 			'title'=> __('Soporte Premium', 'informatica_pereyra'),
 			'priority' => 10

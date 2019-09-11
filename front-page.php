@@ -3,7 +3,7 @@
         <?php
         $carousel_slide1 = get_theme_mod('ip_head_slide1');
         $filter_slide1 = get_theme_mod('ip_head_filter1');
-        $button_slide1 = get_theme_mod('ip_head_btn1');
+        $button_or_audio = get_theme_mod('ip_head_audio');
         if ($carousel_slide1) {
         ?>
             <header id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -13,11 +13,14 @@
                 <div class="carousel-caption d-flex text-img-home fadein">
                     <div class="container-fluid my-auto text-homepage-container"><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_head_text'); ?></h1>
                         <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
-                        <?php if($button_slide1){ ?>
+                        <?php if($button_or_audio == 'button'){ ?>
                             <br>
                             <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
                                 <?php echo get_theme_mod('ip_head_btn1'); ?>
                             </button>
+                        <?php } else if ($button_or_audio == 'audio'){?>
+                          <br>
+                        <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio') ?>" class="mw-600-px" style="width:inherit;"></audio>
                         <?php } ?>
                     </div>
                 </div>
