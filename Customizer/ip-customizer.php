@@ -133,7 +133,7 @@
 					)));
 				// end button 1
 				// Link button 1
-					$wp_customize->add_setting('ip_head_link_audio', array(
+					$wp_customize->add_setting('ip_head_link_button', array(
 							'default' => '',
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string'
@@ -142,7 +142,7 @@
 					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control1', array(
 						'label'=> __('Link del boton', 'informatica_pereyra'),
 						'section'=> 'ip_section_head_text',
-						'settings'=> 'ip_head_link_audio',
+						'settings'=> 'ip_head_link_button',
 						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
 
 					)));
