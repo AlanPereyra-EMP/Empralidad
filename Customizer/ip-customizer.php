@@ -83,7 +83,7 @@
 				// end filter-brightness 1
 			//Text header
 				$wp_customize->add_section('ip_section_head_text', array(
-					'title'=> __('Textos y links principales', 'informatica_pereyra'),
+					'title'=> __('Texto principal', 'informatica_pereyra'),
 					'priority' => 3,
 					'panel' => 'ip_panel_head'
 				));
@@ -180,6 +180,239 @@
 
 					)));
 				// end link audio
+				//Text header 2
+					// if show
+						$wp_customize->add_setting('ip_head_show2', array(
+							'default' => 'Ocultar',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_show_control2', array(
+												'label'          => __( 'Mostrar u Ocultar sección', 'informatica_pereyra' ),
+												'section'        => 'ip_section_head_text2',
+												'settings'       => 'ip_head_show2',
+												'type'           => 'radio',
+												'choices'        => array(
+													'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+													'false' => __( 'Ocultar', 'informatica_pereyra' )
+												)
+						)));
+					// end if
+						$wp_customize->add_section('ip_section_head_text2', array(
+							'title'=> __('Texto 2', 'informatica_pereyra'),
+							'priority' => 4,
+							'panel' => 'ip_panel_head'
+						));
+						// Title 2
+							$wp_customize->add_setting('ip_head_text2', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_text_control2', array(
+							'label'=> __('Titulo principal', 'informatica_pereyra'),
+							'section'=> 'ip_section_head_text2',
+							'settings'=> 'ip_head_text2'
+
+						)));
+						// end title 2
+						// Textarea 2
+							$wp_customize->add_setting('ip_head_textarea2', array(
+							'default' => '',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_textarea_control2', array(
+							'label'=> __('Texto', 'informatica_pereyra'),
+							'section'=> 'ip_section_head_text2',
+							'settings'=> 'ip_head_textarea2',
+							'type' => 'textarea',
+							'description'=> __( 'Texto destacado principal', 'informatica_pereyra' )
+
+						)));
+						// end textarea 2
+						// Button 2
+							$wp_customize->add_setting('ip_head_btn2', array(
+									'default' => '',
+									'trasnport' => 'refresh',
+									'sanitize_callback' => 'sanitize_string'
+								));
+
+							$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_control2', array(
+								'label'=> __('Texto de boton', 'informatica_pereyra'),
+								'section'=> 'ip_section_head_text2',
+								'settings'=> 'ip_head_btn2',
+								'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
+
+							)));
+						// end button 2
+						// Link button 2
+							$wp_customize->add_setting('ip_head_link_button2', array(
+									'default' => '',
+									'trasnport' => 'refresh',
+									'sanitize_callback' => 'sanitize_string'
+								));
+
+							$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control2', array(
+								'label'=> __('Link del boton', 'informatica_pereyra'),
+								'section'=> 'ip_section_head_text2',
+								'settings'=> 'ip_head_link_button2',
+								'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
+
+							)));
+						// end link button 1
+						// button or audio
+							$wp_customize->add_setting('ip_head_audio2', array(
+								'default' => 'false',
+								'trasnport' => 'refresh',
+								'sanitize_callback' => 'sanitize_string'
+							));
+							$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_aud_control2', array(
+													'label'          => __( 'Mostrar botón o audio', 'informatica_pereyra' ),
+													'section'        => 'ip_section_head_text2',
+													'settings'       => 'ip_head_audio2',
+													'type'           => 'radio',
+													'choices'        => array(
+														'button'   => __( 'Botón', 'informatica_pereyra' ),
+														'audio'   => __( 'Audio', 'informatica_pereyra' ),
+															'false' => __( 'deshabilitar', 'informatica_pereyra' )
+													)
+							)));
+						// end button or audio
+						// Link audio
+							$wp_customize->add_setting('ip_head_link_audio2', array(
+									'default' => '',
+									'trasnport' => 'refresh',
+									'sanitize_callback' => 'sanitize_string'
+								));
+
+							$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_audio_control2', array(
+								'label'=> __('Link del audio', 'informatica_pereyra'),
+								'section'=> 'ip_section_head_text2',
+								'settings'=> 'ip_head_link_audio2',
+								'description'	  => __( 'Pega acá el link del audio o canción de bienvenida', 'informatica_pereyra' )
+
+							)));
+						// end link audio
+				// end slide2
+				//Text header 3
+					// If show
+						$wp_customize->add_setting('ip_head_show3', array(
+							'default' => 'Ocultar',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_show_control3', array(
+												'label'          => __( 'Mostrar u Ocultar sección', 'informatica_pereyra' ),
+												'section'        => 'ip_section_head_text3',
+												'settings'       => 'ip_head_show3',
+												'type'           => 'radio',
+												'choices'        => array(
+													'true'   => __( 'Mostrar', 'informatica_pereyra' ),
+													'false' => __( 'Ocultar', 'informatica_pereyra' )
+												)
+						)));
+					// end if
+					$wp_customize->add_section('ip_section_head_text3', array(
+						'title'=> __('Texto 3', 'informatica_pereyra'),
+						'priority' => 5,
+						'panel' => 'ip_panel_head'
+					));
+					// Title 3
+						$wp_customize->add_setting('ip_head_text3', array(
+						'default' => '',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_text_control3', array(
+						'label'=> __('Titulo principal', 'informatica_pereyra'),
+						'section'=> 'ip_section_head_text3',
+						'settings'=> 'ip_head_text3'
+
+					)));
+					// end title 3
+					// Textarea 3
+						$wp_customize->add_setting('ip_head_textarea3', array(
+						'default' => '',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_textarea3_control', array(
+						'label'=> __('Texto', 'informatica_pereyra'),
+						'section'=> 'ip_section_head_text3',
+						'settings'=> 'ip_head_textarea3',
+						'type' => 'textarea',
+						'description'=> __( 'Texto destacado principal', 'informatica_pereyra' )
+
+					)));
+					// end textarea 3
+					// Button 3
+						$wp_customize->add_setting('ip_head_btn3', array(
+								'default' => '',
+								'trasnport' => 'refresh',
+								'sanitize_callback' => 'sanitize_string'
+							));
+
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_control3', array(
+							'label'=> __('Texto de boton', 'informatica_pereyra'),
+							'section'=> 'ip_section_head_tex3',
+							'settings'=> 'ip_head_btn3',
+							'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
+
+						)));
+					// end button 3
+					// Link button 3
+						$wp_customize->add_setting('ip_head_link_button3', array(
+								'default' => '',
+								'trasnport' => 'refresh',
+								'sanitize_callback' => 'sanitize_string'
+							));
+
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control3', array(
+							'label'=> __('Link del boton', 'informatica_pereyra'),
+							'section'=> 'ip_section_head_text3',
+							'settings'=> 'ip_head_link_button3',
+							'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
+
+						)));
+					// end link button 3
+					// button or audio
+						$wp_customize->add_setting('ip_head_audio3', array(
+							'default' => 'false',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_aud_control3', array(
+												'label'          => __( 'Mostrar botón o audio', 'informatica_pereyra' ),
+												'section'        => 'ip_section_head_text3',
+												'settings'       => 'ip_head_audio3',
+												'type'           => 'radio',
+												'choices'        => array(
+													'button'   => __( 'Botón', 'informatica_pereyra' ),
+													'audio'   => __( 'Audio', 'informatica_pereyra' ),
+														'false' => __( 'deshabilitar', 'informatica_pereyra' )
+												)
+						)));
+					// end button or audio
+					// Link audio
+						$wp_customize->add_setting('ip_head_link_audio3', array(
+								'default' => '',
+								'trasnport' => 'refresh',
+								'sanitize_callback' => 'sanitize_string'
+							));
+
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_audio_control3', array(
+							'label'=> __('Link del audio', 'informatica_pereyra'),
+							'section'=> 'ip_section_head_text3',
+							'settings'=> 'ip_head_link_audio3',
+							'description'	  => __( 'Pega acá el link del audio o canción de bienvenida', 'informatica_pereyra' )
+
+						)));
+					// end link audio
 			// end slide1
 		// end header
 		// 2) Colors

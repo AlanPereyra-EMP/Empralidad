@@ -4,27 +4,86 @@
         $carousel_slide1 = get_theme_mod('ip_head_slide1');
         $filter_slide1 = get_theme_mod('ip_head_filter1');
         $button_or_audio = get_theme_mod('ip_head_audio');
+        $button_or_audio2 = get_theme_mod('ip_head_audio2');
+        $button_or_audio3 = get_theme_mod('ip_head_audio3');
+        $ip_show_2 = get_theme_mod('ip_head_show2');
+        $ip_show_3 = get_theme_mod('ip_head_show3');
         if ($carousel_slide1) {
         ?>
-            <header id="carouselExampleFade" class="carousel slide carousel-fade">
+            <header>
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
                     <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
                 </div>
-                <div class="carousel-caption d-flex text-img-home fadein">
-                    <div class="container-fluid my-auto text-homepage-container"><h1 class="text-white text-mobile text-shadow-6"><?php echo get_theme_mod('ip_head_text'); ?></h1>
-                        <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
-                        <?php if($button_or_audio == 'button'){ ?>
-                            <br>
-                            <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
-                                <?php echo get_theme_mod('ip_head_btn1'); ?>
-                            </button>
-                        <?php } else if ($button_or_audio == 'audio'){?>
-                          <br>
-                        <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio') ?>" class="mw-600-px" style="width:inherit;"></audio>
-                        <?php } ?>
+                <div class="carousel-caption d-flex text-img-home">
+                    <div class="container-fluid my-auto text-homepage-container">
+                      <div id="carouselExampleFad" class="carousel carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+
+                          <div class="carousel-item active fadein mx-auto" style="max-width:85%;">
+                            <h1 class="text-white text-mobile text-shadow-6 fadein"><?php echo get_theme_mod('ip_head_text'); ?></h1>
+                            <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
+                            <?php if($button_or_audio == 'button'){ ?>
+                                <br>
+                                <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                    <?php echo get_theme_mod('ip_head_btn1'); ?>
+                                </button>
+                            <?php } else if ($button_or_audio == 'audio'){?>
+                              <br>
+                            <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio') ?>" class="mw-600-px" style="width:inherit;"></audio>
+                          <?php } else {} ?>
+                          </div>
+
+                          <?php if($ip_show_2 == 'true'){ ?>
+                            <div class="carousel-item fadein mx-auto" style="max-width:85%;">
+                              <h2 class="text-white text-mobile text-shadow-6 fadein"><?php echo get_theme_mod('ip_head_text2'); ?></h2>
+                              <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea2'); ?></p>
+                              <?php if($button_or_audio2 == 'button'){ ?>
+                                  <br>
+                                  <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button2') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                      <?php echo get_theme_mod('ip_head_btn2'); ?>
+                                  </button>
+                              <?php } else if ($button_or_audio2 == 'audio'){?>
+                                <br>
+                              <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio2') ?>" class="mw-600-px" style="width:inherit;"></audio>
+                            <?php } else {} ?>
+                            </div>
+                          <?php } ?>
+
+                          <?php if($ip_show_3 == 'true'){ ?>
+                            <div class="carousel-item fadein mx-auto" style="max-width:85%;">
+                              <h2 class="text-white text-mobile text-shadow-6 fadein"><?php echo get_theme_mod('ip_head_text3'); ?></h2>
+                              <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea3'); ?></p>
+                              <?php if($button_or_audio3 == 'button'){ ?>
+                                  <br>
+                                  <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button3') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                      <?php echo get_theme_mod('ip_head_btn3'); ?>
+                                  </button>
+                              <?php } else if ($button_or_audio3 == 'audio'){?>
+                                <br>
+                              <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio3') ?>" class="mw-600-px" style="width:inherit;"></audio>
+                            <?php } else {} ?>
+                            </div>
+                          <?php } ?>
+
+                        </div>
+                      </div>
                     </div>
+
+                    <?php if($ip_show_2 == 'true' || $ip_show_3 == 'true'){ ?>
+
+                      <a class="carousel-control-prev" href="#carouselExampleFad" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleFad" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                      </a>
+
+                    <?php } ?>
+
                 </div>
-                <div class="d-flex text-img-home"></div>
+
                 <i class="fas fa-caret-down button-down-home"></i>
             </header>
         <?php } else {?>
