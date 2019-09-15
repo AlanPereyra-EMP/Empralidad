@@ -351,7 +351,7 @@
 					)));
 					// end textarea 3
 					// Button 3
-						$wp_customize->add_setting('ip_head_btn3', array(
+						$wp_customize->add_setting('ip_head_button3', array(
 								'default' => '',
 								'trasnport' => 'refresh',
 								'sanitize_callback' => 'sanitize_string'
@@ -359,8 +359,8 @@
 
 						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_btn_control3', array(
 							'label'=> __('Texto de boton', 'informatica_pereyra'),
-							'section'=> 'ip_section_head_tex3',
-							'settings'=> 'ip_head_btn3',
+							'section'=> 'ip_section_head_text3',
+							'settings'=> 'ip_head_button3',
 							'description'	  => __( 'Agrega un boton hacia alguna web', 'informatica_pereyra' )
 
 						)));

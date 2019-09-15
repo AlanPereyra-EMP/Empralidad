@@ -56,7 +56,7 @@
                               <?php if($button_or_audio3 == 'button'){ ?>
                                   <br>
                                   <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button3') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
-                                      <?php echo get_theme_mod('ip_head_btn3'); ?>
+                                      <?php echo get_theme_mod('ip_head_button3'); ?>
                                   </button>
                               <?php } else if ($button_or_audio3 == 'audio'){?>
                                 <br>
