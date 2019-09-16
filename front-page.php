@@ -16,7 +16,7 @@
                 </div>
                 <div class="carousel-caption d-flex text-img-home">
                     <div class="container-fluid my-auto text-homepage-container">
-                      <div id="carouselExampleFad" class="carousel carousel-fade" data-ride="carousel">
+                      <div id="carouselFade" class="carousel carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
 
                           <div class="carousel-item active fadein mx-auto" style="max-width:85%;">
@@ -29,7 +29,7 @@
                                 </button>
                             <?php } else if ($button_or_audio == 'audio'){?>
                               <br>
-                            <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio') ?>" class="mw-600-px" style="width:inherit;"></audio>
+                            <audio id="stop-audio1" controls="" src="<?php echo get_theme_mod('ip_head_link_audio') ?>" class="mw-600-px" style="width:inherit;"></audio>
                           <?php } else {} ?>
                           </div>
 
@@ -44,7 +44,7 @@
                                   </button>
                               <?php } else if ($button_or_audio2 == 'audio'){?>
                                 <br>
-                              <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio2') ?>" class="mw-600-px" style="width:inherit;"></audio>
+                              <audio id="stop-audio2" controls="" src="<?php echo get_theme_mod('ip_head_link_audio2') ?>" class="mw-600-px stop-audio" style="width:inherit;"></audio>
                             <?php } else {} ?>
                             </div>
                           <?php } ?>
@@ -60,7 +60,7 @@
                                   </button>
                               <?php } else if ($button_or_audio3 == 'audio'){?>
                                 <br>
-                              <audio controls="" src="<?php echo get_theme_mod('ip_head_link_audio3') ?>" class="mw-600-px" style="width:inherit;"></audio>
+                              <audio id="stop-audio3" controls="" src="<?php echo get_theme_mod('ip_head_link_audio3') ?>" class="mw-600-px stop-audio" style="width:inherit;"></audio>
                             <?php } else {} ?>
                             </div>
                           <?php } ?>
@@ -71,11 +71,11 @@
 
                     <?php if($ip_show_2 == 'true' || $ip_show_3 == 'true'){ ?>
 
-                      <a class="carousel-control-prev" href="#carouselExampleFad" role="button" data-slide="prev">
+                      <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev" onclick="pauseAudio();">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only"></span>
                       </a>
-                      <a class="carousel-control-next" href="#carouselExampleFad" role="button" data-slide="next">
+                      <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next" onclick="pauseAudio();">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only"></span>
                       </a>

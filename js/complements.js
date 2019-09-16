@@ -287,6 +287,26 @@ $(window).scroll(function() {
   });
 });
 
+// Sound stop slider
+
+var stopAudio1 = document.getElementById("stop-audio1");
+var stopAudio2 = document.getElementById("stop-audio2");
+var stopAudio3 = document.getElementById("stop-audio3");
+
+function pauseAudio() {
+
+  // Stop Bootstrap carousel
+  $('#carouselFade').carousel('pause')
+
+  stopAudio1.pause();
+  stopAudio1.currentTime = 0;
+  stopAudio2.pause();
+  stopAudio2.currentTime = 0;
+  stopAudio3.pause();
+  stopAudio3.currentTime = 0;
+}
+
+
 // woocomerce remove columns on front page
 $(window).ready(function() {
   var exist = $('#woo_featured_products ul');
