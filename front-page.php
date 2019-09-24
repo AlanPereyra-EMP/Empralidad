@@ -189,7 +189,7 @@
 
                         <h2 class="pt-5 pb-4 widget-title-dark text-center"><?php echo get_theme_mod('ip_woocommerce_featured_title'); ?></h2>
                         <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
-                        <div id="woo_featured_products" class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
+                        <div id="woo_featured_products" class="p-5 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
                             <?php echo do_shortcode('[featured_products columns="3" orderby="price" order="ASC"]'); ?>
                         </div>
               </div>
