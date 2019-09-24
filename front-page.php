@@ -10,7 +10,7 @@
         $ip_show_3 = get_theme_mod('ip_head_show3');
         if ($carousel_slide1) {
         ?>
-            <header>
+            <header id="main-head">
                 <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
                     <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
                 </div>
