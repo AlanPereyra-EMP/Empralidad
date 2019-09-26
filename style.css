@@ -806,6 +806,8 @@ audio:focus{
       }
     }
     .fadein{
+			-khtml-animation-name: fadeIn;
+			-khtml-animation-duration: 1s;
 			-webkit-animation-name: fadeIn;
 			-webkit-animation-duration: 1s;
         animation-name: fadeIn;
@@ -815,6 +817,8 @@ audio:focus{
 		-webkit-opacity: 1!important;
 		-khtml-opacity: 1!important;
 		opacity: 1!important;
+		-khtml-animation-name: fadeIn
+		-khtml-animation-duration: .5s;
 		-webkit-animation-name: fadeIn;
 	  -webkit-animation-duration: .5s;
 		animation-name: fadeIn;
