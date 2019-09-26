@@ -825,9 +825,6 @@ audio:focus{
         animation-duration: 1s;
     }
 	.faded, .product h1, .product p, .product ul, .product li, .product img, .faded p, .faded ul, .faded li, .faded img, .faded a{
-		-webkit-opacity: 1!important;
-		-khtml-opacity: 1!important;
-		opacity: 1!important;
 		-khtml-animation-name: fadeIn
 		-khtml-animation-duration: .5s;
 		-webkit-animation-name: fadeIn;
