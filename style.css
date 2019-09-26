@@ -498,7 +498,7 @@ audio:focus{
 		max-width: 100%;
 	}
 	.mw-50{
-		max-width: 50%;
+		max-width: 50%!important;
 	}
 	.mw-600-px{
 		max-width: 600px;
@@ -524,6 +524,9 @@ audio:focus{
 			display: none!important;
 		}
 		.show-btn-fixed{
+		}
+		.mw-50-from-tablet{
+			max-width: 50%!important;
 		}
 	}
 	@media (max-width: 768px){
