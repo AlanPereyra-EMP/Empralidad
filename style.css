@@ -497,6 +497,9 @@ audio:focus{
 	.mw-100{
 		max-width: 100%;
 	}
+	.mw-50{
+		max-width: 50%;
+	}
 	.mw-600-px{
 		max-width: 600px;
 	}
