@@ -785,6 +785,26 @@ audio:focus{
 		-khtml-opacity: 0;
 		opacity: 0;
 	}
+	@-webkit-keyframes fadeIn {
+      0% {
+				-webkit-opacity: 0;
+				-khtml-opacity: 0;
+        opacity: 0;
+        transform: translate(0%, -50%);
+      }
+
+      20% {
+				-webkit-opacity: 0;
+				-khtml-opacity: 0;
+        opacity: 0;
+      }
+
+      100% {
+				-webkit-opacity: 1;
+				-khtml-opacity: 1;
+        opacity: 1;
+      }
+    }
 	@keyframes fadeIn {
       0% {
 				-webkit-opacity: 0;
