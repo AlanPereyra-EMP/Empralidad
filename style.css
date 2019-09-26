@@ -979,8 +979,8 @@ audio:focus{
 		text-shadow: none!important;
 	}
 	a img:hover, a img:focus, .navbar-img, .card button, .img-btn-fixed:hover, .img-btn-fixed:focus,
-	a.button:hover, a.button:focus, .btn:hover, .btn:focus, .no-shadow,
-	 iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
+	a.button:hover, a.button:focus, .btn:hover, .btn:focus, .no-shadow, .no-shadow img,
+	iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 		box-shadow: none!important;
 	}
 /*17) Scroll bar*/
