@@ -24,7 +24,7 @@
                             <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
                                 <br>
-                                <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
                                     <?php echo get_theme_mod('ip_head_btn1'); ?>
                                 </button>
                             <?php } else if ($button_or_audio == 'audio'){?>
