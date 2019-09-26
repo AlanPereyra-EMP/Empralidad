@@ -133,7 +133,7 @@
 					)));
 				// end button 1
 				// Link button 1
-					$wp_customize->add_setting('ip_head_link_button', array(
+					$wp_customize->add_setting('ip_head_link_btn1', array(
 							'default' => '',
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string'
