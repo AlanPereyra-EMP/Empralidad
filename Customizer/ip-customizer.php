@@ -142,7 +142,7 @@
 					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_link_btn_control1', array(
 						'label'=> __('Link del boton', 'informatica_pereyra'),
 						'section'=> 'ip_section_head_text',
-						'settings'=> 'ip_head_link_button',
+						'settings'=> 'ip_head_link_btn1',
 						'description'	  => __( 'Pega acá el link del boton', 'informatica_pereyra' )
 
 					)));
