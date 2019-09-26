@@ -107,9 +107,9 @@
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                             </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
+                            <img class="aligncenter no-shadow wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
                             <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
-                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid"> <?php } ?> <br>
+                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text1') ?>
                             </p>
 
@@ -134,9 +134,9 @@
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                             </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
+                            <img class="aligncenter no-shadow wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
                             <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling2'); ?> " >
-                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid"> <?php } ?> <br>
+                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text2') ?>
                             </p>
                             <?php $header_btn = get_theme_mod('ip_homepage_btn2');
@@ -161,9 +161,9 @@
                             <h2 class="text-center" >
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                             </h2>
-                            <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
+                            <img class="aligncenter no-shadow wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
                             <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling3'); ?> " >
-                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid"> <?php } ?> <br>
+                                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text3') ?>
                             </p>
                             <?php
@@ -220,7 +220,7 @@
                                             <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                                         </h2>
                                         <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
-                                            <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid"> <?php } ?> <br>
+                                            <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                             <?php echo get_theme_mod('ip_homepage_text1') ?>
                                         </p>
 
@@ -246,7 +246,7 @@
                                         <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                                     </h2>
                                     <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling2'); ?> " >
-                                        <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid"> <?php } ?> <br>
+                                        <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                         <?php echo get_theme_mod('ip_homepage_text2') ?>
                                     </p>
                                     <?php $header_btn = get_theme_mod('ip_homepage_btn2');
@@ -272,7 +272,7 @@
                                             <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                                         </h2>
                                         <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling3'); ?> " >
-                                            <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid"> <?php } ?> <br>
+                                            <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                             <?php echo get_theme_mod('ip_homepage_text3') ?>
                                         </p>
                                         <?php
