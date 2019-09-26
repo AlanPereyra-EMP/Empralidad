@@ -786,34 +786,21 @@ audio:focus{
 		opacity: 0;
 	}
 	@-webkit-keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translate(0%, -50%);
-      }
+			0% {
+				transform: translate(0%, -50%);
+			}
 
-      20% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+			100% {
+				transform: translate(0%, 0%);
+			}
     }
 	@keyframes fadeIn {
       0% {
-				-khtml-opacity: 0;
-        opacity: 0;
         transform: translate(0%, -50%);
       }
 
-      20% {
-				-khtml-opacity: 0;
-        opacity: 0;
-      }
-
       100% {
-				-khtml-opacity: 1;
-        opacity: 1;
+				transform: translate(0%, 0%);
       }
     }
     .fadein{
@@ -825,6 +812,9 @@ audio:focus{
         animation-duration: 1s;
     }
 	.faded, .product h1, .product p, .product ul, .product li, .product img, .faded p, .faded ul, .faded li, .faded img, .faded a{
+		-webkit-opacity: 1!important;
+		-khtml-opacity: 1!important;
+		opacity: 1!important;
 		-khtml-animation-name: fadeIn
 		-khtml-animation-duration: .5s;
 		-webkit-animation-name: fadeIn;
