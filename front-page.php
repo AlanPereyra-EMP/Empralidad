@@ -208,7 +208,7 @@
                 <?php $ip_show3 = get_theme_mod('ip_homepage_show3'); ?>
                 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?>
                     <div class="col-12 col-md-3 mx-auto px-0 bg-personalized min-h-100 show-from-md left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
-                        <div style="margin-top: 50vh;transform: translate(0,-50vh);max-height: 95vh;">
+                        <div style="max-height: 95vh;">
                             <!-- Text 1 -->
                                 <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
                                 $logo = get_theme_mod('ip_head_logo');
