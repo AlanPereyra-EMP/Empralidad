@@ -71,11 +71,11 @@
 
                     <?php if($ip_show_2 == 'true' || $ip_show_3 == 'true'){ ?>
 
-                      <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev" onclick="pauseAudio();">
+                      <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only"></span>
                       </a>
-                      <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next" onclick="pauseAudio();">
+                      <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only"></span>
                       </a>

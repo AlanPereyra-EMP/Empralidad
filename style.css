@@ -285,6 +285,9 @@ audio:focus{
 	outline: transparent;
 }
 /*4) wp styles */
+	div.audio-content figure, div.audio-content figcaption {
+		margin-bottom: 0!important;
+	}
 	.alignright {
 		float: right;
 	}

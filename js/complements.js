@@ -293,17 +293,31 @@ var stopAudio1 = document.getElementById("stop-audio1");
 var stopAudio2 = document.getElementById("stop-audio2");
 var stopAudio3 = document.getElementById("stop-audio3");
 
-function pauseAudio() {
+if (stopAudio1){
+  stopAudio1.onplay = function() {
+    stopAudio2.pause();
+    stopAudio2.currentTime = 0;
+    stopAudio3.pause();
+    stopAudio3.currentTime = 0;
+  };
+}
 
-  // Stop Bootstrap carousel
-  $('#carouselFade').carousel('pause')
+if (stopAudio2){
+  stopAudio2.onplay = function() {
+    stopAudio1.pause();
+    stopAudio1.currentTime = 0;
+    stopAudio3.pause();
+    stopAudio3.currentTime = 0;
+  };
+}
 
-  stopAudio1.pause();
-  stopAudio1.currentTime = 0;
-  stopAudio2.pause();
-  stopAudio2.currentTime = 0;
-  stopAudio3.pause();
-  stopAudio3.currentTime = 0;
+if (stopAudio3){
+  stopAudio3.onplay = function() {
+    stopAudio2.pause();
+    stopAudio2.currentTime = 0;
+    stopAudio1.pause();
+    stopAudio1.currentTime = 0;
+  };
 }
 
 
