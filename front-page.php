@@ -198,8 +198,8 @@
         <!-- end woocommerce featured products -->
         <!-- Sidebar front page -->
             <?php if(is_active_sidebar( 'homepage' )){
-                get_sidebar( 'homepage' ); ?>
-            <?php } ?>
+                get_sidebar( 'homepage' );
+            } ?>
         <!-- end sidebar front page -->
         <!-- page or posts -->
             <div class="row mw-100 mx-auto">
@@ -305,6 +305,11 @@
                             <h5>Estás buscando un articulo más antiguo?</h5>
                             <?php get_search_form(); ?>
                         </div>
+                        <!-- Sidebar front page -->
+                            <?php if(is_active_sidebar( 'homepage1' )){
+                                get_sidebar( 'homepage1' );
+                            } ?>
+                        <!-- end sidebar front page -->
                     </div>
                 <?php }?>
 

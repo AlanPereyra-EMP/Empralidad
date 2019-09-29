@@ -2,7 +2,10 @@
 
         <footer class="container-fluid text-white py-3 pb-5 foote text-center" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
                 <!-- Sidebar -->
-                    <?php get_sidebar( 'footer' ); ?>
+                <?php if(is_active_sidebar( 'footer' )){
+                    get_sidebar( 'footer' );
+                } ?>
+
             	<!-- Social buttons -->
 	            	<div class="container-fluid p-3">
 		            	<!-- Facebook -->

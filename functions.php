@@ -56,14 +56,25 @@
 		register_sidebar(
 	        array(
 	            'id'            => 'homepage',
-	            'name'          => __( 'Sidebar homepage', 'informatica_pereyra' ),
-	            'description'   => __( 'Se ubica únicamente en la homepage.', 'informatica_pereyra' ),
+	            'name'          => __( 'Sidebar homepage (superior)', 'informatica_pereyra' ),
+	            'description'   => __( 'Se ubica debajo de la imagen principal', 'informatica_pereyra' ),
 	            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
 	            'after_widget'  => '</div>',
 	            'before_title'  => '<h3 class="widget-title-dark">',
 	            'after_title'   => '</h3>'
 	        )
 	    );
+			register_sidebar(
+		        array(
+		            'id'            => 'homepage1',
+		            'name'          => __( 'Sidebar homepage (inferior)', 'informatica_pereyra' ),
+		            'description'   => __( 'Se ubica antes del footer', 'informatica_pereyra' ),
+		            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
+		            'after_widget'  => '</div>',
+		            'before_title'  => '<h3 class="widget-title-dark">',
+		            'after_title'   => '</h3>'
+		        )
+		    );
 	    register_sidebar(
 	        array(
 	            'id'            => 'footer',
