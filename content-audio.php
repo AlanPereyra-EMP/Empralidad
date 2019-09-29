@@ -11,7 +11,7 @@
                     <div class="carousel-caption d-flex header-text1 h-100 <?php if ($filter_slide1 === 'color') { ?> bg-title-content-color <?php }else{ ?> bg-title-content-dark <?php } ?>"></div>
                     <div class="carousel-caption d-flex header-text1">
                         <h2 class="container-fluid my-auto d-block text-white mh-100-auto">
-                            <?php the_title(); ?>
+                            <a href="<?php the_permalink(); ?>"><h2 class="text-white"><?php the_title(); ?></h2></a>
                         </h2>
                     </div>
                 </div>
