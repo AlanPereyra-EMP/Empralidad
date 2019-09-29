@@ -285,8 +285,14 @@ audio:focus{
 	outline: transparent;
 }
 /*4) wp styles */
-	div.audio-content figure, div.audio-content figcaption {
+	div.audio-content figure, div.audio-content figcaptionwp- {
 		margin-bottom: 0!important;
+	}
+	.audio-content figure, .audio-content audio{
+    display: block!important;
+	}
+	.audio-content * {
+    display: none;
 	}
 	.alignright {
 		float: right;

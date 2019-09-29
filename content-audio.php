@@ -22,7 +22,7 @@
         <?php } ?>
     <!-- end img -->
             <div class="card-text p-3 audio-content">
-                <?php the_content(); ?>
+                <?php the_content( 'Continue reading ' . get_the_title() ); ?>
             </div>
         </div>
         <div class="card-footer text-muted">
