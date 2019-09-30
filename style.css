@@ -291,6 +291,9 @@ audio:focus{
 	.audio-content figure, .audio-content audio{
     display: block!important;
 	}
+	figure.wp-block-audio audio {
+	  min-width: inherit;
+	}
 	.audio-content * {
     display: none;
 	}
