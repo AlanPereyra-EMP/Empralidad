@@ -16,3 +16,22 @@ div#cuar-js-collection-gallery {
 body.customer-area-active #cuar-js-content-container .collection .collection-content .mix {
     display: block;
 }
+aside#cuar-js-tray {
+    display: none;
+}
+div#cuar-js-page-content {
+    padding-right: 10px;
+}
+.cuar-toolbar {
+    display: none!important;
+}
+aside#cuar-js-tray {
+    display: none;
+}
+div#cuar-js-page-content {
+    padding-right: 10px!important;
+}
+td.cuar-caption {
+    max-width: 51px!important;
+    overflow: hidden!important;
+}

@@ -335,7 +335,7 @@ audio:focus{
 }
 
 /*5) Style all font awesome icons */
-	a.fa, a.fab{
+	a.fa-dark.fab.fa-whatsapp{
 		font-weight: 600;
 	}
 	a.fa, a.fab {
@@ -361,6 +361,9 @@ audio:focus{
 	}
 	.fa-search{
 		cursor: pointer;
+	}
+	.fa-user .fa-text {
+    margin-left: -2px;
 	}
 	a.fa-whatsapp span.fa-text {
 		margin-left: -6px;
