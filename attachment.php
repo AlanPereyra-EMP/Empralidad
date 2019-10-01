@@ -111,20 +111,8 @@
                             <?php
                             the_content();?>
                             <br>
-        	                <?php if(!class_exists('cuar_plugin')){ ?>
-                            <!-- Botton share -->
-                              <a href="http://facebook.com/sharer.php?u=<?php the_permalink() ?>"><button class="btn container-fluid p-3 text-center text-white">Compartir en Facebook</button></a>
-                            <!-- end botton share -->
-                          <?php } ?>
+
                         <?php endwhile; endif; ?>
-                        <?php if(!class_exists('cuar_plugin')){ ?>
-                          <!-- Tags -->
-                              <p class="pt-5"><hr></p>
-                              <div class="container-fluid text-center py-5">
-                                  <div class="d-inline-flex">Categoría: <?php the_category(); ?> </div> <br> <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
-                              </div>
-                          <!-- end tags -->
-                        <?php } ?>
                         <!-- Ad 2 -->
                             <?php
                             $ip_homepage_show = get_theme_mod('ip_ads_show2');
