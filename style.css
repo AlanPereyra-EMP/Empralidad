@@ -285,7 +285,7 @@ audio:focus{
 	outline: transparent;
 }
 /*4) wp styles */
-	div.audio-content figure, div.audio-content figcaptionwp- {
+	div.audio-content figure, div.audio-content figcaption {
 		margin-bottom: 0!important;
 	}
 	.audio-content figure, .audio-content audio{
