@@ -19,8 +19,8 @@
                       <div id="carouselFade" class="carousel carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
 
-                          <div class="carousel-item active fadein mx-auto" style="max-width:85%;">
-                            <h1 class="text-white text-mobile text-shadow-6 fadein"><?php echo get_theme_mod('ip_head_text'); ?></h1>
+                          <div class="carousel-item active ipFadeIn mx-auto" style="max-width:85%;">
+                            <h1 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text'); ?></h1>
                             <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
                                 <br>
@@ -34,8 +34,8 @@
                           </div>
 
                           <?php if($ip_show_2 == 'true'){ ?>
-                            <div class="carousel-item fadein mx-auto" style="max-width:85%;">
-                              <h2 class="text-white text-mobile text-shadow-6 fadein"><?php echo get_theme_mod('ip_head_text2'); ?></h2>
+                            <div class="carousel-item ipFadeIn mx-auto" style="max-width:85%;">
+                              <h2 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text2'); ?></h2>
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea2'); ?></p>
                               <?php if($button_or_audio2 == 'button'){ ?>
                                   <br>
@@ -50,8 +50,8 @@
                           <?php } ?>
 
                           <?php if($ip_show_3 == 'true'){ ?>
-                            <div class="carousel-item fadein mx-auto" style="max-width:85%;">
-                              <h2 class="text-white text-mobile text-shadow-6 fadein"><?php echo get_theme_mod('ip_head_text3'); ?></h2>
+                            <div class="carousel-item ipFadeIn mx-auto" style="max-width:85%;">
+                              <h2 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text3'); ?></h2>
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea3'); ?></p>
                               <?php if($button_or_audio3 == 'button'){ ?>
                                   <br>

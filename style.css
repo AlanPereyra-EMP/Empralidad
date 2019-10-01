@@ -805,7 +805,7 @@ audio:focus{
 		-khtml-opacity: 0;
 		opacity: 0;
 	}
-	@-webkit-keyframes fadeIn {
+	@-webkit-keyframes ipFadeIn {
 			0% {
 				transform: translate(0%, -50%);
 			}
@@ -814,7 +814,7 @@ audio:focus{
 				transform: translate(0%, 0%);
 			}
     }
-	@keyframes fadeIn {
+	@keyframes ipFadeIn {
       0% {
         transform: translate(0%, -50%);
       }
@@ -823,23 +823,23 @@ audio:focus{
 				transform: translate(0%, 0%);
       }
     }
-    .fadein{
-			-khtml-animation-name: fadeIn;
+    .ipFadein{
+			-khtml-animation-name: ipFadeIn;
 			-khtml-animation-duration: 1s;
-			-webkit-animation-name: fadeIn;
+			-webkit-animation-name: ipFadeIn;
 			-webkit-animation-duration: 1s;
-        animation-name: fadeIn;
+        animation-name: ipFadeIn;
         animation-duration: 1s;
     }
 	.faded, .product h1, .product p, .product ul, .product li, .product img, .faded p, .faded ul, .faded li, .faded img, .faded a{
 		-webkit-opacity: 1!important;
 		-khtml-opacity: 1!important;
 		opacity: 1!important;
-		-khtml-animation-name: fadeIn
+		-khtml-animation-name: ipFadeIn
 		-khtml-animation-duration: .5s;
-		-webkit-animation-name: fadeIn;
+		-webkit-animation-name: ipFadeIn;
 	  -webkit-animation-duration: .5s;
-		animation-name: fadeIn;
+		animation-name: ipFadeIn;
 		animation-duration: .5s;
 	}
 	.brightness-02{
