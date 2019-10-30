@@ -139,6 +139,7 @@
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
   add_theme_support( 'post-thumbnails' );
+	add_theme_support('category-thumbnails');
   add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
 
 
@@ -335,4 +336,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 	if($ip_password == 'iiKNN33797'){
 		add_filter( 'pre_set_site_transient_update_themes', 'ip_check_update' );
 	}
+
+
+
 ?>

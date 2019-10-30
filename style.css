@@ -299,9 +299,11 @@ audio:focus{
 	}
 	.alignright {
 		float: right;
+		max-width: 50%!important;
 	}
 	.alignleft {
 		float: left;
+		max-width: 50%!important;
 	}
 	.aligncenter {
 		display: block;

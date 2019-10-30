@@ -1,4 +1,4 @@
-<?php
+  <?php
 // SFPO "Shortcode for prices options"
 
 if(!shortcode_exists('sfpo')) {
@@ -136,3 +136,85 @@ if(!shortcode_exists('sfpo')) {
     }
     add_shortcode('sfpo', 'sfpo_shortcode');
 }
+
+
+// Resent posts
+if(!shortcode_exists('ip_categoryposts')) {
+function ip_postsbycategory($atts) {
+
+    $args = array(
+        'posts_per_page' => 4,
+        'offset' => 0,
+        'orderby' => 'ID',
+        'order' => 'DESC',
+        'post_status' => 'publish',
+        'suppress_filters' => true
+    );
+
+        $the_query = new WP_Query( $args );
+
+
+
+
+
+
+
+        if ( $the_query->have_posts() ) :
+            while ( $the_query->have_posts() ) : $the_query->the_post();
+
+                $post = array (
+                    'format' => get_post_format(),
+                    'category' => the_category()
+                );
+
+
+                //content
+                $if_post_thum;
+
+                $posts .= '<section class="card p-0 to-fade to-fadein-animation">
+                    <div class="card-header">'. $post->category .' </div>
+                    <!-- body -->
+                        <div class="card-block">
+                    <!-- Img -->'
+                        .$filter_slide1 = get_theme_mod('ip_img_filter1');
+                        if ( has_post_thumbnail() ) { .'
+                                <div class="position-relative nopadding">
+                                    .'the_post_thumbnail( 'full', array( 'class' => 'col-12 mx-auto h-auto') );'.
+                                    <div class="carousel-caption d-flex header-text1 h-100.' if ($filter_slide1 === 'color') { .' bg-title-content-color '. }else{ .' bg-title-content-dark '. } .'"></div>
+                                    <div class="carousel-caption d-flex header-text1">
+                                        <h2 class="container-fluid my-auto d-block text-white mh-100-auto">
+                                            <a href="'. the_permalink(); .'"><h2 class="text-white">'. the_title(); .'</h2></a>
+                                        </h2>
+                                    </div>
+                                </div>
+                        '. } else { .'
+                                <div class=" py-5 text-center text-justify text-white bg-personalized">
+                                    <a href="'. the_permalink(); .'"><h2 class="text-white">'. the_title(); .'</h2></a>
+                                </div>
+                        '. } .'
+                    <!-- end img -->
+                            <br>
+                            <div class="card-text p-3">
+                                '. the_excerpt(); .'
+                            </div>
+                            <a href="'. the_permalink(); .'">
+                                <button class="btn text-white container-fluid alingcenter mt-auto">
+                                    Leer más
+                                </button>
+                            </a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <small>'. the_date(); .' / Autor: '. the_author(); .' / '. the_tags(); .' </small>
+                        </div>
+                    <!-- end body -->
+                </section>';
+            endwhile;
+        endif;
+        wp_reset_postdata();
+
+    return $posts;
+
+}
+}
+// Add a shortcode
+add_shortcode('ipcategoryposts', 'ip_postsbycategory');

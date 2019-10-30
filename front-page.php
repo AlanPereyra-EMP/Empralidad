@@ -195,12 +195,10 @@
               </div>
             <?php } ?>
 
-        <!-- end woocommerce featured products -->
         <!-- Sidebar front page -->
             <?php if(is_active_sidebar( 'homepage' )){
                 get_sidebar( 'homepage' );
             } ?>
-        <!-- end sidebar front page -->
         <!-- page or posts -->
             <div class="row mw-100 mx-auto">
                 <?php $ip_show1 = get_theme_mod('ip_homepage_show1'); ?>
