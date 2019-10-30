@@ -138,7 +138,7 @@ if(!shortcode_exists('sfpo')) {
 }
 
 
-// Resent posts
+/* Resent posts
 if(!shortcode_exists('ip_categoryposts')) {
 function ip_postsbycategory($atts) {
 
@@ -219,3 +219,4 @@ function ip_postsbycategory($atts) {
 // Add a shortcode
 add_shortcode('ipcategoryposts', 'ip_postsbycategory');
 }
+*/
