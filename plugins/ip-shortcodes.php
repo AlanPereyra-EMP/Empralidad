@@ -215,6 +215,7 @@ function ip_postsbycategory($atts) {
     return $posts;
 
 }
-}
+
 // Add a shortcode
 add_shortcode('ipcategoryposts', 'ip_postsbycategory');
+}
