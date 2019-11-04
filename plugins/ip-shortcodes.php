@@ -1,4 +1,4 @@
-  <?php
+<?php
 // SFPO "Shortcode for prices options"
 
 if(!shortcode_exists('ip_table')) {
@@ -172,7 +172,7 @@ function ip_postsbycategory($atts) {
                 $post_category_link = get_category_link( $post_category_id );
 
                 $post_filter = get_theme_mod('ip_img_filter1');
-                $post_thumbnail = get_the_post_thumbnail( );
+                $post_thumbnail = get_the_post_thumbnail();
                 $post_permalink = get_the_permalink();
                 $post_title = get_the_title();
                 $post_excerpt = get_the_excerpt();
@@ -182,7 +182,7 @@ function ip_postsbycategory($atts) {
                 $post_content = get_the_content();
 
 
-                if ($post->filter === 'color') {
+                if ($post_filter === 'color') {
                   $post_filter = 'bg-title-content-color';
                 }else{
                   $post_filter = 'bg-title-content-dark';
@@ -264,3 +264,4 @@ function ip_postsbycategory($atts) {
 // Add a shortcode
 add_shortcode('ip_posts', 'ip_postsbycategory');
 }
+?>
