@@ -525,7 +525,6 @@ audio:focus{
 	}
 	.home-p{
 		max-width: 600px;
-		max-height: 170px;
 	}
 	@media (max-width: 575px){
 		.show-sm{
@@ -543,6 +542,9 @@ audio:focus{
 		}
 		.mw-50-from-tablet figure{
 			max-width: 50%!important;
+		}
+		.home-p{
+			font-size: 22px;
 		}
 	}
 	@media (max-width: 768px){
