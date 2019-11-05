@@ -176,7 +176,7 @@
 						'label'=> __('Link del audio', 'informatica_pereyra'),
 						'section'=> 'ip_section_head_text',
 						'settings'=> 'ip_head_link_audio',
-						'description'	  => __( 'Pega acá el link del audio o canción de bienvenida', 'informatica_pereyra' )
+						'description'	  => __( 'Pega acá el link del servidor de streaming', 'informatica_pereyra' )
 
 					)));
 				// end link audio
