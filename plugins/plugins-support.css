@@ -35,3 +35,36 @@ td.cuar-caption {
     max-width: 51px!important;
     overflow: hidden!important;
 }
+/* Sensei */
+
+section.entry.fix {
+    padding-bottom: 100px;
+}
+
+section.course-lessons {
+    padding-top: 30px;
+}
+article.lesson.post.type-lesson.status-publish.hentry {
+    min-height: 21vh;
+}
+input.quiz-submit.complete {
+    width: 100%;
+    padding: 20px;
+}
+.status.completed, a.view-results.faded {
+    width: 100%;
+    text-align: center;
+}
+article.lesson a.button {
+    width: 100%;
+    padding: 20px;
+}
+article.module {
+    padding-top: 40px;
+}
+section.sensei-breadcrumb {
+    margin-top: 200px;
+}
+article.lesson.post.post-34.type-lesson.status-publish.hentry.module-modulo-1 {
+    margin-bottom: 100px;
+}
