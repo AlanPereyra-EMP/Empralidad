@@ -243,7 +243,7 @@
 
 		$args = array(
 			'labels'             => $labels,
-	        'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
+	    'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -254,10 +254,47 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => null,
+			'show_in_rest'       => true,
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields')
+		);
+
+
+		register_post_type( 'landing_pages', $args );
+
+		$labels = array(
+			'name'               => _x( 'Páginas de contacto', 'Nombre general del tipo de post', 'informatica_pereyra' ),
+			'singular_name'      => _x( 'Página de contacto', 'Nombre singular', 'informatica_pereyra' ),
+			'menu_name'          => _x( 'Páginas de contacto', 'admin menu', 'informatica_pereyra' ),
+			'name_admin_bar'     => _x( 'Páginas de contacto', 'añadir nueva en admin bar', 'informatica_pereyra' ),
+			'add_new'            => _x( 'Añadir nueva', 'Página de contacto', 'informatica_pereyra' ),
+			'add_new_item'       => __( 'Añadir nueva página de contacto', 'informatica_pereyra' ),
+			'new_item'           => __( 'Nueva página de contacto', 'informatica_pereyra' ),
+			'edit_item'          => __( 'Editar página de contacto', 'informatica_pereyra' ),
+			'view_item'          => __( 'Ver página de contacto', 'informatica_pereyra' ),
+			'all_items'          => __( 'Páginas de contacto', 'informatica_pereyra' ),
+			'search_items'       => __( 'Buscar páginas de contacto', 'informatica_pereyra' ),
+			'parent_item_colon'  => __( 'Página de contacto:', 'informatica_pereyra' ),
+			'not_found'          => __( 'No encontrado.', 'informatica_pereyra' ),
+			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'informatica_pereyra' )
+		);
+
+		$args = array(
+			'labels'             => $labels,
+	    'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'contact' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt')
 		);
 
-		register_post_type( 'landing_pages', $args );
+		register_post_type( 'contact', $args );
 	}
 
 // 11) Woocomerce Custom
@@ -340,6 +377,12 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 		add_filter( 'pre_set_site_transient_update_themes', 'ip_check_update' );
 	}
 
+// Test block
+wp_enqueue_script( 'ip-block', get_template_directory_uri() . '/js/test-block.js', array(), '1.9.4', true );
 
+function ip_block_add_styles() {
+    wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/ip_block.css' );
+}
+add_action('enqueue_block_assets', 'ip_block_add_styles');
 
 ?>

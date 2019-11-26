@@ -1,0 +1,54 @@
+/* Block styles */
+.circle{
+	background: #ffffff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.text-gray {
+	color: #cccccc;
+}
+.text-gray strong{
+	color: #ffffff!important;
+}
+ .imagen-combo {
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+		transform: translate(-50%);
+}
+@media(max-width:575px){
+	div.imagen-combo{
+	    transform: translate(50%)!important;
+	}
+	.is-style-ip-style div.imagen-combo{
+	    transform: translate(-150%)!important;
+	}
+}
+ms .number {
+    position: absolute;
+}
+ .number-item {
+    color: #000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    text-align: center;
+    font-size: 63px;
+    overflow: hidden;
+}
+.list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+}
+
+div .col.text {
+    padding-right: 10%;
+		text-align: right;
+}
