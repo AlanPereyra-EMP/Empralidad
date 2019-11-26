@@ -43,7 +43,6 @@
     blocks.registerBlockStyle( 'ip-blocks/lists-items', {
         name: 'ip-style',
         label: 'Invertido',
-        style_handle: 'ip_block_ip_style.css'
     } );
 
     blocks.registerBlockType( 'ip-blocks/lists-items', {
