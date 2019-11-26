@@ -378,7 +378,14 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 	}
 
 // Test block
-wp_enqueue_script( 'ip-block', get_template_directory_uri() . '/js/ip-block.js', array(), '1.9.4', true );
+
+function gutenberg_ip_register_block() {
+		wp_enqueue_script( 'ip-blocks', get_template_directory_uri() . '/js/ip-blocks.js', array(), '1.9.5', true );
+		register_block_type( 'ip-blocks/lists-items', array(
+        'editor_script' => 'ip-blocks',
+    ) );
+}
+add_action( 'init', 'gutenberg_ip_register_block' );
 
 function ip_block_add_styles() {
     wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/ip_block.css' );
