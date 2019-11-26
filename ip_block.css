@@ -51,4 +51,11 @@ ms .number {
 div .col.text {
     padding-right: 10%;
 		text-align: right;
+    max-width: 50%;
+}
+.is-style-ip-style div.col.text {
+    padding-left: 10%;
+		text-align: left;
+		margin-left: auto;
+    max-width: 50%;
 }
