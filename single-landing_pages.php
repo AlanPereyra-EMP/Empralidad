@@ -46,20 +46,6 @@
         strong, h1, h2, h3, h4, h5, h6 {
           filter: brightness(1.5)!important;
         }
-        .image-combo{
-          transform: translateX(50%)!important;
-        }
-        .col.text{
-          max-width: 65%;
-        }
-        @media (min-width: 576px){
-          .image-combo, .image-combo-1{
-            transform: translateX(-50%)!important;
-          }
-          .col.text{
-            max-width: 50%!important;
-          }
-        }
     </style>
 
     <?php wp_head(); ?>

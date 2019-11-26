@@ -19,6 +19,9 @@
 		transform: translate(-50%);
 }
 @media(max-width:575px){
+  .col.text{
+    max-width: 65%!important;
+  }
 	div.imagen-combo{
 	    transform: translate(50%)!important;
 	}
