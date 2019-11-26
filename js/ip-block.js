@@ -57,7 +57,6 @@
                 type: 'array',
                 source: 'children',
                 selector: 'span',
-                substring: '0, 1',
             },
         },
         example: {

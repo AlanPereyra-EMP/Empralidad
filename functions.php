@@ -378,7 +378,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 	}
 
 // Test block
-wp_enqueue_script( 'ip-block', get_template_directory_uri() . '/js/test-block.js', array(), '1.9.4', true );
+wp_enqueue_script( 'ip-block', get_template_directory_uri() . '/js/ip-block.js', array(), '1.9.4', true );
 
 function ip_block_add_styles() {
     wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/ip_block.css' );
