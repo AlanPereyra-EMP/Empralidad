@@ -43,7 +43,7 @@
             opacity: 0;
             transition: all .5s;
         }
-        strong, h1, h2, h3, h4, h5, h6 {
+        span strong, p strong, .landing-content h1, .landing-content h2, .landing-content h3, .landing-content h4, .landing-content h5, .landing-content h6 {
           color: #fff!important;
         }
         @media(min-width:576px){
@@ -63,7 +63,7 @@
     <!-- Page content  -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
         <div class="pt-5 p-md-3 no-shadow text-white" style="background:<?php echo get_theme_mod('ip_footer_color'); ?>;">
-          <div class="mt-5 col-md-6 mx-auto"><?php the_content();?></div>
+          <div class="mt-5 col-md-6 mx-auto landing-content"><?php the_content();?></div>
         </div>
     <?php endwhile; endif; ?>
     <!-- end page content -->
