@@ -25,7 +25,7 @@
 	.ip-block div.imagen-combo{
 	    transform: translate(50%)!important;
 	}
-	.ip-block .is-style-ip-style div.imagen-combo{
+	.ip-block.is-style-ip-style div.imagen-combo{
 	    transform: translate(-150%)!important;
 	}
 }
@@ -62,11 +62,13 @@
 		margin-left: auto;
     max-width: 50%;
 }
-.ip-block div.line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  background: #fff;
-  height: 206px;
-  width: 4px;
+@media(min-width: 576px){
+  .ip-block div.line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: #fff;
+    height: 160px;
+    width: 4px;
+  }
 }
