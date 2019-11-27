@@ -1,17 +1,17 @@
 /* Block styles */
-.circle{
+.ip-block div.circle{
 	background: #ffffff;
     height: 100px;
     width: 100px;
     border-radius: 50%;
 }
-.text-gray {
+.ip-block div.text-gray {
 	color: #cccccc;
 }
-.text-gray strong{
+.ip-block div.text-gray strong{
 	color: #ffffff!important;
 }
- .imagen-combo {
+ .ip-block div.imagen-combo {
     position: absolute;
     left: 50%;
     width: 100px;
@@ -19,20 +19,20 @@
 		transform: translate(-50%);
 }
 @media(max-width:575px){
-  .col.text{
+  .ip-block div.col.text{
     max-width: 65%!important;
   }
-	div.imagen-combo{
+	.ip-block div.imagen-combo{
 	    transform: translate(50%)!important;
 	}
-	.is-style-ip-style div.imagen-combo{
+	.ip-block .is-style-ip-style div.imagen-combo{
 	    transform: translate(-150%)!important;
 	}
 }
-ms .number {
+.ip-block div.number {
     position: absolute;
 }
- .number-item {
+.ip-block div.number-item {
     color: #000000;
     display: block;
     position: absolute;
@@ -44,21 +44,29 @@ ms .number {
     font-size: 63px;
     overflow: hidden;
 }
-.list-item {
+.ip-block div.list-item {
     position: relative;
     display: flex;
     align-items: center;
     min-height: 100px;
 }
 
-div .col.text {
+.ip-block div .col.text {
     padding-right: 10%;
 		text-align: right;
     max-width: 50%;
 }
-.is-style-ip-style div.col.text {
+.ip-block .is-style-ip-style div.col.text {
     padding-left: 10%;
 		text-align: left;
 		margin-left: auto;
     max-width: 50%;
+}
+.ip-block div.line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: #fff;
+  height: 206px;
+  width: 4px;
 }

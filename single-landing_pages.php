@@ -46,6 +46,11 @@
         strong, h1, h2, h3, h4, h5, h6 {
           filter: brightness(1.5)!important;
         }
+        @media(min-width:576px){
+          .wp-block-embed-youtube iframe{
+              max-height: 16vw;
+          }
+        }
     </style>
 
     <?php wp_head(); ?>

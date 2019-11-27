@@ -37,7 +37,7 @@
             }
 
 
-            return el('div', null,
+            return el('div', {className: 'ip-block'},
                     el('div',{className: 'list-item'},
                       el('div', {className: 'col text'},
                         el('div', {className: 'list-text'},
@@ -57,7 +57,7 @@
         },
 
         save: function( props ) {
-            return el('div', {className: 'py-5'},
+            return el('div', {className: 'py-5 ip-block'},
                     el('div',{className: 'list-item'},
                       el('div', {className: 'col text'},
                         el('div', {className: 'list-title'},
@@ -69,6 +69,7 @@
                       el('div', {className: 'imagen-combo'},
                         el('div', {className: 'number'},
                           el('div', {className: 'circle'}),
+                          el('div', {className: 'line'}),
                           el('div', {className: 'number-item'},
                             el( wp.editor.RichText.Content, {
                                 tagName: 'span', value: props.attributes.content1
