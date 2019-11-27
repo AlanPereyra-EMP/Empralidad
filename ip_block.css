@@ -56,7 +56,7 @@
 		text-align: right;
     max-width: 50%;
 }
-.ip-block .is-style-ip-style div.col.text {
+.ip-block.is-style-ip-style div.col.text {
     padding-left: 10%;
 		text-align: left;
 		margin-left: auto;
