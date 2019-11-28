@@ -181,20 +181,6 @@
                 <!-- end text 3 -->
             </div>
         <!-- end if texts exists -->
-        <!-- Featured products woocomerce -->
-
-            <?php $featured_products = get_theme_mod('ip_woocommerce_featured_show'); ?>
-            <?php if($featured_products === 'true' && class_exists('WooCommerce')) { ?>
-              <div class="p-2">
-
-                        <h2 class="pt-5 pb-4 widget-title-dark text-center"><?php echo get_theme_mod('ip_woocommerce_featured_title'); ?></h2>
-                        <p class="py-2 text-center"><small><?php echo get_theme_mod('ip_woocommerce_featured_text'); ?></small></p>
-                        <div id="woo_featured_products" class="p-3 col-12 col-md-10 col-lg-9 mx-auto text-center" style="overflow-x: auto;">
-                            <?php echo do_shortcode('[featured_products columns="3" orderby="price" order="ASC"]'); ?>
-                        </div>
-              </div>
-            <?php } ?>
-
         <!-- Sidebar front page -->
             <?php if(is_active_sidebar( 'homepage' )){
                 get_sidebar( 'homepage' );
@@ -205,7 +191,7 @@
                 <?php $ip_show2 = get_theme_mod('ip_homepage_show2'); ?>
                 <?php $ip_show3 = get_theme_mod('ip_homepage_show3'); ?>
                 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?>
-                    <div class="col-12 col-md-3 mx-auto px-0 bg-personalized min-h-100 show-from-md left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
+                    <div class="col-12 col-md-3 mx-auto px-0 shadow-grey-up-down bg-personalized min-h-100 show-from-md left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
                         <div style="max-height: 95vh;">
                             <!-- Text 1 -->
                                 <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
@@ -290,9 +276,14 @@
                     </div>
                 <?php } ?>
                 <?php if ( is_front_page() && !is_home() ) {?>
-                    <?php get_template_part('content-home') ?>
+                    <section class="p-3 p-md-5 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                      <?php get_template_part('includes/wc-featured-products') ?>
+                      <?php get_template_part('content-home') ?>
+                    </section>
                 <?php } else { ?>
                     <div style="background: #f9f9f9" class="p-3 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                      <?php get_template_part('includes/wc-featured-products') ?>
+                          <br>
                         <h2 class="text-center">Lo más reciente</h2>
                         <div class="card-columns-2 p-2">
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
