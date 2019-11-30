@@ -63,7 +63,7 @@
     <!-- Page content  -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
         <div class="pt-5 p-md-3 no-shadow text-white" style="background:<?php echo get_theme_mod('ip_footer_color'); ?>;">
-          <div class="mt-5 col-md-6 mx-auto landing-content"><?php the_content();?></div>
+          <div class="mt-5 col-lg-6 mx-auto landing-content"><?php the_content();?></div>
         </div>
     <?php endwhile; endif; ?>
     <!-- end page content -->
