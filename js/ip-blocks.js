@@ -20,10 +20,10 @@
                 source: 'children',
                 selector: 'span',
             },
-        },
-        example: {
-            attributes: {
-                content: 'Hello World'
+            content1: {
+                type: 'array',
+                source: 'children',
+                selector: 'p',
             },
         },
         edit: function( props ) {
@@ -49,7 +49,7 @@
                           el('div', {className: 'circle'}),
                           el('div', {className: 'line'}),
                           el('div', {className: 'number-item'},
-                            el( wp.editor.RichText, {tagName: 'span', className: 'klickart-font', onChange: onChangeContent1, value: content1, placeholder:  '#' })
+                            el( wp.editor.RichText, {tagName: 'p', className: 'klickart-font', onChange: onChangeContent1, value: content1, placeholder:  '#' })
                           )
                         )
                       )
@@ -73,7 +73,7 @@
                           el('div', {className: 'line'}),
                           el('div', {className: 'number-item'},
                             el( wp.editor.RichText.Content, {
-                                tagName: 'span', value: props.attributes.content1, placeholder:  '#'
+                                tagName: 'p', value: props.attributes.content1, placeholder:  '#'
                             } )
                           )
                         )
@@ -81,42 +81,6 @@
                     )
                   );
         },
-        deprecated: [
-            {
-                attributes: {
-                    content: {
-                        type: 'array',
-                        source: 'children',
-                        selector: 'span',
-                    },
-                },
-
-                save: function( props ) {
-                    return el('div', {className: 'py-5 ip-block'},
-                            el('div',{className: 'list-item'},
-                              el('div', {className: 'col text'},
-                                el('div', {className: 'list-title'},
-                                    el( wp.editor.RichText.Content, {
-                                        tagName: 'span', value: props.attributes.content, className: 'text-gray', placeholder:  'Text here.'
-                                    } )
-                                )
-                              ),
-                              el('div', {className: 'imagen-combo'},
-                                el('div', {className: 'number'},
-                                  el('div', {className: 'circle'}),
-                                  el('div', {className: 'line'}),
-                                  el('div', {className: 'number-item'},
-                                    el( wp.editor.RichText.Content, {
-                                        tagName: 'span', value: props.attributes.content1, placeholder:  '#'
-                                    } )
-                                  )
-                                )
-                              )
-                            )
-                          );
-                },
-            }
-        ]
     } );
 
 }(
