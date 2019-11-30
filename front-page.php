@@ -191,7 +191,7 @@
                 <?php $ip_show2 = get_theme_mod('ip_homepage_show2'); ?>
                 <?php $ip_show3 = get_theme_mod('ip_homepage_show3'); ?>
                 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?>
-                    <div class="col-12 col-md-3 mx-auto px-0 shadow-grey-up-down bg-personalized min-h-100 show-from-md left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
+                    <div class="col-12 col-md-3 mx-auto px-0 shadow-grey-up-down-1 bg-personalized min-h-100 show-from-md left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
                         <div style="max-height: 95vh;">
                             <!-- Text 1 -->
                                 <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');

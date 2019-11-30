@@ -105,7 +105,7 @@
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 					.bg-title-color, .bg-title-content-color{
-						background: linear-gradient(120deg, <?php echo get_theme_mod('ip_primary_color'); ?>, <?php echo get_theme_mod('ip_btn_bg'); ?>);
+						background: linear-gradient(120deg, #000,<?php echo get_theme_mod('ip_primary_color'); ?>, <?php echo get_theme_mod('ip_primary_color'); ?>, #fff);
 					}
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
@@ -247,6 +247,7 @@
 		$args = array(
 			'labels'             => $labels,
 	    'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
+			'menu_icon' 				 => 'dashicons-text-page',
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
@@ -284,6 +285,7 @@
 		$args = array(
 			'labels'             => $labels,
 	    'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
+			'menu_icon' 				 => 'dashicons-email',
 			'public'             => true,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
