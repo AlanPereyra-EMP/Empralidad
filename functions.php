@@ -105,7 +105,7 @@
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 					.bg-title-color, .bg-title-content-color{
-						background: linear-gradient(120deg, #000,<?php echo get_theme_mod('ip_primary_color'); ?>, <?php echo get_theme_mod('ip_primary_color'); ?>, #fff);
+						background: linear-gradient(120deg, #000, <?php echo get_theme_mod('ip_primary_color'); ?>, <?php echo get_theme_mod('ip_primary_color'); ?>, #fff);
 					}
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
