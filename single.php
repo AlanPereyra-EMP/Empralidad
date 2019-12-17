@@ -4,7 +4,7 @@
         <?php
         $filter_slide1 = get_theme_mod('ip_img_filter1');
         if ( has_post_thumbnail() ) { ?>
-            <div class="carousel-item nopadding active">
+            <div id="main-head" class="carousel-item nopadding active">
                 <div class="the_post_thumbnail FullScreenLanding"><div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else{ ?> bg-title-dark <?php } ?>"></div></div>
 
                 <div class="carousel-caption d-flex header-text overflow-auto">
@@ -25,7 +25,7 @@
             <?php $ip_show1 = get_theme_mod('ip_ads_show1'); ?>
             <?php $ip_show2 = get_theme_mod('ip_ads_show2'); ?>
             <?php if($ip_show1 === 'true'||$ip_show2 === 'true'){ ?>
-                <div class="row mw-100 p-3 p-md-0 mx-auto">
+                <div class="row mw-100 p-3 p-md-0 mx-auto bg-white">
                     <div class="col-md-3 min-h-100 text-white show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
                         <div style="margin-top: 60vh;transform: translate(0,-50vh);max-height: 95vh;">
                             <!-- Ad 1 -->

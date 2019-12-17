@@ -101,7 +101,7 @@
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
-	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, #first-content-home, #main-head{
+	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile{
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
 					.bg-title-color, .bg-title-content-color{
@@ -110,7 +110,7 @@
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
-					.tutor-wrap{
+					.tutor-wrap, .tutor-single-lesson-wrap{
 						border-top: 60px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 					}
 	        .ip_img_slide1{
@@ -393,7 +393,7 @@ function gutenberg_ip_register_block() {
 add_action( 'init', 'gutenberg_ip_register_block' );
 
 function ip_block_add_styles() {
-    wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/ip_block.css' );
+    wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/css/ip_block.css' );
 }
 add_action('enqueue_block_assets', 'ip_block_add_styles');
 

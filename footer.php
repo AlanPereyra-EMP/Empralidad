@@ -1,6 +1,6 @@
     <!-- Footer -->
 
-        <footer class="container-fluid text-white py-3 pb-5 foote text-center" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;">
+        <footer class="container-fluid text-white py-3 pb-5 foote text-center" style="background-color: <?php echo get_theme_mod('ip_footer_color'); ?>;opacity:0.8;">
                 <!-- Sidebar -->
                 <?php if(is_active_sidebar( 'footer' )){
                     get_sidebar( 'footer' );

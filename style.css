@@ -17,7 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 0) Bootstrap personalized min
 1) Navbar
 2) Img
-3) Audio
+3) Header
 4) wp styles
 5) Style all font awesome icons
 6) Fixs
@@ -280,16 +280,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	    filter: brightness(.8);
 	}
 
-/*3) Audio*/
-audio:focus{
-	outline: transparent;
+/*3) Header*/
+#main-head{
+	height: 100vh;
+	position: relative;
 }
+
 /*4) wp styles */
 	div.audio-content figure, div.audio-content figcaption {
 		margin-bottom: 0!important;
 	}
 	.audio-content figure, .audio-content audio{
     display: block!important;
+	}
+	audio:focus{
+		outline: transparent;
 	}
 	figure.wp-block-audio audio {
 	  min-width: inherit;
@@ -947,10 +952,11 @@ audio:focus{
 		width: 100%;
 		margin: auto;
 		padding: 0;
+		position: fixed;
 		top: 0;
 		display: table;
 		background-size: cover;
-		z-index: 1
+		z-index: -1;
 	}
 	.bg-title-color, .bg-title-dark, .bg-title-content-color, .bg-title-content-dark{
 			-webkit-opacity: .6;
@@ -976,7 +982,7 @@ audio:focus{
 	}
 	#first-content-home, #first-content-single{
 		height: 60px;
-		background: transparent!important;
+		visibility: hidden;
 	    margin-top: -60px;
 	}
 	@media(min-width: 601px){
