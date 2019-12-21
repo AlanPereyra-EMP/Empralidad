@@ -114,7 +114,7 @@
 						border-top: 70px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 					}
 	        .ip_img_slide1{
-	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_head_slide1')); ?>) no-repeat 50% 50%;
+	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_head_slide1')); ?>) repeat 50% 50%;
 	        }
 					.tutor-wrap.tutor-courses-wrap.tutor-container {
 					    margin: 0;
@@ -134,8 +134,18 @@
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
 	        }
 	        .the_post_thumbnail{
-	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) no-repeat 50% 50%;
+	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 	        }
+					@media(min-width: 576px){
+						.bg-ip-lead-info{
+							background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
+						}
+					}
+					@media(max-width:575px){
+						.tutor-wrap, .tutor-single-lesson-wrap{
+							border-top: 60px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
+						}
+					}
 	    </style>
 	<?php
 	}
