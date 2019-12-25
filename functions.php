@@ -136,12 +136,12 @@
 	        .the_post_thumbnail{
 	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 	        }
-					@media(min-width: 576px){
+					@media(min-width: 992px){
 						.bg-ip-lead-info{
 							background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 						}
 					}
-					@media(max-width:575px){
+					@media(max-width:991px){
 						.tutor-wrap, .tutor-single-lesson-wrap{
 							border-top: 60px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 						}
