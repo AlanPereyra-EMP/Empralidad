@@ -101,18 +101,15 @@
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
-	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile{
+	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body{
 	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
-					.bg-title-color, .bg-title-content-color{
-						background: linear-gradient(120deg, #000, <?php echo get_theme_mod('ip_primary_color'); ?>, <?php echo get_theme_mod('ip_primary_color'); ?>, #fff);
+					.tutor-single-lesson-wrap{
+						border-top: 70px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 					}
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
-					.tutor-wrap, .tutor-single-lesson-wrap{
-						border-top: 70px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
-					}
 	        .ip_img_slide1{
 	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_head_slide1')); ?>) repeat 50% 50%;
 	        }
@@ -137,14 +134,9 @@
 	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 	        }
 					@media(min-width: 992px){
-						.bg-ip-lead-info{
-							background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
-						}
 					}
 					@media(max-width:991px){
-						.tutor-wrap, .tutor-single-lesson-wrap{
-							border-top: 60px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
-						}
+
 					}
 	    </style>
 	<?php

@@ -14,7 +14,7 @@
                 <i class="fas fa-caret-down button-down-single"></i>
             </div>
         <?php } else { ?>
-        	<div class=" py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
+        	<div class=" py-5 pt-105 pt-lg-90 text-center text-justify text-white">
 	            <h1 class="text-mobile"><?php the_title(); ?></h1>
 	        </div>
         <?php } ?>
@@ -25,8 +25,8 @@
             <?php $ip_show1 = get_theme_mod('ip_ads_show1'); ?>
             <?php $ip_show2 = get_theme_mod('ip_ads_show2'); ?>
             <?php if($ip_show1 === 'true'||$ip_show2 === 'true'){ ?>
-                <div class="row mw-100 p-3 p-md-0 mx-auto bg-white">
-                    <div class="col-md-3 min-h-100 text-white show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
+                <div class="row mw-100 p-3 p-md-0 mx-auto bg-white border-30px">
+                    <div class="col-md-3 min-h-100 text-white border-30px show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
                         <div style="margin-top: 60vh;transform: translate(0,-50vh);max-height: 95vh;">
                             <!-- Ad 1 -->
                                 <?php

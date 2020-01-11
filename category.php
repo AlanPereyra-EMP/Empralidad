@@ -1,6 +1,6 @@
     <?php get_header(); ?>
     <!-- Title -->
-        <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
+        <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white">
             <h1 class="text-white text-mobile"><?php single_cat_title(); ?></h1>
         </div>
     <!-- end title -->
@@ -21,6 +21,6 @@
                     </div>
                 <?php } ?>
             </div>
-        </section>          
+        </section>
     <!-- end content -->
 <?php get_footer(); ?>

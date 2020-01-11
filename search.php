@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- Title -->
-    <div class="container-fluid py-5 text-center pt-105 pt-lg-90 text-justify text-white bg-personalized">
+    <div class="container-fluid py-5 text-center pt-105 pt-lg-90 text-justify text-white">
         <h1 class="text-white">Resultados de busqueda</h1>
     </div>
 <!-- end title -->

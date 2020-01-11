@@ -2,7 +2,6 @@
     <!-- header-->
         <?php
         $carousel_slide1 = get_theme_mod('ip_head_slide1');
-        $filter_slide1 = get_theme_mod('ip_head_filter1');
         $button_or_audio = get_theme_mod('ip_head_audio');
         $button_or_audio2 = get_theme_mod('ip_head_audio2');
         $button_or_audio3 = get_theme_mod('ip_head_audio3');
@@ -11,9 +10,7 @@
         if ($carousel_slide1) {
         ?>
             <header id="main-head">
-                <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto">
-                    <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
-                </div>
+              <!-- Video was here -->
                 <div class="carousel-caption d-flex text-img-home">
                     <div class="container-fluid my-auto text-homepage-container">
                       <div id="carouselFade" class="carousel carousel-fade" data-ride="carousel">
@@ -96,14 +93,14 @@
     <!-- Content -->
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <!-- If texts exists -->
-            <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation show-until-md">
+            <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation show-until-md border-30px">
                 <!-- Text 1 -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
                     $logo = get_theme_mod('ip_head_logo');
 
                     if ($ip_homepage_show == 'true'){
                         $img = get_theme_mod('ip_homepage_img1'); ?>
-                        <div class="py-3 col-12 col-md-4 mx-auto my-auto bg-personalized" >
+                        <div class="py-3 col-12 col-md-4 mx-auto my-auto bg-personalized border-30px" >
                             <h2 class="text-center">
                                 <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                             </h2>
@@ -191,7 +188,7 @@
                 <?php $ip_show2 = get_theme_mod('ip_homepage_show2'); ?>
                 <?php $ip_show3 = get_theme_mod('ip_homepage_show3'); ?>
                 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?>
-                    <div class="col-12 col-md-3 mx-auto px-0 shadow-grey-up-down-1 bg-personalized min-h-100 show-from-md left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
+                    <div class="col-12 col-md-3 mx-auto px-0 shadow-grey-up-down-1 bg-personalized min-h-100 show-from-md border-30px left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
                         <div style="max-height: 95vh;">
                             <!-- Text 1 -->
                                 <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
@@ -276,7 +273,7 @@
                     </div>
                 <?php } ?>
                 <?php if ( is_front_page() && !is_home() ) {?>
-                    <section class="p-3 bg-white p-md-5 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <section class="p-3 bg-white border-30px p-md-5 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
                       <?php get_template_part('includes/wc-featured-products') ?>
                       <?php get_template_part('content-home') ?>
                     </section>

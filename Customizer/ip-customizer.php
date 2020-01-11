@@ -54,13 +54,12 @@
 
 					));
 
-					$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_head_slide1_control', array(
+					$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'ip_head_slide1_control', array(
+						'mime_type' => 'video',
 						'label'=> __('Imagen destacada', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
 						'settings'=> 'ip_head_slide1',
-						'width' => 1900,
-						'height' => 1080,
-						'description'=> __( '1900x1080 px (adaptativo)', 'informatica_pereyra' )
+						'description'=> __( 'Seleciona un video de fondo (adaptativo)', 'informatica_pereyra' )
 					)));
 				// end img1
 				// filter-brightness 1
