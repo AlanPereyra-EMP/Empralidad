@@ -86,7 +86,7 @@
         <?php } else {?>
             <!-- Title no img -->
             <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
-                <h1 class="text-white text-mobile"><?php blog_info();?></h1>
+                <h1 class="text-white text-mobile"><?php bloginfo();?></h1>
             </div>
         <?php } ?>
     <!-- end header-->
@@ -278,7 +278,7 @@
                       <?php get_template_part('content-home') ?>
                     </section>
                 <?php } else { ?>
-                    <div style="background: #f9f9f9" class="p-3 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <div style="background: #f9f9f9" class="p-3 border-30px col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
                       <?php get_template_part('includes/wc-featured-products') ?>
                           <br>
                         <h2 class="text-center">Lo más reciente</h2>

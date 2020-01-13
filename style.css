@@ -600,6 +600,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 	}
 	/*searchform*/
+			.border-30px form#searchform {
+				width: 100%;
+			}
 			#s, .select-form{
 		  display: inline !important;
 		  width: 75%;
@@ -1016,7 +1019,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		color: #fff;
 	}
 	#first-content-home, #first-content-single{
-		height: 60px;
+		height: 90px;
 		visibility: hidden;
 	    margin-top: -60px;
 	}

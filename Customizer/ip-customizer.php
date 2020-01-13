@@ -56,7 +56,7 @@
 
 					$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'ip_head_slide1_control', array(
 						'mime_type' => 'video',
-						'label'=> __('Imagen destacada', 'informatica_pereyra'),
+						'label'=> __('Video de  fondo', 'informatica_pereyra'),
 						'section'=> 'ip_section_slide1',
 						'settings'=> 'ip_head_slide1',
 						'description'=> __( 'Seleciona un video de fondo (adaptativo)', 'informatica_pereyra' )

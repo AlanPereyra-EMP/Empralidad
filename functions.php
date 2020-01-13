@@ -110,9 +110,6 @@
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 	        }
-	        .ip_img_slide1{
-	        	background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_head_slide1')); ?>) repeat 50% 50%;
-	        }
 					.tutor-wrap.tutor-courses-wrap.tutor-container {
 					    margin: 0;
 					    max-width: inherit;
