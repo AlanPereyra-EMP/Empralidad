@@ -5,11 +5,10 @@
     </div>
 
     <!-- Content page -->
-    <div class="container my-5">
+    <div class="container-fluid p-5 bg-white">
         <h2><strong>El contenido que estas buscando no existe!</strong></h2>
         <p>Quizas quieras buscar otra cosa</p>
         <?php get_search_form(); ?>
-        <hr>
     </div>
     <!-- end content page -->
 <?php get_footer(); ?>
