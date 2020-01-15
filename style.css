@@ -851,23 +851,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	@-webkit-keyframes ipFadeIn {
 			0% {
 				transform: translate(0%, -50%);
-				opacity: 0;
 			}
 
 			100% {
 				transform: translate(0%, 0%);
-				opacity: 1;
 			}
     }
 	@keyframes ipFadeIn {
       0% {
         transform: translate(0%, -50%);
-				opacity: 0;
       }
 
       100% {
 				transform: translate(0%, 0%);
-				opacity: 1;
       }
     }
     .ipFadein{
