@@ -12,6 +12,8 @@
 // 10) Custom post type
 // 11) WooCommerce custom
 // 12) GitHub updates
+// 13) Fix admin bar on frontend
+
 
 // 0) JS on footer
 	function scripts_footer() {
@@ -400,5 +402,10 @@ function ip_block_add_styles() {
     wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/css/ip_block.css' );
 }
 add_action('enqueue_block_assets', 'ip_block_add_styles');
+
+// 13) Fix admin bar
+if ( ! current_user_can( 'manage_options' ) ) {
+    show_admin_bar( false );
+}
 
 ?>
