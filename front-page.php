@@ -21,7 +21,7 @@
                             <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
                                 <br>
-                                <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px border-30px btn-outline-light">
                                     <?php echo get_theme_mod('ip_head_btn1'); ?>
                                 </button>
                             <?php } else if ($button_or_audio == 'audio'){?>
@@ -36,7 +36,7 @@
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea2'); ?></p>
                               <?php if($button_or_audio2 == 'button'){ ?>
                                   <br>
-                                  <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button2') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                  <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button2') ?>';" class="btn p-2 container-fluid mw-600-px border-30px btn-outline-light">
                                       <?php echo get_theme_mod('ip_head_btn2'); ?>
                                   </button>
                               <?php } else if ($button_or_audio2 == 'audio'){?>
@@ -52,7 +52,7 @@
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea3'); ?></p>
                               <?php if($button_or_audio3 == 'button'){ ?>
                                   <br>
-                                  <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button3') ?>';" class="btn p-2 container-fluid mw-600-px bg-light text-dark">
+                                  <button onclick="window.location.href = '<?php echo get_theme_mod('ip_head_link_button3') ?>';" class="btn p-2 container-fluid mw-600-px border-30px btn-outline-light">
                                       <?php echo get_theme_mod('ip_head_button3'); ?>
                                   </button>
                               <?php } else if ($button_or_audio3 == 'audio'){?>

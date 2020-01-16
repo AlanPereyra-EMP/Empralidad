@@ -475,6 +475,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		color: #fff!important;
 		border: 1px #fff solid;
 	}
+	.btn-outline-light:hover{
+		background: rgba(250, 250, 250, .2)!important;
+	}
 	#btn-menu-nav.fa-times{
 		font-size: 35px;
 	}
