@@ -110,7 +110,7 @@
 						border-top: 70px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 					}
 					body, .fa-text{
-						font-family: <?php echo get_theme_mod('ip_styles_tipography'); ?>;
+						font-family: '<?php echo get_theme_mod('ip_styles_tipography'); ?>';
 						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 					}
 					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
