@@ -124,6 +124,11 @@
 							border-radius: 30px;
 						}
 					<?php } ?>
+					<?php if(get_theme_mod('ip_styles_tipography') === 'sans-serif'){ ?>
+						.fa-user .fa-text {
+						    margin-left: -8px!important;
+						}
+					<?php } ?>
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
 	        	color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
 	        }
