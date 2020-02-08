@@ -5,11 +5,11 @@
         </div>
     <!-- end title -->
     <!-- Page content  -->
-        <article class="col-md-10 col-lg-8 mx-md-auto">
-            <div class="container-fluid px-0 py-3 p-md-5">
+        <article class="col-md-10 col-lg-8 mx-md-auto p-0">
+            <div class="container-fluid p-0">
                 <?php
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
-                    the_content();?><br>
+                    the_content();?>
                     <span class="btn container-fluid invisible"></span>
                 <?php endwhile; endif; ?>
                 <!-- Comments -->

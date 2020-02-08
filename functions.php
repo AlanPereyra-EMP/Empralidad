@@ -109,8 +109,20 @@
 					.tutor-single-lesson-wrap{
 						border-top: 70px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
 					}
+					body, .fa-text{
+						font-family: <?php echo get_theme_mod('ip_styles_tipography'); ?>;
+						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+					}
+					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
+						article{
+
+						}
+						.border-30px{
+							border-radius: 30px;
+						}
+					<?php } ?>
 	        strong,h2, h3, h4, h5, h6, .widget-title-dark, .color-personalized, .product_title{
-	        	color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
+	        	color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
 	        }
 					.tutor-wrap.tutor-courses-wrap.tutor-container {
 					    margin: 0;

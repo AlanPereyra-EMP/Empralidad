@@ -273,7 +273,7 @@
                     </div>
                 <?php } ?>
                 <?php if ( is_front_page() && !is_home() ) {?>
-                    <section class="p-3 bg-white border-30px p-md-5 col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <section class="px-0 bg-white border-30px col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
                       <?php get_template_part('includes/wc-featured-products') ?>
                       <?php get_template_part('content-home') ?>
                     </section>
