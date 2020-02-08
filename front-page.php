@@ -18,6 +18,7 @@
 
                           <div class="carousel-item active ipFadeIn mx-auto" style="max-width:85%;">
                             <h1 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text'); ?></h1>
+                            <hr style="max-width: 185px;border-top: 3px solid;">
                             <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
                                 <br>
@@ -33,6 +34,7 @@
                           <?php if($ip_show_2 == 'true'){ ?>
                             <div class="carousel-item ipFadeIn mx-auto" style="max-width:85%;">
                               <h2 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text2'); ?></h2>
+                              <hr style="max-width: 185px;border-top: 3px solid;">
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea2'); ?></p>
                               <?php if($button_or_audio2 == 'button'){ ?>
                                   <br>
@@ -49,6 +51,7 @@
                           <?php if($ip_show_3 == 'true'){ ?>
                             <div class="carousel-item ipFadeIn mx-auto" style="max-width:85%;">
                               <h2 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text3'); ?></h2>
+                              <hr style="max-width: 185px;border-top: 3px solid;">
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea3'); ?></p>
                               <?php if($button_or_audio3 == 'button'){ ?>
                                   <br>
@@ -282,6 +285,7 @@
                       <?php get_template_part('includes/wc-featured-products') ?>
                           <br>
                         <h2 class="text-center">Lo más reciente</h2>
+                        <hr>
                         <div class="card-columns-2 p-2">
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                                 <?php get_template_part('content', get_post_format()) ?>
