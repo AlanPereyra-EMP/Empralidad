@@ -115,7 +115,10 @@
 					}
 					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
 						article{
-
+							border-radius: 30px;
+						}
+						.sfpo-table thead th {
+						    border-radius: 10px 10px 0 0;
 						}
 						.border-30px{
 							border-radius: 30px;
