@@ -51,7 +51,7 @@
           echo get_theme_mod('ip_google_text'); ?>
 
   </head>
-  
+
   <body <?php body_class(); ?> >
 
     <div id="top_content"></div>
