@@ -58,10 +58,14 @@
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
             <!-- if logo -->
-	            <?php $img_navbar = get_theme_mod('ip_head_logo');
-	            if ($img_navbar) { ?>
-		            <a class="navbar-brand mx-auto" href="<?php echo home_url(); ?>">
+            <?php $img_mobile_navbar = get_theme_mod('ip_head_logo');
+	                $img_desktop_navbar = get_theme_mod('ip_head_logo_desktop');
+	            if ($img_mobile_navbar && $img_desktop_navbar) { ?>
+		            <a class="navbar-brand mx-auto show-until-md" href="<?php echo home_url(); ?>">
 		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" class="navbar-img" alt="NavbarBrand">
+		            </a>
+                <a class="navbar-brand mx-auto show-from-md" href="<?php echo home_url(); ?>">
+		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo_desktop')); ?>" class="navbar-img" alt="NavbarBrand">
 		            </a>
 	            <?php } else { ?>
                     <a class=" mx-auto" href="<?php echo home_url(); ?>">

@@ -21,7 +21,7 @@
 					'title' => __( 'Cabecera', 'informatica_pereyra' )
 				));
 			// end add panel
-			// Logo
+			// Mobile Logo
 				$wp_customize->add_section('ip_section_logo', array(
 					'title'=> __('Logo', 'informatica_pereyra'),
 					'priority' => 1,
@@ -33,14 +33,29 @@
 				));
 
 				$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_head_logo_control', array(
-					'label'=> __('Logo', 'informatica_pereyra'),
+					'label'=> __('Logo para dispositivos móviles', 'informatica_pereyra'),
 					'description'=> __( 'Ideal 1:1, máxima 21:9 (horizontal)', 'informatica_pereyra' ),
 					'section'=> 'ip_section_logo',
 					'settings'=> 'ip_head_logo',
 					'flex_width' => true,
 					'flex_height' => true
 				)));
-			// end logo
+			// end mobile logo
+			// Desktop Logo
+				$wp_customize->add_setting('ip_head_logo_desktop', array(
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'ip_head_logo_desktop_control', array(
+					'label'=> __('Logo para pantallas grades', 'informatica_pereyra'),
+					'description'=> __( 'Ideal 1:1, máxima 21:9 (horizontal)', 'informatica_pereyra' ),
+					'section'=> 'ip_section_logo',
+					'settings'=> 'ip_head_logo_desktop',
+					'flex_width' => true,
+					'flex_height' => true
+				)));
+			// end desktop logo
 			// Slide1
 				$wp_customize->add_section('ip_section_slide1', array(
 					'title'=> __('Imagen principal de fondo', 'informatica_pereyra'),
