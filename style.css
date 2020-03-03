@@ -512,6 +512,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	  }
 	}
 	@media (min-width: 992px) {
+		.show-until-lg{
+			display: none;
+		}
 	  .card-columns-2 {
 	    -webkit-column-count: 2;
 	       -moz-column-count: 2;
