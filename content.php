@@ -22,7 +22,7 @@
         <?php } ?>
     <!-- end img -->
             <br>
-            <div class="card-text p-3">
+            <div class="card-text p-3 text-dark">
                 <?php the_excerpt(); ?>
             </div>
             <a href="<?php the_permalink(); ?>">

@@ -64,8 +64,8 @@ if(!shortcode_exists('ip_table')) {
 			${'values'.$i} = explode('|', ${'values'.$i});
 
 			// Check, cross or text
-			$check = '✔';
-			$cross = '❌';
+			$check = '<i class="fas fa-check "></i>';
+			$cross = '<i class="fas fa-times text-danger fa-2x"></i>';
 
 			if((${'values'.$i}[1]) === 'true'){
 				$td1 = $check;
@@ -113,9 +113,9 @@ if(!shortcode_exists('ip_table')) {
 
 	    	$tbody['links'] = '<tr class="sfpo-links">
 						    		<th class="sfpo-links-th" style="background: none!important;"></th>'.
-						    		'<td><a class="shadow-grey-down button" href="'.$link0.'">'.$link_name0.'</a></td>'.
-						    		'<td><a class="shadow-grey-down button" href="'.$link1.'">'.$link_name1.'</a></td>'.
-						    		'<td><a class="shadow-grey-down button" href="'.$link2.'">'.$link_name2.'</a></td>
+						    		'<td><a class="shadow-grey-down btn-outline-light" href="'.$link0.'">'.$link_name0.'</a></td>'.
+                    '<td><a class="shadow-grey-down btn-outline-light" href="'.$link1.'">'.$link_name1.'</a></td>'.
+						    		'<td><a class="shadow-grey-down btn-outline-light" href="'.$link2.'">'.$link_name2.'</a></td>
 					    		</tr>';
 		}
 

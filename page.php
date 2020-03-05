@@ -1,11 +1,11 @@
 <?php get_header(); ?>
     <!-- Title -->
-        <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white">
+        <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify">
             <h1 class="text-mobile"><?php the_title(); ?></h1>
         </div>
     <!-- end title -->
     <!-- Page content  -->
-        <article class="col-md-10 col-lg-8 mx-md-auto p-0">
+        <article class="col-md-10 col-lg-8 mx-md-auto p-0 py-3 bg-transparent-personalized text-white">
             <div class="container-fluid p-0">
                 <?php
                 if ( have_posts() ) : while ( have_posts() ) : the_post();

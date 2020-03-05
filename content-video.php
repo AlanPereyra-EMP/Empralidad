@@ -1,8 +1,6 @@
-<section class="card p-0 to-fade to-fadein-animation">
+<section class="card p-0 to-fade to-fadein-animation text-dark">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <div class="card-block">
-        <br>
-        <a href="<?php the_permalink(); ?>"><h4 class="card-title text-center"><strong><?php the_title(); ?></strong></h4></a>
         <div class="card-text">
         	<?php the_content(); ?>
         </div>

@@ -21,8 +21,8 @@
                 </div>
         <?php } ?>
     <!-- end img -->
-            <div class="card-text p-3 audio-content">
-                <?php the_content( 'Continue reading ' . get_the_title() ); ?>
+            <div class="card-text p-3 audio-content text-dark">
+                <?php the_content( 'Continuar leyendo ' . get_the_title() ); ?>
             </div>
         </div>
         <div class="card-footer text-muted">

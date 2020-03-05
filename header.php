@@ -74,7 +74,7 @@
 	            <?php } ?>
 	        <!-- end if logo -->
             <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
-                <i id="btn-menu-nav" class="fa fa-bars <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
+                <i id="btn-menu-nav" class="fa fa-bars text-dark <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
             </div>
             <?php $search_link = get_theme_mod('ip_mobile_search_text');
                 if ($search_link == 'true'){
