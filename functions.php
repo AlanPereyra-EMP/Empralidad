@@ -122,8 +122,12 @@
 						.sfpo-table thead th {
 						    border-radius: 10px 10px 0 0;
 						}
-						.border-30px{
+						.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
+						.tutor-cart-box-login-form-inner{
 							border-radius: 30px;
+						}
+						.tutor-single-lesson-wrap {
+						    border-radius: 0 0 30px 30px;
 						}
 					<?php } ?>
 					<?php if(get_theme_mod('ip_styles_tipography') === 'sans-serif'){ ?>

@@ -154,7 +154,7 @@
                                 </div>
                             <?php } ?>
                         <!-- end ad 2 -->
-                        <p><hr></p>
+                        <p><br><hr><br></p>
                         <!-- Comments -->
         	                <?php if ( comments_open() || get_comments_number() ) :
         	                    comments_template(); the_comments_pagination();

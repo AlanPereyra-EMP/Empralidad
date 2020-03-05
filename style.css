@@ -835,10 +835,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		background: #eee;
 	    padding: 15px;
 	    margin: 50px 0 50px 0;
+	    color: #262626;
 	}
 	blockquote cite {
 		font-size: 13px;
 	    color: #aaa;
+	}
+	blockquote strong{
+		color: #262626!important;
 	}
 /*10) Tables*/
 	table, td {

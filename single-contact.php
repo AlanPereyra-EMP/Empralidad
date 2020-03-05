@@ -28,7 +28,11 @@
           echo get_theme_mod('ip_google_text'); ?>
   </head>
   <body <?php body_class() ?>>
-
+    <style>
+      .landing-content, .landing-content h2, .landing-content h3, .landing-content h4, .landing-content h5, .landing-content h6, .landing-content strong{
+        color: #262626!important;
+      }
+    </style>
     <!-- Page content  -->
     <?php $filter_slide1 = get_theme_mod('ip_head_filter1'); ?>
     <div class="ip_img_slide1" style="position: fixed;top: 0;right: 0;left: 0;">
