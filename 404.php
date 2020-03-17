@@ -5,7 +5,7 @@
     </div>
 
     <!-- Content page -->
-    <div class="container-fluid p-5 bg-white">
+    <div class="container-fluid p-5 bg-dark">
         <h2><strong>El contenido que estas buscando no existe!</strong></h2>
         <p>Quizas quieras buscar otra cosa</p>
         <?php get_search_form(); ?>
