@@ -112,7 +112,7 @@
 					body, .fa-text{
 						font-family: '<?php echo get_theme_mod('ip_styles_tipography'); ?>';
 					}
-					body{
+					body, .tutor-dashboard-header-ratings{
 						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 					}
 					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
