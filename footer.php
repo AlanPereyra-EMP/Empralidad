@@ -83,7 +83,7 @@
             <!-- Whatsapp -->
                 <?php $wp_link_ip = get_theme_mod('ip_mobile_whatsapp_text');
                     if ($wp_link_ip == 'true' && $perma_button){ ?>
-                        <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('ip_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20desde%20<?php echo str_replace(' ', '%20', wp_title('', false));?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
+                        <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('ip_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20<?php echo str_replace(' ', '%20', wp_title('', false));?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
                             <span class="fa-text">Whatsapp</span>
                         </a>
                     <?php } ?>
