@@ -21,11 +21,11 @@
     <!-- end title -->
     <!-- Page content  -->
     <div id="first-content-single" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class('bg-transparent-personalized border-30px'); ?>>
             <?php $ip_show1 = get_theme_mod('ip_ads_show1'); ?>
             <?php $ip_show2 = get_theme_mod('ip_ads_show2'); ?>
             <?php if($ip_show1 === 'true'||$ip_show2 === 'true'){ ?>
-                <div class="row mw-100 p-0 mx-auto bg-transparent-personalized border-30px">
+                <div class="row mw-100 p-0 mx-auto">
                     <div class="col-md-3 min-h-100 text-white border-30px show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
                         <div style="margin-top: 60vh;transform: translate(0,-50vh);max-height: 95vh;">
                             <!-- Ad 1 -->
