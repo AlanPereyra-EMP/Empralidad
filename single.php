@@ -106,7 +106,7 @@
                         <?php
                         if ( have_posts() ) : while ( have_posts() ) : the_post();
                             ?>
-                            <div id="ip-single-info" style=" text-transform: uppercase;"><?php the_author(); ?> / <?php  the_date(); ?></div>
+                            <div id="ip-single-info" style=" text-transform: uppercase;"><?php the_author(); ?> / <?php  the_date(); ?><br><br> <div class="d-inline-flex">Categoría:  <?php the_category(); ?> </div></div>
                             <span class="btn container-fluid invisible"></span>
                             <?php
                             the_content();?>
@@ -116,14 +116,12 @@
                             <!-- end botton share -->
                           <?php } ?>
                         <?php endwhile; endif; ?>
-                        <?php if(!class_exists('cuar_plugin')){ ?>
                           <!-- Tags -->
                               <p class="pt-5"><hr></p>
                               <div class="container-fluid text-center py-5">
-                                  <div class="d-inline-flex">Categoría: <?php the_category(); ?> </div> <br> <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
+                                 <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
                               </div>
                           <!-- end tags -->
-                        <?php } ?>
                         <!-- Ad 2 -->
                             <?php
                             $ip_homepage_show = get_theme_mod('ip_ads_show2');
@@ -154,7 +152,7 @@
                                 </div>
                             <?php } ?>
                         <!-- end ad 2 -->
-                        <p><br><hr><br></p>
+                        <p><br></p>
                         <!-- Comments -->
         	                <?php if ( comments_open() || get_comments_number() ) :
         	                    comments_template(); the_comments_pagination();
