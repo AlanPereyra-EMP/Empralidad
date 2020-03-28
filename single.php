@@ -21,7 +21,7 @@
     <!-- end title -->
     <!-- Page content  -->
     <div id="first-content-single" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
-        <article id="post-<?php the_ID(); ?>" <?php post_class('bg-transparent-personalized border-30px'); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
             <?php $ip_show1 = get_theme_mod('ip_ads_show1'); ?>
             <?php $ip_show2 = get_theme_mod('ip_ads_show2'); ?>
             <?php if($ip_show1 === 'true'||$ip_show2 === 'true'){ ?>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                <div class="col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-0 py-3 py-md-5">
+                <div class="bg-transparent-personalized border-30px col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-0 py-3 py-md-5">
                         <!-- Ad 1 -->
                             <?php
                             $ip_homepage_show = get_theme_mod('ip_ads_show1');
