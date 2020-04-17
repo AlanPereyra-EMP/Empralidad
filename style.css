@@ -416,6 +416,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	a.fa-whatsapp span.fa-text {
 		margin-left: -6px;
 		font-size: 13px;
+		font-weight: 800px;
 	}
 	a.fa-whatsapp-size{
 		font-size: 23px!important;
@@ -843,6 +844,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 	blockquote strong{
 		color: #262626!important;
+	}
+	blockquote h3, blockquote h4, blockquote h5, blockquote h6 {
+	    color: #000!important;
 	}
 /*10) Tables*/
 	table, td {
