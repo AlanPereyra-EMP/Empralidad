@@ -416,7 +416,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	a.fa-whatsapp span.fa-text {
 		margin-left: -6px;
 		font-size: 13px;
-		font-weight: 800px;
+		font-weight: 800;
 	}
 	a.fa-whatsapp-size{
 		font-size: 23px!important;
