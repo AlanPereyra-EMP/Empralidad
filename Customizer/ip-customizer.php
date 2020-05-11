@@ -58,7 +58,7 @@
 			// end desktop logo
 			// Slide1
 				$wp_customize->add_section('ip_section_slide1', array(
-					'title'=> __('Imagen principal de fondo', 'informatica_pereyra'),
+					'title'=> __('Video de fondo', 'informatica_pereyra'),
 					'priority' => 2,
 					'panel' => 'ip_panel_head'
 				));
@@ -435,13 +435,110 @@
 					'priority' => 2,
 					'title' => __( 'Estilos', 'informatica_pereyra' )
 				));
-				//Tipography
-					$wp_customize->add_section('ip_section_styles_tipography', array(
-						'title'=> __('Tipografía', 'informatica_pereyra'),
+				// Backgrounds
+					$wp_customize->add_section('ip_section_styles_background', array(
+						'title'=> __('Fondos', 'informatica_pereyra'),
 						'priority' => 1,
 						'panel' => 'ip_panel_styles'
 					));
+					// Primary color
+					$wp_customize->add_setting('ip_background_primary', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_styles_background_color_control', array(
+						'label'=> __('Fondo principal', 'informatica_pereyra'),
+						'section'=> 'ip_section_styles_background',
+						'settings'=> 'ip_background_primary',
+						'description'=> __( 'Fondo principal de la web', 'informatica_pereyra' )
+
+					)));
+					// Secondary color
+					$wp_customize->add_setting('ip_background_secondary', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_styles_background_secondary_control', array(
+						'label'=> __('Fondo secundario', 'informatica_pereyra'),
+						'section'=> 'ip_section_styles_background',
+						'settings'=> 'ip_background_secondary',
+						'description'=> __( 'Fondo de tarjetas y elementos secundarios', 'informatica_pereyra' )
+
+					)));
+					// Transparency
+					$wp_customize->add_setting('ip_background_secondary_transparency', array(
+						'default' => 'ff',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_encoded'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_background_secondary_transparency_control', array(
+											'label'          => __( 'Transparencia', 'informatica_pereyra' ),
+											'description'=> __( 'Transparecnia de fondo secundario', 'informatica_pereyra' ),
+											'section'        => 'ip_section_styles_background',
+											'settings'       => 'ip_background_secondary_transparency',
+											'type'           => 'radio',
+											'choices'        => array(
+												'cc'   => __( 'Activar', 'informatica_pereyra' ),
+												'ff' => __( 'Desactivar', 'informatica_pereyra' )
+											)
+					)));
+				// end backgrounds
+				//Tipography
+					$wp_customize->add_section('ip_section_styles_tipography', array(
+						'title'=> __('Tipografía', 'informatica_pereyra'),
+						'priority' => 2,
+						'panel' => 'ip_panel_styles'
+					));
 					// Options
+						// Color typography
+						// color text
+						$wp_customize->add_setting('ip_tipography_primarycolor', array(
+							'default' => '#262626',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+						$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_tipography_primarycolor_control', array(
+							'label'=> __('Texto principal', 'informatica_pereyra'),
+							'section'=> 'ip_section_styles_tipography',
+							'settings'=> 'ip_tipography_primarycolor'
+
+						)));
+						// color featured
+						$wp_customize->add_setting('ip_tipography_color', array(
+							'default' => '#005777',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+
+						$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_tipography_color_control', array(
+							'label'=> __('Texto secundario', 'informatica_pereyra'),
+							'section'=> 'ip_section_styles_tipography',
+							'settings'=> 'ip_tipography_color',
+							'description'=> __( 'Texto dentro de fondo secundario', 'informatica_pereyra' )
+
+						)));
+						// Font size
+						$wp_customize->add_setting('ip_styles_tipography_size', array(
+							'default' => 1,
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+						$wp_customize->add_control('ip_styles_tipography_size_control1', array(
+												'label'          => __( 'Tamaño', 'informatica_pereyra' ),
+												'section'        => 'ip_section_styles_tipography',
+												'settings'       => 'ip_styles_tipography_size',
+												'type'					 => 'range',
+											  'input_attrs' 	 => array(
+											    'min' => 10,
+											    'max' => 50,
+											    'step' => 1,
+											  )
+						));
 						// type
 						$wp_customize->add_setting('ip_styles_tipography', array(
 							'default' => 'sans-serif',
@@ -454,16 +551,65 @@
 												'settings'       => 'ip_styles_tipography',
 												'type'           => 'radio',
 												'choices'        => array(
-													'serif'   => __( 'Serif', 'informatica_pereyra' ),
+													'serif'  			 => __( 'Serif', 'informatica_pereyra' ),
 													'sans-serif'   => __( 'Sans-serif', 'informatica_pereyra' ),
-														'varela round' => __( 'Varela round', 'informatica_pereyra' )
+													'varela round' => __( 'Varela Round', 'informatica_pereyra' ),
+													'indie flower' => __( 'Indie Flower', 'informatica_pereyra' )
+												)
+						)));
+						// text shadow
+						$wp_customize->add_setting('ip_styles_text_shadow', array(
+							'default' => 'false',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_styles_text_shadow_control1', array(
+												'label'          => __( 'Sombras', 'informatica_pereyra' ),
+												'section'        => 'ip_section_styles_tipography',
+												'settings'       => 'ip_styles_text_shadow',
+												'type'           => 'radio',
+												'choices'        => array(
+													'true'   => __( 'Activado', 'informatica_pereyra' ),
+													'false'   => __( 'Desactivado', 'informatica_pereyra' )
 												)
 						)));
 					// end options
+					// Btn
+						$wp_customize->add_section('ip_section_btn', array(
+								'title'=> __('Botones', 'informatica_pereyra'),
+								'priority' => 3,
+								'panel' => 'ip_panel_styles'
+							));
+						// btn bg
+							$wp_customize->add_setting('ip_btn_bg', array(
+								'default' => '#005777',
+								'trasnport' => 'refresh',
+								'sanitize_callback' => 'sanitize_string'
+							));
+
+							$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_btn_bg_control', array(
+								'label'=> __('Color de fondo', 'informatica_pereyra'),
+								'section'=> 'ip_section_btn',
+								'settings'=> 'ip_btn_bg'
+
+							)));
+						// btn text color
+							$wp_customize->add_setting('ip_btn_color', array(
+								'default' => '#ffffff',
+								'trasnport' => 'refresh',
+								'sanitize_callback' => 'sanitize_string'
+							));
+
+							$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_btn_color_control', array(
+								'label'=> __('Texto', 'informatica_pereyra'),
+								'section'=> 'ip_section_btn',
+								'settings'=> 'ip_btn_color'
+
+							)));
 				//Borders
 					$wp_customize->add_section('ip_section_styles_border', array(
 						'title'=> __('Bordes', 'informatica_pereyra'),
-						'priority' => 2,
+						'priority' => 4,
 						'panel' => 'ip_panel_styles'
 					));
 					// Options
@@ -482,124 +628,8 @@
 														'false' => __( 'Deshabilitar', 'informatica_pereyra' )
 												)
 						)));
-					// end options
-		// end style
-		// 2) Colors
-			// Add panel
-			$wp_customize->add_panel( 'ip_panel_color', array(
-				'priority' => 2,
-				'title' => __( 'Colores', 'informatica_pereyra' )
-			));
-
-			// Main color
-				$wp_customize->add_section('ip_section_primary', array(
-					'title'=> __('Color principal', 'informatica_pereyra'),
-					'priority' => 1,
-					'panel' => 'ip_panel_color'
-				));
-				$wp_customize->add_setting('ip_primary_color', array(
-					'default' => '#005777',
-					'trasnport' => 'refresh',
-					'sanitize_callback' => 'sanitize_string'
-				));
-
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_primary_color_control', array(
-					'label'=> __('Color principal', 'informatica_pereyra'),
-					'section'=> 'ip_section_primary',
-					'settings'=> 'ip_primary_color',
-					'description'=> __( 'Títulos, secciones destacadas y textos destacados', 'informatica_pereyra' )
-
-				)));
-			// end main color
-			// btn
-				$wp_customize->add_section('ip_section_btn', array(
-						'title'=> __('Color de boton', 'informatica_pereyra'),
-						'priority' => 2,
-						'panel' => 'ip_panel_color'
-					));
-				// btn bg
-					$wp_customize->add_setting('ip_btn_bg', array(
-						'default' => '#005777',
-						'trasnport' => 'refresh',
-						'sanitize_callback' => 'sanitize_string'
-					));
-
-					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_btn_bg_control', array(
-						'label'=> __('Color de fondo', 'informatica_pereyra'),
-						'section'=> 'ip_section_btn',
-						'settings'=> 'ip_btn_bg'
-
-					)));
-				// end btn bg
-				// btn text color
-					$wp_customize->add_setting('ip_btn_color', array(
-						'default' => '#ffffff',
-						'trasnport' => 'refresh',
-						'sanitize_callback' => 'sanitize_string'
-					));
-
-					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_btn_color_control', array(
-						'label'=> __('Color de texto', 'informatica_pereyra'),
-						'section'=> 'ip_section_btn',
-						'settings'=> 'ip_btn_color'
-
-					)));
-			// end btn text color
-			// footer color
-				$wp_customize->add_section('ip_section_footer', array(
-					'title'=> __('Color de footer', 'informatica_pereyra'),
-					'priority' => 3,
-					'panel' => 'ip_panel_color'
-				));
-				$wp_customize->add_setting('ip_footer_color', array(
-					'default' => '#262626',
-					'trasnport' => 'refresh',
-					'sanitize_callback' => 'sanitize_string'
-				));
-
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_footer_color_control', array(
-					'label'=> __('Color de Footer', 'informatica_pereyra'),
-					'section'=> 'ip_section_footer',
-					'settings'=> 'ip_footer_color',
-					'description'=> __( 'Sección inferior', 'informatica_pereyra' )
-
-				)));
-			// end footer color
-			// Tipography
-			$wp_customize->add_section('ip_section_tipography', array(
-				'title'=> __('Color de tipografía', 'informatica_pereyra'),
-				'priority' => 4,
-				'panel' => 'ip_panel_color'
-			));
-			// color text
-			$wp_customize->add_setting('ip_tipography_primarycolor', array(
-				'default' => '#262626',
-				'trasnport' => 'refresh',
-				'sanitize_callback' => 'sanitize_string'
-			));
-
-			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_tipography_primarycolor_control', array(
-				'label'=> __('Texto principal', 'informatica_pereyra'),
-				'section'=> 'ip_section_tipography',
-				'settings'=> 'ip_tipography_primarycolor'
-
-			)));
-			// color featured
-			$wp_customize->add_setting('ip_tipography_color', array(
-				'default' => '#005777',
-				'trasnport' => 'refresh',
-				'sanitize_callback' => 'sanitize_string'
-			));
-
-			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_tipography_color_control', array(
-				'label'=> __('Texto destacado', 'informatica_pereyra'),
-				'section'=> 'ip_section_tipography',
-				'settings'=> 'ip_tipography_color',
-				'description'=> __( 'Títulos, negrita y textos destacados', 'informatica_pereyra' )
-
-			)));
-		// end colors
-		// 3) Whatsapp
+		// end styles
+		// 4) Whatsapp
 			$wp_customize->add_section('ip_section_what', array(
 				'title'=> __('Whatsapp', 'informatica_pereyra'),
 				'priority' => 3
@@ -620,7 +650,7 @@
 				)));
 			// end number
 		// end whatsapp
-		// 4) Ads
+		// 5) Ads
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_ads', array(
 					'priority' => 4,
@@ -827,7 +857,7 @@
 				// end link button 2
 			// end ad 2
 		// end ads
-		// 5) Homepage section
+		// 6) Homepage section
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_home_text', array(
 					'priority' => 5,
@@ -1172,7 +1202,7 @@
 				// end link button 3
 			// end section 3
 		// end homepage sectons
-		// 6) Mobile buttons
+		// 7) Mobile buttons
 			$wp_customize->add_section('ip_section_mobile', array(
 				'title'=> __('Mobile', 'informatica_pereyra'),
 				'priority' => 6
@@ -1246,7 +1276,7 @@
 				)));
 			// end search form
 		// end social buttons
-		// 7) Woocomerce
+		// 8) Woocomerce
 			if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
 				$wp_customize->add_section('ip_section_woocommerce_featured', array(
@@ -1306,7 +1336,7 @@
 				// end text 1
 			}
 		// end woocomerce
-		// 8) Analytics
+		// 9) Analytics
 			// Add panel
 				$wp_customize->add_panel( 'ip_panel_analytics', array(
 					'priority' => 7,
@@ -1351,7 +1381,7 @@
 				)));
 			// end pixel
 		// end analytics
-		// 9) Social buttons
+		// 10) Social buttons
 			$wp_customize->add_section('ip_section_social', array(
 				'title'=> __('Social', 'informatica_pereyra'),
 				'priority' => 8
@@ -1417,7 +1447,7 @@
 				)));
 			// end twitter button
 		// end social buttons
-		// 10) Corp texts
+		// 11) Corp texts
 
 			$wp_customize->add_section('ip_section_text', array(
 				'title'=> __('Textos corporativos', 'informatica_pereyra'),
@@ -1496,7 +1526,7 @@
 				)));
 			// end copyright
 		// end corp texts
-		// 11) QR code (argentina)
+		// 12) QR code (argentina)
 			$wp_customize->add_section('ip_section_qr', array(
 				'title'=> __('Codigo QR Afip', 'informatica_pereyra'),
 				'priority' => 10
@@ -1517,7 +1547,7 @@
 				)));
 			// end code
 		// end qr code
-		// 12) GitHub Password
+		// 13) GitHub Password
 		$wp_customize->add_section('ip_section_github_pass', array(
 			'title'=> __('Soporte Premium', 'informatica_pereyra'),
 			'priority' => 10

@@ -95,25 +95,39 @@
 	get_template_part( 'plugins/ip-shortcodes' );
 
 // 4) Dinamics Css
-	function ip_theme_customize_css()
-	{
-	?>
+	function ip_theme_customize_css(){
+
+		$bg_perzonalized_secondary = get_theme_mod('ip_background_secondary') . get_theme_mod('ip_background_secondary_transparency');
+		?>
+
 	    <style type="text/css">
-	        .dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order {
+	        .dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order,span.onsale {
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
-	        .bg-personalized, th,span.onsale, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body{
-	        	background-color: <?php echo get_theme_mod('ip_primary_color'); ?> !important;
+	        .bg-personalized, th, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body{
+	        	background-color: <?php echo get_theme_mod('ip_background_primary'); ?> !important;
 	        }
+					.bg-personalized-secondary {
+						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
+					}
 					.tutor-single-lesson-wrap{
-						border-top: 70px solid <?php echo get_theme_mod('ip_primary_color'); ?> !important;
+						border-top: 70px solid <?php echo get_theme_mod('ip_background_primary'); ?> !important;
 					}
 					body, .fa-text{
 						font-family: '<?php echo get_theme_mod('ip_styles_tipography'); ?>';
 					}
-					body, .tutor-dashboard-header-ratings{
+					body{
+						font-size: <?php echo get_theme_mod('ip_styles_tipography_size'); ?>px;
+					}
+					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
 						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+					}
+					section, article, .woocommerce-loop-product__title{
+						color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
+					}
+					.btn-outline-light{
+						border: 1px <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> solid;
 					}
 					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
 						article{
@@ -122,7 +136,7 @@
 						.sfpo-table thead th {
 						    border-radius: 10px 10px 0 0;
 						}
-						.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
+						.btn,.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
 						.tutor-cart-box-login-form-inner{
 							border-radius: 30px;
 						}
@@ -135,8 +149,8 @@
 						    margin-left: -8px!important;
 						}
 					<?php } ?>
-	        strong,h2, h3, h4, h5, h6, .color-personalized, .product_title{
-	        	color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
+	        .color-personalized{
+	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-wrap.tutor-courses-wrap.tutor-container {
 					    margin: 0;
@@ -158,11 +172,51 @@
 	        .the_post_thumbnail{
 	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 	        }
-					@media(min-width: 992px){
-					}
-					@media(max-width:991px){
+					<?php if (get_theme_mod('ip_styles_text_shadow') === 'true'){ ?>
+						.text-shadow-6{
+							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
+						}
+						.woocommerce ul.products li.product .button, .bg-navbar-top, blockquote, table, div .pt-lg-90, body{
+							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
+						}
+					<?php } ?>
+					<?php if (get_theme_mod('ip_styles_text_shadow') === 'true') { ?>
+						img, iframe {
+							box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
+						    transition: all .5s;
+						}
+						.FullScreenLanding, .shadow-grey-down, a.button, img, select.orderby{
+						    box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
+						    transition: all .5s;
+						}
+						.shadow-grey-down-1{
+							box-shadow: 0px 13px 38px rgba(0, 0, 0, .6)!important;
+						}
+						.img-btn-fixed, .dropdown-toggle::after {
+						    box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
+						    border-radius: 26px;
+						}
+						@media(min-width: 991px){
+							nav.navbar.navbar-scroll{
+								box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
+							}
+						}
+						.buttons-mobile, .shadow-grey-up, .footer{
+							box-shadow: 0px -5px 13px rgba(0, 0, 0, .2)!important;
+						}
+						.shadow-grey-up-down, .btn, .card{
+							box-shadow: 0px -5px 13px rgba(0, 0, 0, .2), 0px 13px 13px rgba(0, 0, 0, .2);
+						}
+						@media(max-width: 991px){
+							#s, #searchsubmit, .select-form{
+								box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
+							}
+							.menu-item a{
+								text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
+							}
+						}
+					<?php } ?>
 
-					}
 	    </style>
 	<?php
 	}

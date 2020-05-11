@@ -7,7 +7,7 @@
         $button_or_audio3 = get_theme_mod('ip_head_audio3');
         $ip_show_2 = get_theme_mod('ip_head_show2');
         $ip_show_3 = get_theme_mod('ip_head_show3');
-        if ($carousel_slide1) {
+        if (true) {
         ?>
             <header id="main-head">
               <!-- Video was here -->
@@ -16,8 +16,8 @@
                       <div id="carouselFade" class="carousel carousel-fade" data-ride="carousel">
                         <div class="carousel-inner">
 
-                          <div class="carousel-item active ipFadeIn mx-auto" style="max-width:85%;">
-                            <h1 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text'); ?></h1>
+                          <div class="carousel-item active ipFadeIn mx-auto color-personalized" style="max-width:85%;">
+                            <h1 class="text-mobile color-personalized text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text'); ?></h1>
                             <hr style="max-width: 185px;border-top: 3px solid;">
                             <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
@@ -32,8 +32,8 @@
                           </div>
 
                           <?php if($ip_show_2 == 'true'){ ?>
-                            <div class="carousel-item ipFadeIn mx-auto" style="max-width:85%;">
-                              <h2 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text2'); ?></h2>
+                            <div class="carousel-item ipFadeIn mx-auto color-personalized" style="max-width:85%;">
+                              <h2 class="text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text2'); ?></h2>
                               <hr style="max-width: 185px;border-top: 3px solid;">
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea2'); ?></p>
                               <?php if($button_or_audio2 == 'button'){ ?>
@@ -49,8 +49,8 @@
                           <?php } ?>
 
                           <?php if($ip_show_3 == 'true'){ ?>
-                            <div class="carousel-item ipFadeIn mx-auto" style="max-width:85%;">
-                              <h2 class="text-white text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text3'); ?></h2>
+                            <div class="carousel-item ipFadeIn mx-auto color-personalized" style="max-width:85%;">
+                              <h2 class=" text-mobile text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text3'); ?></h2>
                               <hr style="max-width: 185px;border-top: 3px solid;">
                               <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea3'); ?></p>
                               <?php if($button_or_audio3 == 'button'){ ?>
@@ -72,11 +72,11 @@
                     <?php if($ip_show_2 == 'true' || $ip_show_3 == 'true'){ ?>
 
                       <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <i class="fas fa-2x fa-caret-left color-personalized" aria-hidden="true"></i>
                         <span class="sr-only"></span>
                       </a>
                       <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <i class="fas fa-2x fa-caret-right color-personalized" aria-hidden="true"></i>
                         <span class="sr-only"></span>
                       </a>
 
@@ -84,12 +84,12 @@
 
                 </div>
 
-                <i class="fas fa-caret-down button-down-home"></i>
+                <i class="fas fa-caret-down button-down-home color-personalized"></i>
             </header>
         <?php } else {?>
             <!-- Title no img -->
-            <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify text-white bg-personalized">
-                <h1 class="text-white text-mobile"><?php bloginfo();?></h1>
+            <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify bg-personalized">
+                <h1 class="color-personalized text-mobile"><?php bloginfo();?></h1>
             </div>
         <?php } ?>
     <!-- end header-->
@@ -276,7 +276,7 @@
                     </div>
                 <?php } ?>
                 <?php if ( is_front_page() && !is_home() ) {?>
-                    <section class="px-0 bg-transparent-personalized border-30px col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <section class="px-0 bg-personalized-secondary border-30px col-12 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
                       <?php get_template_part('includes/wc-featured-products') ?>
                       <?php get_template_part('content-home') ?>
                     </section>

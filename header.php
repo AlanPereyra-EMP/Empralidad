@@ -7,7 +7,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
     <!-- Defer css -->
     <script>
         function downloadCSSAtOnload() {
@@ -30,6 +29,16 @@
         element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/fonts/fa/css/all.min.css";
         element3.rel = 'stylesheet';
         document.body.appendChild(element3);
+
+        var element4 = document.createElement("link");
+        element4.href = "https://fonts.googleapis.com/css?family=Varela+Round&display=swap";
+        element4.rel = 'stylesheet';
+        document.body.appendChild(element4);
+
+        var element5 = document.createElement("link");
+        element5.href = "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
+        element5.rel = 'stylesheet';
+        document.body.appendChild(element5);
 
         }
         if (window.addEventListener){

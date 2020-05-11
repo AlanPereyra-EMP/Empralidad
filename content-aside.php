@@ -1,7 +1,7 @@
-<section class="card p-0 to-fade to-fadein-animation text-dark">
-    <div class="card-block text-white bg-personalized">
+<section class="card p-0 to-fade to-fadein-animation text-dark border-30px">
+    <div class="card-block bg-personalized">
     	<br>
-        <div class="card-text text-center p-3 text-white bg-personalized">
+        <div class="card-text text-center p-3 bg-personalized">
         	<?php the_excerpt(); ?>
         </div>
     </div>

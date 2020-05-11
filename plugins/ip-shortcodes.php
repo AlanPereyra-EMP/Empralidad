@@ -113,9 +113,9 @@ if(!shortcode_exists('ip_table')) {
 
 	    	$tbody['links'] = '<tr class="sfpo-links">
 						    		<th class="sfpo-links-th" style="background: none!important;"></th>'.
-						    		'<td><a class="shadow-grey-down btn-outline-light" href="'.$link0.'">'.$link_name0.'</a></td>'.
-                    '<td><a class="shadow-grey-down btn-outline-light" href="'.$link1.'">'.$link_name1.'</a></td>'.
-						    		'<td><a class="shadow-grey-down btn-outline-light" href="'.$link2.'">'.$link_name2.'</a></td>
+						    		'<td><a class="shadow-grey-down" href="'.$link0.'">'.$link_name0.'</a></td>'.
+                    '<td><a class="shadow-grey-down" href="'.$link1.'">'.$link_name1.'</a></td>'.
+						    		'<td><a class="shadow-grey-down" href="'.$link2.'">'.$link_name2.'</a></td>
 					    		</tr>';
 		}
 

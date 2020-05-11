@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                <div class="bg-transparent-personalized border-30px col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-0 py-3 py-md-5">
+                <div class="bg-personalized-secondary border-30px col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-0 py-3 py-md-5">
                         <!-- Ad 1 -->
                             <?php
                             $ip_homepage_show = get_theme_mod('ip_ads_show1');

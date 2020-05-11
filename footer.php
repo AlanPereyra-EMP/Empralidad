@@ -1,6 +1,6 @@
     <!-- Footer -->
 
-        <footer class="container-fluid text-white py-3 pb-5 foote text-center no-shadow">
+        <footer class="container-fluid color-personalized py-3 pb-5 foote text-center no-shadow">
                 <!-- Sidebar -->
                 <?php if(is_active_sidebar( 'footer' )){
                     get_sidebar( 'footer' );
@@ -35,10 +35,10 @@
 		            </div>
             	<!-- end social buttons -->
                 <!-- Owner -->
-                    <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por</small> <b><a class="text-white" href="https://informatica.pereyra.online">Informatica Pereyra</a><b></p>
+                    <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por</small> <b><a class="color-personalized" href="https://informatica.pereyra.online">Informatica Pereyra</a><b></p>
                 <!-- end owner -->
-                <p><small><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="text-white">Terminos y Condiciones</a> -
-                <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="text-white">Politicas de Privacidad</a></small></p>
+                <p><small><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="color-personalized">Terminos y Condiciones</a> -
+                <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="color-personalized">Politicas de Privacidad</a></small></p>
                 <br>
                 <?php echo get_theme_mod('ip_qr_text') ?>
                 <br>
