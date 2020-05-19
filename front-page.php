@@ -17,7 +17,7 @@
                         <div class="carousel-inner">
 
                           <div class="carousel-item active ipFadeIn mx-auto color-personalized" style="max-width:85%;">
-                            <h1 class="text-mobile color-personalized text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text'); ?></h1>
+                            <h1 class="text-mobile color-personalized text-shadow-6 ipFadeIn"><?php echo get_theme_mod('ip_head_text_title'); ?></h1>
                             <hr style="max-width: 185px;border-top: 3px solid;">
                             <p class="home-p mx-auto"><?php echo get_theme_mod('ip_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
@@ -89,7 +89,7 @@
         <?php } else {?>
             <!-- Title no img -->
             <div class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify bg-personalized">
-                <h1 class="color-personalized text-mobile"><?php bloginfo();?></h1>
+                <h1 class="color-personalized text-mobile"><?php echo get_theme_mod('ip_head_text_title'); ?></h1>
             </div>
         <?php } ?>
     <!-- end header-->

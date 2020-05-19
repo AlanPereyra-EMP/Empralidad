@@ -7,7 +7,7 @@
                 } ?>
 
             	<!-- Social buttons -->
-	            	<div class="container-fluid p-3">
+	            	<div class="container-fluid p-3 color-personalized fa-2x">
 		            	<!-- Facebook -->
 			            	<?php $facebook_link = get_theme_mod('ip_social_face_text');
 			                    if ($facebook_link){
@@ -34,11 +34,12 @@
 			                ?>
 		            </div>
             	<!-- end social buttons -->
-                <!-- Owner -->
-                    <p><?php echo get_theme_mod('ip_footer_text'); ?><br><small>Desarrollado por</small> <b>Alan Pereyra<b></p>
-                <!-- end owner -->
+                <p><?php echo get_theme_mod('ip_footer_text'); ?></p>
                 <p><small><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="color-personalized">Terminos y Condiciones</a> -
                 <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="color-personalized">Politicas de Privacidad</a></small></p>
+                <!-- Owner -->
+                    <p><small>Desarrollado por</small> <b>Alan Pereyra</b></p>
+                <!-- end owner -->
                 <br>
                 <?php echo get_theme_mod('ip_qr_text') ?>
                 <br>

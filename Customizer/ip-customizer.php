@@ -58,7 +58,7 @@
 			// end desktop logo
 			//Text header
 				$wp_customize->add_section('ip_section_head_text', array(
-					'title'=> __('Texto principal', 'informatica_pereyra'),
+					'title'=> __('Titulo cabecera', 'informatica_pereyra'),
 					'priority' => 3,
 					'panel' => 'ip_panel_head'
 				));
@@ -191,7 +191,7 @@
 						)));
 					// end if
 						$wp_customize->add_section('ip_section_head_text2', array(
-							'title'=> __('Texto 2', 'informatica_pereyra'),
+							'title'=> __('Titulo cabecera 2', 'informatica_pereyra'),
 							'priority' => 4,
 							'panel' => 'ip_panel_head'
 						));
@@ -308,7 +308,7 @@
 						)));
 					// end if
 					$wp_customize->add_section('ip_section_head_text3', array(
-						'title'=> __('Texto 3', 'informatica_pereyra'),
+						'title'=> __('Titulo cabecera 3', 'informatica_pereyra'),
 						'priority' => 5,
 						'panel' => 'ip_panel_head'
 					));
@@ -514,7 +514,7 @@
 						));
 
 						$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'ip_tipography_primarycolor_control', array(
-							'label'=> __('Texto principal', 'informatica_pereyra'),
+							'label'=> __('Texto cabecera', 'informatica_pereyra'),
 							'section'=> 'ip_section_styles_tipography',
 							'settings'=> 'ip_tipography_primarycolor'
 
@@ -1461,7 +1461,7 @@
 		// 11) Corp texts
 
 			$wp_customize->add_section('ip_section_text', array(
-				'title'=> __('Textos corporativos', 'informatica_pereyra'),
+				'title'=> __('Footer', 'informatica_pereyra'),
 				'priority' => 9
 			));
 

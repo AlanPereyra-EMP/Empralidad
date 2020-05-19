@@ -120,7 +120,7 @@
 	        }
 
 					/* Tipography */
-					.color-personalized, h1.text-mobile{
+					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab{
 	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
