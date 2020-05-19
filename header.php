@@ -78,7 +78,7 @@
 		            </a>
 	            <?php } else { ?>
                     <a class=" mx-auto" href="<?php echo home_url(); ?>">
-    	                <h4 class="p-3"><?php bloginfo(); ?></h4>
+    	                <h2 class="p-3 color-personalized"><?php bloginfo(); ?></h2>
                     </a>
 	            <?php } ?>
 	        <!-- end if logo -->
