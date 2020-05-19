@@ -1,4 +1,4 @@
-<section class="card p-0 to-fade to-fadein-animation border-30px">
+<section class="card p-0 to-fade to-fadein-animation border-30px bg-personalized-secondary">
     <div class="card-header"> <?php the_category(', '); ?> </div>
     <!-- body -->
         <div class="card-block">
@@ -11,13 +11,13 @@
                     <div class="carousel-caption d-flex header-text1 h-100 <?php if ($filter_slide1 === 'color') { ?> bg-title-content-color <?php }else{ ?> bg-title-content-dark <?php } ?>"></div>
                     <div class="carousel-caption d-flex header-text1">
                         <h2 class="container-fluid my-auto d-block mh-100-auto">
-                            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                            <a href="<?php the_permalink(); ?>"><h2 class="color-personalized"><?php the_title(); ?></h2></a>
                         </h2>
                     </div>
                 </div>
         <?php } else { ?>
                 <div class=" py-5 text-center text-justify bg-personalized">
-                    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                    <a href="<?php the_permalink(); ?>"><h2 class="color-personalized"><?php the_title(); ?></h2></a>
                 </div>
         <?php } ?>
     <!-- end img -->
@@ -25,7 +25,7 @@
                 <?php the_content( 'Continuar leyendo ' . get_the_title() ); ?>
             </div>
         </div>
-        <div class="card-footer text-muted">
+        <div class="card-footer">
             <small><?php the_date(); ?> / Autor: <?php the_author(); ?> / <?php the_tags(); ?> </small>
         </div>
     <!-- end body -->

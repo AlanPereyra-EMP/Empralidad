@@ -11,18 +11,18 @@
                     <div class="carousel-caption d-flex header-text1 h-100 <?php if ($filter_slide1 === 'color') { ?> bg-title-content-color <?php }else{ ?> bg-title-content-dark <?php } ?>"></div>
                     <div class="carousel-caption d-flex header-text1">
                         <h2 class="container-fluid my-auto d-block mh-100-auto">
-                            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                            <a href="<?php the_permalink(); ?>"><h2 class="color-personalized"><?php the_title(); ?></h2></a>
                         </h2>
                     </div>
                 </div>
         <?php } else { ?>
                 <div class=" py-5 text-center text-justify  bg-personalized">
-                    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                    <a href="<?php the_permalink(); ?>"><h2 class="color-personalized"><?php the_title(); ?></h2></a>
                 </div>
         <?php } ?>
     <!-- end img -->
             <br>
-            <div class="card-text p-3 text-dark">
+            <div class="card-text p-3">
                 <?php the_excerpt(); ?>
             </div>
             <a href="<?php the_permalink(); ?>">

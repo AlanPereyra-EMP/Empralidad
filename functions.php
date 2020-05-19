@@ -101,6 +101,7 @@
 		?>
 
 	    <style type="text/css">
+					/* backgrounds */
 	        .dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order,span.onsale {
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
@@ -114,18 +115,42 @@
 					.tutor-single-lesson-wrap{
 						border-top: 70px solid <?php echo get_theme_mod('ip_background_primary'); ?> !important;
 					}
+					.the_post_thumbnail{
+	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
+	        }
+
+					/* Tipography */
+					.color-personalized, h1.text-mobile{
+	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+	        }
+					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
+						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+					}
+					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link{
+						color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
+					}
 					body, .fa-text{
 						font-family: '<?php echo get_theme_mod('ip_styles_tipography'); ?>';
 					}
 					body{
 						font-size: <?php echo get_theme_mod('ip_styles_tipography_size'); ?>px;
 					}
-					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
-						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+					@media (min-width: 577px) {
+					  .text-mobile {
+					    font-size: <?php echo (get_theme_mod('ip_head_text_title_size') - 80) ?>px!important;
+					  }
 					}
-					section, article, .woocommerce-loop-product__title{
-						color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
+					@media (min-width: 992px) {
+					  .text-mobile {
+					    font-size: <?php echo get_theme_mod('ip_head_text_title_size'); ?>px!important;
+					  }
 					}
+					.text-mobile {
+					    font-size: <?php echo (get_theme_mod('ip_head_text_title_size') - 130) ?>px;
+							word-wrap: break-word;
+					}
+
+					/* Borders */
 					.btn-outline-light{
 						border: 1px <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> solid;
 					}
@@ -149,14 +174,8 @@
 						    margin-left: -8px!important;
 						}
 					<?php } ?>
-	        .color-personalized{
-	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
-	        }
-					.tutor-wrap.tutor-courses-wrap.tutor-container {
-					    margin: 0;
-					    max-width: inherit;
-					    min-height: 75vh;
-					}
+
+					/* Buttons */
 	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>;
@@ -169,9 +188,8 @@
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
 	        }
-	        .the_post_thumbnail{
-	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
-	        }
+
+					/* Shadows */
 					<?php if (get_theme_mod('ip_styles_text_shadow') === 'true'){ ?>
 						.text-shadow-6{
 							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);

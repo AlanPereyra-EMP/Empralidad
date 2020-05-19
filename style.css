@@ -935,15 +935,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		display: none;
 	}
 /*14) Mobile first*/
-	@media (min-width: 992px) {
-	  .text-mobile {
-	    font-size: 100px !important;
-	  }
-	}
-	.text-mobile {
-	    font-size: 43px;
-			word-wrap: break-word;
-	}
 	.buttons-mobile{
 		background: rgba(250, 250, 250, 0.9);
 		height: 38px!important;
