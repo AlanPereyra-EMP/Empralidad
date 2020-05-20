@@ -320,12 +320,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	.wp-block-group {
 	    padding: 30px 0px;
 	}
-	.has-background, .has-background strong, .has-background h2, .has-background h3, .has-background h4, .has-background h5, .has-background h6{
-		color: #fff!important;
-	}
-	.has-very-light-gray-background-color, .has-very-light-gray-background-color strong, .has-very-light-gray-background-color h2, .has-very-light-gray-background-color h3, .has-very-light-gray-background-color h4, .has-very-light-gray-background-color h5, .has-very-light-gray-background-color h6{
-		color: #262626!important;
-	}
 	div.audio-content figure, div.audio-content figcaption {
 		margin-bottom: 0!important;
 	}
