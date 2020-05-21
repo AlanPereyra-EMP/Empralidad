@@ -1072,12 +1072,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   -khtml-opacity: .2;
 	opacity: .2;
 }
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: #eee;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #ccc;
+} */
+.summary.entry-summary p.price::-webkit-scrollbar{
+	display: none;
 }
 /*19) Ecommerce*/
 #btn-cart-on{

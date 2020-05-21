@@ -102,14 +102,10 @@
 
 	    <style type="text/css">
 					/* backgrounds */
-	        .dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order,span.onsale {
-	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
-	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
-	        }
-	        .bg-personalized, th, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body{
+	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track{
 	        	background-color: <?php echo get_theme_mod('ip_background_primary'); ?> !important;
 	        }
-					.bg-personalized-secondary {
+					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
 						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
 					}
 					.tutor-single-lesson-wrap{
@@ -149,6 +145,12 @@
 					    font-size: <?php echo (get_theme_mod('ip_head_text_title_size') - 130) ?>px;
 							word-wrap: break-word;
 					}
+
+					/* Special items */
+					.dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order,span.onsale, th {
+	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
+	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
+	        }
 
 					/* Borders */
 					.btn-outline-light{
