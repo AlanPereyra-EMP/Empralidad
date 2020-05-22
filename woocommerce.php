@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-  <style>
-    .product_title {display: none;}
-  </style>
     <!-- Title -->
         <div class="container-fluid pt-5 pb-3 text-center text-justify">
         </div>
