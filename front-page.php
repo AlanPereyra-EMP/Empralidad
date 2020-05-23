@@ -96,7 +96,7 @@
     <!-- Content -->
     <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
         <!-- If texts exists -->
-            <div class="row mx-auto bg-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation show-until-md border-30px">
+            <div class="row mx-auto bg-personalized color-personalized shadow-grey-up-down text-shadow-6 to-fade to-fadein-animation show-until-md border-30px">
                 <!-- Text 1 -->
                     <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
                     $logo = get_theme_mod('ip_head_logo');
@@ -105,10 +105,10 @@
                         $img = get_theme_mod('ip_homepage_img1'); ?>
                         <div class="py-3 col-12 col-md-4 mx-auto my-auto bg-personalized border-30px" >
                             <h2 class="text-center">
-                                <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
+                                <span class=""><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                             </h2>
                             <img class="aligncenter no-shadow wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
-                            <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
+                            <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
                                 <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text1') ?>
                             </p>
@@ -132,10 +132,10 @@
                         $img = get_theme_mod('ip_homepage_img2'); ?>
                         <div class="py-3 col-12 col-md-4 mx-auto my-auto bg-personalized text-shadow-6">
                             <h2 class="text-center">
-                                <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
+                                <span class=""><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                             </h2>
                             <img class="aligncenter no-shadow wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
-                            <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling2'); ?> " >
+                            <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling2'); ?> " >
                                 <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text2') ?>
                             </p>
@@ -157,12 +157,12 @@
 
                     if ($ip_homepage_show == 'true'){
                         $img = get_theme_mod('ip_homepage_img3'); ?>
-                        <div class="py-3 bg-personalized text-white col-12 col-md-4 mx-auto my-auto text-shadow-6" >
+                        <div class="py-3 bg-personalized col-12 col-md-4 mx-auto my-auto text-shadow-6" >
                             <h2 class="text-center" >
-                                <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
+                                <span class=""><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                             </h2>
                             <img class="aligncenter no-shadow wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?>" src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" alt="" width="20" height="20" />
-                            <p class="p-2 mw-100 text-white text-<?php echo get_theme_mod('ip_homepage_text_aling3'); ?> " >
+                            <p class="p-2 mw-100  text-<?php echo get_theme_mod('ip_homepage_text_aling3'); ?> " >
                                 <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
                                 <?php echo get_theme_mod('ip_homepage_text3') ?>
                             </p>
@@ -191,7 +191,7 @@
                 <?php $ip_show2 = get_theme_mod('ip_homepage_show2'); ?>
                 <?php $ip_show3 = get_theme_mod('ip_homepage_show3'); ?>
                 <?php if($ip_show1 === 'true'||$ip_show2 === 'true'||$ip_show3 === 'true'){ ?>
-                    <div class="col-12 col-md-3 mx-auto px-0 shadow-grey-up-down-1 bg-personalized min-h-100 show-from-md border-30px left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
+                    <div class="col-12 col-md-3 mx-auto px-0 color-personalized shadow-grey-up-down-1 bg-personalized min-h-100 show-from-md border-30px left-featured-text <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>">
                         <div style="max-height: 95vh;">
                             <!-- Text 1 -->
                                 <?php $ip_homepage_show = get_theme_mod('ip_homepage_show1');
@@ -199,9 +199,9 @@
 
                                 if ($ip_homepage_show == 'true'){
                                     $img = get_theme_mod('ip_homepage_img1'); ?>
-                                    <div class="py-3 text-white mx-auto my-auto text-shadow-6" >
+                                    <div class="py-3 mx-auto my-auto text-shadow-6" >
                                         <h2 class="text-center">
-                                            <span class="text-white"><?php echo get_theme_mod('ip_homepage_title1') ?></span>
+                                            <span class=""><?php echo get_theme_mod('ip_homepage_title1') ?></span>
                                         </h2>
                                         <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling1'); ?> " >
                                             <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img1')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
@@ -225,9 +225,9 @@
 
                             if ($ip_homepage_show == 'true'){
                                 $img = get_theme_mod('ip_homepage_img2'); ?>
-                                <div class="py-3 text-white mx-auto my-auto text-shadow-6">
+                                <div class="py-3  mx-auto my-auto text-shadow-6">
                                     <h2 class="text-center">
-                                        <span class="text-white"><?php echo get_theme_mod('ip_homepage_title2') ?></span>
+                                        <span class=""><?php echo get_theme_mod('ip_homepage_title2') ?></span>
                                     </h2>
                                     <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling2'); ?> " >
                                         <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img2')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
@@ -251,9 +251,9 @@
 
                                 if ($ip_homepage_show == 'true'){
                                     $img = get_theme_mod('ip_homepage_img3'); ?>
-                                    <div class="py-3 text-white mx-auto my-auto text-shadow-6" >
+                                    <div class="py-3 mx-auto my-auto text-shadow-6" >
                                         <h2 class="text-center" >
-                                            <span class="text-white"><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
+                                            <span class=""><?php echo get_theme_mod('ip_homepage_title3'); ?></span>
                                         </h2>
                                         <p class="p-2 mw-100 text-<?php echo get_theme_mod('ip_homepage_text_aling3'); ?> " >
                                             <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_homepage_img3')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>

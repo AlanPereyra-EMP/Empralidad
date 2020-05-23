@@ -415,7 +415,7 @@
 				));
 				// Backgrounds
 					$wp_customize->add_section('ip_section_styles_background', array(
-						'title'=> __('Fondos', 'informatica_pereyra'),
+						'title'=> __('Colores de fondos', 'informatica_pereyra'),
 						'priority' => 1,
 						'panel' => 'ip_panel_styles'
 					));
@@ -455,7 +455,7 @@
 					));
 					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_background_secondary_transparency_control', array(
 											'label'          => __( 'Transparencia', 'informatica_pereyra' ),
-											'description'=> __( 'Transparecnia de fondo secundario', 'informatica_pereyra' ),
+											'description'=> __( 'Transparencia de fondo secundario', 'informatica_pereyra' ),
 											'section'        => 'ip_section_styles_background',
 											'settings'       => 'ip_background_secondary_transparency',
 											'type'           => 'radio',
@@ -464,40 +464,61 @@
 												'ff' => __( 'Desactivar', 'informatica_pereyra' )
 											)
 					)));
+				// end backgrounds
+				// Media background
+					$wp_customize->add_section('ip_section_ip_background_media', array(
+						'title'=> __('Imagen/Video de fondo', 'informatica_pereyra'),
+						'priority' => 2,
+						'panel' => 'ip_panel_styles'
+					));
 					// Video background 1
-						$wp_customize->add_setting('ip_background_video', array(
+						$wp_customize->add_setting('ip_background_media_video', array(
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string',
 
 						));
 
-						$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'ip_background_video_control', array(
+						$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'ip_background_media_video_control', array(
 							'mime_type' => 'video',
 							'label'=> __('Video de  fondo', 'informatica_pereyra'),
-							'section'=> 'ip_section_styles_background',
-							'settings'=> 'ip_background_video',
+							'section'=> 'ip_section_ip_background_media',
+							'settings'=> 'ip_background_media_video',
 							'description'=> __( 'Seleciona un video de fondo (adaptativo)', 'informatica_pereyra' )
 						)));
 					// end video background
+					// Image background 1
+						$wp_customize->add_setting('ip_background_media_image', array(
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string',
+
+						));
+
+						$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'ip_background_media_image_control', array(
+							'mime_type' => 'image',
+							'label'=> __('Imagen de  fondo', 'informatica_pereyra'),
+							'section'=> 'ip_section_ip_background_media',
+							'settings'=> 'ip_background_media_image',
+							'description'=> __( 'Seleciona una imagen de fondo (png)', 'informatica_pereyra' )
+						)));
+					// end image background
 					// filter-brightness 1
-						$wp_customize->add_setting('ip_background_video_filter', array(
-							'default' => 'false',
+						$wp_customize->add_setting('ip_background_media_filter', array(
+							'default' => '1',
 							'trasnport' => 'refresh',
 							'sanitize_callback' => 'sanitize_string'
 						));
-						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ip_head_filter_control1', array(
-												'label'          => __( 'Oscurecer', 'informatica_pereyra' ),
-												'section'        => 'ip_section_styles_background',
-												'settings'       => 'ip_background_video',
-												'type'           => 'radio',
-												'choices'        => array(
-													'dark'   => __( 'Oscurecer imagen', 'informatica_pereyra' ),
-													'color'   => __( 'Color principal', 'informatica_pereyra' ),
-														'false' => __( 'Por defecto', 'informatica_pereyra' )
+						$wp_customize->add_control('ip_background_media_filter_control1', array(
+												'label'          => __( 'Opacidad', 'informatica_pereyra' ),
+												'section'        => 'ip_section_ip_background_media',
+												'settings'       => 'ip_background_media_filter',
+												'type'					 => 'range',
+												'input_attrs' 	 => array(
+													'min' => 0.01,
+													'max' => 1,
+													'step' => 0.01,
 												)
-						)));
+						));
 					// end filter-brightness 1
-				// end backgrounds
 				//Tipography
 					$wp_customize->add_section('ip_section_styles_tipography', array(
 						'title'=> __('Tipografía', 'informatica_pereyra'),

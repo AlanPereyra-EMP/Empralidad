@@ -114,6 +114,13 @@
 					.the_post_thumbnail{
 	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 	        }
+					.ip-background-image{
+						background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_background_media_image')); ?>) center;
+						height: 100vh
+					}
+					.ip-background-media-filter{
+						opacity: <?php echo get_theme_mod('ip_background_media_filter'); ?>
+					}
 
 					/* Tipography */
 					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab{

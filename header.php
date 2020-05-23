@@ -116,10 +116,9 @@
         </nav>
         <i id="bg-menu-mobile"></i>
     <!-- end navbar -->
-    <?php $filter_slide1 = get_theme_mod('ip_head_filter1'); ?>
     <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto bg-personalized">
-      <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>">
-        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_slide1')); ?>" poster="" class="ip-video-background">
+      <div class="ip-background-image ip-background-media-filter">
+        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('ip_background_media_video')); ?>" poster="" class="ip-video-background">
 
         </video>
       </div>
