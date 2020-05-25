@@ -518,7 +518,23 @@
 													'step' => 0.01,
 												)
 						));
-					// end filter-brightness 1
+					// Background image size
+						$wp_customize->add_setting('ip_background_media_filter', array(
+							'default' => '1',
+							'trasnport' => 'refresh',
+							'sanitize_callback' => 'sanitize_string'
+						));
+						$wp_customize->add_control('ip_background_media_filter_control1', array(
+												'label'          => __( 'Opacidad', 'informatica_pereyra' ),
+												'section'        => 'ip_section_ip_background_media',
+												'settings'       => 'ip_background_media_filter',
+												'type'					 => 'range',
+												'input_attrs' 	 => array(
+													'min' => 0.01,
+													'max' => 1,
+													'step' => 0.01,
+												)
+						));
 				//Tipography
 					$wp_customize->add_section('ip_section_styles_tipography', array(
 						'title'=> __('Tipografía', 'informatica_pereyra'),

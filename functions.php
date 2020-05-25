@@ -164,7 +164,7 @@
 						border: 1px <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> solid;
 					}
 					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
-						article{
+						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img{
 							border-radius: 30px;
 						}
 						.sfpo-table thead th {
