@@ -7,6 +7,10 @@
         .woocommerce div.product{
           margin-top: -150px;
         }
+        .woocommerce-notices-wrapper {
+            margin-bottom: 180px;
+            margin-top: -80px;
+        }
       }
     </style>
     <!-- Title -->

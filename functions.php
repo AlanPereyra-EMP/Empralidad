@@ -171,7 +171,7 @@
 						    border-radius: 10px 10px 0 0;
 						}
 						.btn,.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
-						.tutor-cart-box-login-form-inner{
+						.tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper{
 							border-radius: 30px;
 						}
 						.tutor-single-lesson-wrap {
