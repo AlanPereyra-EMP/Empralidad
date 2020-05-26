@@ -7,7 +7,7 @@
         .woocommerce div.product{
           margin-top: -150px;
         }
-        .woocommerce-notices-wrapper {
+        .woocommerce-error, .woocommerce-info, .woocommerce-message {
             margin-bottom: 180px;
             margin-top: -80px;
         }
