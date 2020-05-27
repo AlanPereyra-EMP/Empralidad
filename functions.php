@@ -102,10 +102,10 @@
 
 	    <style type="text/css">
 					/* backgrounds */
-	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track{
+	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product{
 	        	background-color: <?php echo get_theme_mod('ip_background_primary'); ?> !important;
 	        }
-					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
+					.bg-personalized-secondary, ::-webkit-scrollbar-thumb, .woocommerce span.onsale{
 						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
 					}
 					.tutor-single-lesson-wrap{
@@ -123,13 +123,13 @@
 					}
 
 					/* Tipography */
-					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab{
+					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title{
 	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
 						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 					}
-					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link{
+					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link, .woocommerce-MyAccount-content a{
 						color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
 					}
 					body, .fa-text{
@@ -154,24 +154,25 @@
 					}
 
 					/* Special items */
-					.dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order,span.onsale, th {
+					.dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order, th {
 	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
 	        }
 
 					/* Borders */
-					.btn-outline-light{
+					.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button{
 						border: 1px <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> solid;
 					}
 					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
-						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img{
-							border-radius: 30px;
+						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,
+						a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button{
+							border-radius: 30px!important;
 						}
 						.sfpo-table thead th {
 						    border-radius: 10px 10px 0 0;
 						}
 						.btn,.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
-						.tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message{
+						.tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message, li.product.type-product{
 							border-radius: 30px;
 						}
 						.tutor-single-lesson-wrap {

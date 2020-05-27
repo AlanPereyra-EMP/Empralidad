@@ -8,8 +8,8 @@
           margin-top: -150px;
         }
         .woocommerce-error, .woocommerce-info, .woocommerce-message {
-            margin-bottom: 180px;
-            margin-top: -80px;
+            margin-bottom: 180px!important;
+            margin-top: -80px!important;
         }
       }
     </style>
