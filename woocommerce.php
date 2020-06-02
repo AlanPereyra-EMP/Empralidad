@@ -12,6 +12,22 @@
             margin-top: -80px!important;
         }
       }
+      @media (max-width: 575px){
+        .woocommerce span.onsale{
+          top: -2px;
+          right: -2px;
+          left: auto;
+          border-radius: 0 50%;
+          margin: -.5em -.5em 0 0;
+        }
+      }
+      @media(min-width: 769px){
+        .woocomerce span .onsale{
+          top:-.5em;
+          left:-.5em;
+          border-radius: 0!important;
+        }
+      }
     </style>
     <!-- Title -->
         <div class="container-fluid pt-5 pb-3 text-center text-justify">

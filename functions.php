@@ -102,10 +102,10 @@
 
 	    <style type="text/css">
 					/* backgrounds */
-	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product{
+	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product, .woocommerce span.onsale{
 	        	background-color: <?php echo get_theme_mod('ip_background_primary'); ?> !important;
 	        }
-					.bg-personalized-secondary, ::-webkit-scrollbar-thumb, .woocommerce span.onsale{
+					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
 						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
 					}
 					.tutor-single-lesson-wrap{
@@ -123,13 +123,13 @@
 					}
 
 					/* Tipography */
-					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title{
+					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title, .woocommerce span.onsale{
 	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
 						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
 					}
-					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link, .woocommerce-MyAccount-content a{
+					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link, .woocommerce-MyAccount-content a,.woocommerce div.product p.price{
 						color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
 					}
 					body, .fa-text{
