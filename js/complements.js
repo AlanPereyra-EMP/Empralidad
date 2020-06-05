@@ -321,8 +321,8 @@ if (stopAudio3){
 }
 
 
-// woocomerce remove columns on front page
+// woocomerce columns
 $(window).ready(function() {
-  var exist = $('#woo_featured_products ul');
-    exist.removeClass("columns-3");
+  $('#woo_featured_products ul').removeClass("columns-3");
+  $('.products .columns-4').addClass('columns-2');
 });
