@@ -4,7 +4,7 @@
         RichText = editor.RichText;
 
     function RandomImage( props ) {
-        var src = 'http://localhost/wordpress/wp-content/uploads/2019/01/fondo-ip-150x150.png';
+        var src = 'http://localhost/wordpress/wp-content/uploads/2019/01/fondo-emp-150x150.png';
 
         return el( 'img', {
             src: src,
@@ -13,7 +13,7 @@
         } );
     }
 
-    blocks.registerBlockType( 'ip-blocks/number-image', {
+    blocks.registerBlockType( 'emp-blocks/number-image', {
         title: 'IP List items',
 
         icon: 'editor-ol',

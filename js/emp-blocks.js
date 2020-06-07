@@ -2,12 +2,12 @@
     var el = wp.element.createElement;
 
 
-    wp.blocks.registerBlockStyle( 'ip-blocks/lists-items', {
-        name: 'ip-style',
+    wp.blocks.registerBlockStyle( 'emp-blocks/lists-items', {
+        name: 'emp-style',
         label: 'Invertido',
     } );
 
-    wp.blocks.registerBlockType( 'ip-blocks/lists-items', {
+    wp.blocks.registerBlockType( 'emp-blocks/lists-items', {
         title: 'EMP List items',
 
         icon: 'editor-ol',
@@ -37,7 +37,7 @@
             }
 
 
-            return el('div', {className: 'py-5 ip-block'},
+            return el('div', {className: 'py-5 emp-block'},
                     el('div',{className: 'list-item'},
                       el('div', {className: 'col text'},
                         el('div', {className: 'list-text'},
@@ -58,7 +58,7 @@
         },
 
         save: function( props ) {
-            return el('div', {className: 'py-5 ip-block'},
+            return el('div', {className: 'py-5 emp-block'},
                     el('div',{className: 'list-item'},
                       el('div', {className: 'col text'},
                         el('div', {className: 'list-title'},
