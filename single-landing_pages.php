@@ -22,7 +22,7 @@
         document.body.appendChild(element1);
 
         var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-ip.css";
+        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-emp.css";
         element2.rel = 'stylesheet';
         document.body.appendChild(element2);
 
@@ -55,14 +55,14 @@
 
     <?php wp_head(); ?>
 
-    <?php echo get_theme_mod('ip_face_text');
-          echo get_theme_mod('ip_google_text'); ?>
+    <?php echo get_theme_mod('emp_face_text');
+          echo get_theme_mod('emp_google_text'); ?>
   </head>
   <body <?php body_class() ?>>
 
     <!-- Page content  -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-        <div class="pt-5 p-md-3 no-shadow text-white" style="background:<?php echo get_theme_mod('ip_footer_color'); ?>;">
+        <div class="pt-5 p-md-3 no-shadow text-white" style="background:<?php echo get_theme_mod('emp_footer_color'); ?>;">
           <div class="mt-5 col-lg-6 mx-auto landing-content"><?php the_content();?></div>
         </div>
     <?php endwhile; endif; ?>

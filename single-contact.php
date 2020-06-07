@@ -24,8 +24,8 @@
     </script>
 
     <?php wp_head(); ?>
-    <?php echo get_theme_mod('ip_face_text');
-          echo get_theme_mod('ip_google_text'); ?>
+    <?php echo get_theme_mod('emp_face_text');
+          echo get_theme_mod('emp_google_text'); ?>
   </head>
   <body <?php body_class() ?>>
     <style>
@@ -34,8 +34,8 @@
       }
     </style>
     <!-- Page content  -->
-    <?php $filter_slide1 = get_theme_mod('ip_head_filter1'); ?>
-    <div class="ip_img_slide1" style="position: fixed;top: 0;right: 0;left: 0;">
+    <?php $filter_slide1 = get_theme_mod('emp_head_filter1'); ?>
+    <div class="emp_img_slide1" style="position: fixed;top: 0;right: 0;left: 0;">
       <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
     </div>
         <div class="mx-auto col-sm-9 col-md-7 col-lg-5 py-md-5 px-0">

@@ -9,47 +9,47 @@
             	<!-- Social buttons -->
 	            	<div class="container-fluid p-3 color-personalized fa-2x">
 		            	<!-- Facebook -->
-			            	<?php $facebook_link = get_theme_mod('ip_social_face_text');
+			            	<?php $facebook_link = get_theme_mod('emp_social_face_text');
 			                    if ($facebook_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_face_text'); ?>" class="fab fa-facebook-f"></a><?php
+			                    	?><a href="<?php echo get_theme_mod('emp_social_face_text'); ?>" class="fab fa-facebook-f"></a><?php
 			                    }
 			                ?>
 			            <!-- Instagram -->
-			            	<?php $instagram_link = get_theme_mod('ip_social_insta_text');
+			            	<?php $instagram_link = get_theme_mod('emp_social_insta_text');
 			                    if ($instagram_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_insta_text'); ?>" class="fab fa-instagram"></a><?php
+			                    	?><a href="<?php echo get_theme_mod('emp_social_insta_text'); ?>" class="fab fa-instagram"></a><?php
 			                    }
 			                ?>
 			            <!-- Twiter -->
-			            	<?php $twitter_link = get_theme_mod('ip_social_tw_text');
+			            	<?php $twitter_link = get_theme_mod('emp_social_tw_text');
 			                    if ($twitter_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_tw_text'); ?>" class="fab fa-twitter"></a><?php
+			                    	?><a href="<?php echo get_theme_mod('emp_social_tw_text'); ?>" class="fab fa-twitter"></a><?php
 			                    }
 			                ?>
 			            <!-- Youtube -->
-			            	<?php $youtube_link = get_theme_mod('ip_social_yt_text');
+			            	<?php $youtube_link = get_theme_mod('emp_social_yt_text');
 			                    if ($youtube_link){
-			                    	?><a href="<?php echo get_theme_mod('ip_social_yt_text'); ?>" class="fab fa-youtube"></a><?php
+			                    	?><a href="<?php echo get_theme_mod('emp_social_yt_text'); ?>" class="fab fa-youtube"></a><?php
 			                    }
 			                ?>
 		            </div>
             	<!-- end social buttons -->
-                <p><?php echo get_theme_mod('ip_footer_text'); ?></p>
-                <p><small><a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_term')); ?>" class="color-personalized">Terminos y Condiciones</a> -
-                <a href="<?php echo get_permalink(get_theme_mod('ip_headline_link_poli')); ?>" class="color-personalized">Politicas de Privacidad</a></small></p>
+                <p><?php echo get_theme_mod('emp_footer_text'); ?></p>
+                <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_term')); ?>" class="color-personalized">Terminos y Condiciones</a> -
+                <a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_poli')); ?>" class="color-personalized">Politicas de Privacidad</a></small></p>
                 <!-- Owner -->
-                    <p><small>Desarrollado por</small> <b>Alan Pereyra</b></p>
+                    <p><small>Desarrollado por</small> <a href="https://empralidad.com"><b>Empralidad</b></a></p>
                 <!-- end owner -->
                 <br>
-                <?php echo get_theme_mod('ip_qr_text') ?>
+                <?php echo get_theme_mod('emp_qr_text') ?>
                 <br>
         </footer>
     <!-- end footer -->
     <!-- Button permanent desktop -->
         <div class="show-btn-fixed">
-            <?php  $perma_button = get_theme_mod('ip_what_text'); ?>
+            <?php  $perma_button = get_theme_mod('emp_what_text'); ?>
             <?php if ($perma_button) { ?>
-            	<div class="img-fixed show-desktop"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('ip_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20desde%20<?php echo str_replace(' ', '%20', wp_title('', false));?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="ip-whatsapp"></a></div>
+            	<div class="img-fixed show-desktop"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20desde%20<?php echo str_replace(' ', '%20', wp_title('', false));?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="ip-whatsapp"></a></div>
             <?php } ?>
             	<div class="img-fixed" id="scrollToTopButton"><i class="fas fa-arrow-up img-btn-fixed <?php if ($perma_button) { ?> show-mobile <?php } ?>"></i></div>
         </div>
@@ -62,15 +62,15 @@
             <!-- Home-->
                 <a href="<?php echo home_url(); ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
             <!-- User -->
-                <?php $user_link = get_theme_mod('ip_mobile_user_text');
+                <?php $user_link = get_theme_mod('emp_mobile_user_text');
                     if ($user_link){ ?>
-                        <a href="<?php echo get_theme_mod('ip_mobile_user_text'); ?>" class="fa-dark fa fa-user mx-auto">
+                        <a href="<?php echo get_theme_mod('emp_mobile_user_text'); ?>" class="fa-dark fa fa-user mx-auto">
                             <span class="fa-text">Ingresar</span>
                         </a>
                     <?php }
                 ?>
             <!-- Cart -->
-                <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
+                <?php $cart_link = get_theme_mod('emp_mobile_cart_text');
                     if (class_exists('WooCommerce') && $cart_link == 'true'){ ?>
                         <a id="btn-woocommerce-cart" onclick="showWoocommerceCart();" class="fa-dark fa fa-shopping-cart mx-auto <?php if ((WC()->cart->get_cart_contents_count()) > 0) { ?> fadein <?php } ?>" >
                             <span id="span-woocommerce-cart" class="fa-text">Carrito</span>
@@ -82,14 +82,14 @@
 
                     <?php } ?>
             <!-- Whatsapp -->
-                <?php $wp_link_ip = get_theme_mod('ip_mobile_whatsapp_text');
+                <?php $wp_link_ip = get_theme_mod('emp_mobile_whatsapp_text');
                     if ($wp_link_ip == 'true' && $perma_button){ ?>
-                        <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('ip_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20<?php echo str_replace(' ', '%20', wp_title('', false));?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
+                        <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_what_text'); ?>&text=Hola%20tengo%20una%20consulta%20<?php echo str_replace(' ', '%20', wp_title('', false));?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
                             <span class="fa-text">Whatsapp</span>
                         </a>
                     <?php } ?>
             <!-- Search Form -->
-                <?php $search_link = get_theme_mod('ip_mobile_search_text');
+                <?php $search_link = get_theme_mod('emp_mobile_search_text');
                     if ($search_link == 'true'){ ?>
                         <a id="btn-searchform" class="fa-dark fa fa-search mx-auto" onclick="showSearchBackground();">
                             <span id="span-searchform" class="fa-text">Buscar</span>
@@ -116,7 +116,12 @@
         var element1 = document.createElement("script");
         element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
         document.body.appendChild(element1);
+
+        var element2 = document.createElement("script");
+        element2.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/emp-blocks.js";
+        document.body.appendChild(element2);
         }
+
         if (window.addEventListener){
         window.addEventListener("load", downloadJSAtOnload, false);
         }else if (window.attachEvent){

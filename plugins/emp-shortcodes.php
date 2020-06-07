@@ -1,10 +1,10 @@
 <?php
 // SFPO "Shortcode for prices options"
 
-if(!shortcode_exists('ip_table')) {
-    function ip_table_shortcode($atts) {
+if(!shortcode_exists('emp_table')) {
+    function emp_table_shortcode($atts) {
 
-    	// [ip_table 1st="Eco" 2nd="Profesional" 3rd="Premium" values="Description|false|true|true;Description 2|some text|more text|and more text"]
+    	// [emp_table 1st="Eco" 2nd="Profesional" 3rd="Premium" values="Description|false|true|true;Description 2|some text|more text|and more text"]
 
     	// atts
     	$atributes = shortcode_atts( array(
@@ -134,13 +134,13 @@ if(!shortcode_exists('ip_table')) {
 			        '</table>
 		        </div>';
     }
-    add_shortcode('ip_table', 'ip_table_shortcode');
+    add_shortcode('emp_table', 'emp_table_shortcode');
 }
 
 
 // Resent posts
-if(!shortcode_exists('ip_posts')) {
-function ip_postsbycategory($atts) {
+if(!shortcode_exists('emp_posts')) {
+function emp_postsbycategory($atts) {
 
   $attributes = shortcode_atts( array(
     'posts' => '4',
@@ -171,7 +171,7 @@ function ip_postsbycategory($atts) {
                 $post_category_id = get_cat_ID( $post_category );
                 $post_category_link = get_category_link( $post_category_id );
 
-                $post_filter = get_theme_mod('ip_img_filter1');
+                $post_filter = get_theme_mod('emp_img_filter1');
                 $post_thumbnail = get_the_post_thumbnail();
                 $post_permalink = get_the_permalink();
                 $post_title = get_the_title();
@@ -262,6 +262,6 @@ function ip_postsbycategory($atts) {
 }
 
 // Add a shortcode
-add_shortcode('ip_posts', 'ip_postsbycategory');
+add_shortcode('emp_posts', 'emp_postsbycategory');
 }
 ?>

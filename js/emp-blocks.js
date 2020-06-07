@@ -8,7 +8,7 @@
     } );
 
     wp.blocks.registerBlockType( 'ip-blocks/lists-items', {
-        title: 'IP List items',
+        title: 'EMP List items',
 
         icon: 'editor-ol',
 

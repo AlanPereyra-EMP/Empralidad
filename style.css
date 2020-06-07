@@ -1,12 +1,12 @@
 /*
-Theme Name: Informatica Pereyra - Theme
+Theme Name: Empralidad - Theme
 Author: Alan Pereyra
-Author URI: https://informatica.pereyra.online/alanpereyra57
-Description: Inforatica Pereyra es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
-Version: 2.3.3
+Author URI: https://empralidad.com.ar/alanpereyra
+Description: Empralidad es un tema integramente hecho por Alan Pereyra para cubrir las necesidades de desarrollo online de sus clientes. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho en PHP, CSS, HTML5 y Javascript.
+Version: 2.3.4
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: informatica_pereyra
+Text Domain: empralidad
 Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, theme-options
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -103,23 +103,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 	}
 	/*Backgrown header*/
-	.ip-video-background{
+	.emp-video-background{
 		filter: blur(5px);
 	}
 	@media (min-aspect-ratio: 16/9){
-		.ip-video-background{
+		.emp-video-background{
 			width: 100%;
 			height: auto;
 		}
 	}
 	@media (max-aspect-ratio: 16/9){
-		.ip-video-background{
+		.emp-video-background{
 			width: auto;
 			height: 100vh;
 		}
 	}
 	@media(max-aspect-ratio: 1/1){
-		.ip-video-background{
+		.emp-video-background{
 			position: fixed;
 			left: 50%;
 			margin-left: -100vw;
@@ -314,7 +314,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border-top: 3px solid;
 	}
 	section h2, section h3, section h4, section h5, section h6, section p,
-	article h2, article h3, article h4, article h5, article h6, article p, #ip-single-info {
+	article h2, article h3, article h4, article h5, article h6, article p, #emp-single-info {
 		padding: 0px 20px;
 	}
 	.wp-block-group {
@@ -877,7 +877,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		-khtml-opacity: 0;
 		opacity: 0;
 	}
-	@-webkit-keyframes ipFadeIn {
+	@-webkit-keyframes empFadeIn {
 			0% {
 				transform: translate(0%, -50%);
 			}
@@ -886,7 +886,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 				transform: translate(0%, 0%);
 			}
     }
-	@keyframes ipFadeIn {
+	@keyframes empFadeIn {
       0% {
         transform: translate(0%, -50%);
       }
@@ -895,23 +895,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 				transform: translate(0%, 0%);
       }
     }
-    .ipFadein{
-			-khtml-animation-name: ipFadeIn;
+    .empFadein{
+			-khtml-animation-name: empFadeIn;
 			-khtml-animation-duration: 1s;
-			-webkit-animation-name: ipFadeIn;
+			-webkit-animation-name: empFadeIn;
 			-webkit-animation-duration: 1s;
-        animation-name: ipFadeIn;
+        animation-name: empFadeIn;
         animation-duration: 1s;
     }
 	.faded, .product h1, .product p, .product ul, .product li, .product img, .faded p, .faded ul, .faded li, .faded img, .faded a{
 		-webkit-opacity: 1!important;
 		-khtml-opacity: 1!important;
 		opacity: 1!important;
-		-khtml-animation-name: ipFadeIn
+		-khtml-animation-name: empFadeIn
 		-khtml-animation-duration: .5s;
-		-webkit-animation-name: ipFadeIn;
+		-webkit-animation-name: empFadeIn;
 	  -webkit-animation-duration: .5s;
-		animation-name: ipFadeIn;
+		animation-name: empFadeIn;
 		animation-duration: .5s;
 	}
 	.brightness-02{

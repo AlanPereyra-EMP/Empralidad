@@ -21,7 +21,7 @@
         document.body.appendChild(element1);
 
         var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-ip.css";
+        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-emp.css";
         element2.rel = 'stylesheet';
         document.body.appendChild(element2);
 
@@ -56,8 +56,8 @@
 
     <?php wp_head(); ?>
 
-    <?php echo get_theme_mod('ip_face_text');
-          echo get_theme_mod('ip_google_text'); ?>
+    <?php echo get_theme_mod('emp_face_text');
+          echo get_theme_mod('emp_google_text'); ?>
 
   </head>
 
@@ -67,14 +67,14 @@
     <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
             <!-- if logo -->
-            <?php $img_mobile_navbar = get_theme_mod('ip_head_logo');
-	                $img_desktop_navbar = get_theme_mod('ip_head_logo_desktop');
+            <?php $img_mobile_navbar = get_theme_mod('emp_head_logo');
+	                $img_desktop_navbar = get_theme_mod('emp_head_logo_desktop');
 	            if ($img_mobile_navbar && $img_desktop_navbar) { ?>
 		            <a class="navbar-brand mx-auto show-until-lg" href="<?php echo home_url(); ?>">
-		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo')); ?>" class="navbar-img" alt="NavbarBrand">
+		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_head_logo')); ?>" class="navbar-img" alt="NavbarBrand">
 		            </a>
                 <a class="navbar-brand mx-auto show-lg" href="<?php echo home_url(); ?>">
-		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('ip_head_logo_desktop')); ?>" class="navbar-img" alt="NavbarBrand">
+		            	<img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_head_logo_desktop')); ?>" class="navbar-img" alt="NavbarBrand">
 		            </a>
 	            <?php } else { ?>
                     <a class=" mx-auto" href="<?php echo home_url(); ?>">
@@ -85,7 +85,7 @@
             <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
                 <i id="btn-menu-nav" class="fa fa-bars text-dark <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
             </div>
-            <?php $search_link = get_theme_mod('ip_mobile_search_text');
+            <?php $search_link = get_theme_mod('emp_mobile_search_text');
                 if ($search_link == 'true'){
                    $search_icon = '<div class="collapse show-lg text-white mr-3 ml-auto" id="btn-search-desktop">
                                        <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
@@ -105,7 +105,7 @@
             ) ); ?>
 
             <!-- if cart on -->
-            <?php $cart_link = get_theme_mod('ip_mobile_cart_text');
+            <?php $cart_link = get_theme_mod('emp_mobile_cart_text');
             if(class_exists('WooCommerce') && $cart_link == 'true'){ ?>
                 <a onclick="showWoocommerceCart();" class="fa fa-shopping-cart mr-4 fadein show-desktop text-white">
                         <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
@@ -116,9 +116,9 @@
         </nav>
         <i id="bg-menu-mobile"></i>
     <!-- end navbar -->
-    <div class="FullScreenLanding ip_img_slide1 col-12 mx-auto bg-personalized">
-      <div class="ip-background-image ip-background-media-filter">
-        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('ip_background_media_video')); ?>" poster="" class="ip-video-background">
+    <div class="FullScreenLanding emp_img_slide1 col-12 mx-auto bg-personalized">
+      <div class="emp-background-image emp-background-media-filter">
+        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('emp_background_media_video')); ?>" poster="" class="emp-video-background">
 
         </video>
       </div>

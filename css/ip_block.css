@@ -1,17 +1,17 @@
 /* Block styles */
-.ip-block div.circle{
+.emp-block div.circle{
 	background: #ffffff;
     height: 100px;
     width: 100px;
     border-radius: 50%;
 }
-.ip-block div.text-gray {
+.emp-block div.text-gray {
 	color: #cccccc;
 }
-.ip-block div.text-gray strong{
+.emp-block div.text-gray strong{
 	color: #ffffff!important;
 }
- .ip-block div.imagen-combo {
+ .emp-block div.imagen-combo {
     position: absolute;
     left: 50%;
     width: 100px;
@@ -19,20 +19,20 @@
 		transform: translate(-50%);
 }
 @media(max-width:575px){
-  .ip-block div.col.text{
+  .emp-block div.col.text{
     max-width: 65%!important;
   }
-	.ip-block div.imagen-combo{
+	.emp-block div.imagen-combo{
 	    transform: translate(50%)!important;
 	}
-	.ip-block.is-style-ip-style div.imagen-combo{
+	.emp-block.is-style-emp-style div.imagen-combo{
 	    transform: translate(-150%)!important;
 	}
 }
-.ip-block div.number {
+.emp-block div.number {
     position: absolute;
 }
-.ip-block div.number-item {
+.emp-block div.number-item {
     color: #000000;
     display: block;
     position: absolute;
@@ -44,26 +44,26 @@
     font-size: 63px;
     overflow: hidden;
 }
-.ip-block div.list-item {
+.emp-block div.list-item {
     position: relative;
     display: flex;
     align-items: center;
     min-height: 100px;
 }
 
-.ip-block div .col.text {
+.emp-block div .col.text {
     padding-right: 10%;
 		text-align: right;
     max-width: 50%;
 }
-.ip-block.is-style-ip-style div.col.text {
+.emp-block.is-style-emp-style div.col.text {
     padding-left: 10%;
 		text-align: left;
 		margin-left: auto;
     max-width: 50%;
 }
 @media(min-width: 576px){
-  .ip-block div.line {
+  .emp-block div.line {
     position: absolute;
     top: 0;
     left: 50%;

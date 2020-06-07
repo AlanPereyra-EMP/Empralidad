@@ -53,13 +53,13 @@
 		}
 
 // 2) Widgets
-	add_action( 'widgets_init', 'ip_sidebar' );
-	function ip_sidebar() {
+	add_action( 'widgets_init', 'emp_sidebar' );
+	function emp_sidebar() {
 		register_sidebar(
 	        array(
 	            'id'            => 'homepage',
-	            'name'          => __( 'Sidebar homepage (superior)', 'informatica_pereyra' ),
-	            'description'   => __( 'Se ubica debajo de la imagen principal', 'informatica_pereyra' ),
+	            'name'          => __( 'Sidebar homepage (superior)', 'empralidad' ),
+	            'description'   => __( 'Se ubica debajo de la imagen principal', 'empralidad' ),
 	            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
 	            'after_widget'  => '</div>',
 	            'before_title'  => '<h3 class="widget-title-dark">',
@@ -69,8 +69,8 @@
 			register_sidebar(
 		        array(
 		            'id'            => 'homepage1',
-		            'name'          => __( 'Sidebar homepage (inferior)', 'informatica_pereyra' ),
-		            'description'   => __( 'Se ubica antes del footer', 'informatica_pereyra' ),
+		            'name'          => __( 'Sidebar homepage (inferior)', 'empralidad' ),
+		            'description'   => __( 'Se ubica antes del footer', 'empralidad' ),
 		            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
 		            'after_widget'  => '</div>',
 		            'before_title'  => '<h3 class="widget-title-dark">',
@@ -80,8 +80,8 @@
 	    register_sidebar(
 	        array(
 	            'id'            => 'footer',
-	            'name'          => __( 'Sidebar del footer', 'informatica_pereyra' ),
-	            'description'   => __( 'Se ubica debajo de las paginas y entradas.', 'informatica_pereyra' ),
+	            'name'          => __( 'Sidebar del footer', 'empralidad' ),
+	            'description'   => __( 'Se ubica debajo de las paginas y entradas.', 'empralidad' ),
 	            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
 	            'after_widget'  => '</div>',
 	            'before_title'  => '<h3 class="widget-title">',
@@ -91,79 +91,79 @@
 	}
 
 // 3) Includes
-	get_template_part( 'Customizer/ip-customizer' );
-	get_template_part( 'plugins/ip-shortcodes' );
+	get_template_part( 'Customizer/emp-customizer' );
+	get_template_part( 'plugins/emp-shortcodes' );
 
 // 4) Dinamics Css
-	function ip_theme_customize_css(){
+	function emp_theme_customize_css(){
 
-		$bg_perzonalized_secondary = get_theme_mod('ip_background_secondary') . get_theme_mod('ip_background_secondary_transparency');
+		$bg_perzonalized_secondary = get_theme_mod('emp_background_secondary') . get_theme_mod('emp_background_secondary_transparency');
 		?>
 
 	    <style type="text/css">
 					/* backgrounds */
 	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product, .woocommerce span.onsale{
-	        	background-color: <?php echo get_theme_mod('ip_background_primary'); ?> !important;
+	        	background-color: <?php echo get_theme_mod('emp_background_primary'); ?> !important;
 	        }
 					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
 						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
 					}
 					.tutor-single-lesson-wrap{
-						border-top: 70px solid <?php echo get_theme_mod('ip_background_primary'); ?> !important;
+						border-top: 70px solid <?php echo get_theme_mod('emp_background_primary'); ?> !important;
 					}
 					.the_post_thumbnail{
 	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 	        }
-					.ip-background-image{
-						background: url(<?php echo wp_get_attachment_url(get_theme_mod('ip_background_media_image')); ?>) center;
+					.emp-background-image{
+						background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_background_media_image')); ?>) center;
 						height: 100vh
 					}
-					.ip-background-media-filter{
-						opacity: <?php echo get_theme_mod('ip_background_media_filter'); ?>
+					.emp-background-media-filter{
+						opacity: <?php echo get_theme_mod('emp_background_media_filter'); ?>
 					}
 
 					/* Tipography */
 					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title, .woocommerce span.onsale{
-	        	color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+	        	color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
-						color: <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> !important;
+						color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
 					}
 					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link, .woocommerce-MyAccount-content a,.woocommerce div.product p.price{
-						color: <?php echo get_theme_mod('ip_tipography_color'); ?> !important;
+						color: <?php echo get_theme_mod('emp_tipography_color'); ?> !important;
 					}
 					body, .fa-text{
-						font-family: '<?php echo get_theme_mod('ip_styles_tipography'); ?>';
+						font-family: '<?php echo get_theme_mod('emp_styles_tipography'); ?>';
 					}
 					body{
-						font-size: <?php echo get_theme_mod('ip_styles_tipography_size'); ?>px;
+						font-size: <?php echo get_theme_mod('emp_styles_tipography_size'); ?>px;
 					}
 					@media (min-width: 577px) {
 					  .text-mobile {
-					    font-size: <?php echo (get_theme_mod('ip_head_text_title_size') - 80) ?>px!important;
+					    font-size: <?php echo (get_theme_mod('emp_head_text_title_size') - 80) ?>px!important;
 					  }
 					}
 					@media (min-width: 992px) {
 					  .text-mobile {
-					    font-size: <?php echo get_theme_mod('ip_head_text_title_size'); ?>px!important;
+					    font-size: <?php echo get_theme_mod('emp_head_text_title_size'); ?>px!important;
 					  }
 					}
 					.text-mobile {
-					    font-size: <?php echo (get_theme_mod('ip_head_text_title_size') - 130) ?>px;
+					    font-size: <?php echo (get_theme_mod('emp_head_text_title_size') - 130) ?>px;
 							word-wrap: break-word;
 					}
 
 					/* Special items */
 					.dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order, th {
-	            background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
-	            color: <?php echo get_theme_mod('ip_btn_color'); ?> !important;
+	            background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>!important;
+	            color: <?php echo get_theme_mod('emp_btn_color'); ?> !important;
 	        }
 
 					/* Borders */
 					.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button{
-						border: 1px <?php echo get_theme_mod('ip_tipography_primarycolor'); ?> solid;
+						border: 1px <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> solid;
 					}
-					<?php if(get_theme_mod('ip_styles_border') === 'true'){ ?>
+					<?php if(get_theme_mod('emp_styles_border') === 'true'){ ?>
 						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,
 						a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button{
 							border-radius: 30px!important;
@@ -179,7 +179,7 @@
 						    border-radius: 0 0 30px 30px;
 						}
 					<?php } ?>
-					<?php if(get_theme_mod('ip_styles_tipography') === 'sans-serif'){ ?>
+					<?php if(get_theme_mod('emp_styles_tipography') === 'sans-serif'){ ?>
 						.fa-user .fa-text {
 						    margin-left: -8px!important;
 						}
@@ -187,20 +187,20 @@
 
 					/* Buttons */
 	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
-	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
-	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>;
+	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
+	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>;
 	        }
 	        .btn:hover, .btn:focus, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:focus{
-	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
-	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
+	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
+	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
 	        }
 	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable{
-	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
-	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
+	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>!important;
+	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
 	        }
 
 					/* Shadows */
-					<?php if (get_theme_mod('ip_styles_text_shadow') === 'true'){ ?>
+					<?php if (get_theme_mod('emp_styles_text_shadow') === 'true'){ ?>
 						.text-shadow-6{
 							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
 						}
@@ -208,7 +208,7 @@
 							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
 						}
 					<?php } ?>
-					<?php if (get_theme_mod('ip_styles_text_shadow') === 'true') { ?>
+					<?php if (get_theme_mod('emp_styles_text_shadow') === 'true') { ?>
 						img, iframe {
 							box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
 						    transition: all .5s;
@@ -248,7 +248,7 @@
 	    </style>
 	<?php
 	}
-	add_action( 'wp_head', 'ip_theme_customize_css');
+	add_action( 'wp_head', 'emp_theme_customize_css');
 
 // 5) content width
 	if ( ! isset( $content_width ) ) {
@@ -326,14 +326,14 @@
 
 // 9) Wp link pages
  	$defaults = array(
-		'before'           => '<p>' . __( 'Páginas:', 'informatica_pereyra' ),
+		'before'           => '<p>' . __( 'Páginas:', 'empralidad' ),
 		'after'            => '</p>',
 		'link_before'      => '',
 		'link_after'       => '',
 		'next_or_number'   => 'Número',
 		'separator'        => ' ',
-		'nextpagelink'     => __( 'Proxima página', 'informatica_pereyra'),
-		'previouspagelink' => __( 'Página anterior', 'informatica_pereyra' ),
+		'nextpagelink'     => __( 'Proxima página', 'empralidad'),
+		'previouspagelink' => __( 'Página anterior', 'empralidad' ),
 		'pagelink'         => '%',
 		'echo'             => 1
 	);
@@ -342,25 +342,25 @@
  	add_action( 'init', 'codex_landing_pages_init' );
 	function codex_landing_pages_init() {
 		$labels = array(
-			'name'               => _x( 'Landing Pages', 'Nombre general del tipo de post', 'informatica_pereyra' ),
-			'singular_name'      => _x( 'Landing Page', 'Nombre singular', 'informatica_pereyra' ),
-			'menu_name'          => _x( 'Landing Pages', 'admin menu', 'informatica_pereyra' ),
-			'name_admin_bar'     => _x( 'Landing Pages', 'añadir nueva en admin bar', 'informatica_pereyra' ),
-			'add_new'            => _x( 'Añadir nueva', 'Landing Page', 'informatica_pereyra' ),
-			'add_new_item'       => __( 'Añadir nueva Landing Page', 'informatica_pereyra' ),
-			'new_item'           => __( 'Nueva Landing Page', 'informatica_pereyra' ),
-			'edit_item'          => __( 'Editar Landing Page', 'informatica_pereyra' ),
-			'view_item'          => __( 'Ver Landing Page', 'informatica_pereyra' ),
-			'all_items'          => __( 'Landing Pages', 'informatica_pereyra' ),
-			'search_items'       => __( 'Buscar Landing Pages', 'informatica_pereyra' ),
-			'parent_item_colon'  => __( 'Landing Page:', 'informatica_pereyra' ),
-			'not_found'          => __( 'No encontrado.', 'informatica_pereyra' ),
-			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'informatica_pereyra' )
+			'name'               => _x( 'Landing Pages', 'Nombre general del tipo de post', 'empralidad' ),
+			'singular_name'      => _x( 'Landing Page', 'Nombre singular', 'empralidad' ),
+			'menu_name'          => _x( 'Landing Pages', 'admin menu', 'empralidad' ),
+			'name_admin_bar'     => _x( 'Landing Pages', 'añadir nueva en admin bar', 'empralidad' ),
+			'add_new'            => _x( 'Añadir nueva', 'Landing Page', 'empralidad' ),
+			'add_new_item'       => __( 'Añadir nueva Landing Page', 'empralidad' ),
+			'new_item'           => __( 'Nueva Landing Page', 'empralidad' ),
+			'edit_item'          => __( 'Editar Landing Page', 'empralidad' ),
+			'view_item'          => __( 'Ver Landing Page', 'empralidad' ),
+			'all_items'          => __( 'Landing Pages', 'empralidad' ),
+			'search_items'       => __( 'Buscar Landing Pages', 'empralidad' ),
+			'parent_item_colon'  => __( 'Landing Page:', 'empralidad' ),
+			'not_found'          => __( 'No encontrado.', 'empralidad' ),
+			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'empralidad' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-	    'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
+	    'description'        => __( 'Descripcion.', 'empralidad' ),
 			'menu_icon' 				 => 'dashicons-text-page',
 			'public'             => true,
 			'publicly_queryable' => true,
@@ -380,25 +380,25 @@
 		register_post_type( 'landing_pages', $args );
 
 		$labels = array(
-			'name'               => _x( 'Páginas de contacto', 'Nombre general del tipo de post', 'informatica_pereyra' ),
-			'singular_name'      => _x( 'Página de contacto', 'Nombre singular', 'informatica_pereyra' ),
-			'menu_name'          => _x( 'Páginas de contacto', 'admin menu', 'informatica_pereyra' ),
-			'name_admin_bar'     => _x( 'Páginas de contacto', 'añadir nueva en admin bar', 'informatica_pereyra' ),
-			'add_new'            => _x( 'Añadir nueva', 'Página de contacto', 'informatica_pereyra' ),
-			'add_new_item'       => __( 'Añadir nueva página de contacto', 'informatica_pereyra' ),
-			'new_item'           => __( 'Nueva página de contacto', 'informatica_pereyra' ),
-			'edit_item'          => __( 'Editar página de contacto', 'informatica_pereyra' ),
-			'view_item'          => __( 'Ver página de contacto', 'informatica_pereyra' ),
-			'all_items'          => __( 'Páginas de contacto', 'informatica_pereyra' ),
-			'search_items'       => __( 'Buscar páginas de contacto', 'informatica_pereyra' ),
-			'parent_item_colon'  => __( 'Página de contacto:', 'informatica_pereyra' ),
-			'not_found'          => __( 'No encontrado.', 'informatica_pereyra' ),
-			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'informatica_pereyra' )
+			'name'               => _x( 'Páginas de contacto', 'Nombre general del tipo de post', 'empralidad' ),
+			'singular_name'      => _x( 'Página de contacto', 'Nombre singular', 'empralidad' ),
+			'menu_name'          => _x( 'Páginas de contacto', 'admin menu', 'empralidad' ),
+			'name_admin_bar'     => _x( 'Páginas de contacto', 'añadir nueva en admin bar', 'empralidad' ),
+			'add_new'            => _x( 'Añadir nueva', 'Página de contacto', 'empralidad' ),
+			'add_new_item'       => __( 'Añadir nueva página de contacto', 'empralidad' ),
+			'new_item'           => __( 'Nueva página de contacto', 'empralidad' ),
+			'edit_item'          => __( 'Editar página de contacto', 'empralidad' ),
+			'view_item'          => __( 'Ver página de contacto', 'empralidad' ),
+			'all_items'          => __( 'Páginas de contacto', 'empralidad' ),
+			'search_items'       => __( 'Buscar páginas de contacto', 'empralidad' ),
+			'parent_item_colon'  => __( 'Página de contacto:', 'empralidad' ),
+			'not_found'          => __( 'No encontrado.', 'empralidad' ),
+			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'empralidad' )
 		);
 
 		$args = array(
 			'labels'             => $labels,
-	    'description'        => __( 'Descripcion.', 'informatica_pereyra' ),
+	    'description'        => __( 'Descripcion.', 'empralidad' ),
 			'menu_icon' 				 => 'dashicons-email',
 			'public'             => true,
 			'publicly_queryable' => true,
@@ -464,7 +464,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 }
 //  12) GitHub Updates
     // set_site_transient('update_themes', null);
-	function ip_check_update( $transient ) {
+	function emp_check_update( $transient ) {
 	    if ( empty( $transient->checked ) ) {
 	        return $transient;
 	    }
@@ -490,26 +490,26 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 	    return $transient;
 	}
 
-	$ip_password = get_theme_mod('$ip_github_pass');
+	$emp_password = get_theme_mod('$emp_github_pass');
 
-	if($ip_password == 'iiKNN33797'){
-		add_filter( 'pre_set_site_transient_update_themes', 'ip_check_update' );
+	if($emp_password == 'iiKNN33797'){
+		add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
 	}
 
 // Test block
 
-// function gutenberg_ip_register_block() {
-// 		wp_enqueue_script( 'ip-blocks', get_template_directory_uri() . '/js/ip-blocks.js', array(), '1.9.5', true );
-// 		register_block_type( 'ip-blocks/lists-items', array(
-//         'editor_script' => 'ip-blocks',
+// function gutenberg_emp_register_block() {
+// 		wp_enqueue_script( 'emp-blocks', get_template_directory_uri() . '/js/emp-blocks.js', array(), '1.9.5', true );
+// 		register_block_type( 'emp-blocks/lists-items', array(
+//         'editor_script' => 'emp-blocks',
 //     ) );
 // }
-// add_action( 'init', 'gutenberg_ip_register_block' );
+// add_action( 'init', 'gutenberg_emp_register_block' );
 //
-// function ip_block_add_styles() {
-//     wp_enqueue_style( 'ip-block-css', get_stylesheet_directory_uri() . '/css/ip_block.css' );
+// function emp_block_add_styles() {
+//     wp_enqueue_style( 'emp-block-css', get_stylesheet_directory_uri() . '/css/emp_block.css' );
 // }
-// add_action('enqueue_block_assets', 'ip_block_add_styles');
+// add_action('enqueue_block_assets', 'emp_block_add_styles');
 
 // 13) Fix admin bar
 if ( ! current_user_can( 'manage_options' ) ) {
