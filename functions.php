@@ -194,7 +194,7 @@
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>;
 	        }
-	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, .product_type_variable.add_to_cart_button, a.button.product_type_variable{
+	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable{
 	        	background-color: <?php echo get_theme_mod('ip_btn_bg'); ?>!important;
 	        	color: <?php echo get_theme_mod('ip_btn_color'); ?>!important;
 	        }
