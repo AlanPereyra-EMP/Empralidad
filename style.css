@@ -1092,9 +1092,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*temp*/
 .left-featured-text{
 	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	overflow: auto;
 	padding-top: 70px;
 }
 .left-featured-text-admin{

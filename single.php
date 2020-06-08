@@ -27,7 +27,7 @@
             <?php if($emp_show1 === 'true'||$emp_show2 === 'true'){ ?>
                 <div class="row mw-100 p-0 mx-auto">
                     <div class="col-md-3 min-h-100 border-30px show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
-                        <div style="margin-top: 60vh;transform: translate(0,-50vh);max-height: 95vh;">
+                        <div style="position: sticky;top: 100px;max-height: 95vh;">
                             <!-- Ad 1 -->
                                 <?php
                                 $emp_homepage_show = get_theme_mod('emp_ads_show1');
