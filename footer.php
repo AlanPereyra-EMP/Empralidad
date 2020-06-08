@@ -38,7 +38,7 @@
                 <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_term')); ?>" class="color-personalized">Terminos y Condiciones</a> -
                 <a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_poli')); ?>" class="color-personalized">Politicas de Privacidad</a></small></p>
                 <!-- Owner -->
-                    <p><small>Desarrollado por</small> <a href="https://empralidad.com"><b>Empralidad</b></a></p>
+                    <p><small>Desarrollado por</small> <a class="color-personalized" href="https://empralidad.com.ar"><b>Empralidad</b></a></p>
                 <!-- end owner -->
                 <br>
                 <?php echo get_theme_mod('emp_qr_text') ?>
