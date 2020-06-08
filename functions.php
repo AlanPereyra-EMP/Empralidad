@@ -102,7 +102,7 @@
 
 	    <style type="text/css">
 					/* backgrounds */
-	        .bg-personalized, .reset_variations, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product, .woocommerce span.onsale{
+	        .bg-personalized, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product, .woocommerce span.onsale{
 	        	background-color: <?php echo get_theme_mod('emp_background_primary'); ?> !important;
 	        }
 					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
@@ -186,7 +186,7 @@
 					<?php } ?>
 
 					/* Buttons */
-	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
+	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .reset_variations{
 	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
 	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>;
 	        }
