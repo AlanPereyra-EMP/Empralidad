@@ -117,9 +117,9 @@
         element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
         document.body.appendChild(element1);
 
-        var element2 = document.createElement("script");
-        element2.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/emp-blocks.js";
-        document.body.appendChild(element2);
+        // var element2 = document.createElement("script");
+        // element2.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/emp-blocks.js";
+        // document.body.appendChild(element2);
         }
 
         if (window.addEventListener){
