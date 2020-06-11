@@ -26,7 +26,7 @@
             <?php $emp_show2 = get_theme_mod('emp_ads_show2'); ?>
             <?php if($emp_show1 === 'true'||$emp_show2 === 'true'){ ?>
                 <div class="row mw-100 p-0 mx-auto">
-                    <div class="col-md-3 min-h-100 border-30px show-from-md left-featured-text shadow-gray-up-down <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
+                    <div class="col-md-3 min-h-100 border-30px show-from-md left-featured-text shadow-gray-up-down text-dark <?php if( is_admin_bar_showing() ){ ?> left-featured-text-admin <?php } ?>" style="background: #eee;">
                         <div style="position: sticky;top: 100px;max-height: 95vh;">
                             <!-- Ad 1 -->
                                 <?php
@@ -34,9 +34,9 @@
                                 if ($emp_homepage_show == 'true'){
                                     ?>
                                     <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-0">
-                                    <h2 class="text-center">
+                                    <h3 class="text-center">
                                         <strong><?php echo get_theme_mod('emp_ads_title1') ?></strong>
-                                    </h2>
+                                    </h3>
                                     <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('emp_img_logo')); ?>" alt="" width="20" height="20" /><br>
                                     <div class="mw-100"><p class="text-center"><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_ads_img1')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('emp_ads_text1') ?></p></div>
                                     <?php
@@ -55,9 +55,9 @@
                                 if ($emp_homepage_show == 'true'){
                                     ?>
                                     <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-0">
-                                    <h2 style="text-align: center;">
+                                    <h3 style="text-align: center;">
                                         <strong><?php echo get_theme_mod('emp_ads_title2') ?></strong>
-                                    </h2>
+                                    </h3>
                                     <img class="aligncenter wp-image-10 <?php if(!$logo){ ?> no-shadow <?php } ?> " src="<?php echo wp_get_attachment_url(get_theme_mod('emp_img_logo')); ?>" alt="" width="20" height="20" /><br>
                                     <div style="max-width: 100%;">
                                         <p style="text-align: center;">
@@ -87,10 +87,10 @@
                             $emp_homepage_show = get_theme_mod('emp_ads_show1');
                             if ($emp_homepage_show == 'true'){
                                 ?>
-                                <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-3 show-until-md" style="background-color: #eee;">
-                                <h2 class="text-center">
+                                <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-3 show-until-md text-dark" style="background-color: #eee;">
+                                <h3 class="text-center">
                                     <strong><?php echo get_theme_mod('emp_ads_title1') ?></strong>
-                                </h2>
+                                </h3>
                                 <img class="aligncenter wp-image-10" src="<?php echo get_site_icon_url() ?>" alt="" width="20" height="20" /> <br>
                                 <div class="mw-100"><p class="text-center"><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_ads_img1')); ?>" class="img-fluid aling-center"><br><?php echo get_theme_mod('emp_ads_text1') ?></p></div>
                                 <?php
@@ -128,10 +128,10 @@
 
                             if ($emp_homepage_show == 'true'){
                                 ?>
-                                <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-3 show-until-md" style="background-color: #eee;">
-                                <h2 style="text-align: center;">
+                                <div class="container-fluid d-block col-12 my-3 my-md-5 my-lg-4 p-3 show-until-md text-dark" style="background-color: #eee;">
+                                <h3 style="text-align: center;">
                                     <strong><?php echo get_theme_mod('emp_ads_title2') ?></strong>
-                                </h2>
+                                </h3>
                                 <img class="aligncenter wp-image-10" src="<?php echo get_site_icon_url() ?>" alt="" width="20" height="20" /> <br>
                                 <div style="max-width: 100%;">
                                     <p style="text-align: center;">
