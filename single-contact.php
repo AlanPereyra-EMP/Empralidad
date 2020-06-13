@@ -39,17 +39,19 @@
       <div class="<?php if ($filter_slide1 === 'color') { ?> bg-title-color <?php }else if($filter_slide1 === 'dark'){ ?> bg-title-dark <?php } ?>"></div>
     </div>
         <div class="mx-auto col-sm-9 col-md-7 col-lg-5 py-md-5 px-0">
-            <div class="mx-auto">
-                <!-- img -->
-                    <?php the_post_thumbnail( 'full', array( 'class' => 'col-9 nopadding h-auto') );?>
-                    <br>
-                <!-- end img -->
-            </div>
-            <div class="p-4 landing-content" style="background-color:#eee;">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-                    <h2 class="text-center"><?php the_title(); ?></h2>
-                    <?php the_content();?>
-                <?php endwhile; endif; ?>
+            <div class="border-30px overflow-hidden">
+              <div class="mx-auto">
+                  <!-- img -->
+                      <?php the_post_thumbnail( 'full', array( 'class' => 'col-9 nopadding h-auto') );?>
+                      <br>
+                  <!-- end img -->
+              </div>
+              <div class="p-4 landing-content" style="background-color:#eee;">
+                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+                      <h2 class="text-center"><?php the_title(); ?></h2>
+                      <?php the_content();?>
+                  <?php endwhile; endif; ?>
+              </div>
             </div>
             <br><br><br><br><br><br>
             <button class="btn container-fluid p-1 text-center bg-light text-muted no-shadow" onclick="window.history.back()">Volver atrás</button>
