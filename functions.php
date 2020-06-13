@@ -123,7 +123,8 @@
 					}
 
 					/* Tipography */
-					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title, .woocommerce span.onsale{
+					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title,
+					.woocommerce span.onsale, a{
 	        	color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
