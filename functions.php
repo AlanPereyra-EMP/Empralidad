@@ -166,7 +166,8 @@
 					}
 					<?php if(get_theme_mod('emp_styles_border') === 'true'){ ?>
 						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,
-						a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail{
+						a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
+						img{
 							border-radius: 30px!important;
 						}
 						.sfpo-table thead th {

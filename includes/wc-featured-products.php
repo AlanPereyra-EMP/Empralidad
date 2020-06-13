@@ -8,4 +8,5 @@
                 <?php echo do_shortcode('[featured_products columns="3" orderby="price" order="ASC"]'); ?>
             </div>
   </div>
+  <hr>
 <?php } ?>
