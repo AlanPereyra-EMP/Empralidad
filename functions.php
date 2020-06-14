@@ -231,7 +231,7 @@
 								box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
 							}
 						}
-						.buttons-mobile, .shadow-grey-up, .footer{
+						.buttons-mobile, .shadow-grey-up, .footer, .tutor-course.tutor-course-loop{
 							box-shadow: 0px -5px 13px rgba(0, 0, 0, .2)!important;
 						}
 						.shadow-grey-up-down, .btn, .card{
