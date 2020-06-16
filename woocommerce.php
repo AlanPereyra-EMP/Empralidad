@@ -36,7 +36,9 @@
     <!-- end title -->
     <!-- Page content -->
         <article class="container my-5 margin-top-mobile p-2 p-md-4 bg-personalized-secondary">
+                <?php get_product_search_form(); ?>
                 <?php woocommerce_content();?>
+
         </article>
     <!-- end page content -->
 <?php get_footer(); ?>

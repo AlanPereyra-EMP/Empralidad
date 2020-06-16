@@ -632,7 +632,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			.border-30px form#searchform {
 				width: 100%;
 			}
-			#s, .select-form{
+			#s, .select-form, .search-field{
 		  display: inline !important;
 		  width: 75%;
 		  padding: 0.5rem 0.75rem;
@@ -654,7 +654,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 		  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
 		}
-		#s::-ms-expand {
+		#s::-ms-expand{
 		  background-color: transparent;
 		  border: 0;
 		}
@@ -761,23 +761,54 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		fieldset[disabled] a.btn {
 		  pointer-events: none;
 		}
-		#searchform {
+		#searchform, {
 			display: block;
 		    width: 70%;
 		    margin-left: auto!important;
 			margin-right: auto!important;
 		}
-		#searchform div {
+		#searchform div, .woocommerce-product-search {
 			display: inline-flex;
 			width: 100%;
 		}
 		@media (min-width:991px){
-			#searchform div {
+			#searchform div, .woocommerce-product-search {
 				height: 70px;
 			}
 			#s, #searchsubmit {
 				font-size: 1.7rem;
 			}
+		}
+		.post-type-archive-product article{
+			display: grid;
+		}
+		.post-type-archive-product .woocommerce-product-search{
+			display: block;
+			order: 3;
+			height: 100px
+		}
+		.woocommerce-product-search input, .woocommerce-product-search button{
+			height: 60%;
+			cursor: pointer;
+		}
+		.post-type-archive-product .page-title{
+			order: 1
+		}
+		.woocommerce-ordering, .woocommerce-result-count{
+			display: inherit;
+			order: 2;
+		}
+		.post-type-archive-product .products{
+			order: 4;
+		}
+		.woocommerce-product-search{
+			display: none;
+		}
+		.woocommerce-product-search button{
+		background: #ddd;
+    border: 1px;
+    padding: 6px;
+    width: 23%;
 		}
 	/*end search form*/
 	#wpadminbar{
