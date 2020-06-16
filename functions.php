@@ -109,7 +109,7 @@
 						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
 					}
 					.tutor-single-lesson-wrap{
-						border-top: 70px solid <?php echo get_theme_mod('emp_background_primary'); ?> !important;
+						border-top: 60px solid <?php echo get_theme_mod('emp_background_primary'); ?> !important;
 					}
 					.the_post_thumbnail{
 	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
@@ -133,9 +133,15 @@
 					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link, .woocommerce-MyAccount-content a,.woocommerce div.product p.price{
 						color: <?php echo get_theme_mod('emp_tipography_color'); ?> !important;
 					}
-					body, .fa-text{
-						font-family: '<?php echo get_theme_mod('emp_styles_tipography'); ?>';
-					}
+					<?php if(get_theme_mod('emp_styles_tipography') === 'true'){ ?>
+						body, .fa-text{
+							font-family: <?php echo get_theme_mod('emp_styles_tipography_personalized'); ?>, 'sans-serif';
+						}
+					<?php } else {?>
+						body, .fa-text{
+							font-family: '<?php echo get_theme_mod('emp_styles_tipography'); ?>', 'sans-serif';
+						}
+					<?php }?>
 					body{
 						font-size: <?php echo get_theme_mod('emp_styles_tipography_size'); ?>px;
 					}
@@ -202,7 +208,7 @@
 	        }
 
 					/* Shadows */
-					<?php if (get_theme_mod('emp_styles_text_shadow') === 'true'){ ?>
+					<?php if (get_theme_mod('emp_shadow') === 'true'){ ?>
 						.text-shadow-6{
 							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
 						}
@@ -210,7 +216,7 @@
 							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
 						}
 					<?php } ?>
-					<?php if (get_theme_mod('emp_styles_text_shadow') === 'true') { ?>
+					<?php if (get_theme_mod('emp_shadow') === 'true') { ?>
 						img, iframe {
 							box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
 						    transition: all .5s;

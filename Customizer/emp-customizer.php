@@ -602,24 +602,21 @@
 													'serif'  			 => __( 'Serif', 'empralidad' ),
 													'sans-serif'   => __( 'Sans-serif', 'empralidad' ),
 													'varela round' => __( 'Varela Round', 'empralidad' ),
-													'indie flower' => __( 'Indie Flower', 'empralidad' )
+													'indie flower' => __( 'Indie Flower', 'empralidad' ),
+													'true' 				 => __( 'Personalizado', 'empralidad' )
 												)
 						)));
-						// text shadow
-						$wp_customize->add_setting('emp_styles_text_shadow', array(
-							'default' => 'false',
-							'trasnport' => 'refresh',
-							'sanitize_callback' => 'sanitize_string'
+						$wp_customize->add_setting('emp_styles_tipography_personalized', array(
+							'default' => '',
+							'trasnport' => 'refresh'
 						));
-						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_text_shadow_control1', array(
-												'label'          => __( 'Sombras', 'empralidad' ),
-												'section'        => 'emp_section_styles_tipography',
-												'settings'       => 'emp_styles_text_shadow',
-												'type'           => 'radio',
-												'choices'        => array(
-													'true'   => __( 'Activado', 'empralidad' ),
-													'false'   => __( 'Desactivado', 'empralidad' )
-												)
+
+						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_tipography_personalized_control', array(
+							'label'=> __('Tipografía personalizada', 'empralidad'),
+							'section'=> 'emp_section_styles_tipography',
+							'description'	  => __( 'Escribe el nombre de la tipografía entre commillas ("")', 'empralidad' ),
+							'settings'=> 'emp_styles_tipography_personalized',
+
 						)));
 					// end options
 					// Btn
@@ -676,6 +673,27 @@
 														'false' => __( 'Deshabilitar', 'empralidad' )
 												)
 						)));
+				// Shadow
+				$wp_customize->add_section('emp_section_shadow', array(
+					'title'=> __('Sombras', 'empralidad'),
+					'priority' => 5,
+					'panel' => 'emp_panel_styles'
+				));
+				$wp_customize->add_setting('emp_shadow', array(
+					'default' => 'false',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_shadow_control1', array(
+										'label'          => __( 'Sombras', 'empralidad' ),
+										'section'        => 'emp_section_shadow',
+										'settings'       => 'emp_shadow',
+										'type'           => 'radio',
+										'choices'        => array(
+											'true'   => __( 'Activado', 'empralidad' ),
+											'false'   => __( 'Desactivado', 'empralidad' )
+										)
+				)));
 		// end styles
 		// 4) Whatsapp
 			$wp_customize->add_section('emp_section_what', array(
