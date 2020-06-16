@@ -124,13 +124,14 @@
 
 					/* Tipography */
 					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title,
-					.woocommerce span.onsale, a{
+					.woocommerce span.onsale{
 	        	color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
 	        }
 					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
 						color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
 					}
-					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link, .woocommerce-MyAccount-content a,.woocommerce div.product p.price{
+					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link,
+					.woocommerce-MyAccount-content a,.woocommerce div.product p.price, article a, section a{
 						color: <?php echo get_theme_mod('emp_tipography_color'); ?> !important;
 					}
 					<?php if(get_theme_mod('emp_styles_tipography') === 'true'){ ?>
