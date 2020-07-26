@@ -168,13 +168,13 @@
 	        }
 
 					/* Borders */
-					.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button{
+					.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
 						border: 1px <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> solid;
 					}
 					<?php if(get_theme_mod('emp_styles_border') === 'true'){ ?>
 						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,
 						a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
-						article img, section img{
+						article img, section img,a.button.product_type_simple{
 							border-radius: 30px!important;
 						}
 						.sfpo-table thead th {
@@ -203,7 +203,8 @@
 	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
 	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
 	        }
-	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable{
+	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable,
+					a.button.product_type_simple{
 	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>!important;
 	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
 	        }
