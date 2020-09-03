@@ -276,12 +276,12 @@
                     </div>
                 <?php } ?>
                 <?php if ( is_front_page() && !is_home() ) {?>
-                    <section class="px-0 bg-personalized-secondary border-30px col-12 <?php if($emp_show1 === 'true'||$emp_show2 === 'true'||$emp_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <section class="px-0 bg-personalized-secondary border-30px col-12 mx-auto">
                       <?php get_template_part('includes/wc-featured-products') ?>
                       <?php get_template_part('content-home') ?>
                     </section>
                 <?php } else { ?>
-                    <div style="background: #f9f9f9" class="p-3 border-30px col-12 <?php if($emp_show1 === 'true'||$emp_show2 === 'true'||$emp_show3 === 'true'){ ?> col-md-9 <?php }else{ ?> col-md-10 col-lg-9 <?php } ?> mx-auto">
+                    <div style="background: #f9f9f9" class="p-3 border-30px col-12 mx-auto">
                       <?php get_template_part('includes/wc-featured-products') ?>
                           <br>
                         <h2 class="text-center">Lo más reciente</h2>
