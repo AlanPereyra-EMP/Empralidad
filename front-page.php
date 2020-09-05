@@ -18,7 +18,7 @@
 
                           <div class="carousel-item active empFadeIn mx-auto color-personalized mw-1200px">
                             <h1 class="text-mobile color-personalized text-shadow-6 empFadeIn"><?php echo get_theme_mod('emp_head_text_title'); ?></h1>
-                            <p class="home-p mx-auto"><?php echo get_theme_mod('emp_head_textarea'); ?></p>
+                            <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea'); ?></p>
                             <?php if($button_or_audio == 'button'){ ?>
                                 <br>
                                 <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_btn1') ?>';" class="btn p-2 container-fluid mw-600-px border-30px btn-outline-light">
@@ -33,7 +33,7 @@
                           <?php if($emp_show_2 == 'true'){ ?>
                             <div class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
                               <h2 class="text-mobile text-shadow-6 empFadeIn"><?php echo get_theme_mod('emp_head_text2'); ?></h2>
-                              <p class="home-p mx-auto"><?php echo get_theme_mod('emp_head_textarea2'); ?></p>
+                              <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea2'); ?></p>
                               <?php if($button_or_audio2 == 'button'){ ?>
                                   <br>
                                   <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_button2') ?>';" class="btn p-2 container-fluid mw-600-px border-30px btn-outline-light">
@@ -49,7 +49,7 @@
                           <?php if($emp_show_3 == 'true'){ ?>
                             <div class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
                               <h2 class=" text-mobile text-shadow-6 empFadeIn"><?php echo get_theme_mod('emp_head_text3'); ?></h2>
-                              <p class="home-p mx-auto"><?php echo get_theme_mod('emp_head_textarea3'); ?></p>
+                              <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea3'); ?></p>
                               <?php if($button_or_audio3 == 'button'){ ?>
                                   <br>
                                   <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_button3') ?>';" class="btn p-2 container-fluid mw-600-px border-30px btn-outline-light">
