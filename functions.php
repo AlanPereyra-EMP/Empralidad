@@ -103,8 +103,20 @@
 	    <style type="text/css">
 					/* backgrounds */
 	        .bg-personalized, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product, .woocommerce span.onsale{
-	        	background-color: <?php echo get_theme_mod('emp_background_primary'); ?> !important;
+	        	background-color: <?php echo get_theme_mod('emp_header_background'); ?> !important;
 	        }
+					#bg-woocommerce-mobile{
+						background-color: <?php echo get_theme_mod('emp_header_background'); ?> !important;
+					}
+					.navbar-scroll{
+						background-color: <?php echo get_theme_mod('emp_header_background'); ?>ee !important;
+					}
+					.content-background{
+						background-color: <?php echo get_theme_mod('emp_content_background'); ?>;
+					}
+					footer{
+						background-color: <?php echo get_theme_mod('emp_footer_background'); ?>ee;
+					}
 					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
 						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
 					}
@@ -121,18 +133,33 @@
 					.emp-background-media-filter{
 						opacity: <?php echo get_theme_mod('emp_background_media_filter'); ?>
 					}
+					#top-notice{
+						background-color: <?php echo get_theme_mod('emp_background_notice'); ?>
+					}
 
 					/* Tipography */
 					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title,
 					.woocommerce span.onsale{
-	        	color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
+	        	color: <?php echo get_theme_mod('emp_tipography_header_color'); ?> !important;
 	        }
-					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
-						color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
+					.tutor-dashboard-header-ratings,.btn-outline-light, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop, #btn-search-desktop{
+						color: <?php echo get_theme_mod('emp_tipography_header_color'); ?> !important;
+					}
+					.content-color{
+						color: <?php echo get_theme_mod('emp_content_color'); ?>;
+					}
+					.menu-item a{
+						color: <?php echo get_theme_mod('emp_menu_color'); ?>
+					}
+					footer, footer a{
+						color: <?php echo get_theme_mod('emp_footer_color'); ?>!important;
 					}
 					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link,
 					.woocommerce-MyAccount-content a,.woocommerce div.product p.price, article a, section a{
-						color: <?php echo get_theme_mod('emp_tipography_color'); ?> !important;
+						color: <?php echo get_theme_mod('emp_content_color'); ?> !important;
+					}
+					#top-notice{
+						color: <?php echo get_theme_mod('emp_color_notice'); ?>
 					}
 					<?php if(get_theme_mod('emp_styles_tipography') === 'true'){ ?>
 						body, .fa-text{
@@ -169,7 +196,7 @@
 
 					/* Borders */
 					.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
-						border: 1px <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> solid;
+						border: 1px <?php echo get_theme_mod('emp_tipography_header_color'); ?> solid;
 					}
 					<?php if(get_theme_mod('emp_styles_border') === 'true'){ ?>
 						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,

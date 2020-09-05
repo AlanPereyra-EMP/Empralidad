@@ -21,10 +21,31 @@
 					'title' => __( 'Cabecera', 'empralidad' )
 				));
 			// end add panel
+			// Top Content Notice
+				$wp_customize->add_section('emp_section_head_notice', array(
+					'title'=> __('Aviso general', 'empralidad'),
+					'priority' => 1,
+					'panel' => 'emp_panel_head'
+				));
+				$wp_customize->add_setting('emp_head_notice', array(
+					'default' => '',
+					'trasnport' => 'refresh',
+					'sanitize_callback' => 'sanitize_string'
+				));
+
+				$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_notice_control', array(
+					'label'=> __('Aviso general', 'empralidad'),
+					'section'=> 'emp_section_head_notice',
+					'settings'=> 'emp_head_notice',
+					'type' => 'text',
+					'description'=> __( 'Texto visible en toda la web', 'empralidad' )
+
+				)));
+			// end top content notice
 			// Mobile Logo
 				$wp_customize->add_section('emp_section_logo', array(
 					'title'=> __('Logo', 'empralidad'),
-					'priority' => 1,
+					'priority' => 2,
 					'panel' => 'emp_panel_head'
 				));
 				$wp_customize->add_setting('emp_head_logo', array(
@@ -58,7 +79,7 @@
 			// end desktop logo
 			//Text header
 				$wp_customize->add_section('emp_section_head_text', array(
-					'title'=> __('Titulo cabecera', 'empralidad'),
+					'title'=> __('Texto principal', 'empralidad'),
 					'priority' => 3,
 					'panel' => 'emp_panel_head'
 				));
@@ -191,7 +212,7 @@
 						)));
 					// end if
 						$wp_customize->add_section('emp_section_head_text2', array(
-							'title'=> __('Titulo cabecera 2', 'empralidad'),
+							'title'=> __('Texto secundario', 'empralidad'),
 							'priority' => 4,
 							'panel' => 'emp_panel_head'
 						));
@@ -308,7 +329,7 @@
 						)));
 					// end if
 					$wp_customize->add_section('emp_section_head_text3', array(
-						'title'=> __('Titulo cabecera 3', 'empralidad'),
+						'title'=> __('Texto secudario', 'empralidad'),
 						'priority' => 5,
 						'panel' => 'emp_panel_head'
 					));
@@ -413,24 +434,86 @@
 					'priority' => 2,
 					'title' => __( 'Estilos', 'empralidad' )
 				));
-				// Backgrounds
-					$wp_customize->add_section('emp_section_styles_background', array(
-						'title'=> __('Colores de fondos', 'empralidad'),
+				// Top content notice
+					$wp_customize->add_section('emp_section_styles_notice', array(
+						'title'=> __('Aviso general', 'empralidad'),
 						'priority' => 1,
 						'panel' => 'emp_panel_styles'
 					));
 					// Primary color
-					$wp_customize->add_setting('emp_background_primary', array(
+					$wp_customize->add_setting('emp_background_notice', array(
 						'default' => '#005777',
 						'trasnport' => 'refresh',
 						'sanitize_callback' => 'sanitize_string'
 					));
 
-					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_styles_background_color_control', array(
-						'label'=> __('Fondo principal', 'empralidad'),
-						'section'=> 'emp_section_styles_background',
-						'settings'=> 'emp_background_primary',
-						'description'=> __( 'Fondo principal de la web', 'empralidad' )
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_styles_notice_background_color_control', array(
+						'label'=> __('Color de fondo', 'empralidad'),
+						'section'=> 'emp_section_styles_notice',
+						'settings'=> 'emp_background_notice'
+
+					)));
+					// Text color
+					$wp_customize->add_setting('emp_color_notice', array(
+						'default' => '#fff',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_styles_notice_color_control', array(
+						'label'=> __('Color de texto', 'empralidad'),
+						'section'=> 'emp_section_styles_notice',
+						'settings'=> 'emp_color_notice'
+
+					)));
+				// Menu
+					$wp_customize->add_section('emp_section_styles_menu', array(
+						'title'=> __('Menu Principal', 'empralidad'),
+						'priority'=> 2,
+						'panel'=> 'emp_panel_styles'
+					));
+					// Text color
+					$wp_customize->add_setting('emp_menu_color', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_styles_menu_color_control', array(
+						'label'=> __('Color de texto', 'empralidad'),
+						'section'=> 'emp_section_styles_menu',
+						'settings'=> 'emp_menu_color',
+						'description'=> __( 'Del menú principal', 'empralidad' )
+					)));
+				// end menu
+				// Header
+					$wp_customize->add_section('emp_section_styles_header', array(
+						'title'=> __('Cabecera', 'empralidad'),
+						'priority' => 3,
+						'panel' => 'emp_panel_styles'
+					));
+					// Background color
+					$wp_customize->add_setting('emp_header_background', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_styles_header_background_color_control', array(
+						'label'=> __('Color de fondo', 'empralidad'),
+						'section'=> 'emp_section_styles_header',
+						'settings'=> 'emp_header_background',
+						'description'=> __( 'Fondo de la cabecera', 'empralidad' )
+
+					)));
+					// Color typography
+					$wp_customize->add_setting('emp_tipography_header_color', array(
+						'default' => '#262626',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_tipography_header_color_control', array(
+						'label'=> __('Color Texto', 'empralidad'),
+						'section'=> 'emp_section_styles_header',
+						'settings'=> 'emp_tipography_header_color'
 
 					)));
 					// Secondary color
@@ -464,11 +547,137 @@
 												'ff' => __( 'Desactivar', 'empralidad' )
 											)
 					)));
-				// end backgrounds
+				// end header
+				// Content
+					$wp_customize->add_section('emp_section_styles_content', array(
+						'title'=> __('Contenido', 'empralidad'),
+						'priority' => 4,
+						'panel' => 'emp_panel_styles'
+					));
+					// color
+					$wp_customize->add_setting('emp_content_color', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_content_color_control', array(
+						'label'=> __('Color de texto', 'empralidad'),
+						'section'=> 'emp_section_styles_content',
+						'settings'=> 'emp_content_color',
+						'description'=> __( 'Texto dentro del contenedor principal', 'empralidad' )
+
+					)));
+					// Background
+					$wp_customize->add_setting('emp_content_background', array(
+						'default' => '#fff',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_content_background_control', array(
+						'label'=> __('Color de fondo', 'empralidad'),
+						'section'=> 'emp_section_styles_content',
+						'settings'=> 'emp_content_background',
+						'description'=> __( 'Fondo del contenedor principal', 'empralidad' )
+
+					)));
+				// end content
+				// Footer
+					$wp_customize->add_section('emp_section_styles_footer', array(
+						'title'=> __('Footer', 'empralidad'),
+						'priority' => 5,
+						'panel' => 'emp_panel_styles'
+					));
+					// Background color
+					$wp_customize->add_setting('emp_footer_background', array(
+						'default' => '#005777',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_styles_footer_background_color_control', array(
+						'label'=> __('Color de fondo', 'empralidad'),
+						'section'=> 'emp_section_styles_footer',
+						'settings'=> 'emp_footer_background',
+						'description'=> __( 'Fondo del pie de página', 'empralidad' )
+
+					)));
+					// Color typography
+					$wp_customize->add_setting('emp_footer_color', array(
+						'default' => '#262626',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_tipography_footer_color_control', array(
+						'label'=> __('Color de texto', 'empralidad'),
+						'section'=> 'emp_section_styles_footer',
+						'settings'=> 'emp_footer_color'
+
+					)));
+				// end footer
+				//Tipography
+					$wp_customize->add_section('emp_section_styles_tipography', array(
+						'title'=> __('Tipografía', 'empralidad'),
+						'priority' => 6,
+						'panel' => 'emp_panel_styles'
+					));
+				// Options
+					// Font size
+					$wp_customize->add_setting('emp_styles_tipography_size', array(
+						'default' => 1,
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control('emp_styles_tipography_size_control1', array(
+											'label'          => __( 'Tamaño', 'empralidad' ),
+											'section'        => 'emp_section_styles_tipography',
+											'settings'       => 'emp_styles_tipography_size',
+											'type'					 => 'range',
+										  'input_attrs' 	 => array(
+										    'min' => 10,
+										    'max' => 50,
+										    'step' => 1,
+										  )
+					));
+					// type
+					$wp_customize->add_setting('emp_styles_tipography', array(
+						'default' => 'sans-serif',
+						'trasnport' => 'refresh',
+						'sanitize_callback' => 'sanitize_string'
+					));
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_tipography_control1', array(
+											'label'          => __( 'Tipografía', 'empralidad' ),
+											'section'        => 'emp_section_styles_tipography',
+											'settings'       => 'emp_styles_tipography',
+											'type'           => 'radio',
+											'choices'        => array(
+												'serif'  			 => __( 'Serif', 'empralidad' ),
+												'sans-serif'   => __( 'Sans-serif', 'empralidad' ),
+												'varela round' => __( 'Varela Round', 'empralidad' ),
+												'indie flower' => __( 'Indie Flower', 'empralidad' ),
+												'roboto' 			 => __('Roboto', 'empralidad'),
+												'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
+												'nunito'			 => __('Nunito', 'empralidad'),
+												'true' 				 => __( 'Personalizado', 'empralidad' )
+											)
+					)));
+					$wp_customize->add_setting('emp_styles_tipography_personalized', array(
+						'default' => '',
+						'trasnport' => 'refresh'
+					));
+
+					$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_tipography_personalized_control', array(
+						'label'=> __('Tipografía personalizada', 'empralidad'),
+						'section'=> 'emp_section_styles_tipography',
+						'description'	  => __( 'Escribe el nombre de la tipografía entre commillas ("")', 'empralidad' ),
+						'settings'=> 'emp_styles_tipography_personalized',
+
+					)));
+				// end options
 				// Media background
 					$wp_customize->add_section('emp_section_emp_background_media', array(
 						'title'=> __('Imagen/Video de fondo', 'empralidad'),
-						'priority' => 2,
+						'priority' => 7,
 						'panel' => 'emp_panel_styles'
 					));
 					// Video background 1
@@ -535,94 +744,10 @@
 													'step' => 0.01,
 												)
 						));
-				//Tipography
-					$wp_customize->add_section('emp_section_styles_tipography', array(
-						'title'=> __('Tipografía', 'empralidad'),
-						'priority' => 2,
-						'panel' => 'emp_panel_styles'
-					));
-					// Options
-						// Color typography
-						// color text
-						$wp_customize->add_setting('emp_tipography_primarycolor', array(
-							'default' => '#262626',
-							'trasnport' => 'refresh',
-							'sanitize_callback' => 'sanitize_string'
-						));
-
-						$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_tipography_primarycolor_control', array(
-							'label'=> __('Texto cabecera', 'empralidad'),
-							'section'=> 'emp_section_styles_tipography',
-							'settings'=> 'emp_tipography_primarycolor'
-
-						)));
-						// color featured
-						$wp_customize->add_setting('emp_tipography_color', array(
-							'default' => '#005777',
-							'trasnport' => 'refresh',
-							'sanitize_callback' => 'sanitize_string'
-						));
-
-						$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_tipography_color_control', array(
-							'label'=> __('Texto secundario', 'empralidad'),
-							'section'=> 'emp_section_styles_tipography',
-							'settings'=> 'emp_tipography_color',
-							'description'=> __( 'Texto dentro de fondo secundario', 'empralidad' )
-
-						)));
-						// Font size
-						$wp_customize->add_setting('emp_styles_tipography_size', array(
-							'default' => 1,
-							'trasnport' => 'refresh',
-							'sanitize_callback' => 'sanitize_string'
-						));
-						$wp_customize->add_control('emp_styles_tipography_size_control1', array(
-												'label'          => __( 'Tamaño', 'empralidad' ),
-												'section'        => 'emp_section_styles_tipography',
-												'settings'       => 'emp_styles_tipography_size',
-												'type'					 => 'range',
-											  'input_attrs' 	 => array(
-											    'min' => 10,
-											    'max' => 50,
-											    'step' => 1,
-											  )
-						));
-						// type
-						$wp_customize->add_setting('emp_styles_tipography', array(
-							'default' => 'sans-serif',
-							'trasnport' => 'refresh',
-							'sanitize_callback' => 'sanitize_string'
-						));
-						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_tipography_control1', array(
-												'label'          => __( 'Tipografía', 'empralidad' ),
-												'section'        => 'emp_section_styles_tipography',
-												'settings'       => 'emp_styles_tipography',
-												'type'           => 'radio',
-												'choices'        => array(
-													'serif'  			 => __( 'Serif', 'empralidad' ),
-													'sans-serif'   => __( 'Sans-serif', 'empralidad' ),
-													'varela round' => __( 'Varela Round', 'empralidad' ),
-													'indie flower' => __( 'Indie Flower', 'empralidad' ),
-													'true' 				 => __( 'Personalizado', 'empralidad' )
-												)
-						)));
-						$wp_customize->add_setting('emp_styles_tipography_personalized', array(
-							'default' => '',
-							'trasnport' => 'refresh'
-						));
-
-						$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_tipography_personalized_control', array(
-							'label'=> __('Tipografía personalizada', 'empralidad'),
-							'section'=> 'emp_section_styles_tipography',
-							'description'	  => __( 'Escribe el nombre de la tipografía entre commillas ("")', 'empralidad' ),
-							'settings'=> 'emp_styles_tipography_personalized',
-
-						)));
-					// end options
 					// Btn
 						$wp_customize->add_section('emp_section_btn', array(
 								'title'=> __('Botones', 'empralidad'),
-								'priority' => 3,
+								'priority' => 8,
 								'panel' => 'emp_panel_styles'
 							));
 						// btn bg
@@ -654,7 +779,7 @@
 				//Borders
 					$wp_customize->add_section('emp_section_styles_border', array(
 						'title'=> __('Bordes', 'empralidad'),
-						'priority' => 4,
+						'priority' => 9,
 						'panel' => 'emp_panel_styles'
 					));
 					// Options
@@ -676,7 +801,7 @@
 				// Shadow
 				$wp_customize->add_section('emp_section_shadow', array(
 					'title'=> __('Sombras', 'empralidad'),
-					'priority' => 5,
+					'priority' => 10,
 					'panel' => 'emp_panel_styles'
 				));
 				$wp_customize->add_setting('emp_shadow', array(
@@ -1613,26 +1738,26 @@
 				)));
 			// end code
 		// end qr code
-		// 13) GitHub Password
-		$wp_customize->add_section('emp_section_github_pass', array(
-			'title'=> __('Soporte Premium', 'empralidad'),
-			'priority' => 10
-		));
-		// Code
-			$wp_customize->add_setting('emp_github_pass', array(
-				'default' => '',
-				'trasnport' => 'refresh',
-				'sanitize_callback' => 'sanitize_encoded'
-			));
-
-			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_qr_text_control', array(
-				'label'=> __('Contraseña', 'empralidad'),
-				'section'=> 'emp_section_github_pass',
-				'settings'=> 'emp_github_pass',
-				'description'	  => __( 'Visita https://empralidad.com.ar para contratar el soporte', 'empralidad' )
-
-			)));
-		// end code
+		// // 13) GitHub Password
+		// $wp_customize->add_section('emp_section_github_pass', array(
+		// 	'title'=> __('Soporte Premium', 'empralidad'),
+		// 	'priority' => 10
+		// ));
+		// // Code
+		// 	$wp_customize->add_setting('emp_github_pass', array(
+		// 		'default' => '',
+		// 		'trasnport' => 'refresh',
+		// 		'sanitize_callback' => 'sanitize_encoded'
+		// 	));
+		//
+		// 	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_qr_text_control', array(
+		// 		'label'=> __('Contraseña', 'empralidad'),
+		// 		'section'=> 'emp_section_github_pass',
+		// 		'settings'=> 'emp_github_pass',
+		// 		'description'	  => __( 'Visita https://empralidad.com.ar para contratar el soporte', 'empralidad' )
+		//
+		// 	)));
+		// // end code
 
 
 	}

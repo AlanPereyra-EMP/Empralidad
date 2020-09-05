@@ -1,13 +1,14 @@
     <!-- Footer -->
 
-        <footer class="container-fluid color-personalized py-3 pb-5 foote text-center no-shadow">
+        <footer class="container-fluid py-3 pb-5 foote text-center no-shadow">
+              <div class="mw-1200px">
                 <!-- Sidebar -->
                 <?php if(is_active_sidebar( 'footer' )){
                     get_sidebar( 'footer' );
                 } ?>
 
             	<!-- Social buttons -->
-	            	<div class="container-fluid p-3 color-personalized fa-2x">
+	            	<div class="container-fluid p-3 fa-2x">
 		            	<!-- Facebook -->
 			            	<?php $facebook_link = get_theme_mod('emp_social_face_text');
 			                    if ($facebook_link){
@@ -35,14 +36,15 @@
 		            </div>
             	<!-- end social buttons -->
                 <p><?php echo get_theme_mod('emp_footer_text'); ?></p>
-                <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_term')); ?>" class="color-personalized">Terminos y Condiciones</a> -
-                <a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_poli')); ?>" class="color-personalized">Politicas de Privacidad</a></small></p>
+                <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_term')); ?>" >Terminos y Condiciones</a> -
+                <a href="<?php echo get_permalink(get_theme_mod('emp_headline_link_poli')); ?>">Politicas de Privacidad</a></small></p>
                 <!-- Owner -->
-                    <p><small>Desarrollado por</small> <a class="color-personalized" href="https://empralidad.com.ar"><b>Empralidad</b></a></p>
+                    <p><small>Desarrollado por</small> <a href="https://empralidad.com.ar"><b>Empralidad</b></a></p>
                 <!-- end owner -->
                 <br>
-                <?php echo get_theme_mod('emp_qr_text') ?>
+                <p style="width:50px;" class="mx-auto"><?php echo get_theme_mod('emp_qr_text') ?></p>
                 <br>
+              </div>
         </footer>
     <!-- end footer -->
     <!-- Button permanent desktop -->
@@ -57,7 +59,7 @@
     <!-- end button permanent desktop -->
     <!-- Buttons mobile -->
         <div class="mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile"></div>
-        <div class="mx-auto container-fluid fixed-bottom bg-white" id="bg-woocommerce-mobile"></div>
+        <div class="mx-auto container-fluid fixed-bottom " id="bg-woocommerce-mobile"></div>
         <div class="buttons-mobile show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
             <!-- Home-->
                 <a href="<?php echo home_url(); ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>

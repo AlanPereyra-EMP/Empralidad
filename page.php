@@ -5,7 +5,7 @@
         </div>
     <!-- end title -->
     <!-- Page content  -->
-        <article class="col-md-10 col-lg-8 mx-md-auto p-0 py-3 bg-personalized-secondary">
+        <article class="col-12 mx-md-auto p-0 py-3 content-background content-color mw-1200px" style="margin-bottom:200px!important;">
             <div class="container-fluid p-0">
                 <?php
                 if ( have_posts() ) : while ( have_posts() ) : the_post();

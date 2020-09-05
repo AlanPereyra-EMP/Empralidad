@@ -1,9 +1,9 @@
 // Scroll.js
 $(window).on('scroll', function(){
   if($(window).scrollTop()){
-    $('nav').addClass('navbar-scroll');
+    $('#navbar-background').addClass('navbar-scroll');
   } else {
-    $('nav').removeClass('navbar-scroll');
+    $('#navbar-background').removeClass('navbar-scroll');
   }
   if($(window).scrollTop()){
     $('#scrollToTopButton').addClass('img-btn-fixed-show');
@@ -13,9 +13,9 @@ $(window).on('scroll', function(){
 })
 $(window).ready(function() {
   if($(window).scrollTop()){
-    $('nav').addClass('navbar-scroll');
+    $('#navbar-background').addClass('navbar-scroll');
   } else {
-    $('nav').removeClass('navbar-scroll');
+    $('#navbar-background').removeClass('navbar-scroll');
   }
   if($(window).scrollTop()){
     $('i.img-btn-fixed').addClass('img-btn-fixed-show');
@@ -169,11 +169,6 @@ function showWoocommerceCart() {
     }
     backgroundCart.style.padding = '0vh 0 0 0';
     cart.style.display = 'none';
-    setTimeout(()=>{
-      if(!$(window).scrollTop()){
-        navbar.classList.remove('navbar-scroll');
-      }
-    }, 50)
   }else{
     icon.classList.remove('fa-search');
     icon.classList.add('fa-times');
@@ -187,7 +182,6 @@ function showWoocommerceCart() {
     setTimeout(()=>{
       cart.style.display = 'block';
     }, 250)
-    navbar.classList.add('navbar-scroll');
   }
 }
 
@@ -325,4 +319,11 @@ if (stopAudio3){
 $(window).ready(function() {
   $('#woo_featured_products ul').removeClass("columns-3");
   $('.products .columns-4').addClass('columns-2');
+});
+
+
+$(document).ready(function(){
+  if ($('#carouselFade')){
+    $("#carouselFade").carousel();
+  }
 });

@@ -40,6 +40,23 @@
         element5.rel = 'stylesheet';
         document.body.appendChild(element5);
 
+        var element6 = document.createElement("link");
+        element6.href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+        element6.rel = 'stylesheet';
+        document.body.appendChild(element6);
+
+        var element7 = document.createElement("link");
+        element7.href = "https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap";
+        element7.rel = 'stylesheet';
+        document.body.appendChild(element7);
+
+        var element8 = document.createElement("link");
+        element8.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
+        element8.rel = 'stylesheet';
+        document.body.appendChild(element8);
+
+
+
         }
         if (window.addEventListener){
         window.addEventListener("load", downloadCSSAtOnload, false);
@@ -64,8 +81,19 @@
   <body <?php body_class(); ?> >
 
     <div id="top_content"></div>
+    <?php $head_notice = get_theme_mod('emp_head_notice');
+    if ($head_notice){ ?>
+      <div id="top-notice" class="show-from-md">
+        <?php echo get_theme_mod('emp_head_notice'); ?>
+      </div>
+    <?php }?>
+
     <!-- navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?> py-0">
+      <div id="navbar-background" class="sticky-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?>" style="z-index:1032;">
+        <nav class="navbar navbar-expand-lg py-0 mw-1200px">
+          <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
+              <i id="btn-menu-nav" class="fa fa-bars text-dark <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
+          </div>
             <!-- if logo -->
             <?php $img_mobile_navbar = get_theme_mod('emp_head_logo');
 	                $img_desktop_navbar = get_theme_mod('emp_head_logo_desktop');
@@ -82,12 +110,9 @@
                     </a>
 	            <?php } ?>
 	        <!-- end if logo -->
-            <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
-                <i id="btn-menu-nav" class="fa fa-bars text-dark <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
-            </div>
             <?php $search_link = get_theme_mod('emp_mobile_search_text');
                 if ($search_link == 'true'){
-                   $search_icon = '<div class="collapse show-lg text-white mr-3 ml-auto" id="btn-search-desktop">
+                   $search_icon = '<div class="collapse show-lg mr-3 ml-auto" id="btn-search-desktop">
                                        <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
                                    </div>';
                    $ul_class = '';
@@ -107,14 +132,15 @@
             <!-- if cart on -->
             <?php $cart_link = get_theme_mod('emp_mobile_cart_text');
             if(class_exists('WooCommerce') && $cart_link == 'true'){ ?>
-                <a onclick="showWoocommerceCart();" class="fa fa-shopping-cart mr-4 fadein show-desktop text-white">
+                <a onclick="showWoocommerceCart();" class="fa fa-shopping-cart mr-4 fadein show-desktop">
                         <small class="woo-counter-cart-number-desktop added_to_cart wc-forward">
                             <div id="mini-cart-count"></div>
                         </small>
                 </a>
             <?php } ?>
         </nav>
-        <i id="bg-menu-mobile"></i>
+      </div>
+      <i id="bg-menu-mobile"></i>
     <!-- end navbar -->
     <div class="FullScreenLanding emp_img_slide1 col-12 mx-auto bg-personalized">
       <div class="emp-background-image emp-background-media-filter">

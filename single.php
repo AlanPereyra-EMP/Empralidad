@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                <div class="bg-personalized-secondary border-30px col-md-8 mx-md-auto to-fade to-fadein-animation container-fluid p-0 py-3 py-md-5">
+                <div class="bg-personalized-secondary border-30px mw-1200px mx-md-auto to-fade to-fadein-animation container-fluid p-0 py-3 py-md-5" style="margin-bottom:200px!important;">
                         <!-- Ad 1 -->
                             <?php
                             $emp_homepage_show = get_theme_mod('emp_ads_show1');
@@ -108,8 +108,7 @@
                             ?>
                             <div id="emp-single-info" style=" text-transform: uppercase;"><?php the_author(); ?> / <?php  the_date(); ?><br><br> <div class="d-inline-flex">Categoría:  <?php the_category(); ?> </div></div>
                             <span class="btn container-fluid invisible"></span>
-                            <?php
-                            the_content();?>
+                            <?php the_content();?>
         	                <?php if(!class_exists('cuar_plugin')){ ?>
                             <!-- Botton share -->
                               <a href="http://facebook.com/sharer.php?u=<?php the_permalink() ?>"><button class="btn container-fluid p-3 text-center text-white">Compartir en Facebook</button></a>

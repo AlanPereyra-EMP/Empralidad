@@ -35,7 +35,7 @@
         <h1 class="color-personalized text-center py-5 px-2 px-md-5 text-mobile">Tienda</h1>
     <!-- end title -->
     <!-- Page content -->
-        <article class="container my-5 margin-top-mobile p-2 p-md-4 bg-personalized-secondary">
+        <article class="container my-5 margin-top-mobile p-2 p-md-4 content-background content-color" style="margin-bottom:200px!important;">
                 <?php get_product_search_form(); ?>
                 <?php woocommerce_content();?>
 
