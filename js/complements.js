@@ -96,7 +96,7 @@ function openMobileMenu() {
   } else {
     icon.classList.remove('fa-bars');
     icon.classList.add('fa-times');
-    bgMenu.style.height = '100vh';
+    bgMenu.style.height = '200vh';
     setTimeout(()=>{
       menu.style.visibility = 'visible';
     }, 250)
@@ -135,7 +135,7 @@ function showSearchBackground() {
     close.classList.add('fa-times');
     text.classList.remove('d-block');
     text.classList.add('d-none');
-    backgroundSearchform.style.padding = '100vh 0 0 0';
+    backgroundSearchform.style.padding = '200vh 0 0 0';
     setTimeout(()=>{
       searchform.style.display = 'block';
     }, 250)
@@ -178,7 +178,7 @@ function showWoocommerceCart() {
       counter.classList.remove('visible');
       counter.classList.add('invisible');
     }
-    backgroundCart.style.padding = '100vh 0 0 0';
+    backgroundCart.style.padding = '200vh 0 0 0';
     setTimeout(()=>{
       cart.style.display = 'block';
     }, 250)

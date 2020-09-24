@@ -1,16 +1,14 @@
 <!doctype html>
-<html prefix="og: http://ogp.me/ns#" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
-
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
     <!-- Defer css -->
     <script>
-        function downloadCSSAtOnload() {
+      function downloadCSSAtOnload() {
         var element = document.createElement("link");
         element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
         element.rel = 'stylesheet';
@@ -22,50 +20,64 @@
         document.body.appendChild(element1);
 
         var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/woocommerce-emp.css";
+        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/fonts/fa/css/all.min.css";
         element2.rel = 'stylesheet';
         document.body.appendChild(element2);
 
         var element3 = document.createElement("link");
-        element3.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/fonts/fa/css/all.min.css";
+        element3.href = "https://fonts.googleapis.com/css?family=Varela+Round&display=swap";
         element3.rel = 'stylesheet';
         document.body.appendChild(element3);
 
-        }
-        if (window.addEventListener){
+        var element4 = document.createElement("link");
+        element4.href = "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
+        element4.rel = 'stylesheet';
+        document.body.appendChild(element4);
+
+        var element5 = document.createElement("link");
+        element5.href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+        element5.rel = 'stylesheet';
+        document.body.appendChild(element5);
+
+        var element6 = document.createElement("link");
+        element6.href = "https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap";
+        element6.rel = 'stylesheet';
+        document.body.appendChild(element6);
+
+        var element7 = document.createElement("link");
+        element7.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
+        element7.rel = 'stylesheet';
+        document.body.appendChild(element7);
+      }
+      if (window.addEventListener){
         window.addEventListener("load", downloadCSSAtOnload, false);
-        }else if (window.attachEvent){
+      }else if (window.attachEvent){
         window.attachEvent("onload", downloadCSSAtOnload);
-        }else{ window.onload = downloadCSSAtOnload;}
+      }else{ window.onload = downloadCSSAtOnload;}
     </script>
     <style>
-        .to-fade{
-            opacity: 0;
-            transition: all .5s;
-        }
-        span strong, p strong, .landing-content h1, .landing-content h2, .landing-content h3, .landing-content h4, .landing-content h5, .landing-content h6 {
-          color: #fff!important;
-        }
-        @media(min-width:576px){
-          .wp-block-embed-youtube iframe{
-              max-height: 16vw;
-          }
-        }
+      .to-fade{
+        opacity: 0;
+        transition: all .5s;
+      }
     </style>
-
-    <?php wp_head(); ?>
-
-    <?php echo get_theme_mod('emp_face_text');
-          echo get_theme_mod('emp_google_text'); ?>
+    <?php
+    wp_head();
+    echo get_theme_mod('emp_face_text');
+    echo get_theme_mod('emp_google_text');
+    ?>
   </head>
-  <body <?php body_class() ?>>
+  <body <?php body_class(); ?> >
 
     <!-- Page content  -->
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+    <?php if ( have_posts() ) {
+      while ( have_posts() ) {
+        the_post();?>
         <div class="pt-5 p-md-3 no-shadow text-white" style="background:<?php echo get_theme_mod('emp_footer_color'); ?>;">
           <div class="mt-5 col-lg-6 mx-auto landing-content"><?php the_content();?></div>
         </div>
-    <?php endwhile; endif; ?>
+      <?php }
+    } ?>
     <!-- end page content -->
 
     <!-- Js -->

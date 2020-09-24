@@ -1,5 +1,5 @@
 <?php $featured_products = get_theme_mod('emp_woocommerce_featured_show'); ?>
-<?php if($featured_products === 'true' && class_exists('WooCommerce')) { ?>
+<?php if($featured_products === true && class_exists('WooCommerce')) { ?>
   <div class="p-2">
 
             <h2 class="pt-5 pb-4 px-0 h1 text-center"><?php echo get_theme_mod('emp_woocommerce_featured_title'); ?></h2>
