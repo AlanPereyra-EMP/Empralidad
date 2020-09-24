@@ -11,7 +11,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
   <div class="text-img-home container-fluid my-auto">
     <div id="carouselFade" class="carousel carousel-fade carousel-inner text-homepage-container" data-ride="carousel">
       <div class="carousel-item active empFadeIn mx-auto color-personalized mw-1200px">
-        <h1 class="text-mobile color-personalized empFadeIn"><?php echo get_theme_mod('emp_head_text_title'); ?></h1>
+        <h1 class="color-personalized empFadeIn"><?php echo get_theme_mod('emp_head_text_title'); ?></h1>
         <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea'); ?></p>
         <?php if($emp_button_show1){ ?>
           <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_btn1') ?>';" class="p-2 container-fluid mw-600-px border-30px btn-outline-light">
