@@ -113,7 +113,7 @@
             'container'      => 'div',
             'container_class'=> 'navbar-collapse',
             'container_id'   => 'navbarContentMenu',
-            'items_wrap'     => $search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items '.$ul_class.'">%3$s</ul>',
+            'items_wrap'     => $search_icon .'<div class="ml-auto"><ul class="navbar-nav nav text-center mobile-menu-items '.$ul_class.'">%3$s</ul></div>',
             'menu_class'     => 'nav-item',
             'walker'         => new Walker_Nav_Primary()
           ) ); ?>

@@ -38,7 +38,8 @@ footer{
 .content-color, h2.woocommerce-loop-product__title{
   color: <?php echo get_theme_mod('emp_components_content_color'); ?>;
 }
-.menu-item a, .fa-text, .mini_cart_item a, .mini_cart_item span, .woocommerce-mini-cart__total, .woocommerce-mini-cart__total strong{
+.menu-item a, .fa-text, .mini_cart_item a, .mini_cart_item span, .woocommerce-mini-cart__total, .woocommerce-mini-cart__total strong,
+#searchform-woocommerce{
   color: <?php echo get_theme_mod('emp_components_nav_color'); ?>;
 }
 .fa, .fab, .icon-color{
@@ -71,7 +72,6 @@ body{
   }
 }
 .text-mobile {
-    font-size: <?php echo (get_theme_mod('emp_components_head_title_size') - 130) ?>px;
     word-wrap: break-word;
 }
 

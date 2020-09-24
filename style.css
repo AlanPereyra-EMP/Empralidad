@@ -184,7 +184,6 @@ ul .dropdown-menu li a::after {
 }
 ul.navbar-nav.nav.text-center.mobile-menu-items {
   font-size: 18px;
-  width: 85%;
 }
 @media (min-width:991px){
 	ul.navbar-nav.nav.text-center.mobile-menu-items{
