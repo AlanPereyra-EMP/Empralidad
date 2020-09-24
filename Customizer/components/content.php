@@ -6,7 +6,7 @@ $wp_customize->add_section('emp_section_components_content', array(
 ));
 // Font size
 $wp_customize->add_setting('emp_components_content_size', array(
-  'default'           => 1,
+  'default'           => 17,
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));

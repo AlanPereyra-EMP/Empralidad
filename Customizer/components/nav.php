@@ -20,7 +20,7 @@ $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,
   )));
 // Text color
 $wp_customize->add_setting('emp_components_nav_color', array(
-  'default'           => '#005777',
+  'default'           => '#ffffff',
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
@@ -31,7 +31,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_co
 )));
 // Icon color
 $wp_customize->add_setting('emp_components_nav_icon_color', array(
-  'default'           => '#262626',
+  'default'           => '#ffffff',
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
@@ -42,7 +42,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_co
 )));
 // Background color
 $wp_customize->add_setting('emp_components_nav_background', array(
-  'default'           => '#ffffff',
+  'default'           => '#000000',
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));

@@ -67,7 +67,7 @@ $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_co
 )));
 // Background color
 $wp_customize->add_setting('emp_components_head_title_background', array(
-  'default' => '#ffffff',
+  'default' => '#005777',
   'trasnport' => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
@@ -78,7 +78,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_co
 )));
 // Color typography
 $wp_customize->add_setting('emp_components_head_title_color', array(
-  'default' => '#262626',
+  'default' => '#ffffff',
   'trasnport' => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
