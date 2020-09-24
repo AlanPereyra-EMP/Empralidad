@@ -187,7 +187,7 @@ ul.navbar-nav.nav.text-center.mobile-menu-items {
 }
 @media (min-width:991px){
 	ul.navbar-nav.nav.text-center.mobile-menu-items{
-		display: block;
+		display: inline-block;
 	}
 }
 /*navbar admin*/

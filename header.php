@@ -101,7 +101,7 @@
 	        <!-- end if logo -->
           <?php $search_link = get_theme_mod('emp_components_nav_search');
           if ($search_link){
-             $search_icon = '<div class="collapse show-lg ml-auto" id="btn-search-desktop">
+             $search_icon = '<div class="collapse d-inline ml-auto" id="btn-search-desktop">
                                <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
                              </div>';
              $ul_class = '';
@@ -113,7 +113,7 @@
             'container'      => 'div',
             'container_class'=> 'navbar-collapse',
             'container_id'   => 'navbarContentMenu',
-            'items_wrap'     => $search_icon .'<div class="ml-auto"><ul class="navbar-nav nav text-center mobile-menu-items '.$ul_class.'">%3$s</ul></div>',
+            'items_wrap'     => '<div class="ml-auto">'.$search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items '.$ul_class.'">%3$s</ul></div>',
             'menu_class'     => 'nav-item',
             'walker'         => new Walker_Nav_Primary()
           ) ); ?>
