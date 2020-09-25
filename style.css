@@ -951,6 +951,14 @@ a.fa.fa-times{
 	transition: ease .5s;
 	z-index: 1010;
 }
+#searchform-woocommerce{
+	display: none;
+	overflow:auto;
+	max-height:80vh;
+	text-align:center;
+	padding:20px;
+	z-index:1020;
+}
 #searchform-woocommerce h2{
 	text-align: center;
 }
@@ -976,12 +984,10 @@ a.fa.fa-times{
 #searchform-mobile, #searchform-woocommerce{
 	width: 100%;
 	transition: all 1s;
-	transform: scale(0);
 	display: none;
 	position: fixed;
-	top: 53%;
+	top: 110px;
 	left: 0;
-	transform: translate(0%, -43%);
 	z-index: 1029;
 	padding: 5%;
 }
@@ -997,6 +1003,8 @@ a.fa.fa-times{
 @media (min-width: 992px){
 	#searchform-woocommerce{
 		font-size: 25px;
+		transform: translate(0px, -50%);
+    top: 54%;
 	}
 }
 /*15) Carousel*/

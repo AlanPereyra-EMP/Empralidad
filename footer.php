@@ -84,7 +84,7 @@
         </a>
       <?php } ?>
     </div>
-    <div id="searchform-woocommerce" style="display: none;overflow:auto;max-height:83vh;text-align:center;padding:20px;z-index:1020;">
+    <div id="searchform-woocommerce">
       <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
     </div>
     <div id="searchform-mobile" style="display: none;">
