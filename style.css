@@ -1000,6 +1000,13 @@ a.fa.fa-times{
 	z-index: 1030;
 	transition: ease .5s;
 }
+@media (max-width:991px){
+	#navbarContentMenu ul{
+		overflow: auto;
+    max-height: 67vh;
+    display: grid;
+	}
+}
 @media (min-width: 992px){
 	#searchform-woocommerce{
 		font-size: 25px;
