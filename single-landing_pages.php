@@ -10,7 +10,7 @@
     <script>
       function downloadCSSAtOnload() {
         var element = document.createElement("link");
-        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/plugins-support.css";
+        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/plugins-support.css";
         element.rel = 'stylesheet';
         document.body.appendChild(element);
 

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-  <header class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify">
-      <h1 class="text-mobile"><?php the_title(); ?></h1>
-  </header>
+<header class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify">
+  <h1 class="text-mobile"><?php the_title(); ?></h1>
+</header>
   <article class="col-12 mx-md-auto p-0 py-3 content-background content-color mw-1200px" style="margin-bottom:200px!important;">
     <div class="container-fluid p-0">
       <?php
@@ -16,5 +16,5 @@
       }
       ?>
     </div>
-  </article
+  </article>
 <?php get_footer(); ?>

@@ -1,45 +1,43 @@
-    <?php if(!is_checkout()&&!is_account_page()&&!is_cart()){ ?>
-      <footer class="container-fluid py-3 pb-5 footer no-shadow">
-        <div class="mw-1200px text-center">
-          <!-- Sidebar -->
-          <?php if(is_active_sidebar( 'footer' )){
-            get_sidebar( 'footer' );
-          } ?>
+    <footer class="container-fluid py-3 pb-5 footer no-shadow">
+      <div class="mw-1200px text-center">
+        <!-- Sidebar -->
+        <?php if(is_active_sidebar( 'footer' )){
+          get_sidebar( 'footer' );
+        } ?>
 
-        	<!-- Social buttons -->
-        	<div class="container-fluid p-3 fa-2x">
-          	<!-- Facebook -->
-          	<?php $facebook_link = get_theme_mod('emp_components_footer_face');
-            if ($facebook_link){ ?>
-              <a href="<?php echo get_theme_mod('emp_components_footer_face'); ?>" class="fab fa-facebook-f"></a>
-            <?php } ?>
-            <!-- Instagram -->
-          	<?php $instagram_link = get_theme_mod('emp_components_footer_insta');
-            if ($instagram_link){ ?>
-              <a href="<?php echo get_theme_mod('emp_components_footer_insta'); ?>" class="fab fa-instagram"></a>
-            <?php } ?>
-            <!-- Twiter -->
-          	<?php $twitter_link = get_theme_mod('emp_components_footer_tw');
-            if ($twitter_link){ ?>
-              <a href="<?php echo get_theme_mod('emp_components_footer_tw'); ?>" class="fab fa-twitter"></a>
-            <?php } ?>
-            <!-- Youtube -->
-          	<?php $youtube_link = get_theme_mod('emp_components_footer_yt');
-            if ($youtube_link){ ?>
-              <a href="<?php echo get_theme_mod('emp_components_footer_yt'); ?>" class="fab fa-youtube"></a>
-            <?php } ?>
-          </div>
-          <p><?php echo get_theme_mod('emp_components_footer_text'); ?></p>
-          <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_components_footer_term')); ?>" >Terminos y Condiciones</a> -
-          <a href="<?php echo get_permalink(get_theme_mod('emp_components_footer_term')); ?>">Politicas de Privacidad</a></small></p>
-          <!-- Owner -->
-          <p><small>Desarrollado por</small> <a href="https://empralidad.com.ar"><b>Empralidad</b></a></p>
-          <br>
-          <p style="width:50px;" class="mx-auto"><?php echo get_theme_mod('emp_components_footer_qr') ?></p>
-          <br>
+      	<!-- Social buttons -->
+      	<div class="container-fluid p-3 fa-2x">
+        	<!-- Facebook -->
+        	<?php $facebook_link = get_theme_mod('emp_components_footer_face');
+          if ($facebook_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_face'); ?>" class="fab fa-facebook-f"></a>
+          <?php } ?>
+          <!-- Instagram -->
+        	<?php $instagram_link = get_theme_mod('emp_components_footer_insta');
+          if ($instagram_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_insta'); ?>" class="fab fa-instagram"></a>
+          <?php } ?>
+          <!-- Twiter -->
+        	<?php $twitter_link = get_theme_mod('emp_components_footer_tw');
+          if ($twitter_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_tw'); ?>" class="fab fa-twitter"></a>
+          <?php } ?>
+          <!-- Youtube -->
+        	<?php $youtube_link = get_theme_mod('emp_components_footer_yt');
+          if ($youtube_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_yt'); ?>" class="fab fa-youtube"></a>
+          <?php } ?>
         </div>
-      </footer>
-    <?php } ?>
+        <p><?php echo get_theme_mod('emp_components_footer_text'); ?></p>
+        <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_components_footer_term')); ?>" >Terminos y Condiciones</a> -
+        <a href="<?php echo get_permalink(get_theme_mod('emp_components_footer_term')); ?>">Politicas de Privacidad</a></small></p>
+        <!-- Owner -->
+        <p><small>Desarrollado por</small> <a href="https://empralidad.com.ar"><b>Empralidad</b></a></p>
+        <br>
+        <p style="width:50px;" class="mx-auto"><?php echo get_theme_mod('emp_components_footer_qr') ?></p>
+        <br>
+      </div>
+    </footer>
     <!-- Button permanent desktop -->
     <div class="show-btn-fixed">
       <?php  $perma_button = get_theme_mod('emp_components_nav_wsp'); ?>
