@@ -117,6 +117,10 @@ li.menu-item{
 		text-align: center;
 	}
 }
+.dropdown-menu-li a{
+	background-size: 55px!important;
+	padding-top: 69px;
+}
 ul .dropdown-menu.depth_0 {
 	height: 0;
     overflow: hidden;
@@ -125,9 +129,9 @@ ul .dropdown-menu.depth_0 {
     position: absolute;
 }
 @media(max-width: 991px){
-	ul .dropdown-menu.depth_0.show{
+	ul .dropdown-menu.depth_0{
 		overflow-y: scroll;
-    height: 105px!important;
+    height: 205px!important;
 		width: 200%!important;
     left: -50%;
 	}
@@ -756,7 +760,7 @@ label.screen-reader-text{
 		display: block;
 	}
 	.show-from-md{
-		display: none;
+		display: none!important;
 	}
 }
 @media (min-width: 768px){

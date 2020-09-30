@@ -102,7 +102,7 @@
 	        <!-- end if logo -->
           <?php $search_link = get_theme_mod('emp_components_nav_search');
           if ($search_link){
-             $search_icon = '<div class="collapse d-inline ml-auto" id="btn-search-desktop">
+             $search_icon = '<div class="collapse d-inline ml-auto show-from-md" id="btn-search-desktop">
                                <a id="searchform-close" class="fa ml-auto fa-search mx-auto" onclick="showSearchBackground();"></a>
                              </div>';
              $ul_class = '';
