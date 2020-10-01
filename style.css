@@ -123,17 +123,14 @@ li.menu-item{
 }
 ul .dropdown-menu.depth_0 {
 	height: 0;
-    overflow: hidden;
-    display: block;
-    visibility: hidden;
-    position: absolute;
+  overflow: hidden;
+  display: block;
+  visibility: hidden;
+  position: absolute;
 }
 @media(max-width: 991px){
 	ul .dropdown-menu.depth_0{
-		overflow-y: scroll;
-    height: 205px!important;
-		width: 200%!important;
-    left: -50%;
+		overflow-y: auto;
 	}
 }
 ul .dropdown-menu.depth_0.show {
@@ -997,7 +994,7 @@ a.fa.fa-times{
 }
 @media (max-width:991px){
 	#navbarContentMenu ul{
-    max-height: 67vh;
+    max-height: 35vh;
     display: grid;
 	}
 }

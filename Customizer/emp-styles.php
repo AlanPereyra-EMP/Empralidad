@@ -3,8 +3,9 @@
 #top-notice{
   background-color: <?php echo get_theme_mod('emp_components_notice_background'); ?>
 }
-.navbar-scroll, .buttons-mobile{
+.navbar-scroll, .buttons-mobile, #navbar-background:hover{
   background-color: <?php echo get_theme_mod('emp_components_nav_background'); ?>ee!important;
+  transition: .3s all;
 }
 .bg-personalized, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, .woocommerce span.onsale,
 #bg-woocommerce-mobile{
