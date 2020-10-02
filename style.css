@@ -1013,7 +1013,7 @@ a.fa.fa-times{
 	float: none!important;
 }
 .carousel-item p{
-	padding: 0 5px;
+	padding: 0 15px;
 }
 .FullScreenLanding{
 	height: 100vh;
@@ -1066,7 +1066,7 @@ a.fa.fa-times{
 	}
 }
 .text-homepage-container{
-	max-height: 41vh;
+	max-height: 45vh;
   overflow-y: auto;
 }
 @media (max-width: 991px){
