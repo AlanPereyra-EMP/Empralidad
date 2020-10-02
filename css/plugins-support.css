@@ -21,6 +21,9 @@ fieldset{
 	.fa-shopping-cart.fixed-bottom{
 		display: none;
 	}
+	.woocommerce.columns-3 ul::-webkit-scrollbar{
+		display: none;
+	}
 }
 @media(min-width: 769px){
 	input#coupon_code {
