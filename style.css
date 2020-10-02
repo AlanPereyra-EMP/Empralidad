@@ -993,9 +993,10 @@ a.fa.fa-times{
 	transition: ease .5s;
 }
 @media (max-width:991px){
-	#navbarContentMenu ul{
-    max-height: 35vh;
-    display: grid;
+	#navbarContentMenu ul.dropdown-menu.depth_0{
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
 	}
 }
 @media (min-width: 992px){

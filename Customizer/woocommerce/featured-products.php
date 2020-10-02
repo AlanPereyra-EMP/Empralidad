@@ -57,7 +57,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'label'      => __( 'Tamaño', 'empralidad' ),
     'section'    => 'emp_section_woocommerce_featured',
     'settings'   => 'emp_woocommerce_featured_size',
-    'description'=> __('Tamaño de los productos y categorías destacadas','empralidad'),
+    'description'=> __('Tamaño de los productos y categorías destacadas en dispositivos grandes','empralidad'),
     'type'			 => 'range',
     'input_attrs'=> array(
       'min'      => 12,
