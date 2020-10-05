@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 <style media="screen">
   @media (max-width:768px){
-    .margin-top-mobile{
-      margin-top: 200px!important;
-    }
+
     .woocommerce div.product{
       margin-top: -150px;
     }
@@ -31,9 +29,13 @@
       display: none;
     }
   }
+  .woo-page-margin{
+    margin-top: 100px!important;
+    margin-bottom:200px!important;
+  }
 </style>
 <div class="container-fluid py-5"></div>
-<article class="container my-5 p-2 p-md-4 content-background content-color" style="margin-bottom:200px!important;">
+<article class="container my-5 p-2 p-md-4 content-background content-color woo-page-margin" style="">
   <?php get_product_search_form(); ?>
   <?php woocommerce_content();?>
 </article>
