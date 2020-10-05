@@ -825,7 +825,7 @@ div .widget ul li{
 .wp-block-archives-list, .wp-block-categories-list, .wp-block-latest-posts{
 	list-style: none;
 }
-/*9) Blockquote*/
+/*9) tags*/
 	blockquote {
 		background: #eee;
 	    padding: 15px;
@@ -842,7 +842,12 @@ div .widget ul li{
 	blockquote h3, blockquote h4, blockquote h5, blockquote h6 {
 	    color: #000!important;
 	}
-/*10) Tables*/
+	bdi{
+		color: #77a464;
+	}
+	del bdi, del{
+		color: #f00!important;
+	}
 	table, td {
 	    border: 1px #aaa solid;
         padding: 4px;

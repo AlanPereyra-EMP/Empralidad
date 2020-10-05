@@ -301,6 +301,9 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
 img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
 	padding:5px;
 }
+ol.flex-control-nav.flex-control-thumbs img {
+    border-radius: 0!important;
+}
 li.wc_payment_method.payment_method_woo-mercado-pago-basic{
 	color:#000;
 }

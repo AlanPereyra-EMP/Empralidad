@@ -90,9 +90,10 @@ body{
   border-top: 60px solid <?php echo get_theme_mod('emp_background_primary'); ?> !important;
 }
 <?php if(get_theme_mod('emp_styles_border') === 'true'){ ?>
-  article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,
+  article, .woocommerce ul.products li.product a img,
   a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
-  article img, section img,a.button.product_type_simple, a.checkout-button.button.alt.wc-forward{
+  article img, section img,a.button.product_type_simple, a.checkout-button.button.alt.wc-forward,
+  .woocommerce-product-gallery .flex-viewport{
     border-radius: 30px!important;
   }
   section.col-12{
@@ -188,6 +189,9 @@ a.button.product_type_simple{
 @media(min-width:992px){
   .woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product{
     width: <?php echo get_theme_mod('emp_woocommerce_featured_size'); ?>%!important;
+  }
+  .support-woo-shortcode .woocommerce.columns-3 ul.products li.product{
+    width: <?php echo get_theme_mod('emp_woocommerce_category_size'); ?>%!important;
   }
 }
 .woocommerce.columns-3 ul::-webkit-scrollbar-track{
