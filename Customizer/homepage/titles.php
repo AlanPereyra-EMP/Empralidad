@@ -37,7 +37,7 @@ $wp_customize->add_setting('emp_head_button_show1', array(
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_btn_aud_control1', array(
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_button_show_control1', array(
   'label'   => __( 'Mostrar botón', 'empralidad' ),
   'section' => 'emp_section_head_text',
   'settings'=> 'emp_head_button_show1',
@@ -118,7 +118,7 @@ $wp_customize->add_setting('emp_head_button_show2', array(
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_btn_aud_control2', array(
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_button_show_control2', array(
   'label'     => __( 'Mostrar botón', 'empralidad' ),
   'section'   => 'emp_section_head_text2',
   'settings'  => 'emp_head_button_show2',
@@ -202,7 +202,7 @@ $wp_customize->add_setting('emp_head_button_show3', array(
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_btn_aud_control3', array(
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_button_show_control3', array(
   'label'     => __( 'Mostrar botón', 'empralidad' ),
   'section'   => 'emp_section_head_text3',
   'settings'  => 'emp_head_button_show3',

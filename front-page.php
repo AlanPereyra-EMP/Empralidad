@@ -14,7 +14,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
         <h1 class="text-mobile color-personalized empFadeIn"><?php echo get_theme_mod('emp_head_text_title'); ?></h1>
         <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea'); ?></p>
         <?php if($emp_button_show1){ ?>
-          <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_btn1') ?>';" class="p-2 container-fluid mw-600-px border-30px btn-outline-light">
+          <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_button1') ?>';" class="p-2 container-fluid mw-600-px border-30px btn-outline-light">
             <?php echo get_theme_mod('emp_head_btn1'); ?>
           </button>
         <?php } ?>
