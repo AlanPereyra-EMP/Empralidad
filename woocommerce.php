@@ -27,11 +27,13 @@
       left:-.5em;
       border-radius: 0!important;
     }
+    .woocommerce-notices-wrapper{
+      display: none;
+    }
   }
 </style>
-<div class="container-fluid pt-5 pb-3 text-center text-justify"></div>
-<h1 class="color-personalized text-center py-5 px-2 px-md-5 text-mobile">Tienda</h1>
-<article class="container my-5 margin-top-mobile p-2 p-md-4 content-background content-color" style="margin-bottom:200px!important;">
+<div class="container-fluid py-5"></div>
+<article class="container my-5 p-2 p-md-4 content-background content-color" style="margin-bottom:200px!important;">
   <?php get_product_search_form(); ?>
   <?php woocommerce_content();?>
 </article>
