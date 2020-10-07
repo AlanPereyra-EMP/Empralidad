@@ -55,17 +55,6 @@ if (function_exists('register_nav_menus')) {
 add_action( 'widgets_init', 'emp_sidebar' );
 function emp_sidebar() {
 	register_sidebar(
-    array(
-      'id'            => 'homepage',
-      'name'          => __( 'Sidebar homepage (superior)', 'empralidad' ),
-      'description'   => __( 'Se ubica debajo de la imagen principal', 'empralidad' ),
-      'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h3 class="widget-title-dark">',
-      'after_title'   => '</h3>'
-    )
-  );
-	register_sidebar(
       array(
         'id'            => 'homepage1',
         'name'          => __( 'Sidebar homepage (inferior)', 'empralidad' ),

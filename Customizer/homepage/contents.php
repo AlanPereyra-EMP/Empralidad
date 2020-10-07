@@ -1,10 +1,10 @@
 <?php
 // section 1
 $wp_customize->add_section('emp_section_homepage1', array(
-  'title'       => __('Contenido superior', 'empralidad'),
+  'title'       => __('Contenido extra/shortcode', 'empralidad'),
   'priority'    => 4,
   'panel'       => 'emp_panel_home',
-  'description' => __('Esta sección se ubicará sobre el contenido proncipal', 'empralidad')
+  'description' => __('Soporta shortcodes de woocomerce', 'empralidad')
 ));
 // Show 1
 $wp_customize->add_setting('emp_homepage_show_1', array(
@@ -17,40 +17,32 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'settings'=> 'emp_homepage_show_1',
   'type'  	=> 'checkbox'
 )));
-// Title 1
-$wp_customize->add_setting('emp_homepage_title1', array(
-  'default'           => 'Anuncio destacado personalizable',
+// Margin 1
+$wp_customize->add_setting('emp_homepage_size1', array(
+  'default'           => 0,
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage_title_control1', array(
-  'label'   => __('Titulo', 'empralidad'),
-  'section' => 'emp_section_homepage1',
-  'settings'=> 'emp_homepage_title1'
-)));
-// Img 1
-$wp_customize->add_setting('emp_homepage_img1', array(
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
+$wp_customize->add_control('emp_homepage_size_control1', array(
+  'label'      => __( 'Márgenes', 'empralidad' ),
+  'section'    => 'emp_section_homepage1',
+  'settings'   => 'emp_homepage_size1',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 0,
+    'max'      => 15,
+    'step'     => 1
+  )
 ));
-
-$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'emp_homepage_img_control1', array(
-  'label'   => __('Imagen', 'empralidad'),
-  'section' => 'emp_section_homepage1',
-  'settings'=> 'emp_homepage_img1',
-  'width'   => 500,
-  'height'  => 250
-)));
 // Text 1
 $wp_customize->add_setting('emp_homepage_text1', array(
-  'default'           => 'Podes escribir acá avisos o pegar scripts de anuncios (adsense)',
+  'default'           => '',
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_encoded'
 ));
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage_text_control1', array(
-  'label'   => __('Script o Texto descriptivo', 'empralidad'),
+  'label'   => __('Script, shortcode o texto', 'empralidad'),
   'section' => 'emp_section_homepage1',
   'type'    => 'textarea',
   'settings'=> 'emp_homepage_text1'
@@ -116,6 +108,23 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'settings'=> 'emp_homepage_show_2',
   'type'  	=> 'checkbox'
 )));
+// Margin 2
+$wp_customize->add_setting('emp_homepage_size2', array(
+  'default'           => 0,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control('emp_homepage_size_control2', array(
+  'label'      => __( 'Márgenes', 'empralidad' ),
+  'section'    => 'emp_section_homepage2',
+  'settings'   => 'emp_homepage_size2',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 0,
+    'max'      => 15,
+    'step'     => 1
+  )
+));
 // Title 2
 $wp_customize->add_setting('emp_homepage_title2', array(
     'default'           => '',
@@ -128,28 +137,15 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'section' => 'emp_section_homepage2',
   'settings'=> 'emp_homepage_title2'
 )));
-// Img 2
-$wp_customize->add_setting('emp_homepage_img2', array(
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-
-$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'emp_homepage_img_control2', array(
-  'label'   => __('Imagen', 'empralidad'),
-  'section' => 'emp_section_homepage2',
-  'settings'=> 'emp_homepage_img2',
-  'width'   => 500,
-  'height'  => 250
-)));
 // Text 2
 $wp_customize->add_setting('emp_homepage_text2', array(
-    'default'           => '',
-    'trasnport'         => 'refresh',
-    'sanitize_callback' => 'sanitize_encoded'
-  ));
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_encoded'
+));
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage_text_control2', array(
-  'label'   => __('Script o Texto descriptivo', 'empralidad'),
+  'label'   => __('Script, shortcode o texto', 'empralidad'),
   'section' => 'emp_section_homepage2',
   'type'    => 'textarea',
   'settings'=> 'emp_homepage_text2'
@@ -213,6 +209,23 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'settings'       => 'emp_homepage_show_3',
   'type'    			 => 'checkbox'
 )));
+// Margin 3
+$wp_customize->add_setting('emp_homepage_size3', array(
+  'default'           => 0,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control('emp_homepage_size_control3', array(
+  'label'      => __( 'Márgenes', 'empralidad' ),
+  'section'    => 'emp_section_homepage3',
+  'settings'   => 'emp_homepage_size3',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 0,
+    'max'      => 15,
+    'step'     => 1
+  )
+));
 // Title 3
 $wp_customize->add_setting('emp_homepage_title3', array(
     'default'           => '',
@@ -225,19 +238,6 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'section' => 'emp_section_homepage3',
   'settings'=> 'emp_homepage_title3'
 )));
-// Img 3
-$wp_customize->add_setting('emp_homepage_img3', array(
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-
-$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'emp_homepage_img_control3', array(
-  'label'   => __('Imagen', 'empralidad'),
-  'section' => 'emp_section_homepage3',
-  'settings'=> 'emp_homepage_img3',
-  'width'   => 500,
-  'height'  => 250
-)));
 // Text 3
 $wp_customize->add_setting('emp_homepage_text3', array(
   'default'           => '',
@@ -246,7 +246,7 @@ $wp_customize->add_setting('emp_homepage_text3', array(
 ));
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage_text_control3', array(
-  'label'   => __('Script o Texto descriptivo', 'empralidad'),
+  'label'   => __('Script, shortcode o texto', 'empralidad'),
   'section' => 'emp_section_homepage3',
   'type'    => 'textarea',
   'settings'=> 'emp_homepage_text3'

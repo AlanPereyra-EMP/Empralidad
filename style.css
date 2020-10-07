@@ -855,6 +855,9 @@ div .widget ul li{
 	th, th a {
 		color: #fff;
 	}
+	fieldset{
+		min-width: fit-content!important;
+	}
 /*11) Comments*/
 	#comment {
 		width: 100%!important;
@@ -1113,10 +1116,6 @@ iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 	height: 2px;
 }
 .home-featured-text{
-	padding-top: 70px;
 	margin-bottom: -60px;
-	padding-bottom: 60px;
-}
-.home-featured-text-admin{
-	padding-top: 90px;
+	padding-bottom: 59px;
 }

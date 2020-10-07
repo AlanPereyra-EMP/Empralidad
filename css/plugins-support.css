@@ -1,16 +1,10 @@
 /*Woocomerce*/
-fieldset{
-	min-width: fit-content!important;
-}
 @media(max-width: 575px){
 	li.product.type-product.status-publish.first.instock.product_cat-marketing-digital.has-post-thumbnail.virtual.sold-individually.product-type-simple{
 		width: 100%
 	}
 	select.orderby{
 		width: 92vw;
-	}
-	div#woo_featured_products::-webkit-scrollbar, .support-woo-shortcode::-webkit-scrollbar{
-		display: none;
 	}
 	.woocommerce span.onsale{
 		border-radius: 0 0 0 50% ;
@@ -23,6 +17,9 @@ fieldset{
 	}
 	.woocommerce.columns-3 ul::-webkit-scrollbar{
 		display: none;
+	}
+	.support-woo-shortcode .woocommerce {
+		margin-top: -110px!important;
 	}
 }
 @media(min-width: 769px){
@@ -53,8 +50,40 @@ fieldset{
 		width: 100%;
 	}
 }
+div#woo_featured_products .products::-webkit-scrollbar, .support-woo-shortcode::-webkit-scrollbar{
+	display: none;
+}
+/* Support-woo-shortcode */
+.product-category.product{
+	overflow: hidden;
+}
+.product-category.product img:hover{
+	transform: scale(1.1);
+}
+.product-category.product h2{
+	position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #26262699;
+  width: 100%;
+  color: #fff;
+	font-size: 25px!important;
+}
+.product-category.product mark{
+	display: none;
+}
+.support-woo-shortcode .woocommerce {
+	margin-top: -180px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Featured product */
-.woocommerce.columns-3 ul{
+.woocommerce ul.products li.product a img{
+	margin: 0!important;
+}
+#woo_featured_products .woocommerce ul, .support-woo-shortcode .woocommerce ul{
 	display: -webkit-box;
   display: flex;
   overflow-x: auto;
@@ -63,10 +92,10 @@ fieldset{
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
-.woocommerce.columns-3 ul::-webkit-scrollbar{
+#woo_featured_products .woocommerce ul::-webkit-scrollbar, .support-woo-shortcode .woocommerce ul::-webkit-scrollbar{
 	height: 10px;
 }
-.woocommerce.columns-3 ul.products li.product{
+#woo_featured_products .woocommerce ul.products li.product, .support-woo-shortcode .woocommerce ul.products li.product{
 	scroll-snap-align: start;
   flex-shrink: 0;
   width: 70vw;
@@ -80,13 +109,13 @@ fieldset{
 li.product, li.product .button{
 	border:1px solid #00000022!important;
 }
-.woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product{
+.woocommerce ul.products li.product{
 	clear: none;
-	margin: 8px!important;
+	margin: 1%!important;
 }
 .woocommerce ul.products li.product .button{
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 	width: 100%;
 }
@@ -96,6 +125,7 @@ li.product, li.product .button{
 li.product.type-product{
 	text-align: center;
 }
+/*  */
 select.orderby{
 	border: none;
 	background: #eee;

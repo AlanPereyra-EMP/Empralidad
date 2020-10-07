@@ -72,15 +72,15 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'sanitize_callback' => 'sanitize_string'
   ));
   $wp_customize->add_control('emp_woocommerce_category_size_control', array(
-    'label'      => __( 'Tamaño categorias', 'empralidad' ),
+    'label'      => __( 'Tamaño shortcode en secciones desacadas', 'empralidad' ),
     'section'    => 'emp_section_woocommerce_featured',
     'settings'   => 'emp_woocommerce_category_size',
     'description'=> __('Tamaño de las categorias en la home page (solo dispositivos grandes)','empralidad'),
     'type'			 => 'range',
     'input_attrs'=> array(
       'min'      => 12,
-      'max'      => 40,
-      'step'     => 1,
+      'max'      => 42,
+      'step'     => .1,
     )
   ));
 

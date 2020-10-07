@@ -4,6 +4,17 @@ $wp_customize->add_section('emp_section_components_content', array(
   'priority' => 4,
   'panel'    => 'emp_panel_components'
 ));
+// Border radius
+$wp_customize->add_setting('emp_components_content_radius', array(
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_encoded'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_content_radius_control', array(
+  'label'          => __( 'Mostrar', 'empralidad' ),
+  'section'        => 'emp_section_components_content',
+  'settings'       => 'emp_components_content_radius',
+  'type'    			 => 'checkbox'
+)));
 // Font size
 $wp_customize->add_setting('emp_components_content_size', array(
   'default'           => 17,
@@ -21,10 +32,15 @@ $wp_customize->add_control('emp_components_content_size_control1', array(
     'step'     => 1
   )
 ));
+$wp_customize->add_setting('emp_components_content_tipography', array(
+  'default'           => 'serif',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_tipography_control1', array(
   'label'          => __( 'Tipografía', 'empralidad' ),
-  'section'        => 'emp_section_styles_tipography',
-  'settings'       => 'emp_styles_tipography',
+  'section'        => 'emp_section_components_content',
+  'settings'       => 'emp_components_content_tipography',
   'type'           => 'radio',
   'choices'        => array(
     'serif'  			 => __( 'Serif', 'empralidad' ),

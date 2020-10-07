@@ -60,32 +60,19 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
   </div>
 </header>
 <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
-<?php if(is_active_sidebar( 'homepage' )){
-    get_sidebar( 'homepage' );
-} ?>
 <div class="row mw-100 mx-auto">
     <?php $emp_home_show_1 = get_theme_mod('emp_homepage_show_1'); ?>
     <?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
     <?php $emp_home_show_3 = get_theme_mod('emp_homepage_show_3'); ?>
     <?php if($emp_home_show_1||$emp_home_show_2||$emp_home_show_3){ ?>
-      <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if( is_admin_bar_showing() ){ ?> home-featured-text-admin <?php } ?>">
-        <div class="mw-1200px">
+      <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text" <?php if ($emp_home_show_1){?> style="margin-top:180px" <?php } ?>>
           <!-- Text 1 -->
-          <?php $logo = get_theme_mod('emp_head_logo');
-
-          if ($emp_home_show_1){
-            $img = get_theme_mod('emp_homepage_img1'); ?>
+          <?php if ($emp_home_show_1){?>
             <div class="py-3 mx-auto my-auto" >
-              <h2 class="text-center h1">
-                <span class=""><?php echo get_theme_mod('emp_homepage_title1') ?></span>
-              </h2>
-              <div class="p-2 mw-100 overflow-auto support-woo-shortcode text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " >
-                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_homepage_img1')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
+              <div class="mw-100 support-woo-shortcode p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;">
                 <?php echo do_shortcode(get_theme_mod('emp_homepage_text1')); ?>
               </div>
-
               <?php $header_btn = get_theme_mod('emp_homepage_btn1');
-
               if ($header_btn){ ?>
                 <p class="text-center">
                   <button onclick="window.location.href = '<?php echo get_theme_mod('emp_homepage_link_btn1') ?>';" class="container-fluid btn bg-light text-dark">
@@ -96,21 +83,16 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
             </div>
           <?php } ?>
           <!-- Text 2 -->
-          <?php
-          if ($emp_home_show_2){
-            $img = get_theme_mod('emp_homepage_img2'); ?>
+          <?php if ($emp_home_show_2){?>
             <div class="py-3  mx-auto my-auto">
-              <h2 class="text-center h1">
-                <span class=""><?php echo get_theme_mod('emp_homepage_title2') ?></span>
-              </h2>
-              <div class="p-2 mw-100 overflow-auto support-woo-shortcode text-<?php echo get_theme_mod('emp_homepage_text_aling2'); ?> " >
-                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_homepage_img2')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
+              <div class="p-2 mw-100 overflow-auto p-personalized-2 text-<?php echo get_theme_mod('emp_homepage_text_aling2'); ?> " >
+                <h2 class="text-center h1">
+                  <span class=""><?php echo get_theme_mod('emp_homepage_title2') ?></span>
+                </h2>
                 <?php echo do_shortcode(get_theme_mod('emp_homepage_text2')); ?>
               </div>
               <?php $header_btn = get_theme_mod('emp_homepage_btn2');
-
-              if ($header_btn){
-                  ?>
+              if ($header_btn){ ?>
                 <p class="text-center">
                   <button onclick="window.location.href = '<?php echo get_theme_mod('emp_homepage_link_btn2') ?>';" class="container-fluid btn bg-light text-dark">
                     <?php echo get_theme_mod('emp_homepage_btn2') ?>
@@ -120,20 +102,15 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
             </div>
           <?php } ?>
           <!-- Text 3 -->
-          <?php
-          if ($emp_home_show_3){
-            $img = get_theme_mod('emp_homepage_img3'); ?>
+          <?php if ($emp_home_show_3){ ?>
             <div class="py-3 mx-auto my-auto" >
-              <h2 class="text-center h1" >
-                <span class=""><?php echo get_theme_mod('emp_homepage_title3'); ?></span>
-              </h2>
-              <div class="p-2 mw-100 overflow-auto support-woo-shortcode text-<?php echo get_theme_mod('emp_homepage_text_aling3'); ?> " >
-                <?php if($img){ ?> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_homepage_img3')); ?>" class="img-fluid no-shadow"> <?php } ?> <br>
+              <div class="p-2 mw-100 overflow-auto p-personalized-3 text-<?php echo get_theme_mod('emp_homepage_text_aling3'); ?> ">
+                <h2 class="text-center h1" >
+                  <span class=""><?php echo get_theme_mod('emp_homepage_title3'); ?></span>
+                </h2>
                 <?php echo do_shortcode(get_theme_mod('emp_homepage_text3')); ?>
               </div>
-              <?php
-              $header_btn = get_theme_mod('emp_homepage_btn3');
-
+              <?php $header_btn = get_theme_mod('emp_homepage_btn3');
               if ($header_btn){ ?>
                 <p class="text-center">
                   <button onclick="window.location.href = '<?php echo get_theme_mod('emp_homepage_link_btn3') ?>';" class="container-fluid btn bg-light text-dark">
@@ -144,14 +121,15 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
             </div>
           <?php } ?>
           <!-- end text 3 -->
-        </div>
       </div>
     <?php } ?>
 
     <?php if ( is_front_page() && !is_home() ) {?>
       <section class="px-0 border-30px col-12 content-background pb-5">
-        <div class="mw-1200px mx-auto">
+        <div class="color-personalized bg-personalized">
           <?php get_template_part('includes/wc-featured-products') ?>
+        </div>
+        <div class="mw-1200px py-5 my-5">
           <?php get_template_part('content-home') ?>
         </div>
     <?php } else { ?>

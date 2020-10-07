@@ -33,6 +33,13 @@
     margin-top: 100px!important;
     margin-bottom:200px!important;
   }
+  nav.woocommerce-pagination {
+    order: 4;
+  }
+  div#reviews {
+    padding-top: 100px;
+    margin-top: -100px;
+  }
 </style>
 <div class="container-fluid py-5"></div>
 <article class="container my-5 p-2 p-md-4 content-background content-color woo-page-margin" style="">
