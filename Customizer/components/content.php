@@ -10,7 +10,7 @@ $wp_customize->add_setting('emp_components_content_radius', array(
   'sanitize_callback' => 'sanitize_encoded'
 ));
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_content_radius_control', array(
-  'label'          => __( 'Mostrar', 'empralidad' ),
+  'label'          => __( 'Bordes redondeados', 'empralidad' ),
   'section'        => 'emp_section_components_content',
   'settings'       => 'emp_components_content_radius',
   'type'    			 => 'checkbox'
