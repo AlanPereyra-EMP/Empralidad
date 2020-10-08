@@ -125,6 +125,12 @@ li.product, li.product .button{
 li.product.type-product{
 	text-align: center;
 }
+.woocommerce ul.products li.product .price del {
+  display: block;
+}
+del bdi:before {
+  content: 'Antes: ';
+}
 /*  */
 select.orderby{
 	border: none;
@@ -275,7 +281,9 @@ a.checkout-button.button.alt.wc-forward {
 .summary.entry-summary p.price {
 	padding: 0;
 	overflow:auto;
-	display:flex;
+}
+.summary .price del span bdi {
+  font-size: 26px;
 }
 .summary.entry-summary p.price .amount{
 	margin-left:.5em;
@@ -406,6 +414,9 @@ h2.woocommerce-loop-category__title{
 }
 .woocommerce div.product form.cart .button{
   width: 100%;
+}
+.comment-form-rating label {
+    padding: 0px 18px;
 }
 /*Contact form 7*/
 .comment-form input{width: 100%}.wpcf7-submit, #submit.submit{border:2px solid transparent;padding: 10px;border-radius: 5px;width: 100%}.wpcf7-form{padding:0;max-width:600px}form.wpcf7-form{width:100%;padding-left:0;padding-top:0;padding-bottom:0;margin-right:auto;margin-left:auto}p label{width:100%;margin-right:auto;margin-left:auto}.wpcf7-form-control{width:100%;margin-right:auto;margin-left:auto}select{border: 1px solid #aaa;padding: 7px;background: #fff;}

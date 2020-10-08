@@ -50,7 +50,7 @@ footer, footer a{
   color: <?php echo get_theme_mod('emp_components_footer_color'); ?>!important;
 }
 section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link,
-.woocommerce-MyAccount-content a,.woocommerce div.product p.price, article a, section a{
+.woocommerce-MyAccount-content a, article a, section a{
   color: <?php echo get_theme_mod('emp_components_content_color'); ?> !important;
 }
 #top-notice{
