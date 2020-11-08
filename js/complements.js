@@ -149,7 +149,7 @@ function showWoocommerceCart() {
   if (document.getElementById('btn-woocommerce-cart')){
     var  icon = document.getElementById('btn-woocommerce-cart');
   } else {
-    var icon;
+    return
   }
   var  text = document.getElementById('span-woocommerce-cart');
   var  counter = document.getElementById('span-woocommerce-counter');
