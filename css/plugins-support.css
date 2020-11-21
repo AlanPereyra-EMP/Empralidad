@@ -53,6 +53,9 @@
 div#woo_featured_products .products::-webkit-scrollbar, .support-woo-shortcode::-webkit-scrollbar{
 	display: none;
 }
+.woocommerce div.product div.summary{
+	overflow: hidden;
+}
 /* Support-woo-shortcode */
 .product-category.product{
 	overflow: hidden;
