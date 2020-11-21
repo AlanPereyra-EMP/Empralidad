@@ -22,6 +22,15 @@
 		margin-top: -110px!important;
 	}
 }
+@media(max-width:768px){
+	.woocommerce div.product .woocommerce-tabs ul.tabs{
+		padding: 0 0 0 .3em;
+	}
+	.woocommerce div.product .woocommerce-tabs ul.tabs li{
+		max-width: 33%;
+		font-size: 12px;
+	}
+}
 @media(min-width: 769px){
 	input#coupon_code {
 		width: auto;
