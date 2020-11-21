@@ -5,7 +5,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'title' => __('Productos destacados', 'empralidad'),
     'description'   => __('Los productos destacados se verán en la homepage'),
     'theme_supports'=> array('woocommerce'),
-    'priority'      => 7,
+    'priority'      => 1,
     'panel'         => 'woocommerce'
   ));
   // Show 1
@@ -47,7 +47,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'settings'=> 'emp_woocommerce_featured_text'
 
   )));
-  // Font size
+  // Size
   $wp_customize->add_setting('emp_woocommerce_featured_size', array(
     'default'           => 30,
     'trasnport'         => 'refresh',
@@ -57,30 +57,12 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'label'      => __( 'Tamaño productos destacados', 'empralidad' ),
     'section'    => 'emp_section_woocommerce_featured',
     'settings'   => 'emp_woocommerce_featured_size',
-    'description'=> __('Tamaño de los productos destacados en la home page (solo dispositivos grandes)','empralidad'),
+    'description'=> __('(solo dispositivos grandes)','empralidad'),
     'type'			 => 'range',
     'input_attrs'=> array(
       'min'      => 12,
       'max'      => 40,
       'step'     => 1,
-    )
-  ));
-  // Categories size
-  $wp_customize->add_setting('emp_woocommerce_category_size', array(
-    'default'           => 30,
-    'trasnport'         => 'refresh',
-    'sanitize_callback' => 'sanitize_string'
-  ));
-  $wp_customize->add_control('emp_woocommerce_category_size_control', array(
-    'label'      => __( 'Tamaño shortcode en secciones desacadas', 'empralidad' ),
-    'section'    => 'emp_section_woocommerce_featured',
-    'settings'   => 'emp_woocommerce_category_size',
-    'description'=> __('Tamaño de las categorias en la home page (solo dispositivos grandes)','empralidad'),
-    'type'			 => 'range',
-    'input_attrs'=> array(
-      'min'      => 12,
-      'max'      => 42,
-      'step'     => .1,
     )
   ));
 
