@@ -10,7 +10,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
   ));
   // Show 1
   $wp_customize->add_setting('emp_woocommerce_categories_show', array(
-    'default'          => 'false',
     'trasnport'        => 'refresh',
     'sanitize_callback'=> 'sanitize_encoded'
   ));

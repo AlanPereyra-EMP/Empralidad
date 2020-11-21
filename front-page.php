@@ -65,7 +65,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
   <?php $emp_home_show_1 = get_theme_mod('emp_homepage_show_1'); ?>
   <?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
   <?php $emp_home_show_3 = get_theme_mod('emp_homepage_show_3'); ?>
-  <?php if($emp_home_show_1||$emp_home_show_2||$emp_home_show_3){ ?>
+  <?php if($emp_home_categories||$emp_home_show_1||$emp_home_show_2||$emp_home_show_3){ ?>
     <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text" <?php if ($emp_home_show_1||$emp_home_categories){?> style="margin-top:180px" <?php } ?>>
       <!-- Woocommerce categories -->
       <?php if ($emp_home_categories){?>
