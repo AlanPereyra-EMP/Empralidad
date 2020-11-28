@@ -40,6 +40,12 @@
     padding-top: 100px;
     margin-top: -100px;
   }
+  img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+    min-height: 215px;
+  }
+  li.product.type-product {
+    height: 350px;
+  }
 </style>
 <div class="container-fluid py-5"></div>
 <article class="container my-5 p-2 p-md-4 content-background content-color woo-page-margin" style="">
