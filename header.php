@@ -120,7 +120,7 @@
           ) ); ?>
 
           <!-- if cart on -->
-          <?php $cart_link = get_theme_mod('emp_mobile_cart_text');
+          <?php $cart_link = get_theme_mod('emp_components_nav_cart');
           if(class_exists('WooCommerce') && $cart_link){ ?>
             <a onclick="showWoocommerceCart();" class="fa fa-shopping-cart mr-4 fadein show-desktop position-relative">
               <small class="woo-counter-cart-number-desktop added_to_cart wc-forward icon-color">
