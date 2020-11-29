@@ -32,6 +32,9 @@
 	}
 }
 @media(min-width: 769px){
+	.woocommerce ul.products.columns-x li.product, .woocommerce-page ul.products.columns-x li.product {
+		width: 31%!important;
+	}
 	input#coupon_code {
 		width: auto;
 	}
@@ -57,6 +60,11 @@
 	}
 	a.button.product_type_variable, a.button.product_type_simple{
 		width: 100%;
+	}
+}
+@media (min-width:1200px){
+	.woocommerce-product-gallery__image{
+		width: 633px!important;
 	}
 }
 div#woo_featured_products .products::-webkit-scrollbar, .support-woo-shortcode::-webkit-scrollbar{
@@ -371,9 +379,6 @@ a.button.add_to_cart_button{
 }
 a.added_to_cart.wc-forward {
 	opacity: 1;
-}
-.woocommerce ul.products.columns-2 li.product, .woocommerce-page ul.products.columns-2 li.product {
-	width: 46%!important;
 }
 p.stock.available-on-backorder {
 	font-size: 48px!important;
