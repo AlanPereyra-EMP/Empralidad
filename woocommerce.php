@@ -46,6 +46,9 @@
   li.product.type-product {
     height: 350px;
   }
+  .product img.faded {
+    border-radius: 0!important;
+  }
 </style>
 <div class="container-fluid py-5"></div>
 <article class="container my-5 p-2 p-md-4 content-background content-color woo-page-margin" style="">
