@@ -41,7 +41,7 @@
     margin-top: -100px;
   }
   img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
-    height: 215px;
+    height: 215px!important;
   }
   li.product.type-product {
     height: 350px;
