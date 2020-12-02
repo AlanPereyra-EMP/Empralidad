@@ -10,6 +10,17 @@
         margin-top: -80px!important;
     }
   }
+  @media (max-width: 330px){
+    li.product.type-product {
+      height: 305px;
+    }
+    h2.woocommerce-loop-product__title.faded{
+      bottom: 40%;
+    }
+    li.product span.price{
+      bottom: 21%;
+    }
+  }
   @media (max-width: 575px){
     .woocommerce span.onsale{
       top: -2px;
@@ -48,8 +59,7 @@
   }
   img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.faded.lazyloaded {
     position: absolute;
-    bottom: 70%;
-    transform: translate(0, 50%);
+    top: 0%;
     max-height: 215px;
     height: auto!important;
   }
