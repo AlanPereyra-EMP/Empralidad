@@ -1,5 +1,8 @@
 /*Woocomerce*/
 @media(max-width: 575px){
+	form.woocommerce-product-search {
+    font-size: 15px;
+	}
 	li.product.type-product.status-publish.first.instock.product_cat-marketing-digital.has-post-thumbnail.virtual.sold-individually.product-type-simple{
 		width: 100%
 	}
