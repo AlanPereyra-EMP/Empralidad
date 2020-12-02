@@ -73,6 +73,9 @@
 		width: 633px!important;
 	}
 }
+tr.woocommerce-shipping-totals.shipping {
+  max-width: 100vw;
+}
 div#woo_featured_products .products::-webkit-scrollbar, .support-woo-shortcode::-webkit-scrollbar{
 	display: none;
 }
