@@ -71,6 +71,9 @@
   .woocommerce .products .star-rating{
     margin: 7px 0 .5em;
   }
+  .woocommerce-product-search {
+    display: none;
+  }
 </style>
 <div class="container-fluid py-5"></div>
 <article class="container my-5 p-2 p-md-4 content-background content-color woo-page-margin" style="">
