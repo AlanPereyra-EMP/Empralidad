@@ -992,10 +992,15 @@ a.fa.fa-times{
 	transition: all 1s;
 	display: none;
 	position: fixed;
-	top: 110px;
 	left: 0;
 	z-index: 1029;
 	padding: 5%;
+}
+#searchform-mobile{
+	top: 40%;
+}
+#searchform-woocommerce{
+	top: 110px;
 }
 #bg-menu-mobile{
 	position: fixed;
