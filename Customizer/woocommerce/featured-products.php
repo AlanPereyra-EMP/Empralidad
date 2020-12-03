@@ -5,7 +5,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'title' => __('Productos destacados', 'empralidad'),
     'description'   => __('Los productos destacados se verán en la homepage'),
     'theme_supports'=> array('woocommerce'),
-    'priority'      => 1,
+    'priority'      => 2,
     'panel'         => 'woocommerce'
   ));
   // Show 1

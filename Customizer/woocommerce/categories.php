@@ -5,7 +5,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'title' => __('Categorias destacadas', 'empralidad'),
     'description'   => __('Las categorias destacadas se verán en la homepage'),
     'theme_supports'=> array('woocommerce'),
-    'priority'      => 2,
+    'priority'      => 3,
     'panel'         => 'woocommerce'
   ));
   // Show 1
