@@ -52,7 +52,7 @@ if ( $product->is_in_stock() ) : ?>
     <?php
     $emp_show_notice = get_theme_mod('emp_woocommerce_whatsapp_show');
     if($emp_show_notice){ ?>
-      <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20quiero%20consultar%20si%20hay%20stock%20de%20*<?php echo str_replace(' ', '%20', wp_title('', false));?>*%20%20%20%20<?php echo get_permalink(); ?>" class="button text-center">Consultar stock por whastapp</a> <br>
+      <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola,%20quiero%20consultar%20si%20hay%20stock%20de%20*<?php echo str_replace(' ', '%20', wp_get_document_title());?>*%20%20%20%20<?php echo get_permalink(); ?>" class="button text-center">Consultar stock por whastapp</a> <br>
     <?php } ?>
 	</form>
 

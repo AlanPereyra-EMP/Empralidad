@@ -42,7 +42,7 @@
     <div class="show-btn-fixed">
       <?php  $perma_button = get_theme_mod('emp_components_nav_wsp'); ?>
       <?php if ($perma_button) { ?>
-      	<div class="img-fixed show-desktop"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20desde%20<?php echo str_replace(' ', '%20', wp_title('', false));?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="emp-whatsapp"></a></div>
+      	<div class="img-fixed show-desktop"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20desde:*<?php echo str_replace(' ', '%20', wp_get_document_title() );?>*%20%20%20%20<?php echo get_permalink(); ?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="emp-whatsapp"></a></div>
       <?php } ?>
     	<div class="img-fixed" id="scrollToTopButton"><i class="fas fa-arrow-up img-btn-fixed <?php if ($perma_button) { ?> show-mobile <?php } ?>"></i></div>
     </div>
@@ -72,7 +72,7 @@
       <!-- Whatsapp -->
       <?php $wp_link_ip = get_theme_mod('emp_components_nav_wsp');
       if ($wp_link_ip && $perma_button){ ?>
-        <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20<?php echo str_replace(' ', '%20', wp_title('', false));?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
+        <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20*<?php echo str_replace(' ', '%20', bloginfo('name'));?>*%20%20%20%20<?php echo get_permalink(); ?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
           <span class="fa-text">Whatsapp</span>
         </a>
       <?php } ?>
