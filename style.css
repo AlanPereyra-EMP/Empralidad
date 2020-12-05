@@ -115,7 +115,7 @@ li.menu-item{
 }
 .menu-item a:focus, .menu-item a:hover {
 	filter: brightness(0.8);
-	border-bottom: 2px #fff solid;
+	border-bottom: 1px #fff solid;
 }
 /*ul sub-menu*/
 @media(min-width:992px){
