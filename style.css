@@ -1121,6 +1121,11 @@ iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
   -khtml-opacity: .2;
 	opacity: .2;
 }
+@media(max-width: 991px){
+	.support-woo-shortcode .woocommerce ul::-webkit-scrollbar{
+		display: none;
+	}
+}
 .summary.entry-summary p.price::-webkit-scrollbar{
 	display: none;
 }
