@@ -16,249 +16,77 @@
 
 
 // 0) JS on footer
-	function scripts_footer() {
-	    remove_action('wp_head', 'wp_print_scripts');
-	    remove_action('wp_head', 'wp_print_head_scripts', 9);
-	    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+function scripts_footer() {
+  remove_action('wp_head', 'wp_print_scripts');
+  remove_action('wp_head', 'wp_print_head_scripts', 9);
+  remove_action('wp_head', 'wp_enqueue_scripts', 1);
 
-	    add_action('wp_footer', 'wp_print_scripts', 5);
-	    add_action('wp_footer', 'wp_enqueue_scripts', 5);
-	    add_action('wp_footer', 'wp_print_head_scripts', 5);
-	}
-	add_action( 'wp_enqueue_scripts', 'scripts_footer' );
+  add_action('wp_footer', 'wp_print_scripts', 5);
+  add_action('wp_footer', 'wp_enqueue_scripts', 5);
+  add_action('wp_footer', 'wp_print_head_scripts', 5);
+}
+add_action( 'wp_enqueue_scripts', 'scripts_footer' );
 
-	function my_deregister_styles() {
-	  wp_deregister_style('wp-block-library');
-	  wp_deregister_style('wc-block-style');
-		wp_deregister_style('woocommerce');
-		wp_deregister_style('woocommerce-smallcreen');
-	  wp_deregister_style('contact-form-7');
-		wp_deregister_style('bootstrap-personalized');
-	  wp_deregister_style('dnd-upload-cf7');
-	}
-
-	add_action('wp_print_styles', 'my_deregister_styles', 100);
+function my_deregister_styles() {
+  wp_deregister_style('wp-block-library');
+  wp_deregister_style('wc-block-style');
+	wp_deregister_style('woocommerce');
+	wp_deregister_style('woocommerce-smallcreen');
+  wp_deregister_style('contact-form-7');
+	wp_deregister_style('bootstrap-personalized');
+  wp_deregister_style('dnd-upload-cf7');
+}
+add_action('wp_print_styles', 'my_deregister_styles', 100);
 
 // 1) Main menu
-	if (function_exists('register_nav_menus')) {
-		register_nav_menus (array('superior' => 'Menu Principal'));
-	}
+if (function_exists('register_nav_menus')) {
+	register_nav_menus (array('superior' => 'Menu Principal'));
+}
 
-	// Class <a> main menu
-		add_filter('nav_menu_link_attributes','clase_menu', 10,3);
-		function clase_menu ($atts, $item, $args){
-			$class = 'nav-link font-weight-bold mx-2';
-			$atts ['class'] = $class;
-			return $atts;
-		}
+// Class <a> main menu
+	add_filter('nav_menu_link_attributes','clase_menu', 10,3);
+	function clase_menu ($atts, $item, $args){
+		$class = 'nav-link font-weight-bold mx-2';
+		$atts ['class'] = $class;
+		return $atts;
+	}
 
 // 2) Widgets
-	add_action( 'widgets_init', 'emp_sidebar' );
-	function emp_sidebar() {
-		register_sidebar(
-	        array(
-	            'id'            => 'homepage',
-	            'name'          => __( 'Sidebar homepage (superior)', 'empralidad' ),
-	            'description'   => __( 'Se ubica debajo de la imagen principal', 'empralidad' ),
-	            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
-	            'after_widget'  => '</div>',
-	            'before_title'  => '<h3 class="widget-title-dark">',
-	            'after_title'   => '</h3>'
-	        )
-	    );
-			register_sidebar(
-		        array(
-		            'id'            => 'homepage1',
-		            'name'          => __( 'Sidebar homepage (inferior)', 'empralidad' ),
-		            'description'   => __( 'Se ubica antes del footer', 'empralidad' ),
-		            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
-		            'after_widget'  => '</div>',
-		            'before_title'  => '<h3 class="widget-title-dark">',
-		            'after_title'   => '</h3>'
-		        )
-		    );
-	    register_sidebar(
-	        array(
-	            'id'            => 'footer',
-	            'name'          => __( 'Sidebar del footer', 'empralidad' ),
-	            'description'   => __( 'Se ubica debajo de las paginas y entradas.', 'empralidad' ),
-	            'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
-	            'after_widget'  => '</div>',
-	            'before_title'  => '<h3 class="widget-title">',
-	            'after_title'   => '</h3>'
-	        )
-	    );
-	}
+add_action( 'widgets_init', 'emp_sidebar' );
+function emp_sidebar() {
+	register_sidebar(
+      array(
+        'id'            => 'homepage1',
+        'name'          => __( 'Sidebar homepage (inferior)', 'empralidad' ),
+        'description'   => __( 'Se ubica antes del footer', 'empralidad' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title-dark">',
+        'after_title'   => '</h3>'
+      )
+    );
+  register_sidebar(
+    array(
+      'id'            => 'footer',
+      'name'          => __( 'Sidebar del footer', 'empralidad' ),
+      'description'   => __( 'Se ubica debajo de las paginas y entradas.', 'empralidad' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>'
+    )
+  );
+}
 
 // 3) Includes
-	get_template_part( 'Customizer/emp-customizer' );
-	get_template_part( 'plugins/emp-shortcodes' );
+get_template_part( 'Customizer/emp-customizer' );
+get_template_part( 'plugins/emp-shortcodes' );
 
 // 4) Dinamics Css
-	function emp_theme_customize_css(){
-
-		$bg_perzonalized_secondary = get_theme_mod('emp_background_secondary') . get_theme_mod('emp_background_secondary_transparency');
-		?>
-
-	    <style type="text/css">
-					/* backgrounds */
-	        .bg-personalized, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, ::-webkit-scrollbar-track, li.product.type-product, .woocommerce span.onsale{
-	        	background-color: <?php echo get_theme_mod('emp_background_primary'); ?> !important;
-	        }
-					.bg-personalized-secondary, ::-webkit-scrollbar-thumb{
-						background-color: <?php echo $bg_perzonalized_secondary ?>!important;
-					}
-					.tutor-single-lesson-wrap{
-						border-top: 60px solid <?php echo get_theme_mod('emp_background_primary'); ?> !important;
-					}
-					.the_post_thumbnail{
-	        	background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
-	        }
-					.emp-background-image{
-						background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_background_media_image')); ?>) center;
-						height: 100vh
-					}
-					.emp-background-media-filter{
-						opacity: <?php echo get_theme_mod('emp_background_media_filter'); ?>
-					}
-
-					/* Tipography */
-					.color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab, h2.woocommerce-loop-product__title,
-					.woocommerce span.onsale{
-	        	color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
-	        }
-					.tutor-dashboard-header-ratings,.btn-outline-light, .menu-item a, a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
-						color: <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> !important;
-					}
-					section, article, .woocommerce-loop-product__title, .color-personalized-secondary, .card-header a, a.woocommerce-review-link,
-					.woocommerce-MyAccount-content a,.woocommerce div.product p.price, article a, section a{
-						color: <?php echo get_theme_mod('emp_tipography_color'); ?> !important;
-					}
-					<?php if(get_theme_mod('emp_styles_tipography') === 'true'){ ?>
-						body, .fa-text{
-							font-family: <?php echo get_theme_mod('emp_styles_tipography_personalized'); ?>, 'sans-serif';
-						}
-					<?php } else {?>
-						body, .fa-text{
-							font-family: '<?php echo get_theme_mod('emp_styles_tipography'); ?>', 'sans-serif';
-						}
-					<?php }?>
-					body{
-						font-size: <?php echo get_theme_mod('emp_styles_tipography_size'); ?>px;
-					}
-					@media (min-width: 577px) {
-					  .text-mobile {
-					    font-size: <?php echo (get_theme_mod('emp_head_text_title_size') - 80) ?>px!important;
-					  }
-					}
-					@media (min-width: 992px) {
-					  .text-mobile {
-					    font-size: <?php echo get_theme_mod('emp_head_text_title_size'); ?>px!important;
-					  }
-					}
-					.text-mobile {
-					    font-size: <?php echo (get_theme_mod('emp_head_text_title_size') - 130) ?>px;
-							word-wrap: break-word;
-					}
-
-					/* Special items */
-					.dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order, th {
-	            background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>!important;
-	            color: <?php echo get_theme_mod('emp_btn_color'); ?> !important;
-	        }
-
-					/* Borders */
-					.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
-						border: 1px <?php echo get_theme_mod('emp_tipography_primarycolor'); ?> solid;
-					}
-					<?php if(get_theme_mod('emp_styles_border') === 'true'){ ?>
-						article, .woocommerce div.product div.images img, .woocommerce ul.products li.product a img,
-						a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
-						article img, section img,a.button.product_type_simple{
-							border-radius: 30px!important;
-						}
-						.sfpo-table thead th {
-						    border-radius: 10px 10px 0 0;
-						}
-						.btn,.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
-						.tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message, li.product.type-product{
-							border-radius: 30px;
-						}
-						.tutor-single-lesson-wrap {
-						    border-radius: 0 0 30px 30px;
-						}
-					<?php } ?>
-					<?php if(get_theme_mod('emp_styles_tipography') === 'sans-serif'){ ?>
-						.fa-user .fa-text {
-						    margin-left: -8px!important;
-						}
-					<?php } ?>
-
-					/* Buttons */
-	        .btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .reset_variations{
-	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
-	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>;
-	        }
-	        .btn:hover, .btn:focus, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:focus{
-	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
-	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
-	        }
-	        a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable,
-					a.button.product_type_simple{
-	        	background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>!important;
-	        	color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
-	        }
-
-					/* Shadows */
-					<?php if (get_theme_mod('emp_shadow') === 'true'){ ?>
-						.text-shadow-6{
-							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
-						}
-						.woocommerce ul.products li.product .button, .bg-navbar-top, blockquote, table, div .pt-lg-90, body{
-							text-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
-						}
-					<?php } ?>
-					<?php if (get_theme_mod('emp_shadow') === 'true') { ?>
-						img, iframe {
-							box-shadow: 0 13px 13px rgba(0, 0, 0, 0.6)!important;
-						    transition: all .5s;
-						}
-						.FullScreenLanding, .shadow-grey-down, a.button, img, select.orderby{
-						    box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
-						    transition: all .5s;
-						}
-						.shadow-grey-down-1{
-							box-shadow: 0px 13px 38px rgba(0, 0, 0, .6)!important;
-						}
-						.img-btn-fixed, .dropdown-toggle::after {
-						    box-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
-						    border-radius: 26px;
-						}
-						@media(min-width: 991px){
-							nav.navbar.navbar-scroll{
-								box-shadow: 0 5px 13px rgba(0, 0, 0, 0.2)!important;
-							}
-						}
-						.buttons-mobile, .shadow-grey-up, .footer, .tutor-course.tutor-course-loop{
-							box-shadow: 0px -5px 13px rgba(0, 0, 0, .2)!important;
-						}
-						.shadow-grey-up-down, .btn, .card{
-							box-shadow: 0px -5px 13px rgba(0, 0, 0, .2), 0px 13px 13px rgba(0, 0, 0, .2);
-						}
-						@media(max-width: 991px){
-							#s, #searchsubmit, .select-form{
-								box-shadow: 0px 13px 13px rgba(0, 0, 0, .2)!important;
-							}
-							.menu-item a{
-								text-shadow: 0 5px 13px rgba(0, 0, 0, 0.6);
-							}
-						}
-					<?php } ?>
-
-	    </style>
-	<?php
-	}
-	add_action( 'wp_head', 'emp_theme_customize_css');
+function emp_theme_customize_css(){
+	include get_template_directory().'/Customizer/emp-styles.php';
+}
+add_action( 'wp_head', 'emp_theme_customize_css');
 
 // 5) content width
 	if ( ! isset( $content_width ) ) {
@@ -447,79 +275,59 @@ if (class_exists('WooCommerce')){
 
 	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-// mini woocommerce cart
+// Mini woocommerce cart
 
 function custom_mini_cart() {
-    echo '<div class="widget woocommerce widget_shopping_cart my-3 asd"><ul class="">';
-        echo '<li> <div class="widget_shopping_cart_content fadeIn">';
-                  woocommerce_mini_cart();
-            echo '</div></li></ul></div>';
-
-      }
+  echo '<div class="widget woocommerce widget_shopping_cart my-3 asd"><ul class="">';
+  echo '<li> <div class="widget_shopping_cart_content fadeIn">';
+  woocommerce_mini_cart();
+  echo '</div></li></ul></div>';
+}
 add_shortcode( 'custom-techno-mini-cart', 'custom_mini_cart' );
 
 
 function wc_refresh_mini_cart_count($fragments){
-    ob_start();
-    ?>
-    <div id="mini-cart-count">
-        <?php echo WC()->cart->get_cart_contents_count(); ?>
-    </div>
-    <?php
-        $fragments['#mini-cart-count'] = ob_get_clean();
-    return $fragments;
+  ob_start(); ?>
+  <div id="mini-cart-count">
+    <?php echo WC()->cart->get_cart_contents_count(); ?>
+  </div>
+  <?php  $fragments['#mini-cart-count'] = ob_get_clean();
+  return $fragments;
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 
 }
 //  12) GitHub Updates
-    // set_site_transient('update_themes', null);
-	function emp_check_update( $transient ) {
-	    if ( empty( $transient->checked ) ) {
-	        return $transient;
-	    }
-	    $theme_data = wp_get_theme(wp_get_theme()->template);
-	    $theme_slug = $theme_data->get_template();
-	    //Delete '-master' from the end of slug
-	    $theme_uri_slug = preg_replace('/-master$/', '', $theme_slug);
+function emp_check_update( $transient ) {
+  if ( empty( $transient->checked ) ) {
+    return $transient;
+  }
+  $theme_data = wp_get_theme(wp_get_theme()->template);
+  $theme_slug = $theme_data->get_template();
+  //Delete '-master' from the end of slug
+  $theme_uri_slug = preg_replace('/-master$/', '', $theme_slug);
 
-	    $remote_version = '0.0.0';
-	    $style_css = wp_remote_get("https://raw.githubusercontent.com/alanpereyra57/".$theme_uri_slug."/master/style.css")['body'];
-	    if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
-	        $remote_version = _cleanup_header_comment( $match[1] );
+  $remote_version = '0.0.0';
+  $style_css = wp_remote_get("https://raw.githubusercontent.com/alanpereyra57/".$theme_uri_slug."/master/style.css")['body'];
+  if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
+    $remote_version = _cleanup_header_comment( $match[1] );
 
-	    if (version_compare($theme_data->version, $remote_version, '<')) {
-	        $transient->response[$theme_slug] = array(
-	            'theme'       => $theme_slug,
-	            'new_version' => $remote_version,
-	            'url'         => 'https://github.com/alanpereyra57/'.$theme_uri_slug,
-	            'package'     => 'https://github.com/alanpereyra57/'.$theme_uri_slug.'/archive/master.zip',
-	        );
-	    }
+  if (version_compare($theme_data->version, $remote_version, '<')) {
+    $transient->response[$theme_slug] = array(
+        'theme'       => $theme_slug,
+        'new_version' => $remote_version,
+        'url'         => 'https://github.com/alanpereyra57/'.$theme_uri_slug,
+        'package'     => 'https://github.com/alanpereyra57/'.$theme_uri_slug.'/archive/master.zip',
+    );
+  }
+  return $transient;
+}
 
-	    return $transient;
-	}
+$emp_password = get_theme_mod('$emp_github_pass');
 
-	$emp_password = get_theme_mod('$emp_github_pass');
-
-	if($emp_password == 'iiKNN33797'){
-		add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
-	}
-
-// Test block
-
-// function gutenberg_emp_register_block() {
-// 		wp_enqueue_script( 'emp-blocks', get_template_directory_uri() . '/js/emp-blocks.js', array(), '1.9.5', true );
-// 		register_block_type( 'emp-blocks/lists-items', array(
-//         'editor_script' => 'emp-blocks',
-//     ) );
-// }
-// add_action( 'init', 'gutenberg_emp_register_block' );
-//
-// function emp_block_add_styles() {
-//     wp_enqueue_style( 'emp-block-css', get_stylesheet_directory_uri() . '/css/emp_block.css' );
-// }
-// add_action('enqueue_block_assets', 'emp_block_add_styles');
+if($emp_password == 'iiKNN33797'){
+	add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
+}
 
 // 13) Fix admin bar
 if ( ! current_user_can( 'manage_options' ) ) {
