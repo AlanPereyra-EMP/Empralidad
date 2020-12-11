@@ -94,7 +94,7 @@
     <script>
       function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";
+      element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";// This script was been created by Twitter
       document.body.appendChild(element);
 
       var element1 = document.createElement("script");

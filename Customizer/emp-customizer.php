@@ -3,6 +3,7 @@ function empralidad_customize_register($wp_customize){
 	include get_template_directory().'/Customizer/components/index.php';
 	include get_template_directory().'/Customizer/woocommerce/index.php';
 	include get_template_directory().'/Customizer/homepage/index.php';
+	include get_template_directory().'/Customizer/analytics/index.php';
 }
 
 add_action('customize_register', 'empralidad_customize_register');

@@ -69,8 +69,8 @@
     </style>
     <?php
     wp_head();
-    echo get_theme_mod('emp_face_text');
-    echo get_theme_mod('emp_google_text');
+    echo get_theme_mod('emp_analytics_facebook_script');
+    echo get_theme_mod('emp_analytics_google_script');
     ?>
   </head>
   <body <?php body_class(); ?> >
