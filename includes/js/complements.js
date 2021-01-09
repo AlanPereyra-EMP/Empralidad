@@ -188,53 +188,6 @@ function showWoocommerceCart() {
     }, 250)
   }
 }
-
-// Countdown.js
-if (document.getElementById('clock') && document.getElementById('message')){
-
-  var time_left = document.getElementById('clock').textContent;
-
-  var final_message = document.getElementById('message').textContent;
-
-  const getRemainingTime = deadline => {
-    let now = new Date(),
-        remainTime = (new Date(deadline) - now + 1000) / 1000,
-        remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
-        remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
-        remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
-        remainDays = Math.floor(remainTime / (3600 * 24));
-
-    return {
-      remainSeconds,
-      remainMinutes,
-      remainHours,
-      remainDays,
-      remainTime
-    }
-  };
-
-  const countdown = (deadline,elem,finalMessage) => {
-    const el = document.getElementById(elem);
-
-    const timerUpdate = setInterval( () => {
-      let t = getRemainingTime(deadline);
-      el.innerHTML = `${t.remainDays}d ${t.remainHours}h ${t.remainMinutes}m ${t.remainSeconds}s`;
-
-      el.className = "d-inline-block";
-
-      if(t.remainTime <= 1) {
-        clearInterval(timerUpdate);
-        el.innerHTML = finalMessage;
-      }
-
-    }, 1000)
-
-  };
-
-  countdown( time_left, 'clock', final_message);
-
-}
-
 // Add fade in animation onload
 
 var win = $(window);
@@ -323,11 +276,4 @@ if (stopAudio3){
 $(window).ready(function() {
   $('#woo_featured_products ul').removeClass("columns-3");
   $('.products .columns-4').addClass('columns-x');
-});
-
-
-$(document).ready(function(){
-  if ($('#carouselFade')){
-    $("#carouselFade").carousel();
-  }
 });

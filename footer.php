@@ -51,11 +51,16 @@
     <div class="mx-auto container-fluid fixed-bottom " id="bg-woocommerce-mobile"></div>
     <div class="buttons-mobile show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
       <!-- Home-->
-      <a href="<?php echo home_url(); ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
+      <?php $home_url =  get_theme_mod('emp_components_nav_home');
+      if ($home_url == ''){
+        $home_url = home_url();
+      }
+      ?>
+      <a href="<?php echo $home_url ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
       <!-- User -->
       <?php $user_link = get_theme_mod('emp_components_nav_user');
       if ($user_link){ ?>
-        <a href="<?php echo get_theme_mod('emp_mobile_user_text'); ?>" class="fa-dark fa fa-user mx-auto">
+        <a href="<?php echo get_theme_mod('emp_components_nav_user'); ?>" class="fa-dark fa fa-user mx-auto">
             <span class="fa-text">Ingresar</span>
         </a>
       <?php } ?>
@@ -94,15 +99,11 @@
     <script>
       function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.bundle.min.js";// This script was been created by Twitter
+      element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/js/bootstrap.bundle.min.js";// This script was been created by Twitter
       document.body.appendChild(element);
 
       var element1 = document.createElement("script");
-      element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
-      document.body.appendChild(element1);
-
-      var element1 = document.createElement("script");
-      element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/js/complements.js";
+      element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/js/complements.js";
       document.body.appendChild(element1);
       }
 
@@ -113,7 +114,7 @@
       }else { window.onload = downloadJSAtOnload;}
     </script>
     <!-- jQuery -->
-    <script defer src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-3.3.1.min.js"></script>
+    <script defer src="<?php echo esc_url( get_template_directory_uri() ); ?>/includes/js/jquery-3.3.1.min.js"></script>
     <!-- WP js -->
     <?php wp_footer(); ?>
   </body>

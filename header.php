@@ -3,15 +3,19 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta name="theme-color" content="<?php echo get_theme_mod('emp_components_nav_background'); ?>">
+    <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <!-- PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href='<?php echo get_template_directory_uri() ?>/includes/PWA/manifest.php'>
     <!-- Defer css -->
     <script>
       function downloadCSSAtOnload() {
         var element = document.createElement("link");
-        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/plugins-support.css";
+        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/css/plugins-support.css";
         element.rel = 'stylesheet';
         document.body.appendChild(element);
 
@@ -21,7 +25,7 @@
         document.body.appendChild(element1);
 
         var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/fonts/fa/css/all.min.css";
+        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/fonts/fa/css/all.min.css";
         element2.rel = 'stylesheet';
         document.body.appendChild(element2);
 
@@ -51,7 +55,7 @@
         document.body.appendChild(element7);
 
         var element8 = document.createElement("link");
-        element8.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/css/sfpo.css";
+        element8.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/css/sfpo.css";
         element8.rel = 'stylesheet';
         document.body.appendChild(element8);
       }

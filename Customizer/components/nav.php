@@ -114,4 +114,18 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'description'	  => __( 'Link del de area de clientes, panel de administación o ingresar', 'empralidad' ),
 
 )));
+// Home link
+$wp_customize->add_setting('emp_components_nav_home', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_encoded'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_nav_home_control', array(
+  'label'         => __('Home page personalizada', 'empralidad'),
+  'section'       => 'emp_section_components_nav',
+  'settings'      => 'emp_components_nav_home',
+  'description'	  => __( 'Link personalizado de home page (por defecto dejar en blanco)', 'empralidad' ),
+
+)));
 ?>

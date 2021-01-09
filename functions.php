@@ -1,5 +1,5 @@
 <?php
-// 0) CSS and JS on footer
+// 0) CSS and JS
 // 1) Main menu
 // 2) Widgets
 // 3) Includes
@@ -15,7 +15,7 @@
 // 13) Fix admin bar on frontend
 
 
-// 0) JS on footer
+// 0) CSS and JS
 function scripts_footer() {
   remove_action('wp_head', 'wp_print_scripts');
   remove_action('wp_head', 'wp_print_head_scripts', 9);
@@ -81,6 +81,7 @@ function emp_sidebar() {
 // 3) Includes
 get_template_part( 'Customizer/emp-customizer' );
 get_template_part( 'plugins/emp-shortcodes' );
+get_template_part( 'includes/PWA/manifets.js' );
 
 // 4) Dinamics Css
 function emp_theme_customize_css(){
@@ -94,11 +95,11 @@ add_action( 'wp_head', 'emp_theme_customize_css');
 	}
 
 // 6) add theme support
-	add_theme_support( 'title-tag' );
-	add_theme_support( 'automatic-feed-links' );
-  add_theme_support( 'post-thumbnails' );
-	add_theme_support('category-thumbnails');
-  add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
+add_theme_support( 'title-tag' );
+add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'post-thumbnails' );
+add_theme_support('category-thumbnails');
+add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
 
 
 // 7) comment reply
@@ -256,7 +257,7 @@ add_action( 'wp_head', 'emp_theme_customize_css');
 
 // 11) Woocomerce Custom
 if (class_exists('WooCommerce')){
-	function mytheme_add_woocommerce_support() {
+	function emp_add_woocommerce_support() {
 	    add_theme_support( 'woocommerce', array(
 	        'thumbnail_image_width' => 600,
 	        'single_image_width'    => 600,
@@ -273,7 +274,7 @@ if (class_exists('WooCommerce')){
 	    add_theme_support( 'wc-product-gallery-slider' );
 	}
 
-	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+	add_action( 'after_setup_theme', 'emp_add_woocommerce_support' );
 
 // Mini woocommerce cart
 

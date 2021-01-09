@@ -1,7 +1,6 @@
 ( function( blocks, editor, element ) {
     var el = wp.element.createElement;
 
-
     wp.blocks.registerBlockStyle( 'emp-blocks/lists-items', {
         name: 'emp-style',
         label: 'Invertido',
