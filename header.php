@@ -94,8 +94,13 @@
           </div>
           <!-- if logo -->
           <?php $logo_navbar = get_theme_mod('emp_components_nav_logo');
-          if ($logo_navbar) { ?>
-            <a class="navbar-brand mx-auto" href="<?php echo home_url(); ?>">
+          if ($logo_navbar) {
+            $home_url =  get_theme_mod('emp_components_nav_home');
+            if ($home_url == ''){
+              $home_url = home_url();
+            }
+            ?>
+            <a class="navbar-brand mx-auto" href="<?php echo $home_url ?>">
             	<img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_components_nav_logo')); ?>" class="navbar-img" alt="NavbarBrand">
             </a>
           <?php } else { ?>
