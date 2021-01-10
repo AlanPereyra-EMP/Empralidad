@@ -60,7 +60,6 @@
   img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.faded.lazyloaded {
     position: absolute;
     top: 0%;
-    max-height: 215px;
     height: auto!important;
   }
   li.product span.price {
@@ -71,7 +70,10 @@
   }
   h2.woocommerce-loop-product__title.faded {
     position: absolute;
-    bottom: 32%;
+    background: #ffffff;
+    padding-bottom: 62px!important;
+    padding-top: 20px!important;
+    bottom: 23%;
     width: 100%;
     transform: translate(0, 50%);
   }

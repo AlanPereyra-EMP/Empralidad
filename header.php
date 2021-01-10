@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="manifest" href='<?php echo get_template_directory_uri() ?>/includes/PWA/manifest.php'>
+    <!-- <link rel="manifest" href='<?php echo get_template_directory_uri() ?>/includes/PWA/manifest.php'> -->
     <!-- Defer css -->
     <script>
       function downloadCSSAtOnload() {
