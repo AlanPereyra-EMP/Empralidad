@@ -250,8 +250,8 @@ if (class_exists('WooCommerce')){
     ) );
     add_theme_support( 'wc-product-gallery-slider' );
 	}
+  add_action( 'after_setup_theme', 'emp_add_woocommerce_support' );
 }
-add_action( 'after_setup_theme', 'emp_add_woocommerce_support' );
 
 // Mini woocommerce cart
 function emp_mini_cart() {
