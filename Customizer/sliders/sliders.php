@@ -1,22 +1,16 @@
 <?php
-//Text header homepage
+// Add panel
+$wp_customize->add_panel( 'emp_panel_sliders', array(
+  'priority' => 2,
+  'title'    => __( 'Sliders homepage', 'empralidad' )
+));
+// Active Slider
 $wp_customize->add_section('emp_section_head_text', array(
-  'title'    => __('Titulo principal', 'empralidad'),
-  'priority' => 1,
-  'panel'    => 'emp_panel_home'
+  'title'      => __('Slider activo', 'empralidad'),
+  'priority'   => 1,
+  'panel'      => 'emp_panel_sliders',
+  'description'=> __('Este slider siempre está activo y contiene el titulo principal', 'empralidad')
 ));
-// Title 1
-  $wp_customize->add_setting('emp_head_text_title', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_text_title_control', array(
-  'label'   => __('Titulo principal', 'empralidad'),
-  'section' => 'emp_section_head_text',
-  'settings'=> 'emp_head_text_title'
-
-)));
 // Textarea 1
 $wp_customize->add_setting('emp_head_textarea', array(
   'default'           => '',
@@ -69,7 +63,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_lin
   'description'	=> __( 'Pega acá el link del boton', 'empralidad' )
 )));
 
-//Title 2
+// Slider secondary 2
 $wp_customize->add_setting('emp_head_show2', array(
   'default'           => false,
   'trasnport'         => 'refresh',
@@ -82,9 +76,9 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_sho
   'type'  	=> 'checkbox'
 )));
 $wp_customize->add_section('emp_section_head_text2', array(
-  'title'    => __('Titulo secundario', 'empralidad'),
+  'title'    => __('Slider secundario', 'empralidad'),
   'priority' => 2,
-  'panel'    => 'emp_panel_home'
+  'panel'    => 'emp_panel_sliders'
 ));
 // Title 2
 $wp_customize->add_setting('emp_head_text2', array(
@@ -151,7 +145,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_lin
   'description'	=> __( 'Pega acá el link del boton', 'empralidad' )
 )));
 
-//Title 3
+// Slider secondary 3
 $wp_customize->add_setting('emp_head_show3', array(
   'default'           => false,
   'trasnport'         => 'refresh',
@@ -164,9 +158,9 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_head_sho
   'type'   				 => 'checkbox'
 )));
 $wp_customize->add_section('emp_section_head_text3', array(
-  'title'    => __('Titulo secundario', 'empralidad'),
+  'title'    => __('Slider secundario', 'empralidad'),
   'priority' => 3,
-  'panel'    => 'emp_panel_home'
+  'panel'    => 'emp_panel_sliders'
 ));
 // Title 3
   $wp_customize->add_setting('emp_head_text3', array(

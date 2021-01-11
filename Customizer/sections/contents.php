@@ -1,9 +1,14 @@
 <?php
+// Add panel
+$wp_customize->add_panel( 'emp_panel_sections', array(
+  'priority' => 2,
+  'title'    => __( 'Contenido adicional', 'empralidad' )
+));
 // section 1
 $wp_customize->add_section('emp_section_homepage1', array(
   'title'       => __('Contenido extra/shortcode', 'empralidad'),
   'priority'    => 4,
-  'panel'       => 'emp_panel_home',
+  'panel'       => 'emp_panel_sections',
   'description' => __('Soporta shortcodes de woocomerce', 'empralidad')
 ));
 // Show 1
@@ -95,7 +100,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
 $wp_customize->add_section('emp_section_homepage2', array(
   'title'    => __('Contenido medio', 'empralidad'),
   'priority' => 5,
-  'panel'    => 'emp_panel_home'
+  'panel'    => 'emp_panel_sections'
 ));
 // Show 2
 $wp_customize->add_setting('emp_homepage_show_2', array(
@@ -196,7 +201,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
 $wp_customize->add_section('emp_section_homepage3', array(
   'title'    => __('Contenido inferior', 'empralidad'),
   'priority' => 6,
-  'panel'    => 'emp_panel_home'
+  'panel'    => 'emp_panel_sections'
 ));
 // Show 3
 $wp_customize->add_setting('emp_homepage_show_3', array(
