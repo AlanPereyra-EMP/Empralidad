@@ -74,14 +74,14 @@ add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
 
 
 // 7) comment reply
-function wpse218049_enqueue_comments_reply() {
+function emp_enqueue_comments_reply() {
 
   if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1) ) {
     // Load comment-reply.js (into footer)
     wp_enqueue_script( 'comment-reply', 'wp-includes/js/comment-reply', array(), false, true );
   }
 }
-add_action(  'wp_enqueue_scripts', 'wpse218049_enqueue_comments_reply' );
+add_action(  'wp_enqueue_scripts', 'emp_enqueue_comments_reply' );
 
 // 8) Walker class
 	class Walker_Nav_Primary extends Walker_Nav_menu {
@@ -251,27 +251,28 @@ if (class_exists('WooCommerce')){
     add_theme_support( 'wc-product-gallery-slider' );
 	}
   add_action( 'after_setup_theme', 'emp_add_woocommerce_support' );
-}
-
-// Mini woocommerce cart
-function emp_mini_cart() {
-  echo '<div class="widget woocommerce widget_shopping_cart my-3 asd"><ul class="">';
-  echo '<li> <div class="widget_shopping_cart_content fadeIn">';
-  woocommerce_mini_cart();
-  echo '</div></li></ul></div>';
-}
-add_shortcode( 'emp-mini-cart', 'emp_mini_cart' );
 
 
-function wc_refresh_mini_cart_count($fragments){
-  ob_start(); ?>
-  <div id="mini-cart-count">
-    <?php echo WC()->cart->get_cart_contents_count(); ?>
-  </div>
-  <?php  $fragments['#mini-cart-count'] = ob_get_clean();
-  return $fragments;
+  // Mini woocommerce cart
+  function emp_mini_cart() {
+    echo '<div class="widget woocommerce widget_shopping_cart my-3 asd"><ul class="">';
+    echo '<li> <div class="widget_shopping_cart_content fadeIn">';
+    woocommerce_mini_cart();
+    echo '</div></li></ul></div>';
+  }
+  add_shortcode( 'emp-mini-cart', 'emp_mini_cart' );
+
+
+  function wc_refresh_mini_cart_count($fragments){
+    ob_start(); ?>
+    <div id="mini-cart-count">
+      <?php echo WC()->cart->get_cart_contents_count(); ?>
+    </div>
+    <?php  $fragments['#mini-cart-count'] = ob_get_clean();
+    return $fragments;
+  }
+  add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 
 //  12) GitHub Updates
 function emp_check_update( $transient ) {
