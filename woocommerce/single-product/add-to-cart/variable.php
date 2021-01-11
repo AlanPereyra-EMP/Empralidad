@@ -22,8 +22,10 @@ $attribute_keys  = array_keys( $attributes );
 $variations_json = wp_json_encode( $available_variations );
 $variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_json ) : _wp_specialchars( $variations_json, ENT_QUOTES, 'UTF-8', true );
 
-do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-
+do_action( 'woocommerce_before_add_to_cart_form' );
+if(get_theme_mod('emp_woocommerce_notices_show')){ ?>
+	<p class="text-secondary small text-center faded"><?php echo get_theme_mod('emp_woocommerce_notices_text1'); ?></p>
+<?php } ?>
 <form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
@@ -77,6 +79,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
     $emp_show_notice = get_theme_mod('emp_woocommerce_whatsapp_show');
     if($emp_show_notice){ ?>
       <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20quiero%20consultar%20si%20hay%20stock%20de%20*<?php echo str_replace(' ', '%20', wp_get_document_title());?>*%20%20%20%20<?php echo get_permalink(); ?>" class="button text-center">Consultar stock por whastapp</a> <br>
+			<p class="text-secondary text-center small">(Este producto podría no estar en stock, para hablar con un vendedor tocar el botón de arriba)</p>
     <?php } ?>
 	<?php endif; ?>
 
