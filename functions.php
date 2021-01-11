@@ -1,5 +1,5 @@
 <?php
-// 0) CSS and JS
+// 0) Includes
 // 1) Main menu
 // 2) Widgets
 // 3) Includes
@@ -15,44 +15,17 @@
 // 13) Fix admin bar on frontend
 
 
-// 0) CSS and JS
-function scripts_footer() {
-  remove_action('wp_head', 'wp_print_scripts');
-  remove_action('wp_head', 'wp_print_head_scripts', 9);
-  remove_action('wp_head', 'wp_enqueue_scripts', 1);
-
-  add_action('wp_footer', 'wp_print_scripts', 5);
-  add_action('wp_footer', 'wp_enqueue_scripts', 5);
-  add_action('wp_footer', 'wp_print_head_scripts', 5);
-}
-add_action( 'wp_enqueue_scripts', 'scripts_footer' );
-
-function my_deregister_styles() {
-  wp_deregister_style('wp-block-library');
-  wp_deregister_style('wc-block-style');
-	wp_deregister_style('woocommerce');
-	wp_deregister_style('woocommerce-smallcreen');
-  wp_deregister_style('contact-form-7');
-	wp_deregister_style('bootstrap-personalized');
-  wp_deregister_style('dnd-upload-cf7');
-}
-add_action('wp_print_styles', 'my_deregister_styles', 100);
+// 0) Includes
+get_template_part( 'Customizer/emp-customizer' );
+get_template_part( 'plugins/emp-shortcodes' );
+get_template_part('includes/enqueue-scripts');
 
 // 1) Main menu
 if (function_exists('register_nav_menus')) {
 	register_nav_menus (array('superior' => 'Menu Principal'));
 }
 
-// Class <a> main menu
-	add_filter('nav_menu_link_attributes','clase_menu', 10,3);
-	function clase_menu ($atts, $item, $args){
-		$class = 'nav-link font-weight-bold mx-2';
-		$atts ['class'] = $class;
-		return $atts;
-	}
-
 // 2) Widgets
-add_action( 'widgets_init', 'emp_sidebar' );
 function emp_sidebar() {
 	register_sidebar(
       array(
@@ -77,11 +50,9 @@ function emp_sidebar() {
     )
   );
 }
+add_action( 'widgets_init', 'emp_sidebar' );
 
 // 3) Includes
-get_template_part( 'Customizer/emp-customizer' );
-get_template_part( 'plugins/emp-shortcodes' );
-get_template_part( 'includes/PWA/manifets.js' );
 
 // 4) Dinamics Css
 function emp_theme_customize_css(){
@@ -103,14 +74,14 @@ add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
 
 
 // 7) comment reply
-	function wpse218049_enqueue_comments_reply() {
+function wpse218049_enqueue_comments_reply() {
 
-	    if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1) ) {
-	        // Load comment-reply.js (into footer)
-	        wp_enqueue_script( 'comment-reply', 'wp-includes/js/comment-reply', array(), false, true );
-	    }
-	}
-	add_action(  'wp_enqueue_scripts', 'wpse218049_enqueue_comments_reply' );
+  if( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1) ) {
+    // Load comment-reply.js (into footer)
+    wp_enqueue_script( 'comment-reply', 'wp-includes/js/comment-reply', array(), false, true );
+  }
+}
+add_action(  'wp_enqueue_scripts', 'wpse218049_enqueue_comments_reply' );
 
 // 8) Walker class
 	class Walker_Nav_Primary extends Walker_Nav_menu {
@@ -162,129 +133,134 @@ add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
 
 		}
 	}
+  // Class <a> main menu
+  function clase_menu ($atts, $item, $args){
+  	$class = 'nav-link font-weight-bold mx-2';
+  	$atts ['class'] = $class;
+  	return $atts;
+  }
+  add_filter('nav_menu_link_attributes','clase_menu', 10,3);
 
 // 9) Wp link pages
- 	$defaults = array(
-		'before'           => '<p>' . __( 'Páginas:', 'empralidad' ),
-		'after'            => '</p>',
-		'link_before'      => '',
-		'link_after'       => '',
-		'next_or_number'   => 'Número',
-		'separator'        => ' ',
-		'nextpagelink'     => __( 'Proxima página', 'empralidad'),
-		'previouspagelink' => __( 'Página anterior', 'empralidad' ),
-		'pagelink'         => '%',
-		'echo'             => 1
-	);
+$defaults = array(
+	'before'           => '<p>' . __( 'Páginas:', 'empralidad' ),
+	'after'            => '</p>',
+	'link_before'      => '',
+	'link_after'       => '',
+	'next_or_number'   => 'Número',
+	'separator'        => ' ',
+	'nextpagelink'     => __( 'Proxima página', 'empralidad'),
+	'previouspagelink' => __( 'Página anterior', 'empralidad' ),
+	'pagelink'         => '%',
+	'echo'             => 1
+);
 
 // 10) Custom post type
- 	add_action( 'init', 'codex_landing_pages_init' );
-	function codex_landing_pages_init() {
-		$labels = array(
-			'name'               => _x( 'Landing Pages', 'Nombre general del tipo de post', 'empralidad' ),
-			'singular_name'      => _x( 'Landing Page', 'Nombre singular', 'empralidad' ),
-			'menu_name'          => _x( 'Landing Pages', 'admin menu', 'empralidad' ),
-			'name_admin_bar'     => _x( 'Landing Pages', 'añadir nueva en admin bar', 'empralidad' ),
-			'add_new'            => _x( 'Añadir nueva', 'Landing Page', 'empralidad' ),
-			'add_new_item'       => __( 'Añadir nueva Landing Page', 'empralidad' ),
-			'new_item'           => __( 'Nueva Landing Page', 'empralidad' ),
-			'edit_item'          => __( 'Editar Landing Page', 'empralidad' ),
-			'view_item'          => __( 'Ver Landing Page', 'empralidad' ),
-			'all_items'          => __( 'Landing Pages', 'empralidad' ),
-			'search_items'       => __( 'Buscar Landing Pages', 'empralidad' ),
-			'parent_item_colon'  => __( 'Landing Page:', 'empralidad' ),
-			'not_found'          => __( 'No encontrado.', 'empralidad' ),
-			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'empralidad' )
-		);
+function emp_landing_pages_init() {
+	$labels = array(
+		'name'               => _x( 'Landing Pages', 'Nombre general del tipo de post', 'empralidad' ),
+		'singular_name'      => _x( 'Landing Page', 'Nombre singular', 'empralidad' ),
+		'menu_name'          => _x( 'Landing Pages', 'admin menu', 'empralidad' ),
+		'name_admin_bar'     => _x( 'Landing Pages', 'añadir nueva en admin bar', 'empralidad' ),
+		'add_new'            => _x( 'Añadir nueva', 'Landing Page', 'empralidad' ),
+		'add_new_item'       => __( 'Añadir nueva Landing Page', 'empralidad' ),
+		'new_item'           => __( 'Nueva Landing Page', 'empralidad' ),
+		'edit_item'          => __( 'Editar Landing Page', 'empralidad' ),
+		'view_item'          => __( 'Ver Landing Page', 'empralidad' ),
+		'all_items'          => __( 'Landing Pages', 'empralidad' ),
+		'search_items'       => __( 'Buscar Landing Pages', 'empralidad' ),
+		'parent_item_colon'  => __( 'Landing Page:', 'empralidad' ),
+		'not_found'          => __( 'No encontrado.', 'empralidad' ),
+		'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'empralidad' )
+	);
 
-		$args = array(
-			'labels'             => $labels,
-	    'description'        => __( 'Descripcion.', 'empralidad' ),
-			'menu_icon' 				 => 'dashicons-text-page',
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'landing-pages' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => null,
-			'show_in_rest'       => true,
-			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields')
-		);
+	$args = array(
+		'labels'             => $labels,
+    'description'        => __( 'Descripcion.', 'empralidad' ),
+		'menu_icon' 				 => 'dashicons-text-page',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'landing-pages' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'show_in_rest'       => true,
+		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields')
+	);
 
+	register_post_type( 'landing_pages', $args );
 
-		register_post_type( 'landing_pages', $args );
+	$labels = array(
+		'name'               => _x( 'Páginas de contacto', 'Nombre general del tipo de post', 'empralidad' ),
+		'singular_name'      => _x( 'Página de contacto', 'Nombre singular', 'empralidad' ),
+		'menu_name'          => _x( 'Páginas de contacto', 'admin menu', 'empralidad' ),
+		'name_admin_bar'     => _x( 'Páginas de contacto', 'añadir nueva en admin bar', 'empralidad' ),
+		'add_new'            => _x( 'Añadir nueva', 'Página de contacto', 'empralidad' ),
+		'add_new_item'       => __( 'Añadir nueva página de contacto', 'empralidad' ),
+		'new_item'           => __( 'Nueva página de contacto', 'empralidad' ),
+		'edit_item'          => __( 'Editar página de contacto', 'empralidad' ),
+		'view_item'          => __( 'Ver página de contacto', 'empralidad' ),
+		'all_items'          => __( 'Páginas de contacto', 'empralidad' ),
+		'search_items'       => __( 'Buscar páginas de contacto', 'empralidad' ),
+		'parent_item_colon'  => __( 'Página de contacto:', 'empralidad' ),
+		'not_found'          => __( 'No encontrado.', 'empralidad' ),
+		'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'empralidad' )
+	);
 
-		$labels = array(
-			'name'               => _x( 'Páginas de contacto', 'Nombre general del tipo de post', 'empralidad' ),
-			'singular_name'      => _x( 'Página de contacto', 'Nombre singular', 'empralidad' ),
-			'menu_name'          => _x( 'Páginas de contacto', 'admin menu', 'empralidad' ),
-			'name_admin_bar'     => _x( 'Páginas de contacto', 'añadir nueva en admin bar', 'empralidad' ),
-			'add_new'            => _x( 'Añadir nueva', 'Página de contacto', 'empralidad' ),
-			'add_new_item'       => __( 'Añadir nueva página de contacto', 'empralidad' ),
-			'new_item'           => __( 'Nueva página de contacto', 'empralidad' ),
-			'edit_item'          => __( 'Editar página de contacto', 'empralidad' ),
-			'view_item'          => __( 'Ver página de contacto', 'empralidad' ),
-			'all_items'          => __( 'Páginas de contacto', 'empralidad' ),
-			'search_items'       => __( 'Buscar páginas de contacto', 'empralidad' ),
-			'parent_item_colon'  => __( 'Página de contacto:', 'empralidad' ),
-			'not_found'          => __( 'No encontrado.', 'empralidad' ),
-			'not_found_in_trash' => __( 'No se en contraron en la papelera.', 'empralidad' )
-		);
+	$args = array(
+		'labels'             => $labels,
+    'description'        => __( 'Descripcion.', 'empralidad' ),
+		'menu_icon' 				 => 'dashicons-email',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'contact' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt')
+	);
 
-		$args = array(
-			'labels'             => $labels,
-	    'description'        => __( 'Descripcion.', 'empralidad' ),
-			'menu_icon' 				 => 'dashicons-email',
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'contact' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => null,
-			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt')
-		);
-
-		register_post_type( 'contact', $args );
-	}
+	register_post_type( 'contact', $args );
+}
+add_action( 'init', 'emp_landing_pages_init' );
 
 // 11) Woocomerce Custom
 if (class_exists('WooCommerce')){
 	function emp_add_woocommerce_support() {
-	    add_theme_support( 'woocommerce', array(
-	        'thumbnail_image_width' => 600,
-	        'single_image_width'    => 600,
+    add_theme_support( 'woocommerce', array(
+      'thumbnail_image_width' => 600,
+      'single_image_width'    => 600,
 
-	        'product_grid'          => array(
-	            'default_rows'    => 3,
-	            'min_rows'        => 1,
-	            'max_rows'        => 3,
-	            'default_columns' => 3,
-	            'min_columns'     => 3,
-	            'max_columns'     => 5,
-	        ),
-	    ) );
-	    add_theme_support( 'wc-product-gallery-slider' );
+      'product_grid'          => array(
+        'default_rows'    => 3,
+        'min_rows'        => 1,
+        'max_rows'        => 3,
+        'default_columns' => 3,
+        'min_columns'     => 3,
+        'max_columns'     => 5,
+      ),
+    ) );
+    add_theme_support( 'wc-product-gallery-slider' );
 	}
-
-	add_action( 'after_setup_theme', 'emp_add_woocommerce_support' );
+}
+add_action( 'after_setup_theme', 'emp_add_woocommerce_support' );
 
 // Mini woocommerce cart
-
-function custom_mini_cart() {
+function emp_mini_cart() {
   echo '<div class="widget woocommerce widget_shopping_cart my-3 asd"><ul class="">';
   echo '<li> <div class="widget_shopping_cart_content fadeIn">';
   woocommerce_mini_cart();
   echo '</div></li></ul></div>';
 }
-add_shortcode( 'custom-techno-mini-cart', 'custom_mini_cart' );
+add_shortcode( 'emp-mini-cart', 'emp_mini_cart' );
 
 
 function wc_refresh_mini_cart_count($fragments){
@@ -297,7 +273,6 @@ function wc_refresh_mini_cart_count($fragments){
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 
-}
 //  12) GitHub Updates
 function emp_check_update( $transient ) {
   if ( empty( $transient->checked ) ) {
@@ -324,15 +299,12 @@ function emp_check_update( $transient ) {
   return $transient;
 }
 
-$emp_password = get_theme_mod('$emp_github_pass');
+add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
 
-if($emp_password == 'iiKNN33797'){
-	add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
-}
 
 // 13) Fix admin bar
 if ( ! current_user_can( 'manage_options' ) ) {
-    show_admin_bar( false );
+  show_admin_bar( false );
 }
 
 ?>

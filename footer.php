@@ -90,31 +90,11 @@
       <?php } ?>
     </div>
     <div id="searchform-woocommerce">
-      <?php echo do_shortcode('[custom-techno-mini-cart]'); ?>
+      <?php echo do_shortcode('[emp-mini-cart]'); ?>
     </div>
     <div id="searchform-mobile" style="display: none;">
       <?php get_search_form(); ?>
     </div>
-    <!-- Js -->
-    <script>
-      function downloadJSAtOnload() {
-      var element = document.createElement("script");
-      element.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/js/bootstrap.bundle.min.js";// This script was been created by Twitter
-      document.body.appendChild(element);
-
-      var element1 = document.createElement("script");
-      element1.src = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/js/complements.js";
-      document.body.appendChild(element1);
-      }
-
-      if (window.addEventListener){
-      window.addEventListener("load", downloadJSAtOnload, false);
-      }else if (window.attachEvent){
-      window.attachEvent("onload", downloadJSAtOnload);
-      }else { window.onload = downloadJSAtOnload;}
-    </script>
-    <!-- jQuery -->
-    <script defer src="<?php echo esc_url( get_template_directory_uri() ); ?>/includes/js/jquery-3.3.1.min.js"></script>
     <!-- WP js -->
     <?php wp_footer(); ?>
   </body>

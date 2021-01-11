@@ -4,67 +4,23 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
-    <meta name="theme-color" content="<?php echo get_theme_mod('emp_components_nav_background'); ?>">
     <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <!-- Fonts -->
+    <?php
+    if(get_theme_mod('emp_components_content_tipography') == 'varela round'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
+    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'indie flower'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'roboto'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'Kumbh Sans'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap">
+    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'nunito'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <?php } ?>
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
-    <!-- <link rel="manifest" href='<?php echo get_template_directory_uri() ?>/includes/PWA/manifest.php'> -->
-    <!-- Defer css -->
-    <script>
-      function downloadCSSAtOnload() {
-        var element = document.createElement("link");
-        element.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/css/plugins-support.css";
-        element.rel = 'stylesheet';
-        document.body.appendChild(element);
 
-        var element1 = document.createElement("link");
-        element1.href = "<?php echo esc_url( includes_url() ); ?>/css/dist/block-library/style.min.css";
-        element1.rel = 'stylesheet';
-        document.body.appendChild(element1);
-
-        var element2 = document.createElement("link");
-        element2.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/fonts/fa/css/all.min.css";
-        element2.rel = 'stylesheet';
-        document.body.appendChild(element2);
-
-        var element3 = document.createElement("link");
-        element3.href = "https://fonts.googleapis.com/css?family=Varela+Round&display=swap";
-        element3.rel = 'stylesheet';
-        document.body.appendChild(element3);
-
-        var element4 = document.createElement("link");
-        element4.href = "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
-        element4.rel = 'stylesheet';
-        document.body.appendChild(element4);
-
-        var element5 = document.createElement("link");
-        element5.href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
-        element5.rel = 'stylesheet';
-        document.body.appendChild(element5);
-
-        var element6 = document.createElement("link");
-        element6.href = "https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap";
-        element6.rel = 'stylesheet';
-        document.body.appendChild(element6);
-
-        var element7 = document.createElement("link");
-        element7.href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap";
-        element7.rel = 'stylesheet';
-        document.body.appendChild(element7);
-
-        var element8 = document.createElement("link");
-        element8.href = "<?php echo esc_url( get_template_directory_uri() ); ?>/includes/css/sfpo.css";
-        element8.rel = 'stylesheet';
-        document.body.appendChild(element8);
-      }
-      if (window.addEventListener){
-        window.addEventListener("load", downloadCSSAtOnload, false);
-      }else if (window.attachEvent){
-        window.attachEvent("onload", downloadCSSAtOnload);
-      }else{ window.onload = downloadCSSAtOnload;}
-    </script>
     <style>
       .to-fade{
         opacity: 0;
