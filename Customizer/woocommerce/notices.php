@@ -2,7 +2,7 @@
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
   $wp_customize->add_section('emp_section_woocommerce_notices', array(
-    'title' => __('Avisos', 'empralidad'),
+    'title' => __('Avisos en productos', 'empralidad'),
     'description'   => __('Agrega un texto como aviso en todos los productos'),
     'theme_supports'=> array('woocommerce'),
     'priority'      => 1,

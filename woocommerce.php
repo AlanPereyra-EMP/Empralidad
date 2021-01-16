@@ -10,17 +10,6 @@
         margin-top: -80px!important;
     }
   }
-  @media (max-width: 330px){
-    li.product.type-product {
-      height: 305px;
-    }
-    h2.woocommerce-loop-product__title.faded{
-      bottom: 40%;
-    }
-    li.product span.price{
-      bottom: 21%;
-    }
-  }
   @media (max-width: 575px){
     .woocommerce span.onsale{
       top: -2px;
@@ -52,7 +41,7 @@
     margin-top: -100px;
   }
   li.product.type-product {
-    height: 350px;
+    height: 300px;
   }
   .product img.faded {
     border-radius: 0!important;
@@ -64,7 +53,7 @@
   }
   li.product span.price {
     position: absolute!important;
-    bottom: 15%!important;
+    bottom: 55px!important;
     left: 50%!important;
     transform: translate(-50%, 0)!important;
   }
@@ -72,8 +61,8 @@
     position: absolute;
     background: #ffffff;
     padding-bottom: 62px!important;
-    padding-top: 20px!important;
-    bottom: 23%;
+    padding-top: 10px!important;
+    bottom: 75px;
     width: 100%;
     transform: translate(0, 50%);
   }
