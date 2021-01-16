@@ -1,7 +1,7 @@
 # Empralidad - Theme
 Empralidad-Theme es un tema Enfocado a smartphones, flat design con carga progresiva y diferida para mejorar el tiempo de renderizado. Cuenta con soporte para PWA una tecnología para hacer que la web funciones como una aplicación nativa de android.
 
-##Soporte para:
+## Soporte
 Este tema cuenta con soporte e integración con:
 - WhatsApp
 - Contact form 7
