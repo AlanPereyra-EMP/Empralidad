@@ -68,6 +68,7 @@
   }
   .woocommerce ul.products li.product .price{
     margin-bottom: 0!important;
+    font-size: 12px;
   }
   .woocommerce .products .star-rating{
     margin: 7px 0 .5em;
