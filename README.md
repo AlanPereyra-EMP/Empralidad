@@ -25,9 +25,9 @@ Este es el primer apartado del personalizador y sirve para configurar el aspecto
 Este apartado sirve para modificar la información que se muestra en los 3 sliders de la homepage que se encuentran en la cabecera, siempre hay uno activo y los otros sos son opcionales.
 ### Contenido adicional
 Sirve para agregar contenido a la homepage, como texto, imágenes o sortcodes. Tiene soporte para contenido html y shortcodes por lo que sirve para insertar código personalizado.
-###Analítica
+### Analítica
 Sirve para insertar tanto el pixel de Facebook como el código de seguimiento de Google analytics.
-###WooCommerce
+### WooCommerce
 Dentro del apartado de Woocommerce este plugin añade ciertas funcionalidades como agregar productos destacados a la home, todas las categorías o introducir avisos en los productos, ademas de habilitar un botón para que los compradores se comuniquen con los vendedores por WhatsApp.
 
 
