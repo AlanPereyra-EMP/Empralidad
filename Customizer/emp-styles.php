@@ -201,6 +201,8 @@ a.button.product_type_simple{
   .woocommerce ul.products li.product{
     width: <?php echo get_theme_mod('emp_woocommerce_featured_size'); ?>%!important;
   }
+}
+@media(min-width:576px){
   .support-woo-shortcode .woocommerce ul.products li.product{
     width: <?php echo get_theme_mod('emp_woocommerce_category_size'); ?>%!important;
   }
