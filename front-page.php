@@ -10,7 +10,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
 <header id="main-head">
   <div class="text-img-home container-fluid my-auto">
     <div id="carouselFade" class="carousel carousel-fade carousel-inner text-homepage-container" data-ride="carousel">
-      <div class="carousel-item active empFadeIn mx-auto color-personalized mw-1200px">
+      <div id="carousel-item-1" class="carousel-item active empFadeIn mx-auto color-personalized mw-1200px">
         <h1 class="text-mobile color-personalized empFadeIn">
           <?php
           if(is_front_page() && !is_home()){
@@ -29,7 +29,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
       </div>
 
       <?php if($emp_title_show_2){ ?>
-        <div class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
+        <div id="carousel-item-2" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
           <h2 class="text-mobile empFadeIn"><?php echo get_theme_mod('emp_head_text2'); ?></h2>
           <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea2'); ?></p>
           <?php if($emp_button_show2){ ?>
@@ -41,7 +41,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
       <?php } ?>
 
       <?php if($emp_title_show_3){ ?>
-        <div class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
+        <div id="carousel-item-3" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
           <h2 class=" text-mobile empFadeIn"><?php echo get_theme_mod('emp_head_text3'); ?></h2>
           <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea3'); ?></p>
           <?php if($emp_button_show1){ ?>
@@ -55,14 +55,14 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
 
   <?php if($emp_title_show_2 || $emp_title_show_3){ ?>
 
-    <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+    <div class="carousel-control-prev" onclick="carouselItemPrev()">
       <i class="fas fa-2x fa-caret-left color-personalized" aria-hidden="true"></i>
       <span class="sr-only"></span>
-    </a>
-    <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+    </div>
+    <div class="carousel-control-next" onclick="carouselItemNext()">
       <i class="fas fa-2x fa-caret-right color-personalized" aria-hidden="true"></i>
       <span class="sr-only"></span>
-    </a>
+    </div>
 
   <?php } ?>
   </div>

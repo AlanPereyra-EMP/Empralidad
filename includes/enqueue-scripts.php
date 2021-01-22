@@ -9,9 +9,7 @@ add_action('wp_enqueue_scripts', 'emp_styles');
 
 // Include template JS
 function emp_scripts(){
-  wp_enqueue_script ('emp_jquery', get_template_directory_uri() . '/includes/js/jquery-3.3.1.min.js', array (), null, false );
-  wp_enqueue_script ('bootstrap', get_template_directory_uri() . '/includes/js/bootstrap.bundle.min.js', array ('emp_jquery'), null, false);
-  wp_enqueue_script ('emp_complements', get_template_directory_uri() . '/includes/js/complements.js', array ('emp_jquery'), null, false);
+  wp_enqueue_script ('emp_complements', get_template_directory_uri() . '/includes/js/complements.js', array (), null, false);
 }
 add_action('wp_enqueue_scripts', 'emp_scripts');
 

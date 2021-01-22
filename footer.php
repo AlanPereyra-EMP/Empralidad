@@ -48,7 +48,6 @@
     </div>
     <!-- Buttons mobile -->
     <div class="mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile"></div>
-    <div class="mx-auto container-fluid fixed-bottom " id="bg-woocommerce-mobile"></div>
     <div class="buttons-mobile show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
       <!-- Home-->
       <?php $home_url =  get_theme_mod('emp_components_nav_home');
@@ -89,7 +88,7 @@
         </a>
       <?php } ?>
     </div>
-    <div id="searchform-woocommerce">
+    <div id="searchform-woocommerce" style="display:none;">
       <?php echo do_shortcode('[emp-mini-cart]'); ?>
     </div>
     <div id="searchform-mobile" style="display: none;">
