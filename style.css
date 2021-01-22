@@ -329,7 +329,7 @@ img, .wp-caption {
 	filter: brightness(0.4);
 }
 .img-fixed {
-	bottom: 62px;
+	bottom: 55px;
 	position: fixed;
 	right: 5px;
 	z-index: 1000;

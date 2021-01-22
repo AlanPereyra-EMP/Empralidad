@@ -5,15 +5,13 @@ var scrollToTopButton = document.getElementById('scrollToTopButton');
 window.onscroll = function(){
   if(window.scrollY === 0){
     navbarBg.classList.remove('navbar-scroll');
-  } else {
-    navbarBg.classList.add('navbar-scroll');
-  }
-  if(window.scrollY === 0){
     scrollToTopButton.classList.remove('img-btn-fixed-show');
   } else {
+    navbarBg.classList.add('navbar-scroll');
     scrollToTopButton.classList.add('img-btn-fixed-show');
   }
 }
+window.scrollTo(0, 0);
 
 // Scroll up animation
 scrollToTopButton.onclick = function() {
