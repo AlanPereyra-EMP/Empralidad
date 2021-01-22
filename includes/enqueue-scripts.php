@@ -2,7 +2,6 @@
 // Include template CSS
 function emp_styles(){
   wp_enqueue_style ('emp_styles', get_template_directory_uri() . '/style.css');
-  wp_enqueue_style ('emp_plugin-support', get_template_directory_uri() . '/includes/css/plugins-support.css');
   wp_enqueue_style ('font_awesome', get_template_directory_uri() . '/includes/fonts/fa/css/all.min.css');
 }
 add_action('wp_enqueue_scripts', 'emp_styles');
