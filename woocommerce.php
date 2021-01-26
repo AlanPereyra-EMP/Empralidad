@@ -43,10 +43,10 @@
   li.product.type-product {
     height: 300px;
   }
-  .product img.faded {
+  .product img {
     border-radius: 0!important;
   }
-  img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.faded.lazyloaded {
+  img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
     position: absolute;
     top: 0%;
     height: auto!important;
@@ -57,7 +57,7 @@
     left: 50%!important;
     transform: translate(-50%, 0)!important;
   }
-  h2.woocommerce-loop-product__title.faded {
+  h2.woocommerce-loop-product__title {
     position: absolute;
     background: #ffffff;
     padding-bottom: 62px!important;
