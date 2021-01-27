@@ -190,6 +190,23 @@ li.menu-item{
 a.dropdown-toggle {
   pointer-events: none;
 }
+.dropdown:hover > .dropdown-menu{
+	color: #888;
+	font-weight: bold;
+	height: auto;
+	position: absolute;
+	text-decoration: none;
+	visibility: visible;
+	width: 100%;
+}
+.dropdown:hover > .dropdown-menu.depth_0 li a{
+	border: none;
+  color: #888!important;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
 ul .dropdown-menu.depth_0 {
 	display: block;
 	height: 0;
