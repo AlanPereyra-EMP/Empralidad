@@ -1,9 +1,5 @@
 //  dropdown toggle
 var element = document.getElementsByClassName('dropdown');
-// console.log(element[1]);
-// forEach((item, i) => {
-//
-// });
 
 Array.prototype.forEach.call(element, function(target, index, array){
   var dropShow = false;
