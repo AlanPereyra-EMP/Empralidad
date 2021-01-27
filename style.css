@@ -187,6 +187,9 @@ li.menu-item{
 	background-size: 55px!important;
 	padding-top: 69px;
 }
+a.dropdown-toggle {
+  pointer-events: none;
+}
 ul .dropdown-menu.depth_0 {
 	display: block;
 	height: 0;

@@ -1,3 +1,26 @@
+//  dropdown toggle
+var element = document.getElementsByClassName('dropdown');
+// console.log(element[1]);
+// forEach((item, i) => {
+//
+// });
+
+Array.prototype.forEach.call(element, function(target, index, array){
+  var dropShow = false;
+  console.log(target);
+  target.addEventListener('click', function(e){
+    if(!dropShow){
+      var dropdownToggle = e.target.children;
+      dropdownToggle[1].classList.add('show');
+      dropShow = true;
+    }else{
+      var dropdownToggle = e.target.children;
+      dropdownToggle[1].classList.remove('show');
+      dropShow = false;
+    }
+  });
+});
+
 // Scroll button show
 var navbarBg = document.getElementById('navbar-background');
 var scrollToTopButton = document.getElementById('scrollToTopButton');
