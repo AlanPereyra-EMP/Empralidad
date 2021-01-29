@@ -35,7 +35,7 @@ if(!shortcode_exists('emp_carousel')) {
       $emp_description = ${'values'.$i}[1];
       $emp_link = ${'values'.$i}[2];
 
-      $emp_list_li .= '<li class="product-category product" style="width:'.$atributes['w'].'%!important">
+      $emp_list_li .= '<li class="product-category product" style="width:'.$atributes['w'].'%!important;height:100%;">
                         <a href="'.$emp_link.'">
                           <img src="'.$emp_img.'" width="600" height="600" sizes="(max-width: 600px) 100vw, 600px"/>
                         </a>
