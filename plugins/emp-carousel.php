@@ -13,42 +13,41 @@ if(!shortcode_exists('emp_carousel')) {
 
   	// Values to array ( ";" define end of array element)
 		if($atributes['values']!='default'){
-		    $values = $atts['values'];
-		    $values = explode(';', $values);
+		    $emp_values = $atts['values'];
+		    $emp_values = explode(';', $emp_values);
 		}else{
-			$values = array();
-      $img_default = get_template_directory_uri() . '/screenshot.jpg';
+			$emp_values = array();
+      $emp_img_default = get_template_directory_uri() . '/screenshot.jpg';
       for($i = 0; $i < 3; $i++){
-  			$values[] .= $img_default.'|Description|#';
+  			$emp_values[] .= $emp_img_default.'|Description|#';
       }
 		}
 
-    $imgs = count($values);
-    $width = $atributes['w'];
+    $emp_imgs = count($emp_values);
 
-		for ($i = 0; $i < $imgs; $i++){
+		for ($i = 0; $i < $emp_imgs; $i++){
 
 			// Convert to array values ("|" define end of array element)
-			${'values'.$i} = $values[$i];
+			${'values'.$i} = $emp_values[$i];
 			${'values'.$i} = explode('|', ${'values'.$i});
 
-      $img = ${'values'.$i}[0];
-      $description = ${'values'.$i}[1];
-      $link = ${'values'.$i}[2];
+      $emp_img = ${'values'.$i}[0];
+      $emp_description = ${'values'.$i}[1];
+      $emp_link = ${'values'.$i}[2];
 
-      $list_li .= '<li class="product-category product first" style="width:'.$width.'%!important";>
-                    <a href="'.$link.'">
-                      <img src="'.$img.'" width="600" height="600" sizes="(max-width: 600px) 100vw, 600px"
-                    </a>
-                    <h2 class="woocommerce-loop-category__title">'.
-                      $description.
-                    '</h2>
-                  </li>';
+      $emp_list_li .= '<li class="product-category product" style="width:'.$atributes['w'].'%!important">
+                        <a href="'.$emp_link.'">
+                          <img src="'.$emp_img.'" width="600" height="600"/>
+                        </a>
+                        <h2 class="woocommerce-loop-category__title">'.
+                          $emp_description.
+                        '</h2>
+                      </li>';
 	  }
 
-    return '<div class="woocommerce columns-4">
-              <ul class="products columns-4">'.
-                $list_li.
+    return '<div class="woocommerce">
+              <ul class="products">'.
+                $emp_list_li.
               '</ul>
             </div>';
   }
