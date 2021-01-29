@@ -37,7 +37,7 @@ if(!shortcode_exists('emp_carousel')) {
 
       $emp_list_li .= '<li class="product-category product" style="width:'.$atributes['w'].'%!important">
                         <a href="'.$emp_link.'">
-                          <img src="'.$emp_img.'" width="600" height="600"/>
+                          <img src="'.$emp_img.'" width="600" height="600" sizes="(max-width: 600px) 100vw, 600px"/>
                         </a>
                         <h2 class="woocommerce-loop-category__title">'.
                           $emp_description.
@@ -47,7 +47,7 @@ if(!shortcode_exists('emp_carousel')) {
 
     return '<div class="woocommerce">
               <ul class="products">'.
-                $emp_list_li.
+              $emp_list_li.
               '</ul>
             </div>';
   }
