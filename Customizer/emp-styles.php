@@ -97,9 +97,6 @@ body{
 .btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
   border: 1px <?php echo get_theme_mod('emp_components_head_title_color'); ?> solid;
 }
-.tutor-single-lesson-wrap{
-  border-top: 60px solid <?php echo get_theme_mod('emp_background_primary'); ?> !important;
-}
 <?php if(get_theme_mod('emp_components_content_radius')){ ?>
   article, .woocommerce ul.products li.product a img,
   a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
