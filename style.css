@@ -299,6 +299,9 @@ ul.mobile-menu-items {
 		height: 100vh;
 		width: auto;
 	}
+	.emp-background-image{
+		background-size: 100vh;
+	}
 }
 @media(max-aspect-ratio: 1/1){
 	.emp-video-background{
