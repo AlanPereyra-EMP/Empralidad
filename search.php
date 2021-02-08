@@ -6,7 +6,7 @@
   <?php if ( ! have_posts() ) {?>
     <div class="col-11 col-md-8 mx-auto py-10 px-5 color-personalized border-30px">
       <?php get_search_form(); ?><br>
-      <h2 class="text-center">Pero no se encontro dentro de esta web</h2>
+      <h2 class="text-center text-homepage-container">Pero no se encontro dentro de esta web</h2>
     </div>
   <?php } else { ?>
     <div class="mb-5 mx-3">
