@@ -15,8 +15,9 @@
   opacity: <?php echo get_theme_mod('emp_components_head_filter'); ?>;
 }
 .emp-background-image{
-  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_components_head_image')); ?>) center;
-  height: 100vh
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_components_head_image')); ?>)no-repeat 50% 50%;
+  height: 100vh;
+  background-size: 100%;
 }
 .content-background, ::-webkit-scrollbar-track, li.product.type-product{
   background-color: <?php echo get_theme_mod('emp_components_content_background');?>;
