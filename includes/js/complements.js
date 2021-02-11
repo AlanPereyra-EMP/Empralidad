@@ -2,21 +2,23 @@
 var navbarBg = document.getElementById('navbar-background');
 var scrollToTopButton = document.getElementById('scrollToTopButton');
 
-window.onscroll = function(){
-  if(window.scrollY === 0){
-    navbarBg.classList.remove('navbar-scroll');
-    scrollToTopButton.classList.remove('img-btn-fixed-show');
-  } else {
-    navbarBg.classList.add('navbar-scroll');
-    scrollToTopButton.classList.add('img-btn-fixed-show');
+if(scrollToTopButton){
+  window.onscroll = function(){
+    if(window.scrollY === 0){
+      navbarBg.classList.remove('navbar-scroll');
+      scrollToTopButton.classList.remove('img-btn-fixed-show');
+    } else {
+      navbarBg.classList.add('navbar-scroll');
+      scrollToTopButton.classList.add('img-btn-fixed-show');
+    }
   }
-}
-window.scrollTo(0, 0);
-
-// Scroll up animation
-scrollToTopButton.onclick = function() {
   window.scrollTo(0, 0);
-};
+
+  // Scroll up animation
+  scrollToTopButton.onclick = function() {
+    window.scrollTo(0, 0);
+  };
+}
 
 
 // Navigation buttons
