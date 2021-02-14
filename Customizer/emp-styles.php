@@ -195,16 +195,6 @@ a.button.product_type_simple{
   }
 <?php } ?>
 /* woocommerce */
-@media(min-width:992px){
-  .woocommerce ul.products li.product{
-    width: <?php echo get_theme_mod('emp_woocommerce_featured_size'); ?>%!important;
-  }
-}
-@media(min-width:576px){
-  .support-woo-shortcode .woocommerce ul.products li.product{
-    width: <?php echo get_theme_mod('emp_woocommerce_category_size'); ?>%!important;
-  }
-}
 #woo_featured_products .woocommerce ul::-webkit-scrollbar, .support-woo-shortcode .woocommerce ul::-webkit-scrollbar{
   background-color: <?php echo get_theme_mod('emp_components_content_color'); ?>22;
 }
