@@ -80,6 +80,13 @@
           <span class="fa-text">Whatsapp</span>
         </a>
       <?php } ?>
+      <!-- Chat-EMP -->
+      <?php $link_chat_emp = get_theme_mod('emp_components_nav_chat_emp');
+      if ($link_chat_emp){ ?>
+        <a href="<?php echo get_theme_mod('emp_components_nav_chat_emp'); ?>" class="fas fa-comment-dots mx-auto">
+          <span class="fa-text">Chat-EMP</span>
+        </a>
+      <?php } ?>
       <!-- Search Form -->
       <?php $search_link = get_theme_mod('emp_components_nav_search');
       if ($search_link){ ?>

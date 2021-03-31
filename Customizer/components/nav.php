@@ -98,7 +98,19 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'section'=> 'emp_section_components_nav',
   'settings'=> 'emp_components_nav_wsp_numb',
   'description'	  => __( 'Sin espacios ni simbolos (+)', 'empralidad' )
+)));
+// Chat-EMP
+$wp_customize->add_setting('emp_components_nav_chat_emp', array(
+  'default' => '',
+  'trasnport' => 'refresh',
+  'sanitize_callback' => 'sanitize_encoded'
+));
 
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_nav_chat_emp_control', array(
+  'label'=> __('Chat-EMP', 'empralidad'),
+  'section'=> 'emp_section_components_nav',
+  'settings'=> 'emp_components_nav_chat_emp',
+  'description'	  => __( 'URL de página Chat-EMP', 'empralidad' )
 )));
 // User area
 $wp_customize->add_setting('emp_components_nav_user', array(
