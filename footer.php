@@ -40,8 +40,12 @@
     </footer>
     <!-- Button permanent desktop -->
     <div class="show-btn-fixed">
-      <?php  $perma_button = get_theme_mod('emp_components_nav_wsp'); ?>
-      <?php if ($perma_button) { ?>
+      <?php
+      $perma_button = get_theme_mod('emp_components_nav_wsp');
+      $link_chat_emp = get_theme_mod('emp_components_nav_chat_emp');
+      if(true){ ?>
+        <div class="img-fixed show-desktop"><a href="<?php echo get_theme_mod('emp_components_nav_chat_emp'); ?>" class="fas fa-comment-dots"></a></div>
+      <?php }else if($perma_button){ ?>
       	<div class="img-fixed show-desktop"><a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20desde:*<?php echo str_replace(' ', '%20', wp_get_document_title() );?>*%20%20%20%20<?php echo get_permalink(); ?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="emp-whatsapp"></a></div>
       <?php } ?>
     	<div class="img-fixed" id="scrollToTopButton"><i class="fas fa-arrow-up img-btn-fixed <?php if ($perma_button) { ?> show-mobile <?php } ?>"></i></div>
@@ -81,10 +85,10 @@
         </a>
       <?php } ?>
       <!-- Chat-EMP -->
-      <?php $link_chat_emp = get_theme_mod('emp_components_nav_chat_emp');
+      <?php
       if ($link_chat_emp){ ?>
         <a href="<?php echo get_theme_mod('emp_components_nav_chat_emp'); ?>" class="fas fa-comment-dots mx-auto">
-          <span class="fa-text">Chat-EMP</span>
+          <span class="fa-text">Chat</span>
         </a>
       <?php } ?>
       <!-- Search Form -->
