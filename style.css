@@ -521,9 +521,10 @@ a.fa-whatsapp-size{
 	color: #ffffff!important;
 	font-size: 18px!important;
 }
-.buttons-mobile a.fa, .buttons-mobile a.fab{
+.buttons-mobile a.fa, .buttons-mobile a.fab, .buttons-mobile a.fas{
 	padding: 0;
-	font-size: 19px
+	font-size: 19px;
+	width: 65px;
 }
 #btn-search-desktop div{
 	height: 59px;
