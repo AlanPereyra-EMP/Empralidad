@@ -209,7 +209,9 @@ a.button.product_type_simple{
     font-size: 25px;
   }
 <?php } ?>
-.support-woo-shortcode .woocommerce ul.products li.product{
-  width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
+@media (min-width: 991px){
+  .support-woo-shortcode .woocommerce ul.products li.product{
+    width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
+  }
 }
 </style>
