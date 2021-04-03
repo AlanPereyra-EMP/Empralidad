@@ -104,6 +104,9 @@ nav.navbar{
 		max-height: 60px;
 		overflow: hidden;
 	}
+	#navbarContentMenuDiv{
+		display: flex;
+	}
 }
 #btn-menu-nav{
 	cursor: pointer;
@@ -153,9 +156,6 @@ nav.navbar.navbar-scroll a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-whi
 		height: 0;
 		visibility: hidden;
 	}
-}
-#navbarContentMenuDiv{
-	display: flex;
 }
 @media(max-height:726px){
 	.mobile-menu-items{
