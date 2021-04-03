@@ -1,24 +1,19 @@
 # Empralidad - Theme
 Empralidad-Theme es un tema Enfocado a smartphones, flat design con carga progresiva y diferida para mejorar el tiempo de renderizado. Cuenta con soporte para PWA una tecnología para hacer que la web funciones como una aplicación nativa de android.
 
-
-
-
 ## Soporte
 Este tema cuenta con soporte e integración con:
 - WhatsApp
 - Contact form 7
 - WooCommerce
-- Tutor-EMP
+- Chat-EMP (WebApp de mensajeria)
+- Tutor-EMP (WepApp de cursos)
 - Facebook pixel
 - Google analytics
 - Instagram
 - Youtube
 - Facebook
 - Twitter
-
-
-
 
 ## Personalizar
 1. Ir a Apariencia/Personalizar.
@@ -34,9 +29,6 @@ Sirve para agregar contenido a la homepage, como texto, imágenes o sortcodes. T
 Sirve para insertar tanto el pixel de Facebook como el código de seguimiento de Google analytics.
 ### WooCommerce
 Dentro del apartado de Woocommerce este plugin añade ciertas funcionalidades como agregar productos destacados a la home, todas las categorías o introducir avisos en los productos, ademas de habilitar un botón para que los compradores se comuniquen con los vendedores por WhatsApp.
-
-
-
 
 ## Contratar soporte
 Para contratar soporte contacta a https://empralidad.com.ar/contacto
