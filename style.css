@@ -149,13 +149,13 @@ nav.navbar.navbar-scroll a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-whi
 		height: 0;
 		visibility: hidden;
 	}
+	#navbarContentMenuDiv ul.navbar-nav{
+		max-height: 60px;
+		overflow: hidden;
+	}
 }
 #navbarContentMenuDiv{
 	display: flex;
-}
-#navbarContentMenuDiv ul.navbar-nav{
-	max-height: 60px;
-	overflow: hidden;
 }
 @media(max-height:726px){
 	.mobile-menu-items{
