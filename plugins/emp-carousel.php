@@ -7,7 +7,7 @@ if(!shortcode_exists('emp_carousel')) {
 
   	// atts
   	$atributes = shortcode_atts( array(
-      'w' => '31.6',
+      'w' => '31',
       'values' => 'default'
     ), $atts );
 
