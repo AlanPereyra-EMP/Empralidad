@@ -802,6 +802,9 @@ label.screen-reader-text{
 .mw-50{
 	max-width: 50%!important;
 }
+.mw-70{
+	max-width: 70%!important;
+}
 .mw-600-px{
 	max-width: 600px;
 }
