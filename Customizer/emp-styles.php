@@ -99,6 +99,9 @@ body{
   border: 1px <?php echo get_theme_mod('emp_components_head_title_color'); ?> solid;
 }
 <?php if(get_theme_mod('emp_components_content_radius')){ ?>
+  .woocommerce span.onsale{
+    border-radius:0 50%
+  }
   article, .woocommerce ul.products li.product a img,
   a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
   article img, section img,a.button.product_type_simple, a.checkout-button.button.alt.wc-forward,
