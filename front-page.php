@@ -78,7 +78,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
       <!-- Woocommerce categories -->
       <?php if ($emp_home_categories){?>
         <div class="py-3 mx-auto my-auto" >
-          <div class="mw-100 support-woo-shortcode p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;"y>
+          <div class="mw-100 support-woo-shortcode mw-1200px p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;"y>
             <?php echo do_shortcode('[product_categories number="0" parent="0"]'); ?>
           </div>
         </div>
@@ -86,7 +86,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
       <!-- Text 1 -->
       <?php if ($emp_home_show_1){?>
         <div class="py-3 mx-auto my-auto" >
-          <div class="mw-100 support-woo-shortcode p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;">
+          <div class="mw-100 support-woo-shortcode mw-1200px p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;">
             <?php echo do_shortcode(get_theme_mod('emp_homepage_text1')); ?>
           </div>
           <?php $header_btn = get_theme_mod('emp_homepage_btn1');
@@ -102,7 +102,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
       <!-- Text 2 -->
       <?php if ($emp_home_show_2){?>
         <div class="py-3  mx-auto my-auto">
-          <div class="p-2 mw-100 overflow-auto p-personalized-2 text-<?php echo get_theme_mod('emp_homepage_text_aling2'); ?> " >
+          <div class="p-2 mw-100 overflow-auto mw-1200px p-personalized-2 text-<?php echo get_theme_mod('emp_homepage_text_aling2'); ?> " >
             <h2 class="text-center h1">
               <span class=""><?php echo get_theme_mod('emp_homepage_title2') ?></span>
             </h2>
@@ -121,7 +121,7 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
       <!-- Text 3 -->
       <?php if ($emp_home_show_3){ ?>
         <div class="py-3 mx-auto my-auto" >
-          <div class="p-2 mw-100 overflow-auto p-personalized-3 text-<?php echo get_theme_mod('emp_homepage_text_aling3'); ?> ">
+          <div class="p-2 mw-100 overflow-auto mw-1200px p-personalized-3 text-<?php echo get_theme_mod('emp_homepage_text_aling3'); ?> ">
             <h2 class="text-center h1" >
               <span class=""><?php echo get_theme_mod('emp_homepage_title3'); ?></span>
             </h2>

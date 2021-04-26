@@ -100,7 +100,7 @@ body{
 }
 <?php if(get_theme_mod('emp_components_content_radius')){ ?>
   .woocommerce span.onsale{
-    border-radius:0 50%
+    border-radius:0 50%!important;
   }
   article, .woocommerce ul.products li.product a img,
   a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
