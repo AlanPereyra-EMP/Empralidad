@@ -295,8 +295,12 @@ ul.mobile-menu-items {
 .emp-video-background{
 	filter: blur(5px);
 }
+#emp-background-image{
+	height: 100vh;
+  background-size: 100%;
+}
 @media(max-width:991px){
-	.emp-background-image{
+	#emp-background-image{
 		background-size: 100vh!important;
 	}
 }

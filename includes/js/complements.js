@@ -148,10 +148,12 @@ var item = [];
 item[1] = document.getElementById('carousel-item-1');
 item[2] = document.getElementById('carousel-item-2');
 item[3] = document.getElementById('carousel-item-3');
+bodyBG = document.getElementById('emp-background-image');
 var itemNumber = 1;
 
 function carouselItemNext() {
   item[itemNumber].classList.remove('active');
+  bodyBG.classList.remove('emp-background-image'+itemNumber);
   if(itemNumber < 3){
     itemNumber++;
   } else{
@@ -164,10 +166,12 @@ function carouselItemNext() {
       itemNumber = 1;
     }
   }
+  bodyBG.classList.add('emp-background-image'+itemNumber);
   item[itemNumber].classList.add('active');
 }
 function carouselItemPrev() {
   item[itemNumber].classList.remove('active');
+  bodyBG.classList.remove('emp-background-image'+itemNumber);
   if(itemNumber > 1){
     itemNumber--;
   } else{
@@ -181,4 +185,5 @@ function carouselItemPrev() {
     }
   }
   item[itemNumber].classList.add('active');
+  bodyBG.classList.add('emp-background-image'+itemNumber);
 }

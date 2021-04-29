@@ -14,10 +14,14 @@
 .emp-background-media-filter{
   opacity: <?php echo get_theme_mod('emp_components_head_filter'); ?>;
 }
-.emp-background-image{
-  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_components_head_image')); ?>)no-repeat 50% 50%;
-  height: 100vh;
-  background-size: 100%;
+.emp-background-image1{
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_head_image1')); ?>)no-repeat 50% 50%;
+}
+.emp-background-image2{
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_head_image2')); ?>)no-repeat 50% 50%;
+}
+.emp-background-image3{
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_head_image3')); ?>)no-repeat 50% 50%;
 }
 .content-background, ::-webkit-scrollbar-track, li.product.type-product{
   background-color: <?php echo get_theme_mod('emp_components_content_background');?>;

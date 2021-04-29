@@ -52,19 +52,6 @@ $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_co
   'settings'   => 'emp_components_head_video',
   'description'=> __( 'Seleciona un video de fondo (adaptativo)', 'empralidad' )
 )));
-// Image background
-$wp_customize->add_setting('emp_components_head_image', array(
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string',
-
-));
-$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_components_head_image_control', array(
-  'mime_type'  => 'image',
-  'label'      => __('Imagen de fondo', 'empralidad'),
-  'section'    => 'emp_section_components_head',
-  'settings'   => 'emp_components_head_image',
-  'description'=> __( 'Seleciona una imagen de fondo (png)', 'empralidad' )
-)));
 // Background color
 $wp_customize->add_setting('emp_components_head_title_background', array(
   'default' => '#005777',

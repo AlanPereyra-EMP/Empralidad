@@ -11,6 +11,18 @@ $wp_customize->add_section('emp_section_head_text', array(
   'panel'      => 'emp_panel_sliders',
   'description'=> __('Este slider siempre está activo y contiene el titulo principal', 'empralidad')
 ));
+// Image background 1
+$wp_customize->add_setting('emp_head_image1', array(
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_head_image_control1', array(
+  'mime_type'  => 'image',
+  'label'      => __('Imagen de fondo', 'empralidad'),
+  'section'    => 'emp_section_head_text',
+  'settings'   => 'emp_head_image1',
+  'description'=> __( 'Seleciona una imagen de fondo (vertical)', 'empralidad' )
+)));
 // Textarea 1
 $wp_customize->add_setting('emp_head_textarea', array(
   'default'           => '',
@@ -80,6 +92,18 @@ $wp_customize->add_section('emp_section_head_text2', array(
   'priority' => 2,
   'panel'    => 'emp_panel_sliders'
 ));
+// Image background 2
+$wp_customize->add_setting('emp_head_image2', array(
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_head_image_control2', array(
+  'mime_type'  => 'image',
+  'label'      => __('Imagen de fondo', 'empralidad'),
+  'section'    => 'emp_section_head_text2',
+  'settings'   => 'emp_head_image2',
+  'description'=> __( 'Seleciona una imagen de fondo (vertical)', 'empralidad' )
+)));
 // Title 2
 $wp_customize->add_setting('emp_head_text2', array(
   'default'           => '',
@@ -162,6 +186,18 @@ $wp_customize->add_section('emp_section_head_text3', array(
   'priority' => 3,
   'panel'    => 'emp_panel_sliders'
 ));
+// Image background 3
+$wp_customize->add_setting('emp_head_image3', array(
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_head_image_control3', array(
+  'mime_type'  => 'image',
+  'label'      => __('Imagen de fondo', 'empralidad'),
+  'section'    => 'emp_section_head_text3',
+  'settings'   => 'emp_head_image3',
+  'description'=> __( 'Seleciona una imagen de fondo (vertical)', 'empralidad' )
+)));
 // Title 3
   $wp_customize->add_setting('emp_head_text3', array(
   'default'           => '',
