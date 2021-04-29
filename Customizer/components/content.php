@@ -49,7 +49,8 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_t
     'indie flower' => __( 'Indie Flower', 'empralidad' ),
     'roboto' 			 => __('Roboto', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
-    'nunito'			 => __('Nunito', 'empralidad')
+    'nunito'			 => __('Nunito', 'empralidad'),
+    'bad script'	 => __('Bad Script', 'empralidad')
   )
 )));
 // color

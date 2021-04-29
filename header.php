@@ -17,6 +17,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap">
     <?php } else if(get_theme_mod('emp_components_content_tipography') == 'nunito'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'bad script'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap">
     <?php } ?>
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
