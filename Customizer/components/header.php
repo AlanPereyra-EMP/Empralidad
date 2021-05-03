@@ -22,6 +22,27 @@ $wp_customize->add_control('emp_components_head_title_size_control', array(
     'step'     => 1,
   )
 ));
+$wp_customize->add_setting('emp_components_head_title_tipography', array(
+  'default'           => 'serif',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_head_tipography_control1', array(
+  'label'          => __( 'Tipografía', 'empralidad' ),
+  'section'        => 'emp_section_components_head',
+  'settings'       => 'emp_components_head_title_tipography',
+  'type'           => 'radio',
+  'choices'        => array(
+    'serif'  			 => __( 'Serif', 'empralidad' ),
+    'sans-serif'   => __( 'Sans-serif', 'empralidad' ),
+    'varela round' => __( 'Varela Round', 'empralidad' ),
+    'indie flower' => __( 'Indie Flower', 'empralidad' ),
+    'roboto' 			 => __('Roboto', 'empralidad'),
+    'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
+    'nunito'			 => __('Nunito', 'empralidad'),
+    'bad script'	 => __('Bad Script', 'empralidad')
+  )
+)));
 // filter-brightness
 $wp_customize->add_setting('emp_components_head_filter', array(
   'default'           => '1',

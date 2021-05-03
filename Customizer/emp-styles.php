@@ -78,8 +78,15 @@ body{
   }
 }
 .text-mobile {
-    word-wrap: break-word;
+  word-wrap: break-word;
+  font-family: '<?php echo get_theme_mod('emp_components_head_title_tipography'); ?>', 'sans-serif';
 }
+<?php
+if(get_theme_mod('emp_components_head_title_tipography') == 'bad script'){ ?>
+  .text-mobile{
+    line-height: 1.8;
+  }
+<?php } ?>
 
 /* Special items */
 .dashboard-section-overview .copy-to-clipboard-trigger, .checkout-button, #place_order, th {

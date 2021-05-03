@@ -1,11 +1,14 @@
 <?php get_header(); ?>
 <?php
 $emp_carousel_slide1 = get_theme_mod('emp_head_slide1');
-$emp_title_show_2 = get_theme_mod('emp_head_show2');
-$emp_title_show_3 = get_theme_mod('emp_head_show3');
-$emp_button_show1 = get_theme_mod('emp_head_button_show1');
-$emp_button_show2 = get_theme_mod('emp_head_button_show2');
-$emp_button_show3 = get_theme_mod('emp_head_button_show3');
+$emp_title_show = get_theme_mod('emp_front_title_show');
+$emp_title_show_2 = get_theme_mod('emp_front_title_show2');
+$emp_title_show_3 = get_theme_mod('emp_front_title_show3');
+$emp_button_show1 = get_theme_mod('emp_front_button_show1');
+$emp_button_show2 = get_theme_mod('emp_front_button_show2');
+$emp_button_show3 = get_theme_mod('emp_front_button_show3');
+
+if($emp_title_show){
 ?>
 <header id="main-head">
   <div class="text-img-home container-fluid my-auto">
@@ -20,21 +23,21 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
           }
           ?>
         </h1>
-        <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea'); ?></p>
+        <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea'); ?></p>
         <?php if($emp_button_show1){ ?>
-          <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_btn1') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
-            <?php echo get_theme_mod('emp_head_btn1'); ?>
+          <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn1') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
+            <?php echo get_theme_mod('emp_front_btn1'); ?>
           </button>
         <?php } ?>
       </div>
 
       <?php if($emp_title_show_2){ ?>
         <div id="carousel-item-2" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
-          <h2 class="text-mobile empFadeIn"><?php echo get_theme_mod('emp_head_text2'); ?></h2>
-          <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea2'); ?></p>
+          <h2 class="text-mobile empFadeIn"><?php echo get_theme_mod('emp_front_text2'); ?></h2>
+          <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea2'); ?></p>
           <?php if($emp_button_show2){ ?>
-            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_btn2') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
-              <?php echo get_theme_mod('emp_head_btn2'); ?>
+            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn2') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
+              <?php echo get_theme_mod('emp_front_btn2'); ?>
             </button>
           <?php } ?>
         </div>
@@ -42,11 +45,11 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
 
       <?php if($emp_title_show_3){ ?>
         <div id="carousel-item-3" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
-          <h2 class=" text-mobile empFadeIn"><?php echo get_theme_mod('emp_head_text3'); ?></h2>
-          <p class="mx-auto"><?php echo get_theme_mod('emp_head_textarea3'); ?></p>
+          <h2 class=" text-mobile empFadeIn"><?php echo get_theme_mod('emp_front_text3'); ?></h2>
+          <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea3'); ?></p>
           <?php if($emp_button_show1){ ?>
-            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_head_link_btn3') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
-              <?php echo get_theme_mod('emp_head_button3'); ?>
+            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn3') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
+              <?php echo get_theme_mod('emp_front_button3'); ?>
             </button>
           <?php } ?>
         </div>
@@ -67,6 +70,14 @@ $emp_button_show3 = get_theme_mod('emp_head_button_show3');
   <?php } ?>
   </div>
 </header>
+<?php } ?>
+<div id="emp-sliders">
+  <ul>
+    <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" alt=""> </li>
+    <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" alt=""> </li>
+    <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" alt=""> </li>
+</ul>
+</div>
 <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
 <div class="row mw-100 mx-auto">
   <?php $emp_home_categories = get_theme_mod('emp_woocommerce_categories_show'); ?>
