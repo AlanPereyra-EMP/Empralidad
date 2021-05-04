@@ -6,7 +6,7 @@ $wp_customize->add_panel( 'emp_panel_titles', array(
 ));
 // Active title
 $wp_customize->add_section('emp_section_front_title', array(
-  'title'      => __('Título activo', 'empralidad'),
+  'title'      => __('Título principal', 'empralidad'),
   'priority'   => 1,
   'panel'      => 'emp_panel_titles',
   'description'=> __('Este título contiene el titulo principal de la web o el de la página estática', 'empralidad')

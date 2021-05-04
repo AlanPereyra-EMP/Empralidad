@@ -1,5 +1,19 @@
 <?php get_header(); ?>
-<?php
+<?php }
+$emp_slider1 = get_theme_mod('emp_slider_image1');
+$emp_slider2 = get_theme_mod('emp_slider_image2');
+$emp_slider3 = get_theme_mod('emp_slider_image3');
+
+if($emp_slider1||$emp_slider2||$emp_slider3){?>
+  <div id="emp-sliders">
+    <ul>
+      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" alt=""> </li>
+      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" alt=""> </li>
+      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" alt=""> </li>
+    </ul>
+  </div>
+<?php }
+
 $emp_carousel_slide1 = get_theme_mod('emp_head_slide1');
 $emp_title_show = get_theme_mod('emp_front_title_show');
 $emp_title_show_2 = get_theme_mod('emp_front_title_show2');
@@ -7,7 +21,6 @@ $emp_title_show_3 = get_theme_mod('emp_front_title_show3');
 $emp_button_show1 = get_theme_mod('emp_front_button_show1');
 $emp_button_show2 = get_theme_mod('emp_front_button_show2');
 $emp_button_show3 = get_theme_mod('emp_front_button_show3');
-
 if($emp_title_show){
 ?>
 <header id="main-head">
@@ -70,19 +83,6 @@ if($emp_title_show){
   <?php } ?>
   </div>
 </header>
-<?php }
-$emp_slider1 = get_theme_mod('emp_slider_image1');
-$emp_slider2 = get_theme_mod('emp_slider_image2');
-$emp_slider3 = get_theme_mod('emp_slider_image3');
-if($emp_slider1||$emp_slider2||$emp_slider3){?>
-  <div id="emp-sliders">
-    <ul>
-      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" alt=""> </li>
-      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" alt=""> </li>
-      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" alt=""> </li>
-  </ul>
-  </div>
-<?php } ?>
 <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
 <div class="row mw-100 mx-auto">
   <?php $emp_home_categories = get_theme_mod('emp_woocommerce_categories_show'); ?>
