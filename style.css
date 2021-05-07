@@ -327,6 +327,7 @@ ul.mobile-menu-items {
 #emp-sliders{
 	margin: auto;
 	max-width: 1920px;
+	max-height: 822px;
 }
 #emp-sliders ul{
 	display: flex;
