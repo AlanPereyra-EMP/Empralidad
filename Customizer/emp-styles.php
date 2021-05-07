@@ -36,7 +36,7 @@ footer{
   background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 }
 .product-category.product h2{
-  background-color: <?php echo get_theme_mod('emp_components_nav_background'); ?>99!important
+  background-color: <?php echo get_theme_mod('emp_components_nav_background'); ?>ee!important
 }
 
 /* Tipography */
