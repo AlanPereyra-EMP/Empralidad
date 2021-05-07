@@ -35,6 +35,9 @@ footer{
 .the_post_thumbnail{
   background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
 }
+.product-category.product h2{
+  background-color: <?php echo get_theme_mod('emp_components_nav_background'); ?>99!important
+}
 
 /* Tipography */
 .color-personalized, h1.text-mobile,.color-personalized .fa , .color-personalized .fab,
@@ -45,7 +48,7 @@ footer{
   color: <?php echo get_theme_mod('emp_components_content_color'); ?>;
 }
 .menu-item a, .fa-text, .mini_cart_item a, .mini_cart_item span, .woocommerce-mini-cart__total, .woocommerce-mini-cart__total strong,
-#searchform-woocommerce{
+#searchform-woocommerce, .product-category.product h2{
   color: <?php echo get_theme_mod('emp_components_nav_color'); ?>;
 }
 .fa, .fab, .icon-color{
@@ -84,7 +87,7 @@ body{
 <?php
 if(get_theme_mod('emp_components_head_title_tipography') == 'bad script'){ ?>
   .text-mobile{
-    line-height: 1.8;
+    line-height: 1.3;
   }
 <?php } ?>
 

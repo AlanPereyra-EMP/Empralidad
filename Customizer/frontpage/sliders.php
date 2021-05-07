@@ -27,7 +27,7 @@ $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_sl
   'label'      => __('Slider 1', 'empralidad'),
   'section'    => 'emp_section_slider',
   'settings'   => 'emp_slider_image1',
-  'description'=> __('Seleciona una imagen horizontal (entre 4:3 y 16:9)', 'empralidad')
+  'description'=> __('Seleciona una imagen horizontal (19:9)', 'empralidad')
 )));
 // Slider 2
 $wp_customize->add_setting('emp_slider_image2', array(
@@ -39,7 +39,7 @@ $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_sl
   'label'      => __('Slider 2', 'empralidad'),
   'section'    => 'emp_section_slider',
   'settings'   => 'emp_slider_image2',
-  'description'=> __('Seleciona una imagen horizontal (entre 4:3 y 16:9)', 'empralidad')
+  'description'=> __('Seleciona una imagen horizontal (19:9)', 'empralidad')
 )));
 // Slider 3
 $wp_customize->add_setting('emp_slider_image3', array(
@@ -51,6 +51,6 @@ $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_sl
   'label'      => __('Slider 3', 'empralidad'),
   'section'    => 'emp_section_slider',
   'settings'   => 'emp_slider_image3',
-  'description'=> __('Seleciona una imagen horizontal (entre 4:3 y 16:9)', 'empralidad')
+  'description'=> __('Seleciona una imagen horizontal (19:9)', 'empralidad')
 )));
 ?>

@@ -1,4 +1,4 @@
-<section class="card p-0 to-fade to-fadein-animation border-30px bg-personalized-secondary">
+<section class="card p-0 to-fadein-animation border-30px bg-personalized-secondary">
   <div class="card-header"> <?php the_category(', '); ?> </div>
   <div class="card-block">
     <?php
