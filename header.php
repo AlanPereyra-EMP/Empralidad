@@ -8,32 +8,33 @@
     <!-- Fonts -->
     <?php
     $emp_title_font = get_theme_mod('emp_components_head_title_tipography');
+    $emp_title_text_font = get_theme_mod('emp_components_head_text_tipography');
     $emp_content_font = get_theme_mod('emp_components_content_tipography');
-    if($emp_title_font == 'varela round'||$emp_content_font == 'varela round'){ ?>
+    if($emp_title_font == 'varela round'||$emp_title_text_font == 'varela round'||$emp_content_font == 'varela round'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
     <?php }
-    if($emp_title_font == 'indie flower'||$emp_content_font == 'indie flowe'){ ?>
+    if($emp_title_font == 'indie flower'||$emp_title_text_font == 'indie flower'||$emp_content_font == 'indie flowe'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <?php }
-    if($emp_title_font == 'roboto'||$emp_content_font == 'roboto'){ ?>
+    if($emp_title_font == 'roboto'||$emp_title_text_font == 'roboto'||$emp_content_font == 'roboto'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <?php }
-    if($emp_title_font == 'Kumbh Sans'||$emp_content_font == 'Kumbh Sans'){ ?>
+    if($emp_title_font == 'Kumbh Sans'||$emp_title_text_font == 'Kumbh Sans'||$emp_content_font == 'Kumbh Sans'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap">
     <?php }
-    if($emp_title_font == 'nunito'||$emp_content_font == 'nunito'){ ?>
+    if($emp_title_font == 'nunito'||$emp_title_text_font == 'nunito'||$emp_content_font == 'nunito'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
     <?php }
-    if($emp_title_font == 'bad script'||$emp_content_font == 'bad script'){ ?>
+    if($emp_title_font == 'bad script'||$emp_title_text_font == 'bad script'||$emp_content_font == 'bad script'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap">
     <?php }
-    if($emp_title_font == 'rozha one'||$emp_content_font == 'rozha one'){ ?>
+    if($emp_title_font == 'rozha one'||$emp_title_text_font == 'rozha one'||$emp_content_font == 'rozha one'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap">
     <?php }
-    if($emp_title_font == 'the secret'||$emp_content_font == 'the secret'){ ?>
+    if($emp_title_font == 'the secret'||$emp_title_text_font == 'the secret'||$emp_content_font == 'the secret'){ ?>
       <link rel="stylesheet" href="<?php get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.ttf'?>">
     <?php }
-    if($emp_title_font == 'flanella'||$emp_content_font == 'flanella'){ ?>
+    if($emp_title_font == 'flanella'||$emp_title_text_font == 'flanella'||$emp_content_font == 'flanella'){ ?>
       <link rel="stylesheet" href="<?php get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.ttf'?>">
     <?php } ?>
     <!-- PWA -->
