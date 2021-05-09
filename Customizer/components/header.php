@@ -5,7 +5,7 @@ $wp_customize->add_section('emp_section_components_head', array(
   'panel'    => 'emp_panel_components',
   'description'=> __( 'En la cabecera se encuentra el título principal', 'empralidad' )
 ));
-// Font size
+// Title font size
 $wp_customize->add_setting('emp_components_head_title_size', array(
   'default'           => 150,
   'trasnport'         => 'refresh',
@@ -27,8 +27,8 @@ $wp_customize->add_setting('emp_components_head_title_tipography', array(
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_head_tipography_control1', array(
-  'label'          => __( 'Tipografía', 'empralidad' ),
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_head_title_tipography_control1', array(
+  'label'          => __( 'Tipografía del título', 'empralidad' ),
   'section'        => 'emp_section_components_head',
   'settings'       => 'emp_components_head_title_tipography',
   'type'           => 'radio',
@@ -40,7 +40,50 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'roboto' 			 => __('Roboto', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
-    'bad script'	 => __('Bad Script', 'empralidad')
+    'bad script'	 => __('Bad Script', 'empralidad'),
+    'rozha one'	   => __('Rozha One', 'empralidad'),
+    'the secret'	 => __('The Secret', 'empralidad'),
+    'flanella'	   => __('Flanella', 'empralidad')
+  )
+)));
+// Text font size
+$wp_customize->add_setting('emp_components_head_text_size', array(
+  'default'           => 40,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control('emp_components_head_text_size_control', array(
+  'label'      => __( 'Tamaño del texto', 'empralidad' ),
+  'section'    => 'emp_section_components_head',
+  'settings'   => 'emp_components_head_text_size',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 10,
+    'max'      => 90,
+    'step'     => 1,
+  )
+));
+$wp_customize->add_setting('emp_components_head_text_tipography', array(
+  'default'           => 'serif',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_head_text_tipography_control1', array(
+  'label'          => __( 'Tipografía del texto', 'empralidad' ),
+  'section'        => 'emp_section_components_head',
+  'settings'       => 'emp_components_head_text_tipography',
+  'type'           => 'radio',
+  'choices'        => array(
+    'serif'  			 => __( 'Serif', 'empralidad' ),
+    'sans-serif'   => __( 'Sans-serif', 'empralidad' ),
+    'varela round' => __( 'Varela Round', 'empralidad' ),
+    'indie flower' => __( 'Indie Flower', 'empralidad' ),
+    'roboto' 			 => __('Roboto', 'empralidad'),
+    'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
+    'nunito'			 => __('Nunito', 'empralidad'),
+    'bad script'	 => __('Bad Script', 'empralidad'),
+    'the secret'	 => __('The Secret', 'empralidad'),
+    'flanella'	   => __('Flanella', 'empralidad')
   )
 )));
 // filter-brightness

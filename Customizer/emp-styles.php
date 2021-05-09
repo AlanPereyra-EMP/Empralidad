@@ -15,13 +15,13 @@
   opacity: <?php echo get_theme_mod('emp_components_head_filter'); ?>;
 }
 .emp-background-image1{
-  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_head_image1')); ?>)no-repeat 50% 50%;
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_front_image1')); ?>)no-repeat 50% 50%;
 }
 .emp-background-image2{
-  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_head_image2')); ?>)no-repeat 50% 50%;
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_front_image2')); ?>)no-repeat 50% 50%;
 }
 .emp-background-image3{
-  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_head_image3')); ?>)no-repeat 50% 50%;
+  background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_front_image3')); ?>)no-repeat 50% 50%;
 }
 .content-background, ::-webkit-scrollbar-track, li.product.type-product{
   background-color: <?php echo get_theme_mod('emp_components_content_background');?>;
@@ -70,24 +70,42 @@ body, .fa-text{
 body{
   font-size: <?php echo get_theme_mod('emp_components_content_size'); ?>px;
 }
+#main-head p{
+	font-family: '<?php echo get_theme_mod('emp_components_head_text_tipography'); ?>', 'sans-serif';
+}
+.text-mobile {
+  font-size: <?php echo (get_theme_mod('emp_components_head_title_size') * 0.30); ?>px!important;
+}
+#main-head p{
+  font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.30); ?>px;
+}
 @media (min-width: 577px) {
   .text-mobile {
-    font-size: <?php echo (get_theme_mod('emp_components_head_title_size') - 80) ?>px!important;
+    font-size: <?php echo (get_theme_mod('emp_components_head_title_size') - 80); ?>px!important;
+  }
+  #main-head p{
+    font-size: <?php echo (get_theme_mod('emp_components_head_text_size') - 80); ?>px;
   }
 }
 @media (min-width: 992px) {
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size'); ?>px!important;
   }
+  #main-head p{
+    font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
+  }
 }
 .text-mobile {
   word-wrap: break-word;
   font-family: '<?php echo get_theme_mod('emp_components_head_title_tipography'); ?>', 'sans-serif';
 }
-<?php
-if(get_theme_mod('emp_components_head_title_tipography') == 'bad script'){ ?>
+<?php if(get_theme_mod('emp_components_head_title_tipography') == 'bad script'){ ?>
   .text-mobile{
     line-height: 1.3;
+  }
+<?php }elseif(get_theme_mod('emp_components_head_title_tipography') == 'the secret'){ ?>
+  .text-mobile{
+    line-height: 1.6;
   }
 <?php } ?>
 

@@ -7,22 +7,34 @@
     <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
     <!-- Fonts -->
     <?php
-    if(get_theme_mod('emp_components_content_tipography') == 'varela round'){ ?>
+    $emp_title_font = get_theme_mod('emp_components_head_title_tipography');
+    $emp_content_font = get_theme_mod('emp_components_content_tipography');
+    if($emp_title_font == 'varela round'||$emp_content_font == 'varela round'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'indie flower'){ ?>
+    <?php }
+    if($emp_title_font == 'indie flower'||$emp_content_font == 'indie flowe'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'roboto'){ ?>
+    <?php }
+    if($emp_title_font == 'roboto'||$emp_content_font == 'roboto'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'Kumbh Sans'){ ?>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'nunito'){ ?>
+    <?php }
+    if($emp_title_font == 'Kumbh Sans'||$emp_content_font == 'Kumbh Sans'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap">
+    <?php }
+    if($emp_title_font == 'nunito'||$emp_content_font == 'nunito'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'bad script'){ ?>
+    <?php }
+    if($emp_title_font == 'bad script'||$emp_content_font == 'bad script'){ ?>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'Flane'){ ?>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap">
-    <?php } else if(get_theme_mod('emp_components_content_tipography') == 'bad script'){ ?>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap">
+    <?php }
+    if($emp_title_font == 'rozha one'||$emp_content_font == 'rozha one'){ ?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap">
+    <?php }
+    if($emp_title_font == 'the secret'||$emp_content_font == 'the secret'){ ?>
+      <link rel="stylesheet" href="<?php get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.ttf'?>">
+    <?php }
+    if($emp_title_font == 'flanella'||$emp_content_font == 'flanella'){ ?>
+      <link rel="stylesheet" href="<?php get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.ttf'?>">
     <?php } ?>
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
