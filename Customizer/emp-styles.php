@@ -250,11 +250,11 @@ a.button.product_type_simple{
   }
 }
 @font-face {
-font-family: "the secret";
-url("<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.ttf';?>") format("truetype")
+  font-family: "the secret";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.woff';?>") format("woff");
 }
 @font-face {
-font-family: "flanella";
-url("<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.ttf'?>") format("truetype")
+  font-family: "flanella";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.woff'?>") format("woff");
 }
 </style>
