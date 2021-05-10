@@ -249,4 +249,12 @@ a.button.product_type_simple{
     width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
   }
 }
+@font-face {
+font-family: "the secret";
+url("<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.ttf';?>") format("truetype")
+}
+@font-face {
+font-family: "flanella";
+url("<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.ttf'?>") format("truetype")
+}
 </style>
