@@ -32,10 +32,10 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap">
     <?php }
     if($emp_title_font == 'the secret'||$emp_title_text_font == 'the secret'||$emp_content_font == 'the secret'){ ?>
-      <link rel="stylesheet" href="<?php get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.ttf'?>">
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.ttf';?>">
     <?php }
     if($emp_title_font == 'flanella'||$emp_title_text_font == 'flanella'||$emp_content_font == 'flanella'){ ?>
-      <link rel="stylesheet" href="<?php get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.ttf'?>">
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.ttf'?>">
     <?php } ?>
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
