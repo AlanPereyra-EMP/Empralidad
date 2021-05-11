@@ -184,6 +184,11 @@ a.button.product_type_simple{
   background-color: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>!important;
   color: <?php echo get_theme_mod('emp_components_content_btn_color'); ?>!important;
 }
+.btn-secondary-actived.btn-secondary{
+  color: <?php echo get_theme_mod('emp_btn_color'); ?>!important;
+  background-color: <?php echo get_theme_mod('emp_btn_bg'); ?>;
+  border: 1px solid <?php echo get_theme_mod('emp_btn_bg'); ?>;
+}
 
 /* Shadows */
 <?php if (get_theme_mod('emp_shadow') === 'true') { ?>

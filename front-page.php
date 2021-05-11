@@ -30,8 +30,11 @@ $emp_title_show = get_theme_mod('emp_front_title_show');
 $emp_title_show_2 = get_theme_mod('emp_front_title_show2');
 $emp_title_show_3 = get_theme_mod('emp_front_title_show3');
 $emp_button_show1 = get_theme_mod('emp_front_button_show1');
+$emp_button_secondary_show1 = get_theme_mod('emp_front_button_secondary_show1');
 $emp_button_show2 = get_theme_mod('emp_front_button_show2');
+$emp_button_secondary_show2 = get_theme_mod('emp_front_button_secondary_show2');
 $emp_button_show3 = get_theme_mod('emp_front_button_show3');
+$emp_button_secondary_show3 = get_theme_mod('emp_front_button_secondary_show3');
 
 if($emp_title_show){ ?>
   <header id="main-head">
@@ -49,8 +52,13 @@ if($emp_title_show){ ?>
           </h1>
           <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea'); ?></p>
           <?php if($emp_button_show1){ ?>
-            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn1') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
+            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn1') ?>';" class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
               <?php echo get_theme_mod('emp_front_btn1'); ?>
+            </button>
+          <?php } ?>
+          <?php if($emp_button_secondary_show1){ ?>
+            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>';" class="p-2 container-fluid btn-secondary-actived btn-secondary border-30px">
+              <?php echo get_theme_mod('emp_front_btn_secondary1'); ?>
             </button>
           <?php } ?>
         </div>
@@ -60,8 +68,13 @@ if($emp_title_show){ ?>
             <h2 class="text-mobile empFadeIn"><?php echo get_theme_mod('emp_front_text2'); ?></h2>
             <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea2'); ?></p>
             <?php if($emp_button_show2){ ?>
-              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn2') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
+              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn2') ?>';" class="p-2 container-fluid <?php if($emp_button_secondary_show2){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
                 <?php echo get_theme_mod('emp_front_btn2'); ?>
+              </button>
+            <?php } ?>
+            <?php if($emp_button_secondary_show2){ ?>
+              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary2') ?>';" class="p-2 container-fluid btn-secondary-actived btn-secondary border-30px">
+                <?php echo get_theme_mod('emp_front_btn_secondary2'); ?>
               </button>
             <?php } ?>
           </div>
@@ -71,9 +84,14 @@ if($emp_title_show){ ?>
           <div id="carousel-item-3" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
             <h2 class=" text-mobile empFadeIn"><?php echo get_theme_mod('emp_front_text3'); ?></h2>
             <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea3'); ?></p>
-            <?php if($emp_button_show1){ ?>
-              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn3') ?>';" class="p-2 container-fluid mw-70 border-30px btn-outline-light">
+            <?php if($emp_button_show3){ ?>
+              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn3') ?>';" class="p-2 container-fluid <?php if($emp_button_secondary_show3){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
                 <?php echo get_theme_mod('emp_front_button3'); ?>
+              </button>
+            <?php } ?>
+            <?php if($emp_button_secondary_show3){ ?>
+              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary3') ?>';" class="p-2 container-fluid btn-secondary-actived btn-secondary border-30px">
+                <?php echo get_theme_mod('emp_front_btn_secondary3'); ?>
               </button>
             <?php } ?>
           </div>
@@ -102,7 +120,7 @@ if($emp_title_show){ ?>
   <?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
   <?php $emp_home_show_3 = get_theme_mod('emp_homepage_show_3'); ?>
   <?php if($emp_home_categories||$emp_home_show_1||$emp_home_show_2||$emp_home_show_3){ ?>
-    <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if ($emp_home_show_1||$emp_home_categories){?> mt-180-mobile <?php } ?>">
+    <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if ($emp_home_show_1||$emp_home_categories){?> mt-190-mobile <?php } ?>">
       <!-- Woocommerce categories -->
       <?php if ($emp_home_categories){?>
         <div class="py-3 mx-auto my-auto" >

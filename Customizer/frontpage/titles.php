@@ -60,7 +60,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_bu
   'settings'=> 'emp_front_button_show1',
   'type'   	=> 'checkbox'
 )));
-// Button 1
+// Button principal 1
 $wp_customize->add_setting('emp_front_btn1', array(
   'default'           => '',
   'trasnport'         => 'refresh',
@@ -84,6 +84,44 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'section'     => 'emp_section_front_title',
   'settings'    => 'emp_front_link_btn1',
   'description'	=> __( 'Pega acá el link del boton', 'empralidad' )
+)));
+// button secondary show 1
+$wp_customize->add_setting('emp_front_button_secondary_show1', array(
+  'default'           => 'false',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_button_secondary_show_control1', array(
+  'label'       => __( 'Mostrar botón', 'empralidad' ),
+  'section'     => 'emp_section_front_title',
+  'settings'    => 'emp_front_button_secondary_show1',
+  'type'   	    => 'checkbox',
+  'description'	=> __( 'Solo puede activarse si el botón principal se está usando', 'empralidad' )
+)));
+// Button secondary 1
+$wp_customize->add_setting('emp_front_btn_secondary1', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_btn_secondary_control1', array(
+  'label'       => __('Texto de boton', 'empralidad'),
+  'section'     => 'emp_section_front_title',
+  'settings'    => 'emp_front_btn_secondary1',
+  'description'	=> __( 'botón secundario hacia alguna web', 'empralidad' )
+)));
+// Link button 1
+$wp_customize->add_setting('emp_front_link_btn_secondary1', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_link_btn_secondary_control1', array(
+  'label'       => __('Link del boton secundario', 'empralidad'),
+  'section'     => 'emp_section_front_title',
+  'settings'    => 'emp_front_link_btn_secondary1',
+  'description'	=> __( 'Pega acá el link del boton secundario', 'empralidad' )
 )));
 
 // title secondary 2
@@ -178,6 +216,44 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'section'     => 'emp_section_front_title2',
   'settings'    => 'emp_front_link_button2',
   'description'	=> __( 'Pega acá el link del boton', 'empralidad' )
+)));
+// button secondary show 2
+$wp_customize->add_setting('emp_front_button_secondary_show2', array(
+  'default'           => 'false',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_button_secondary_show_control2', array(
+  'label'       => __( 'Mostrar botón', 'empralidad' ),
+  'section'     => 'emp_section_front_title2',
+  'settings'    => 'emp_front_button_secondary_show2',
+  'type'   	    => 'checkbox',
+  'description'	=> __( 'Solo puede activarse si el botón principal se está usando', 'empralidad' )
+)));
+// Button secondary 2
+$wp_customize->add_setting('emp_front_btn_secondary2', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_btn_secondary_control2', array(
+  'label'       => __('Texto de boton', 'empralidad'),
+  'section'     => 'emp_section_front_title2',
+  'settings'    => 'emp_front_btn_secondary2',
+  'description'	=> __( 'botón secundario hacia alguna web', 'empralidad' )
+)));
+// Link button 2
+$wp_customize->add_setting('emp_front_link_btn_secondary2', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_link_btn_secondary_control2', array(
+  'label'       => __('Link del boton secundario', 'empralidad'),
+  'section'     => 'emp_section_front_title2',
+  'settings'    => 'emp_front_link_btn_secondary2',
+  'description'	=> __( 'Pega acá el link del boton secundario', 'empralidad' )
 )));
 
 // title secondary 3
@@ -274,5 +350,43 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_title_li
   'section'     => 'emp_section_front_title3',
   'settings'    => 'emp_title_link_button3',
   'description' => __( 'Pega acá el link del boton', 'empralidad' )
+)));
+// button secondary show 3
+$wp_customize->add_setting('emp_front_button_secondary_show3', array(
+  'default'           => 'false',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_button_secondary_show_control3', array(
+  'label'       => __( 'Mostrar botón', 'empralidad' ),
+  'section'     => 'emp_section_front_title3',
+  'settings'    => 'emp_front_button_secondary_show3',
+  'type'   	    => 'checkbox',
+  'description'	=> __( 'Solo puede activarse si el botón principal se está usando', 'empralidad' )
+)));
+// Button secondary 3
+$wp_customize->add_setting('emp_front_btn_secondary3', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_btn_secondary_control3', array(
+  'label'       => __('Texto de boton', 'empralidad'),
+  'section'     => 'emp_section_front_title3',
+  'settings'    => 'emp_front_btn_secondary3',
+  'description'	=> __( 'botón secundario hacia alguna web', 'empralidad' )
+)));
+// Link button 3
+$wp_customize->add_setting('emp_front_link_btn_secondary3', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_link_btn_secondary_control3', array(
+  'label'       => __('Link del boton secundario', 'empralidad'),
+  'section'     => 'emp_section_front_title3',
+  'settings'    => 'emp_front_link_btn_secondary3',
+  'description'	=> __( 'Pega acá el link del boton secundario', 'empralidad' )
 )));
 ?>
