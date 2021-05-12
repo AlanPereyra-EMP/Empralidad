@@ -22,6 +22,18 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_ti
   'settings'=> 'emp_front_title_show',
   'type'  	=> 'checkbox'
 )));
+// hr
+$wp_customize->add_setting('emp_front_title_hr_show', array(
+  'default'           => false,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_title_hr_show_control', array(
+  'label'   => __( 'Mostrar linea', 'empralidad' ),
+  'section' => 'emp_section_front_title',
+  'settings'=> 'emp_front_title_hr_show',
+  'type'  	=> 'checkbox'
+)));
 // Textarea 1
 $wp_customize->add_setting('emp_front_textarea', array(
   'default'           => '',
@@ -134,6 +146,18 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_ti
   'label'   => __( 'Mostrar titulo', 'empralidad' ),
   'section' => 'emp_section_front_title2',
   'settings'=> 'emp_front_title_show2',
+  'type'  	=> 'checkbox'
+)));
+// hr
+$wp_customize->add_setting('emp_front_title_hr_show2', array(
+  'default'           => false,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_title_hr_show_control2', array(
+  'label'   => __( 'Mostrar linea', 'empralidad' ),
+  'section' => 'emp_section_front_title2',
+  'settings'=> 'emp_front_title_hr_show2',
   'type'  	=> 'checkbox'
 )));
 $wp_customize->add_section('emp_section_front_title2', array(
@@ -267,6 +291,18 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_ti
   'section' => 'emp_section_front_title3',
   'settings'=> 'emp_front_title_show3',
   'type'   	=> 'checkbox'
+)));
+// Hr 3
+$wp_customize->add_setting('emp_front_title_hr_show3', array(
+  'default'           => false,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_title_hr_show_control3', array(
+  'label'   => __( 'Mostrar linea', 'empralidad' ),
+  'section' => 'emp_section_front_title3',
+  'settings'=> 'emp_front_title_hr_show3',
+  'type'  	=> 'checkbox'
 )));
 $wp_customize->add_section('emp_section_front_title3', array(
   'title'    => __('Título secundario', 'empralidad'),

@@ -254,6 +254,12 @@ a.button.product_type_simple{
     width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
   }
 }
+<?php if(!get_theme_mod('emp_woocommerce_categories_label_show')){ ?>
+  h2.woocommerce-loop-category__title {
+    display: none;
+  }
+<?php } ?>
+/* Fonts */
 @font-face {
   font-family: "the secret";
   src: url("<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.woff';?>") format("woff");

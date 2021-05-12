@@ -8,7 +8,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'priority'      => 3,
     'panel'         => 'woocommerce'
   ));
-  // Show 1
+  // Show
   $wp_customize->add_setting('emp_woocommerce_categories_show', array(
     'trasnport'        => 'refresh',
     'sanitize_callback'=> 'sanitize_encoded'
@@ -40,6 +40,19 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
       'step'     => .1,
     )
   ));
-
+  // Show label
+  $wp_customize->add_setting('emp_woocommerce_categories_label_show', array(
+    'trasnport'        => 'refresh',
+    'sanitize_callback'=> 'sanitize_encoded'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_woocommerce_categories_label_show_control', array(
+      'label'      => __( 'Mostrar u Ocultar', 'empralidad' ),
+      'section'    => 'emp_section_woocommerce_categories',
+      'settings'   => 'emp_woocommerce_categories_label_show',
+      'type'    	 => 'checkbox',
+      'input_attrs'=> array(
+        'class'    => 'd-inline-block'
+      )
+  )));
 }
 ?>
