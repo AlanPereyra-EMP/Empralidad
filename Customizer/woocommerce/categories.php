@@ -46,7 +46,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'sanitize_callback'=> 'sanitize_encoded'
   ));
   $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_woocommerce_categories_label_show_control', array(
-      'label'      => __( 'Mostrar u Ocultar', 'empralidad' ),
+      'label'      => __( 'Mostrar u Ocultar titulo de categoria', 'empralidad' ),
       'section'    => 'emp_section_woocommerce_categories',
       'settings'   => 'emp_woocommerce_categories_label_show',
       'type'    	 => 'checkbox',
