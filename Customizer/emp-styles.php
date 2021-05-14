@@ -70,7 +70,7 @@ body, .fa-text{
 body{
   font-size: <?php echo get_theme_mod('emp_components_content_size'); ?>px;
 }
-#main-head p{
+#main-head p, h2.text-center.h1{
 	font-family: '<?php echo get_theme_mod('emp_components_head_text_tipography'); ?>', 'sans-serif';
 }
 .text-mobile {
