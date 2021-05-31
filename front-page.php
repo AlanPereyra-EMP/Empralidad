@@ -60,7 +60,7 @@ if($emp_title_show){ ?>
             </button>
           <?php } ?>
           <?php if($emp_button_secondary_show1){ ?>
-            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>';" class="p-2 container-fluid btn-secondary-actived btn-secondary border-30px">
+            <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>';" class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
               <?php echo get_theme_mod('emp_front_btn_secondary1'); ?>
             </button>
           <?php } ?>
@@ -79,7 +79,7 @@ if($emp_title_show){ ?>
               </button>
             <?php } ?>
             <?php if($emp_button_secondary_show2){ ?>
-              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary2') ?>';" class="p-2 container-fluid btn-secondary-actived btn-secondary border-30px">
+              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary2') ?>';" class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
                 <?php echo get_theme_mod('emp_front_btn_secondary2'); ?>
               </button>
             <?php } ?>
@@ -99,7 +99,7 @@ if($emp_title_show){ ?>
               </button>
             <?php } ?>
             <?php if($emp_button_secondary_show3){ ?>
-              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary3') ?>';" class="p-2 container-fluid btn-secondary-actived btn-secondary border-30px">
+              <button onclick="window.location.href = '<?php echo get_theme_mod('emp_front_link_btn_secondary3') ?>';" class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
                 <?php echo get_theme_mod('emp_front_btn_secondary3'); ?>
               </button>
             <?php } ?>

@@ -119,7 +119,7 @@ nav.navbar{
 nav.navbar.navbar-scroll a.fa.fa-shopping-cart.mr-4.fadein.show-desktop.text-white{
 	color: #fff!important;
 }
-@media(max-width: 991px){
+@media(max-width: 992px){
 	nav.navbar {
 		background: none;
 	}
@@ -216,7 +216,7 @@ ul .dropdown-menu.depth_0 {
   overflow: hidden;
   visibility: hidden;
 }
-@media(max-width: 991px){
+@media(max-width: 992px){
 	ul .dropdown-menu.depth_0{
 		overflow-y: auto;
 	}
@@ -266,7 +266,7 @@ ul .dropdown-menu li a::after {
 ul.mobile-menu-items {
   font-size: 18px;
 }
-@media (min-width:991px){
+@media (min-width:992px){
 	ul.mobile-menu-items{
 		display: inline-block;
 	}
@@ -306,7 +306,7 @@ ul.mobile-menu-items {
 	height: 100vh;
 	transition: all 1s;
 }
-@media(max-width:991px){
+@media(max-aspect-ratio: 1 / 1){
 	#emp-background-image{
 		background-size: 100vh!important;
 	}
@@ -834,7 +834,7 @@ label.screen-reader-text{
 .pt-105{
 	padding-top: 105px!important;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .show-mobile {
     display: block!important;
   }
@@ -1079,7 +1079,7 @@ a.fa.fa-times{
 	width: 100%;
 	z-index: 1030;
 }
-@media (max-width:991px){
+@media (max-width:992px){
 	#navbarContentMenu ul.dropdown-menu.depth_0{
 		display: flex;
 		overflow-x: auto;
@@ -1157,7 +1157,7 @@ a.fa.fa-times{
 	max-height: 55vh;
   overflow-y: auto;
 }
-@media (max-width: 991px){
+@media (max-width: 992px){
 	.text-homepage-container{
 		font-size: 15px;
 	}
@@ -1178,7 +1178,7 @@ iframe:hover, iframe:focus, .FullScreenLanding:hover, .FullScreenLanding:focus{
 	opacity: .2;
 	width: 5px;
 }
-@media(max-width: 991px){
+@media(max-width: 992px){
 	.support-woo-shortcode .woocommerce ul::-webkit-scrollbar{
 		display: none;
 	}

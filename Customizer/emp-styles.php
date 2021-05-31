@@ -7,6 +7,9 @@
   background-color: <?php echo get_theme_mod('emp_components_nav_background'); ?>ee!important;
   transition: .3s all;
 }
+#bemp-page, #cemp-page{
+  border-top: 60px solid <?php echo get_theme_mod('emp_components_nav_background'); ?>!important;
+}
 .bg-personalized, #bg-menu-mobile, .bg-title-color, .bg-title-content-color, body, .woocommerce span.onsale,
 #bg-woocommerce-mobile{
   background-color: <?php echo get_theme_mod('emp_components_head_title_background'); ?> !important;
@@ -81,7 +84,7 @@ body{
 }
 @media (min-width: 577px) {
   .text-mobile {
-    font-size: <?php echo (get_theme_mod('emp_components_head_title_size') - 80); ?>px!important;
+    font-size: <?php echo (get_theme_mod('emp_components_head_title_size') - 60); ?>px!important;
   }
   #main-head p{
     font-size: <?php echo (get_theme_mod('emp_components_head_text_size') - 80); ?>px;
@@ -180,11 +183,11 @@ body{
   background-color: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>;
 }
 a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable,
-a.button.product_type_simple{
+a.button.product_type_simple, a.button.product_type_external{
   background-color: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>!important;
   color: <?php echo get_theme_mod('emp_components_content_btn_color'); ?>!important;
 }
-.btn-secondary-actived.btn-secondary{
+.btn-emp{
   color: <?php echo get_theme_mod('emp_components_content_btn_color'); ?>!important;
   background-color: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>;
   border: 1px solid <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>;
@@ -249,7 +252,7 @@ a.button.product_type_simple{
     font-size: 25px;
   }
 <?php } ?>
-@media (min-width: 991px){
+@media (min-width: 768px){
   .support-woo-shortcode .woocommerce ul.products li.product{
     width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
   }
