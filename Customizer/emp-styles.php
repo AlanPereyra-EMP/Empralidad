@@ -103,9 +103,6 @@ if(get_theme_mod('emp_components_head_title_tipography') == 'the secret'){ ?>
   .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img{
     border-radius: 30px!important;
   }
-  section.col-12{
-    border-radius: 30px 30px 0 0;
-  }
   @media (max-width:991px){
     #bg-menu-mobile{
       border-radius: 0 0 50% 50%;
