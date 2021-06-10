@@ -86,16 +86,16 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'flanella'	   => __('Flanella', 'empralidad')
   )
 )));
-// filter-brightness
-$wp_customize->add_setting('emp_components_head_filter', array(
-  'default'           => '1',
+// Opacity
+$wp_customize->add_setting('emp_components_head_opacity', array(
+  'default'           => 0.1,
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-$wp_customize->add_control('emp_components_head_filter_control1', array(
+$wp_customize->add_control('emp_components_head_opacity_control1', array(
   'label'          => __( 'Opacidad de imagen/video', 'empralidad' ),
   'section'        => 'emp_section_components_head',
-  'settings'       => 'emp_components_head_filter',
+  'settings'       => 'emp_components_head_opacity',
   'type'					 => 'range',
   'input_attrs' 	 => array(
     'min'          => 0.01,
