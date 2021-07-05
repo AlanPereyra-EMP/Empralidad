@@ -131,18 +131,9 @@ if(get_theme_mod('emp_components_head_title_tipography') == 'the secret'){ ?>
 <?php } ?>
 
 /* Buttons */
-.btn, .wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .reset_variations{
+.wpcf7-submit, #submit.submit, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .reset_variations{
   background-color: <?php echo get_theme_mod('emp_components_head_title_background'); ?>!important;
   color: <?php echo get_theme_mod('emp_components_head_title_color'); ?>!important;
-}
-.btn:hover, .btn:focus, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:focus{
-  color: <?php echo get_theme_mod('emp_components_content_btn_color'); ?>!important;
-  background-color: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>;
-}
-a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt, a.button.product_type_variable,
-a.button.product_type_simple, a.button.product_type_external{
-  background-color: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>!important;
-  color: <?php echo get_theme_mod('emp_components_content_btn_color'); ?>!important;
 }
 
 /* woocommerce */

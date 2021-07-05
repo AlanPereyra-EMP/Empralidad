@@ -853,6 +853,10 @@ body{
 	font-size: var(--emp-content-size)px;
 }
 /* Buttons */
+.btn, .btn:hover, .btn:focus{
+	background: var(--emp-btn-bg)!important;
+	color: var(--emp-btn-color)!important;
+}
 .dashboard-section-overview .copy-to-clipboard-trigger,
 .checkout-button, #place_order, th{
 	background: var(--emp-btn-bg);
@@ -1394,6 +1398,13 @@ a.fa.fa-times{
 	}
 }
 
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt,
+a.button.product_type_variable,a.button.product_type_simple, a.button.product_type_external,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:focus{
+  background: var(--emp-btn-bg)!important;
+  color: var(--emp-btn-color)!important;
+}
 .woocommerce span.onsale {
  background: var(--emp-head-title-bg)!important;
  color: var(--emp-head-title-color)!important;
