@@ -5,6 +5,18 @@ $wp_customize->add_section('emp_section_components_head', array(
   'panel'    => 'emp_panel_components',
   'description'=> __( 'En la cabecera se encuentra el título principal', 'empralidad' )
 ));
+// Categories adaptability
+$wp_customize->add_setting('emp_components_head_title_categories_on', array(
+  'default'           => false,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_head_title_categories_on_control', array(
+  'label'   => __( 'Categorías activas', 'empralidad' ),
+  'section' => 'emp_section_components_head',
+  'settings'=> 'emp_components_head_title_categories_on',
+  'type'  	=> 'checkbox'
+)));
 // Title font size
 $wp_customize->add_setting('emp_components_head_title_size', array(
   'default'           => 150,

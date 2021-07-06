@@ -37,7 +37,7 @@ $emp_button_show3 = get_theme_mod('emp_front_button_show3');
 $emp_button_secondary_show3 = get_theme_mod('emp_front_button_secondary_show3');
 
 if($emp_title_show){ ?>
-  <header id="main-head">
+  <header id="main-head" <?php if(get_theme_mod('emp_components_head_title_categories_on')){ ?>class="categories-on"<?php } ?> >
     <div class="text-img-home container-fluid my-auto">
       <div id="carouselFade" class="carousel carousel-fade carousel-inner text-homepage-container" data-ride="carousel">
         <div id="carousel-item-1" class="carousel-item active empFadeIn mx-auto color-personalized mw-1200px">
