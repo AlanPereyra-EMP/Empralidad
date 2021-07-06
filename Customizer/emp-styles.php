@@ -21,8 +21,8 @@
   --emp-content-tipography: <?php echo get_theme_mod('emp_components_content_tipography'); ?>;
   --emp-content-size: <?php echo get_theme_mod('emp_components_content_size'); ?>;
   /* Buttons */
-  --emp-btn-bg: <?php echo get_theme_mod('emp_components_content_btn_bg'); ?>;
-  --emp-btn-color: <?php echo get_theme_mod('emp_components_content_btn_color'); ?>;
+  --emp-btn-bg: <?php echo get_theme_mod('emp_components_btn_bg'); ?>;
+  --emp-btn-color: <?php echo get_theme_mod('emp_components_btn_color'); ?>;
   /* Footer */
   --emp-footer-bg: <?php echo get_theme_mod('emp_components_footer_background'); ?>;
   --emp-footer-color: <?php echo get_theme_mod('emp_components_footer_color'); ?>;
