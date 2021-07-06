@@ -90,7 +90,7 @@ if(get_theme_mod('emp_components_head_title_tipography') == 'the secret'){ ?>
 }
 
 /* Borders */
-.btn-outline-light, a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
+a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
   border: 1px <?php echo get_theme_mod('emp_components_head_title_color'); ?> solid;
 }
 <?php if(get_theme_mod('emp_components_content_radius')){ ?>
