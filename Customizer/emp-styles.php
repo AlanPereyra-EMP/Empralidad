@@ -164,10 +164,26 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
 /* Fonts */
 @font-face {
   font-family: "the secret";
-  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular.woff';?>") format("woff");
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/the-secret/TheSecret-Regular'?>.svg#open-sans') format('svg');
 }
 @font-face {
   font-family: "flanella";
-  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella.woff'?>") format("woff");
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Flanella/Flanella'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "open dyslexic";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.svg#open-sans') format('svg');
 }
 </style>

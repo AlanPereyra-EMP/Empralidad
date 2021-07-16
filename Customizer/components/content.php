@@ -50,7 +50,8 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_t
     'roboto' 			 => __('Roboto', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
-    'bad script'	 => __('Bad Script', 'empralidad')
+    'bad script'	 => __('Bad Script', 'empralidad'),
+    'open dyslexic'=> __('Open dyslexic', 'empralidad')
   )
 )));
 // color
