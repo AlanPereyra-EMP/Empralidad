@@ -197,8 +197,8 @@ if($emp_title_show){ ?>
   <?php } ?>
 
   <?php if ( is_front_page() && !is_home() ) {?>
-    <section class="px-0 border-30px col-12 content-background mb-200px">
-      <div class="color-personalized bg-personalized overflow-hidden">
+    <section class="px-0 border-30px col-12 content-background mb-200px overflow-hidden">
+      <div class="color-personalized bg-personalized">
         <?php get_template_part('includes/wc-featured-products') ?>
       </div>
       <div class="mw-1200px py-5 my-5">
