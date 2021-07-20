@@ -1721,12 +1721,6 @@ nav.woocommerce-MyAccount-navigation {
 a.woocommerce-button.button.view {
 	color: #262626 !important
 }
-a.button.product_type_simple,
-a.button.product_type_simple.add_to_cart_button,
-a.button.product_type_variable,
-ul li h2.woocommerce-loop-product__title {
-	font-size: 15px !important
-}
 ol.flex-control-nav.flex-control-thumbs img {
 	border-radius: 0 !important
 }

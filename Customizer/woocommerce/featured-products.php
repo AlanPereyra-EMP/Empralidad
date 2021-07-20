@@ -66,5 +66,24 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     )
   ));
 
+  // Font size
+  $wp_customize->add_setting('emp_woocommerce_featured_font_size', array(
+    'default'           => 15,
+    'trasnport'         => 'refresh',
+    'sanitize_callback' => 'sanitize_string'
+  ));
+  $wp_customize->add_control('emp_woocommerce_featured_font_size_control', array(
+    'label'      => __( 'Tamaño del texto de los productos destacados', 'empralidad' ),
+    'section'    => 'emp_section_woocommerce_featured',
+    'settings'   => 'emp_woocommerce_featured_font_size',
+    'description'=> __('(solo dispositivos grandes)','empralidad'),
+    'type'			 => 'range',
+    'input_attrs'=> array(
+      'min'      => 12,
+      'max'      => 40,
+      'step'     => 1,
+    )
+  ));
+
 }
 ?>
