@@ -1409,6 +1409,9 @@ a.fa.fa-times{
 	}
 }
 
+.woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th {
+  color: var(--emp-content-color);
+}
 a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart, button.single_add_to_cart_button.button.alt,
 a.button.product_type_variable,a.button.product_type_simple, a.button.product_type_external,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
