@@ -1845,15 +1845,12 @@ li span.price del {
 	line-height: 30px;
 	height: 30px;
 }
-li.product.type-product {
-	height: 300px;
-}
 .woocommerce ul.products li.product .price {
 	margin-bottom: 0 !important;
 }
 li.product span.price {
 	position: absolute !important;
-	bottom: 50px !important;
+	bottom: 40px !important;
 	left: 50% !important;
 	transform: translate(-50%, 0) !important;
 }
@@ -1861,7 +1858,7 @@ h2.woocommerce-loop-product__title {
 	position: absolute;
 	padding-bottom: 62px !important;
 	padding-top: 20px !important;
-	bottom: 75px;
+	bottom: 55px;
 	width: 100%;
 	transform: translate(0, 50%)
 }
@@ -1880,7 +1877,6 @@ div#reviews {
 	border-radius: 0 !important
 }
 img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
-	position: absolute;
 	top: 0;
 	height: auto !important
 }
