@@ -96,6 +96,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
     'bad script'	 => __('Bad Script', 'empralidad'),
+    'rozha one'	   => __('Rozha One', 'empralidad'),
     'the secret'	 => __('The Secret', 'empralidad'),
     'flanella'	   => __('Flanella', 'empralidad'),
     'open dyslexic'=> __('Open dyslexic', 'empralidad')
