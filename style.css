@@ -854,9 +854,6 @@ section, article, .woocommerce-loop-product__title, .color-personalized-secondar
 body, .fa-text{
 	font-family: var(--emp-content-tipography), 'sans-serif';
 }
-body{
-	font-size: var(--emp-content-size)px;
-}
 /* Buttons */
 .btn, .btn:hover, .btn:focus{
 	background: var(--emp-btn-bg)!important;

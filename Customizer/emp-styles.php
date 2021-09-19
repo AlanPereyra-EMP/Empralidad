@@ -53,7 +53,9 @@ if(get_theme_mod('emp_components_head_title_tipography') == 'the secret'){ ?>
     line-height: 1.6;
   }
 <?php } ?>
-
+body{
+	font-size: <?php echo get_theme_mod('emp_components_content_size'); ?>px;
+}
 .text-mobile {
   font-size: <?php echo (get_theme_mod('emp_components_head_title_size') * 0.30); ?>px!important;/*warning*/
 }
