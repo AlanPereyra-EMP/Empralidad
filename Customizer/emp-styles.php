@@ -197,4 +197,12 @@ h2.woocommerce-loop-product__title{
        url('<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/open_dyslexic/OpenDyslexicAlta-Regular'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "DancingScript";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.svg#open-sans') format('svg');
+}
 </style>
