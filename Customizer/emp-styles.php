@@ -166,8 +166,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
 a.button.product_type_simple,
 a.button.product_type_simple.add_to_cart_button,
 a.button.product_type_variable,
-ul li h2.woocommerce-loop-product__title,
-#woo_featured_products .price {
+ul li h2.woocommerce-loop-product__title {
 	font-size: <?php echo get_theme_mod('emp_woocommerce_featured_font_size') ?>px!important
 }
 h2.woocommerce-loop-product__title{
