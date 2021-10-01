@@ -411,6 +411,7 @@ section .btn-outline-light {
 	margin: auto;
 	max-width: 1920px;
 	max-height: 822px;
+	position: relative;
 }
 #emp-sliders ul{
 	display: flex;
@@ -418,6 +419,35 @@ section .btn-outline-light {
 	overflow: auto;
 	padding: 0;
 	scroll-snap-type: x mandatory;
+}
+#emp-sliders i{
+	background: #fff;
+	border-radius: 50%;
+	display: block;
+	font-size: 60px;
+	opacity: .3;
+	padding: 4px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+@media (max-width: 768px){
+	#emp-sliders i{
+		font-size: 30px;
+	}
+}
+#emp-sliders i:hover{
+	cursor: pointer;
+	opacity: .8;
+}
+#emp-sliders i.fa-arrow-circle-left{
+	left: 30px;
+}
+#emp-sliders i.fa-arrow-circle-right{
+	right: 30px;
+}
+#emp-sliders i.disabled{
+	display: none;
 }
 #emp-sliders ul li img{
 	max-width: 1200px!important;

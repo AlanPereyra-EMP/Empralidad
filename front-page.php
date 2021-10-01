@@ -18,10 +18,12 @@ if($emp_slider3){
 if($emp_slider1||$emp_slider2||$emp_slider3){ ?>
   <div id="emp-sliders" class="<?php if($emp_sliders == 1){?>mw-1200px<?php } ?>">
     <ul>
-      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" alt=""> </li>
-      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" alt=""> </li>
-      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" alt=""> </li>
+      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" class="emp-slider" alt=""> </li>
+      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" class="emp-slider" alt=""> </li>
+      <li> <img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" class="emp-slider" alt=""> </li>
     </ul>
+    <i id="emp-slider-prev" class="fa fa-arrow-circle-left disabled"></i>
+    <i id="emp-slider-next" class="fa fa-arrow-circle-right disabled"></i>
   </div>
 <?php }
 

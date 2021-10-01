@@ -187,3 +187,87 @@ function carouselItemPrev() {
   item[itemNumber].classList.add('active');
   bodyBG.classList.add('emp-background-image'+itemNumber);
 }
+
+// Sliders front page
+function slidersFrontpage(){
+  var empSliders = document.getElementById('emp-sliders');
+
+  var sliders = document.getElementsByClassName('emp-slider');
+  var sliderUl = document.querySelector('#emp-sliders ul');
+  var prevBtn = document.getElementById('emp-slider-prev');
+  var nextBtn = document.getElementById('emp-slider-next');
+  var totalSliders = sliders.length;
+  var actualSlider = 0;
+  var widthSlider = [];
+  var enabled = true;
+  var position = 0;
+  var totalWidth = 0;
+
+  if(!empSliders||totalSliders==1)return;//checks if the slider is active
+  prevBtn.classList.remove('disabled');
+  nextBtn.classList.remove('disabled');
+
+  for(var i = 0; i < totalSliders; i++){
+    widthSlider[i] = sliders[i].width;
+    totalWidth = totalWidth+widthSlider[i];
+  }
+
+  function prevSlider(){
+    if(!enabled)return;
+
+    enabled = false;
+    setTimeout(function(){
+      enabled = true
+    }, 500);
+
+    actualSlider--;
+    if(actualSlider<0){
+      actualSlider = totalSliders-1;
+      sliderUl.scroll({
+        left: totalWidth,
+        behavior: 'smooth'
+      });
+      position = totalWidth-widthSlider[actualSlider];
+    }else{
+      sliderUl.scroll({
+        left: position-widthSlider[actualSlider],
+        behavior: 'smooth'
+      });
+      position = position-widthSlider[actualSlider];
+    }
+  }
+
+  function nextSlider(){
+    if(!enabled)return;
+
+    enabled = false;
+    setTimeout(function(){
+      enabled = true
+    }, 500);
+
+    actualSlider++;
+    if(actualSlider>totalSliders-1){
+      actualSlider = 0;
+      sliderUl.scroll({
+        left: 0,
+        behavior: 'smooth'
+      });
+      position = 0;
+    }else{
+      sliderUl.scroll({
+        left: position+widthSlider[actualSlider],
+        behavior: 'smooth'
+      });
+      position = position+widthSlider[actualSlider];
+    }
+  }
+
+  prevBtn.addEventListener('click', prevSlider, false);
+  nextBtn.addEventListener('click', nextSlider, false);
+
+  setInterval(function(){
+    nextSlider();
+  }, 4000);
+}
+
+slidersFrontpage();
