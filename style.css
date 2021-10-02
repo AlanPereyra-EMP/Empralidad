@@ -422,6 +422,9 @@ section .btn-outline-light {
 	padding: 0;
 	scroll-snap-type: x mandatory;
 }
+#emp-sliders ul::-webkit-scrollbar{
+	display: none;
+}
 #emp-sliders i{
 	background: #fff;
 	border-radius: 50%;

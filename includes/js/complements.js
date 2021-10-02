@@ -203,6 +203,7 @@ function slidersFrontpage(){
   var enabled = true;
   var position = 0;
   var totalWidth = 0;
+  var userClicked = false;
 
   if(!empSliders||totalSliders==1)return;//checks if the slider is active
   prevBtn.classList.remove('disabled');
@@ -213,8 +214,14 @@ function slidersFrontpage(){
     totalWidth = totalWidth+widthSlider[i];
   }
 
+  function slowPrevSlider(){
+    userClicked = true;
+    prevSlider();
+  }
   function prevSlider(){
     if(!enabled)return;
+
+    window.clearInterval(autoSlider);
 
     enabled = false;
     setTimeout(function(){
@@ -236,10 +243,24 @@ function slidersFrontpage(){
       });
       position = position-widthSlider[actualSlider];
     }
+
+    // Reactive automatic scroll slider
+    if(userClicked){
+      autoSlider = window.setInterval(setAutoSlider, 10000);
+      userClicked = false;
+    } else {
+      autoSlider = window.setInterval(setAutoSlider, 4000);
+    }
   }
 
+  function slowNextSlider(){
+    userClicked = true;
+    nextSlider();
+  }
   function nextSlider(){
     if(!enabled)return;
+
+    window.clearInterval(autoSlider);
 
     enabled = false;
     setTimeout(function(){
@@ -261,14 +282,25 @@ function slidersFrontpage(){
       });
       position = position+widthSlider[actualSlider];
     }
+
+    // Reactive automatic scroll slider
+    if(userClicked){
+      autoSlider = window.setInterval(setAutoSlider, 10000);
+      userClicked = false;
+    } else {
+      autoSlider = window.setInterval(setAutoSlider, 4000);
+    }
   }
 
-  prevBtn.addEventListener('click', prevSlider, false);
-  nextBtn.addEventListener('click', nextSlider, false);
+  prevBtn.addEventListener('click', slowPrevSlider, false);
+  nextBtn.addEventListener('click', slowNextSlider, false);
 
-  setInterval(function(){
+  // Init automatic scroll Slider
+  var autoSlider = window.setInterval(setAutoSlider, 4000);
+
+  function setAutoSlider(){
     nextSlider();
-  }, 4000);
+  }
 }
 
 slidersFrontpage();
