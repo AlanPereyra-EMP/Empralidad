@@ -99,7 +99,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   .woocommerce span.onsale{
     border-radius:0 50%!important;
   }
-  article, .woocommerce ul.products li.product a img,
+  article,
   a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
   article img, section img,a.button.product_type_simple, a.checkout-button.button.alt.wc-forward,
   .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img{
