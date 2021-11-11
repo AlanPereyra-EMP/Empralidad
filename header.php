@@ -33,13 +33,6 @@
     <?php } ?>
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
-
-    <style>
-      .to-fade{
-        opacity: 0;
-        transition: all .5s;
-      }
-    </style>
     <?php
     wp_head();
     echo get_theme_mod('emp_analytics_facebook_script');
