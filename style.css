@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alanpereyra
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 5.7.2
+Version: 5.7.3
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1327,7 +1327,7 @@ a.fa.fa-times{
 	}
 	.woocommerce ul.products li.product-category {
 		display: block !important;
-		height: 100%;
+		height: auto;
 		margin: 11px 2.5% !important;
 		width: 90vw!important;
 	}
@@ -1558,7 +1558,7 @@ li.product:hover h2, li.product:hover span {
 	display: inline-block
 }
 .woocommerce ul.products li.product-category{
-	height: 100%;
+	height: auto;
 }
 li.product,
 li.product .button {
