@@ -1460,9 +1460,6 @@ article a.button.product_type_variable,
 .woocommerce article ul.products li.product .price{
 	font-size: 12px!important;
 }
-.woocommerce article div.product {
-  overflow: hidden;
-}
 .woocommerce div.product form.cart .variations td.label {
   padding-right: 10px!important;
 }
@@ -1921,7 +1918,8 @@ li span.price del {
 }
 .woo-page-margin {
 	margin-top: 100px !important;
-	margin-bottom: 200px !important
+	margin-bottom: 200px !important;
+	overflow: hidden;
 }
 nav.woocommerce-pagination {
 	order: 4
