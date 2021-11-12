@@ -1326,9 +1326,10 @@ a.fa.fa-times{
 		margin: 10px 0 !important;
 	}
 	.woocommerce ul.products li.product-category {
-		width: 90vw!important;
 		display: block !important;
-		margin: 11px 5% !important;
+		height: 100%;
+		margin: 11px 2.5% !important;
+		width: 90vw!important;
 	}
 	.woocommerce span.onsale {
 		border-radius: 0 0 0 50%
@@ -1553,6 +1554,9 @@ li.product:hover h2, li.product:hover span {
 .woocommerce ul.products li.product-category {
 	position: relative;
 	display: inline-block
+}
+.woocommerce ul.products li.product-category{
+	height: 100%;
 }
 li.product,
 li.product .button {
