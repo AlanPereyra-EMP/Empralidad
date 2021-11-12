@@ -153,8 +153,8 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
     font-size: 25px;
   }
 <?php } ?>
-@media (min-width: 768px){
-  .support-woo-shortcode .woocommerce ul.products li.product{
+@media (min-width: 769px){
+  .woocommerce ul.products li.product-category{
     width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
   }
 }
