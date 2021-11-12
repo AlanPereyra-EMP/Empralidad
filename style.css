@@ -394,7 +394,7 @@ section .btn-outline-light {
 	margin: 7px 10px;
 	max-width: 70%;
 }
-@media(min-width: 400px){
+@media(min-width: 575px){
 	.btn-secondary-actived{
 		max-width: 40%!important;
 	}
