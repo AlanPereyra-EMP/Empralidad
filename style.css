@@ -324,8 +324,10 @@ ul.mobile-menu-items {
 	height: 40vh;
 	position: relative;
 }
-#main-head.categories-on{
-	margin-bottom: -180px;
+@media (max-width: 576px){
+	#main-head.categories-on{
+		margin-bottom: -180px;
+	}
 }
 @media(min-width: 992px){
 	#main-head{
@@ -1291,8 +1293,7 @@ a.fa.fa-times{
 	z-index: 10;
 }
 #first-content-home, #first-content-single{
-	height: 90px;
-	margin-top: -60px;
+	margin-top: 90px;
 	visibility: hidden;
 }
 @media(min-width: 601px){
@@ -1303,7 +1304,7 @@ a.fa.fa-times{
 }
 @media(min-width: 783px){
 	#first-content-home.admin-bar-show, #first-content-single.admin-bar-show{
-		height: 106px!important;
+		height: 300px!important;
 		margin-top: -106px;
 	}
 }
