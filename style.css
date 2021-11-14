@@ -94,6 +94,7 @@ th, th a {
 footer{
 	background: var(--emp-footer-bg)!important;
 	color: var(--emp-footer-color)!important;
+	overflow: hidden;
 }
 /*--------------------------------------------1)Navigation-------------------------------------------------*/
 #top_content{
