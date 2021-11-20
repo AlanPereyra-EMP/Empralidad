@@ -70,7 +70,7 @@ body{
     font-size: <?php echo (get_theme_mod('emp_components_head_text_size') - 80); ?>px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-aspect-ratio: 5 / 4) {
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size'); ?>px!important;
   }
