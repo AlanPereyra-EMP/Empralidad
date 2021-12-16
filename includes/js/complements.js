@@ -197,7 +197,6 @@ function slidersFrontpage(){
   var prevBtn = document.getElementById('emp-slider-prev');
   var nextBtn = document.getElementById('emp-slider-next');
   var totalSliders = sliders.length;
-  console.log(totalSliders);
   var actualSlider = 0;
   var widthSlider = [];
   var enabled = true;
