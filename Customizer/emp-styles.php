@@ -203,4 +203,60 @@ ul li h2.woocommerce-loop-product__title {
        url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "varela round";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/VarelaRound-Regular/VarelaRound-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/VarelaRound-Regular/VarelaRound-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/VarelaRound-Regular/VarelaRound-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/VarelaRound-Regular/VarelaRound-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/VarelaRound-Regular/VarelaRound-Regular'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "indie flower";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/IndieFlower-Regular/IndieFlower-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/IndieFlower-Regular/IndieFlower-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/IndieFlower-Regular/IndieFlower-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/IndieFlower-Regular/IndieFlower-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/IndieFlower-Regular/IndieFlower-Regular'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "roboto";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/Roboto-Regular/Roboto-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/Roboto-Regular/Roboto-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Roboto-Regular/Roboto-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Roboto-Regular/Roboto-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Roboto-Regular/Roboto-Regular'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/KumbhSans-VariableFont_wght/KumbhSans-VariableFont_wght'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/KumbhSans-VariableFont_wght/KumbhSans-VariableFont_wght'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/KumbhSans-VariableFont_wght/KumbhSans-VariableFont_wght'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/KumbhSans-VariableFont_wght/KumbhSans-VariableFont_wght'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/KumbhSans-VariableFont_wght/KumbhSans-VariableFont_wght'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "nunito";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/Nunito-Variable_wght/Nunito-Variable_wght'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/Nunito-Variable_wght/Nunito-Variable_wght'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Nunito-Variable_wght/Nunito-Variable_wght'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Nunito-Variable_wght/Nunito-Variable_wght'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/Nunito-Variable_wght/Nunito-Variable_wght'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "bad script";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/BadScript-Regular/BadScript-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/BadScript-Regular/BadScript-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/BadScript-Regular/BadScript-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/BadScript-Regular/BadScript-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/BadScript-Regular/BadScript-Regular'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "rozha one";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.svg#open-sans') format('svg');
+}
 </style>

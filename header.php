@@ -5,32 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
-    <!-- Fonts -->
-    <?php
-    $emp_title_font = get_theme_mod('emp_components_head_title_tipography');
-    $emp_title_text_font = get_theme_mod('emp_components_head_text_tipography');
-    $emp_content_font = get_theme_mod('emp_components_content_tipography');
-    if($emp_title_font == 'varela round'||$emp_title_text_font == 'varela round'||$emp_content_font == 'varela round'){ ?>
-      <link defer rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
-    <?php }
-    if($emp_title_font == 'indie flower'||$emp_title_text_font == 'indie flower'||$emp_content_font == 'indie flowe'){ ?>
-      <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
-    <?php }
-    if($emp_title_font == 'roboto'||$emp_title_text_font == 'roboto'||$emp_content_font == 'roboto'){ ?>
-      <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <?php }
-    if($emp_title_font == 'Kumbh Sans'||$emp_title_text_font == 'Kumbh Sans'||$emp_content_font == 'Kumbh Sans'){ ?>
-      <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap">
-    <?php }
-    if($emp_title_font == 'nunito'||$emp_title_text_font == 'nunito'||$emp_content_font == 'nunito'){ ?>
-      <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
-    <?php }
-    if($emp_title_font == 'bad script'||$emp_title_text_font == 'bad script'||$emp_content_font == 'bad script'){ ?>
-      <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap">
-    <?php }
-    if($emp_title_font == 'rozha one'||$emp_title_text_font == 'rozha one'||$emp_content_font == 'rozha one'){ ?>
-      <link defery rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap">
-    <?php } ?>
+
     <!-- PWA -->
     <meta name="mobile-web-app-capable" content="yes">
     <?php
