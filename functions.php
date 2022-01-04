@@ -20,6 +20,7 @@ get_template_part( 'Customizer/emp-customizer' );
 get_template_part( 'plugins/emp-shortcodes' );
 get_template_part( 'plugins/emp-carousel' );
 get_template_part('includes/enqueue-scripts');
+// get_template_part('includes/PWA/manifest');
 
 // 1) Main menu
 if (function_exists('register_nav_menus')) {

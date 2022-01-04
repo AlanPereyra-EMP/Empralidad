@@ -4,11 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <!-- PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="<?php echo get_theme_mod('emp_components_head_title_background'); ?>">
     <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
 
-    <!-- PWA -->
-    <meta name="mobile-web-app-capable" content="yes">
     <?php
     wp_head();
     echo get_theme_mod('emp_analytics_facebook_script');
