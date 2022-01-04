@@ -79,7 +79,7 @@ body{
   }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1500px){
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size'); ?>px!important;
   }
