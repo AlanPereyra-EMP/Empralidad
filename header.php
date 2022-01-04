@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta name="theme-color" content="<?php echo get_theme_mod('emp_components_head_title_background'); ?>">
     <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
 
     <!-- PWA -->
