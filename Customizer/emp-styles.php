@@ -79,6 +79,14 @@ body{
   }
 }
 
+@media (min-width: 1200px){
+  .text-mobile {
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size'); ?>px!important;
+  }
+  #main-head p{
+    font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
+  }
+}
 @media (min-width:992px) {
   .p-personalized-1{
     padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;
