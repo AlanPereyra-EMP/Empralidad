@@ -40,7 +40,7 @@ Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor
 
 /*-----------------------------------------0)HTML tags----------------------------------------------*/
 ::-webkit-scrollbar{
-	width: 2px;
+	width: 6px;
 	height: 2px;
 }
 html {
@@ -875,15 +875,21 @@ a.fa.fa-shopping-cart.mr-4.fadein.show-desktop, #btn-search-desktop{
   color: var(--emp-nav-icon-color)!important;
 }
 /* Content */
-.content-background, ::-webkit-scrollbar-track,
-li.product.type-product,::-webkit-scrollbar-thumb{
+.content-background,
+li.product.type-product{
 	background: var(--emp-content-bg)!important;
+}
+::-webkit-scrollbar-thumb{
+	background: var(--emp-content-color);
+}
+::-webkit-scrollbar-track{
+	background: var(--emp-content-bg);
 }
 section, article, .woocommerce-loop-product__title, .color-personalized-secondary,
 .card-header a, a.woocommerce-review-link,
 .woocommerce-MyAccount-content a, article a,
 .content-color, h2.woocommerce-loop-product__title{
-  color: var(--emp-content-color)!important;
+	color: var(--emp-content-color)!important;
 }
 body, .fa-text{
 	font-family: var(--emp-content-tipography), 'sans-serif';
