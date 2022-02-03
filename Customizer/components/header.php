@@ -57,6 +57,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'the secret'	 => __('The Secret', 'empralidad'),
     'flanella'	   => __('Flanella', 'empralidad'),
     'DancingScript'=> __('Dancing Script', 'empralidad'),
+    'Keraleeyam'   => __('Keraleeyam', 'empralidad'),
     'open dyslexic'=> __('Open dyslexic', 'empralidad')
   )
 )));
@@ -99,6 +100,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'rozha one'	   => __('Rozha One', 'empralidad'),
     'the secret'	 => __('The Secret', 'empralidad'),
     'flanella'	   => __('Flanella', 'empralidad'),
+    'Keraleeyam'   => __('Keraleeyam', 'empralidad'),
     'open dyslexic'=> __('Open dyslexic', 'empralidad')
   )
 )));

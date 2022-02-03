@@ -203,4 +203,12 @@ ul li h2.woocommerce-loop-product__title {
        url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/DancingScript/DancingScript-Regular'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "Keraleeyam";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.svg#open-sans') format('svg');
+}
 </style>
