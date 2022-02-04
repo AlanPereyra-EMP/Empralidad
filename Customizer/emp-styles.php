@@ -269,10 +269,10 @@ ul li h2.woocommerce-loop-product__title {
 }
 @font-face {
   font-family: "Keraleeyam";
-  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/Keraleeyam'?>.eot");
-  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/Keraleeyam'?>.eot?#iefix') format('embedded-opentype'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/Keraleeyam'?>.woff') format('woff'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/Keraleeyam'?>.ttf') format('truetype'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/Keraleeyam'?>.svg#open-sans') format('svg');
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/keraleeyam/keraleeyam'?>.svg#open-sans') format('svg');
 }
 </style>
