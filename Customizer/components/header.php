@@ -50,6 +50,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'varela round' => __( 'Varela Round', 'empralidad' ),
     'indie flower' => __( 'Indie Flower', 'empralidad' ),
     'roboto' 			 => __('Roboto', 'empralidad'),
+    'roboto-cond'  => __('Roboto Condensed Bold', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
     'bad script'	 => __('Bad Script', 'empralidad'),
@@ -57,7 +58,6 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'the secret'	 => __('The Secret', 'empralidad'),
     'flanella'	   => __('Flanella', 'empralidad'),
     'DancingScript'=> __('Dancing Script', 'empralidad'),
-    'Keraleeyam'   => __('Keraleeyam', 'empralidad'),
     'open dyslexic'=> __('Open dyslexic', 'empralidad')
   )
 )));
@@ -94,13 +94,13 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'varela round' => __( 'Varela Round', 'empralidad' ),
     'indie flower' => __( 'Indie Flower', 'empralidad' ),
     'roboto' 			 => __('Roboto', 'empralidad'),
+    'roboto-cond'  => __('Roboto Condensed Bold', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
     'bad script'	 => __('Bad Script', 'empralidad'),
     'rozha one'	   => __('Rozha One', 'empralidad'),
     'the secret'	 => __('The Secret', 'empralidad'),
     'flanella'	   => __('Flanella', 'empralidad'),
-    'Keraleeyam'   => __('Keraleeyam', 'empralidad'),
     'open dyslexic'=> __('Open dyslexic', 'empralidad')
   )
 )));
