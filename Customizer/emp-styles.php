@@ -166,7 +166,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
     width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
   }
 }
-<?php if(!get_theme_mod('emp_woocommerce_categories_label_show')){ ?>
+<?php if(!get_theme_mod('emp_homepage_categories_label_show')){ ?>
   h2.woocommerce-loop-category__title {
     display: none;
   }

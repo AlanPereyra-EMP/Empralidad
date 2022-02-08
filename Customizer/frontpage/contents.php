@@ -96,6 +96,20 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'settings'=> 'emp_homepage_link_btn1'
 
 )));
+// Show label
+$wp_customize->add_setting('emp_homepage_categories_label_show', array(
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_encoded'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage_categories_label_show_control', array(
+    'label'      => __( 'Mostrar u Ocultar titulo de categoria', 'empralidad' ),
+    'section'    => 'emp_section_woocommerce_categories',
+    'settings'   => 'emp_homepage_categories_label_show',
+    'type'    	 => 'checkbox',
+    'input_attrs'=> array(
+      'class'    => 'd-inline-block'
+    )
+)));
 // Section 2
 $wp_customize->add_section('emp_section_homepage2', array(
   'title'    => __('Contenido medio', 'empralidad'),
