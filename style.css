@@ -1316,6 +1316,13 @@ a.fa.fa-times{
 		margin-top: -106px;
 	}
 }
+@media(min-width: 992px){
+	#first-content-home, #first-content-single{
+		padding-top: 290px;
+		visibility: hidden;
+		margin-top: -290px;
+	}
+}
 .text-homepage-container{
 	max-height: 55vh;
   overflow-y: auto;
