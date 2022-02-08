@@ -267,4 +267,20 @@ ul li h2.woocommerce-loop-product__title {
        url('<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/RozhaOne-Regular/RozhaOne-Regular'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "roboto-cond";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/roboto-condensed/RobotoCondensed-Bold'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/roboto-condensed/RobotoCondensed-Bold'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/roboto-condensed/RobotoCondensed-Bold'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/roboto-condensed/RobotoCondensed-Bold'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/roboto-condensed/RobotoCondensed-Bold'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "barlow-cond";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.svg#open-sans') format('svg');
+}
 </style>
