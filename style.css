@@ -314,11 +314,37 @@ ul.mobile-menu-items {
 		top: 30px!important;
 	}
 }
+@media(min-width: 576px){
+	.img-fixed {
+		bottom: 10px!important;
+	}
+	.img-btn-fixed, .img-btn-fixed-wsp {
+		height: 50px;
+		width: 50px;
+	}
+	.img-btn-fixed{
+		font-size: 40px!important;
+	}
+}
+.img-btn-fixed {
+	background: var(--emp-footer-bg)!important;
+	border-radius: 50%;
+	color: var(--emp-footer-color);
+	cursor: pointer;
+  font-size: 30px;
+  padding-top: 5px;
+  text-align: center;
+}
 #scrollToTopButton{
 	-webkit-opacity: 0;
 	-khtml-opacity: 0;
 	opacity: 0;
 	transition: all .2s;
+}
+.img-btn-fixed-show{
+	-webkit-opacity: 1!important;
+	-khtml-opacity: 1!important;
+	opacity: 1!important;
 }
 /*---------------------------------------------2)Header-------------------------------------------------*/
 #main-head{
@@ -528,32 +554,7 @@ img, .wp-caption {
 #chat-emp-btn-fixed a{
 	font-size: 34px!important;
 }
-@media(min-width: 576px){
-	.img-fixed {
-		bottom: 10px!important;
-	}
-	.img-btn-fixed, .img-btn-fixed-wsp {
-		height: 50px;
-		width: 50px;
-	}
-	.img-btn-fixed{
-		font-size: 40px!important;
-	}
-}
-.img-btn-fixed {
-	background: #262626!important;
-	border-radius: 50%;
-	color: #fff;
-	cursor: pointer;
-  font-size: 30px;
-  padding-top: 5px;
-  text-align: center;
-}
-.img-btn-fixed-show{
-	-webkit-opacity: 1!important;
-	-khtml-opacity: 1!important;
-	opacity: 1!important;
-}
+
 .text-img-home{
 	left: 1.8%!important;
 	position: absolute;
