@@ -26,6 +26,9 @@
   /* Footer */
   --emp-footer-bg: <?php echo get_theme_mod('emp_components_footer_background'); ?>;
   --emp-footer-color: <?php echo get_theme_mod('emp_components_footer_color'); ?>;
+  /* Contents shortcode */
+  --emp-content-shortcode-bg: <?php echo get_theme_mod('emp_homepage_carousel_background'); ?>;
+  --emp-content-shortcode-color: <?php echo get_theme_mod('emp_homepage_carousel_color'); ?>;
 }
 
 /* backgrounds */
