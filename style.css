@@ -3,7 +3,11 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alanpereyra
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
+<<<<<<< HEAD
 Version: 5.8.9
+=======
+Version: 5.9.6
+>>>>>>> 69e3a946f4d30c25d1e21d8a1717a51e07363ccd
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -314,11 +318,37 @@ ul.mobile-menu-items {
 		top: 30px!important;
 	}
 }
+@media(min-width: 576px){
+	.img-fixed {
+		bottom: 10px!important;
+	}
+	.img-btn-fixed, .img-btn-fixed-wsp {
+		height: 50px;
+		width: 50px;
+	}
+	.img-btn-fixed{
+		font-size: 40px!important;
+	}
+}
+.img-btn-fixed {
+	background: var(--emp-footer-bg)!important;
+	border-radius: 50%;
+	color: var(--emp-footer-color);
+	cursor: pointer;
+  font-size: 30px;
+  padding-top: 5px;
+  text-align: center;
+}
 #scrollToTopButton{
 	-webkit-opacity: 0;
 	-khtml-opacity: 0;
 	opacity: 0;
 	transition: all .2s;
+}
+.img-btn-fixed-show{
+	-webkit-opacity: 1!important;
+	-khtml-opacity: 1!important;
+	opacity: 1!important;
 }
 /*---------------------------------------------2)Header-------------------------------------------------*/
 #main-head{
@@ -528,32 +558,7 @@ img, .wp-caption {
 #chat-emp-btn-fixed a{
 	font-size: 34px!important;
 }
-@media(min-width: 576px){
-	.img-fixed {
-		bottom: 10px!important;
-	}
-	.img-btn-fixed, .img-btn-fixed-wsp {
-		height: 50px;
-		width: 50px;
-	}
-	.img-btn-fixed{
-		font-size: 40px!important;
-	}
-}
-.img-btn-fixed {
-	background: #262626!important;
-	border-radius: 50%;
-	color: #fff;
-	cursor: pointer;
-  font-size: 30px;
-  padding-top: 5px;
-  text-align: center;
-}
-.img-btn-fixed-show{
-	-webkit-opacity: 1!important;
-	-khtml-opacity: 1!important;
-	opacity: 1!important;
-}
+
 .text-img-home{
 	left: 1.8%!important;
 	position: absolute;
@@ -1315,6 +1320,13 @@ a.fa.fa-times{
 		margin-top: -106px;
 	}
 }
+@media(min-width: 992px){
+	#first-content-home, #first-content-single{
+		padding-top: 290px;
+		visibility: hidden;
+		margin-top: -290px;
+	}
+}
 .text-homepage-container{
 	max-height: 55vh;
   overflow-y: auto;
@@ -1536,11 +1548,13 @@ li.product:hover h2, li.product:hover span {
 	transform: scale(1.1)
 }
 .product-category.product h2 {
-	background: var(--emp-nav-bg);
-	color: var(--emp-nav-color);
+	background: var(--emp-content-shortcode-bg);
+	color: var(--emp-content-shortcode-color);
 	bottom: 0;
 	font-size: 25px !important;
 	left: 50%;
+	margin: 0;
+	opacity: .7;
 	position: absolute;
 	transform: translate(-50%, 0);
 	width: 100%;

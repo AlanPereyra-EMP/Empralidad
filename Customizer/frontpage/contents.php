@@ -96,6 +96,42 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage
   'settings'=> 'emp_homepage_link_btn1'
 
 )));
+// Show label
+$wp_customize->add_setting('emp_homepage_categories_label_show', array(
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_encoded'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_homepage_categories_label_show_control', array(
+    'label'      => __( 'Mostrar u Ocultar titulo de categoria', 'empralidad' ),
+    'section'    => 'emp_section_homepage1',
+    'settings'   => 'emp_homepage_categories_label_show',
+    'type'    	 => 'checkbox',
+    'input_attrs'=> array(
+      'class'    => 'd-inline-block'
+    )
+)));
+// Carousel text color
+$wp_customize->add_setting('emp_homepage_carousel_background', array(
+  'default'          => '#262626',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_homepage_carousel_background_color_control', array(
+  'label'      => __('Color de fondo', 'empralidad'),
+  'section'    => 'emp_section_homepage1',
+  'settings'   => 'emp_homepage_carousel_background'
+)));
+// Color typography
+$wp_customize->add_setting('emp_homepage_carousel_color', array(
+  'default'          => '#ffffff',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_homepage_carousel_color_control', array(
+  'label'   => __('Color de texto', 'empralidad'),
+  'section' => 'emp_section_homepage1',
+  'settings'=> 'emp_homepage_carousel_color'
+)));
 // Section 2
 $wp_customize->add_section('emp_section_homepage2', array(
   'title'    => __('Contenido medio', 'empralidad'),

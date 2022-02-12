@@ -17,16 +17,50 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'settings'=> 'emp_components_head_title_categories_on',
   'type'  	=> 'checkbox'
 )));
-// Title font size
-$wp_customize->add_setting('emp_components_head_title_size', array(
+// Title font size Mobile
+$wp_customize->add_setting('emp_components_head_title_size_mobile', array(
   'default'           => 150,
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
-$wp_customize->add_control('emp_components_head_title_size_control', array(
-  'label'      => __( 'Tamaño del título', 'empralidad' ),
+$wp_customize->add_control('emp_components_head_title_size_mobile_control', array(
+  'label'      => __( 'Tamaño del título (mobile)', 'empralidad' ),
   'section'    => 'emp_section_components_head',
-  'settings'   => 'emp_components_head_title_size',
+  'settings'   => 'emp_components_head_title_size_mobile',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 15,
+    'max'      => 150,
+    'step'     => 1,
+  )
+));
+// Title font size
+$wp_customize->add_setting('emp_components_head_title_size_medium', array(
+  'default'           => 150,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control('emp_components_head_title_size_medium_control', array(
+  'label'      => __( 'Tamaño del título (tablets)', 'empralidad' ),
+  'section'    => 'emp_section_components_head',
+  'settings'   => 'emp_components_head_title_size_medium',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 50,
+    'max'      => 200,
+    'step'     => 1,
+  )
+));
+// Title font size
+$wp_customize->add_setting('emp_components_head_title_size_large', array(
+  'default'           => 150,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control('emp_components_head_title_size_large_control', array(
+  'label'      => __( 'Tamaño del título (PCs)', 'empralidad' ),
+  'section'    => 'emp_section_components_head',
+  'settings'   => 'emp_components_head_title_size_large',
   'type'			 => 'range',
   'input_attrs'=> array(
     'min'      => 45,
@@ -34,6 +68,24 @@ $wp_customize->add_control('emp_components_head_title_size_control', array(
     'step'     => 1,
   )
 ));
+// Title font size
+$wp_customize->add_setting('emp_components_head_title_size_extralarge', array(
+  'default'           => 150,
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control('emp_components_head_title_size_extralarge_control', array(
+  'label'      => __( 'Tamaño del título (PCs grandes)', 'empralidad' ),
+  'section'    => 'emp_section_components_head',
+  'settings'   => 'emp_components_head_title_size_extralarge',
+  'type'			 => 'range',
+  'input_attrs'=> array(
+    'min'      => 45,
+    'max'      => 250,
+    'step'     => 1,
+  )
+));
+// Tipography
 $wp_customize->add_setting('emp_components_head_title_tipography', array(
   'default'           => 'serif',
   'trasnport'         => 'refresh',

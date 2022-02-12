@@ -26,6 +26,9 @@
   /* Footer */
   --emp-footer-bg: <?php echo get_theme_mod('emp_components_footer_background'); ?>;
   --emp-footer-color: <?php echo get_theme_mod('emp_components_footer_color'); ?>;
+  /* Contents shortcode */
+  --emp-content-shortcode-bg: <?php echo get_theme_mod('emp_homepage_carousel_background'); ?>;
+  --emp-content-shortcode-color: <?php echo get_theme_mod('emp_homepage_carousel_color'); ?>;
 }
 
 /* backgrounds */
@@ -57,22 +60,22 @@ body{
 	font-size: <?php echo get_theme_mod('emp_components_content_size'); ?>px;
 }
 .text-mobile {
-  font-size: <?php echo (get_theme_mod('emp_components_head_title_size') * 0.30); ?>px!important;/*warning*/
+  font-size: <?php echo get_theme_mod('emp_components_head_title_size_mobile'); ?>px!important;/*warning*/
 }
 #main-head p{
   font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.30); ?>px;
 }
 @media (min-width: 577px) {
   .text-mobile {
-    font-size: <?php echo (get_theme_mod('emp_components_head_title_size') - 60); ?>px!important;
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size_medium') ; ?>px!important;
   }
   #main-head p{
-    font-size: <?php echo (get_theme_mod('emp_components_head_text_size') - 80); ?>px;
+    font-size: <?php echo (get_theme_mod('emp_components_head_text_size_') - 80); ?>px;
   }
 }
-@media (min-width: 992px) and (max-aspect-ratio: 5 / 4) {
+@media (min-width: 992px) {
   .text-mobile {
-    font-size: <?php echo get_theme_mod('emp_components_head_title_size'); ?>px!important;
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size_large'); ?>px!important;
   }
   #main-head p{
     font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
@@ -81,7 +84,7 @@ body{
 
 @media (min-width: 1500px){
   .text-mobile {
-    font-size: <?php echo get_theme_mod('emp_components_head_title_size'); ?>px!important;
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size_extralarge'); ?>px!important;
   }
   #main-head p{
     font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
@@ -166,7 +169,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
     width: <?php echo get_theme_mod('emp_woocommerce_category_size');?>%!important;
   }
 }
-<?php if(!get_theme_mod('emp_woocommerce_categories_label_show')){ ?>
+<?php if(!get_theme_mod('emp_homepage_categories_label_show')){ ?>
   h2.woocommerce-loop-category__title {
     display: none;
   }
