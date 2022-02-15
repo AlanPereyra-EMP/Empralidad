@@ -99,6 +99,19 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'settings'=> 'emp_components_nav_wsp_numb',
   'description'	  => __( 'Sin espacios ni simbolos (+)', 'empralidad' )
 )));
+// Whatsapp Event
+$wp_customize->add_setting('emp_components_nav_wsp_event', array(
+  'default' => '',
+  'trasnport' => 'refresh',
+  'sanitize_callback' => 'sanitize_number'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_nav_wsp_event_control', array(
+  'label'=> __('Evento onclick', 'empralidad'),
+  'section'=> 'emp_section_components_nav',
+  'settings'=> 'emp_components_nav_wsp_event',
+  'description'	  => __( 'Esto será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
+)));
 // Chat-EMP
 $wp_customize->add_setting('emp_components_nav_chat_emp', array(
   'default' => '',
