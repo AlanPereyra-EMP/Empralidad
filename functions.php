@@ -232,7 +232,9 @@ function emp_landing_pages_init() {
 
 	register_post_type( 'contact', $args );
 }
-add_action( 'init', 'emp_landing_pages_init' );
+if ( current_user_can( 'edit_posts' ) ) {
+	add_action( 'init', 'emp_landing_pages_init' );
+}
 
 // 11) Woocomerce Custom
 if (class_exists('WooCommerce')){
