@@ -232,7 +232,7 @@ function emp_landing_pages_init() {
 
 	register_post_type( 'contact', $args );
 }
-if ( current_user_can( 'edit_posts' ) ) {
+if ( current_user_can( 'edit_pages' ) ) {
 	add_action( 'init', 'emp_landing_pages_init' );
 }
 

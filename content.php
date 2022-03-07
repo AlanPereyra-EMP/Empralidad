@@ -24,11 +24,8 @@
     </div>
     <a href="<?php the_permalink(); ?>">
       <button class="card-button btn container-fluid alingcenter mt-auto my-5">
-        Leer más
+        Ver más
       </button>
     </a>
-</div>
-<div class="card-footer">
-  <small><?php the_date(); ?> / Autor: <?php the_author(); ?> / <?php the_tags(); ?> </small>
 </div>
 </section>
