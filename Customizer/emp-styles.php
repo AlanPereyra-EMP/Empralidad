@@ -42,7 +42,7 @@
   background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_front_image3')); ?>)no-repeat 50% 50%;
 }
 .the_post_thumbnail{
-  background: url(<?php echo get_the_post_thumbnail_url(); ?> ) repeat 50% 50%;
+  background: url(<?php echo get_the_post_thumbnail_url(); ?> ) no-repeat 50% 50%;
 }
 
 /* Sizes */
