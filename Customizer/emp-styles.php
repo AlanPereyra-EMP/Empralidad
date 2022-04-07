@@ -44,6 +44,7 @@
 @media (min-width: 992px){
   .the_post_thumbnail{
     background: url(<?php echo get_the_post_thumbnail_url(); ?> ) no-repeat 50% 50%;
+    background-size: 100%;
   }
 }
 
