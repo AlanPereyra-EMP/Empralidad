@@ -39,7 +39,7 @@ if ( has_post_thumbnail() ) { ?>
     <div class="container-fluid text-center py-3">
      <?php the_tags( 'Relacionados: ', ' / ', ' ' ); ?>
     </div>
-    <p><br></p>
+    <h2>Comentarios:</h2>
     <!-- Comments -->
     <?php if ( comments_open() || get_comments_number() ) {
       comments_template(); the_comments_pagination();
