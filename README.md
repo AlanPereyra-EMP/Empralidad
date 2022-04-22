@@ -36,7 +36,7 @@ Para contratar soporte contacta a https://empralidad.com.ar/contacto
 ## Atribiciones, dependencias y legal
 Desarrolladores: Alan Pereyra
 
-Testeado con: 5.6
+Testeado con: 5.9.3
 
 Licencia: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 Licencia URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode

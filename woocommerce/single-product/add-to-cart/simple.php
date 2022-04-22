@@ -51,12 +51,6 @@ if ( $product->is_in_stock() ) : ?>
 		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-    <?php
-    $emp_show_notice = get_theme_mod('emp_woocommerce_whatsapp_show');
-    if($emp_show_notice){ ?>
-      <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola,%20quiero%20consultar%20si%20hay%20stock%20de%20*<?php echo str_replace(' ', '%20', wp_get_document_title());?>*%20%20%20%20<?php echo get_permalink(); ?>" class="button text-center">Consultar stock por whastapp</a> <br>
-			<p class="text-secondary text-center small">(Este producto podría no estar en stock, para hablar con un vendedor tocar el botón de arriba)</p>
-    <?php } ?>
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
