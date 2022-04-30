@@ -97,19 +97,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'settings'    => 'emp_front_link_btn1',
   'description'	=> __( 'Pega acá el link del boton', 'empralidad' )
 )));
-// Event button 1
-$wp_customize->add_setting('emp_front_event_btn1', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
 
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_event_btn_control1', array(
-  'label'       => __('Evento onclick', 'empralidad'),
-  'section'     => 'emp_section_front_title',
-  'settings'    => 'emp_front_event_btn1',
-  'description'	=> __( 'Será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
-)));
 // button secondary show 1
 $wp_customize->add_setting('emp_front_button_secondary_show1', array(
   'default'           => 'false',
@@ -147,19 +135,6 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'section'     => 'emp_section_front_title',
   'settings'    => 'emp_front_link_btn_secondary1',
   'description'	=> __( 'Pega acá el link del boton secundario', 'empralidad' )
-)));
-// Event button secondary 1
-$wp_customize->add_setting('emp_front_event_btn_secondary1', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_event_btn_secondary_control1', array(
-  'label'       => __('Evento onclick', 'empralidad'),
-  'section'     => 'emp_section_front_title',
-  'settings'    => 'emp_front_event_btn_secondary1',
-  'description'	=> __( 'Será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
 )));
 
 // title secondary 2
@@ -267,19 +242,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'settings'    => 'emp_front_link_button2',
   'description'	=> __( 'Pega acá el link del boton', 'empralidad' )
 )));
-// Event button 2
-$wp_customize->add_setting('emp_front_event_btn2', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
 
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_event_btn_control2', array(
-  'label'       => __('Evento onclick', 'empralidad'),
-  'section'     => 'emp_section_front_title',
-  'settings'    => 'emp_front_event_btn2',
-  'description'	=> __( 'Será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
-)));
 // button secondary show 2
 $wp_customize->add_setting('emp_front_button_secondary_show2', array(
   'default'           => 'false',
@@ -317,19 +280,6 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'section'     => 'emp_section_front_title2',
   'settings'    => 'emp_front_link_btn_secondary2',
   'description'	=> __( 'Pega acá el link del boton secundario', 'empralidad' )
-)));
-// Event button secondary 2
-$wp_customize->add_setting('emp_front_event_btn_secondary2', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_event_btn_secondary_control2', array(
-  'label'       => __('Evento onclick', 'empralidad'),
-  'section'     => 'emp_section_front_title',
-  'settings'    => 'emp_front_event_btn_secondary2',
-  'description'	=> __( 'Será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
 )));
 
 // title secondary 3
@@ -439,19 +389,6 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_title_li
   'settings'    => 'emp_title_link_button3',
   'description' => __( 'Pega acá el link del boton', 'empralidad' )
 )));
-// Event button 3
-$wp_customize->add_setting('emp_front_event_btn3', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_event_btn_control3', array(
-  'label'       => __('Evento onclick', 'empralidad'),
-  'section'     => 'emp_section_front_title',
-  'settings'    => 'emp_front_event_btn3',
-  'description'	=> __( 'Será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
-)));
 // button secondary show 3
 $wp_customize->add_setting('emp_front_button_secondary_show3', array(
   'default'           => 'false',
@@ -489,18 +426,5 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_li
   'section'     => 'emp_section_front_title3',
   'settings'    => 'emp_front_link_btn_secondary3',
   'description'	=> __( 'Pega acá el link del boton secundario', 'empralidad' )
-)));
-// Event button secondary 3
-$wp_customize->add_setting('emp_front_event_btn_secondary3', array(
-  'default'           => '',
-  'trasnport'         => 'refresh',
-  'sanitize_callback' => 'sanitize_string'
-));
-
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_event_btn_secondary_control3', array(
-  'label'       => __('Evento onclick', 'empralidad'),
-  'section'     => 'emp_section_front_title',
-  'settings'    => 'emp_front_event_btn_secondary3',
-  'description'	=> __( 'Será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
 )));
 ?>

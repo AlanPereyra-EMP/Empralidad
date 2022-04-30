@@ -58,14 +58,14 @@ if($emp_title_show){ ?>
           <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea'); ?></p>
           <?php if($emp_button_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn1') ?>">
-              <button onclick="return tag_report_conversion('<?php echo get_theme_mod('emp_front_link_btn1') ?>');" class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
+              <button class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
                 <?php echo get_theme_mod('emp_front_btn1'); ?>
               </button>
             </a>
           <?php } ?>
           <?php if($emp_button_secondary_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>">
-              <button onclick="return tag_report_conversion('<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>');" class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
+              <button class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
                 <?php echo get_theme_mod('emp_front_btn_secondary1'); ?>
               </button>
             </a>
@@ -81,14 +81,14 @@ if($emp_title_show){ ?>
             <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea2'); ?></p>
             <?php if($emp_button_show2){ ?>
               <a href="<?php echo get_theme_mod('emp_front_link_btn2') ?>">
-                <button onclick="return tag_report_conversion('<?php echo get_theme_mod('emp_front_link_btn2') ?>');" class="p-2 container-fluid <?php if($emp_button_secondary_show2){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
+                <button class="p-2 container-fluid <?php if($emp_button_secondary_show2){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
                   <?php echo get_theme_mod('emp_front_btn2'); ?>
                 </button>
               </a>
             <?php } ?>
             <?php if($emp_button_secondary_show2){ ?>
               <a href="<?php echo get_theme_mod('emp_front_link_btn_secondary2') ?>">
-                <button onclick="return tag_report_conversion('<?php echo get_theme_mod('emp_front_link_btn_secondary2') ?>');" class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
+                <button class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
                   <?php echo get_theme_mod('emp_front_btn_secondary2'); ?>
                 </button>
               </a>
@@ -105,14 +105,14 @@ if($emp_title_show){ ?>
             <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea3'); ?></p>
             <?php if($emp_button_show3){ ?>
               <a href="<?php echo get_theme_mod('emp_front_link_btn3') ?>">
-                <button onclick="return tag_report_conversion('<?php echo get_theme_mod('emp_front_link_btn3') ?>');" class="p-2 container-fluid <?php if($emp_button_secondary_show3){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
+                <button class="p-2 container-fluid <?php if($emp_button_secondary_show3){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
                   <?php echo get_theme_mod('emp_front_button3'); ?>
                 </button>
               </a>
             <?php } ?>
             <?php if($emp_button_secondary_show3){ ?>
               <a href="<?php echo get_theme_mod('emp_front_link_btn_secondary3') ?>">
-                <button onclick="return tag_report_conversion('<?php echo get_theme_mod('emp_front_link_btn_secondary3') ?>');" class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
+                <button class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
                   <?php echo get_theme_mod('emp_front_btn_secondary3'); ?>
                 </button>
               </a>
