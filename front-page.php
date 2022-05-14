@@ -219,6 +219,7 @@ if($emp_title_show){ ?>
         <?php get_template_part('content-home') ?>
       </div>
   <?php } else { ?>
+    <?php $featured_products_margin_negative = get_theme_mod('emp_woocommerce_featured_margin_negative'); ?>
     <section class="border-30px col-12 content-background <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
       <div class="mx-auto mw-1200px">
       <?php get_template_part('includes/wc-featured-products') ?>
