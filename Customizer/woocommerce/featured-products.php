@@ -8,7 +8,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'priority'      => 2,
     'panel'         => 'woocommerce'
   ));
-  // Show 1
+  // Show
   $wp_customize->add_setting('emp_woocommerce_featured_show', array(
     'default'          => 'false',
     'trasnport'        => 'refresh',
@@ -23,7 +23,22 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         'class'    => 'd-inline-block'
       )
   )));
-  // Title 1
+  // Margin negative
+  $wp_customize->add_setting('emp_woocommerce_featured_margin_negative', array(
+    'default'          => 'false',
+    'trasnport'        => 'refresh',
+    'sanitize_callback'=> 'sanitize_encoded'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_woocommerce_featured_margin_negative_control', array(
+      'label'      => __( 'Margen negativo', 'empralidad' ),
+      'section'    => 'emp_section_woocommerce_featured',
+      'settings'   => 'emp_woocommerce_featured_margin_negative',
+      'type'    	 => 'checkbox',
+      'input_attrs'=> array(
+        'class'    => 'd-inline-block'
+      )
+  )));
+  // Title
   $wp_customize->add_setting('emp_woocommerce_featured_title', array(
     'default'          => '',
     'trasnport'        => 'refresh',
@@ -35,7 +50,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     'settings'=> 'emp_woocommerce_featured_title'
 
   )));
-  // Text 1
+  // Text
   $wp_customize->add_setting('emp_woocommerce_featured_text', array(
     'default'          => '',
     'trasnport'        => 'refresh',

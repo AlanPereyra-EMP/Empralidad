@@ -1,7 +1,8 @@
 <?php $featured_products = get_theme_mod('emp_woocommerce_featured_show'); ?>
+<?php $featured_products_margin_negative = get_theme_mod('emp_woocommerce_featured_margin_negative'); ?>
 <?php $featured_products_h2 = get_theme_mod('emp_woocommerce_featured_title'); ?>
 <?php if($featured_products && class_exists('WooCommerce')) { ?>
-  <div class="p-2">
+  <div class="p-2 <?php if($featured_products_margin_negative){ ?> mt-250-n <?php } ?>">
     <?php if($featured_products_h2){ ?>
       <h2 class="pt-5 pb-4 px-0 h1 text-center"><?php echo get_theme_mod('emp_woocommerce_featured_title'); ?></h2>
     <?php } ?>
