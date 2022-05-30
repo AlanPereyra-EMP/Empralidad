@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alanpereyra
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 6.1.9
+Version: 6.2.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1365,6 +1365,9 @@ a.fa.fa-times{
 		width: 100% !important;
 		margin: 10px 0 !important;
 	}
+	.woocommerce ul.products li.product{
+		aspect-ratio: 1/2!important;
+	}
 	.woocommerce ul.products li.product-category {
 		display: block !important;
 		height: auto;
@@ -1378,7 +1381,7 @@ a.fa.fa-times{
 		border-radius: 0 0 0 50%;
 		left: auto;
 		margin: -.5em -.5em 0 0;
-		top: 7px !important;
+		top: 3px !important;
 	}
 	form.woocommerce-product-search {
 		font-size: 15px
@@ -1440,11 +1443,6 @@ a.fa.fa-times{
 	.woocommerce ul.products li.product .onsale {
 		top: 7px;
 	}
-	.woocommerce ul.products li.product{
-		aspect-ratio: 1/1;
-		height: auto;
-		margin: 1% !important;
-	}
 	.woocommerce div.product .woocommerce-tabs ul.tabs li {
 		font-size: 15px
 	}
@@ -1478,11 +1476,15 @@ a.fa.fa-times{
 		width: 100%
 	}
 }
-
 @media (min-width:1200px) {
 	.woocommerce-product-gallery__image {
 		width: 633px !important
 	}
+}
+.woocommerce ul.products li.product{
+	aspect-ratio: 1/1.5;
+	height: auto;
+	margin: 1% !important;
 }
 .woocommerce h1 {
 	text-align: center;
@@ -1525,7 +1527,7 @@ a.button.product_type_variable,a.button.product_type_simple, a.button.product_ty
 }
 .product span.onsale{
 	left: 7px;
-	top: 7px;
+	top: 3px;
 }
 tr.woocommerce-shipping-totals.shipping {
 	max-width: 100vw
@@ -1535,7 +1537,7 @@ div#woo_featured_products .products::-webkit-scrollbar {
 	display: none
 }
 h2.woocommerce-loop-product__title {
-	align-items: center;
+	align-items: baseline;
 	background: var(--emp-content-shortcode-bg)!important;
 	bottom: 0;
 	color: var(--emp-content-shortcode-color)!important;
@@ -1543,9 +1545,34 @@ h2.woocommerce-loop-product__title {
 	height: 100%;
 	justify-content: center;
 	opacity: .8;
-	padding: 0px 15px!important;
+	padding: 20px 15px 0px 15px!important;
 	position: absolute;
 	width: 100%;
+}
+@media (min-width: 991px) {
+	h2.woocommerce-loop-product__title{
+		font-size: 30px!important;
+	}
+	.emp-product-excerpt {
+		font-size: 12px!important;
+		max-height: 65%!important;
+	}
+}
+.emp-product-excerpt {
+	bottom: 70px;
+	color: var(--emp-content-shortcode-color);
+	font-size: 7px;
+	max-height: 45%;
+	overflow: auto;
+	padding: 0 20px;
+	position: absolute;
+	text-align: left;
+	width: 100%;
+}
+.emp-product-excerpt p, .emp-product-excerpt ul, .emp-product-excerpt li{
+	margin: 0;
+	padding: 0;
+
 }
 .woocommerce ul.products li.product .price{
 	bottom: 40px;
@@ -1595,7 +1622,10 @@ li.product:hover h2, li.product:hover span {
 	margin-right: auto
 }
 .woocommerce ul.products li.product a img {
-	margin: 0 !important
+	height: 100%;
+	margin: 0 !important;
+	object-fit: cover;
+	width: auto;
 }
 #woo_featured_products .woocommerce ul,
 .support-woo-shortcode .woocommerce ul {
@@ -1628,7 +1658,8 @@ li.product.type-product {
 	text-align: center
 }
 .woocommerce ul.products li.product .price del {
-	display: block
+	display: block;
+	font-size: 10px;
 }
 del bdi:before {
 	content: 'Antes: '
@@ -1948,10 +1979,11 @@ h2.woocommerce-loop-category__title {
 }
 .woocommerce ul.products li.product .onsale {
 	border-radius: 0;
-	font-size: 13px;
+	font-size: 7px;
 	height: 0;
 	line-height: 2.8;
 	margin: -0.5em 0 0 0;
+	min-height: 3em;
 	padding: 0 6px;
 }
 span#reply-title {

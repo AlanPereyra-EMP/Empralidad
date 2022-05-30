@@ -13,6 +13,7 @@
 // 11) WooCommerce custom
 // 12) GitHub updates
 // 13) Fix admin bar on frontend
+// 14) Add short description on WooCommerce products
 
 
 // 0) Includes
@@ -311,5 +312,12 @@ add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
 if ( ! current_user_can( 'manage_options' ) ) {
   show_admin_bar( false );
 }
+
+// 14) Add short description on WooCommerce products
+function emp_excerpt_in_products() {
+  ?> <div class="emp-product-excerpt"> <?php the_excerpt();?> </div> <?php
+}
+add_action( 'woocommerce_after_shop_loop_item_title', 'emp_excerpt_in_products', 40 );
+
 
 ?>
