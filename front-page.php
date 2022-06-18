@@ -137,7 +137,7 @@ if($emp_title_show){ ?>
   </header>
 <?php } ?>
 <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
-<div class="row mw-1300px mx-auto">
+<div id="emp-content" class="row mw-1300px mx-auto">
   <?php $emp_home_categories = get_theme_mod('emp_woocommerce_categories_show'); ?>
   <?php $emp_home_show_1 = get_theme_mod('emp_homepage_show_1'); ?>
   <?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
@@ -211,7 +211,7 @@ if($emp_title_show){ ?>
   <?php } ?>
 
   <?php $featured_products_margin_negative = get_theme_mod('emp_woocommerce_featured_margin_negative'); ?>
-  <section id="emp-content" class="px-0 border-30px col-12 content-background mb-200px <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
+  <section class="px-0 border-30px col-12 content-background mb-200px <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
   <?php if ( is_front_page() && !is_home() ) {?>
       <?php get_template_part('includes/wc-featured-products') ?>
       <div class="mw-1200px py-5 my-5">
