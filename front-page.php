@@ -213,9 +213,7 @@ if($emp_title_show){ ?>
   <?php $featured_products_margin_negative = get_theme_mod('emp_woocommerce_featured_margin_negative'); ?>
   <?php if ( is_front_page() && !is_home() ) {?>
     <section class="px-0 border-30px col-12 content-background mb-200px <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
-      <div class="color-personalized bg-personalized">
-        <?php get_template_part('includes/wc-featured-products') ?>
-      </div>
+      <?php get_template_part('includes/wc-featured-products') ?>
       <div class="mw-1200px py-5 my-5">
         <?php get_template_part('content-home') ?>
       </div>
