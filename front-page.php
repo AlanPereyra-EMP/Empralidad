@@ -211,16 +211,15 @@ if($emp_title_show){ ?>
   <?php } ?>
 
   <?php $featured_products_margin_negative = get_theme_mod('emp_woocommerce_featured_margin_negative'); ?>
+  <section id="#emp-content" class="px-0 border-30px col-12 content-background mb-200px <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
   <?php if ( is_front_page() && !is_home() ) {?>
-    <section class="px-0 border-30px col-12 content-background mb-200px <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
       <?php get_template_part('includes/wc-featured-products') ?>
       <div class="mw-1200px py-5 my-5">
         <?php get_template_part('content-home') ?>
       </div>
   <?php } else { ?>
-    <section class="border-30px col-12 content-background mb-200px <?php if($featured_products_margin_negative){ ?> mt-300px mt-xl-5 <?php } ?>">
       <div class="mx-auto mw-1200px">
-      <?php get_template_part('includes/wc-featured-products') ?>
+        <?php get_template_part('includes/wc-featured-products') ?>
           <br>
         <h2 id="posts-home" class="text-center">Lo más reciente</h2>
         <div class="card-columns-2 p-2">
