@@ -55,7 +55,7 @@ if($emp_title_show){ ?>
           <?php
           $emp_title_hr_show = get_theme_mod('emp_front_title_hr_show');
           if($emp_title_hr_show){ ?> <hr> <?php } ?>
-          <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea'); ?></p>
+          <p><?php echo get_theme_mod('emp_front_textarea'); ?></p>
           <?php if($emp_button_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn1') ?>">
               <button class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
@@ -78,7 +78,7 @@ if($emp_title_show){ ?>
           <div id="carousel-item-2" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
             <h2 class="text-mobile empFadeIn"><?php echo get_theme_mod('emp_front_text2'); ?></h2>
             <?php if($emp_title_hr_show2){ ?> <hr> <?php } ?>
-            <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea2'); ?></p>
+            <p><?php echo get_theme_mod('emp_front_textarea2'); ?></p>
             <?php if($emp_button_show2){ ?>
               <a href="<?php echo get_theme_mod('emp_front_link_btn2') ?>">
                 <button class="p-2 container-fluid <?php if($emp_button_secondary_show2){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
@@ -102,7 +102,7 @@ if($emp_title_show){ ?>
           <div id="carousel-item-3" class="carousel-item empFadeIn mx-auto color-personalized mw-1200px">
             <h2 class=" text-mobile empFadeIn"><?php echo get_theme_mod('emp_front_text3'); ?></h2>
             <?php if($emp_title_hr_show3){ ?> <hr> <?php } ?>
-            <p class="mx-auto"><?php echo get_theme_mod('emp_front_textarea3'); ?></p>
+            <p><?php echo get_theme_mod('emp_front_textarea3'); ?></p>
             <?php if($emp_button_show3){ ?>
               <a href="<?php echo get_theme_mod('emp_front_link_btn3') ?>">
                 <button class="p-2 container-fluid <?php if($emp_button_secondary_show3){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">

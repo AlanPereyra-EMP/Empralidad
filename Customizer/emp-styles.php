@@ -29,6 +29,8 @@
   /* Contents shortcode */
   --emp-content-shortcode-bg: <?php echo get_theme_mod('emp_homepage_carousel_background'); ?>;
   --emp-content-shortcode-color: <?php echo get_theme_mod('emp_homepage_carousel_color'); ?>;
+  /* H1 Title Aling */
+  --emp-content-title-aling: <?php echo get_theme_mod('emp_components_head_title_align'); ?>;
 }
 
 /* backgrounds */
@@ -82,6 +84,16 @@ body{
   }
   #main-head p{
     font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
+  }
+  .text-img-home{
+    text-align: var(--emp-content-title-aling)!important;
+  }
+  #main-head p{
+    <?php if(get_theme_mod('emp_components_head_title_align') == 'center'){ ?>
+      margin: auto;
+    <?php }else if(get_theme_mod('emp_components_head_title_align') == 'right'){ ?>
+      margin-left: auto;
+    <?php } ?>
   }
 }
 

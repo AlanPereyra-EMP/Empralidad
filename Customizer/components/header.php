@@ -85,6 +85,23 @@ $wp_customize->add_control('emp_components_head_title_size_extralarge_control', 
     'step'     => 1,
   )
 ));
+// Align
+$wp_customize->add_setting('emp_components_head_title_align', array(
+  'default'           => 'center',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_head_title_align_control1', array(
+  'label'          => __( 'Alineación del título', 'empralidad' ),
+  'section'        => 'emp_section_components_head',
+  'settings'       => 'emp_components_head_title_align',
+  'type'           => 'radio',
+  'choices'        => array(
+    'left'  			 => __( 'Izquierda', 'empralidad' ),
+    'center'  		 => __( 'Centro', 'empralidad' ),
+    'right'  			 => __( 'Derecha', 'empralidad' )
+  )
+)));
 // Tipography
 $wp_customize->add_setting('emp_components_head_title_tipography', array(
   'default'           => 'serif',
