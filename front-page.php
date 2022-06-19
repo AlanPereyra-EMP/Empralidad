@@ -70,6 +70,12 @@ if($emp_title_show){ ?>
               </button>
             </a>
           <?php } ?>
+          <?php
+          $h1_align = get_theme_mod('emp_components_head_title_align');
+          $emp_title_img = wp_get_attachment_url(get_theme_mod('emp_front_image_top1'));
+          if(($h1_align == 'left'|| $h1_align == 'right')&&$emp_title_img){ ?>
+            <img class="title-img" src="<?php echo $emp_title_img ?>">
+          <?php } ?>
         </div>
 
         <?php
@@ -94,6 +100,10 @@ if($emp_title_show){ ?>
               </a>
             <?php } ?>
           </div>
+          <?php $emp_title_img = wp_get_attachment_url(get_theme_mod('emp_front_image_top2'));
+          if(($h1_align == 'left'|| $h1_align == 'right')&&$emp_title_img){ ?>
+            <img class="title-img" src="<?php echo $emp_title_img ?>">
+          <?php } ?>
         <?php } ?>
 
         <?php
@@ -118,6 +128,10 @@ if($emp_title_show){ ?>
               </a>
             <?php } ?>
           </div>
+        <?php } ?>
+        <?php $emp_title_img = wp_get_attachment_url(get_theme_mod('emp_front_image_top3'));
+        if(($h1_align == 'left'|| $h1_align == 'right')&&$emp_title_img){ ?>
+          <img class="title-img" src="<?php echo $emp_title_img ?>">
         <?php } ?>
       </div>
 
