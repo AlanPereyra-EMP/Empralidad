@@ -146,7 +146,7 @@ if(!shortcode_exists('emp_courses')) {
                   </a>';
       }
 
-      $courses = '<section class="card p-0 border-30px content-background content-color">
+      $courses .= '<section class="card p-0 border-30px content-background content-color">
                     <div class="card-header">'.$the_category.'</div>
                     <div class="card-block">
                       <?php'
