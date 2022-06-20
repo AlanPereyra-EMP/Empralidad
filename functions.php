@@ -265,7 +265,7 @@ function emp_landing_pages_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'show_in_rest'       => true,
-		'taxonomies'          => array( 'category' ),
+		'taxonomies'         => array( 'category' ),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'categories')
 	);
 

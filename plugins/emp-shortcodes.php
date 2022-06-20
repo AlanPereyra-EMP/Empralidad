@@ -155,13 +155,13 @@ if(!shortcode_exists('emp_courses')) {
                       <h2 class="content-color">'.$the_title.'</h2>
                       <div class="card-text p-3">'
                         .$the_excerpt.
-                      '</div>
-                      <a href="'.$permalink.'">
-                        <button class="card-button btn container-fluid alingcenter mt-auto my-5">
+                      '</div>'
+                      // <a href="'.$permalink.'">
+                        .'<button class="card-button btn container-fluid alingcenter mt-auto my-5">
                           Ver más
-                        </button>
-                      </a>
-                    </div>
+                        </button>'
+                      // </a>
+                    .'</div>
                   </section>';
       endwhile;
 
