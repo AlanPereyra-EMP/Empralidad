@@ -119,12 +119,12 @@ if(!shortcode_exists('emp_table')) {
 
 
 // Resent posts
-if(!shortcode_exists('emp_posts')) {
-  function emp_postsbycategory($atts) {
+if(!shortcode_exists('emp_courses')) {
+  function emp_courses_display($atts) {
     $args = array(
       'post_type' => 'emp_courses',
       'post_status' => 'publish',
-      'posts_per_page' => 8,
+      'posts_per_page' => 9,
       'orderby' => 'title',
       'order' => 'ASC',
     );
@@ -170,6 +170,6 @@ if(!shortcode_exists('emp_posts')) {
   }
 
   // Add a shortcode
-  add_shortcode('emp_posts', 'emp_postsbycategory');
+  add_shortcode('emp_courses', 'emp_courses_display');
 }
 ?>
