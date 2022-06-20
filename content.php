@@ -2,7 +2,6 @@
   <div class="card-header"> <?php the_category(', '); ?> </div>
   <div class="card-block">
     <?php
-    $filter_slide1 = get_theme_mod('emp_img_filter1');
     if ( has_post_thumbnail() ) { ?>
       <div class="position-relative nopadding">
         <?php the_post_thumbnail( 'full', array( 'class' => 'col-12 mx-auto h-auto') );?>

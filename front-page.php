@@ -235,14 +235,15 @@ if($emp_title_show){ ?>
       <div class="mx-auto mw-1200px">
         <?php get_template_part('includes/wc-featured-products') ?>
           <br>
-        <h2 id="posts-home" class="text-center">Lo más reciente</h2>
+        <h2 id="posts-home" class="text-center text-featured">Lo más reciente</h2>
         <div class="card-columns-2 p-2">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part('content', get_post_format()) ?>
             <?php endwhile; endif; ?>
+            <?php get_template_part('content-courses') ?>
         </div>
         <div class="py-5 px-3 text-center">
-            <h5>Estás buscando un articulo más antiguo?</h5>
+            <h5>Estás buscando algo en específico?</h5>
             <?php get_search_form(); ?>
         </div>
         <?php if(is_active_sidebar( 'homepage1' )){
