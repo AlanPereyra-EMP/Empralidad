@@ -121,12 +121,14 @@ if(!shortcode_exists('emp_table')) {
 // Resent posts
 if(!shortcode_exists('emp_courses')) {
   function emp_courses_display($atts) {
+
     $args = array(
       'post_type' => 'emp_courses',
       'post_status' => 'publish',
       'posts_per_page' => 9,
       'orderby' => 'title',
       'order' => 'ASC',
+      'category' => get_the_category( $post->ID )
     );
 
     $loop = new WP_Query( $args );
@@ -146,7 +148,7 @@ if(!shortcode_exists('emp_courses')) {
                   </a>';
       }
 
-      $courses .= '<section class="card p-0 border-30px content-background content-color">
+      $courses .= '<section class="course card p-0 border-30px content-background content-color">
                     <div class="card-header">'.$the_category.'</div>
                     <div class="card-block">
                       <?php'
@@ -155,13 +157,13 @@ if(!shortcode_exists('emp_courses')) {
                       <h2 class="content-color">'.$the_title.'</h2>
                       <div class="card-text p-3">'
                         .$the_excerpt.
-                      '</div>'
-                      // <a href="'.$permalink.'">
-                        .'<button class="card-button btn container-fluid alingcenter mt-auto my-5">
+                      '</div>
+                      <a href="'.$permalink.'">
+                        <button class="card-button btn container-fluid alingcenter mt-auto my-3">
                           Ver más
-                        </button>'
-                      // </a>
-                    .'</div>
+                        </button>
+                      </a>
+                    </div>
                   </section>';
       endwhile;
 
