@@ -77,14 +77,14 @@
             $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_yt').'" class="fab fa-youtube m-auto"></a>';
           }
 
-          $social_icon_div = '<div class="d-flex">'.$social_icon.'</div>';
+          $social_icon_div = '<div class="d-flex mt-5 mt-md-0">'.$social_icon.'</div>';
 
           wp_nav_menu(array(
             'theme_location' => 'superior',
             'container'      => 'div',
             'container_class'=> 'navbar-collapse',
             'container_id'   => 'navbarContentMenu',
-            'items_wrap'     => '<div id="navbarContentMenuDiv" class="ml-auto">'.$social_icon_div.$search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items '.$ul_class.'">%3$s</ul></div>',
+            'items_wrap'     => '<div id="navbarContentMenuDiv" class="ml-auto">'.$search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items d-flex '.$ul_class.'">%3$s'.$social_icon_div.'</ul></div>',
             'menu_class'     => 'nav-item',
             'walker'         => new Walker_Nav_Primary()
           ) ); ?>
