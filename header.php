@@ -84,7 +84,7 @@
             'container'      => 'div',
             'container_class'=> 'navbar-collapse',
             'container_id'   => 'navbarContentMenu',
-            'items_wrap'     => '<div id="navbarContentMenuDiv" class="ml-auto">'.$search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items d-flex '.$ul_class.'">%3$s'.$social_icon_div.'</ul></div>',
+            'items_wrap'     => '<div id="navbarContentMenuDiv" class="ml-auto">'.$search_icon .'<ul class="navbar-nav nav text-center mobile-menu-items d-flex '.$ul_class.'" onclick="openMobileMenu()">%3$s'.$social_icon_div.'</ul></div>',
             'menu_class'     => 'nav-item',
             'walker'         => new Walker_Nav_Primary()
           ) ); ?>
