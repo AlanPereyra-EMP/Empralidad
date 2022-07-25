@@ -233,9 +233,7 @@ function emp_custom_post_types_init() {
 
 	register_post_type( 'contact', $args );
 }
-if ( current_user_can( 'edit_pages' ) ) {
-	add_action( 'init', 'emp_custom_post_types_init' );
-}
+add_action( 'init', 'emp_custom_post_types_init' );
 
 // 11) Woocomerce Custom
 if (class_exists('WooCommerce')){
