@@ -43,12 +43,12 @@ function openMobileMenu() {
   if (menu.style.visibility === 'visible') {
     icon.classList.add('fa-bars');
     icon.classList.remove('fa-times');
-    bgMenu.style.height = '0px';
+    bgMenu.classList.add('bg-menu-close');
     menu.style.visibility = 'hidden';
   } else {
     icon.classList.remove('fa-bars');
     icon.classList.add('fa-times');
-    bgMenu.style.height = '200vh';
+    bgMenu.classList.add('bg-menu-open');
     setTimeout(()=>{
       menu.style.visibility = 'visible';
     }, 250)
