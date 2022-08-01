@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="pt-5 p-md-3 min-h-100 content-color content-bg mw-1200px">
-  <div class="row m-auto">
-    <div id="course-intro" class="col-12 col-md-6">
+  <div class="row m-auto color-personalized">
+    <div id="course-intro" class="col-12 col-md-6 p-0 pt-md-5">
       <div class="m-auto">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/HJXXh4i3bKY"></iframe>
       </div>
@@ -12,10 +12,15 @@
           se muestra un diseño para entender mejor el funcionamiento del sitio web.
         </p>
         <div id="course-icons" class="py-3">
-          <i class="fas fa-code mx-2"></i>
-          Programación
-          <i class="fas fa-book ml-5"></i>
-          Avanzado
+          <div>
+            <i class="fas fa-chart-line mx-2"></i><p>Finanzas</p>
+          </div>
+          <div>
+            <i class="fas fa-book mx-2"></i><p>Avanzado</p>
+          </div>
+          <div>
+            <i class="fas fa-clock mx-2"></i><p>Poca duración</p>
+          </div>
         </div>
         <button type="button" name="button" class="btn container-fluid mb-3">Comprar ahora</button>
       </div>
