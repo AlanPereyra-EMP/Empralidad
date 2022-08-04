@@ -22,7 +22,9 @@
               <i class="fas fa-star mx-2"></i><p>Premium</p>
             </div>
           </div>
-          <button class="btn container-fluid mb-3 mt-5">Comprar ahora</button>
+          <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
+            <button class="btn container-fluid mb-3 mt-5">Comprar ahora</button>
+          </a>
           <a href="#" class="text-center d-block small color-personalized">
             <i class="d-inline-flex fas fa-share mx-2"></i>
             <p class="d-inline-flex">Compartir</p>
@@ -38,19 +40,19 @@
           </div>
           <div class="content show">
             <ul>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
@@ -66,42 +68,42 @@
           </div>
           <div class="content">
             <ul>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
-              </a><a href="#">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="#">
+              </a><a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
+                <li>
+                  Tema de ejemplo
+                  <ul>0:00</ul>
+                </li>
+              </a>
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
@@ -117,13 +119,13 @@
           </div>
           <div class="content">
             <ul>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
                 </li>
               </a>
-              <a href="#">
+              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
                 <li>
                   Tema de ejemplo
                   <ul>0:00</ul>
