@@ -322,4 +322,12 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
        url('<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/barlowcondensed/BarlowCondensed-Bold'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "futura";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/futura/futura'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/futura/futura'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/futura/futura'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/futura/futura'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/futura/futura'?>.svg#open-sans') format('svg');
+}
 </style>

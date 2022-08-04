@@ -49,6 +49,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_styles_t
     'indie flower' => __( 'Indie Flower', 'empralidad' ),
     'roboto' 			 => __('Roboto', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
+    'futura'	     => __('Futura', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
     'bad script'	 => __('Bad Script', 'empralidad'),
     'open dyslexic'=> __('Open dyslexic', 'empralidad')
