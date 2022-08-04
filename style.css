@@ -2089,46 +2089,6 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
 	z-index: 10;
 }
 
-/* temp courses */
-#course-intro {
-  display: block;
-	padding: 70px 0;
-}
-#course-intro h2 {
-  font-size: 40px;
-}
-
-#course-topics{
-	font-size: 25px;
-	margin: 70px auto;
-}
-
-#course-topics .module li{
-	border-bottom: 1px solid;
-	list-style: none;
-	margin-bottom: 8px;
-	font-size: 15px;
-}
-#course-topics .module li ul{
-	font-size: 10px;
-	margin-top: -10px;
-	text-align: right;
-}
-#course-icons{
-	font-size: 22px;
-}
-#course-icons div{
-	align-items: baseline;
-	display: inline-flex;
-	margin: 0 10px;
-}
-#course-icons i, #course-icons p {
-    display: flex;
-}
-#course-icons p {
-    margin-left: 10px;
-}
-
 /*Contact form 7*/
 .comment-form input{width: 100%}.wpcf7-submit, #submit.submit{border:2px solid transparent;padding: 10px;border-radius: 5px;width: 100%}.wpcf7-form{padding:0;max-width:1200px}form.wpcf7-form{width:100%;padding-left:0;padding-top:0;padding-bottom:0;margin-right:auto;margin-left:auto}p label{width:100%;margin-right:auto;margin-left:auto}.wpcf7-form-control{width:100%;margin-right:auto;margin-left:auto}select{border: 1px solid #aaa;padding: 7px;background: #fff;}.landing_pages-template-default input.wpcf7-form-control.wpcf7-submit {color: var(--emp-head-title-bg)!important;background: var(--emp-head-title-color)!important;}
 /* SFPO */

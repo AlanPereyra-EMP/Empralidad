@@ -179,7 +179,7 @@ function emp_custom_post_types_init() {
 	$args = array(
 		'labels'             => $labels,
     'description'        => __( 'Descripcion.', 'empralidad' ),
-		'menu_icon' 				 => 'dashicons-text-page',
+		'menu_icon' 				 => 'dashicons-layout',
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,

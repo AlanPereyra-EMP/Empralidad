@@ -1,35 +1,13 @@
 <?php get_header(); ?>
-<div class="pt-5 min-h-100 content-color content-bg">
-  <div class="row m-auto color-personalized">
-    <div id="course-intro" class="mw-1200px mb-md-5">
-      <div class="col-12 col-md-6 p-0 pt-md-5">
-        <div class="m-auto">
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/HJXXh4i3bKY"></iframe>
-        </div>
-        <div class="mx-auto p-3">
-          <h2><?php the_title(); ?></h2>
-          <p>
-            <?php the_excerpt(); ?>
-          </p>
-          <div id="course-icons" class="py-3">
-            <div>
-              <i class="fas fa-chart-line mx-2"></i><p>Finanzas</p>
-            </div>
-            <div>
-              <i class="fas fa-book mx-2"></i><p>Avanzado</p>
-            </div>
-            <div>
-              <i class="fas fa-star mx-2"></i><p>Premium</p>
-            </div>
-          </div>
-          <button class="btn container-fluid mb-3 mt-5">Comprar ahora</button>
-          <a href="#" class="text-center d-block small color-personalized">
-            <i class="d-inline-flex fas fa-share mx-2"></i>
-            <p class="d-inline-flex">Compartir</p>
-          </a>
+<div class="content-color content-bg">
+  <div class="m-auto color-personalized">
+    <div id="container-video" class="mb-5 row">
+      <div class="col-12 col-md-9 mt-5 p-0">
+        <div id="lesson-video" class="m-auto">
+          <iframe class="video-16-9" src="https://www.youtube.com/embed/HJXXh4i3bKY"></iframe>
         </div>
       </div>
-      <div id="course-topics" class="border-30px col-12 col-md-5">
+      <div id="course-topics" class="border-30px col-12 col-md-3">
         <h2>Temario:</h2>
         <div class="module border-30px">
           <div class="title">
@@ -134,25 +112,16 @@
         </div>
       </div>
     </div>
-    <div id="course-content" class="d-block w-100 content-color content-background">
+    <div id="lesson-content" class="d-block w-100 content-color content-background">
       <?php the_content();?>
-      <div class="autor">
-        <div class="content-template">
-          <div class="">
-            <img class="autor-img" src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg" alt="">
-            <h2 class="text-center d-block py-3">Nombre de ejemplo</h2>
-          </div>
-          <div class="align-text p-3 p-md-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
+      <div class="comments">
+        <h2>Comentarios</h2>
       </div>
-      <div class="mw-1200px p-3 p-md-5 py-5">
-        <h2 class="mt-5">Cursos relacionados</h2>
-        <?php echo do_shortcode('[emp_courses]') ?>
+      <!-- Comments -->
+      <div class="mw-1200px py-5">
+        <?php if ( comments_open() || get_comments_number() ) {
+          comments_template();
+        } ?>
       </div>
     </div>
   </div>
