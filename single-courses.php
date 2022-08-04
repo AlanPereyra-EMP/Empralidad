@@ -139,16 +139,21 @@
     <div id="course-content" class="d-block w-100 content-color content-background">
       <?php the_content();?>
       <div class="autor">
+        <h2 class="autor-title">¿Quién imparte este curso?</h2>
         <div class="content-template">
           <div class="">
             <img class="autor-img" src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg" alt="">
-            <h2 class="text-center d-block py-3">Nombre de ejemplo</h2>
+            <h3 class="text-center d-block py-3">Nombre de ejemplo</h3>
           </div>
-          <div class="align-text p-3 p-md-0">
+          <div class="align-text mw-600-px p-3 p-md-0">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="https://empralidad.com.ar/demo-1/teachers/nombre-de-ejemplo/">
+              <button class="btn container-fluid">Ver sus cursos</button>
+            </a>
           </div>
         </div>
       </div>

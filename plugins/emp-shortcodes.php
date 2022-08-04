@@ -123,7 +123,7 @@ if(!shortcode_exists('emp_courses')) {
   function emp_courses_display($atts) {
 
     $args = array(
-      'post_type' => 'emp_courses',
+      'post_type' => 'courses',
       'post_status' => 'publish',
       'posts_per_page' => 9,
       'orderby' => 'title',
