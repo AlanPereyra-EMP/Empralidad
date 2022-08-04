@@ -118,7 +118,7 @@
         <h2>Comentarios</h2>
       </div>
       <!-- Comments -->
-      <div class="mw-1200px py-5">
+      <div class="mw-1200px py-5 px-3">
         <?php if ( comments_open() || get_comments_number() ) {
           comments_template();
         } ?>
