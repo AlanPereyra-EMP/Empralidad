@@ -116,7 +116,9 @@ add_action(  'wp_enqueue_scripts', 'emp_enqueue_comments_reply' );
 			$id = apply_filters('nav_menu_item_id', 'menu-item-'.$item->ID, $item, $args);
 			$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 
-			$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
+			$on_click = ( $depth == 0 && $args->walker->has_children ) ? '' : 'onclick="openMobileMenu()"';
+
+			$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . $on_click .'>';
 
 			$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
 			$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
