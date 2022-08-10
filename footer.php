@@ -42,11 +42,26 @@
     <div class="show-btn-fixed">
       <?php
       $perma_button = get_theme_mod('emp_components_nav_wsp');
+      $wsp_custom_link = get_theme_mod('emp_components_nav_wsp_custom_link');
       $link_chat_emp = get_theme_mod('emp_components_nav_chat_emp');
       if($link_chat_emp != ''){ ?>
         <div id="chat-emp-btn-fixed" class="img-fixed show-desktop"><a href="<?php echo get_theme_mod('emp_components_nav_chat_emp'); ?>" class="fas fa-comment-dots"></a></div>
       <?php }else if($perma_button){ ?>
-      	<div class="img-fixed show-desktop"><a onclick="<?php echo get_theme_mod('emp_components_nav_wsp_event'); ?>" href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20desde:%0A%0A*<?php echo str_replace(' ', '%20', wp_get_document_title() );?>*%0A%0A<?php echo get_permalink(); ?>"><img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="emp-whatsapp"></a></div>
+      	<?php if (!$wsp_custom_link){ ?>
+          <div class="img-fixed show-desktop">
+            <a onclick="<?php echo get_theme_mod('emp_components_nav_wsp_event'); ?>"
+              href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20desde:%0A%0A*<?php echo str_replace(' ', '%20', wp_get_document_title() );?>*%0A%0A<?php echo get_permalink(); ?>">
+              <img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="emp-whatsapp">
+            </a>
+          </div>
+        <?php }else{ ?>
+          <div class="img-fixed show-desktop">
+            <a onclick="<?php echo get_theme_mod('emp_components_nav_wsp_event'); ?>"
+              href="<?php echo get_theme_mod('emp_components_nav_wsp_custom_link'); ?>">
+              <img class="img-btn-fixed-wsp" height="512" width="512" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/whatsapp-logo.png" alt="emp-whatsapp">
+            </a>
+          </div>
+        <?php } ?>
       <?php } ?>
     	<div class="img-fixed" id="scrollToTopButton"><i class="fas fa-arrow-up img-btn-fixed <?php if ($perma_button) { ?> show-mobile <?php } ?>"></i></div>
     </div>

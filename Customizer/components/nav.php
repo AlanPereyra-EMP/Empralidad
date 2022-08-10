@@ -99,6 +99,19 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'settings'=> 'emp_components_nav_wsp_numb',
   'description'	  => __( 'Sin espacios ni simbolos (+)', 'empralidad' )
 )));
+// Whatsapp custom link
+$wp_customize->add_setting('emp_components_nav_wsp_custom_link', array(
+  'default' => '',
+  'trasnport' => 'refresh',
+  'sanitize_callback' => 'sanitize_encoded'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_nav_wsp_custom_link_control', array(
+  'label'=> __('Link personalizado (whatsapp)', 'empralidad'),
+  'section'=> 'emp_section_components_nav',
+  'settings'=> 'emp_components_nav_wsp_custom_link',
+  'description'	  => __( 'Ingresa un link personalizado (grupo de chat o redireccionador a varios chats)', 'empralidad' )
+)));
 // Whatsapp Event
 $wp_customize->add_setting('emp_components_nav_wsp_event', array(
   'default' => '',
@@ -107,7 +120,7 @@ $wp_customize->add_setting('emp_components_nav_wsp_event', array(
 ));
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_nav_wsp_event_control', array(
-  'label'=> __('Evento onclick', 'empralidad'),
+  'label'=> __('Evento onclick (whatsapp)', 'empralidad'),
   'section'=> 'emp_section_components_nav',
   'settings'=> 'emp_components_nav_wsp_event',
   'description'	  => __( 'Esto será ingresado dentro de la etiqueta "onclick"', 'empralidad' )
