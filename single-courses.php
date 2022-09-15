@@ -136,8 +136,17 @@
         </div>
       </div>
     </div>
-    <div id="course-content" class="d-block w-100 content-color content-background">
+    <section id="course-content" class="d-block w-100 content-color content-background">
       <?php the_content();?>
+      <div class="">
+        <?php
+        $id = get_the_ID();
+        $teacher_id = get_post_meta($id, 'emp_lessons_teachers', true);
+        $teacher = get_post($teacher_id);
+        $permalink = get_permalink($teacher_id);
+        echo "<a href='" . $permalink . "'>" . $teacher->post_title . "</a><p>".$teacher->post_content."</p>";
+        ?>
+      </div>
       <div class="autor">
         <h2 class="autor-title">¿Quién imparte este curso?</h2>
         <div class="content-template">
@@ -161,7 +170,18 @@
         <h2 class="mt-5">Cursos relacionados</h2>
         <?php echo do_shortcode('[emp_courses]') ?>
       </div>
-    </div>
+      <?php if (have_comments()): ?>
+        <div class="new-section">
+          <h2>Comentarios</h2>
+        </div>
+        <!-- Comments -->
+        <div class="mw-1200px py-5 px-3">
+          <?php if ( comments_open() || get_comments_number() ) {
+            comments_template();
+          } ?>
+        </div>
+      <?php endif; ?>
+    </section>
   </div>
 </div>
 <?php get_footer(); ?>
