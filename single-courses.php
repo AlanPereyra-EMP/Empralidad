@@ -66,7 +66,7 @@ $teacher_permalink = get_permalink($teacher_id);
                 if (wc_customer_bought_product( '', get_current_user_id(), $product->emp_product_courses)) {
                   $link = get_permalink($topic);
                 }else{
-                  $link = '#course-icons'
+                  $link = '#course-icons';
                 }
 
                 $title = get_the_title($topic);
