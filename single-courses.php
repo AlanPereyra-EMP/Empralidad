@@ -47,7 +47,7 @@ $teacher_permalink = get_permalink($teacher_id);
             <?php echo do_shortcode( '[add_to_cart id=' . $product->emp_product_courses . ']' ) ?>
           <?php } ?>
 
-          <a href="#" class="btn btn-outline-light text-center d-block small color-personalized">
+          <a href="#" class="btn btn-course-outline-light text-center d-block small color-personalized">
             <i class="d-inline-flex fas fa-share mx-2"></i>
             <p class="d-inline-flex m-0">Compartir</p>
           </a>
@@ -66,7 +66,7 @@ $teacher_permalink = get_permalink($teacher_id);
                 if (wc_customer_bought_product( '', get_current_user_id(), $product->emp_product_courses)) {
                   $link = get_permalink($topic);
                 }
-                
+
                 $title = get_the_title($topic);
                 ?>
                 <a href="<?php echo $link ?>">
