@@ -63,13 +63,16 @@ $teacher_permalink = get_permalink($teacher_id);
             <ul>
               <?php
               foreach ($topics as $topic) {
-                $link = get_permalink($topic);
+                if (wc_customer_bought_product( '', get_current_user_id(), $product->emp_product_courses)) {
+                  $link = get_permalink($topic);
+                }
+                
                 $title = get_the_title($topic);
                 ?>
                 <a href="<?php echo $link ?>">
                   <li>
                     <?php echo $title ?>
-                    <ul>0:00</ul>
+                    <!-- <ul>0:00</ul> -->
                   </li>
                 </a>
               <?php } ?>

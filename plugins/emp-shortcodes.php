@@ -149,21 +149,12 @@ if(!shortcode_exists('emp_courses')) {
       }
 
       $courses .= '<section class="course card p-0 border-30px content-background content-color">
-                    <div class="card-header">'.$the_category.'</div>
-                    <div class="card-block">
-                      <?php'
-                      .$image.
-                      '<br>
-                      <h2 class="content-color">'.$the_title.'</h2>
-                      <div class="card-text p-3">'
-                        .$the_excerpt.
+                    <a href="'.$permalink.'">
+                      <div class="card-block">
+                        <?php'
+                        .$image.
                       '</div>
-                      <a href="'.$permalink.'">
-                        <button class="card-button btn container-fluid alingcenter mt-auto my-3">
-                          Ver más
-                        </button>
-                      </a>
-                    </div>
+                    </a>
                   </section>';
       endwhile;
 
