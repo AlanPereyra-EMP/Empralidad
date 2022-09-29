@@ -1,136 +1,78 @@
-<?php get_header(); ?>
+<?php get_header();
+$id = get_the_ID();
+$product_id = get_post_meta($id, 'product_courses', true);
+$product = get_post($product_id);
+$video_id = get_post_meta($id, 'courses_video', true);
+$video = get_post($video_id);
+$dificulty_id = get_post_meta($id, 'course_dificulty', true);
+$dificulty = get_post($dificulty_id);
+$teacher_id = get_post_meta($id, 'emp_course_teachers', true);
+$teacher = get_post($teacher_id);
+$topics = get_post_meta($id, '_lessons_position', true);
+$topics = explode(',', $topics);
+$teacher_permalink = get_permalink($teacher_id);
+
+?>
 <div class="pt-5 min-h-100 content-color content-bg">
   <div class="row m-auto color-personalized">
     <div id="course-intro" class="mw-1200px mb-md-5">
       <div class="col-12 col-md-6 p-0 pt-md-5">
         <div class="m-auto">
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/HJXXh4i3bKY"></iframe>
+          <iframe width="420" height="315" src="<?php echo $video->_course_video ?>"></iframe>
         </div>
         <div class="mx-auto p-3">
           <h2><?php the_title(); ?></h2>
-          <p>
+          <p class="invisible h-0">--------------------------------------------------------------------------------</p>
             <?php the_excerpt(); ?>
-          </p>
           <div id="course-icons" class="py-3">
-            <div>
+            <!-- <div>
               <i class="fas fa-chart-line mx-2"></i><p>Finanzas</p>
-            </div>
+            </div> -->
             <div>
-              <i class="fas fa-book mx-2"></i><p>Avanzado</p>
+              <i class="fas fa-book mx-2"></i><p><?php echo $dificulty->_course_dificulty ?></p>
             </div>
-            <div>
-              <i class="fas fa-star mx-2"></i><p>Premium</p>
-            </div>
+            <?php
+            if ($product->emp_product_courses) { ?>
+              <div>
+                <i class="fas fa-star mx-2"></i><p>Premium</p>
+              </div>
+            <?php } else { ?>
+              <div>
+                <i class="fas fa-check mx-2"></i><p>Gratuito</p>
+              </div>
+            <?php } ?>
           </div>
-          <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-            <button class="btn container-fluid mb-3 mt-5">Comprar ahora</button>
-          </a>
-          <a href="#" class="text-center d-block small color-personalized">
+          <?php
+          if (!wc_customer_bought_product( '', get_current_user_id(), $product->emp_product_courses)){ ?>
+            <?php echo do_shortcode( '[add_to_cart id=' . $product->emp_product_courses . ']' ) ?>
+          <?php } ?>
+
+          <a href="#" class="btn btn-outline-light text-center d-block small color-personalized">
             <i class="d-inline-flex fas fa-share mx-2"></i>
-            <p class="d-inline-flex">Compartir</p>
+            <p class="d-inline-flex m-0">Compartir</p>
           </a>
         </div>
       </div>
       <div id="course-topics" class="border-30px col-12 col-md-5">
-        <h2>Temario:</h2>
         <div class="module border-30px">
           <div class="title">
-            <h3>1) Titulo ejemplo</h3>
+            <h3>Temario</h3>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="content show">
             <ul>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div class="module border-30px">
-          <div class="title">
-            <h3>2) Titulo ejemplo</h3>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="content">
-            <ul>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a><a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div class="module border-30px">
-          <div class="title">
-            <h3>3) Titulo ejemplo</h3>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="content">
-            <ul>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
-              <a href="https://empralidad.com.ar/demo-1/lessons/introduccion-a-los-mercados-financieros/">
-                <li>
-                  Tema de ejemplo
-                  <ul>0:00</ul>
-                </li>
-              </a>
+              <?php
+              foreach ($topics as $topic) {
+                $link = get_permalink($topic);
+                $title = get_the_title($topic);
+                ?>
+                <a href="<?php echo $link ?>">
+                  <li>
+                    <?php echo $title ?>
+                    <ul>0:00</ul>
+                  </li>
+                </a>
+              <?php } ?>
             </ul>
           </div>
         </div>
@@ -138,34 +80,25 @@
     </div>
     <section id="course-content" class="d-block w-100 content-color content-background">
       <?php the_content();?>
-      <div class="">
-        <?php
-        $id = get_the_ID();
-        $teacher_id = get_post_meta($id, 'emp_lessons_teachers', true);
-        $teacher = get_post($teacher_id);
-        $permalink = get_permalink($teacher_id);
-        echo "<a href='" . $permalink . "'>" . $teacher->post_title . "</a><p>".$teacher->post_content."</p>";
-        ?>
-      </div>
-      <div class="autor">
-        <h2 class="autor-title">¿Quién imparte este curso?</h2>
-        <div class="content-template">
-          <div class="">
-            <img class="autor-img" src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg" alt="">
-            <h3 class="text-center d-block py-3">Nombre de ejemplo</h3>
-          </div>
-          <div class="align-text mw-600-px p-3 p-md-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="https://empralidad.com.ar/demo-1/teachers/nombre-de-ejemplo/">
-              <button class="btn container-fluid">Ver sus cursos</button>
-            </a>
+      <?php if ($teacher_id){ ?>
+        <div class="autor">
+          <h2 class="autor-title">¿Quién imparte este curso?</h2>
+          <div class="content-template">
+            <div class="">
+              <img class="autor-img" src="<?php echo get_the_post_thumbnail_url($teacher_id) ?>" alt="">
+              <h3 class="text-center d-block py-3"><?php echo $teacher->post_title ?></h3>
+            </div>
+            <div class="align-text mw-600-px p-3 p-md-0 w-100">
+              <p>
+                <?php $teacher->post_content ?>
+              </p>
+              <a href="<?php echo $teacher_permalink ?>">
+                <button class="btn container-fluid">Ver sus cursos</button>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      <?php } ?>
       <div class="mw-1200px p-3 p-md-5 py-5">
         <h2 class="mt-5">Cursos relacionados</h2>
         <?php echo do_shortcode('[emp_courses]') ?>

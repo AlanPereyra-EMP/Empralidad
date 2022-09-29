@@ -86,7 +86,7 @@ section a, section button{
 	margin: auto;
 	max-width: 1200px;
 }
-section p{
+section p, section h2{
 	margin: 40px auto;
 }
 section .new-section {
@@ -1057,6 +1057,9 @@ body, .fa-text{
 }
 .h-100-vh{
 	height: 100vh!important;
+}
+.h-0{
+	height: 0!important;
 }
 .mh-100-auto{
 	max-height: 100%;
