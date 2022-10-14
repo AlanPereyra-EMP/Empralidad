@@ -25,7 +25,9 @@
     <?php }?>
 
     <!-- navbar -->
-      <div id="navbar-background" class="sticky-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php } ?>" style="z-index:1032;">
+      <div id="navbar-background" class="sticky-top <?php if( is_admin_bar_showing() ){ ?> admin-fixed-top <?php }
+      if (get_theme_mod('emp_slider_show1')) { ?> hover<?php }
+        ?>" style="z-index:1032;">
         <nav class="navbar navbar-expand-lg py-0 mw-1200px">
           <div class="bg-navbar-top <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>">
               <i id="btn-menu-nav" class="fa fa-bars text-dark <?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?>" onclick="openMobileMenu()"></i>
