@@ -157,7 +157,7 @@ if($emp_title_show){ ?>
   <?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
   <?php $emp_home_show_3 = get_theme_mod('emp_homepage_show_3'); ?>
   <?php if($emp_home_categories||$emp_home_show_1||$emp_home_show_2||$emp_home_show_3){ ?>
-    <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if ($emp_home_show_1||$emp_home_categories){?> mt-230-mobile <?php } ?>">
+    <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if ($emp_home_show_1||$emp_home_categories){?> mt-140-mobile <?php } ?>">
       <!-- Woocommerce categories -->
       <?php if ($emp_home_categories){?>
         <div class="py-3 mx-auto my-auto" >
