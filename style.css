@@ -505,7 +505,7 @@ section .btn-outline-light {
 	display: none;
 }
 #emp-sliders ul li img{
-	max-width: 1300px!important;
+	max-width: 1000px!important;
 	scroll-snap-align: center;
 	width: 100vw;
 }
