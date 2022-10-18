@@ -75,7 +75,7 @@ body{
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_medium') ; ?>px!important;
   }
   #main-head p{
-    font-size: <?php echo (get_theme_mod('emp_components_head_text_size_') - 80); ?>px;
+    font-size: <?php echo (get_theme_mod('emp_components_head_text_size') - 80); ?>px;
   }
 }
 @media (min-width: 992px) {
