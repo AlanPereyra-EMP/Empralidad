@@ -234,10 +234,10 @@ function slidersFrontpage(){
         left: totalWidth,
         behavior: 'smooth'
       });
-      position = totalWidth-widthSlider[actualSlider];
+      position = totalWidth-(widthSlider[actualSlider]/2);
     }else{
       sliderUl.scroll({
-        left: position-widthSlider[actualSlider],
+        left: position-(widthSlider[actualSlider]/2),
         behavior: 'smooth'
       });
       position = position-widthSlider[actualSlider];
@@ -276,7 +276,7 @@ function slidersFrontpage(){
       position = 0;
     }else{
       sliderUl.scroll({
-        left: position+widthSlider[actualSlider],
+        left: position+(widthSlider[actualSlider]/2),
         behavior: 'smooth'
       });
       position = position+widthSlider[actualSlider];
