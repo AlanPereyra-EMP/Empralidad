@@ -68,14 +68,14 @@ body{
   font-size: <?php echo get_theme_mod('emp_components_head_title_size_mobile'); ?>px!important;/*warning*/
 }
 #main-head p{
-  font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.30); ?>px;
+  font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.45); ?>px;
 }
 @media (min-width: 577px) {
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_medium') ; ?>px!important;
   }
   #main-head p{
-    font-size: <?php echo (get_theme_mod('emp_components_head_text_size') - 80); ?>px;
+    font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.60); ?>px;
   }
 }
 @media (min-width: 992px) {
