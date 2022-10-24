@@ -332,7 +332,10 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
 }
 @font-face {
   font-family: "cmr10";
-  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.woff') format('woff'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.ttf') format('truetype');
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/cmr10/cmr10'?>.svg#open-sans') format('svg');
 }
 </style>
