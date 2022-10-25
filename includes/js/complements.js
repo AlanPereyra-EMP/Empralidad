@@ -237,7 +237,7 @@ function slidersFrontpage(){
       position = totalWidth-(widthSlider[actualSlider]/2);
     }else{
       sliderUl.scroll({
-        left: position-(widthSlider[actualSlider]/2),
+        left: position-(widthSlider[actualSlider]*2),
         behavior: 'smooth'
       });
       position = position-widthSlider[actualSlider];
