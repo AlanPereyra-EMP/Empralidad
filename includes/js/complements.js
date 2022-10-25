@@ -234,22 +234,16 @@ function slidersFrontpage(){
         left: totalWidth,
         behavior: 'smooth'
       });
-      position = totalWidth-(widthSlider[actualSlider]/2);
+      position = totalWidth-(widthSlider[actualSlider]/1.9);
     }else{
       sliderUl.scroll({
-        left: position-(widthSlider[actualSlider]*2),
+        left: position-(widthSlider[actualSlider]*1.9),
         behavior: 'smooth'
       });
       position = position-widthSlider[actualSlider];
     }
 
-    // Reactive automatic scroll slider
-    if(userClicked){
-      autoSlider = window.setInterval(setAutoSlider, 10000);
-      userClicked = false;
-    } else {
-      autoSlider = window.setInterval(setAutoSlider, 4000);
-    }
+    userIsReading();
   }
 
   function slowNextSlider(){
@@ -276,13 +270,18 @@ function slidersFrontpage(){
       position = 0;
     }else{
       sliderUl.scroll({
-        left: position+(widthSlider[actualSlider]/2),
+        left: position+(widthSlider[actualSlider]/1.9),
         behavior: 'smooth'
       });
       position = position+widthSlider[actualSlider];
+      console.log(position);
     }
 
-    // Reactive automatic scroll slider
+    userIsReading();
+  }
+
+  // Detect if de user is reading de actual slider
+  function userIsReading() {
     if(userClicked){
       autoSlider = window.setInterval(setAutoSlider, 10000);
       userClicked = false;
@@ -291,6 +290,7 @@ function slidersFrontpage(){
     }
   }
 
+  empSliders.addEventListener('scroll', userIsReading, false);
   prevBtn.addEventListener('click', slowPrevSlider, false);
   nextBtn.addEventListener('click', slowNextSlider, false);
 
