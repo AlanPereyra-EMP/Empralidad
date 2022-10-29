@@ -160,7 +160,7 @@ if($emp_title_show){ ?>
     <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if ($emp_home_show_1||$emp_home_categories){?> mt-140-mobile <?php } ?>">
       <!-- Woocommerce categories -->
       <?php if ($emp_home_categories){?>
-        <div class="py-3 mx-auto my-auto" >
+        <div class="m-auto" >
           <div class="mw-100 support-woo-shortcode mw-1200px p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;"y>
             <?php echo do_shortcode('[product_categories number="0" parent="0"]'); ?>
           </div>
@@ -168,7 +168,7 @@ if($emp_title_show){ ?>
       <?php } ?>
       <!-- Text 1 -->
       <?php if ($emp_home_show_1){?>
-        <div class="py-3 mx-auto my-auto" >
+        <div class="m-auto" >
           <div class="mw-100 support-woo-shortcode mw-1200px p-personalized-1 text-<?php echo get_theme_mod('emp_homepage_text_aling1'); ?> " style="padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;">
             <?php echo do_shortcode(get_theme_mod('emp_homepage_text1')); ?>
           </div>
@@ -186,7 +186,7 @@ if($emp_title_show){ ?>
       <?php if ($emp_home_show_2){?>
         <div class="py-3  mx-auto my-auto">
           <div class="p-2 mw-100 overflow-auto mw-1200px p-personalized-2 text-<?php echo get_theme_mod('emp_homepage_text_aling2'); ?> " >
-            <h2 class="text-center h1">
+            <h2 class="featured-title">
               <span class=""><?php echo get_theme_mod('emp_homepage_title2') ?></span>
             </h2>
             <?php echo do_shortcode(get_theme_mod('emp_homepage_text2')); ?>
@@ -203,9 +203,9 @@ if($emp_title_show){ ?>
       <?php } ?>
       <!-- Text 3 -->
       <?php if ($emp_home_show_3){ ?>
-        <div class="py-3 mx-auto my-auto" >
-          <div class="p-2 mw-100 overflow-auto mw-1200px p-personalized-3 text-<?php echo get_theme_mod('emp_homepage_text_aling3'); ?> ">
-            <h2 class="text-center h1" >
+        <div class="m-auto" >
+          <div class="mw-100 overflow-auto p-personalized-3 text-<?php echo get_theme_mod('emp_homepage_text_aling3'); ?> ">
+            <h2 class="featured-title" >
               <span class=""><?php echo get_theme_mod('emp_homepage_title3'); ?></span>
             </h2>
             <?php echo do_shortcode(get_theme_mod('emp_homepage_text3')); ?>
@@ -235,7 +235,7 @@ if($emp_title_show){ ?>
       <div class="mx-auto">
         <?php get_template_part('includes/wc-featured-products') ?>
           <br>
-        <h2 id="posts-home" class="text-center text-featured">Lo más reciente</h2>
+        <h2 id="posts-home" class="featured-title">Lo más reciente</h2>
         <div class="card-columns-2 p-2">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part('content', get_post_format()) ?>

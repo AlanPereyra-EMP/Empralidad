@@ -87,16 +87,14 @@ $teacher_permalink = get_permalink($teacher_id);
       <?php the_content();?>
       <?php if ($teacher_id){ ?>
         <div class="autor">
-          <h2 class="autor-title">¿Quién imparte este curso?</h2>
+          <h2 class="featured-title">¿Quién presenta el curso?</h2>
           <div class="content-template">
-            <div class="">
+            <div class="w-25 m-auto">
               <img class="autor-img" src="<?php echo get_the_post_thumbnail_url($teacher_id) ?>" alt="">
               <h3 class="text-center d-block py-3"><?php echo $teacher->post_title ?></h3>
             </div>
-            <div class="align-text mw-600-px p-3 p-md-0 w-100">
-              <p>
-                <?php $teacher->post_content ?>
-              </p>
+            <div class="align-text p-3 p-md-0 w-75 m-auto">
+                <?php echo $teacher->post_content ?>
               <a href="<?php echo $teacher_permalink ?>">
                 <button class="btn container-fluid">Ver sus cursos</button>
               </a>
@@ -104,8 +102,8 @@ $teacher_permalink = get_permalink($teacher_id);
           </div>
         </div>
       <?php } ?>
-      <div class="mw-1200px p-3 p-md-5 py-5">
-        <h2 class="mt-5">Cursos relacionados</h2>
+      <h2 class="featured-title">Cursos relacionados</h2>
+      <div class="py-5">
         <?php echo do_shortcode('[emp_courses]') ?>
       </div>
       <?php if (have_comments()): ?>
