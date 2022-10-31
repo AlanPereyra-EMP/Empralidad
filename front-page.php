@@ -147,8 +147,12 @@ if($emp_title_show){ ?>
       </div>
 
     <?php } ?>
+    <a href="#first-content-home" class="home-btn-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
     </div>
   </header>
+
 <?php } ?>
 <div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
 <div id="emp-content" class="row mx-auto">
