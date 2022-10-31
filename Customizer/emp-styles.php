@@ -133,14 +133,14 @@ body{
   }
 }
 @media (min-width:992px) {
-  .p-personalized-1{
-    padding:<?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;
+  .pb-personalized-1{
+    padding-bottom: <?php echo get_theme_mod('emp_homepage_size1'); ?>%!important;
   }
-  .p-personalized-2{
-    padding:<?php echo get_theme_mod('emp_homepage_size2'); ?>%!important;
+  .pb-personalized-2{
+    padding-bottom: <?php echo get_theme_mod('emp_homepage_size2'); ?>%!important;
   }
-  .p-personalized-3{
-    padding:<?php echo get_theme_mod('emp_homepage_size3'); ?>%!important;
+  .pb-personalized-3{
+    padding-bottom: <?php echo get_theme_mod('emp_homepage_size3'); ?>%!important;
   }
 }
 

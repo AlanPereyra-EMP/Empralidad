@@ -86,19 +86,23 @@ if(!shortcode_exists('emp_table')) {
   		$tbody[] = ${'row'.$i};
   	}
 
-  	$tbody['links'] = '<tr class="sfpo-links"><th class="sfpo-links-th" style="background: none!important;"></th>';
+  	if ($first[1]||$second[1]||$third[1]||$fourth[1]) {
+      $tbody['links'] = '<tr class="sfpo-links"><th class="sfpo-links-th" style="background: none!important;">Contratar</th>';
 
-    for($i = 0; $i < $real_columns+4; $i++){
-      if($op[$i][2] != ''){
-        $link = $op[$i][2];
-        $link_name = $op[$i][1];
-        $tbody['links'] .='<td><a class="shadow-grey-down btn" href="'.$op[$i][2].'">'.$op[$i][1].'</a></td>';
-      }else{
-        $tbody['links'] .='<td></td>';
+      for($i = 0; $i < $real_columns+4; $i++){
+        if($op[$i][2] != ''){
+          $link = $op[$i][2];
+          $link_name = $op[$i][1];
+          $tbody['links'] .='<td><a class="shadow-grey-down btn" href="'.$op[$i][2].'">'.$op[$i][1].'</a></td>';
+        }else{
+          $tbody['links'] .='<td></td>';
+        }
       }
-    }
 
-    $tbody['links'] .= '</tr>';
+      $tbody['links'] .= '</tr>';
+    }else{
+      $tbody['links'] = '';
+    }
 
     return '<div class="overflow-x-auto">
             <table class="sfpo-table">'.
