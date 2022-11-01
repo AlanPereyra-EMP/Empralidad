@@ -70,6 +70,11 @@ body{
 #main-head p{
   font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.45); ?>px;
 }
+@media (min-width: 400px) {
+  .text-mobile {
+    font-size: <?php echo (get_theme_mod('emp_components_head_title_size_mobile')*1.35); ?>px!important;/*warning*/
+  }
+}
 @media (min-width: 577px) {
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_medium') ; ?>px!important;
@@ -78,10 +83,12 @@ body{
     font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.60); ?>px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 800px) {
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_large'); ?>px!important;
   }
+}
+@media (min-width: 1200px) {
   #main-head p{
     font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
   }
@@ -103,9 +110,6 @@ body{
     div#carousel-item-1 h1, div#carousel-item-1 p {
       width: 65%!important;
     }
-    .btn-secondary-actived {
-      max-width: 30%!important;
-    }
     <?php if(get_theme_mod('emp_components_head_title_align') == 'left'){ ?>
       .title-img{
         right: 0;
@@ -124,7 +128,7 @@ body{
   <?php } ?>
 }
 
-@media (min-width: 1500px){
+@media (min-width: 1400px){
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_extralarge'); ?>px!important;
   }
