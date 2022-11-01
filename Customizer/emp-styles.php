@@ -70,6 +70,11 @@ body{
 #main-head p{
   font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.45); ?>px;
 }
+@media (max-width: 300px) {
+  .text-mobile {
+    font-size: <?php echo (get_theme_mod('emp_components_head_title_size_mobile')*.8); ?>px!important;/*warning*/
+  }
+}
 @media (min-width: 400px) {
   .text-mobile {
     font-size: <?php echo (get_theme_mod('emp_components_head_title_size_mobile')*1.35); ?>px!important;/*warning*/
