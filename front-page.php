@@ -154,12 +154,13 @@ if($emp_title_show){ ?>
   </header>
 
 <?php } ?>
-<div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } ?> bg-personalized"></div>
+
+<?php $emp_home_categories = get_theme_mod('emp_woocommerce_categories_show'); ?>
+<?php $emp_home_show_1 = get_theme_mod('emp_homepage_show_1'); ?>
+<?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
+<?php $emp_home_show_3 = get_theme_mod('emp_homepage_show_3'); ?>
+<div id="first-content-home" class="<?php if( is_admin_bar_showing() ){ ?> admin-bar-show <?php } if( $emp_home_categories||$emp_home_show_1){ ?> categories-active <?php } ?> bg-personalized"></div>
 <div id="emp-content" class="row mx-auto">
-  <?php $emp_home_categories = get_theme_mod('emp_woocommerce_categories_show'); ?>
-  <?php $emp_home_show_1 = get_theme_mod('emp_homepage_show_1'); ?>
-  <?php $emp_home_show_2 = get_theme_mod('emp_homepage_show_2'); ?>
-  <?php $emp_home_show_3 = get_theme_mod('emp_homepage_show_3'); ?>
   <?php if($emp_home_categories||$emp_home_show_1||$emp_home_show_2||$emp_home_show_3){ ?>
     <div class="col-12 mx-auto px-0 shadow-grey-up-down-1 content-color content-background border-30px home-featured-text <?php if ($emp_home_show_1||$emp_home_categories){?> mt-140-mobile <?php } ?>">
       <!-- Woocommerce categories -->
