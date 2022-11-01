@@ -92,13 +92,15 @@ $teacher_permalink = get_permalink($teacher_id);
             <div class="w-25 m-auto">
               <img class="autor-img" src="<?php echo get_the_post_thumbnail_url($teacher_id) ?>" alt="">
               <h3 class="text-center d-block py-3"><?php echo $teacher->post_title ?></h3>
-            </div>
-            <div class="align-text p-3 p-md-0 w-75 m-auto">
-                <?php echo $teacher->post_content ?>
               <a href="<?php echo $teacher_permalink ?>">
                 <button class="btn container-fluid">Ver sus cursos</button>
               </a>
             </div>
+            <?php if ($teacher->post_content): ?>
+              <div class="align-text p-3 p-md-0 w-75 m-auto">
+                  <?php echo $teacher->post_content ?>
+              </div>
+            <?php endif; ?>
           </div>
         </div>
       <?php } ?>
