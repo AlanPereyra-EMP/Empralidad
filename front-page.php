@@ -42,7 +42,7 @@ if($emp_title_show){ ?>
   <header id="main-head" <?php if(get_theme_mod('emp_components_head_title_categories_on')){ ?>class="categories-on"<?php } ?> >
     <div class="text-img-home container-fluid my-auto">
       <div id="carouselFade" class="carousel carousel-fade carousel-inner text-homepage-container" data-ride="carousel">
-        <div id="carousel-item-1" class="carousel-item active empFadeIn mx-auto color-personalized mw-1200px">
+        <div id="carousel-item-1" class="carousel-item active empFadeIn mx-auto color-personalized mw-1300px">
           <h1 class="text-mobile color-personalized empFadeIn">
             <?php
             if(is_front_page() && !is_home()){
@@ -148,6 +148,7 @@ if($emp_title_show){ ?>
 
     <?php } ?>
     <a href="#first-content-home" class="home-btn-down">
+      <small><?php echo get_theme_mod('emp_front_show_more_text'); ?></small>
       <i class="fas fa-chevron-down"></i>
     </a>
     </div>

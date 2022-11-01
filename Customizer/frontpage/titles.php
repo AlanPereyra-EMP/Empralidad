@@ -48,6 +48,20 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_te
   'type'       => 'textarea',
   'description'=> __('Texto destacado principal', 'empralidad')
 )));
+// Show more text 1
+$wp_customize->add_setting('emp_front_show_more_text', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_show_more_text_control', array(
+  'label'      => __('Texto', 'empralidad'),
+  'section'    => 'emp_section_front_title',
+  'settings'   => 'emp_front_show_more_text',
+  'type'       => 'text',
+  'description'=> __('Texto sobre el botón "ver más"', 'empralidad')
+)));
 // Image top 1
 $wp_customize->add_setting('emp_front_image_top1', array(
   'trasnport'         => 'refresh',
@@ -212,9 +226,23 @@ $wp_customize->add_setting('emp_front_image_top2', array(
 $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_front_image_top_control2', array(
   'mime_type'  => 'image',
   'label'      => __('Imagen superpuesta', 'empralidad'),
-  'section'    => 'emp_section_front_title',
+  'section'    => 'emp_section_front_title2',
   'settings'   => 'emp_front_image_top2',
   'description'=> __('Seleciona una imagen destacada (cuadrada)', 'empralidad')
+)));
+// Show more text 2
+$wp_customize->add_setting('emp_front_show_more_text2', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_show_more_text2_control', array(
+  'label'      => __('Texto', 'empralidad'),
+  'section'    => 'emp_section_front_title2',
+  'settings'   => 'emp_front_show_more_text2',
+  'type'       => 'text',
+  'description'=> __('Texto sobre el botón "ver más"', 'empralidad')
 )));
 // Image background 2
 $wp_customize->add_setting('emp_front_image2', array(
@@ -371,9 +399,23 @@ $wp_customize->add_setting('emp_front_image_top3', array(
 $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'emp_front_image_top_control3', array(
   'mime_type'  => 'image',
   'label'      => __('Imagen superpuesta', 'empralidad'),
-  'section'    => 'emp_section_front_title',
+  'section'    => 'emp_section_front_title3',
   'settings'   => 'emp_front_image_top3',
   'description'=> __('Seleciona una imagen destacada (cuadrada)', 'empralidad')
+)));
+// Show more text 3
+$wp_customize->add_setting('emp_front_show_more_text3', array(
+  'default'           => '',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_show_more_text3_control', array(
+  'label'      => __('Texto', 'empralidad'),
+  'section'    => 'emp_section_front_title3',
+  'settings'   => 'emp_front_show_more_text3',
+  'type'       => 'text',
+  'description'=> __('Texto sobre el botón "ver más"', 'empralidad')
 )));
 // Image background 3
 $wp_customize->add_setting('emp_title_image3', array(

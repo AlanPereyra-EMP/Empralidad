@@ -101,10 +101,10 @@ body{
   }
   <?php if(!(get_theme_mod('emp_components_head_title_align') == 'center')){ ?>
     div#carousel-item-1 h1, div#carousel-item-1 p {
-      width: 55%!important;
+      width: 65%!important;
     }
     .btn-secondary-actived {
-      max-width: 25%!important;
+      max-width: 30%!important;
     }
     <?php if(get_theme_mod('emp_components_head_title_align') == 'left'){ ?>
       .title-img{
