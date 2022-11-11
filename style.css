@@ -371,7 +371,6 @@ ul.mobile-menu-items {
 }
 /*---------------------------------------------2)Header-------------------------------------------------*/
 #main-head{
-	height: 84vh;
 	position: relative;
 }
 @media(min-width: 992px){

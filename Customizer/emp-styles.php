@@ -226,6 +226,24 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   }
 <?php } ?>
 
+/* Slider on/off */
+<?php
+$emp_slider1 = get_theme_mod('emp_slider_image1');
+$emp_slider2 = get_theme_mod('emp_slider_image2');
+$emp_slider3 = get_theme_mod('emp_slider_image3');
+if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
+  #main-head{
+    height: 64vh;
+  }
+  div#carouselFade {
+    margin-top: 40px;
+    margin-bottom: -40px;
+  }
+<?php }else{ ?>
+  #main-head{
+    height: 84vh;
+  }
+<?php } ?>
 /* Fonts */
 @font-face {
   font-family: "the secret";

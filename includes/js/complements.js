@@ -274,7 +274,6 @@ function slidersFrontpage(){
         behavior: 'smooth'
       });
       position = position+widthSlider[actualSlider];
-      console.log(position);
     }
 
     userIsReading();
