@@ -87,13 +87,24 @@ body{
   #main-head p{
     font-size: <?php echo (get_theme_mod('emp_components_head_text_size') * 0.60); ?>px;
   }
+  .page #main-head h1{
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size_medium'); ?>px!important;
+  }
 }
 @media (min-width: 800px) {
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_large'); ?>px!important;
   }
 }
+@media (min-width: 992px) {
+  .page #main-head h1{
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size_large'); ?>px!important;
+  }
+}
 @media (min-width: 1200px) {
+  .page #main-head h1{
+    font-size: calc(<?php echo get_theme_mod('emp_components_head_title_size_large'); ?> * .8px)!important;
+  }
   #main-head p{
     font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;
   }
@@ -136,6 +147,9 @@ body{
 @media (min-width: 1400px){
   .text-mobile {
     font-size: <?php echo get_theme_mod('emp_components_head_title_size_extralarge'); ?>px!important;
+  }
+  .page #main-head h1{
+    font-size: <?php echo get_theme_mod('emp_components_head_title_size_large'); ?>px!important;
   }
   #main-head p{
     font-size: <?php echo get_theme_mod('emp_components_head_text_size'); ?>px;

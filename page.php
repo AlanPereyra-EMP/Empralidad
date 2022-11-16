@@ -1,20 +1,39 @@
 <?php get_header(); ?>
-<header class="container-fluid py-5 pt-105 pt-lg-90 text-center text-justify">
-  <h1 class="text-mobile"><?php the_title(); ?></h1>
-</header>
-  <article class="col-12 mx-md-auto p-0 py-3 content-background content-color mw-1200px" style="margin-bottom:200px!important;">
-    <div class="container-fluid p-0 overflow-hidden">
-      <?php
-      if ( have_posts() ) {
-        while ( have_posts() ) {
-          the_post(); the_content(); ?>
-          <span class="btn container-fluid invisible"></span>
-        <?php }
-      }
-      if ( comments_open() || get_comments_number() ) {
-          comments_template(); the_comments_pagination();
-      }
-      ?>
+<?php $emp_title_img = get_the_post_thumbnail_url(); ?>
+
+<header id="main-head">
+  <div class="container-title-page mw-1300px">
+    <div class="container-fluid my-auto">
+      <div id="title-page" class="mx-auto color-personalized">
+        <h1 class="text-mobile color-personalized empFadeIn">
+          <?php the_title(); ?>
+        </h1>
+        <?php the_excerpt(); ?>
+      </div>
+
+      <a href="#first-content-page" class="home-btn-down page">
+        <small>Ver más</small>
+        <i class="fas fa-chevron-down"></i>
+      </a>
     </div>
-  </article>
+    <?php if($emp_title_img){ ?>
+      <img class="title-img-page" src="<?php echo $emp_title_img ?>">
+    <?php } ?>
+  </div>
+</header>
+<article id="first-content-page" class="color-content bg-content p-md-0 rounded-0">
+  <div class="container-fluid p-0 overflow-hidden">
+    <?php
+    if ( have_posts() ) {
+      while ( have_posts() ) {
+        the_post(); the_content(); ?>
+        <span class="btn container-fluid invisible"></span>
+      <?php }
+    }
+    if ( comments_open() || get_comments_number() ) {
+        comments_template(); the_comments_pagination();
+    }
+    ?>
+  </div>
+</article>
 <?php get_footer(); ?>

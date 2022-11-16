@@ -73,6 +73,7 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support('category-thumbnails');
 add_theme_support('post-formats', array('video', 'image', 'aside', 'audio'));
+add_post_type_support( 'page', 'excerpt' );
 
 
 // 7) comment reply
