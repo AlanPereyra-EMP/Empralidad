@@ -2,10 +2,10 @@
 <?php $emp_title_img = get_the_post_thumbnail_url(); ?>
 
 <header id="main-head">
-  <div class="container-title-page mw-1300px">
-    <div class="container-fluid my-auto">
-      <div id="title-page" class="mx-auto color-personalized">
-        <h1 class="text-mobile color-personalized empFadeIn">
+  <div class="div-container-title-page mw-1300px">
+    <div class="container-title-page mt-auto">
+      <div id="title-page" class="mx-auto color-personalized border-30px">
+        <h1 class="color-personalized empFadeIn">
           <?php the_title(); ?>
         </h1>
         <?php the_excerpt(); ?>

@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 7.3.2
+Version: 7.3.3
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -382,11 +382,21 @@ ul.mobile-menu-items {
 	.page #main-head{
 		text-align: left;
 	}
+	.page #main-head .container-title-page{
+		margin-bottom: auto;
+	}
 }
-.page #main-head .container-title-page{
+.page #main-head .div-container-title-page{
   display: flex;
 	height: 100%;
 	margin: auto;
+}
+@media (max-width: 1200px) {
+	.page #main-head #title-page{
+		background: var(--emp-head-title-bg);
+		opacity: .9;
+		padding: 30px;
+	}
 }
 .page #main-head p{
   font-size: 70%;
@@ -553,7 +563,8 @@ section .btn-outline-light {
 	text-align: center;
 }
 .home-btn-down.page{
-	margin-top: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 a.home-btn-down small{
 	font-size: 40%
@@ -564,6 +575,7 @@ a.home-btn-down small{
 	}
 	.home-btn-down{
 		margin-bottom: -80px;
+		margin-top: 80px!important;
 	}
 }
 /*---------------------------------------------4)Titles-------------------------------------------------*/
@@ -658,9 +670,9 @@ img, .wp-caption {
 }
 .title-img-page{
 	bottom: 0;
-	max-height: 100%;
+	height: 100%;
 	left: 50%;
-	opacity: .3;
+	max-width: inherit!important;
 	position: absolute;
 	transform: translate(-50%, 0);
 	z-index: -1;
@@ -671,7 +683,6 @@ img, .wp-caption {
 	}
 	.title-img-page{
 		display: block!important;
-		opacity: 1;
 		position: inherit;
 		transform: translate(0);
 		z-index: 0;
