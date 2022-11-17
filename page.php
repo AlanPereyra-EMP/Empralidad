@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php $emp_title_img = get_the_post_thumbnail_url(); ?>
 
-<header id="main-head">
+<header id="main-head" class="page">
   <div class="div-container-title-page mw-1300px">
     <div class="container-title-page border-30px mt-auto <?php if (!$emp_title_img) { ?> mb-auto <?php } ?>">
       <div id="title-page" class="mx-auto">
