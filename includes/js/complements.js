@@ -45,12 +45,14 @@ function openMobileMenu() {
     icon.classList.remove('fa-times');
     bgMenu.classList.remove('bg-menu-open');
     menu.style.visibility = 'hidden';
+    menu.classList.remove('active');
   } else {
     icon.classList.remove('fa-bars');
     icon.classList.add('fa-times');
     bgMenu.classList.add('bg-menu-open');
     setTimeout(()=>{
       menu.style.visibility = 'visible';
+      menu.classList.add('active');
     }, 250)
   }
 }
