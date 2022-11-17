@@ -3,9 +3,9 @@
 
 <header id="main-head">
   <div class="div-container-title-page mw-1300px">
-    <div class="container-title-page mt-auto <?php if (!$emp_title_img) { ?> mb-auto <?php } ?>">
-      <div id="title-page" class="mx-auto color-personalized border-30px">
-        <h1 class="color-personalized empFadeIn">
+    <div class="container-title-page border-30px mt-auto <?php if (!$emp_title_img) { ?> mb-auto <?php } ?>">
+      <div id="title-page" class="mx-auto">
+        <h1 class="empFadeIn">
           <?php the_title(); ?>
         </h1>
         <?php the_excerpt(); ?>
