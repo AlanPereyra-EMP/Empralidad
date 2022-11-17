@@ -3,7 +3,7 @@
 
 <header id="main-head">
   <div class="div-container-title-page mw-1300px">
-    <div class="container-title-page mt-auto">
+    <div class="container-title-page mt-auto <?php if (!$emp_title_img) { ?> mb-auto <?php } ?>">
       <div id="title-page" class="mx-auto color-personalized border-30px">
         <h1 class="color-personalized empFadeIn">
           <?php the_title(); ?>
