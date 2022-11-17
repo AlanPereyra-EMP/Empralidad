@@ -102,9 +102,12 @@
       </div>
       <i id="bg-menu-mobile"></i>
     <!-- end navbar -->
+    <?php $video_bg_url = wp_get_attachment_url(get_theme_mod('emp_components_head_video')); ?>
     <div class="FullScreenLanding emp_img_slide1 col-12 mx-auto bg-personalized">
       <div id="emp-background-image" class="emp-background-image1 emp-background-media-opacity">
-        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('emp_components_head_video')); ?>" poster="https://empralidad.com.ar/wp-content/uploads/2022/11/pixel-blanco.png" class="emp-video-background">
-        </video>
+        <?php if ($video_bg_url){ ?>
+          <video autoplay muted loop src="<?php echo $video_bg_url ?>" poster="https://empralidad.com.ar/wp-content/uploads/2022/11/pixel-blanco.png" class="emp-video-background">
+          </video>
+        <?php } ?>
       </div>
     </div>
