@@ -104,7 +104,7 @@
     <!-- end navbar -->
     <div class="FullScreenLanding emp_img_slide1 col-12 mx-auto bg-personalized">
       <div id="emp-background-image" class="emp-background-image1 emp-background-media-opacity">
-        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('emp_components_head_video')); ?>" poster="" class="emp-video-background">
+        <video autoplay muted loop src="<?php echo wp_get_attachment_url(get_theme_mod('emp_components_head_video')); ?>" poster="https://empralidad.com.ar/wp-content/uploads/2022/11/pixel-blanco.png" class="emp-video-background">
         </video>
       </div>
     </div>
