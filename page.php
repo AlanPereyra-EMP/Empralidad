@@ -21,8 +21,8 @@
     <?php } ?>
   </div>
 </header>
-<div id="first-content-page" class="admin-bar-show"></div>
-<article id="first-content-page" class="color-content bg-content p-md-0 rounded-0">
+<div id="first-content-page" class="admin-bar-show categories-active"></div>
+<article class="color-content bg-content p-md-0 rounded-0">
   <div class="container-fluid p-0 overflow-hidden">
     <?php
     if ( have_posts() ) {
