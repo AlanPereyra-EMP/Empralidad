@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 7.4.9
+Version: 7.5.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -27,7 +27,8 @@ Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor
 * 12)Comments
 * 13)Mobile
 * 14)Carousel
-* 15)Plugins support
+* 15)Animation
+* 16)Plugins support
 */
 
 /*-1)Bootstrap personalized min
@@ -686,10 +687,8 @@ img, .wp-caption {
 .title-img-page{
 	bottom: 0;
 	height: 100%;
-	left: 50%;
 	max-width: inherit!important;
 	position: absolute;
-	transform: translate(-50%, 0);
 	z-index: -1;
 }
 @media (min-width: 1200px){
@@ -1557,7 +1556,33 @@ div#first-content-home.categories-active{
 	}
 }
 
-/* -------------------------------------15)Plugins support--------------------------------- */
+/* ----------------------------------------15)Animation------------------------------------ */
+@keyframes fade-in-scroll {
+  0% {
+		transform: translate(-25%, 0);
+		opacity: 0;
+	}
+	40% {
+		transform: translate(-15%, 0);
+		opacity: .6;
+	}
+	60% {
+		transform: translate(-5%, 0);
+		opacity: .9;
+	}
+  100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+/* The element to apply the animation to */
+.empFadeIn {
+  animation-name: fade-in-scroll;
+  animation-duration: .6s;
+}
+
+/* -------------------------------------16)Plugins support--------------------------------- */
 /*Woocomerce*/
 @media(max-width:575px) {
 	#woo_featured_products .woocommerce ul.products li.product {

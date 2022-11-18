@@ -4,7 +4,7 @@
 <header id="main-head" class="page">
   <div class="div-container-title-page mw-1300px">
     <div class="container-title-page border-30px mt-auto <?php if (!$emp_title_img) { ?> mb-auto <?php } ?>">
-      <div id="title-page" class="mx-auto">
+      <div id="title-page" class="mx-auto empFadeIn">
         <h1 class="empFadeIn">
           <?php the_title(); ?>
         </h1>
@@ -17,7 +17,7 @@
       </a>
     </div>
     <?php if($emp_title_img){ ?>
-      <img class="title-img-page" src="<?php echo $emp_title_img ?>">
+      <img class="title-img-page empFadeIn" src="<?php echo $emp_title_img ?>">
     <?php } ?>
   </div>
 </header>
