@@ -106,7 +106,7 @@
     <div class="FullScreenLanding emp_img_slide1 col-12 mx-auto bg-personalized">
       <div id="emp-background-image" class="emp-background-image1 emp-background-media-opacity">
         <?php if ($video_bg_url){ ?>
-          <video autoplay muted loop src="<?php echo $video_bg_url ?>" poster="https://empralidad.com.ar/wp-content/uploads/2022/11/pixel-blanco.png" class="emp-video-background">
+          <video autoplay muted loop src="<?php echo $video_bg_url ?>" poster="https://empralidad.com.ar/wp-content/uploads/2022/11/pixel-negro.jpeg" class="emp-video-background">
           </video>
         <?php } ?>
       </div>
