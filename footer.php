@@ -67,7 +67,7 @@
     </div>
     <!-- Buttons mobile -->
     <div class="mx-auto container-fluid fixed-bottom bg-personalized" id="bg-searchform-mobile"></div>
-    <div class="buttons-mobile show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
+    <div class="buttons-mobile empFadeInTop show-sm text-center d-flex justify-content-between align-items-center fixed-bottom p-2">
       <!-- Home-->
       <?php $home_url =  get_theme_mod('emp_components_nav_home');
       if ($home_url == ''){

@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 7.5.2
+Version: 7.5.3
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1557,7 +1557,7 @@ div#first-content-home.categories-active{
 }
 
 /* ----------------------------------------15)Animation------------------------------------ */
-@keyframes fade-in-scroll {
+@keyframes fade-in-scroll-right {
   0% {
 		transform: translate(-25%, 0);
 		opacity: 0;
@@ -1575,11 +1575,55 @@ div#first-content-home.categories-active{
 		opacity: 1;
 	}
 }
+@keyframes fade-in-scroll-top {
+  0% {
+		transform: translate(0, 25%);
+		opacity: 0;
+	}
+	40% {
+		transform: translate(0, 15%);
+		opacity: .6;
+	}
+	60% {
+		transform: translate(0, 5%);
+		opacity: .9;
+	}
+  100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+@keyframes fade-in-scroll-bottom {
+  0% {
+		transform: translate(0, -25%);
+		opacity: 0;
+	}
+	40% {
+		transform: translate(0, -15%);
+		opacity: .6;
+	}
+	60% {
+		transform: translate(0, -5%);
+		opacity: .9;
+	}
+  100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
 
 /* The element to apply the animation to */
 .empFadeIn {
-  animation-name: fade-in-scroll;
+  animation-name: fade-in-scroll-right;
   animation-duration: .9s;
+}
+.empFadeInTop {
+  animation-name: fade-in-scroll-top;
+  animation-duration: .6s;
+}
+.empFadeInBottom {
+  animation-name: fade-in-scroll-bottom;
+  animation-duration: .6s;
 }
 
 /* -------------------------------------16)Plugins support--------------------------------- */
