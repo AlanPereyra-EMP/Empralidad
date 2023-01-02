@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 7.5.9
+Version: 7.6.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1792,16 +1792,17 @@ div#woo_featured_products .products::-webkit-scrollbar {
 	display: none
 }
 h2.woocommerce-loop-product__title {
-	align-items: baseline;
+	align-items: center;
 	background: var(--emp-content-bg)!important;
 	bottom: 0;
 	color: var(--emp-content-color)!important;
 	display: flex;
 	font-size: 20px!important;
 	font-weight: bold;
-	height: 30%;
+	height: 20%;
 	justify-content: center;
-	padding: 10px 5px 0px 5px!important;
+	overflow: hidden;
+	padding: 15px 5px 0px 5px!important;
 	width: 100%;
 }
 @media (min-width: 1200px){
@@ -1988,6 +1989,9 @@ table.variations {
 span.woocommerce-input-wrapper {
 	width: 100%
 }
+span.woocommerce-Price-amount.amount{
+	padding: 0!important;
+}
 .woo-counter-cart-number,
 .woo-counter-cart-number-desktop {
 	position: absolute;
@@ -2151,6 +2155,16 @@ a.button.add_to_cart_button:hover {
 	transform: scale(1.2);
 	transition: .2s all;
 }
+a.button.add_to_cart_button.added::after {
+	color: var(--emp-content-bg);
+	content: "\f00c";
+	font-family: "Font Awesome 5 Free";
+	font-size: 14px;
+	margin: 0;
+	position: absolute;
+	top: 5px;
+	visibility: visible;
+}
 a.added_to_cart.wc-forward {
 	display: none;
 }
@@ -2268,7 +2282,7 @@ div#respond {
 	margin: 0;
 }
 li span.price del {
-	margin-bottom: -20px;
+	display: none!important;
 }
 .woocommerce ul.products li.product .star-rating {
 	background: #00000099;
@@ -2310,6 +2324,7 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
 @media(min-width:992px) {
 	.woocommerce ul.products li.product {
 		width: 31.3% !important;
+		aspect-ratio: 1/1.5;
 	}
 }
 .woocommerce-error,
