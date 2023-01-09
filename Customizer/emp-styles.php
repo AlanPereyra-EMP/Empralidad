@@ -385,4 +385,5 @@ if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
        url('<?php echo get_template_directory_uri(). '/includes/fonts/ablation/Ablation'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/ablation/Ablation'?>.svg#open-sans') format('svg');
 }
+
 </style>

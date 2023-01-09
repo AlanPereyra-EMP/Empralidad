@@ -3,20 +3,9 @@
 $emp_slider1 = get_theme_mod('emp_slider_image1');
 $emp_slider2 = get_theme_mod('emp_slider_image2');
 $emp_slider3 = get_theme_mod('emp_slider_image3');
-$emp_sliders = 0;
-
-if($emp_slider1){
-  $emp_sliders++;
-}
-if($emp_slider2){
-  $emp_sliders++;
-}
-if($emp_slider3){
-  $emp_sliders++;
-}
 
 if($emp_slider1||$emp_slider2||$emp_slider3){ ?>
-  <div id="emp-sliders" class="<?php if($emp_sliders == 1){?>mw-1200px<?php } ?>">
+  <div id="emp-sliders">
     <ul>
       <?php if($emp_slider1){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" class="emp-slider" alt=""></li><?php } ?>
       <?php if($emp_slider2){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" class="emp-slider" alt=""></li><?php } ?>
