@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 7.6.3
+Version: 7.7.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1728,11 +1728,28 @@ div#first-content-home.categories-active{
 	a.button.product_type_variable {
 		width: 100%
 	}
+	.woocommerce-account .woocommerce-MyAccount-content {
+		width: 68%!important;
+	}
 }
 @media (min-width:1200px) {
 	.woocommerce-product-gallery__image {
 		width: 633px !important
 	}
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+	margin: 30px 0!important;
+}
+.woocommerce-account span.btn.container-fluid.invisible{
+	display: none!important;
+}
+.woocommerce-MyAccount-content {
+	max-width: 1200px;
+	margin: auto!important;
+}
+.woocommerce-account #main-head.page .container-title-page, .woocommerce-account #main-head.page .container-title-page a{
+	background: none;
+	color: var(--emp-head-title-color)!important;
 }
 .woocommerce ul.products li.product{
 	height: auto;
@@ -1782,6 +1799,9 @@ a.button.product_type_variable,a.button.product_type_simple, a.button.product_ty
 .woocommerce span.onsale {
  background: var(--emp-head-title-bg)!important;
  color: var(--emp-head-title-color)!important;
+}
+.woocommerce form .show-password-input, .woocommerce-page form .show-password-input{
+	top: 0!important;
 }
 .product span.onsale{
 	left: 7px;
@@ -1933,13 +1953,13 @@ nav.woocommerce {
 }
 .woocommerce-MyAccount-navigation-link {
 	display: block;
-	padding: .5em 1em;
+	padding: 1.5em 1em;
 	font-weight: 700;
 	margin-right: .5rem !important;
 	margin-left: .5rem !important;
 	color: #888 !important;
 	text-decoration: none;
-	border: 1px rgba(255, 255, 255, .1) solid
+	border-bottom: 2px rgba(5, 5, 5, .3) solid
 }
 .woocommerce-MyAccount-navigation-link a {
 	margin-right: .5rem !important;
@@ -2031,7 +2051,6 @@ span.woocommerce-Price-amount.amount{
 	padding: 3px
 }
 .woocommerce-account .woocommerce-MyAccount-navigation {
-	background: #eee;
 	text-align: center
 }
 figcaption::-webkit-scrollbar {
@@ -2118,9 +2137,9 @@ li.wc_payment_method.payment_method_cod {
 span.woocommerce-terms-and-conditions-checkbox-text {
 	color: #000
 }
-nav.woocommerce-MyAccount-navigation {
+/* nav.woocommerce-MyAccount-navigation {
 	display: none
-}
+} */
 .woocommerce-MyAccount-content {
 	width: 100% !important
 }
