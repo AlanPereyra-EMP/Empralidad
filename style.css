@@ -1754,12 +1754,14 @@ div#first-content-home.categories-active{
 @media (min-width:1200px) {
 	.woocommerce-product-gallery__image {
 		margin: auto;
-		width: 633px !important;
 	}
 }
-div.woocommerce-tabs.wc-tabs-wrapper h2, .woocommerce div.product .woocommerce-tabs .panel{
+.woocommerce div.product .woocommerce-tabs .panel{
 	background: var(--emp-content-bg)!important;
 	color: var(--emp-content-color)!important;
+	margin: 0;
+}
+div.woocommerce-tabs.wc-tabs-wrapper h2{
 	margin: 0;
 }
 div.woocommerce-tabs.wc-tabs-wrapper h2:first-child{
@@ -2350,6 +2352,8 @@ li span.price del {
 	height: 30px;
 }
 .woo-page-margin {
+	background: var(--emp-content-color)!important;
+	color: var(--emp-content-bg)!important;
 	margin-top: 170px !important;
 	margin-bottom: 200px !important;
 }
