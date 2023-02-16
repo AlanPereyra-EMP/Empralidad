@@ -178,7 +178,8 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   article,
   a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
   a.button.product_type_simple, a.checkout-button.button.alt.wc-forward,
-  .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img,figure.woocommerce-product-gallery__wrapper{
+  .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img,
+  figure.woocommerce-product-gallery__wrapper, .woocommerce table.shop_attributes{
     border-radius: 30px!important;
   }
   @media (max-width:991px){
