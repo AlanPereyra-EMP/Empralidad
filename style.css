@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 7.7.7
+Version: 7.7.8
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -118,9 +118,12 @@ footer{
 	color: var(--emp-footer-color)!important;
 	overflow: hidden;
 }
-article p, article ul, article h2, article h3, article h4, article h5, article h6 {
+article p, article ul, article h2, article h3, article h4, article h5, article h6, label {
   max-width: 1200px;
-  margin: auto;
+  margin: auto!important;
+}
+label {
+	display: block;
 }
 /*--------------------------------------------1)Navigation-------------------------------------------------*/
 #top_content{
@@ -727,6 +730,10 @@ article p, #emp-single-info,
 }
 .wp-block-group {
   padding: 30px 0px;
+}
+.wp-block-media-text{
+	max-width: 1200px!important;
+	margin: auto!important;
 }
 div.audio-content figure, div.audio-content figcaption {
 	margin-bottom: 0!important;
@@ -1727,6 +1734,15 @@ div#first-content-home.categories-active{
 	.woocommerce-page ul.products.columns-x li.product {
 		width: 31% !important
 	}
+	section.related.products {
+		color: var(--emp-content-color)!important;
+		background: var(--emp-content-bg);
+	}
+	section.related.products h2{
+		margin-top: 0!important;
+		padding-bottom: 70px;
+		padding-top: 70px;
+	}
 	input#coupon_code {
 		width: auto
 	}
@@ -1771,9 +1787,6 @@ span.posted_in a {
 }
 div.woocommerce-tabs.wc-tabs-wrapper h2{
 	margin: 0;
-}
-div.woocommerce-tabs.wc-tabs-wrapper h2:first-child{
-	display: none;
 }
 .woocommerce-account .woocommerce-MyAccount-content {
 	display: none;
@@ -2120,7 +2133,7 @@ figcaption::-webkit-scrollbar {
 	box-shadow: none !important
 }
 .woocommerce div.product p.price {
-	font-size: 1.3em !important;
+	font-size: 2.3em !important;
 	text-align: center;
 }
 td.product-name a {
