@@ -1781,6 +1781,9 @@ div#first-content-home.categories-active{
 		margin: auto;
 	}
 }
+.woocommerce div.product div.summary{
+	overflow: hidden;
+}
 ul.products.columns-3{
 	background: var(--emp-content-bg);
 }
