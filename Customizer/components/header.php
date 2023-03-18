@@ -123,6 +123,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'barlow-cond'  => __('Barlow Condensed Bold', 'empralidad'),
     'Kumbh Sans'	 => __('Kumbh Sans', 'empralidad'),
     'ablation'	   => __('Ablation', 'empralidad'),
+    'theseasons'	 => __('The Seasons', 'empralidad'),
     'futura'	     => __('Futura', 'empralidad'),
     'nunito'			 => __('Nunito', 'empralidad'),
     'bad script'	 => __('Bad Script', 'empralidad'),
