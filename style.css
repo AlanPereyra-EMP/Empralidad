@@ -1798,6 +1798,7 @@ span.posted_in a {
 	background: var(--emp-content-bg)!important;
 	color: var(--emp-content-color)!important;
 	margin: 0;
+	padding-bottom: 30px;
 }
 div.woocommerce-tabs.wc-tabs-wrapper h2{
 	margin: 0;
