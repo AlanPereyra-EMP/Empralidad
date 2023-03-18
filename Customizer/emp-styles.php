@@ -31,6 +31,9 @@
   --emp-content-shortcode-color: <?php echo get_theme_mod('emp_homepage_carousel_color'); ?>;
   /* H1 Title Aling */
   --emp-content-title-aling: <?php echo get_theme_mod('emp_components_head_title_align'); ?>;
+  /* Woocommerce color */
+  --emp-woocommerce-color: <?php echo get_theme_mod('emp_woocommerce-color'); ?>;
+  --emp-woocommerce-bg: <?php echo get_theme_mod('emp_woocommerce-bg'); ?>;
 }
 
 /* backgrounds */
