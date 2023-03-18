@@ -2390,8 +2390,8 @@ li span.price del {
 	height: 30px;
 }
 .woo-page-margin {
-	background: var(--emp-woocomerce-bg)!important;
-	color: var(--emp-woocomerce-color)!important;
+	background: var(--emp-woocommerce-bg)!important;
+	color: var(--emp-woocommerce-color)!important;
 	margin-top: 170px !important;
 	margin-bottom: 0!important;
 }
