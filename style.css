@@ -1939,10 +1939,12 @@ h2.woocommerce-loop-product__title {
 
 }
 .woocommerce ul.products li.product .price{
-	bottom: 5%;
+	bottom: 33px;
 	font-family: sans-serif;
 	font-size: 20px;
 	margin-top: 4px;
+	position: absolute;
+	z-index: 1
 }
 li.product bdi{
 	color: var(--emp-content-color);
@@ -1979,7 +1981,8 @@ li.product bdi{
 	margin-right: auto
 }
 .woocommerce ul.products li.product a img {
-	margin: 0 !important;
+	aspect-ratio: 1/1;
+	margin-bottom: 130px!important;
 	object-fit: cover;
 	width: auto;
 }
