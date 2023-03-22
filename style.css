@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.0.8
+Version: 8.0.9
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -2456,8 +2456,22 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
 	z-index: 10;
 }
 /* Custom filter on products */
+.content form.woocommerce-ordering, .content h1{
+    display: none;
+}
 .emp-range-price{
 	width: 100%;
+}
+#emp-delete-woo-product-filter-desktop, #emp-delete-woo-product-filter-mobile{
+	display: none;
+}
+@media (max-width: 991px){
+	#emp-delete-woo-product-filter-desktop, #emp-delete-woo-product-filter-mobile{
+		margin-top: 20px;
+	}
+}
+#emp-delete-woo-product-filter-desktop.active, #emp-delete-woo-product-filter-mobile.active{
+	display: block;
 }
 /*Contact form 7*/
 .comment-form input{width: 100%}.wpcf7-submit, #submit.submit{border:2px solid transparent;padding: 10px;border-radius: 5px;width: 100%}.wpcf7-form{padding:0;max-width:1200px}form.wpcf7-form{width:100%;padding-left:0;padding-top:0;padding-bottom:0;margin-right:auto;margin-left:auto}p label{width:100%;margin-right:auto;margin-left:auto}.wpcf7-form-control{width:100%;margin-right:auto;margin-left:auto}select{border: 1px solid #aaa;padding: 7px;background: #fff;}.landing_pages-template-default input.wpcf7-form-control.wpcf7-submit {color: var(--emp-head-title-bg)!important;background: var(--emp-head-title-color)!important;}

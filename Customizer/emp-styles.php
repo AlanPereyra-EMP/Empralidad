@@ -185,6 +185,9 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   figure.woocommerce-product-gallery__wrapper, .woocommerce table.shop_attributes, ul.products.columns-3{
     border-radius: 30px!important;
   }
+  li.product.type-product {
+    border-radius: 30px 30px 0 0;
+  }
   @media (max-width:991px){
     #bg-menu-mobile{
       border-radius: 0 0 50% 50%;

@@ -308,32 +308,31 @@ slidersFrontpage();
 // Search woocommerce products by custom filters
 window.onload = function() {
   var maxPriceDesktopRangeInput = document.getElementById('emp-range-price-desktop');
-  var maxPriceMobileRangeInput = document.getElementById('emp-range-price-mobile');
   var maxPriceDesktopSmall = document.getElementById('emp-small-price-desktop');
-  var maxPriceMobileSmall = document.getElementById('emp-small-price-mobile');
+  var deleteWooProductFiltersBtnDesktop = document.getElementById('emp-delete-woo-product-filter-desktop');
+
   if (maxPriceDesktopRangeInput){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-
+ 
+    
     maxPriceDesktopRangeInput.addEventListener("input", function(e){
       maxPriceDesktopSmall.innerHTML = this.value;
-      e.preventDefault();
-      e.stopPropagation();
-    })
-    maxPriceMobileRangeInput.addEventListener("input", function(e){
-      maxPriceMobileSmall.innerHTML = this.value;
       e.preventDefault();
       e.stopPropagation();
     })
     
     if(urlParams.get('max_price')==null){
       maxPriceDesktopRangeInput.value = 999999;
-      maxPriceMobileRangeInput.value = 999999;
     }else{
       maxPriceDesktopRangeInput.value = urlParams.get('max_price');
-      maxPriceMobileRangeInput.value = urlParams.get('max_price');
       maxPriceDesktopSmall.innerHTML = urlParams.get('max_price');
-      maxPriceMobileSmall.innerHTML = urlParams.get('max_price');
+    }
+
+    if(urlParams.get('max_price')||urlParams.get('s')){
+      deleteWooProductFiltersBtnDesktop.classList.add('active');
+    }else{
+      deleteWooProductFiltersBtnDesktop.classList.remove('active');
     }
   }
 
@@ -351,19 +350,29 @@ function empGetRangeUrl(e){
 
   return url;
 }
-document.getElementById('emp-woo-search').addEventListener('submit', function(e) {
-  e.preventDefault();
+
+var empWooSearch = document.getElementById('emp-woo-search');
+if(empWooSearch){
+  empWooSearch.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
   
+    var textForm = document.getElementById("emp-woo-search-text").value;
+    
+    if( urlParams.get('max_price')){
+      url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product&max_price='+urlParams.get('max_price');
+    }else{
+      url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product';
+    }
+    
+    return url;
+  });
+}
+function empDeleteFilters(){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
-  var textForm = document.getElementById("emp-woo-search-text").value;
-  
-  if( urlParams.get('max_price')){
-    url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product&max_price='+urlParams.get('max_price');
-  }else{
-    url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product';
-  }
-  
-  return url;
-});
+  url = window.location.href =  window.location.href.split('?')[0];
+}
