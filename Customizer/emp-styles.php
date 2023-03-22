@@ -199,7 +199,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   }
   .btn,.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
   .tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message, li.product.type-product,
-  li.product.product-category, blockquote, iframe{
+  li.product.product-category, blockquote, iframe, .product-template-default .woo-page-margin{
     border-radius: 30px;
   }
   .tutor-single-lesson-wrap {

@@ -7,25 +7,30 @@
 
       	<!-- Social buttons -->
       	<div class="container-fluid p-3 fa-2x">
-        	<!-- Facebook -->
-        	<?php $facebook_link = get_theme_mod('emp_components_footer_face');
-          if ($facebook_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_face'); ?>" class="fab fa-facebook-f"></a>
-          <?php } ?>
           <!-- Instagram -->
         	<?php $instagram_link = get_theme_mod('emp_components_footer_insta');
           if ($instagram_link){ ?>
             <a href="<?php echo get_theme_mod('emp_components_footer_insta'); ?>" class="fab fa-instagram"></a>
           <?php } ?>
+          <!-- Tik Tok -->
+          <?php $tiktok_link = get_theme_mod('emp_components_footer_tiktok');
+          if ($tiktok_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_tiktok'); ?>" class="fab fa-tiktok"></a>
+            <?php } ?>
+          <!-- Youtube -->
+          <?php $youtube_link = get_theme_mod('emp_components_footer_yt');
+          if ($youtube_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_yt'); ?>" class="fab fa-youtube"></a>
+            <?php } ?>
+          <!-- Facebook -->
+          <?php $facebook_link = get_theme_mod('emp_components_footer_face');
+          if ($facebook_link){ ?>
+            <a href="<?php echo get_theme_mod('emp_components_footer_face'); ?>" class="fab fa-facebook-f"></a>
+          <?php } ?>
           <!-- Twiter -->
         	<?php $twitter_link = get_theme_mod('emp_components_footer_tw');
           if ($twitter_link){ ?>
             <a href="<?php echo get_theme_mod('emp_components_footer_tw'); ?>" class="fab fa-twitter"></a>
-          <?php } ?>
-          <!-- Youtube -->
-        	<?php $youtube_link = get_theme_mod('emp_components_footer_yt');
-          if ($youtube_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_yt'); ?>" class="fab fa-youtube"></a>
           <?php } ?>
         </div>
         <p><?php echo get_theme_mod('emp_components_footer_text'); ?></p>

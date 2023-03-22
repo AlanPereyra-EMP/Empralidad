@@ -8,6 +8,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="<?php echo get_theme_mod('emp_components_head_title_background'); ?>">
     <link rel="apple-touch-icon" href="<?php get_site_icon_url(); ?>">
+    <link rel="preload" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css"></noscript>
 
     <?php
     wp_head();
@@ -61,20 +63,24 @@
           $twitter_link = get_theme_mod('emp_components_footer_tw');
           $instagram_link = get_theme_mod('emp_components_footer_insta');
           $youtube_link = get_theme_mod('emp_components_footer_yt');
+          $tiktok_link = get_theme_mod('emp_components_footer_tiktok');
 
           $social_icon = '';
 
-          if ($facebook_link){
-            $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_face').'" class="fab fa-facebook-f m-auto"></a>';
-          }
           if ($instagram_link){
             $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_insta').'" class="fab fa-instagram m-auto"></a>';
           }
-          if ($twitter_link){
-            $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_tw').'" class="fab fa-twitter m-auto"></a>';
+          if ($tiktok_link){
+            $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_tiktok').'" class="fab fa-tiktok m-auto"></a>';
           }
           if ($youtube_link){
             $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_yt').'" class="fab fa-youtube m-auto"></a>';
+          }
+          if ($facebook_link){
+            $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_face').'" class="fab fa-facebook-f m-auto"></a>';
+          }
+          if ($twitter_link){
+            $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_tw').'" class="fab fa-twitter m-auto"></a>';
           }
 
           $social_icon_div = '<div class="d-flex mt-5 mt-md-0">'.$social_icon.'</div>';

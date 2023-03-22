@@ -37,19 +37,6 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'section' => 'emp_section_components_footer',
   'settings'=> 'emp_components_footer_text',
 )));
-// Facebook button
-$wp_customize->add_setting('emp_components_footer_face', array(
-  'default'          => '',
-  'trasnport'        => 'refresh',
-  'sanitize_callback'=> 'sanitize_encoded'
-));
-
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_face_control', array(
-  'label'      => __('Facebook', 'empralidad'),
-  'section'    => 'emp_section_components_footer',
-  'settings'   => 'emp_components_footer_face'
-
-)));
 // Instagram button
 $wp_customize->add_setting('emp_components_footer_insta', array(
   'default'          => '',
@@ -61,20 +48,20 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'label'      => __('Instagram', 'empralidad'),
   'section'    => 'emp_section_components_footer',
   'settings'   => 'emp_components_footer_insta'
-
+  
 )));
-// Twitter button
-$wp_customize->add_setting('emp_components_footer_tw', array(
+// Tik Tok button
+$wp_customize->add_setting('emp_components_footer_tiktok', array(
   'default'          => '',
   'trasnport'        => 'refresh',
   'sanitize_callback'=> 'sanitize_encoded'
 ));
 
-$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_tw_control', array(
-  'label'      => __('Twitter', 'empralidad'),
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_tiktok_control', array(
+  'label'      => __('Tik Tok', 'empralidad'),
   'section'    => 'emp_section_components_footer',
-  'settings'   => 'emp_components_footer_tw'
-
+  'settings'   => 'emp_components_footer_tiktok'
+  
 )));
 // Youtube button
 $wp_customize->add_setting('emp_components_footer_yt', array(
@@ -87,7 +74,33 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'label'      => __('Youtube', 'empralidad'),
   'section'    => 'emp_section_components_footer',
   'settings'   => 'emp_components_footer_yt'
+  
+)));
+// Facebook button
+$wp_customize->add_setting('emp_components_footer_face', array(
+  'default'          => '',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_encoded'
+));
 
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_face_control', array(
+  'label'      => __('Facebook', 'empralidad'),
+  'section'    => 'emp_section_components_footer',
+  'settings'   => 'emp_components_footer_face'
+  
+)));
+// Twitter button
+$wp_customize->add_setting('emp_components_footer_tw', array(
+  'default'          => '',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_encoded'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_tw_control', array(
+  'label'      => __('Twitter', 'empralidad'),
+  'section'    => 'emp_section_components_footer',
+  'settings'   => 'emp_components_footer_tw'
+  
 )));
 // Code
   $wp_customize->add_setting('emp_components_footer_qr', array(
