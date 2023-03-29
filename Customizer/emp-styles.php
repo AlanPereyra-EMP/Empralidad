@@ -266,6 +266,14 @@ if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
     height: 84vh;
   }
 <?php } ?>
+/* Margin negative on main-head title */
+<?php if(get_theme_mod('emp_components_head_title_margin_negative_bottom_show')){ ?>
+  @media(min-width: 992px){
+    #main-head h1{
+      margin-bottom: -35px;
+    }
+  }
+<?php } ?>
 /* Fonts */
 @font-face {
   font-family: "the secret";
