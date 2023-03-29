@@ -328,9 +328,9 @@ add_action( 'emp_max_min_price', 'get_max_and_min_price' );
 function get_max_and_min_price() {
 	global $wpdb;
 	$sql = "SELECT MAX(meta_value), post_id from {$wpdb->prefix}postmeta where meta_key = '_price'";
-	
+
 	$result = $wpdb->get_results($sql);
-	
+
 	$_product = wc_get_product( $result[0]->post_id );
 
 	return 3;

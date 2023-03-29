@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.1.4
+Version: 8.1.5
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1794,9 +1794,6 @@ section.related.products {
 	background: var(--emp-content-bg)!important;
 	color: var(--emp-content-color)!important;
 }
-span.posted_in a {
-	color: var(--emp-content-bg)!important;
-}
 .woocommerce div.product .woocommerce-tabs .panel{
 	background: var(--emp-content-bg)!important;
 	color: var(--emp-content-color)!important;
@@ -2321,8 +2318,50 @@ h2.woocommerce-loop-category__title {
 	cursor: pointer
 }
 .woocommerce-ordering, .woocommerce-ordering select{
-
 	width: 100%;;
+}
+@media (max-width: 991px){
+	#emp-button-woo-filters{
+		display: block!important;
+	}
+	.woocommerce .woocommerce-ordering {
+	  width: 50%;
+	}
+}
+#emp-button-woo-filters{
+	border: 0;
+	display: none;
+	filter: brightness(0.9);
+	padding: 7px;
+	width: 45%;
+}
+div#emp-woo-filter-area{
+
+}
+@media (max-width:991px){
+	div#emp-woo-filter-area{
+		align-items: center;
+		background: var(--emp-woocommerce-bg);
+		color: var(--emp-woocommerce-color);
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+		left: 100vw;
+		position: fixed;
+		top: 0;
+		transition: all 1s;
+		width: 100vw;
+		z-index: 20;
+	}
+}
+div#emp-woo-filter-area.active {
+	left: 0;
+}
+i#emp-woo-filter-area-close-btn{
+	color: var(--emp-woocommerce-color)!important;
+	position: absolute;
+	right: 10%;
+	top: 151px;
 }
 .woocommerce-result-count{
 	display: none;
@@ -2420,6 +2459,9 @@ li span.price del {
 		font-size: 14px!important;
 	}
 }
+.sidebar form.woocommerce-ordering {
+  filter: brightness(0.9);
+}
 .product-template-default .woo-page-margin .sidebar,
 .product-template-default .woo-page-margin .sidebar-mobile{
 	display: none!important;
@@ -2484,6 +2526,14 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
 .comment-form input{width: 100%}.wpcf7-submit, #submit.submit{border:2px solid transparent;padding: 10px;border-radius: 5px;width: 100%}.wpcf7-form{padding:0;max-width:1200px}form.wpcf7-form{width:100%;padding-left:0;padding-top:0;padding-bottom:0;margin-right:auto;margin-left:auto}p label{width:100%;margin-right:auto;margin-left:auto}.wpcf7-form-control{width:100%;margin-right:auto;margin-left:auto}select{border: 1px solid #aaa;padding: 7px;background: #fff;}.landing_pages-template-default input.wpcf7-form-control.wpcf7-submit {color: var(--emp-head-title-bg)!important;background: var(--emp-head-title-color)!important;}
 /* SFPO */
 .sfpo-table{border:none;width:100%}.sfpo-table thead th{border:none!important;padding:1rem .5rem}.sfpo-table tr:hover{background:rgba(250,250,250,.2)}.sfpo-table td,.sfpo-table th{border:none;padding:20px 10px;text-align:center}.sfpo-table td{border-bottom:1px solid rgba(100,100,100,.3);border-left:1px solid rgba(250,250,250,.3);border-right:none;border-top:none;padding:1px}tr.sfpo-links{background:0 0!important}.sfpo-links-th{box-shadow:none!important;padding:60px 0!important}.sfpo-links td{border:none;padding:3px!important}.sfpo-links a{display:inline-block;font-size:1rem;font-weight:400;line-height:1.5;margin-left:auto;margin-right:auto;padding:.375rem .375rem;text-align:center;text-decoration:none;user-select:none;vertical-align:middle;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;width:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.overflow-x-auto{overflow-x:auto}.w-20{width:20%}@media(max-width:567px){.sfpo-links a,.sfpo-table tbody th,.sfpo-table td,.sfpo-table thead th{font-size:9px!important}}.home-featured-text table.sfpo-table{border-radius: 0;}section .sfpo-table{max-width: 1200px;margin: auto;}section .sfpo-table td {background-color: var(--emp-content-bg);color: var(--emp-content-color);}
+/* cfvsw */
+.cfvsw-image-option {
+  width: 56px;
+  height: 56px;
+}
+li .cfvsw_variations_form {
+  display: none;
+}
 /* map */
 @media (max-width: 991px) {
 	.map_wrapper .map_aspect_ratio{

@@ -314,14 +314,14 @@ window.onload = function() {
   if (maxPriceDesktopRangeInput){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
- 
-    
+
+
     maxPriceDesktopRangeInput.addEventListener("input", function(e){
       maxPriceDesktopSmall.innerHTML = this.value;
       e.preventDefault();
       e.stopPropagation();
     })
-    
+
     if(urlParams.get('max_price')==null){
       maxPriceDesktopRangeInput.value = 999999;
     }else{
@@ -336,12 +336,12 @@ window.onload = function() {
     }
   }
 
-  
+
 }
 function empGetRangeUrl(e){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  
+
   if( urlParams.get('s')){
     url = window.location.href =  window.location.href.split('?')[0]+'?s='+urlParams.get('s')+'&post_type=product&max_price='+e;
   }else{
@@ -355,18 +355,18 @@ var empWooSearch = document.getElementById('emp-woo-search');
 if(empWooSearch){
   empWooSearch.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-  
+
     var textForm = document.getElementById("emp-woo-search-text").value;
-    
+
     if( urlParams.get('max_price')){
       url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product&max_price='+urlParams.get('max_price');
     }else{
       url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product';
     }
-    
+
     return url;
   });
 }
@@ -375,4 +375,21 @@ function empDeleteFilters(){
   const urlParams = new URLSearchParams(queryString);
 
   url = window.location.href =  window.location.href.split('?')[0];
+}
+
+var empWooBtnFilters = document.getElementById('emp-button-woo-filters');
+var empWooFilterArea = document.getElementById('emp-woo-filter-area');
+var empWooBtnFilterCloseArea = document.getElementById('emp-woo-filter-area-close-btn');
+
+if (empWooBtnFilters) {
+  empWooBtnFilters.addEventListener("click", function(e){
+    empWooFilterArea.classList.add('active');
+    e.preventDefault();
+    e.stopPropagation();
+  })
+  empWooBtnFilterCloseArea.addEventListener("click", function(e){
+    empWooFilterArea.classList.remove('active');
+    e.preventDefault();
+    e.stopPropagation();
+  })
 }
