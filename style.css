@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.2.5
+Version: 8.2.6
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1806,7 +1806,6 @@ div.woocommerce-tabs.wc-tabs-wrapper h2{
 	margin: 0;
 }
 .woocommerce-account .woocommerce-MyAccount-content {
-	display: none;
 	padding: 30px 0!important;
 }
 .woocommerce-account span.btn.container-fluid.invisible{
@@ -2317,6 +2316,28 @@ h2.woocommerce-loop-category__title {
 .woocommerce-product-search input {
 	height: 60%;
 	cursor: pointer
+}
+section.woocommerce-order-details, section.woocommerce-customer-details{
+	max-width: 1200px;
+	margin: auto;
+}
+p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+	font-size: 53px;
+	padding-bottom: 90px;
+	padding-top: 90px;
+}
+.woocommerce ul.order_details {
+	padding-bottom: 70px;
+}
+.woocommerce-bacs-bank-details h2.emp {
+  font-size: 60px;
+}
+section.woocommerce-bacs-bank-details {
+	background: var(--emp-woocommerce-color)!important;
+	color: var(--emp-woocommerce-bg)!important;
+}
+li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address {
+	display: none;
 }
 .woocommerce-ordering, .woocommerce-ordering select{
 	width: 100%;;

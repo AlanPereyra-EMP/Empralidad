@@ -393,3 +393,25 @@ if (empWooBtnFilters) {
     e.stopPropagation();
   })
 }
+
+// Add description to woocommerce-bacs-bank-details
+
+var wooBankDetails = document.querySelector('.wc-bacs-bank-details-heading');
+if (wooBankDetails) {
+  let wooBankAliasDetail = document.querySelector('.wc-bacs-bank-details-account-name');
+
+  let title = 'Acreditar compra:';
+  let h2 = document.createElement("h2");
+  h2.classList.add('emp');
+  h2.innerHTML = title;
+
+  let text = 'Para <b>Completar la compra</b> ingresá el "Numero de cuenta" en donde diga CBU o CVU desde tu home banking o a través de mercado pago. Ingresá el monto exacto que figura más arriba. Una vez realizado el pago envianos un mensaje con el comprobante';
+  let p = document.createElement("p");
+  p.innerHTML = text;
+
+  wooBankDetails.parentNode.insertBefore(h2, wooBankDetails);
+  wooBankDetails.parentNode.insertBefore(p, wooBankDetails);
+
+  wooBankAliasDetail.innerHTML = wooBankAliasDetail.innerHTML.split(':').join("");
+  wooBankAliasDetail.innerHTML = 'Alias: '+wooBankAliasDetail.innerHTML;
+}
