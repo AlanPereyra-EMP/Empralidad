@@ -399,6 +399,7 @@ if (empWooBtnFilters) {
 var wooBankDetails = document.querySelector('.wc-bacs-bank-details-heading');
 if (wooBankDetails) {
   let wooBankAliasDetail = document.querySelector('.wc-bacs-bank-details-account-name');
+  let wooBankDetailItems = document.querySelector('.wc-bacs-bank-details.order_details.bacs_details');
 
   let title = 'Acreditar compra:';
   let h2 = document.createElement("h2");
@@ -414,4 +415,9 @@ if (wooBankDetails) {
 
   wooBankAliasDetail.innerHTML = wooBankAliasDetail.innerHTML.split(':').join("");
   wooBankAliasDetail.innerHTML = 'Alias: '+wooBankAliasDetail.innerHTML;
+
+  text = 'Para <b>Informar la compra</b> tocá el ícono de WhatsApp, mandanos un mansaje con el número del pedido y el comprobante de transferencia';
+  p = document.createElement("p");
+  p.innerHTML = text;
+  wooBankDetailItems.parentNode.insertBefore(p, wooBankDetailItems.nextSibling);
 }
