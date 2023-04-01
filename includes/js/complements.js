@@ -339,13 +339,18 @@ window.onload = function() {
 
 }
 function empGetRangeUrl(e){
+  let empUrl= window.location.href.split('?')[0];
+
+  empUrl = empUrl.substring(empUrl.lastIndexOf("."), empUrl.lastIndexOf("page"));
+  console.log(empUrl);
+
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
   if( urlParams.get('s')){
-    url = window.location.href =  window.location.href.split('?')[0]+'?s='+urlParams.get('s')+'&post_type=product&max_price='+e;
+    url = window.location.href =  empUrl+'?s='+urlParams.get('s')+'&post_type=product&max_price='+e;
   }else{
-    url = window.location.href =  window.location.href.split('?')[0]+'?max_price='+e;
+    url = window.location.href =  empUrl+'?max_price='+e;
   }
 
   return url;
@@ -353,18 +358,23 @@ function empGetRangeUrl(e){
 
 var empWooSearch = document.getElementById('emp-woo-search');
 if(empWooSearch){
+  let empUrl= window.location.href.split('?')[0];
+
+  empUrl = empUrl.substring(empUrl.lastIndexOf("."), empUrl.lastIndexOf("page"));
+  console.log(empUrl);
+
   empWooSearch.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
-    var textForm = document.getElementById("emp-woo-search-text").value;
+    let textForm = document.getElementById("emp-woo-search-text").value;
 
     if( urlParams.get('max_price')){
-      url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product&max_price='+urlParams.get('max_price');
+      url = window.location.href =  empUrl+'?s='+textForm+'&post_type=product&max_price='+urlParams.get('max_price');
     }else{
-      url = window.location.href =  window.location.href.split('?')[0]+'?s='+textForm+'&post_type=product';
+      url = window.location.href =  empUrl+'?s='+textForm+'&post_type=product';
     }
 
     return url;
