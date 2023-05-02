@@ -341,7 +341,7 @@ window.onload = function() {
 function empGetRangeUrl(e){
   let empUrl= window.location.href.split('?')[0];
 
-  empUrl = empUrl.substring(empUrl.lastIndexOf("."), empUrl.lastIndexOf("page"));
+  // empUrl = empUrl.substring(empUrl.lastIndexOf("."), empUrl.lastIndexOf("page"));
   console.log(empUrl);
 
   const queryString = window.location.search;
