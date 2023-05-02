@@ -6,11 +6,13 @@
   'posts_per_page' => -1,
 ));
 
-$highest = $products[array_key_first($products)];
-$lowest = $products[array_key_last($products)];
-
-$highest_price = get_post_meta( $highest->ID, '_price', true );
-$lowest_price = get_post_meta( $lowest->ID, '_price', true );
+  if($products){
+    $highest = $products[array_key_first($products)];
+    $lowest = $products[array_key_last($products)];
+    
+    $highest_price = get_post_meta( $highest->ID, '_price', true );
+    $lowest_price = get_post_meta( $lowest->ID, '_price', true );
+  }
 ?>
 
 <?php get_header(); ?>

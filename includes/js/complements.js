@@ -360,7 +360,7 @@ var empWooSearch = document.getElementById('emp-woo-search');
 if(empWooSearch){
   let empUrl= window.location.href.split('?')[0];
 
-  empUrl = empUrl.substring(empUrl.lastIndexOf("."), empUrl.lastIndexOf("page"));
+  // empUrl = empUrl.substring(empUrl.lastIndexOf("."), empUrl.lastIndexOf("page"));
   console.log(empUrl);
 
   empWooSearch.addEventListener('submit', function(e) {
