@@ -5,7 +5,9 @@
   --emp-notice-color: <?php echo get_theme_mod('emp_components_notice_color'); ?>;
   /* Nav */
   --emp-nav-bg: <?php echo get_theme_mod('emp_components_nav_background'); ?>;
+  --emp-nav-bg-mobile: <?php echo get_theme_mod('emp_components_nav_background_mobile'); ?>;
   --emp-nav-color: <?php echo get_theme_mod('emp_components_nav_color'); ?>;
+  --emp-nav-color-accent: <?php echo get_theme_mod('emp_components_nav_color_accent'); ?>;
   --emp-nav-icon-color: <?php echo get_theme_mod('emp_components_nav_icon_color'); ?>;
   /* Header */
   --emp-head-title-bg: <?php echo get_theme_mod('emp_components_head_title_background'); ?>;
@@ -183,7 +185,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   a.button.product_type_simple, a.checkout-button.button.alt.wc-forward,
   .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img,
   figure.woocommerce-product-gallery__wrapper, .woocommerce table.shop_attributes, ul.products.columns-3,
-  #main-head.page .container-title-page{
+  #main-head.page .container-title-page, .wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
     border-radius: 30px!important;
   }
   li.product.type-product {
@@ -196,6 +198,9 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
     #bg-searchform-mobile, #bg-woocommerce-mobile{
       border-radius: 50% 50% 0 0;
     }
+  }
+  .border-bottom-raduis-15px{
+    border-radius: 0 0 15px 15px;
   }
   .sfpo-table {
       border-radius: 30px;

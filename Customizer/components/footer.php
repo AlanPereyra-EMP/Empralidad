@@ -4,6 +4,28 @@ $wp_customize->add_section('emp_section_components_footer', array(
   'priority' => 6,
   'panel'    => 'emp_panel_components'
 ));
+// Background color
+$wp_customize->add_setting('emp_components_footer_background', array(
+  'default'          => '#262626',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_components_footer_background_color_control', array(
+  'label'      => __('Color de fondo', 'empralidad'),
+  'section'    => 'emp_section_components_footer',
+  'settings'   => 'emp_components_footer_background'
+)));
+// Color typography
+$wp_customize->add_setting('emp_components_footer_color', array(
+  'default'          => '#ffffff',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_components_footer_color_control', array(
+  'label'   => __('Color de texto', 'empralidad'),
+  'section' => 'emp_section_components_footer',
+  'settings'=> 'emp_components_footer_color'
+)));
 // Terms and conditions
 $wp_customize->add_setting('emp_components_footer_term', array(
   'default'           => '#',
@@ -28,7 +50,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
 )));
 // Copyright
 $wp_customize->add_setting('emp_components_footer_text', array(
-  'default'           => 'Copyright © 2020',
+  'default'           => 'Copyright © 2023',
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
@@ -116,26 +138,15 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
     'description'=> __( 'Formulario 960 D (Solo Argentina)', 'empralidad' )
 
   )));
-// Background color
-$wp_customize->add_setting('emp_components_footer_background', array(
-  'default'          => '#262626',
-  'trasnport'        => 'refresh',
-  'sanitize_callback'=> 'sanitize_string'
+// Disable owner
+$wp_customize->add_setting('emp_components_footer_owner', array(
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_encoded'
 ));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_components_footer_background_color_control', array(
-  'label'      => __('Color de fondo', 'empralidad'),
-  'section'    => 'emp_section_components_footer',
-  'settings'   => 'emp_components_footer_background'
-)));
-// Color typography
-$wp_customize->add_setting('emp_components_footer_color', array(
-  'default'          => '#ffffff',
-  'trasnport'        => 'refresh',
-  'sanitize_callback'=> 'sanitize_string'
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_components_footer_color_control', array(
-  'label'   => __('Color de texto', 'empralidad'),
-  'section' => 'emp_section_components_footer',
-  'settings'=> 'emp_components_footer_color'
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_owner_control', array(
+  'label'          => __( '', 'empralidad' ),
+  'section'        => 'emp_section_components_footer',
+  'settings'       => 'emp_components_footer_owner',
+  'type'    			 => 'checkbox'
 )));
 ?>

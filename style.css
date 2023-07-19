@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/landing-pages/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.3.5
+Version: 8.3.6
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -83,7 +83,7 @@ section a, section button, section ul, section button, section .wp-block-buttons
 	max-width: 1200px;
 }
 section p, section h2{
-	margin: 40px auto;
+	margin: 10px auto;
 }
 section .new-section {
   background: var(--emp-content-color);
@@ -138,6 +138,7 @@ nav.navbar{
 }
 .navbar-scroll{
 	background: var(--emp-nav-bg)!important;
+	border-bottom: 4px solid var(--emp-nav-color-accent);
 	transition: all .5s;
 }
 .page #navbar-background{
@@ -1185,20 +1186,24 @@ section .card-block p {
 	padding-top: 105px!important;
 }
 @media (max-width: 992px) {
-  .show-mobile {
-    display: block!important;
-  }
-  .show-desktop{
+	.show-mobile {
+		display: block!important;
+	}
+	.show-desktop{
 		display: none!important;
-  }
-  .show-lg{
-  	display: none!important;
-  }
-  .mt-60-mobile{
+	}
+	.show-lg{
+		display: none!important;
+	}
+	.mt-60-mobile{
 		margin-top: 60px;
-  }
+	}
 	.mt-140-mobile{
 		margin-top: 140px;
+	}
+	.w-mobile-75{
+		width: 75%;
+		margin: auto;
 	}
 }
 .mt-250-n{
@@ -1222,6 +1227,9 @@ section .card-block p {
 }
 .mw-100{
 	max-width: 100%;
+}
+.mw-90{
+	max-width: 90%;
 }
 .mw-50{
 	max-width: 50%!important;
@@ -1402,6 +1410,7 @@ div .widget ul li{
 	margin-left: -18px!important;
 	margin-right: -18px!important;
 	bottom: -1px;
+	border-top: 4px solid var(--emp-nav-color-accent);
 }
 /*searchform and woocomerce cart*/
 a.fa.fa-times{
@@ -1468,7 +1477,7 @@ a.fa.fa-times{
 	top: 110px;
 }
 #bg-menu-mobile{
-	background: var(--emp-head-title-bg);
+	background: var(--emp-nav-bg-mobile);
 	height: 0px;
 	left: 0;
 	position: fixed;
@@ -1783,6 +1792,15 @@ div#first-content-home.categories-active{
 	.woocommerce-product-gallery__image {
 		margin: auto;
 	}
+}
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+    width: calc(33.33% - var(--wp--style--unstable-gallery-gap, 16px)*.66667);
+	aspect-ratio: 1;
+	overflow: hidden;
+	border: 4px solid var(--emp-nav-color-accent)
+}
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption{
+	padding: 20px 8px 8px!important;
 }
 .woocommerce div.product div.summary{
 	overflow: hidden;

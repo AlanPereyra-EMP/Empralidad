@@ -51,6 +51,28 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_co
   'section' => 'emp_section_components_nav',
   'settings'=> 'emp_components_nav_background'
 )));
+// Background color (mobile)
+$wp_customize->add_setting('emp_components_nav_background_mobile', array(
+  'default'           => '#000000',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_components_nav_background_mobile_control', array(
+  'label'   => __('Color de fondo (Smartphones)', 'empralidad'),
+  'section' => 'emp_section_components_nav',
+  'settings'=> 'emp_components_nav_background_mobile'
+)));
+// Accent color
+$wp_customize->add_setting('emp_components_nav_color_accent', array(
+  'default'           => '#262626',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'emp_components_nav_color_accent_control', array(
+  'label'   => __('Color de acentuación', 'empralidad'),
+  'section' => 'emp_section_components_nav',
+  'settings'=> 'emp_components_nav_color_accent'
+)));
 // search button
 $wp_customize->add_setting('emp_components_nav_search', array(
   'trasnport'         => 'refresh',
