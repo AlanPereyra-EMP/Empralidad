@@ -84,8 +84,8 @@
       ?>
       <a href="<?php echo $home_url ?>" class="fa-dark fa fa-home mx-auto"><span class="fa-text">Inicio</span></a>
       <!-- User -->
-      <?php $user_link = get_theme_mod('emp_components_nav_user');
-      if ($user_link){ ?>
+      <?php $emp_user_link = get_theme_mod('emp_components_nav_user');
+      if ($emp_user_link){ ?>
         <a href="<?php echo get_theme_mod('emp_components_nav_user'); ?>" class="fa-dark fa fa-user mx-auto">
             <span class="fa-text">Ingresar</span>
         </a>
@@ -101,8 +101,8 @@
         </a>
       <?php } ?>
       <!-- Whatsapp -->
-      <?php $wp_link_ip = get_theme_mod('emp_components_nav_wsp');
-      if ($wp_link_ip && $perma_button){ ?>
+      <?php $emp_wp_link = get_theme_mod('emp_components_nav_wsp');
+      if ($emp_wp_link && $perma_button){ ?>
         <a onclick="<?php echo get_theme_mod('emp_components_nav_wsp_event'); ?>" href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('emp_components_nav_wsp_numb'); ?>&text=Hola%20tengo%20una%20consulta%20desde:%0A%0A*<?php echo str_replace(' ', '%20', bloginfo('name'));?>*%0A%0A<?php echo get_permalink(); ?>" class="fa-dark fab fa-whatsapp fa-whatsapp-size mx-auto">
           <span class="fa-text">Whatsapp</span>
         </a>
