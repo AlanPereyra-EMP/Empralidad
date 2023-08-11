@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.4.5
+Version: 8.4.6
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1642,7 +1642,7 @@ div#first-content-home.categories-active{
 @media(max-width:575px) {
 	#woo_featured_products .woocommerce ul.products li.product {
 		font-size: 10px;
-		margin: 10px 0 !important;
+		margin: 0 !important;
 		width: 100% !important;
 	}
 	.woocommerce ul.products li.product-category {
@@ -1909,7 +1909,7 @@ div#woo_featured_products .products::-webkit-scrollbar {
 h2.woocommerce-loop-product__title {
 	align-items: center;
 	background: var(--emp-content-bg)!important;
-	bottom: 72px;
+	bottom: 17%;
 	color: var(--emp-content-color)!important;
 	display: flex;
 	font-size: 20px;
@@ -1959,7 +1959,7 @@ h2.woocommerce-loop-product__title {
 
 }
 .woocommerce ul.products li.product .price{
-	bottom: 33px;
+	bottom: 10%;
 	font-family: sans-serif;
 	font-size: 15px;
 	margin-top: 4px;
@@ -2545,7 +2545,7 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.lazyloaded {
 @media(min-width:992px) {
 	.woocommerce ul.products li.product {
 		width: 31.3% !important;
-		aspect-ratio: 1/1.5;
+		aspect-ratio: 1/1.6;
 	}
 }
 .woocommerce-error,
@@ -2571,6 +2571,13 @@ li.wc_payment_method label {
 .woocommerce form.checkout_coupon{
 	margin: auto;
 	max-width: 1200px;
+}
+a.shipping-calculator-button {
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
 }
 /* Custom filter on products */
 #emp-woo-search{

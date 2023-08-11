@@ -6,7 +6,7 @@
     <?php if($featured_products_h2){ ?>
       <div class="<?php if($featured_products_margin_negative){ ?> title-color <?php } ?>">
         <h2 class="featured-title"><?php echo get_theme_mod('emp_woocommerce_featured_title'); ?></h2>
-        <p class="py-2 text-center"><small><?php echo get_theme_mod('emp_woocommerce_featured_text'); ?></small></p>
+        <p class="py-2 mt-n5 text-center"><small><?php echo get_theme_mod('emp_woocommerce_featured_text'); ?></small></p>
       </div>
     <?php } ?>
     <div id="woo_featured_products" class="px-1 py-4 col-12 mx-auto text-center overflow-hidden">
