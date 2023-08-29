@@ -482,7 +482,7 @@ ul.mobile-menu-items {
 }
 section .btn-outline-light {
 	cursor: pointer;
-	color: var(--emp-content-color)!important;
+	color: var(--emp-content-color);
 }
 .btn-outline-light:focus{
 	outline: 0;
