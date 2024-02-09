@@ -50,7 +50,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
 )));
 // Copyright
 $wp_customize->add_setting('emp_components_footer_text', array(
-  'default'           => 'Copyright © 2023',
+  'default'           => 'Copyright © 2024',
   'trasnport'         => 'refresh',
   'sanitize_callback' => 'sanitize_string'
 ));
