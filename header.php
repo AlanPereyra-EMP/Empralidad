@@ -58,6 +58,7 @@
              $ul_class = '';
           } else {
             $ul_class = 'ml-auto';
+            $search_icon = '';
           }
 
         	$facebook_link = get_theme_mod('emp_components_footer_face');
