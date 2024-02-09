@@ -319,7 +319,9 @@ function emp_check_update( $transient ) {
 add_filter( 'pre_set_site_transient_update_themes', 'emp_check_update' );
 
 
-// 13) Fix admin bar
+// 13) Fix bugs
+
+// admin bar
 if ( ! current_user_can( 'manage_options' ) ) {
   show_admin_bar( false );
 }
@@ -335,4 +337,12 @@ function get_max_and_min_price() {
 
 	return 3;
 }
+
+// Emogi on database
+add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
+	if ( ! empty( $data['post_content'] ) ) {
+		$data['post_content'] = wp_encode_emoji( $data['post_content'] );
+	}
+	return $data;
+	}, 99, 2 );
 ?>
