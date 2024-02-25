@@ -415,5 +415,13 @@ if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
        url('<?php echo get_template_directory_uri(). '/includes/fonts/TheSeasons/TheSeasons'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/TheSeasons/TheSeasons'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "splinesans";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.svg#open-sans') format('svg');
+}
 
 </style>
