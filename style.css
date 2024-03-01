@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.5.4
+Version: 8.6.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -807,6 +807,32 @@ li.comment {
 	max-width: 1200px;
 	margin: auto;
 }
+.required-field-message{
+	display: block;
+}
+.logged-in-as a:first-child {
+    display: none;
+}
+.comment-form-comment label {
+    padding-left: 0;
+}
+article div#respond form .form-submit input[type=submit]{
+    background-color: transparent !important;
+    border: 2px solid var(--emp-btn-bg);
+    color: var(--emp-btn-bg)!important;
+	display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: all .5s ease 0s;
+}
+.wp-block-button__link{
+	background: var(--emp-btn-bg);
+	color: var(--emp-btn-color);
+}
+.wp-block-button__link.is-style-outline{
+	background: var(--emp-btn-color);
+	color: var(--emp-btn-bg);
+}
 /*-----------------------------------------7)Font awesome icons-----------------------------------------*/
 a.fa-dark.fab.fa-whatsapp{
 	font-weight: 600;
@@ -1089,9 +1115,12 @@ li.product.type-product{
 }
 section, article, .woocommerce-loop-product__title, .color-personalized-secondary,
 .card-header a, a.woocommerce-review-link,
-.woocommerce-MyAccount-content a, article a,
+.woocommerce-MyAccount-content a,
 .content-color, h2.woocommerce-loop-product__title{
 	color: var(--emp-content-color)!important;
+}
+article a{
+	color: var(--emp-nav-color-accent)!important;
 }
 body, .fa-text{
 	font-family: var(--emp-content-tipography), 'sans-serif';
@@ -1396,9 +1425,13 @@ div .widget ul li{
 	display: block;
 }
 .comment-body{
-	background: #fafafa;
+	background: #eee;
 	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 20px;
+	max-width: 1200px;
+	padding: 10px;
 }
 /*-----------------------------------------13)Mobile-----------------------------------------*/
 .buttons-mobile{
@@ -2469,7 +2502,6 @@ span#reply-title {
 	display: none
 }
 div#respond {
-	border-top: 2px solid;
 	margin-top: 80px;
 }
 .woocommerce #reviews #comments ol.commentlist li .comment-text {
