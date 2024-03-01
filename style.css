@@ -826,12 +826,12 @@ article div#respond form .form-submit input[type=submit]{
     transition: all .5s ease 0s;
 }
 .wp-block-button__link{
-	background: var(--emp-btn-bg);
-	color: var(--emp-btn-color);
+	background: var(--emp-btn-bg)!important;
+	color: var(--emp-btn-color)!important;
 }
-.wp-block-button__link.is-style-outline{
-	background: var(--emp-btn-color);
-	color: var(--emp-btn-bg);
+.is-style-outline .wp-block-button__link{
+	background: var(--emp-btn-color)!important;
+	color: var(--emp-btn-bg)!important;
 }
 /*-----------------------------------------7)Font awesome icons-----------------------------------------*/
 a.fa-dark.fab.fa-whatsapp{

@@ -1,8 +1,9 @@
 <?php get_header();
 $filter_slide1 = get_theme_mod('emp_img_filter1');
-if ( has_post_thumbnail() ) { ?>
-  <div id="main-head" class="carousel-item nopadding active">
+if ( false ) { ?>
+  <div>
     <div class="the_post_thumbnail FullScreenLanding">
+      <div class="bg-title-color"></div>
     </div>
     <div class="py-5 pt-105 pt-lg-90 text-center text-justify color-personalized">
       <h1 class="text-mobile"><?php the_title(); ?></h1>
@@ -19,7 +20,12 @@ if ( has_post_thumbnail() ) { ?>
 	<div class=" py-5 pt-105 pt-lg-90 text-center text-justify color-personalized">
     <h1 class="text-mobile"><?php the_title(); ?></h1>
     <p>
-      <?php the_author(); ?> / <?php  the_date(); ?>
+    <?php if ( have_posts() ) {
+      while ( have_posts() ) { the_post(); ?>
+        <?php the_author(); ?> / <?php  the_date(); ?>
+      <?php }
+    } ?>
+      
       <div class="d-block">
         Categoría: <?php the_category('color-personalized'); ?>
       </div>
