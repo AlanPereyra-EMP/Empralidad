@@ -229,7 +229,6 @@ if($emp_title_show){ ?>
   <?php } else { ?>
       <div class="mx-auto">
         <?php get_template_part('includes/wc-featured-products') ?>
-          <br>
         <h2 id="posts-home" class="featured-title">Lo más reciente</h2>
         <div class="card-columns-2 p-2">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

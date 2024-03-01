@@ -9,7 +9,7 @@ if ( false ) { ?>
       <h1 class="text-mobile"><?php the_title(); ?></h1>
       <p>
         <?php the_author(); ?> / <?php  the_date(); ?>
-        <div class="d-block">
+        <div class="d-block category-post">
           Categoría: <?php the_category('color-personalized'); ?>
         </div>
       </p>
@@ -20,13 +20,12 @@ if ( false ) { ?>
 	<div class=" py-5 pt-105 pt-lg-90 text-center text-justify color-personalized">
     <h1 class="text-mobile"><?php the_title(); ?></h1>
     <p>
-    <?php if ( have_posts() ) {
-      while ( have_posts() ) { the_post(); ?>
-        <?php the_author(); ?> / <?php  the_date(); ?>
-      <?php }
-    } ?>
-      
-      <div class="d-block">
+      <?php if ( have_posts() ) {
+        while ( have_posts() ) { the_post(); ?>
+          <?php the_author(); ?> / <?php  the_date(); ?>
+        <?php }
+      } ?>
+      <div class="d-block category-post">
         Categoría: <?php the_category('color-personalized'); ?>
       </div>
     </p>
