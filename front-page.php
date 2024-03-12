@@ -235,7 +235,7 @@ if($emp_title_show){ ?>
             <?php endwhile; endif; ?>
             <?php get_template_part('content-courses') ?>
         </div>
-        <div class="text-center m-0 mw-100">
+        <div class="text-center m-0 mw-100 mw-1200-px m-auto pb-5 px-2">
             <h5>Estás buscando algo en específico?</h5>
             <?php get_search_form(); ?>
         </div>

@@ -48,11 +48,9 @@
 .emp-background-image3{
   background: url(<?php echo wp_get_attachment_url(get_theme_mod('emp_front_image3')); ?>)no-repeat 50% 50%;
 }
-@media (min-width: 992px){
-  .the_post_thumbnail{
-    background: url(<?php echo get_the_post_thumbnail_url(); ?> ) no-repeat 50% 50%;
-    background-size: 100%;
-  }
+.the_post_thumbnail{
+  background: url(<?php echo get_the_post_thumbnail_url(); ?> ) no-repeat 50% 50%;
+  background-size: cover;
 }
 
 /* Sizes */
@@ -211,6 +209,12 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   .tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message, li.product.type-product,
   li.product.product-category, blockquote, iframe, .product-template-default .woo-page-margin{
     border-radius: 30px;
+  }
+  .border-top-30px{
+    border-radius: 30px 30px 0 0;
+  }
+  .border-bottom-30px{
+    border-radius: 0 0 30px 30px;
   }
   .tutor-single-lesson-wrap {
       border-radius: 0 0 30px 30px;
