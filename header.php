@@ -85,7 +85,7 @@
             $social_icon .= '<a href="'.get_theme_mod('emp_components_footer_tw').'" class="fab fa-twitter m-auto"></a>';
           }
 
-          $social_icon_div = '<div class="d-flex mt-5 mt-md-0 w-mobile-75">'.$social_icon.'</div>';
+          $social_icon_div = '<div class="d-flex mt-5 mt-md-0 w-mobile-75 show-mobile">'.$social_icon.'</div>';
 
           wp_nav_menu(array(
             'theme_location' => 'superior',

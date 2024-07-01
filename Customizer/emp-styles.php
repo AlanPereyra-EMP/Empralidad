@@ -187,7 +187,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   .gemp-filters-reset, .gemp-check-50-50, .gemp-galery-filters-btn .border, .buttons-mobile{
     border-radius: 30px!important;
   }
-  li.product.type-product {
+  li.product.type-product, .featured-title{
     border-radius: 30px 30px 0 0;
   }
   @media (max-width:991px){

@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.6.5
+Version: 8.6.6
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -360,6 +360,7 @@ ul.mobile-menu-items {
 	}
 	.img-btn-fixed{
 		font-size: 40px!important;
+		border-radius: 50%;
 	}
 }
 .img-btn-fixed {
@@ -367,14 +368,19 @@ ul.mobile-menu-items {
 	border-radius: 50% 50% 0 0;
 	color: var(--emp-footer-color);
 	cursor: pointer;
-  font-size: 30px;
-  padding-top: 5px;
-  text-align: center;
+	font-size: 30px;
+	padding-top: 5px;
+	text-align: center;
 }
 #scrollToTopButton{
-	bottom: 100px;
+	bottom: 79px;
 	overflow: hidden;
 	transition: all .2s;
+}
+@media (max-width:565px){
+	#scrollToTopButton{
+		display: none;
+	}
 }
 .img-btn-fixed-show{
 	height: 39px!important;
@@ -715,6 +721,7 @@ img, .wp-caption {
 	color: var(--emp-content-bg);
 	font-size: 60px!important;
 	margin: 0;
+	margin-top: -1px;
 	max-width: 100%;
 	padding: 60px 20px;
 	text-align: center;
@@ -1441,7 +1448,7 @@ div .widget ul li{
 /*-----------------------------------------13)Mobile-----------------------------------------*/
 .buttons-mobile{
 	background: var(--emp-nav-bg);
-	height: 75px!important;
+	height: 63px!important;
 	margin-left: 2.5vw!important;
 	margin-right: 2.5vw!important;
 	bottom: 2.5vw;
