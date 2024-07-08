@@ -42,7 +42,7 @@
           <p class="owner"><small>Desarrollado por</small> <a href="https://empralidad.com.ar"><b>Empralidad</b></a></p>
           <br>
         <?php } ?>
-        <p style="width:50px;" class="mx-auto"><?php echo get_theme_mod('emp_components_footer_qr') ?></p>
+        <p class="qr-afip" style="width:50px;" class="mx-auto"><?php echo get_theme_mod('emp_components_footer_qr') ?></p>
         <br>
       </div>
     </footer>
