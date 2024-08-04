@@ -184,7 +184,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img,
   figure.woocommerce-product-gallery__wrapper, .woocommerce table.shop_attributes, ul.products.columns-3,
   #main-head.page .container-title-page, .gemp-galery figure,
-  .gemp-filters-reset, .gemp-check-50-50, .gemp-galery-filters-btn .border, .buttons-mobile{
+  .gemp-filters-reset, .gemp-check-50-50, .gemp-galery-filters-btn .border, .buttons-mobile, a.button.product_type_external{
     border-radius: 30px!important;
   }
   li.product.type-product, .featured-title{
