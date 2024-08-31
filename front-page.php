@@ -30,7 +30,8 @@ $emp_button_secondary_show3 = get_theme_mod('emp_front_button_secondary_show3');
 if($emp_title_show){ ?>
   <header id="main-head" <?php if(get_theme_mod('emp_components_head_title_categories_on')){ ?>class="categories-on"<?php } ?> >
     <div class="text-img-home container-fluid my-auto">
-      <div id="carouselFade" class="carousel carousel-fade carousel-inner text-homepage-container" data-ride="carousel">
+      <div id="carouselFade" class="carousel carousel-fade carousel-inner text-homepage-container emp-background-image1" data-ride="carousel">
+        <div class="carousel-video-background"></div>
         <div id="carousel-item-1" class="carousel-item active empFadeIn mx-auto color-personalized mw-1300px">
           <h1 class="text-mobile color-personalized empFadeIn">
             <?php
@@ -47,14 +48,14 @@ if($emp_title_show){ ?>
           <p><?php echo get_theme_mod('emp_front_textarea'); ?></p>
           <?php if($emp_button_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn1') ?>">
-              <button class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> border-30px btn-outline-light">
+              <button class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> btn btn-outline-light">
                 <?php echo get_theme_mod('emp_front_btn1'); ?>
               </button>
             </a>
           <?php } ?>
           <?php if($emp_button_secondary_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>">
-              <button class="p-2 container-fluid btn-secondary-actived btn-emp border-30px">
+              <button class="p-2 container-fluid btn-secondary-actived btn-emp btn">
                 <?php echo get_theme_mod('emp_front_btn_secondary1'); ?>
               </button>
             </a>

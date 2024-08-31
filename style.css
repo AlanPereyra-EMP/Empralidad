@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.7.1
+Version: 8.8.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -489,7 +489,7 @@ section .btn-outline-light {
 }
 .btn-secondary-actived{
 	margin: 7px 10px;
-	max-width: 65%;
+	max-width: 85%;
 }
 @media(min-width: 575px){
 	.btn-secondary-actived{
@@ -519,7 +519,7 @@ section .btn-outline-light {
 }
 /*---------------------------------------------3)Sliders-------------------------------------------------*/
 #emp-sliders{
-  background: var(--emp-head-title-bg);
+  background: var(--emp-btn-bg);
 	margin: auto;
 	max-height: 822px;
 	overflow: hidden;
@@ -530,6 +530,7 @@ section .btn-outline-light {
 	display: flex;
 	list-style: none;
 	margin: auto;
+	max-width: 1200px;
 	overflow: auto;
 	padding: 0;
 	scroll-snap-type: x mandatory;
@@ -568,6 +569,7 @@ section .btn-outline-light {
 	display: none;
 }
 #emp-sliders ul li img{
+	max-width: 1200px!important;
 	scroll-snap-align: center;
 	width: 100vw;
 }
@@ -589,7 +591,7 @@ section .btn-outline-light {
 	}
 }
 a.home-btn-down small{
-	font-size: 40%
+	font-size: 70%
 }
 @media (min-width: 991px) {
 	a.home-btn-down small{
@@ -681,13 +683,14 @@ img, .wp-caption {
 	position: absolute;
 	right: auto!important;
 	text-align: center;
-	top: 50%!important;
+	top: 40%!important;
 	transform: translate(0, -50%);
 	width: 96.66666666666666%!important;
 }
 .title-img{
 	display: none;
 	height: 100%;
+	max-width: 40%;
 	position: absolute;
 	top: 0;
 }
@@ -1097,6 +1100,10 @@ a.fa.fa-shopping-cart.mr-4.fadein.show-desktop, #btn-search-desktop{
 }
 #main-head p, h2.text-center.h1, .hx-tipography{
 	font-family: var(--emp-head-text-tipography), 'sans-serif';
+}
+#main-head p{
+	margin: auto;
+	max-width: 570px;
 }
 .text-mobile {
   word-wrap: break-word;
@@ -1558,6 +1565,13 @@ a.fa.fa-times{
 	}
 }
 /*-----------------------------------------14)Carousel-----------------------------------------*/
+.carousel-video-background{
+    background: #44444488;
+    height: 100%;
+	position: absolute;
+	top: 0;
+    width: 100%;
+}
 .carousel-item{
 	float: none!important;
 }
@@ -1628,7 +1642,6 @@ div#first-content-home.categories-active{
 	}
 }
 .text-homepage-container{
-	max-height: 55vh;
   overflow-y: auto;
 }
 @media (max-width: 992px){

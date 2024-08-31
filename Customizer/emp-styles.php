@@ -205,7 +205,10 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
       border-radius: 30px;
       overflow: hidden;
   }
-  .btn,.border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
+  .btn{
+    border-radius: 10px;
+  }
+  .border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
   .tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message, li.product.type-product,
   li.product.product-category, blockquote, iframe, .product-template-default .woo-page-margin{
     border-radius: 30px;
@@ -268,8 +271,11 @@ if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
     height: 64vh;
   }
   div#carouselFade {
-    margin-top: 40px;
+    background-size: cover;
+    border-radius: 20px;
     margin-bottom: -40px;
+    margin-top: 130px;
+    padding: 76px 0px;
   }
 <?php }else{ ?>
   #main-head{
