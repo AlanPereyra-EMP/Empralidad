@@ -1,38 +1,41 @@
-    <footer class="container-fluid py-3 pb-5 footer no-shadow">
+    <footer class="container-fluid py-3 pb-5 px-0 footer no-shadow">
+      <!-- Social buttons -->
+      <div id="emp-social-buttons">
+        <?php $social_nick = get_theme_mod('emp_components_footer_social_nickname'); ?>
+          <span>@<?php echo $social_nick  ?></span>
+          <div class="p-3 fa-2x">
+            <!-- Instagram -->
+            <?php $instagram_link = get_theme_mod('emp_components_footer_insta');
+            if ($instagram_link){ ?>
+              <a href="<?php echo get_theme_mod('emp_components_footer_insta'); ?>" class="fab fa-instagram"></a>
+            <?php } ?>
+            <!-- Tik Tok -->
+            <?php $tiktok_link = get_theme_mod('emp_components_footer_tiktok');
+            if ($tiktok_link){ ?>
+              <a href="<?php echo get_theme_mod('emp_components_footer_tiktok'); ?>" class="fab fa-tiktok"></a>
+              <?php } ?>
+            <!-- Youtube -->
+            <?php $youtube_link = get_theme_mod('emp_components_footer_yt');
+            if ($youtube_link){ ?>
+              <a href="<?php echo get_theme_mod('emp_components_footer_yt'); ?>" class="fab fa-youtube"></a>
+              <?php } ?>
+            <!-- Facebook -->
+            <?php $facebook_link = get_theme_mod('emp_components_footer_face');
+            if ($facebook_link){ ?>
+              <a href="<?php echo get_theme_mod('emp_components_footer_face'); ?>" class="fab fa-facebook-f"></a>
+            <?php } ?>
+            <!-- Twiter -->
+            <?php $twitter_link = get_theme_mod('emp_components_footer_tw');
+            if ($twitter_link){ ?>
+              <a href="<?php echo get_theme_mod('emp_components_footer_tw'); ?>" class="fab fa-twitter"></a>
+            <?php } ?>
+          </div>
+        </div>
       <div class="mw-1200px text-center">
         <!-- Sidebar -->
         <?php if(is_active_sidebar( 'footer' )){
           get_sidebar( 'footer' );
         } ?>
-
-      	<!-- Social buttons -->
-      	<div class="container-fluid p-3 fa-2x">
-          <!-- Instagram -->
-        	<?php $instagram_link = get_theme_mod('emp_components_footer_insta');
-          if ($instagram_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_insta'); ?>" class="fab fa-instagram"></a>
-          <?php } ?>
-          <!-- Tik Tok -->
-          <?php $tiktok_link = get_theme_mod('emp_components_footer_tiktok');
-          if ($tiktok_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_tiktok'); ?>" class="fab fa-tiktok"></a>
-            <?php } ?>
-          <!-- Youtube -->
-          <?php $youtube_link = get_theme_mod('emp_components_footer_yt');
-          if ($youtube_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_yt'); ?>" class="fab fa-youtube"></a>
-            <?php } ?>
-          <!-- Facebook -->
-          <?php $facebook_link = get_theme_mod('emp_components_footer_face');
-          if ($facebook_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_face'); ?>" class="fab fa-facebook-f"></a>
-          <?php } ?>
-          <!-- Twiter -->
-        	<?php $twitter_link = get_theme_mod('emp_components_footer_tw');
-          if ($twitter_link){ ?>
-            <a href="<?php echo get_theme_mod('emp_components_footer_tw'); ?>" class="fab fa-twitter"></a>
-          <?php } ?>
-        </div>
         <p><?php echo get_theme_mod('emp_components_footer_text'); ?></p>
         <p><small><a href="<?php echo get_permalink(get_theme_mod('emp_components_footer_term')); ?>" >Terminos y Condiciones</a> -
         <a href="<?php echo get_permalink(get_theme_mod('emp_components_footer_poli')); ?>">Politicas de Privacidad</a></small></p>

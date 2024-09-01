@@ -268,7 +268,7 @@ $emp_slider2 = get_theme_mod('emp_slider_image2');
 $emp_slider3 = get_theme_mod('emp_slider_image3');
 if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
   #main-head{
-    height: 64vh;
+    height: 73vh;
   }
   div#carouselFade {
     background-size: cover;

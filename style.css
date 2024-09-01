@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 8.8.0
+Version: 8.9.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -28,7 +28,7 @@ Tags: one-column, custom-colors, custom-header, custom-menu, custom-logo, editor
 * 13)Mobile
 * 14)Carousel
 * 15)Animation
-* 16)Plugins support
+* 17)Plugins support
 */
 
 /*x)Bootstrap personalized min
@@ -370,7 +370,7 @@ ul.mobile-menu-items {
 	text-align: center;
 }
 #scrollToTopButton{
-	bottom: 79px;
+	bottom: 68px;
 	overflow: hidden;
 	transition: all .2s;
 }
@@ -809,6 +809,9 @@ figure.wp-block-gallery.wrap-reverse {
 	margin: auto;
 	max-width: 1200px;
 }
+.wp-block-columns.gap-0{
+	gap: 0;
+}
 .comment .even{
 	color: #000!important;
 }
@@ -839,14 +842,6 @@ article div#respond form .form-submit input[type=submit]{
     padding: 10px 30px;
     text-decoration: none;
     transition: all .5s ease 0s;
-}
-.wp-block-button__link{
-	background: var(--emp-btn-bg)!important;
-	color: var(--emp-btn-color)!important;
-}
-.is-style-outline .wp-block-button__link{
-	background: var(--emp-btn-color)!important;
-	color: var(--emp-btn-bg)!important;
 }
 .category-post a{
 	color: unset!important;
@@ -1696,7 +1691,43 @@ div#first-content-home.categories-active{
   animation-duration: .6s;
 }
 
-/* -------------------------------------16)Plugins support--------------------------------- */
+/* -----------------------------------------16)Social-------------------------------------- */
+#emp-social-buttons{
+	align-items: center;
+    background: var(--emp-btn-bg);
+    color: var(--emp-btn-color);
+	margin-bottom: 60px;
+    padding: 15px 7%;
+}
+#emp-social-buttons span{
+	font-size: 50px;
+	text-align: right;
+    width: 60%;
+}
+@media(min-width:768px){
+	#emp-social-buttons{
+		display: flex;
+	}
+	#emp-social-buttons span{
+		font-size: 60px;
+	}
+	#emp-social-buttons a.fa, #emp-social-buttons a.fab{
+		font-size: 28px;
+	}
+}
+@media(min-width:1200px){
+	#emp-social-buttons span{
+		font-size: 90px!important;
+	}
+	#emp-social-buttons a.fa, #emp-social-buttons a.fab{
+		font-size: 38px;
+		padding: 16px;
+		width: auto;
+	}
+}
+
+
+/* -------------------------------------17)Plugins support--------------------------------- */
 /*Woocomerce*/
 .woocomerce{
 	margin: auto;

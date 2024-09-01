@@ -59,6 +59,19 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_componen
   'section' => 'emp_section_components_footer',
   'settings'=> 'emp_components_footer_text',
 )));
+// Nickname
+$wp_customize->add_setting('emp_components_footer_social_nickname', array(
+  'default'          => '',
+  'trasnport'        => 'refresh',
+  'sanitize_callback'=> 'sanitize_encoded'
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_components_footer_social_nickname_control', array(
+  'label'      => __('Nombre en Redes Sociales', 'empralidad'),
+  'section'    => 'emp_section_components_footer',
+  'settings'   => 'emp_components_footer_social_nickname'
+  
+)));
 // Instagram button
 $wp_customize->add_setting('emp_components_footer_insta', array(
   'default'          => '',
