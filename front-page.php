@@ -59,7 +59,7 @@ if($emp_title_show){ ?>
           <?php if($emp_button_secondary_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>">
               <button class="p-2 container-fluid btn-secondary-actived btn-emp btn">
-                <i class="<?php echo $emp_title_btn_icon?>"></i>
+                <i class="<?php echo $emp_title_btn_secondary_icon?>"></i>
                 <?php echo get_theme_mod('emp_front_btn_secondary1'); ?>
               </button>
             </a>
