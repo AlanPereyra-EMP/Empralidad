@@ -44,7 +44,8 @@ if($emp_title_show){ ?>
           </h1>
           <?php
           $emp_title_hr_show = get_theme_mod('emp_front_title_hr_show');
-          $emp_title_btn_icon = get_theme_mod('emp_front_btn1');
+          $emp_title_btn_icon = get_theme_mod('emp_section_front_button_icon1');
+          $emp_title_btn_secondary_icon = get_theme_mod('emp_section_front_button_secondary_icon1');
           if($emp_title_hr_show){ ?> <hr> <?php } ?>
           <p><?php echo get_theme_mod('emp_front_textarea'); ?></p>
           <?php if($emp_button_show1){ ?>
@@ -58,6 +59,7 @@ if($emp_title_show){ ?>
           <?php if($emp_button_secondary_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn_secondary1') ?>">
               <button class="p-2 container-fluid btn-secondary-actived btn-emp btn">
+                <i class="<?php echo $emp_title_btn_icon?>"></i>
                 <?php echo get_theme_mod('emp_front_btn_secondary1'); ?>
               </button>
             </a>
