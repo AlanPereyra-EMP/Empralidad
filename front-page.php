@@ -44,11 +44,13 @@ if($emp_title_show){ ?>
           </h1>
           <?php
           $emp_title_hr_show = get_theme_mod('emp_front_title_hr_show');
+          $emp_title_btn_icon = get_theme_mod('emp_front_btn1');
           if($emp_title_hr_show){ ?> <hr> <?php } ?>
           <p><?php echo get_theme_mod('emp_front_textarea'); ?></p>
           <?php if($emp_button_show1){ ?>
             <a href="<?php echo get_theme_mod('emp_front_link_btn1') ?>">
               <button class="p-2 container-fluid <?php if($emp_button_secondary_show1){ ?> btn-secondary-actived <?php }else{ ?> mw-70 <?php } ?> btn btn-outline-light">
+                <i class="<?php echo $emp_title_btn_icon?>"></i>
                 <?php echo get_theme_mod('emp_front_btn1'); ?>
               </button>
             </a>

@@ -110,6 +110,26 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_front_bt
   'settings'    => 'emp_front_btn1',
   'description'	=> __( 'Agrega un boton hacia alguna web', 'empralidad' )
 )));
+// Button icon 1
+$wp_customize->add_setting('emp_section_front_button-icon1', array(
+  'default'           => 'center',
+  'trasnport'         => 'refresh',
+  'sanitize_callback' => 'sanitize_string'
+));
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'emp_section_front_button-icon1_control1', array(
+  'label'          => __( 'Icono del botón', 'empralidad' ),
+  'section'        => 'emp_section_front_title',
+  'settings'       => 'emp_section_front_button-icon1',
+  'type'           => 'radio',
+  'choices'        => array(
+  ''  			       => __( '----', 'empralidad' ),
+  'fab fa-whatsapp'=> __( 'fa-whatsapp', 'empralidad' ),
+  'fas fa-truck'   => __( 'fa-truck', 'empralidad' ),
+  'fas fa-store'  	=> __( 'fa-store', 'empralidad' ),
+  'fas fa-store-alt' => __( 'fa-store-alt', 'empralidad' ),
+  'fas fa-arrow-right'=> __( 'fa-arrow-right', 'empralidad' )
+  )
+)));
 // Link button 1
 $wp_customize->add_setting('emp_front_link_btn1', array(
   'default'           => '',
