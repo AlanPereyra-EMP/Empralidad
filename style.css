@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.0.0
+Version: 9.0.1
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -630,6 +630,59 @@ article h3, article h4, article h5 {
 	}
 	.text-featured{
 		font-size: 60px;
+	}
+}
+.font-1vw{
+	font-size: 1vw!important;
+}
+.font-2vw{
+	font-size: 2vw!important;
+}
+.font-3vw{
+	font-size: 3vw!important;
+}
+.font-4vw{
+	font-size: 4vw!important;
+}
+.font-5vw{
+	font-size: 5vw!important;
+}
+.font-6vw{
+	font-size: 6vw!important;
+}
+@media(max-width: 765px){
+	.font-mobile-1vw{
+		font-size: 1vw!important;
+	}
+	.font-mobile-2vw{
+		font-size: 2vw!important;
+	}
+	.font-mobile-3vw{
+		font-size: 3vw!important;
+	}
+	.font-mobile-4vw{
+		font-size: 4vw!important;
+	}
+	.font-mobile-5vw{
+		font-size: 5vw!important;
+	}
+	.font-mobile-6vw{
+		font-size: 6vw!important;
+	}
+	.font-mobile-7vw{
+		font-size: 7vw!important;
+	}
+	.font-mobile-8vw{
+		font-size: 8vw!important;
+	}
+	.font-mobile-9vw{
+		font-size: 9vw!important;
+	}
+	.font-mobile-10vw{
+		font-size: 10vw!important;
+	}
+	.font-mobile-11vw{
+		font-size: 11vw!important;
 	}
 }
 /*---------------------------------------------5)Images-------------------------------------------------*/
