@@ -1,4 +1,4 @@
-    <footer class="container-fluid py-3 pb-5 px-0 footer no-shadow">
+    <footer class="container-fluid pb-5 px-0 footer no-shadow">
       <!-- Social buttons -->
       <div id="emp-social-buttons">
         <?php $social_nick = get_theme_mod('emp_components_footer_social_nickname'); ?>

@@ -179,8 +179,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
     border-radius:0 50%!important;
   }
   article,
-  a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail,
-  a.button.product_type_simple, a.checkout-button.button.alt.wc-forward,
+  a.button.product_type_variable,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail, a.checkout-button.button.alt.wc-forward,
   .woocommerce-product-gallery .flex-viewport, figure.woocommerce-product-gallery__wrapper div img,
   figure.woocommerce-product-gallery__wrapper, .woocommerce table.shop_attributes, ul.products.columns-3,
   #main-head.page .container-title-page, .gemp-galery figure,
@@ -205,13 +204,16 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
       border-radius: 30px;
       overflow: hidden;
   }
-  .btn{
+  .btn, a.button.product_type_simple.add_to_cart_button, a.button.product_type_simple{
     border-radius: 10px;
   }
   .border-30px, .tutor-container .tutor-row, .tutor-single-course-sidebar, .tutor-col-8,.tutor-dashboard .tutor-container,
-  .tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message, li.product.type-product,
-  li.product.product-category, blockquote, iframe, .product-template-default .woo-page-margin{
+  .tutor-cart-box-login-form-inner, .woocommerce-notices-wrapper, .woocommerce-error, .woocommerce-info, .woocommerce-message,
+  blockquote, iframe, .product-template-default .woo-page-margin, .woocommerce div.product{
     border-radius: 30px;
+  }
+  li.product.product-category, li.product.type-product{
+    border-radius: 16px;
   }
   .border-top-30px{
     border-radius: 30px 30px 0 0;

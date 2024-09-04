@@ -16,14 +16,14 @@
 ?>
 
 <?php get_header(); ?>
-<article class="p-md-4 content-background content-color woo-page-margin" style="">
+<article class="content-background content-color woo-page-margin" style="">
   <?php do_shortcode('[yith_wcan_filters slug="default-preset"]');?>
   <div class="sidebar">
     <?php woocommerce_breadcrumb(); ?>
     <?php woocommerce_catalog_ordering(); ?>
     <button id="emp-button-woo-filters">Filtros</button>
     <div id="emp-woo-filter-area">
-      <i id="emp-woo-filter-area-close-btn" class="fa fa-times"></i>
+      <i id="emp-woo-filter-area-close-btn" class="fa fa-times show-mobile"></i>
       <div class="">
         <p class="px-0 pb-0">Filtrar por nombre</p>
         <form id="emp-woo-search" role="search" method="get" class="woocommerce-product-search mb-3 md-mb-0">
