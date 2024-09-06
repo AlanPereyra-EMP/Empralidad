@@ -437,11 +437,11 @@ if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
 }
 @font-face {
   font-family: "geforce-bold";
-  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-bold'?>.eot");
-  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-bold'?>.eot?#iefix') format('embedded-opentype'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-bold'?>.woff') format('woff'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-bold'?>.ttf') format('truetype'),
-       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-bold'?>.svg#open-sans') format('svg');
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-Bold'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-Bold'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-Bold'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-Bold'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/GeForce-Bold'?>.svg#open-sans') format('svg');
 }
 @font-face {
   font-family: "quarca";
