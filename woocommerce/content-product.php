@@ -73,6 +73,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             echo    get_post_meta($id, '_custom_product_component_field_mother', true);
             echo '</div>';
         }
+        if(get_post_meta($id, '_custom_product_component_field_gpu', true)){
+            echo '<div class="wrap">
+                    <img src="'.$icon_url.'gpu.svg" />';
+            echo    get_post_meta($id, '_custom_product_component_field_gpu', true);
+            echo '</div>';
+        }
         if(get_post_meta($id, '_custom_product_component_field_ram', true)){
             echo '<div class="wrap">
                     <img src="'.$icon_url.'ram.svg" />';
