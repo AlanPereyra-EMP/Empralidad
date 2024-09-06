@@ -1,3 +1,12 @@
+    <!-- defer background img -->
+    <style id="no-bg-img">
+      *{background-image:none!important}
+    </style>
+    <script>
+      window.addEventListener('DOMContentLoaded',function(){
+        document.getElementById('no-bg-img').remove();
+      })
+    </script>
     <footer class="container-fluid pb-5 px-0 footer no-shadow">
       <!-- Social buttons -->
       <div id="emp-social-buttons">
