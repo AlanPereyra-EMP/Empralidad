@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.1.3
+Version: 9.2.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1883,6 +1883,9 @@ div#first-content-home.categories-active{
 	.woocommerce h1{
 		text-align: left;
 	}
+	.woocommerce-custom-field-pc-gaming-loop .wrap{
+		font-size: 45%!important;
+	}
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs{
 	height: 34px;
@@ -1996,6 +1999,9 @@ div#first-content-home.categories-active{
 	.woo-page-margin .content{
 		padding: 60px 80px!important;
 	}
+	.woocommerce-custom-field-pc-gaming-loop .wrap{
+		font-size: 70%!important;
+	}
 }
 #woocomerce-product-more-info{
 	background: var(--emp-btn-bg);
@@ -2006,21 +2012,38 @@ div#first-content-home.categories-active{
 	font-size: 30px;
 }
 #woocommerce-custom-field-pc-gaming{
-	display: flex;
-	flex-wrap: wrap;
 	padding: 5%;
 }
+#woocommerce-custom-field-pc-gaming, .woocommerce-custom-field-pc-gaming-loop{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2%;
+	padding: 5% 4% 5% 7%;
+}
 #woocommerce-custom-field-pc-gaming .wrap{
-	align-items: center;
-    display: flex;
     font-size: 16px;
 	margin: 25px 0;
+}
+.woocommerce-custom-field-pc-gaming-loop .wrap{
+    font-size: 43.3%;
+	padding-right: 10px;
+	margin: 10px 0;
+}
+#woocommerce-custom-field-pc-gaming .wrap, .woocommerce-custom-field-pc-gaming-loop .wrap{
+	align-items: center;
+    display: flex;
 	padding-right: 1%;
+	text-align: left;
 	width: 49%;
 }
 #woocommerce-custom-field-pc-gaming .wrap img{
 	height: 11vw;
 	padding-right: 20px;
+}
+.woocommerce-custom-field-pc-gaming-loop .wrap img{
+	object-fit: fill!important;
+	padding-right: 5px;
+	width: 47%!important;
 }
 .woocommerce div.product div.summary{
 	height: 100%;
@@ -2045,12 +2068,13 @@ section.related.products {
 	padding-bottom: 30px;
 }
 .woocommerce div.product .woocommerce-tabs .panel .gpu{
+	align-items: center;
 	background: var(--emp-woocommerce-bg);
 	color: var(--emp-woocommerce-color);
 	display: flex;
-	align-items: center;
-	padding: 5%;
 	font-size: 11vw;
+	max-width: none!important;
+	padding: 5%;
 }
 .woocommerce div.product .woocommerce-tabs .panel .gpu.nvidia{
 	font-family: 'geforce-bold';
@@ -2163,7 +2187,7 @@ div#woo_featured_products .products::-webkit-scrollbar {
 h2.woocommerce-loop-product__title {
 	align-items: center;
 	display: flex;
-	font-size: 20px;
+	font-size: 22px!important;
 	font-weight: bold;
 	height: 10%;
 	justify-content: center;
@@ -2171,9 +2195,9 @@ h2.woocommerce-loop-product__title {
 	padding: 15px 5px 0 5px!important;
 	width: 100%;
 }
-@media(max-width: 991px){
+@media(min-width: 991px){
 	h2.woocommerce-loop-product__title{
-		font-size: 15px!important;
+		font-size: 28px!important;
 	}
 }
 @media (min-width: 1200px){
@@ -2766,8 +2790,21 @@ li span.price del {
 	color: var(--emp-woocommerce-bg);
     padding-bottom: 0px !important;
 }
+@media (min-width: 500px){
+	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+		width: 31%;
+	}
+	.woocommerce-custom-field-pc-gaming-loop .wrap{
+		font-size: 76%!important;
+	}
+}
 @media (min-width: 768px){
-
+	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+		width: 31%;
+	}
+	.woocommerce-custom-field-pc-gaming-loop .wrap{
+		font-size: 76%!important;
+	}
 }
 @media (min-width: 992px){
 	.woo-page-margin {
@@ -2777,13 +2814,16 @@ li span.price del {
 		width: 20%;
 	}
 	.archive .woo-page-margin .content{
-		width: 60%;
+		width: 80%;
 	}
 	.woo-page-margin .sidebar small{
 		font-size: 14px!important;
 	}
 	.woo-page-margin .sidebar{
 		border-radius: 0 0;
+	}
+	.woocommerce-custom-field-pc-gaming-loop .wrap{
+		font-size: 80%!important;
 	}
 }
 .sidebar form.woocommerce-ordering {
