@@ -290,6 +290,145 @@ if (class_exists('WooCommerce')){
   add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 }
 
+// Add custom field on woocommerce page
+// Display Fields
+add_action('woocommerce_product_options_general_product_data', 'woocommerce_product_custom_fields1');
+// Save Fields
+add_action('woocommerce_process_product_meta', 'woocommerce_product_custom_fields_save');
+function woocommerce_product_custom_fields1(){
+    global $woocommerce, $post;
+    echo '<div class="product_custom_field">';
+    echo '<p class="form-field _custom_product_component_field_mother_field ">
+			<label class="product_custom_field"><b>PC Gamer</b></label>
+		</p>';
+
+    // Custom Product Text Field
+    woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_cpu',
+        'placeholder' => 'Modelo de CPU',
+        'label' => __('Procesador', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_mother',
+        'placeholder' => 'Modelo de placa base',
+        'label' => __('Mother', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_ram',
+        'placeholder' => 'Cantidad de RAM',
+        'label' => __('RAM', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_gpu',
+        'placeholder' => 'Modelo Gráfica',
+        'label' => __('Gráfica', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_select( 
+		array( 
+			'id'      => '_custom_product_component_field_gpu_brand', 
+			'label'   => __( '', 'woocommerce' ),
+			'options' =>  array('', 'Nvidia', 'AMD')
+		)
+	);
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_ssd_hdd',
+        'placeholder' => 'Cantidad de almacenamiento y tipo',
+        'label' => __('Almacenamiento', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_power_supply',
+        'placeholder' => 'Cantidad de Watts y certificación',
+        'label' => __('Fuente', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_chassis',
+        'placeholder' => 'Modelo de Gabinete o carácterísticas',
+        'label' => __('Gabinete', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_product_component_field_display',
+        'placeholder' => 'Especificaciones generales',
+        'label' => __('Monitor', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+
+    echo '</div>';
+}
+function woocommerce_product_custom_fields_save($post_id){
+    // Custom Product Text Field
+    $woocommerce_custom_product_component_field_cpu = $_POST['_custom_product_component_field_cpu'];
+    if (!empty($woocommerce_custom_product_component_field_cpu)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_cpu', 
+			esc_attr($woocommerce_custom_product_component_field_cpu)
+		);
+	}
+	$woocommerce_custom_product_component_field_mother = $_POST['_custom_product_component_field_mother'];
+    if (!empty($woocommerce_custom_product_component_field_mother)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_mother', 
+			esc_attr($woocommerce_custom_product_component_field_mother)
+		);
+	}
+	$woocommerce_custom_product_component_field_ram = $_POST['_custom_product_component_field_ram'];
+    if (!empty($woocommerce_custom_product_component_field_ram)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_ram', 
+			esc_attr($woocommerce_custom_product_component_field_ram)
+		);
+	}
+	$woocommerce_custom_product_component_field_gpu = $_POST['_custom_product_component_field_gpu'];
+    if (!empty($woocommerce_custom_product_component_field_gpu)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_gpu', 
+			esc_attr($woocommerce_custom_product_component_field_gpu)
+		);
+	}
+	$woocommerce_custom_product_component_field_gpu_brand = $_POST['_custom_product_component_field_gpu_brand'];
+    if (!empty($woocommerce_custom_product_component_field_gpu_brand)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_gpu_brand', 
+			esc_attr($woocommerce_custom_product_component_field_gpu_brand)
+		);
+	}
+	$woocommerce_custom_product_component_field_ssd_hdd = $_POST['_custom_product_component_field_ssd_hdd'];
+    if (!empty($woocommerce_custom_product_component_field_ssd_hdd)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_ssd_hdd', 
+			esc_attr($woocommerce_custom_product_component_field_ssd_hdd)
+		);
+	}
+	$woocommerce_custom_product_component_field_power_supply = $_POST['_custom_product_component_field_power_supply'];
+    if (!empty($woocommerce_custom_product_component_field_power_supply)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_power_supply', 
+			esc_attr($woocommerce_custom_product_component_field_power_supply)
+		);
+	}
+	$woocommerce_custom_product_component_field_chassis = $_POST['_custom_product_component_field_chassis'];
+    if (!empty($woocommerce_custom_product_component_field_chassis)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_chassis', 
+			esc_attr($woocommerce_custom_product_component_field_chassis)
+		);
+	}
+	$woocommerce_custom_product_component_field_display = $_POST['_custom_product_component_field_display'];
+    if (!empty($woocommerce_custom_product_component_field_display)){
+        update_post_meta(
+			$post_id, '_custom_product_component_field_display', 
+			esc_attr($woocommerce_custom_product_component_field_display)
+		);
+	}
+    
+}
+
 //  12) GitHub Updates
 function emp_check_update( $transient ) {
   if ( empty( $transient->checked ) ) {

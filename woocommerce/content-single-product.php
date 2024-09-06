@@ -61,10 +61,12 @@ if ( post_password_required() ) {
 			?>
 		</div>
 	</div>
-	<div id="woocomerce-product-more-info">
-		Información adicional<br>
-		<i class="fas fa-sort-down"></i>
-	</div>
+	<a href="#woocomerce-product-more-info">
+		<div id="woocomerce-product-more-info">
+			Información adicional<br>
+			<i class="fas fa-sort-down"></i>
+		</div>
+	</a>
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.

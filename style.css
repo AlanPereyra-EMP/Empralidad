@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.0.1
+Version: 9.1.0
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1885,7 +1885,8 @@ div#first-content-home.categories-active{
 	}
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs{
-	margin: auto;
+	height: 34px;
+	margin-top: -34px!important;
 	width: 100%;
 }
 .woocommerce div.product div.images{
@@ -1975,6 +1976,9 @@ div#first-content-home.categories-active{
 	#woocomerce-product-more-info{
 		padding: 20px;
 	}
+	#woocommerce-custom-field-pc-gaming .wrap{
+		font-size: 30px!important;
+	}
 }
 @media (min-width:1200px) {
 	.woocommerce-product-gallery__image {
@@ -1984,7 +1988,7 @@ div#first-content-home.categories-active{
 		font-size: 70px;
 	}
 	span.woocommerce-Price-amount.amount bdi{
-		font-size: 2.5vw;
+		font-size: 2vw;
 	}
 	.woocommerce div.product .product_title{
 		font-size: 4.8vw;
@@ -1997,9 +2001,26 @@ div#first-content-home.categories-active{
 	background: var(--emp-btn-bg);
 	color: var(--emp-btn-color);
 	padding: 20px 20px 40px 20px;
-	margin-bottom: -35px;
+	margin-bottom: -2px;
 	text-align: center;
 	font-size: 30px;
+}
+#woocommerce-custom-field-pc-gaming{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5%;
+}
+#woocommerce-custom-field-pc-gaming .wrap{
+	align-items: center;
+    display: flex;
+    font-size: 16px;
+	margin: 25px 0;
+	padding-right: 1%;
+	width: 49%;
+}
+#woocommerce-custom-field-pc-gaming .wrap img{
+	height: 11vw;
+	padding-right: 20px;
 }
 .woocommerce div.product div.summary{
 	height: 100%;
@@ -2022,6 +2043,26 @@ section.related.products {
 	margin: 0;
 	overflow-x: auto;
 	padding-bottom: 30px;
+}
+.woocommerce div.product .woocommerce-tabs .panel .gpu{
+	background: var(--emp-woocommerce-bg);
+	color: var(--emp-woocommerce-color);
+	display: flex;
+	align-items: center;
+	padding: 5%;
+	font-size: 11vw;
+}
+.woocommerce div.product .woocommerce-tabs .panel .gpu.nvidia{
+	font-family: geforce-bold;
+}
+.woocommerce div.product .woocommerce-tabs .panel .gpu.amd{
+	font-family: quarca;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after{
+	content: none;
 }
 div.woocommerce-tabs.wc-tabs-wrapper h2{
 	margin: 0;
@@ -2386,6 +2427,7 @@ figcaption::-webkit-scrollbar {
 	box-shadow: none !important
 }
 .emp-woo-store-notice{
+	max-width: none!important;
 	order: -1;
 	padding: 60px 0px 0px 0px;
 	text-align: center;
@@ -2393,6 +2435,7 @@ figcaption::-webkit-scrollbar {
 }
 .woocommerce div.product p.price {
 	font-size: 1.9em !important;
+	max-width: none!important;
 	order: -1;
 	text-align: left;
 	width: 100%;

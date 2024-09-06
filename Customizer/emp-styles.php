@@ -435,5 +435,21 @@ if ($emp_slider1||$emp_slider2||$emp_slider3){ ?>
        url('<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.ttf') format('truetype'),
        url('<?php echo get_template_directory_uri(). '/includes/fonts/SplineSans/SplineSans-Regular'?>.svg#open-sans') format('svg');
 }
+@font-face {
+  font-family: "geforce-bold";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/geforce-bold'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/geforce-bold'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/geforce-bold'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/geforce-bold'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/geforce-bold/geforce-bold'?>.svg#open-sans') format('svg');
+}
+@font-face {
+  font-family: "quarca";
+  src: url("<?php echo get_template_directory_uri(). '/includes/fonts/quarca/Quarca-ExtLig'?>.eot");
+  src: url('<?php echo get_template_directory_uri(). '/includes/fonts/quarca/Quarca-ExtLig'?>.eot?#iefix') format('embedded-opentype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/quarca/Quarca-ExtLig'?>.woff') format('woff'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/quarca/Quarca-ExtLig'?>.ttf') format('truetype'),
+       url('<?php echo get_template_directory_uri(). '/includes/fonts/quarca/Quarca-ExtLig'?>.svg#open-sans') format('svg');
+}
 
 </style>
