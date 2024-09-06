@@ -7,9 +7,9 @@ $emp_slider3 = get_theme_mod('emp_slider_image3');
 if($emp_slider1||$emp_slider2||$emp_slider3){ ?>
   <div id="emp-sliders">
     <ul>
-      <?php if($emp_slider1){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" class="emp-slider" alt=""></li><?php } ?>
-      <?php if($emp_slider2){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" class="emp-slider" alt=""></li><?php } ?>
-      <?php if($emp_slider3){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" class="emp-slider" alt=""></li><?php } ?>
+      <?php if($emp_slider1){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image1')); ?>" class="emp-slider" alt="" loading="lazy"></li><?php } ?>
+      <?php if($emp_slider2){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image2')); ?>" class="emp-slider" alt="" loading="lazy"></li><?php } ?>
+      <?php if($emp_slider3){ ?><li><img src="<?php echo wp_get_attachment_url(get_theme_mod('emp_slider_image3')); ?>" class="emp-slider" alt="" loading="lazy"></li><?php } ?>
     </ul>
     <i id="emp-slider-prev" class="fa fa-arrow-circle-left disabled"></i>
     <i id="emp-slider-next" class="fa fa-arrow-circle-right disabled"></i>
@@ -68,7 +68,7 @@ if($emp_title_show){ ?>
           $h1_align = get_theme_mod('emp_components_head_title_align');
           $emp_title_img = wp_get_attachment_url(get_theme_mod('emp_front_image_top1'));
           if(($h1_align == 'left'|| $h1_align == 'right')&&$emp_title_img){ ?>
-            <img class="title-img" src="<?php echo $emp_title_img ?>">
+            <img class="title-img" src="<?php echo $emp_title_img ?>" loading="lazy">
           <?php } ?>
         </div>
 
@@ -96,7 +96,7 @@ if($emp_title_show){ ?>
           </div>
           <?php $emp_title_img = wp_get_attachment_url(get_theme_mod('emp_front_image_top2'));
           if(($h1_align == 'left'|| $h1_align == 'right')&&$emp_title_img){ ?>
-            <img class="title-img" src="<?php echo $emp_title_img ?>">
+            <img class="title-img" src="<?php echo $emp_title_img ?>" loading="lazy">
           <?php } ?>
         <?php } ?>
 
@@ -125,7 +125,7 @@ if($emp_title_show){ ?>
         <?php } ?>
         <?php $emp_title_img = wp_get_attachment_url(get_theme_mod('emp_front_image_top3'));
         if(($h1_align == 'left'|| $h1_align == 'right')&&$emp_title_img){ ?>
-          <img class="title-img" src="<?php echo $emp_title_img ?>">
+          <img class="title-img" src="<?php echo $emp_title_img ?>" loading="lazy">
         <?php } ?>
       </div>
 
