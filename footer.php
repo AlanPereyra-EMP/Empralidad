@@ -1,9 +1,9 @@
     <!-- defer background img -->
     <style id="no-bg-img">
-      *{background-image:none!important}
+      #carouselFade{background-image:none!important}
     </style>
     <script>
-      window.addEventListener('DOMContentLoaded',function(){
+      window.addEventListener("load", function (event) {
         document.getElementById('no-bg-img').remove();
       })
     </script>

@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.2.3
+Version: 9.2.4
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1930,7 +1930,7 @@ div#first-content-home.categories-active{
 	}
 	.woocommerce-notices-wrapper {
 		display: block;
-    margin-left: auto;
+    	margin-left: auto;
 		width: 45%;
 	}
 	.woocommerce ul.products li.product .onsale {
@@ -2028,7 +2028,7 @@ div#first-content-home.categories-active{
 .woocommerce-custom-field-pc-gaming-loop .wrap{
     font-size: 43.3%;
 	padding-right: 10px;
-	margin: 10px 0;
+	margin: 3px 0;
 }
 #woocommerce-custom-field-pc-gaming .wrap, .woocommerce-custom-field-pc-gaming-loop .wrap{
 	align-items: center;
@@ -2092,19 +2092,22 @@ section.related.products {
 div.woocommerce-tabs.wc-tabs-wrapper h2{
 	margin: 0;
 }
-.woocommerce-account .woocommerce{
+.woocommerce-account.customize-support .woocommerce{
 	display: flex!important;
 }
 .woocommerce-account .woocommerce-MyAccount-content {
-	padding: 30px 0!important;
-	margin: auto;
+	margin: auto!important;
+	max-width: 1200px;
+	order: 2;
+	padding: 30px 5%!important;
 }
 .woocommerce-account span.btn.container-fluid.invisible{
 	display: none!important;
 }
 .woocommerce-MyAccount-content {
-	max-width: 1200px;
 	margin: auto!important;
+	max-width: 1200px;
+	padding: 5%!important;
 }
 .woocommerce-account #main-head.page .container-title-page, .woocommerce-account #main-head.page .container-title-page a{
 	background: none;
@@ -2422,9 +2425,6 @@ span.woocommerce-Price-amount.amount{
 	width: auto!important;
 }
 @media(max-width:991px){
-	.woocommerce-account .container-fluid.overflow-hidden .woocommerce{
-		display: grid;
-	}
 	.woocommerce-account .woocommerce-MyAccount-navigation{
 		order: 1;
 	}
@@ -2874,6 +2874,10 @@ form.checkout.woocommerce-checkout, .woocommerce-info {
 	max-width: 1200px;
 	margin: auto;
 }
+.woocommerce-info .button{
+	background: var(--emp-btn-bg)!important;
+    color: var(--emp-btn-color)!important;
+}
 .mp-credits-banner-info{
 	width: 100%!important;
 }
@@ -2893,6 +2897,21 @@ a.shipping-calculator-button {
     padding: 20px;
     width: 100%;
     text-align: center;
+}
+form.woocommerce-EditAccountForm.edit-account p, form.woocommerce-EditAccountForm.edit-account legend{
+	padding: 10px 0 0 0!important;
+}
+form.woocommerce-EditAccountForm.edit-account em
+.woocommerce-form-login {
+	padding: 5%!important;
+	margin: 5% auto 5% auto!important;
+	max-width: 1200px;
+}
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+button.woocommerce-Button.button{
+	background: var(--emp-btn-bg);
+	color: var(--emp-btn-color);
+	width: 100%;
 }
 /* Custom filter on products */
 #emp-woo-search{
