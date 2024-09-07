@@ -60,7 +60,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 
     // Add custom field
-    echo '<div class="woocommerce-custom-field-pc-gaming-loop">';
+    $display = '';
+    if(get_post_meta($id, '_custom_product_component_field_cpu', true)){
+        $display = 'd-flex';
+    }
+    echo '<div class="woocommerce-custom-field-pc-gaming-loop '.$display.'">';
         if(get_post_meta($id, '_custom_product_component_field_cpu', true)){
             echo '<div class="wrap">
                     <img src="'.$icon_url.'cpu.svg" />';

@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.2.6
+Version: 9.2.7
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -2017,11 +2017,16 @@ div#first-content-home.categories-active{
 	padding: 5%;
 }
 #woocommerce-custom-field-pc-gaming, .woocommerce-custom-field-pc-gaming-loop{
-	aspect-ratio: 1;
-	display: flex;
 	flex-wrap: wrap;
 	gap: 2%;
 	padding: 5% 4% 5% 7%;
+}
+.woocommerce-custom-field-pc-gaming-loop{
+	aspect-ratio: 1;
+	display: none;
+}
+#woocommerce-custom-field-pc-gaming{
+	display: flex;
 }
 #woocommerce-custom-field-pc-gaming .wrap{
     font-size: 16px;
@@ -2199,7 +2204,7 @@ h2.woocommerce-loop-product__title {
 	font-weight: bold;
 	height: 52px;
 	justify-content: center;
-	overflow: hidden;
+	overflow: visible;
 	padding: 0 5px 0 5px!important;
 	width: 100%;
 }
@@ -2210,7 +2215,7 @@ h2.woocommerce-loop-product__title {
 	.woocommerce-custom-field-pc-gaming-loop .wrap img{
 		height: 50px!important;
 	}
-	#woocommerce-custom-field-pc-gaming .wrap, .woocommerce-custom-field-pc-gaming-loop .wrap{
+	#woocommerce-custom-field-pc-gaming .wrap{
 		width: 32%;
 	}
 }
