@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.2.5
+Version: 9.2.6
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1891,6 +1891,7 @@ div#first-content-home.categories-active{
 .woocommerce div.product .woocommerce-tabs ul.tabs{
 	height: 34px;
 	margin-top: -34px!important;
+	overflow: visible;
 	width: 100%;
 }
 .woocommerce div.product div.images{
@@ -2016,6 +2017,7 @@ div#first-content-home.categories-active{
 	padding: 5%;
 }
 #woocommerce-custom-field-pc-gaming, .woocommerce-custom-field-pc-gaming-loop{
+	aspect-ratio: 1;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2%;
@@ -2132,7 +2134,8 @@ figure.woocommerce-product-gallery__wrapper {
 }
 article a.button.product_type_simple,
 article a.button.product_type_simple.add_to_cart_button,
-article a.button.product_type_variable{
+article a.button.product_type_variable,
+article a.button.product_type_external{
 	font-size: 12px!important;
 }
 .woocommerce article ul.products li.product .price{
@@ -2192,12 +2195,12 @@ div#woo_featured_products .products::-webkit-scrollbar {
 h2.woocommerce-loop-product__title {
 	align-items: center;
 	display: flex;
-	font-size: 22px!important;
+	font-size: 108%!important;
 	font-weight: bold;
-	height: 10%;
+	height: 52px;
 	justify-content: center;
 	overflow: hidden;
-	padding: 15px 5px 0 5px!important;
+	padding: 0 5px 0 5px!important;
 	width: 100%;
 }
 @media(min-width: 991px){
@@ -2206,6 +2209,9 @@ h2.woocommerce-loop-product__title {
 	}
 	.woocommerce-custom-field-pc-gaming-loop .wrap img{
 		height: 50px!important;
+	}
+	#woocommerce-custom-field-pc-gaming .wrap, .woocommerce-custom-field-pc-gaming-loop .wrap{
+		width: 32%;
 	}
 }
 @media (min-width: 1200px){
@@ -2239,7 +2245,8 @@ h2.woocommerce-loop-product__title {
 .woocommerce ul.products li.product .price{
 	font-family: sans-serif;
 	font-size: 15px;
-	margin-top: 4px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 	z-index: 1
 }
 li.product bdi{
@@ -2755,9 +2762,9 @@ h2.woocommerce-loop-category__title {
 }
 .woocommerce ul.products li.product .onsale {
 	border-radius: 0;
-	font-size: 20px;
+	font-size: 14px;
+	font-weight: 100;
 	height: 0;
-	line-height: 2.8;
 	margin: -0.5em 0 0 0;
 	min-height: 3em;
 	padding: 0 6px;
