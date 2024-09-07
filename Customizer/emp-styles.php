@@ -176,7 +176,7 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
 }
 <?php if(get_theme_mod('emp_components_content_radius')){ ?>
   .woocommerce span.onsale{
-    border-radius:0 50%!important;
+    border-radius:0 0 0 16px!important;
   }
   article,
   a.button.product_type_variable,.tutor-course,img.attachment-post-thumbnail.size-post-thumbnail, a.checkout-button.button.alt.wc-forward,
