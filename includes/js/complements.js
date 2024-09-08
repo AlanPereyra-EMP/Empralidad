@@ -22,17 +22,19 @@ if(scrollToTopButton){
 
 
 // Navigation buttons
-var menu = document.getElementById('navbarContentMenu');
-var cart = document.getElementById('searchform-woocommerce');
-var searchform = document.getElementById('searchform-mobile');
-var bgSearchform = document.getElementById('bg-searchform-mobile');
 
 function openMobileMenu() {
   var bgMenu = document.getElementById('bg-menu-mobile');
   var icon = document.getElementById('btn-menu-nav');
+  var menu = document.getElementById('navbarContentMenu');
+  var cart = document.getElementById('searchform-woocommerce');
+  var searchform = document.getElementById('searchform-mobile');
+  var bgSearchform = document.getElementById('bg-searchform-mobile');
 
-  if(searchform.style.display != 'none'){
-    showSearchBackground();
+  if(searchform){
+    if(searchform.style.display != 'none'){
+      showSearchBackground();
+    }
   }
   if(cart){
     if(cart.style.display != 'none'){
@@ -61,6 +63,10 @@ function showSearchBackground() {
   var close = document.getElementById('searchform-close');
   var  icon = document.getElementById('btn-searchform');
   var  text = document.getElementById('span-searchform');
+  var menu = document.getElementById('navbarContentMenu');
+  var cart = document.getElementById('searchform-woocommerce');
+  var searchform = document.getElementById('searchform-mobile');
+  var bgSearchform = document.getElementById('bg-searchform-mobile');
 
   if(menu.style.visibility === 'visible'){
     openMobileMenu();
@@ -99,9 +105,15 @@ function showWoocommerceCart() {
   var text = document.getElementById('span-woocommerce-cart');
   var counter = document.getElementById('span-woocommerce-counter');
   var navbar =  document.querySelector("nav.navbar");
+  var menu = document.getElementById('navbarContentMenu');
+  var cart = document.getElementById('searchform-woocommerce');
+  var searchform = document.getElementById('searchform-mobile');
+  var bgSearchform = document.getElementById('bg-searchform-mobile');
 
-  if(searchform.style.display != 'none'){
-    showSearchBackground();
+  if(searchform){
+    if(searchform.style.display != 'none'){
+      showSearchBackground();
+    }
   }
   if(menu.style.visibility === 'visible'){
     openMobileMenu();
@@ -433,8 +445,9 @@ if (wooBankDetails) {
 }
 
 // Countdown
+var timer = document.getElementById("timer");
 function updateTimer() {
-  future  = Date.parse("September 7, 2024 20:00:00");
+  future  = Date.parse("September 9, 2024 20:00:00");
   now     = new Date();
   diff    = future - now;
 
@@ -448,12 +461,13 @@ function updateTimer() {
   m = mins  - hours * 60;
   s = secs  - mins  * 60;
 
-  document.getElementById("timer")
-    .innerHTML =
+  timer.innerHTML =
       '<div>' + d + '<span>Día</span></div>' +
       '<div>' + h + '<span>Horas</span></div>' +
       '<div>' + m + '<span>Minutos</span></div>' +
       '<div>' + s + '<span>Segundos</span></div>' ;
 }
-setInterval('updateTimer()', 1000 );
+if(timer){
+  setInterval('updateTimer()', 1000 );
+}
 
