@@ -445,8 +445,8 @@ if (wooBankDetails) {
 }
 
 // Countdown
-var timer = document.getElementById("timer");
 function updateTimer() {
+  var timer = document.getElementById("timer");
   future  = Date.parse("September 9, 2024 20:00:00");
   now     = new Date();
   diff    = future - now;
@@ -467,7 +467,9 @@ function updateTimer() {
       '<div>' + m + '<span>Minutos</span></div>' +
       '<div>' + s + '<span>Segundos</span></div>' ;
 }
-if(timer){
-  setInterval('updateTimer()', 1000 );
+window.onload = function() {
+  if(document.getElementById("timer")){
+    setInterval('updateTimer()', 1000 );
+  }
 }
 
