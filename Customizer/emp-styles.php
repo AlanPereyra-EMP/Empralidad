@@ -212,7 +212,8 @@ a.button.product_type_variable, a.button.product_type_simple.add_to_cart_button,
   blockquote, iframe, .product-template-default .woo-page-margin, .woocommerce div.product{
     border-radius: 30px;
   }
-  li.product.product-category, li.product.type-product{
+  li.product.product-category, li.product.type-product, .wc-block-cart .wc-block-cart__submit-container a,
+  button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.wc-block-components-checkout-place-order-button--full-width.contained{
     border-radius: 16px;
   }
   .border-top-30px{

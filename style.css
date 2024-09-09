@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.3.1
+Version: 9.3.2
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1205,9 +1205,10 @@ body, .fa-text{
 	font-family: var(--emp-content-tipography), 'sans-serif';
 }
 /* Buttons */
-.btn, .btn:hover, .btn:focus{
+.btn, .btn:hover, .btn:focus, .wc-block-cart .wc-block-cart__submit-container a, button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.wc-block-components-checkout-place-order-button--full-width.contained{
 	background: var(--emp-btn-bg)!important;
 	color: var(--emp-btn-color)!important;
+	border: none;
 }
 .dashboard-section-overview .copy-to-clipboard-trigger,
 .checkout-button, #place_order{
@@ -1629,6 +1630,77 @@ a.fa.fa-times{
 		font-size: 25px;
     top: 54%;
 		transform: translate(0px, -50%);
+	}
+}
+.wc-block-components-sidebar-layout.wc-block-cart.wp-block-woocommerce-filled-cart-block{
+	background: var(--emp-woocommerce-bg);;
+    color: var(--emp-woocommerce-color);
+	padding: 5%;
+}
+.wc-block-components-quantity-selector{
+	background: #55555533;
+	width: 90%!important;
+	margin: auto!important;
+}
+a.wc-block-components-product-name {
+    margin: auto;
+}
+.wc-block-cart .wc-block-cart__submit-container--sticky{
+	bottom: -1px!important;
+}
+tr.wc-block-cart-items__row{
+	display: flex!important;
+    flex-wrap: wrap;
+    border: 1px #55555533 solid;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+	padding-bottom: 0!important;
+}
+.wc-block-components-product-metadata{
+	display: none;
+}
+td.wc-block-cart-item__product{
+	width: 100%;
+}
+a.wc-block-components-product-name{
+	color: var(--emp-woocommerce-color)!important;
+	font-size: 24px;
+}
+span.price.wc-block-components-product-price{
+	text-align: center;
+}
+.wc-block-cart-item__quantity {
+    padding-right: 0 !important;
+}
+button.wc-block-cart-item__remove-link {
+    display: block !important;
+    margin: auto !important;
+    text-align: center;
+	margin-top: 4%!important;
+	margin-bottom: 4%!important;
+}
+td.wc-block-cart-item__total {
+	width: 100%;
+}
+.wc-block-cart-item__total-price-and-sale-badge-wrapper {
+	background: #55555533;
+    display: block!important;
+    padding: 5%;
+}
+td.wc-block-cart-item__image, td.wc-block-cart-item__product, td.wc-block-cart-item__total{
+	padding: 0 !important;
+    margin: auto !important;
+}
+@media(min-width: 700px){
+	table.wc-block-cart-items.wp-block-woocommerce-cart-line-items-block tbody{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	tr.wc-block-cart-items__row{
+		width: 48%;
+		margin: auto;
+		margin-bottom: 30px;
 	}
 }
 /*-----------------------------------------14)Carousel-----------------------------------------*/
@@ -2174,6 +2246,9 @@ table.woocommerce-product-attributes.shop_attributes {
 }
 .woocommerce table.shop_attributes th{
 	border-bottom: 1px dotted rgba(0,0,0,.3);
+}
+.is-large.wc-block-cart .wc-block-cart-items th{
+	display: none;
 }
 .woocommerce table.shop_attributes td {
   padding: 0 10px;
@@ -2958,6 +3033,9 @@ button.woocommerce-Button.button{
 }
 #coming-soon-footer-banner{
 	display: none;
+}
+.wp-block-woocommerce-checkout.alignwide.wc-block-checkout{
+	padding: 5%;
 }
 /*Contact form 7*/
 .comment-form input{width: 100%}.wpcf7-submit, #submit.submit{border:2px solid transparent;padding: 10px;border-radius: 5px;width: 100%}.wpcf7-form{padding:0;max-width:1200px}form.wpcf7-form{width:100%;padding-left:0;padding-top:0;padding-bottom:0;margin-right:auto;margin-left:auto}p label{width:100%;margin-right:auto;margin-left:auto}.wpcf7-form-control{width:100%;margin-right:auto;margin-left:auto}select{border: 1px solid #aaa;padding: 7px;background: #fff;}.landing_pages-template-default input.wpcf7-form-control.wpcf7-submit {color: var(--emp-head-title-bg)!important;background: var(--emp-head-title-color)!important;}
