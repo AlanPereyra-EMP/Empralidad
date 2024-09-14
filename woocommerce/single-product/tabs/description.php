@@ -26,6 +26,13 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 
 ?>
 
+<?php if ( $heading ) : ?>
+	
+<?php endif; ?>
+
+<?php the_content(); ?>
+
+<!-- Custom fields -->
 <?php
 if(get_post_meta($id, '_custom_product_component_field_gpu', true)){
     $class_gpu = get_post_meta($id, '_custom_product_component_field_gpu_brand', true);
@@ -37,6 +44,7 @@ if(get_post_meta($id, '_custom_product_component_field_gpu', true)){
     echo '<p class="gpu '.$class_gpu.'">'.get_post_meta($id, '_custom_product_component_field_gpu', true).'</p>';
 }
 ?>
+
 <div id="woocommerce-custom-field-pc-gaming">
     <?php
         
@@ -84,9 +92,3 @@ if(get_post_meta($id, '_custom_product_component_field_gpu', true)){
         }
     ?>
 </div>
-
-<?php if ( $heading ) : ?>
-	
-<?php endif; ?>
-
-<?php the_content(); ?>
