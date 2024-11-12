@@ -3,7 +3,7 @@ Theme Name: Empralidad - Theme
 Author: Alan Pereyra
 Author URI: https://empralidad.com.ar/alan-pereyra/
 Description: Empralidad - Theme es un tema integramente hecho por Alan Pereyra. Pensado para ser gestionado por personas sin ningún conocimiento de programación. Es un tema minimalista flat desing, pensado con la filosofía de menos es más. Hecho con PHP, CSS, HTML5 y Javascript.
-Version: 9.3.8
+Version: 9.3.9
 License: Attribution-NonCommercial-NoDerivatives 3.0 IGO
 License URI: https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode
 Text Domain: empralidad
@@ -1988,10 +1988,6 @@ div#first-content-home.categories-active{
 	#product-header-container{
 		display: flex;
 	}
-	.woocommerce h1, .woocommerce div.product p.price {
-		justify-content: left!important;
-		text-align: left!important;
-	}
 	.woocommerce div.product div.images{
 		margin-bottom: 2em;
 		width: 35%!important;
@@ -2040,9 +2036,6 @@ div#first-content-home.categories-active{
 		padding: 30px;
 		margin-bottom: 0;
 	}
-	.woocommerce div.product p.price{
-		text-align: left!important;
-	}
 	a.button.product_type_simple,
 	a.button.product_type_variable {
 		width: 100%
@@ -2061,14 +2054,8 @@ div#first-content-home.categories-active{
 	.woocommerce-product-gallery__image {
 		margin: auto;
 	}
-	h1.product_title.entry-title{
-		font-size: 70px;
-	}
 	span.woocommerce-Price-amount.amount bdi{
 		font-size: 2vw;
-	}
-	.woocommerce div.product .product_title{
-		font-size: 4.8vw;
 	}
 	.woo-page-margin .content{
 		margin: auto;
@@ -2656,9 +2643,6 @@ ol.flex-control-nav.flex-control-thumbs{
 		text-align: left!important;
 		width: 100%!important;
 	}
-	.woocommerce div.product .product_title{
-		font-size: 4.3vw;
-	}
 }
 ol.flex-control-nav.flex-control-thumbs img {
 	border-radius: 0 !important;
@@ -2729,14 +2713,8 @@ h2.woocommerce-loop-category__title {
 	.archive.woocommerce article {
 		display: flex;
 	}
-	.woocommerce div.product form.cart, .woocommerce .product_meta{
-		width: 80%;
-	}
 	.woocommerce div.product form.cart .button{
 		font-size: 30px;
-	}
-	.woocommerce div.product .product_title{
-		font-size: 4.7vw;
 	}
 }
 .post-type-archive-product .woocommerce-product-search {

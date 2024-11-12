@@ -302,7 +302,7 @@ function woocommerce_product_custom_fields1(){
 			<label class="product_custom_field"><b>PC Gamer</b></label>
 		</p>';
 
-    // Custom Product Text Field
+    // Custom Product Text Fields
     woocommerce_wp_text_input(array(
         'id' => '_custom_product_component_field_cpu',
         'placeholder' => 'Modelo de CPU',
@@ -356,6 +356,77 @@ function woocommerce_product_custom_fields1(){
         'id' => '_custom_product_component_field_display',
         'placeholder' => 'Especificaciones generales',
         'label' => __('Monitor', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+
+	// Benchmark
+	echo '<br><p class="form-field _custom_product_component_field_mother_field ">
+			<label class="product_custom_field"><b>Benchmark</b></label>
+		</p>';
+	
+	// Custom Fields
+    woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_cpu',
+        'placeholder' => 'Calidad y resolución',
+        'label' => __('Calidad', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_mother',
+        'placeholder' => 'Solo el número',
+        'label' => __('FPS', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	echo '<br>';
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_cpu',
+        'placeholder' => 'Calidad y resolución',
+        'label' => __('Calidad', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_mother',
+        'placeholder' => 'Solo el número',
+        'label' => __('FPS', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	echo '<br>';
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_cpu',
+        'placeholder' => 'Calidad y resolución',
+        'label' => __('Calidad', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_mother',
+        'placeholder' => 'Solo el número',
+        'label' => __('FPS', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	echo '<br>';
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_cpu',
+        'placeholder' => 'Calidad y resolución',
+        'label' => __('Calidad', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_mother',
+        'placeholder' => 'Solo el número',
+        'label' => __('FPS', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	echo '<br>';
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_cpu',
+        'placeholder' => 'Calidad y resolución',
+        'label' => __('Calidad', 'woocommerce'),
+        'desc_tip' => 'true'
+    ));
+	woocommerce_wp_text_input(array(
+        'id' => '_custom_benchmark_component_field_mother',
+        'placeholder' => 'Solo el número',
+        'label' => __('FPS', 'woocommerce'),
         'desc_tip' => 'true'
     ));
 
